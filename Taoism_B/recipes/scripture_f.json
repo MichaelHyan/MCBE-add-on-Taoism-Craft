@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:scripture_f"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "bbb",
+      "bab",
+      "bbb"
+    ],
+    "key": {
+      "a": {
+        "item": "book"
+      },
+      "b": {
+        "item": "items:cinnabar_crystal"
+      }
+    },
+    "result": {
+      "item": "items:scripture_f",
+      "count": 1
+    }
+  }
+}

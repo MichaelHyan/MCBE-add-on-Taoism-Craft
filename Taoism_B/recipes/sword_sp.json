@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:sword_sp"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "aaa",
+      "aba",
+      "aaa"
+    ],
+    "key": {
+      "a": {
+        "item": "items:spirit"
+      },
+      "b": {
+        "item": "items:sword_e"
+      }
+    },
+    "result": {
+      "item": "items:sword_sp",
+      "count": 1
+    }
+  }
+}

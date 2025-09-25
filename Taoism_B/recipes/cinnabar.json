@@ -1,0 +1,23 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "items:cinnabar"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "items:pearl"
+      },
+      {
+        "item": "items:cinnabar_crystal"
+      }
+    ],
+    "result": {
+      "item": "items:cinnabar",
+      "count": 3
+    }
+  }
+}

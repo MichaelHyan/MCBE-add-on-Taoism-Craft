@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:sword_e"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " a ",
+      " b "
+    ],
+    "key": {
+      "a": {
+        "item": "items:scripture_s"
+      },
+      "b": {
+        "item": "wooden_sword"
+      }
+    },
+    "result": {
+      "item": "items:sword_e",
+      "count": 1
+    }
+  }
+}

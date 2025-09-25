@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:sword_w"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " a ",
+      " b "
+    ],
+    "key": {
+      "a": {
+        "item": "items:scripture_s"
+      },
+      "b": {
+        "item": "items:sword_t"
+      }
+    },
+    "result": {
+      "item": "items:sword_w",
+      "count": 1
+    }
+  }
+}

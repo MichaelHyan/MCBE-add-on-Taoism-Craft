@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:lightning_woode"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "aaa",
+      "aba",
+      "aaa"
+    ],
+    "key": {
+      "a": {
+        "item": "acacia_sapling"
+      },
+      "b": {
+        "item": "items:talisman_t"
+      }
+    },
+    "result": {
+      "item": "items:lightning_wood",
+      "count": 1
+    }
+  }
+}

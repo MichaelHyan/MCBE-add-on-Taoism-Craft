@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:sword_t"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " a ",
+      " b "
+    ],
+    "key": {
+      "a": {
+        "item": "items:cinnabar"
+      },
+      "b": {
+        "item": "wooden_sword"
+      }
+    },
+    "result": {
+      "item": "items:sword_t",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:soul_banner"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "cac",
+      "ebe",
+      "ddd"
+    ],
+    "key": {
+      "a": {
+        "item": "items:sword_sp"
+      },
+      "b": {
+        "item": "paper"
+      },
+      "c": {
+        "item": "black_wool"
+      },
+      "d": {
+        "item": "items:spirit"
+      },
+      "e": {
+        "item": "items:talisman"
+      }
+    },
+    "result": {
+      "item": "items:soul_banner",
+      "count": 1
+    }
+  }
+}

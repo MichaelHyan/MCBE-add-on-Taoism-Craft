@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:brush"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " a ",
+      " a ",
+      " b "
+    ],
+    "key": {
+      "a": {
+        "item": "stick"
+      },
+      "b": {
+        "item": "white_wool"
+      }
+    },
+    "result": {
+      "item": "items:brush",
+      "count": 1
+    }
+  }
+}

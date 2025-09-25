@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:brush_p"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "   ",
+      " a ",
+      " b "
+    ],
+    "key": {
+      "a": {
+        "item": "items:brush"
+      },
+      "b": {
+        "item": "items:cinnabar"
+      }
+    },
+    "result": {
+      "item": "items:brush_p",
+      "count": 1
+    }
+  }
+}

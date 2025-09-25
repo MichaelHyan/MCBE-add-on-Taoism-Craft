@@ -1,0 +1,31 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:ring"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "cac",
+      "aba",
+      "cac"
+    ],
+    "key": {
+      "a": {
+        "item": "iron_ingot"
+      },
+      "b": {
+        "item": "items:talisman"
+      },
+      "c": {
+        "item": "items:lightning_wood"
+      }
+    },
+    "result": {
+      "item": "items:ring",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:talisman"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " a ",
+      " b "
+    ],
+    "key": {
+      "a": {
+        "item": "items:brush_p"
+      },
+      "b": {
+        "item": "paper"
+      }
+    },
+    "result": {
+      "item": "items:talisman",
+      "count": 4
+    }
+  }
+}

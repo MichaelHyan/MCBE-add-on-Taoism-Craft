@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:mirror_a"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "aaa",
+      "aba",
+      "aaa"
+    ],
+    "key": {
+      "a": {
+        "item": "copper_ingot"
+      },
+      "b": {
+        "item": "items:cinnabar"
+      }
+    },
+    "result": {
+      "item": "items:mirror_a",
+      "count": 1
+    }
+  }
+}

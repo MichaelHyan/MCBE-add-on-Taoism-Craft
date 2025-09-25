@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:mirror_d"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "aaa",
+      "aba",
+      "aaa"
+    ],
+    "key": {
+      "a": {
+        "item": "items:mirror_b"
+      },
+      "b": {
+        "item": "items:pearl"
+      }
+    },
+    "result": {
+      "item": "items:mirror_d",
+      "count": 1
+    }
+  }
+}

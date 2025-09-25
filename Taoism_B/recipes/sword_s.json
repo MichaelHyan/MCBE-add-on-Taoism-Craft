@@ -1,0 +1,31 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:sword_s"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "aaa",
+      "bcb",
+      "bbb"
+    ],
+    "key": {
+      "a": {
+        "item": "items:sword_q"
+      },
+      "b": {
+        "item": "items:sword_l"
+      },
+      "c": {
+        "item": "netherite_block"
+      }
+    },
+    "result": {
+      "item": "items:sword_s",
+      "count": 1
+    }
+  }
+}

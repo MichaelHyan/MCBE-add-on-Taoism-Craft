@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:sword_q"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " a ",
+      " b "
+    ],
+    "key": {
+      "a": {
+        "item": "items:talisman"
+      },
+      "b": {
+        "item": "items:sword_t"
+      }
+    },
+    "result": {
+      "item": "items:sword_q",
+      "count": 1
+    }
+  }
+}

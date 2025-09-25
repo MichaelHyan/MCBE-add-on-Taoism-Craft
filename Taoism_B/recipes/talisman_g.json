@@ -1,0 +1,33 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:talisman_g"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " d ",
+      "abc"
+    ],
+    "key": {
+      "a": {
+        "item": "items:mirror_c"
+      },
+      "b": {
+        "item": "paper"
+      },
+      "c": {
+        "item": "items:mirror_d"
+      },
+      "d": {
+        "item": "items:brush_p"
+      }
+    },
+    "result": {
+      "item": "items:talisman_g",
+      "count": 4
+    }
+  }
+}

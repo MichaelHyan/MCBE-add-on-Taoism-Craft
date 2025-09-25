@@ -1,0 +1,562 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.taoism":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"scripture_t":"variable.attack_time && query.get_equipped_item_name=='scripture_t'"},
+						{"scripture_f":"variable.attack_time && query.get_equipped_item_name=='scripture_f'"},
+						{"talisman_t_a":"!query.is_using_item && query.get_equipped_item_name=='talisman_t'"},
+						{"talisman_t_b":"query.is_using_item && query.get_equipped_item_name=='talisman_t'"},
+						{"talisman_a":"!query.is_using_item && query.get_equipped_item_name=='talisman'"},
+						{"talisman_b":"query.is_using_item && query.get_equipped_item_name=='talisman'"},
+						{"talisman_g":"query.is_using_item && query.get_equipped_item_name=='talisman_g'"},
+						{"talisman_e_a":"variable.attack_time && !query.is_jumping && !query.is_sneaking && query.get_equipped_item_name=='talisman_e'"},
+						{"talisman_e_b":"!variable.attack_time && !query.is_jumping && query.is_sneaking && query.get_equipped_item_name=='talisman_e'"},
+						{"talisman_e_c":"!variable.attack_time && query.is_jumping && query.is_sneaking && query.get_equipped_item_name=='talisman_e'"},
+						{"sword_t_a":"!variable.attack_time && query.get_equipped_item_name=='sword_t'"},
+						{"sword_t_b":"variable.attack_time && query.get_equipped_item_name=='sword_t'"},
+						{"sword_b_a":"!variable.attack_time && query.get_equipped_item_name=='sword_b'"},
+						{"sword_b_b":"variable.attack_time && query.get_equipped_item_name=='sword_b'"},
+						{"sword_q_a":"!variable.attack_time && query.get_equipped_item_name=='sword_q'"},
+						{"sword_q_b":"variable.attack_time && query.get_equipped_item_name=='sword_q'"},
+						{"sword_l_a":"!variable.attack_time && query.get_equipped_item_name=='sword_l'"},
+						{"sword_l_b":"variable.attack_time && query.get_equipped_item_name=='sword_l'"},
+						{"sword_s_a":"!variable.attack_time && !query.is_jumping && !query.is_sneaking && query.get_equipped_item_name=='sword_s'"},
+						{"sword_s_b":"variable.attack_time && !query.is_jumping && !query.is_sneaking && query.get_equipped_item_name=='sword_s'"},
+						{"sword_s_c":"!variable.attack_time && query.is_jumping && !query.is_sneaking && query.get_equipped_item_name=='sword_s'"},
+						{"sword_s_d":"query.is_sneaking && query.get_equipped_item_name=='sword_s'"},
+						{"sword_e_a":"!variable.attack_time && query.get_equipped_item_name=='sword_e'"},
+						{"sword_e_b":"variable.attack_time && query.get_equipped_item_name=='sword_e'"},
+						{"sword_w_a":"!variable.attack_time && query.get_equipped_item_name=='sword_w'"},
+						{"sword_w_b":"variable.attack_time && query.get_equipped_item_name=='sword_w'"},
+						{"lightning_wood":"query.is_item_name_any('slot.hotbar', 0, 'items:lightning_wood')"},							
+						{"spirit":"query.get_equipped_item_name=='spirit'"},
+						{"sword_sp_a":"!variable.attack_time && query.get_equipped_item_name=='sword_sp'"},
+						{"sword_sp_b":"variable.attack_time && query.get_equipped_item_name=='sword_sp'"},
+						{"soul_banner_a":"!variable.attack_time && query.get_equipped_item_name=='soul_banner'"},
+						{"soul_banner_b":"variable.attack_time && query.get_equipped_item_name=='soul_banner'"},
+						{"mirror_a":"variable.attack_time && query.get_equipped_item_name=='mirror_a'"},
+						{"mirror_b":"variable.attack_time && query.get_equipped_item_name=='mirror_b'"},
+						{"mirror_c":"variable.attack_time && query.get_equipped_item_name=='mirror_c'"},
+						{"mirror_d":"variable.attack_time && query.get_equipped_item_name=='mirror_d'"},
+						{"bell_a":"!variable.attack_time && query.get_equipped_item_name=='bell'"},
+						{"bell_b":"variable.attack_time && query.get_equipped_item_name=='bell'"},
+						{"gourd_a":"variable.attack_time && !query.is_sneaking && query.get_equipped_item_name=='gourd'"},
+						{"gourd_b":"variable.attack_time && query.is_sneaking && query.get_equipped_item_name=='gourd'"},
+						{"wul":"variable.attack_time && query.get_equipped_item_name=='wul'"},
+						{"ring":"variable.attack_time && query.get_equipped_item_name=='ring'"},
+						{"whisk":"variable.attack_time && query.get_equipped_item_name=='whisk'"}
+					]
+				},
+				"scripture_t": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s strength 10 1 true",
+						"/effect @s speed infinite 1 true",
+						"/effect @s jump_boost infinite 1 true",
+						"/effect @s health_boost infinite 4 true",
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:pearl"
+					]
+				},
+				"scripture_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon lightning_bolt",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air"
+					]
+				},
+				"talisman_t_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s speed 1 1 true",
+						"/effect @s resistance 1 1 true"
+					]
+				},
+				"talisman_t_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon lightning_bolt ~ ~ ~5",
+						"/summon lightning_bolt ~2 ~ ~4",
+						"/summon lightning_bolt ~4 ~ ~2",
+						"/summon lightning_bolt ~5 ~ ~",
+						"/summon lightning_bolt ~4 ~ ~-2",
+						"/summon lightning_bolt ~2 ~ ~-4",
+						"/summon lightning_bolt ~ ~ ~-5",
+						"/summon lightning_bolt ~-2 ~ ~-4",
+						"/summon lightning_bolt ~-4 ~ ~-2",
+						"/summon lightning_bolt ~-5 ~ ~",
+						"/summon lightning_bolt ~-4 ~ ~2",
+						"/summon lightning_bolt ~-2 ~ ~4"					
+					]
+				},
+				"talisman_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s speed 1 1 true"
+					]
+				},
+				"talisman_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @n[r=3,type=!player] instant_health 1 255 true"
+					]
+				},
+				"talisman_g": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s fire_resistance 30 1 true",
+						"/effect @s regeneration 30 3 true",
+						"/effect @s resistance 30 1 true",
+						"/effect @s health_boost 30 4 true"
+					]
+				},
+				"talisman_e_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/summon armor_stand LOC",
+						"/effect @e[r=2,name=LOC] resistance infinite 255 true",
+						"/effect @e[r=2,name=LOC] invisibility infinite 255 true",
+						"/title @s actionbar 已记录此地风水"
+					]
+				},
+				"talisman_e_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/tp @n[rm=5,name=LOC]",
+						"/title @s actionbar 已传送到记录地点"
+					]
+				},
+				"talisman_e_c": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/kill @e[name=LOC]",
+						"/title @s actionbar 已删除所有地点"
+					]
+				},
+				
+				"sword_t_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s regeneration 1 3 true"
+					]
+				},
+				"sword_t_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
+						"/enchant @s smite 3"
+					]
+				},
+				"sword_b_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s resistance 1 3 true"
+					]
+				},
+				"sword_b_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
+						"/enchant @s smite 3"
+					]
+				},
+				"sword_q_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s speed 1 1 true",
+						"/effect @s regeneration 1 3 true"
+					]
+				},
+				"sword_q_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
+						"/enchant @s smite 4"
+					]
+				},
+				"sword_l_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s speed 1 1 true",
+						"/effect @s resistance 1 3 true"
+					]
+				},
+				"sword_l_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
+						"/enchant @s smite 5"
+					]
+				},
+				"sword_s_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s resistance 1 255 true",
+						"/effect @s speed 1 5 true",
+						"/effect @s slow_falling 1 1 true"
+					]
+				},
+				"sword_s_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5"
+					]
+				},
+				"sword_s_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 1 true",
+						"/effect @s speed 1 5 true"
+					]
+				},
+				"sword_s_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s fire_resistance 60 1 true",
+						"/summon lightning_bolt ~ ~ ~5",
+						"/summon lightning_bolt ~2 ~ ~4",
+						"/summon lightning_bolt ~4 ~ ~2",
+						"/summon lightning_bolt ~5 ~ ~",
+						"/summon lightning_bolt ~4 ~ ~-2",
+						"/summon lightning_bolt ~2 ~ ~-4",
+						"/summon lightning_bolt ~ ~ ~-5",
+						"/summon lightning_bolt ~-2 ~ ~-4",
+						"/summon lightning_bolt ~-4 ~ ~-2",
+						"/summon lightning_bolt ~-5 ~ ~",
+						"/summon lightning_bolt ~-4 ~ ~2",
+						"/summon lightning_bolt ~-2 ~ ~4"
+					]
+				},
+				"sword_e_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s speed 1 1 true",
+						"/effect @s jump_boost 1 1 true"
+					]
+				},
+				"sword_e_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5"
+					]
+				},
+				"sword_w_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s speed 1 1 true",
+						"/effect @s jump_boost 1 1 true"
+					]
+				},
+				"sword_w_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
+						"/summon lightning_bolt",
+						"/kill @s"
+					]
+				},
+				"lightning_wood": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @e[r=5,type=!player] slowness 1 3 true"
+					]
+				},
+				"spirit": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s wither 1 3 true"
+					]
+				},
+				"sword_sp_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s resistance 1 3 true",
+						"/effect @s regeneration 1 3 true",
+						"/effect @s speed 1 1 true"
+					]
+				},
+				"sword_sp_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
+						"/effect @s wither 2 255 true"
+					]
+				},
+				"soul_banner_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s resistance 1 3 true",
+						"/effect @s regeneration 1 3 true",
+						"/effect @s speed 1 1 true"
+					]
+				},
+				"soul_banner_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @e[r=15,type=!player] slowness 10 255 true",
+						"/summon iron_golem",
+						"/effect @e[type=iron_golem,r=5] strength infinite 10 true",
+						"/effect @e[type=iron_golem,r=5] speed infinite 10 true",
+						"/effect @e[type=!player,r=15] wither infinite 255 true",
+						"/summon lightning_bolt"
+					]
+				},
+				"mirror_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s jump_boost 30 1 true",
+						"/effect @s health_boost 30 4 true",
+						"/effect @s speed 30 1 true",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air"
+					]
+				},
+				"mirror_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s jump_boost 60 2 true",
+						"/effect @s health_boost 60 4 true",
+						"/effect @s speed 60 2 true",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air"
+					]
+				},
+				"mirror_c": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @e[r=7,type=!player] slowness 10 255 true",
+						"/effect @e[r=7,type=!player] wither 10 5 true",
+						"/effect @e[r=7,type=!player] regeneration 10 5 true"
+					]
+				},
+				"mirror_d": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @e[type=player,r=5] regeneration 60 5 true",
+						"/effect @e[type=player,r=3] health_boost 60 4 true",
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:pearl"
+					]
+				},
+				"bell_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s slowness 1 1 true",
+						"/effect @s hunger 1 1 true",
+						"/effect @s resistance 1 255 true"
+					]
+				},
+				"bell_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @e[r=3,type=!player] slowness 10 255 true"
+					]
+				},
+				"gourd_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @e[rm=1,r=10] @s"
+					]
+				},
+				"gourd_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/fill ^ ^2 ^2 ^ ^ ^ air destroy"
+					]
+				},
+				"wul": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @r[rm=5]",
+						"/effect @s wither 1 255 true"
+					]
+				},
+				"ring": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @e[type=!player,r=10] slot.weapon.mainhand 0 air",
+						"/effect @e[type=!player,r=10] weakness 30 255 true"
+					]
+				},
+				"whisk": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s clear",
+						"/effect @s strength 1 2 true"
+					]
+				}
+			}
+		}
+ 	}
+ }

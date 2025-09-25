@@ -1,0 +1,31 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:gourd"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "bcb",
+      "a a",
+      "aaa"
+    ],
+    "key": {
+      "a": {
+        "item": "copper_ingot"
+      },
+      "b": {
+        "item": "items:talisman"
+      },
+      "c": {
+        "item": "items:lightning_wood"
+      }
+    },
+    "result": {
+      "item": "items:gourd",
+      "count": 1
+    }
+  }
+}

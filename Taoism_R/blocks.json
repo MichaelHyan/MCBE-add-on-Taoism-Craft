@@ -1,0 +1,14 @@
+{
+  "format_version": "1.16.100",
+  "cinnabar_ore": {
+    "textures": {
+      "up": "cinnabar_ore_up",
+      "down": "cinnabar_ore_down",
+      "south": "cinnabar_ore_south",
+      "north": "cinnabar_ore_north",
+      "west": "cinnabar_ore_west",
+      "east": "cinnabar_ore_east"
+    },
+    "sound": "dripstone_block"
+  }
+}

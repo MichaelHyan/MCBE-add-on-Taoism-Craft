@@ -1,0 +1,15 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "items:scripture_s",
+      "category": "Nature"
+    },
+
+    "components": {
+      "minecraft:icon": "scripture_s",
+      "minecraft:hover_text_color": "light_purple",
+      "minecraft:render_offsets": "scripture_s"
+    }
+  }
+}

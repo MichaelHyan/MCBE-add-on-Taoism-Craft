@@ -1,0 +1,14 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "temple_feature_mcstructure"
+		},
+		"structure_name": "mystructure:temple",
+		"adjustment_radius": 8,
+		"constraints": {
+			"grounded": {}
+		},
+		"facing_direction": "south"
+	}
+}

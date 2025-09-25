@@ -1,0 +1,15 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "items:mirror_c",
+      "category": "Nature"
+    },
+
+    "components": {
+      "minecraft:icon": "mirror_c",
+      "minecraft:hover_text_color": "light_purple",
+      "minecraft:render_offsets": "mirror_c"
+    }
+  }
+}

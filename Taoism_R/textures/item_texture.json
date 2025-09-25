@@ -1,0 +1,99 @@
+{
+  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.items",
+  "texture_data": {
+	  "scripture": {
+      "textures": "scripture.png"
+    },
+    "scripture_s": {
+      "textures": "scripture_s.png"
+    },
+    "pearl": {
+      "textures": "pearl.png"
+    },
+    "brush": {
+      "textures": "brush.png"
+    },
+    "brush_p": {
+      "textures": "brush_p.png"
+    },
+    "cinnabar_crystal": {
+      "textures": "cinnabar_crystal.png"
+    },
+    "cinnabar": {
+      "textures": "cinnabar.png"
+    },
+    "talisman_t": {
+      "textures": "talisman_t.png"
+    },
+    "talisman": {
+      "textures": "talisman.png"
+    },
+    "talisman_g": {
+      "textures": "talisman_g.png"
+    },
+    "talisman_e": {
+      "textures": "talisman_e.png"
+    },
+    "sword_t": {
+      "textures": "sword_t.png"
+    },
+    "sword_b": {
+      "textures": "sword_b.png"
+    },
+    "sword_q": {
+      "textures": "sword_q.png"
+    },
+    "sword_l": {
+      "textures": "sword_l.png"
+    },
+    "sword_s": {
+      "textures": "sword_s.png"
+    },
+    "sword_e": {
+      "textures": "sword_e.png"
+    },
+    "sword_w": {
+      "textures": "sword_w.png"
+    },
+    "lightning_wood": {
+      "textures": "lightning_wood.png"
+    },
+    "spirit": {
+      "textures": "spirit.png"
+    },
+    "sword_sp": {
+      "textures": "sword_sp.png"
+    },
+	  "soul_banner": {
+      "textures": "soul_banner.png"
+    },
+    "mirror_a": {
+      "textures": "mirror_a.png"
+    },
+    "mirror_b": {
+      "textures": "mirror_b.png"
+    },
+    "mirror_c": {
+      "textures": "mirror_c.png"
+    },
+    "mirror_d": {
+      "textures": "mirror_d.png"
+    },
+    "bell": {
+      "textures": "bell.png"
+    },
+    "gourd": {
+      "textures": "gourd.png"
+    },
+    "wul": {
+      "textures": "wul.png"
+    },
+    "whisk": {
+      "textures": "whisk.png"
+    },
+    "ring": {
+      "textures": "ring.png"
+    }
+  }
+}

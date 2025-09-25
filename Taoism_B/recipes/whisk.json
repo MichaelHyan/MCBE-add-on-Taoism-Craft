@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:whisk"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " a ",
+      " b "
+    ],
+    "key": {
+      "a": {
+        "item": "stick"
+      },
+      "b": {
+        "item": "white_wool"
+      }
+    },
+    "result": {
+      "item": "items:whisk",
+      "count": 1
+    }
+  }
+}

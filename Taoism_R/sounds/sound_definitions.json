@@ -1,0 +1,16 @@
+{
+  "the.world": {
+    "category": "hostile",
+    "min_distance": 10.0,
+    "sounds": [
+      "sounds/tw"
+    ]
+  },
+  "yaluji": {
+    "category": "hostile",
+    "min_distance": 10.0,
+    "sounds": [
+      "sounds/yaluji"
+    ]
+  }
+}

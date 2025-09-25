@@ -1,0 +1,31 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:talisman_e"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " c ",
+      " b ",
+      " a "
+    ],
+    "key": {
+      "a": {
+        "item": "items:lightning_wood"
+      },
+      "b": {
+        "item": "items:wul"
+      },
+      "c": {
+        "item":"items:brush_p"
+      }
+    },
+    "result": {
+      "item": "items:talisman_e",
+      "count": 1
+    }
+  }
+}
