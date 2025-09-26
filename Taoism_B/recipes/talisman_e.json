@@ -14,10 +14,10 @@
     ],
     "key": {
       "a": {
-        "item": "items:lightning_wood"
+        "item": "items:wul"
       },
       "b": {
-        "item": "items:wul"
+        "item": "paper"
       },
       "c": {
         "item":"items:brush_p"

@@ -2,14 +2,14 @@
   "format_version": "1.10",
   "minecraft:item": {
     "description": {
-      "identifier": "items:brush",
+      "identifier": "items:brush_n",
       "category": "Nature"
     },
 
     "components": {
-      "minecraft:icon": "brush",
+      "minecraft:icon": "brush_n",
       "minecraft:hover_text_color": "light_purple",
-      "minecraft:render_offsets": "brush"
+      "minecraft:render_offsets": "brush_n"
     }
   }
 }

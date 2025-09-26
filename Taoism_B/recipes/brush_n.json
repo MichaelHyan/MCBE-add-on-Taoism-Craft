@@ -2,7 +2,7 @@
   "format_version": "1.12",
   "minecraft:recipe_shaped": {
     "description": {
-      "identifier": "items:brush"
+      "identifier": "items:brush_n"
     },
     "tags": [
       "crafting_table"
@@ -21,7 +21,7 @@
       }
     },
     "result": {
-      "item": "items:brush",
+      "item": "items:brush_n",
       "count": 1
     }
   }

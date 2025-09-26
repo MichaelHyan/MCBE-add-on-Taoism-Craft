@@ -11,8 +11,8 @@
     "pearl": {
       "textures": "pearl.png"
     },
-    "brush": {
-      "textures": "brush.png"
+    "brush_n": {
+      "textures": "brush_n.png"
     },
     "brush_p": {
       "textures": "brush_p.png"
