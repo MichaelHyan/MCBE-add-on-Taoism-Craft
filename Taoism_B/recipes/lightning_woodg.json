@@ -2,7 +2,7 @@
   "format_version": "1.12",
   "minecraft:recipe_shaped": {
     "description": {
-      "identifier": "items:lightning_woodb"
+      "identifier": "items:lightning_woodg"
     },
     "tags": [
       "crafting_table"
@@ -14,7 +14,7 @@
     ],
     "key": {
       "a": {
-        "item": "birch_sapling"
+        "item": "cherry_sapling"
       },
       "b": {
         "item": "items:talisman_t"

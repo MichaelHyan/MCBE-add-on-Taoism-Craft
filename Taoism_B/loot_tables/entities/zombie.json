@@ -6,7 +6,7 @@
         {
           "type": "item",
           "name": "items:spirit",
-          "weight": 5,
+          "weight": 3,
           "functions": [
             {
               "function": "set_count",
@@ -20,7 +20,7 @@
         {
           "type": "item",
           "name": "items:cinnabar_crystal",
-          "weight": 3,
+          "weight": 5,
           "functions": [
             {
               "function": "set_count",
@@ -34,7 +34,7 @@
                 {
                     "type": "item",
                     "name": "minecraft:rotten_flesh",
-                    "weight": 8,
+                    "weight": 3,
                     "functions": [
                         {
                             "function": "set_count",

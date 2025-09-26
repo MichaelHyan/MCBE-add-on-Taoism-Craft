@@ -8,7 +8,7 @@
     "components": {
       "minecraft:stacked_by_data": true,
       "minecraft:foil": false,
-      "minecraft:max_stack_size": 16
+      "minecraft:max_stack_size": 64
     }
   }
 }

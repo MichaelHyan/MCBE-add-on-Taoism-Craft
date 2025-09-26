@@ -15,6 +15,7 @@
 						{"talisman_e_a":"variable.attack_time && !query.is_jumping && !query.is_sneaking && query.get_equipped_item_name=='talisman_e'"},
 						{"talisman_e_b":"!variable.attack_time && !query.is_jumping && query.is_sneaking && query.get_equipped_item_name=='talisman_e'"},
 						{"talisman_e_c":"!variable.attack_time && query.is_jumping && query.is_sneaking && query.get_equipped_item_name=='talisman_e'"},
+						{"talisman_e_d":"variable.attack_time && !query.is_jumping && query.is_sneaking && query.get_equipped_item_name=='talisman_e'"},
 						{"sword_t_a":"!variable.attack_time && query.get_equipped_item_name=='sword_t'"},
 						{"sword_t_b":"variable.attack_time && query.get_equipped_item_name=='sword_t'"},
 						{"sword_b_a":"!variable.attack_time && query.get_equipped_item_name=='sword_b'"},
@@ -175,7 +176,17 @@
 						"/title @s actionbar 已删除所有地点"
 					]
 				},
-				
+				"talisman_e_d": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/tp @r[rm=5]",
+						"/effect @s wither 1 255 true"
+					]
+				},
 				"sword_t_a": {
 					"transitions": [
 						{
@@ -543,6 +554,7 @@
 					"on_entry": [
 						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
 						"/replaceitem entity @e[type=!player,r=10] slot.weapon.mainhand 0 air",
+						"/enchant @s looting 3",
 						"/effect @e[type=!player,r=10] weakness 30 255 true"
 					]
 				},
