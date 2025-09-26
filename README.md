@@ -34,7 +34,7 @@
 - 核心功能：合成材料（用于制作邪道相关物品）
 - 副作用：象征「误入歧途」修炼路径，无直接使用效果
 - 获取方式：击败掠夺者后掉落
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/scripture_s.png)
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/scripture_s.png)
 
 ### 基础材料类
 #### 灵珠
