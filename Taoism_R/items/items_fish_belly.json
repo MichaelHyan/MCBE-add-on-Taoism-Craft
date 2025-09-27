@@ -1,0 +1,15 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "items:fish_belly",
+      "category": "Nature"
+    },
+
+    "components": {
+      "minecraft:icon": "fish_belly",
+      "minecraft:hover_text_color": "light_purple",
+      "minecraft:render_offsets": "fish_belly"
+    }
+  }
+}

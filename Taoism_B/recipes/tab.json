@@ -1,0 +1,33 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:tab"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " d ",
+      "acb"
+    ],
+    "key": {
+      "a": {
+        "item": "items:ta"
+      },
+      "b": {
+        "item": "items:ub"
+      },
+      "c": {
+        "item": "items:fish_gelatin"
+      },
+      "d": {
+        "item": "items:brush_p"
+      }
+    },
+    "result": {
+      "item": "items:tab",
+      "count": 4
+    }
+  }
+}

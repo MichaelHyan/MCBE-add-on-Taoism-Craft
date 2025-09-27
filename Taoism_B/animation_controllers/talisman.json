@@ -1,0 +1,259 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.talisman":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"tab":"query.is_using_item && query.get_equipped_item_name=='tab'"},
+						{"tac":"query.is_using_item && query.get_equipped_item_name=='tac'"},
+						{"tad":"query.is_using_item && query.get_equipped_item_name=='tad'"},
+						{"tae":"query.is_using_item && query.get_equipped_item_name=='tae'"},
+						{"tba":"query.is_using_item && query.get_equipped_item_name=='tba'"},
+						{"tbb":"query.is_using_item && query.get_equipped_item_name=='tbb'"},
+						{"tbc_a":"query.is_using_item && !query.is_sneaking && query.get_equipped_item_name=='tbc'"},
+						{"tbc_b":"query.is_using_item && query.is_sneaking && query.get_equipped_item_name=='tbc'"},
+						{"tbd":"query.is_using_item && query.get_equipped_item_name=='tbd'"},
+						{"tbe":"query.get_equipped_item_name=='tbe'"},
+						{"tbf":"query.is_using_item && query.get_equipped_item_name=='tbf'"},
+						{"tca":"query.is_using_item && query.get_equipped_item_name=='tca'"},
+						{"tcb":"query.is_using_item && query.get_equipped_item_name=='tcb'"},
+						{"tcc":"query.is_using_item && query.get_equipped_item_name=='tcc'"},
+						{"tcd_a":"query.is_using_item && !query.is_sneaking && query.get_equipped_item_name=='tcd'"},
+						{"tcd_b":"query.is_using_item && query.is_sneaking && query.get_equipped_item_name=='tcd'"},
+						{"tce":"query.is_using_item && query.get_equipped_item_name=='tce'"},
+						{"tcf":"query.is_using_item && query.get_equipped_item_name=='tcf'"}
+					]
+				},
+				"tab": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @e[rm=1] levitation 20 1 true"
+					]
+				},
+				"tac": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s conduit_power 60 1 true",
+						"/effect @s speed 60 1 true"
+					]
+				},
+				"tad": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 light_block_15 replace air"
+					]
+				},
+				"tae": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @e[type=!player,r=50] slowness 10 255 true"
+					]
+				},
+				"tba": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon iron_golem ~5 ~ ~5",
+						"/summon iron_golem ~5 ~ ~-5",
+						"/summon iron_golem ~-5 ~ ~-5",
+						"/summon iron_golem ~-5 ~ ~5"
+					]
+				},
+				"tbb": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-5 ~ ~-5 ~5 ~ ~5 oak_sapling replace air"
+					]
+				},
+				"tbc_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-2 ~-2 ~-2 ~2 ~2 ~2 water replace air"
+					]
+				},
+				"tbc_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-2 ~-2 ~-2 ~2 ~2 ~2 air replace water"
+					]
+				},
+				"tbd": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @a[r=10] regeneration 30 3 true",
+						"/effect @a[r=10] speed 30 2 true" 
+					]
+				},
+				"tbe": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~ ~-1 ~ ~ ~-1 ~ dirt replace air"
+					]
+				},
+				"tbf": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon wind_charge_projectile ^1 ^1 ^1",
+						"/summon wind_charge_projectile ^-1 ^1 ^1",
+						"/summon wind_charge_projectile ^1 ^1 ^-1",
+						"/summon wind_charge_projectile ^-1 ^1 ^-1",
+						"/summon wind_charge_projectile ^0 ^1 ^1",
+						"/summon wind_charge_projectile ^0 ^1 ^-1",
+						"/summon wind_charge_projectile ^1 ^1 ^0",
+						"/summon wind_charge_projectile ^-1 ^1 ^0",
+						"/effect @s resistance 10 255 true"
+					]
+				},
+				"tca": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s strength 10 255 true",
+						"/effect @s speed 10 3 true",
+						"/effect @s slow_falling 10 1 true",
+						"/effect @s jump_boost 10 2 true"
+					]
+				},
+				"tcb": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s health_boost 60 19 true",
+						"/effect @s instant_health 1 255 true",
+						"/effect @s regeneration 60 3 true",
+						"/effect @s resistance 60 1 true"
+					]
+				},
+				"tcc": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 10 1 true",
+						"/effect @s slow_falling 30 1 true",
+						"/summon lightning_bolt",
+						"/effect @s regeneration 10 5 true",
+						"/weather thunder"
+					]
+				},
+				"tcd_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon lightning_bolt ~2 ~ ~2",
+						"/summon lightning_bolt ~2 ~ ~-2",
+						"/summon lightning_bolt ~-2 ~ ~-2",
+						"/summon lightning_bolt ~-2 ~ ~2",
+						"/summon lightning_bolt ~3 ~ ~",
+						"/summon lightning_bolt ~-3 ~ ~",
+						"/summon lightning_bolt ~ ~ ~3",
+						"/summon lightning_bolt ~ ~ ~-3",
+						"/fill ~-6 ~-6 ~-6 ~6 ~6 ~6 fire replace air"
+					]
+				},
+				"tcd_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-6 ~-6 ~-6 ~6 ~6 ~6 air replace fire"					
+					]
+				},
+				"tce": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~2 ~ ~1 ~2 ~1 ~-1 dirt replace air",
+						"/fill ~-2 ~ ~1 ~-2 ~1 ~-1 dirt replace air",
+						"/fill ~1 ~ ~2 ~-1 ~1 ~2 dirt replace air",
+						"/fill ~1 ~ ~-2 ~-1 ~1 ~-2 dirt replace air",
+						"/fill ~1 ~2 ~1 ~-1 ~2 ~-1 dirt replace air",
+						"/summon lightning_bolt ~ ~ ~5",
+						"/summon lightning_bolt ~2 ~ ~4",
+						"/summon lightning_bolt ~4 ~ ~2",
+						"/summon lightning_bolt ~5 ~ ~",
+						"/summon lightning_bolt ~4 ~ ~-2",
+						"/summon lightning_bolt ~2 ~ ~-4",
+						"/summon lightning_bolt ~ ~ ~-5",
+						"/summon lightning_bolt ~-2 ~ ~-4",
+						"/summon lightning_bolt ~-4 ~ ~-2",
+						"/summon lightning_bolt ~-5 ~ ~",
+						"/summon lightning_bolt ~-4 ~ ~2",
+						"/summon lightning_bolt ~-2 ~ ~4"
+					]
+				},
+				"tcf": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @e[type=!player,r=6] slowness 10 1 true",
+						"/effect @s speed 10 5 true"
+					]
+				}
+			}
+		}
+ 	}
+ }

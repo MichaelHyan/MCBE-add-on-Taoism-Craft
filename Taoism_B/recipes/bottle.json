@@ -1,0 +1,32 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:bottle"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " a ",
+      "cbc",
+      " c "
+    ],
+    "key": {
+      "a": {
+        "item": "items:talisman"
+      },
+      "b": {
+        "item": "nether_star"
+      },
+      "c": {
+        "item": "clay"
+      }
+
+    },
+    "result": {
+      "item": "items:bottle",
+      "count": 1
+    }
+  }
+}

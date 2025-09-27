@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:ta"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "aaa",
+      "bbb"
+    ],
+    "key": {
+      "a": {
+        "item": "items:cinnabar"
+      },
+      "b": {
+        "item": "paper"
+      }
+    },
+    "result": {
+      "item": "items:ta",
+      "count": 4
+    }
+  }
+}

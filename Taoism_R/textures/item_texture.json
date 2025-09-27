@@ -94,6 +94,90 @@
     },
     "ring": {
       "textures": "ring.png"
+    },
+    "bottle": {
+      "textures": "bottle.png"
+    },
+    "fish_belly": {
+      "textures": "fish_belly.png"
+    },
+    "fish_gelatin": {
+      "textures": "fish_gelatin.png"
+    },
+    "ta": {
+      "textures": "ta.png"
+    },
+    "tb": {
+      "textures": "tb.png"
+    },
+    "tc": {
+      "textures": "tc.png"
+    },
+    "ua": {
+      "textures": "ua.png"
+    },
+    "ub": {
+      "textures": "ub.png"
+    },
+    "uc": {
+      "textures": "uc.png"
+    },
+    "ud": {
+      "textures": "ud.png"
+    },
+    "ue": {
+      "textures": "ue.png"
+    },
+    "uf": {
+      "textures": "uf.png"
+    },
+    "tab": {
+      "textures": "tab.png"
+    },
+    "tac": {
+      "textures": "tac.png"
+    },
+    "tad": {
+      "textures": "tad.png"
+    },
+    "tae": {
+      "textures": "tae.png"
+    },
+    "tba": {
+      "textures": "tba.png"
+    },
+    "tbb": {
+      "textures": "tbb.png"
+    },
+    "tbc": {
+      "textures": "tbc.png"
+    },
+    "tbd": {
+      "textures": "tbd.png"
+    },
+    "tbe": {
+      "textures": "tbe.png"
+    },
+    "tbf": {
+      "textures": "tbf.png"
+    },
+    "tca": {
+      "textures": "tca.png"
+    },
+    "tcb": {
+      "textures": "tcb.png"
+    },
+    "tcc": {
+      "textures": "tcc.png"
+    },
+    "tcd": {
+      "textures": "tcd.png"
+    },
+    "tce": {
+      "textures": "tce.png"
+    },
+    "tcf": {
+      "textures": "tcf.png"
     }
   }
 }

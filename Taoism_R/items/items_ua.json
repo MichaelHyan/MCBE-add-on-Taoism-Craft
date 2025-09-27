@@ -1,0 +1,15 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "items:ua",
+      "category": "Nature"
+    },
+
+    "components": {
+      "minecraft:icon": "ua",
+      "minecraft:hover_text_color": "light_purple",
+      "minecraft:render_offsets": "ua"
+    }
+  }
+}

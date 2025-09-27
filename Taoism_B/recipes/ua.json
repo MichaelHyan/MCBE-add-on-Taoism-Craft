@@ -1,0 +1,31 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:ua"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " a ",
+      " b ",
+      " c "
+    ],
+    "key": {
+      "a": {
+        "item": "items:brush_p"
+      },
+      "b": {
+        "item": "iron_sword"
+      },
+      "c": {
+        "item": "paper"
+      }
+    },
+    "result": {
+      "item": "items:ua",
+      "count": 4
+    }
+  }
+}

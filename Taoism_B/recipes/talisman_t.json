@@ -9,8 +9,8 @@
     ],
     "pattern": [
       " a ",
-      " b ",
-      " c "
+      "c d",
+      " b "
     ],
     "key": {
       "a": {
@@ -20,7 +20,10 @@
         "item": "paper"
       },
       "c": {
-        "item": "lightning_rod"
+        "item": "items:tc"
+      },
+      "d": {
+        "item": "items:fish_gelatin"
       }
     },
     "result": {

@@ -9,17 +9,17 @@
     ],
     "pattern": [
       " d ",
-      "abc"
+      "acb"
     ],
     "key": {
       "a": {
-        "item": "items:mirror_c"
+        "item": "items:ta"
       },
       "b": {
-        "item": "paper"
+        "item": "items:ua"
       },
       "c": {
-        "item": "items:mirror_d"
+        "item": "items:fish_gelatin"
       },
       "d": {
         "item": "items:brush_p"

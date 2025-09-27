@@ -1,0 +1,23 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:fish_bellya"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "a"
+    ],
+    "key": {
+      "a": {
+        "item": "cod"
+      }
+    },
+    "result": {
+      "item": "items:fish_belly",
+      "count": 4
+    }
+  }
+}

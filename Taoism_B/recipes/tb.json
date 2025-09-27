@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:tb"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "abc"
+    ],
+    "key": {
+      "a": {
+        "item": "items:pearl"
+      },
+      "b": {
+        "item": "paper"
+      },
+      "c":{
+        "item": "items:sword_t"
+      }
+    },
+    "result": {
+      "item": "items:tb",
+      "count": 4
+    }
+  }
+}

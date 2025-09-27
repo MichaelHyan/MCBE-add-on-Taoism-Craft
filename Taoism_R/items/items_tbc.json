@@ -1,0 +1,15 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "items:tbc",
+      "category": "Nature"
+    },
+
+    "components": {
+      "minecraft:icon": "tbc",
+      "minecraft:hover_text_color": "light_purple",
+      "minecraft:render_offsets": "tbc"
+    }
+  }
+}

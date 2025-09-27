@@ -1,0 +1,20 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "items:fish_gelatinb"
+    },
+    "groups": [
+      "items"
+    ],
+    "tags": [
+      "campfire"
+    ],
+    "input": {
+      "item": "items:fish_belly"
+    },
+    "output": {
+      "item": "items:fish_gelatin"
+    }
+  }
+}

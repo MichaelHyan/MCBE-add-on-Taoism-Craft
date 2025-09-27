@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:tc"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "abc"
+    ],
+    "key": {
+      "a": {
+        "item": "items:pearl"
+      },
+      "b": {
+        "item": "paper"
+      },
+      "c":{
+        "item": "lightning_rod"
+      }
+    },
+    "result": {
+      "item": "items:tc",
+      "count": 1
+    }
+  }
+}
