@@ -7,7 +7,7 @@
 ## 感受符箓、法器、修行之趣，于游戏中窥见道教文化的深邃与博大。
 ### 使用方式
 下载Taoism.mcaddon并使用我的世界基岩版打开
-支持版本1.21.0以上
+支持版本1.21.100以上
 
 ### add-on内容
 加入多种道教主题新物品，涵盖建筑、经书、基础材料、符箓、武器、特殊道具等类别，为玩家赋予丰富的道教仙术
@@ -423,7 +423,6 @@
   1. 综合能力：强于「令剑」
   2. 主手持有时：抗性提升 + 移速提升 + 回血buff
   3. 攻击会消耗自身精力，获得凋零效果
-- 副作用：主手持有时，玩家最大血量减少50%
 - 合成方式：8个魂魄 + 1个奇怪的木剑【邪】
 
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/sword_sp.png)
@@ -435,6 +434,8 @@
 - 核心功能：放置于物品栏第一格时，对10×10×10范围内生物造成减速
 - 合成方式：1个雷击符 + 4颗橡木树苗（原8颗，按新设定调整）
 
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/lightning_wood.png)
+
 “雷击之木，禀天雷之气，镇于一方，百兽皆惧，邪祟不侵。”
 
 #### 万魂幡
@@ -443,7 +444,7 @@
   2. 使用时：召唤2只满buff但持续扣血的铁傀儡
 - 副作用：
   1. 使用时，触发以自身为中心3×3范围的雷劈
-  2. 主手持有时消耗自身精力，获得凋零效果 + 最大血量减少50%
+  2. 主手持有时消耗自身精力，获得凋零效果
 - 合成方式：1张纸 + 1个灵剑 + 2个黑色羊毛 + 3个魂魄 + 2个普通的符箓
 
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/soul_banner.png)
