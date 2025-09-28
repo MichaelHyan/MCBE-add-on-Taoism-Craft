@@ -2,7 +2,7 @@
   "format_version": "1.12",
   "minecraft:recipe_shaped": {
     "description": {
-      "identifier": "items:tbe"
+      "identifier": "items:tcg"
     },
     "tags": [
       "crafting_table"
@@ -13,10 +13,10 @@
     ],
     "key": {
       "a": {
-        "item": "items:tb"
+        "item": "items:tc"
       },
       "b": {
-        "item": "items:ue"
+        "item": "items:ug"
       },
       "c": {
         "item": "items:fish_gelatin"
@@ -26,7 +26,7 @@
       }
     },
     "result": {
-      "item": "items:tbe",
+      "item": "items:tcg",
       "count": 1
     }
   }

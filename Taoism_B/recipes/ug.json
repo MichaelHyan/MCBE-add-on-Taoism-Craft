@@ -2,32 +2,36 @@
   "format_version": "1.12",
   "minecraft:recipe_shaped": {
     "description": {
-      "identifier": "items:tbe"
+      "identifier": "items:ug"
     },
     "tags": [
       "crafting_table"
     ],
     "pattern": [
-      " d ",
-      "acb"
+      " a ",
+      "b b",
+      "cde"
     ],
     "key": {
       "a": {
-        "item": "items:tb"
+        "item": "items:brush_p"
       },
       "b": {
-        "item": "items:ue"
-      },
-      "c": {
         "item": "items:fish_gelatin"
       },
+      "c": {
+        "item": "items:uc"
+      },
       "d": {
-        "item": "items:brush_p"
+        "item": "items:ud"
+      },
+      "e": {
+        "item": "items:ue"
       }
     },
     "result": {
-      "item": "items:tbe",
-      "count": 1
+      "item": "items:ug",
+      "count": 4
     }
   }
 }

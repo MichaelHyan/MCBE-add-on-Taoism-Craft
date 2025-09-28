@@ -131,6 +131,9 @@
     "uf": {
       "textures": "uf.png"
     },
+    "ug": {
+      "textures": "ug.png"
+    },
     "tab": {
       "textures": "tab.png"
     },
@@ -142,6 +145,9 @@
     },
     "tae": {
       "textures": "tae.png"
+    },
+    "tag": {
+      "textures": "tag.png"
     },
     "tba": {
       "textures": "tba.png"
@@ -161,6 +167,9 @@
     "tbf": {
       "textures": "tbf.png"
     },
+    "tbg": {
+      "textures": "tbg.png"
+    },
     "tca": {
       "textures": "tca.png"
     },
@@ -178,6 +187,9 @@
     },
     "tcf": {
       "textures": "tcf.png"
+    },
+    "tcg": {
+      "textures": "tcg.png"
     }
   }
 }
