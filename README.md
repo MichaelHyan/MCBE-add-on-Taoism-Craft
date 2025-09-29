@@ -41,7 +41,7 @@
 - 副作用：一次性物品，使用后触发雷劈（对玩家造成伤害）
 - 合成方式：8个朱砂粉 + 1本书
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/scripture_t.png)
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/scripture_f.png)
 
 “道心不坚，真伪难辨，假经之试，乃炼心之石。”
 
