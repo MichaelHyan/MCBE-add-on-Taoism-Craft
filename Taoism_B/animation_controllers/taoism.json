@@ -8,6 +8,8 @@
 						{"cinnabar":"query.get_equipped_item_name=='cinnabar_crystal'"},
 						{"scripture_t":"variable.attack_time && query.get_equipped_item_name=='scripture_t'"},
 						{"scripture_f":"variable.attack_time && query.get_equipped_item_name=='scripture_f'"},
+						{"scripture_ft":"variable.attack_time && query.get_equipped_item_name=='scripture_ft'"},
+						{"scripture_ff":"variable.attack_time && query.get_equipped_item_name=='scripture_ff'"},
 						{"talisman_t_a":"!query.is_using_item && query.get_equipped_item_name=='talisman_t'"},
 						{"talisman_t_b":"query.is_using_item && query.get_equipped_item_name=='talisman_t'"},
 						{"talisman_a":"!query.is_using_item && query.get_equipped_item_name=='talisman'"},
@@ -39,6 +41,9 @@
 						{"sword_sp_b":"variable.attack_time && query.get_equipped_item_name=='sword_sp'"},
 						{"soul_banner_a":"!variable.attack_time && query.get_equipped_item_name=='soul_banner'"},
 						{"soul_banner_b":"variable.attack_time && query.is_sneaking && query.get_equipped_item_name=='soul_banner'"},
+						{"hy_banner_a":"!variable.attack_time && !query.is_sneaking && query.get_equipped_item_name=='hy_banner'"},
+						{"hy_banner_b":"variable.attack_time && !query.is_sneaking && query.get_equipped_item_name=='hy_banner'"},
+						{"hy_banner_c":"!variable.attack_time && query.is_sneaking && query.get_equipped_item_name=='hy_banner'"},
 						{"mirror_a":"variable.attack_time && query.get_equipped_item_name=='mirror_a'"},
 						{"mirror_b":"variable.attack_time && query.get_equipped_item_name=='mirror_b'"},
 						{"mirror_c":"variable.attack_time && query.get_equipped_item_name=='mirror_c'"},
@@ -71,14 +76,36 @@
 							}
 					],
 					"on_entry": [
-						"/effect @s strength 10 1 true",
-						"/effect @s speed infinite 1 true",
-						"/effect @s jump_boost infinite 1 true",
+						"/effect @s strength infinite 1 true",
+						"/effect @s night_vision infinite 1 true",
 						"/effect @s health_boost infinite 4 true",
 						"/replaceitem entity @s slot.weapon.mainhand 0 items:pearl"
 					]
 				},
 				"scripture_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon lightning_bolt",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air"
+					]
+				},
+				"scripture_ft": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s speed infinite 1 true",
+						"/effect @s jump_boost infinite 1 true",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air"
+					]
+				},
+				"scripture_ff": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
@@ -462,6 +489,37 @@
 						"/effect @e[type=iron_golem,r=5] speed infinite 10 true",
 						"/effect @e[type=!player,r=15] wither infinite 255 true",
 						"/summon lightning_bolt"
+					]
+				},
+				"hy_banner_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s resistance 1 3 true",
+						"/effect @s slow_falling 1 1 true"
+					]
+				},
+				"hy_banner_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/enchant @s smite 5"
+					]
+				},
+				"hy_banner_c": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s invisibility 10 1 true"
 					]
 				},
 				"mirror_a": {

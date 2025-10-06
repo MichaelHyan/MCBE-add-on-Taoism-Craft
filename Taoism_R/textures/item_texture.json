@@ -8,6 +8,9 @@
     "scripture_s": {
       "textures": "scripture_s.png"
     },
+    "scripture_f": {
+      "textures": "scripture_f.png"
+    },
     "pearl": {
       "textures": "pearl.png"
     },
@@ -67,6 +70,9 @@
     },
 	  "soul_banner": {
       "textures": "soul_banner.png"
+    },
+    "hy_banner": {
+      "textures": "hy_banner.png"
     },
     "mirror_a": {
       "textures": "mirror_a.png"

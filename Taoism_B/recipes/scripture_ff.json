@@ -2,28 +2,25 @@
   "format_version": "1.12",
   "minecraft:recipe_shaped": {
     "description": {
-      "identifier": "items:tc"
+      "identifier": "items:scripture_ff"
     },
     "tags": [
       "crafting_table"
     ],
     "pattern": [
-      "abc"
+      "ab"
     ],
     "key": {
       "a": {
-        "item": "items:pearl"
+        "item": "items:scripture_f"
       },
       "b": {
-        "item": "paper"
-      },
-      "c":{
-        "item": "lightning_rod"
+        "item": "feather"
       }
     },
     "result": {
-      "item": "items:tc",
-      "count": 4
+      "item": "items:scripture_ff",
+      "count": 1
     }
   }
 }

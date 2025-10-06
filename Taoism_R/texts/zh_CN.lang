@@ -1,5 +1,7 @@
 item.items:scripture_t.name=经书
 item.items:scripture_f.name=经书
+item.items:scripture_ft.name=秘籍【轻功】
+item.items:scripture_ff.name=秘籍【轻功】
 item.items:scripture_s.name=噬魂术
 item.items:pearl.name=内丹
 item.items:brush_n.name=普通毛笔
@@ -21,6 +23,7 @@ item.items:sword_sp=灵剑
 item.items:lightning_wood.name=雷击木
 item.items:spirit.name=魂魄
 item.items:soul_banner=万魂幡
+item.items:hy_banner=混元幡
 item.items:mirror_a.name=铜镜
 item.items:mirror_b.name=铜镜【法】
 item.items:mirror_c.name=凸八卦镜

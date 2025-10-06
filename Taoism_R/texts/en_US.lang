@@ -1,5 +1,7 @@
 item.items:scripture_t.name=Scripture
 item.items:scripture_f.name=Scripture
+item.items:scripture_ft.name=Scripture of Lightness skill
+item.items:scripture_ff.name=Scripture of Lightness skill
 item.items:scripture_s.name=Evil Scripture
 item.items:pearl.name=Spirit Pearl
 item.items:brush_n.name=brush
@@ -21,6 +23,7 @@ item.items:sword_sp=Spirit Sword
 item.items:lightning_wood.name=lightning wood
 item.items:spirit.name=spirit
 item.items:soul_banner=Soul Banner
+item.items:hy_banner=Hunyuan Banner
 item.items:mirror_a.name=copper mirror
 item.items:mirror_b.name=sorcery mirror
 item.items:mirror_c.name=convex BaGua Mirror
