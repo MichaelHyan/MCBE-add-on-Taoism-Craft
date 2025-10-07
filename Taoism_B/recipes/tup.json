@@ -1,0 +1,31 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:tup"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " c ",
+      "bab",
+      " c "
+    ],
+    "key": {
+      "a": {
+        "item": "ender_pearl"
+      },
+      "b": {
+        "item": "items:talisman"
+      },
+      "c": {
+        "item": "items:lightning_wood"
+      }
+    },
+    "result": {
+      "item": "items:tup",
+      "count": 1
+    }
+  }
+}

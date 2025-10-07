@@ -2,7 +2,7 @@
   "format_version": "1.12",
   "minecraft:recipe_shaped": {
     "description": {
-      "identifier": "items:sword_s"
+      "identifier": "items:sword_u"
     },
     "tags": [
       "crafting_table"
@@ -17,26 +17,26 @@
         "item": "items:ring"
       },
       "b": {
-        "item": "items:sword_l"
+        "item": "items:mirror_c"
       },
       "c": {
-        "item": "items:sword_q"
+        "item": "items:mirror_d"
       },
       "d": {
         "item": "items:lightning_wood"
       },
       "e": {
-        "item": "items:tag"
+        "item": "items:tca"
       },
       "f": {
-        "item": "items:hy_banner"
+        "item": "items:soul_banner"
       },
       "g": {
-        "item": "netherite_block"
+        "item": "gold_block"
       }
     },
     "result": {
-      "item": "items:sword_s",
+      "item": "items:sword_u",
       "count": 1
     }
   }

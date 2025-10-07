@@ -1,0 +1,40 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:hy_banner"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "eae",
+      "cbd",
+      "fef"
+    ],
+    "key": {
+      "a": {
+        "item": "paper"
+      },
+      "b": {
+        "item": "items:sword_t"
+      },
+      "c": {
+        "item": "white_wool"
+      },
+      "d": {
+        "item": "yellow_wool"
+      },
+      "e": {
+        "item": "items:cinnabar"
+      },
+      "f": {
+        "item": "items:talisman"
+      }
+    },
+    "result": {
+      "item": "items:hy_banner",
+      "count": 1
+    }
+  }
+}

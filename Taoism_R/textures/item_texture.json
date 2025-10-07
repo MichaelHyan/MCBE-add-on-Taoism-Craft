@@ -59,6 +59,12 @@
     "sword_w": {
       "textures": "sword_w.png"
     },
+    "sword_u": {
+      "textures": "sword_u.png"
+    },
+    "sword_ua": {
+      "textures": "sword_ua.png"
+    },
     "lightning_wood": {
       "textures": "lightning_wood.png"
     },
@@ -109,6 +115,9 @@
     },
     "fish_gelatin": {
       "textures": "fish_gelatin.png"
+    },
+    "tup": {
+      "textures": "tup.png"
     },
     "ta": {
       "textures": "ta.png"
