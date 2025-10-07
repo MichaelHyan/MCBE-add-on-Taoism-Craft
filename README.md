@@ -62,12 +62,16 @@
 - 副作用：一次性物品，使用后消耗
 - 合成方式：1个经书（真） + 1个羽毛
 
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/scripture_f.png)
+
 “御风而行，不滞于形，此乃得道者动静之妙。”
 
 #### 轻功（假）
 - 核心功能：使用后触发雷劈致死
 - 副作用：一次性物品，使用后消耗
 - 合成方式：1个经书（真） + 1个羽毛
+
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/scripture_f.png)
 
 “伪术求快，违逆自然，轻举妄动，必遭天诛。”
 
@@ -663,7 +667,7 @@
 “金刚琢，镇万物，缴械制敌，物极必反，此乃道之理。”
 
 #### 净瓶
-- 核心功能：右键点击目标生物时，为其提供持续回血效果
+- 核心功能：点击时，为附近生物提供持续回血效果
 - 副作用：无负面副作用，可重复使用（非一次性道具）
 - 合成方式：3个黏土块 + 1个普通的符箓 + 1个下界之星
 
@@ -673,6 +677,7 @@
 
 #### 令牌【通天术】
 - 核心功能：抬头向上亮出令牌，请示神明，可隔墙向上传送
+- 使用方式：点击进入预览视角，下蹲使用传送，跳起取消传送
 - 合成方式：两个雷击木+一个末影珍珠+两个普通符箓
 
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/tup.png)
