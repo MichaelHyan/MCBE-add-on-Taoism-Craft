@@ -30,7 +30,7 @@
 ### 经书类
 #### 经书（真）
 - 核心功能：
-  1. 使用后永久增益：移速提升1、跳跃提升1、最大血量提升100%
+  1. 使用后永久增益：最大血量提升100%
   2. 使用后获得1个「内丹」（核心合成材料）
 - 副作用：一次性物品，使用后消耗
 - 合成方式：7个朱砂粉 + 1个普通毛笔 + 1本书
@@ -96,7 +96,7 @@
 #### 朱砂晶体
 - 核心功能：合成材料（用于制作「朱砂粉」）
 - 特殊说明：道教道具制作的基础材料，「初见端倪」
-- 获取方式：击败任意生物后掉落
+- 获取方式：击败亡灵生物后掉落
 
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/cinnabar_crystal.png)
 
@@ -232,7 +232,7 @@
 - 副作用：一次性物品，使用后消耗
 - 合成方式：1个画符毛笔 + 1个残符【雷令】 + 1张纸 + 1个鱼胶
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/talisman_t.png)
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/talisman_t.png)
 
 “雷为天怒，符引其威，雷击所及，邪祟消亡。”
 
@@ -241,7 +241,7 @@
 - 合成方式：1个画符毛笔 + 1个残符【三清】 + 1个符脚【风】 + 1个鱼胶
 - 使用方式：包含笏的效果，左键/攻击键记录位置，随后随时可使用shift/潜行键回到记录的位置，可同时存在多个位置，所有玩家共享，按住space/跳跃的同时按下shift/潜行删除所有记录地点
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/talisman_e.png)
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/talisman_e.png)
 
 “缩地成寸，道法自然，一念千里，此乃通玄之妙。”
 
@@ -250,7 +250,7 @@
 - 副作用：一次性物品，使用后消耗
 - 合成方式：1个画符毛笔 + 1个残符【三清】 + 1个符脚【金】 + 1个鱼胶（原基础合成方式保留，新增高阶合成路径）
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/talisman_g.png)
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/talisman_g.png)
 
 “金光护体，百邪不侵，得此符者，身有灵光，福寿康宁。”
 
@@ -262,7 +262,7 @@
 - 副作用：一次性物品，使用后消耗
 - 合成方式：1个画符毛笔 + 1张纸
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/talisman.png)
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/talisman.png)
 
 “符箓者，天地之令，阴阳之契，可驱邪鬼，可安生灵。”
 
@@ -378,7 +378,7 @@
 “补金召傀儡，助战守身旁，可挡敌锋，护己安全。”
 
 #### 补木符
-- 核心功能(右键/交互键)：以使用者为中心，在10×10×10范围内自动生成橡木（可作为建材或燃料）
+- 核心功能(右键/交互键)：以使用者为中心，在10×10×10范围内自动生成橡木树苗
 - 副作用：一次性物品，使用后消耗
 - 合成方式：1个画符毛笔 + 1个残符【敕令】 + 1个符脚【木】 + 1个鱼胶
 
@@ -540,9 +540,11 @@
 “万魂聚幡，威力骇人，有伤天和，非正道所取，慎用之。”
 
 #### 混元幡
-- 核心功能：无特殊主动功能，为高阶合成材料
+- 核心功能：拥有隐身和缓降效果
 - 副作用：无特殊负面效果
 - 合成方式：1张纸 + 1个桃木 + 1个黑羊毛 + 1个黄色羊毛 + 3个朱砂粉 + 2个普通的符箓
+
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/hy_banner.png)
 
 “混元者，天地未分，混沌一体，幡承其气，可化万象。”
 
@@ -610,7 +612,7 @@
 - 核心功能：使用时，使用者及附近队友获得——最大血量提升100% + 持续快速回血
 - 副作用：
   1. 趣味设定「见过一次的把戏就不灵了」，buff持续1分钟
-  2. 使用后仅剩余「内丹（内丹）」
+  2. 使用后仅剩余「内丹」
 - 合成方式：8个铜镜【法】 + 1个内丹（内丹）
 
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/mirror_d.png)
@@ -631,7 +633,7 @@
 #### 铜葫芦
 - 核心功能：
   1. 使用时：主动吸引20×20×20范围内所有物品
-  2. 或破坏面前3×3×3范围内方块并吸收
+  2. 或破坏面前方块并吸收
 - 副作用：吸收后的物品回归自然循环
 - 合成方式：5个铜锭 + 2个普通的符箓 + 1个雷击木（木板）
 
