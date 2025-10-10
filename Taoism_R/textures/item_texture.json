@@ -74,6 +74,9 @@
     "sword_sp": {
       "textures": "sword_sp.png"
     },
+    "wond":{
+      "textures": "wond.png"
+    },
 	  "soul_banner": {
       "textures": "soul_banner.png"
     },
@@ -205,6 +208,12 @@
     },
     "tcg": {
       "textures": "tcg.png"
+    },
+    "txp": {
+      "textures":"txp.png"
+    },
+    "txpa": {
+      "textures":"txpa.png"
     }
   }
 }

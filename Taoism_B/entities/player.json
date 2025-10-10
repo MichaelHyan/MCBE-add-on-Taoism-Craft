@@ -9,11 +9,13 @@
 			"scripts": {
 				"animate": [
 					"taoism",
+					"sword",
 					"talisman"
 				]
 			},
 			"animations": {
 				"taoism": "controller.animation.taoism",
+				"sword": "controller.animation.sword",
 				"talisman": "controller.animation.talisman"
 			} 
 		},

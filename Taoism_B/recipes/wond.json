@@ -1,0 +1,32 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:wond"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "cba",
+      "bab",
+      "abc"
+    ],
+    "key": {
+      "a": {
+        "item": "stick"
+      },
+      "b": {
+        "item": "items:talisman"
+      },
+      "c": {
+        "item": "gold_ingot"
+      }
+
+    },
+    "result": {
+      "item": "items:wond",
+      "count": 1
+    }
+  }
+}

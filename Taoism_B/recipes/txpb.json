@@ -1,0 +1,31 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:txpb"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "cbc",
+      " a ",
+      "c c"
+    ],
+    "key": {
+      "a": {
+        "item": "items:pearl"
+      },
+      "b": {
+        "item": "diamond"
+      },
+      "c": {
+        "item": "gold_ingot"
+      }
+    },
+    "result": {
+      "item": "items:txpb",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,424 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.sword":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"sword_t_a":"query.get_equipped_item_name=='sword_t' && !variable.attack_time && query.player_level > 10"},
+						{"sword_t_b":"query.get_equipped_item_name=='sword_t' && variable.attack_time && query.player_level > 10"},
+						{"sword_b_a":"query.get_equipped_item_name=='sword_b' && !variable.attack_time && query.player_level > 10"},
+						{"sword_b_b":"query.get_equipped_item_name=='sword_b' && variable.attack_time && query.player_level > 10"},
+						{"sword_q_a":"query.get_equipped_item_name=='sword_q' && !variable.attack_time && query.player_level > 20"},
+						{"sword_q_b":"query.get_equipped_item_name=='sword_q' && variable.attack_time && query.player_level > 20"},
+						{"sword_l_a":"query.get_equipped_item_name=='sword_l' && !variable.attack_time && query.player_level > 20"},
+						{"sword_l_b":"query.get_equipped_item_name=='sword_l' && variable.attack_time && query.player_level > 20"},
+						{"sword_s_a":"query.get_equipped_item_name=='sword_s' && !variable.attack_time && !query.is_jumping && !query.is_sneaking && query.player_level > 50"},
+						{"sword_s_b":"query.get_equipped_item_name=='sword_s' && variable.attack_time && !query.is_jumping && !query.is_sneaking && query.player_level > 50"},
+						{"sword_s_c":"query.get_equipped_item_name=='sword_s' && !variable.attack_time && query.is_jumping && !query.is_sneaking && query.player_level > 50"},
+						{"sword_s_d":"query.get_equipped_item_name=='sword_s' && query.is_sneaking && query.player_level > 50"},
+						{"sword_e_a":"query.get_equipped_item_name=='sword_e' && !variable.attack_time && query.player_level > 10"},
+						{"sword_e_b":"query.get_equipped_item_name=='sword_e' && variable.attack_time && query.player_level > 10"},
+						{"sword_w_a":"query.get_equipped_item_name=='sword_w' && !variable.attack_time && query.player_level > 10"},
+						{"sword_w_b":"query.get_equipped_item_name=='sword_w' && variable.attack_time && query.player_level > 10"},
+						{"sword_u_a":"query.get_equipped_item_name=='sword_u' && !variable.attack_time && !query.is_sneaking && query.player_level > 50"},
+						{"sword_u_b":"query.get_equipped_item_name=='sword_u' && variable.attack_time && !query.is_sneaking && query.player_level > 50"},
+						{"sword_u_c":"query.get_equipped_item_name=='sword_u' && variable.attack_time && query.is_sneaking && query.player_level > 50"},
+						{"wond_a":"query.get_equipped_item_name=='wond' && !variable.attack_time && !query.is_jumping && query.player_level > 10"},
+						{"wond_b":"query.get_equipped_item_name=='wond' && variable.attack_time && !query.is_jumping && query.player_level > 10"},
+						{"wond_c":"query.get_equipped_item_name=='wond' && variable.attack_time && query.is_jumping && query.player_level > 10"},
+						{"sword_sp_a":"query.get_equipped_item_name=='sword_sp' && !variable.attack_time && query.player_level > 20"},
+						{"sword_sp_b":"query.get_equipped_item_name=='sword_sp' && variable.attack_time && query.player_level > 20"},
+						{"soul_banner_a":"query.get_equipped_item_name=='soul_banner' && !variable.attack_time && query.player_level > 25"},
+						{"soul_banner_b":"query.get_equipped_item_name=='soul_banner' && variable.attack_time && query.is_sneaking && query.player_level > 25"},
+						{"hy_banner_a":"query.get_equipped_item_name=='hy_banner' && !variable.attack_time && !query.is_sneaking && query.player_level > 15"},
+						{"hy_banner_b":"query.get_equipped_item_name=='hy_banner' && variable.attack_time && !query.is_sneaking && query.player_level > 15"},
+						{"hy_banner_c":"query.get_equipped_item_name=='hy_banner' && !variable.attack_time && query.is_sneaking && query.player_level > 15"},
+						{"ring_a":"query.get_equipped_item_name=='ring' && !variable.attack_time && query.player_level > 15"},
+						{"ring_b":"query.get_equipped_item_name=='ring' && variable.attack_time && query.player_level > 15"},
+						{"whisk":"query.get_equipped_item_name=='whisk' && variable.attack_time && query.player_level > 15"}
+					]
+				},
+				"sword_t_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s regeneration 1 3 true"
+					]
+				},
+				"sword_t_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
+						"/playsound sw",
+						"/enchant @s smite 3"
+					]
+				},
+				"sword_b_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s resistance 1 3 true"
+					]
+				},
+				"sword_b_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
+						"/enchant @s smite 3",
+						"/playsound sw"
+					]
+				},
+				"sword_q_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s speed 1 1 true",
+						"/effect @s regeneration 1 3 true"
+					]
+				},
+				"sword_q_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
+						"/enchant @s smite 4",
+						"/playsound sw"
+					]
+				},
+				"sword_l_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s speed 1 1 true",
+						"/effect @s resistance 1 3 true"
+					]
+				},
+				"sword_l_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
+						"/enchant @s smite 5",
+						"/playsound sw"
+					]
+				},
+				"sword_s_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s resistance 1 255 true",
+						"/effect @s regeneration 3 3 true",
+						"/effect @s speed 1 3 true",
+						"/effect @s slow_falling 1 1 true"
+					]
+				},
+				"sword_s_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
+						"/playsound sw"
+					]
+				},
+				"sword_s_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 1 true",
+						"/effect @s speed 1 5 true"
+					]
+				},
+				"sword_s_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s fire_resistance 60 1 true",
+						"/summon lightning_bolt ~ ~ ~5",
+						"/summon lightning_bolt ~2 ~ ~4",
+						"/summon lightning_bolt ~4 ~ ~2",
+						"/summon lightning_bolt ~5 ~ ~",
+						"/summon lightning_bolt ~4 ~ ~-2",
+						"/summon lightning_bolt ~2 ~ ~-4",
+						"/summon lightning_bolt ~ ~ ~-5",
+						"/summon lightning_bolt ~-2 ~ ~-4",
+						"/summon lightning_bolt ~-4 ~ ~-2",
+						"/summon lightning_bolt ~-5 ~ ~",
+						"/summon lightning_bolt ~-4 ~ ~2",
+						"/summon lightning_bolt ~-2 ~ ~4"
+					]
+				},
+				"sword_e_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s speed 1 1 true",
+						"/effect @s jump_boost 1 1 true",
+						"/effect @s hunger 1 5 true"
+					]
+				},
+				"sword_e_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
+						"/playsound sw"
+					]
+				},
+				"sword_w_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s speed 1 1 true",
+						"/effect @s jump_boost 1 1 true"
+					]
+				},
+				"sword_w_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
+						"/summon lightning_bolt",
+						"/playsound sw",
+						"/kill @s"
+					]
+				},
+				"sword_u_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @e[name=(-)] ^-0.5 ^ ^-1 facing ^-0.5 ^ ^",
+						"/effect @s hunger 1 5 true"
+					]
+				},
+				"sword_u_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @e[name=(-)] @n[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,r=20]",
+						"/kill @n[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,r=20]"
+					]
+				},
+				"sword_u_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @e[name=(-)]",
+						"/kill @e[type=item,r=2]",
+						"/summon armor_stand (-)",
+						"/effect @e[name=(-)] invisibility infinite 255 true",
+						"/replaceitem entity @n[name=(-)] slot.weapon.mainhand 0 items:sword_ua"
+					]
+				},
+				"wond_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s resistance 1 3 true",
+						"/effect @s regeneration 1 3 true"
+					]
+				},
+				"wond_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
+						"/enchant @s smite 5"
+					]
+				},
+				"wond_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp ^ ^1 ^5",
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:wond"
+					]
+				},
+				"sword_sp_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s resistance 1 3 true",
+						"/effect @s regeneration 1 5 true",
+						"/effect @s hunger 1 5 true",
+						"/effect @s speed 1 1 true"
+					]
+				},
+				"sword_sp_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
+						"/effect @s wither 2 255 true"
+					]
+				},
+				"soul_banner_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s resistance 1 3 true",
+						"/effect @s hunger 1 5 true",
+						"/effect @s speed 1 1 true"
+					]
+				},
+				"soul_banner_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @e[r=15,type=!player] slowness 10 255 true",
+						"/summon iron_golem",
+						"/effect @e[type=iron_golem,r=5] strength infinite 10 true",
+						"/effect @e[type=iron_golem,r=5] speed infinite 10 true",
+						"/effect @e[type=!player,r=15] wither infinite 255 true",
+						"/summon lightning_bolt"
+					]
+				},
+				"hy_banner_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s resistance 1 3 true",
+						"/effect @s slow_falling 1 1 true"
+					]
+				},
+				"hy_banner_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/enchant @s smite 5"
+					]
+				},
+				"hy_banner_c": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s invisibility 10 1 true"
+					]
+				},
+				"ring_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s resistance 1 3 true"
+					]
+				},
+				"ring_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
+						"/replaceitem entity @e[type=!player,r=10] slot.weapon.mainhand 0 air",
+						"/enchant @s looting 3",
+						"/effect @e[type=!player,r=10] weakness 30 255 true"
+					]
+				},
+				"whisk": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s clear",
+						"/effect @s strength 1 2 true"
+					]
+				}
+			}
+		}
+ 	}
+ }

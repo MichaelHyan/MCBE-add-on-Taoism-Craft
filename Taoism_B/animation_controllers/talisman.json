@@ -5,27 +5,30 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"tab":"query.is_using_item && query.get_equipped_item_name=='tab'"},
-						{"tac":"query.is_using_item && query.get_equipped_item_name=='tac'"},
-						{"tad":"query.is_using_item && query.get_equipped_item_name=='tad'"},
-						{"tae":"query.is_using_item && query.get_equipped_item_name=='tae'"},
-						{"tag":"query.is_item_name_any('slot.hotbar', 0, 'items:tag') && variable.attack_time"},
-						{"tba":"query.is_using_item && query.get_equipped_item_name=='tba'"},
-						{"tbb":"query.is_using_item && query.get_equipped_item_name=='tbb'"},
-						{"tbc_a":"query.is_using_item && !query.is_sneaking && query.get_equipped_item_name=='tbc'"},
-						{"tbc_b":"query.is_using_item && query.is_sneaking && query.get_equipped_item_name=='tbc'"},
-						{"tbd":"query.is_using_item && query.get_equipped_item_name=='tbd'"},
-						{"tbe":"query.get_equipped_item_name=='tbe'"},
-						{"tbf":"query.is_using_item && query.get_equipped_item_name=='tbf'"},
-						{"tbg":"query.is_item_name_any('slot.hotbar', 0, 'items:tbg') && variable.attack_time"},
-						{"tca":"query.is_using_item && query.get_equipped_item_name=='tca'"},
-						{"tcb":"query.is_using_item && query.get_equipped_item_name=='tcb'"},
-						{"tcc":"query.is_using_item && query.get_equipped_item_name=='tcc'"},
-						{"tcd_a":"query.is_using_item && !query.is_sneaking && query.get_equipped_item_name=='tcd'"},
-						{"tcd_b":"query.is_using_item && query.is_sneaking && query.get_equipped_item_name=='tcd'"},
-						{"tce":"query.is_using_item && query.get_equipped_item_name=='tce'"},
-						{"tcf":"query.is_using_item && query.get_equipped_item_name=='tcf'"},
-						{"tcg":"query.is_item_name_any('slot.hotbar', 0, 'items:tcg') && variable.attack_time"}
+						{"tab":"query.get_equipped_item_name=='tab' && query.is_using_item && query.player_level > 20"},
+						{"tac":"query.get_equipped_item_name=='tac' && query.is_using_item && query.player_level > 20"},
+						{"tad":"query.get_equipped_item_name=='tad' && query.is_using_item && query.player_level > 20"},
+						{"tae":"query.get_equipped_item_name=='tae' && query.is_using_item && query.player_level > 20"},
+						{"tag":"query.is_item_name_any('slot.hotbar', 0, 'items:tag') && variable.attack_time && query.player_level > 20"},
+						{"tba":"query.get_equipped_item_name=='tba' && query.is_using_item && query.player_level > 10"},
+						{"tbb":"query.get_equipped_item_name=='tbb' && query.is_using_item && query.player_level > 10"},
+						{"tbc_a":"query.get_equipped_item_name=='tbc' && query.is_using_item && !query.is_sneaking && query.player_level > 10"},
+						{"tbc_b":"query.get_equipped_item_name=='tbc' && query.is_using_item && query.is_sneaking && query.player_level > 10"},
+						{"tbd":"query.get_equipped_item_name=='tbd' && query.is_using_item && query.player_level > 10"},
+						{"tbe":"query.get_equipped_item_name=='tbe' && query.player_level > 10"},
+						{"tbf":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 10"},
+						{"tbg":"query.is_item_name_any('slot.hotbar', 0, 'items:tbg') && variable.attack_time && query.player_level > 10"},
+						{"tca":"query.get_equipped_item_name=='tca' && query.is_using_item && query.player_level > 15"},
+						{"tcb":"query.get_equipped_item_name=='tcb' && query.is_using_item && query.player_level > 15"},
+						{"tcc":"query.get_equipped_item_name=='tcc' && query.is_using_item && query.player_level > 15"},
+						{"tcd_a":"query.get_equipped_item_name=='tcd' && query.is_using_item && !query.is_sneaking && query.player_level > 15"},
+						{"tcd_b":"query.get_equipped_item_name=='tcd' && query.is_using_item && query.is_sneaking && query.player_level > 15"},
+						{"tce":"query.get_equipped_item_name=='tce' && query.is_using_item && query.player_level > 15"},
+						{"tcf":"query.get_equipped_item_name=='tcf' && query.is_using_item && query.player_level > 10"},
+						{"tcg":"query.is_item_name_any('slot.hotbar', 0, 'items:tcg') && variable.attack_time && query.player_level > 15"},
+						{"txpa":"query.get_equipped_item_name=='txpa' && query.is_using_item"},
+						{"txpb":"query.get_equipped_item_name=='txpb' && query.is_using_item && query.player_level > 5"},
+						{"txpc":"query.get_equipped_item_name=='txpc' && query.is_using_item"}
 					]
 				},
 				"tab": {
@@ -290,6 +293,50 @@
 						"/effect @s weakness 1 1 true",
 						"/effect @s mining_fatigue 1 1 true",
 						"/enchant @s fire_aspect 1"
+					]
+				},
+				"txpa": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/xp 300 @s"
+					]
+				},
+				"txpb": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s conduit_power 60 1 true",
+						"/effect @s resistance 60 1 true",
+						"/effect @s regeneration 60 3 true",
+						"/effect @s speed 60 1 true",
+						"/effect @s health_boost 60 4 true"
+					]
+				},
+				"txpc": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon xp_orb",
+						"/summon xp_orb",
+						"/summon xp_orb",
+						"/summon xp_orb",
+						"/summon xp_orb",
+						"/summon xp_orb",
+						"/summon xp_orb",
+						"/summon xp_orb",
+						"/summon xp_orb",
+						"/summon xp_orb",
+						"/give @s items:txpc"
 					]
 				}
 			}
