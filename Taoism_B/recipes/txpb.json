@@ -10,14 +10,14 @@
     "pattern": [
       "cbc",
       " a ",
-      "c c"
+      "cbc"
     ],
     "key": {
       "a": {
-        "item": "items:pearl"
+        "item": "diamond"
       },
       "b": {
-        "item": "diamond"
+        "item": "items:talisman"
       },
       "c": {
         "item": "gold_ingot"
