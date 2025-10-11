@@ -5,35 +5,36 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"cinnabar":"query.get_equipped_item_name=='cinnabar_crystal' && query.player_level > 1"},
-						{"scripture_t":"query.get_equipped_item_name=='scripture_t' && variable.attack_time && query.player_level > 5"},
-						{"scripture_f":"query.get_equipped_item_name=='scripture_f' && variable.attack_time && query.player_level > 5"},
-						{"scripture_ft":"query.get_equipped_item_name=='scripture_ft' && variable.attack_time && query.player_level > 5"},
-						{"scripture_ff":"query.get_equipped_item_name=='scripture_ff' && variable.attack_time && query.player_level > 5"},
-						{"talisman_t_a":"query.get_equipped_item_name=='talisman_t' && !query.is_using_item && query.player_level > 20"},
-						{"talisman_t_b":"query.get_equipped_item_name=='talisman_t' && query.is_using_item && query.player_level > 20"},
-						{"talisman_a":"query.get_equipped_item_name=='talisman' && !query.is_using_item && query.player_level > 20"},
-						{"talisman_b":"query.get_equipped_item_name=='talisman' && query.is_using_item && query.player_level > 20"},
-						{"talisman_g":"query.get_equipped_item_name=='talisman_g' && query.is_using_item && query.player_level > 20"},
-						{"talisman_e_a":"query.get_equipped_item_name=='talisman_e' && variable.attack_time && !query.is_jumping && !query.is_sneaking && query.player_level > 20"},
-						{"talisman_e_b":"query.get_equipped_item_name=='talisman_e' && !variable.attack_time && !query.is_jumping && query.is_sneaking && query.player_level > 20"},
-						{"talisman_e_c":"query.get_equipped_item_name=='talisman_e' && !variable.attack_time && query.is_jumping && query.is_sneaking && query.player_level > 20"},
-						{"talisman_e_d":"query.get_equipped_item_name=='talisman_e' && variable.attack_time && !query.is_jumping && query.is_sneaking && query.player_level > 20"},
-						{"lightning_wood":"query.is_item_name_any('slot.hotbar', 0, 'items:lightning_wood') && query.player_level > 15"},							
+						{"cinnabar":"query.get_equipped_item_name=='cinnabar_crystal' && query.player_level > 0"},
+						{"scripture_t":"query.get_equipped_item_name=='scripture_t' && variable.attack_time && query.player_level > 4"},
+						{"scripture_f":"query.get_equipped_item_name=='scripture_f' && variable.attack_time && query.player_level > 4"},
+						{"scripture_ft":"query.get_equipped_item_name=='scripture_ft' && variable.attack_time && query.player_level > 4"},
+						{"scripture_ff":"query.get_equipped_item_name=='scripture_ff' && variable.attack_time && query.player_level > 4"},
+						{"talisman_t_a":"query.get_equipped_item_name=='talisman_t' && !query.is_using_item && query.player_level > 9"},
+						{"talisman_t_b":"query.get_equipped_item_name=='talisman_t' && query.is_using_item && query.player_level > 9"},
+						{"talisman_a":"query.get_equipped_item_name=='talisman' && !query.is_using_item && query.player_level > 4"},
+						{"talisman_b":"query.get_equipped_item_name=='talisman' && query.is_using_item && query.player_level > 4"},
+						{"talisman_g":"query.get_equipped_item_name=='talisman_g' && query.is_using_item && query.player_level > 19"},
+						{"talisman_e_a":"query.get_equipped_item_name=='talisman_e' && variable.attack_time && !query.is_jumping && !query.is_sneaking && query.player_level > 14"},
+						{"talisman_e_b":"query.get_equipped_item_name=='talisman_e' && !variable.attack_time && !query.is_jumping && query.is_sneaking && query.player_level > 14"},
+						{"talisman_e_c":"query.get_equipped_item_name=='talisman_e' && !variable.attack_time && query.is_jumping && query.is_sneaking && query.player_level > 14"},
+						{"talisman_e_d":"query.get_equipped_item_name=='talisman_e' && variable.attack_time && !query.is_jumping && query.is_sneaking && query.player_level > 14"},
+						{"lightning_wood":"query.is_item_name_any('slot.hotbar', 0, 'items:lightning_wood') && query.player_level > 14"},							
 						{"spirit":"query.get_equipped_item_name=='spirit'"},
-						{"mirror_a":"query.get_equipped_item_name=='mirror_a' && variable.attack_time && query.player_level > 15"},
-						{"mirror_b":"query.get_equipped_item_name=='mirror_b' && variable.attack_time && query.player_level > 15"},
-						{"mirror_c":"query.get_equipped_item_name=='mirror_c' && variable.attack_time && query.player_level > 15"},
-						{"mirror_d":"query.get_equipped_item_name=='mirror_d' && variable.attack_time && query.player_level > 15"},
-						{"bell_a":"query.get_equipped_item_name=='bell' && !variable.attack_time && query.player_level > 15"},
-						{"bell_b":"query.get_equipped_item_name=='bell' && variable.attack_time && query.player_level > 15"},
-						{"gourd_a":"query.get_equipped_item_name=='gourd' && variable.attack_time && !query.is_sneaking && query.player_level > 15"},
-						{"gourd_b":"query.get_equipped_item_name=='gourd' && variable.attack_time && query.is_sneaking && query.player_level > 15"},
-						{"wul":"query.get_equipped_item_name=='wul' && variable.attack_time && query.player_level > 15"},
-						{"tup_a":"query.get_equipped_item_name=='tup' && !query.is_sneaking && !query.is_jumping && variable.attack_time && query.player_level > 15"},
-						{"tup_b":"query.get_equipped_item_name=='tup' && !query.is_sneaking && query.is_jumping && !variable.attack_time && query.player_level > 15"},
-						{"tup_c":"query.get_equipped_item_name=='tup' && query.is_sneaking && !query.is_jumping && !variable.attack_time && query.player_level > 15"},
-						{"tup_d":"query.get_equipped_item_name=='tup' && !query.is_sneaking && !query.is_jumping && !variable.attack_time && query.player_level > 15"}
+						{"mirror_a":"query.get_equipped_item_name=='mirror_a' && variable.attack_time && query.player_level > 14"},
+						{"mirror_b":"query.get_equipped_item_name=='mirror_b' && variable.attack_time && query.player_level > 14"},
+						{"mirror_c":"query.get_equipped_item_name=='mirror_c' && variable.attack_time && query.player_level > 14"},
+						{"mirror_d":"query.get_equipped_item_name=='mirror_d' && variable.attack_time && query.player_level > 14"},
+						{"bell_a":"query.get_equipped_item_name=='bell' && !variable.attack_time && query.player_level > 14"},
+						{"bell_b":"query.get_equipped_item_name=='bell' && variable.attack_time && query.player_level > 14"},
+						{"bottle":"query.get_equipped_item_name=='bottle' && variable.attack_time && query.player_level > 14"},
+						{"gourd_a":"query.get_equipped_item_name=='gourd' && variable.attack_time && !query.is_sneaking && query.player_level > 14"},
+						{"gourd_b":"query.get_equipped_item_name=='gourd' && variable.attack_time && query.is_sneaking && query.player_level > 14"},
+						{"wul":"query.get_equipped_item_name=='wul' && variable.attack_time && query.player_level > 14"},
+						{"tup_a":"query.get_equipped_item_name=='tup' && !query.is_sneaking && !query.is_jumping && variable.attack_time && query.player_level > 14"},
+						{"tup_b":"query.get_equipped_item_name=='tup' && !query.is_sneaking && query.is_jumping && !variable.attack_time && query.player_level > 14"},
+						{"tup_c":"query.get_equipped_item_name=='tup' && query.is_sneaking && !query.is_jumping && !variable.attack_time && query.player_level > 14"},
+						{"tup_d":"query.get_equipped_item_name=='tup' && !query.is_sneaking && !query.is_jumping && !variable.attack_time && query.player_level > 14"}
 					]
 				},
 				"cinnabar": {
@@ -142,7 +143,7 @@
 						}
 					],
 					"on_entry": [
-						"/effect @n[r=3,type=!player] instant_health 1 255 true"
+						"/effect @e[r=3,type=!player] instant_health 1 255 true"
 					]
 				},
 				"talisman_g": {

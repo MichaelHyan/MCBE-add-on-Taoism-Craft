@@ -4,7 +4,7 @@
 "description":"作者：韩言悦欣 zz纸张神探st",
 "name":"道术 Taoism Craft",
 "uuid":"7cade011-ed3b-478b-8dbb-5824e75f657d",
-"version":[3,0,0],
+"version":[3,0,1],
 "min_engine_version":[1,10,0]
 },
 "modules":[
@@ -12,7 +12,7 @@
 "description":"作者：韩言悦欣 zz纸张神探st",
 "type":"data",
 "uuid":"d219e3df-b598-4e5f-aa2a-cfffba857094",
-"version":[3,0,0]
+"version":[3,0,1]
 }
 ],
 "metadata": { "product_type": "addon" }
