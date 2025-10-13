@@ -25,7 +25,7 @@
           "default":"sword_u"
         }
       },
-      "minecraft:damage":0,
+      "minecraft:damage":231,
       "minecraft:can_destroy_in_creative":false
     }
   }
