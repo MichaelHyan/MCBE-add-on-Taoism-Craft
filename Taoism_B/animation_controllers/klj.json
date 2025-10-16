@@ -1,0 +1,41 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.klj":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"klj_a":"query.get_equipped_item_name=='klj' && query.is_using_item"},
+						{"klj_b":"query.get_equipped_item_name=='klj' && query.is_sneaking"}
+					]
+				},
+				"klj_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tag @n[rm=1,type=!item,type=!arrow] add klj",
+						"/summon armor_stand (H) ~ ~ ~",
+						"/tp @e[tag=klj]",
+						"/tp @e[tag=klj] @e[name=(H)]",
+						"/kill @e[name=(H)]",
+						"/tag @e remove klj",
+						"/function bglp2"
+					]
+				},
+				"klj_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar 开发者物品——韩言悦欣"
+					]
+				}
+			}
+		}
+ 	}
+ }

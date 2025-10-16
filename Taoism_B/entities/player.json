@@ -10,13 +10,17 @@
 				"animate": [
 					"taoism",
 					"sword",
-					"talisman"
+					"talisman",
+					"klj",
+					"bglp"
 				]
 			},
 			"animations": {
 				"taoism": "controller.animation.taoism",
 				"sword": "controller.animation.sword",
-				"talisman": "controller.animation.talisman"
+				"talisman": "controller.animation.talisman",
+				"klj": "controller.animation.klj",
+				"bglp": "controller.animation.bglp"
 			} 
 		},
 		"component_groups": {

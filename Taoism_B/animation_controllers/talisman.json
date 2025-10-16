@@ -335,8 +335,7 @@
 						"/summon xp_orb",
 						"/summon xp_orb",
 						"/summon xp_orb",
-						"/summon xp_orb",
-						"/give @s items:txpc"
+						"/summon xp_orb"
 					]
 				}
 			}

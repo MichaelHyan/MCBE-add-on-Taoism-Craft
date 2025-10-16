@@ -252,7 +252,7 @@
 					],
 					"on_entry": [
 						"/tp @e[name=(-)] @n[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,r=20]",
-						"/kill @n[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,r=20]"
+						"/damage @n[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,r=20] 100"
 					]
 				},
 				"sword_u_c": {

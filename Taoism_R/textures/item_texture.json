@@ -119,6 +119,15 @@
     "fish_gelatin": {
       "textures": "fish_gelatin.png"
     },
+    "klj": {
+      "textures": "klj.png"
+    },
+    "bglpa": {
+      "textures": "bglpa.png"
+    },
+    "bglpb": {
+      "textures": "bglpb.png"
+    },
     "tup": {
       "textures": "tup.png"
     },

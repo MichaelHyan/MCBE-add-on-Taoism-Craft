@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:klj"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "bbb",
+      "bab",
+      "bbb"
+    ],
+    "key": {
+      "a": {
+        "item": "copper_block"
+      },
+      "b": {
+        "item": "items:talisman"
+      }
+    },
+    "result": {
+      "item": "items:klj",
+      "count": 1
+    }
+  }
+}

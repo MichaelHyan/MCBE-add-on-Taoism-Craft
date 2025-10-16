@@ -1,0 +1,63 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.bglp":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"bglpa_a":"query.get_equipped_item_name=='bglpa' && query.is_using_item"},
+						{"bglpa_b":"query.get_equipped_item_name=='bglpa' && !query.is_using_item && query.is_sneaking"},
+						{"bglpb_a":"query.get_equipped_item_name=='bglpb' && query.is_using_item"},
+						{"bglpb_b":"query.get_equipped_item_name=='bglpb' && !query.is_using_item && query.ground_speed < 0.5"}
+					]
+				},
+				"bglpa_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:bglpb"
+					]
+				},
+				"bglpa_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar 开发者物品——zz纸张神探st"
+					]
+				},
+				"bglpb_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:bglpa"
+					]
+				},
+				"bglpb_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @e[type=!player,rm=10,r=25] slowness 1 1 true",
+						"/effect @e[type=!player,rm=5,r=10] slowness 1 3 true",
+						"/effect @e[type=!player,rm=1,r=5] slowness 1 255 true",
+						"/damage @e[type=!item,type=!player,rm=5,r=25] 1",
+						"/damage @e[type=!item,type=!player,r=5] 3",
+						"/effect @e[type=player,r=25] regeneration 1 3 true",
+						"/function bglp1"
+					]
+				}
+			}
+		}
+ 	}
+ }
