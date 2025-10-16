@@ -8,7 +8,8 @@
 						{"bglpa_a":"query.get_equipped_item_name=='bglpa' && query.is_using_item"},
 						{"bglpa_b":"query.get_equipped_item_name=='bglpa' && !query.is_using_item && query.is_sneaking"},
 						{"bglpb_a":"query.get_equipped_item_name=='bglpb' && query.is_using_item"},
-						{"bglpb_b":"query.get_equipped_item_name=='bglpb' && !query.is_using_item && query.ground_speed < 0.5"}
+						{"bglpb_b":"query.get_equipped_item_name=='bglpb' && !query.is_using_item && !query.is_sneaking && query.ground_speed < 0.5"},
+						{"bglpb_c":"query.get_equipped_item_name=='bglpb' && !query.is_using_item && query.is_sneaking && query.ground_speed < 0.5"}
 					]
 				},
 				"bglpa_a": {
@@ -53,7 +54,20 @@
 						"/effect @e[type=!player,rm=1,r=5] slowness 1 255 true",
 						"/damage @e[type=!item,type=!player,rm=5,r=25] 1",
 						"/damage @e[type=!item,type=!player,r=5] 3",
-						"/effect @e[type=player,r=25] regeneration 1 5 true",
+						"/effect @e[type=player,rm=5,r=25] regeneration 1 3 true",
+						"/effect @e[type=player,r=5] regeneration 1 5 true",
+						"/function bglp1"
+					]
+				},
+				"bglpb_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @e[type=!player,r=25] slowness 1 1 true",
+						"/effect @e[type=!player,r=25] levitation 1 1 true",
 						"/function bglp1"
 					]
 				}
