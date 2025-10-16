@@ -737,6 +737,7 @@
 #### 昆仑镜（开发者物品）
 - 核心功能：使用后使用者与周围最近的实体互换位置
 - 使用方式：左键单击使用
+- 特殊效果：没有等级限制，可以使用法阵
 - 合成方式：9个普通符箓+1个铜块
 
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/klj.png)
@@ -749,6 +750,7 @@
   2.给自身和队友施加回血效果，给其他所有生物施加持续扣血的debuff
   3.离使用者越近，效果越强，但使用者不能移动
 - 使用方式：左键单击使用
+- 特殊效果：没有等级限制，可以使用法阵
 - 合成方式：4个普通符箓+4个钻石+1个指南针
 
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/bglpa.png)
