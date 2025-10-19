@@ -1,0 +1,1 @@
+give @s items:scripture_t
