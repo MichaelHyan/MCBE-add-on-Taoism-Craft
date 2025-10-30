@@ -1,0 +1,101 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.phase":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"phase_a":"query.get_equipped_item_name=='phase' && variable.attack_time && query.moon_phase == 0 && query.player_level > 0"},
+						{"phase_b":"query.get_equipped_item_name=='phase' && variable.attack_time && query.moon_phase == 1 && query.player_level > 0"},
+						{"phase_c":"query.get_equipped_item_name=='phase' && variable.attack_time && query.moon_phase == 2 && query.player_level > 0"},
+						{"phase_d":"query.get_equipped_item_name=='phase' && variable.attack_time && query.moon_phase == 3 && query.player_level > 0"},
+						{"phase_e":"query.get_equipped_item_name=='phase' && variable.attack_time && query.moon_phase == 4 && query.player_level > 0"},
+						{"phase_f":"query.get_equipped_item_name=='phase' && variable.attack_time && query.moon_phase == 5 && query.player_level > 0"},
+						{"phase_g":"query.get_equipped_item_name=='phase' && variable.attack_time && query.moon_phase == 6 && query.player_level > 0"},
+						{"phase_h":"query.get_equipped_item_name=='phase' && variable.attack_time && query.moon_phase == 7 && query.player_level > 0"}
+					]
+				},
+				"phase_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar 今日月相 满月"
+					]
+				},
+				"phase_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar 今日月相 亏凸月"
+					]
+				},
+				"phase_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar 今日月相 上弦月"
+					]
+				},
+				"phase_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar 今日月相 残月"
+					]
+				},
+				"phase_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar 今日月相 新月"
+					]
+				},
+				"phase_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar 今日月相 蛾眉月"
+					]
+				},
+				"phase_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar 今日月相 上弦月"
+					]
+				},
+				"phase_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar 今日月相 盈凸月"
+					]
+				}
+			}
+		}
+ 	}
+ }

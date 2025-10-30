@@ -1,0 +1,52 @@
+{
+	"loading_messages": [
+	"taoism.loading.1",
+	"taoism.loading.2",
+	"taoism.loading.3",
+	"taoism.loading.4",
+	"taoism.loading.5",
+	"taoism.loading.6",
+	"taoism.loading.7",
+	"taoism.loading.8",
+	"taoism.loading.9",
+	"taoism.loading.10",
+	"taoism.loading.11",
+	"taoism.loading.12",
+	"taoism.loading.13",
+	"taoism.loading.14",
+	"taoism.loading.15",
+	"taoism.loading.16",
+	"taoism.loading.17",
+	"taoism.loading.18"
+	],
+	"creative_loading_messages": [
+	"taoism.loading.1",
+	"taoism.loading.2",
+	"taoism.loading.3",
+	"taoism.loading.4",
+	"taoism.loading.5",
+	"taoism.loading.6",
+	"taoism.loading.7",
+	"taoism.loading.8",
+	"taoism.loading.9",
+	"taoism.loading.10",
+	"taoism.loading.11",
+	"taoism.loading.12",
+	"taoism.loading.13",
+	"taoism.loading.14",
+	"taoism.loading.15",
+	"taoism.loading.16",
+	"taoism.loading.17",
+	"taoism.loading.18"
+	],
+	"realms_loading_messages": [
+	  "tips.realms.1",
+	  "tips.realms.2",
+	  "tips.realms.3",
+	  "tips.realms.4",
+	  "tips.realms.5",
+	  "tips.realms.6",
+	  "tips.realms.7",
+	  "tips.realms.8"
+	]
+}

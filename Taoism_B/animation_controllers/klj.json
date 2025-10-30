@@ -16,6 +16,7 @@
 							}
 					],
 					"on_entry": [
+						"/function bglp2",
 						"/tag @n[rm=1,type=!item,type=!arrow] add klj",
 						"/summon armor_stand (H) ~ ~ ~",
 						"/tp @e[tag=klj]",

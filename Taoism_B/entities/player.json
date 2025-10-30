@@ -12,6 +12,7 @@
 					"sword",
 					"talisman",
 					"klj",
+					"phase",
 					"bglp"
 				]
 			},
@@ -20,6 +21,7 @@
 				"sword": "controller.animation.sword",
 				"talisman": "controller.animation.talisman",
 				"klj": "controller.animation.klj",
+				"phase": "controller.animation.phase",
 				"bglp": "controller.animation.bglp"
 			} 
 		},

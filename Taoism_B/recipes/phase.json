@@ -2,29 +2,32 @@
   "format_version": "1.12",
   "minecraft:recipe_shaped": {
     "description": {
-      "identifier": "items:scripture_t"
+      "identifier": "items:phase"
     },
     "tags": [
       "crafting_table"
     ],
     "pattern": [
-      "cac",
-      "cbc",
-      "ccc"
+      "ccc",
+      "aba",
+      "ddd"
     ],
     "key": {
       "a": {
-        "item": "items:brush_n"
+        "item": "stick"
       },
       "b": {
-        "item": "book"
+        "item": "copper_ingot"
       },
       "c": {
-        "item":"items:cinnabar_crystal"
+        "item": "minecraft:log"
+      },
+      "cd": {
+        "item": "minecraft:slab"
       }
     },
     "result": {
-      "item": "items:scripture_t",
+      "item": "items:phase",
       "count": 1
     }
   }
