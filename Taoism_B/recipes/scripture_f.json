@@ -8,7 +8,7 @@
       "crafting_table"
     ],
     "pattern": [
-      "bbb",
+      "bcb",
       "bab",
       "bbb"
     ],
@@ -18,6 +18,9 @@
       },
       "b": {
         "item": "items:cinnabar_crystal"
+      },
+      "c": {
+        "item": "items:brush_n"
       }
     },
     "result": {

@@ -21,8 +21,9 @@
 						{"talisman_e_b":"query.get_equipped_item_name=='talisman_e' && !variable.attack_time && !query.is_jumping && query.is_sneaking && query.player_level > 14"},
 						{"talisman_e_c":"query.get_equipped_item_name=='talisman_e' && !variable.attack_time && query.is_jumping && query.is_sneaking && query.player_level > 14"},
 						{"talisman_e_d":"query.get_equipped_item_name=='talisman_e' && variable.attack_time && !query.is_jumping && query.is_sneaking && query.player_level > 14"},
-						{"lightning_wood":"query.is_item_name_any('slot.hotbar', 0, 'items:lightning_wood') && query.player_level > 14"},							
-						{"spirit":"query.get_equipped_item_name=='spirit'"},
+						{"lightning_wood":"query.get_equipped_item_name=='lightning_wood' && query.player_level > 14"},							
+						{"spirit":"query.get_equipped_item_name=='spirit' && query.player_level < 25"},
+						{"spirit_a":"query.get_equipped_item_name=='spirit' && query.player_level >= 25 && query.is_using_item"},
 						{"mirror_a":"query.get_equipped_item_name=='mirror_a' && variable.attack_time && query.player_level > 14"},
 						{"mirror_b":"query.get_equipped_item_name=='mirror_b' && variable.attack_time && query.player_level > 14"},
 						{"mirror_c":"query.get_equipped_item_name=='mirror_c' && variable.attack_time && query.player_level > 14"},
@@ -253,6 +254,17 @@
 					],
 					"on_entry": [
 						"/effect @s wither 1 3 true"
+					]
+				},
+				"spirit_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s wither 1 3 true",
+						"/scoreboard players add @s spirit 1"
 					]
 				},
 				"mirror_a": {

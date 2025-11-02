@@ -26,6 +26,19 @@
         }
       },
       "minecraft:damage":8,
+      "minecraft:durability":{
+        "max_durability":1024
+      },
+      "minecraft:repairable":{
+        "repair_items":[
+          {
+            "items":[
+              "items:talisman"
+            ],
+            "repair_amount":10
+          }
+        ]
+      },
       "minecraft:can_destroy_in_creative":false
     }
   }

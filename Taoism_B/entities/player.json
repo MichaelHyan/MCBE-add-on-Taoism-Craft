@@ -13,7 +13,8 @@
 					"talisman",
 					"klj",
 					"phase",
-					"bglp"
+					"bglp",
+					"compass"
 				]
 			},
 			"animations": {
@@ -22,7 +23,8 @@
 				"talisman": "controller.animation.talisman",
 				"klj": "controller.animation.klj",
 				"phase": "controller.animation.phase",
-				"bglp": "controller.animation.bglp"
+				"bglp": "controller.animation.bglp",
+				"compass": "controller.animation.compass"
 			} 
 		},
 		"component_groups": {

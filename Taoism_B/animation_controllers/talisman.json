@@ -26,7 +26,7 @@
 						{"tce":"query.get_equipped_item_name=='tce' && query.is_using_item && query.player_level > 14"},
 						{"tcf":"query.get_equipped_item_name=='tcf' && query.is_using_item && query.player_level > 14"},
 						{"tcg":"query.is_item_name_any('slot.hotbar', 0, 'items:tcg') && variable.attack_time && query.player_level > 14"},
-						{"txpa":"query.get_equipped_item_name=='txpa' && query.is_using_item && query.player_level > 4"},
+						{"txpa":"query.get_equipped_item_name=='txpa' && query.is_using_item"},
 						{"txpb":"query.get_equipped_item_name=='txpb' && query.is_using_item && query.player_level > 4"},
 						{"txpc":"query.get_equipped_item_name=='txpc' && query.is_using_item"}
 					]

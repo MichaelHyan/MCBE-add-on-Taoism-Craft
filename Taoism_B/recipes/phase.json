@@ -20,10 +20,10 @@
         "item": "copper_ingot"
       },
       "c": {
-        "item": "minecraft:log"
+        "item": "oak_log"
       },
-      "cd": {
-        "item": "minecraft:slab"
+      "d": {
+        "item": "oak_slab"
       }
     },
     "result": {
