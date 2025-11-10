@@ -5,14 +5,14 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"phase_a":"query.get_equipped_item_name=='phase' && variable.attack_time && query.moon_phase == 0 && query.player_level > 0"},
-						{"phase_b":"query.get_equipped_item_name=='phase' && variable.attack_time && query.moon_phase == 1 && query.player_level > 0"},
-						{"phase_c":"query.get_equipped_item_name=='phase' && variable.attack_time && query.moon_phase == 2 && query.player_level > 0"},
-						{"phase_d":"query.get_equipped_item_name=='phase' && variable.attack_time && query.moon_phase == 3 && query.player_level > 0"},
-						{"phase_e":"query.get_equipped_item_name=='phase' && variable.attack_time && query.moon_phase == 4 && query.player_level > 0"},
-						{"phase_f":"query.get_equipped_item_name=='phase' && variable.attack_time && query.moon_phase == 5 && query.player_level > 0"},
-						{"phase_g":"query.get_equipped_item_name=='phase' && variable.attack_time && query.moon_phase == 6 && query.player_level > 0"},
-						{"phase_h":"query.get_equipped_item_name=='phase' && variable.attack_time && query.moon_phase == 7 && query.player_level > 0"}
+						{"phase_a":"query.get_equipped_item_name=='phase' && variable.attack_time && query.moon_phase == 0"},
+						{"phase_b":"query.get_equipped_item_name=='phase' && variable.attack_time && query.moon_phase == 1"},
+						{"phase_c":"query.get_equipped_item_name=='phase' && variable.attack_time && query.moon_phase == 2"},
+						{"phase_d":"query.get_equipped_item_name=='phase' && variable.attack_time && query.moon_phase == 3"},
+						{"phase_e":"query.get_equipped_item_name=='phase' && variable.attack_time && query.moon_phase == 4"},
+						{"phase_f":"query.get_equipped_item_name=='phase' && variable.attack_time && query.moon_phase == 5"},
+						{"phase_g":"query.get_equipped_item_name=='phase' && variable.attack_time && query.moon_phase == 6"},
+						{"phase_h":"query.get_equipped_item_name=='phase' && variable.attack_time && query.moon_phase == 7"}
 					]
 				},
 				"phase_a": {

@@ -1,12 +1,12 @@
 {
-	"format_version": "1.8.0",
-	"minecraft:entity": {
-		"description": {
-			"identifier": "minecraft:player",
-			"is_spawnable": false,
-			"is_summonable": false,
-			"is_experimental": false,
-			"scripts": {
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "minecraft:player",
+      "spawn_category": "creature",
+      "is_spawnable": false,
+      "is_summonable": false,
+      "scripts": {
 				"animate": [
 					"taoism",
 					"sword",
@@ -17,7 +17,7 @@
 					"compass"
 				]
 			},
-			"animations": {
+      "animations": {
 				"taoism": "controller.animation.taoism",
 				"sword": "controller.animation.sword",
 				"talisman": "controller.animation.talisman",
@@ -25,1447 +25,205 @@
 				"phase": "controller.animation.phase",
 				"bglp": "controller.animation.bglp",
 				"compass": "controller.animation.compass"
-			} 
-		},
-		"component_groups": {
-			"base":{
-				"minecraft:variant":{
-					"value": 0
-				}
-			},
-			"minecraft:add_bad_omen": {
-				"minecraft:spell_effects": {
-					"add_effects": [{
-					"effect": "bad_omen",
-					"duration": 6000,
-							"display_on_screen_animation": true
-					}]
-				},
-				"minecraft:timer": {
-					"time": [ 0.0, 0.0 ],
-					"looping": false,
-					"time_down_event": {
-						"event": "minecraft:clear_add_bad_omen",
-						"target": "self"
-					}
-				}
-			},
-			"minecraft:clear_bad_omen_spell_effect": {
-				"minecraft:spell_effects": {}
-			},
-			"minecraft:raid_trigger": {
-				"minecraft:raid_trigger": {
-					"triggered_event": {
-						"event": "minecraft:remove_raid_trigger",
-						"target": "self"
-					}
-				},
-				"minecraft:spell_effects": {
-					"remove_effects": "bad_omen"
-				}
 			}
-    	},
-		"components": {
-			"minecraft:variant":{
-				"value": 0
-			},
-          	"minecraft:environment_sensor": [
-				{
-          			"on_environment": {
-            			"filters": {
-              				"all_of": [
-								{
-									"test": "has_mob_effect",
-              						"subject": "self",
-              						"value": "bad_omen"
-            					},
-            					{
-           	   					"test": "is_in_village",
-              						"subject": "self",
-              						"value": true
-           						}
-							]
-            			},
-            			"event": "minecraft:trigger_raid"
-          			}
-        		},
-				{
-	        		"on_environment": {
-            			"filters": {
-              				"all_of": [
-                				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                   					"operator": "=",
-                 					"domain": "hand",
-                  					"value": "items:scripture_t"
-                				}
-              				]
-            			},
-            			"event": "scripture_t"
-          			}
-        		},
-				{
-          			"on_environment": {
-            			"filters": {
-              				"all_of": [
-               	 				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                 		 			"operator": "<>",
-                  					"domain": "hand",
-                  					"value": "items:scripture_t"
-                				}
-              				]
-            			},
-            			"event": "stop_scripture_t"
-					}
-          		},
-				{
-	        		"on_environment": {
-            			"filters": {
-              				"all_of": [
-                				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                   					"operator": "=",
-                 					"domain": "hand",
-                  					"value": "items:scripture_f"
-                				}
-              				]
-            			},
-            			"event": "scripture_f"
-          			}
-        		},
-				{
-          			"on_environment": {
-            			"filters": {
-              				"all_of": [
-               	 				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                 		 			"operator": "<>",
-                  					"domain": "hand",
-                  					"value": "items:scripture_f"
-                				}
-              				]
-            			},
-            			"event": "stop_scripture_f"
-					}
-          		},
-				{
-	        		"on_environment": {
-            			"filters": {
-              				"all_of": [
-                				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                   					"operator": "=",
-                 					"domain": "hand",
-                  					"value": "items:sword_sp"
-                				}
-              				]
-            			},
-            			"event": "sword_sp"
-          			}
-        		},
-				{
-          			"on_environment": {
-            			"filters": {
-              				"all_of": [
-               	 				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                 		 			"operator": "<>",
-                  					"domain": "hand",
-                  					"value": "items:sword_sp"
-                				}
-              				]
-            			},
-            			"event": "stop_sword_sp"
-					}
-          		},
-				{
-	        		"on_environment": {
-            			"filters": {
-              				"all_of": [
-                				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                   					"operator": "=",
-                 					"domain": "hand",
-                  					"value": "items:talisman_t"
-                				}
-              				]
-            			},
-            			"event": "talisman_t"
-          			}
-        		},
-				{
-          			"on_environment": {
-            			"filters": {
-              				"all_of": [
-               	 				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                 		 			"operator": "<>",
-                  					"domain": "hand",
-                  					"value": "items:talisman_t"
-                				}
-              				]
-            			},
-            			"event": "stop_talisman_t"
-					}
-          		},
-				{
-	        		"on_environment": {
-            			"filters": {
-              				"all_of": [
-                				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                   					"operator": "=",
-                 					"domain": "hand",
-                  					"value": "items:talisman"
-                				}
-              				]
-            			},
-            			"event": "talisman"
-          			}
-        		},
-				{
-          			"on_environment": {
-            			"filters": {
-              				"all_of": [
-               	 				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                 		 			"operator": "<>",
-                  					"domain": "hand",
-                  					"value": "items:talisman"
-                				}
-              				]
-            			},
-            			"event": "stop_talisman"
-					}
-          		},
-				{
-	        		"on_environment": {
-            			"filters": {
-              				"all_of": [
-                				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                   					"operator": "=",
-                 					"domain": "hand",
-                  					"value": "items:sword_t"
-                				}
-              				]
-            			},
-            			"event": "sword_t"
-          			}
-        		},
-				{
-          			"on_environment": {
-            			"filters": {
-              				"all_of": [
-               	 				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                 		 			"operator": "<>",
-                  					"domain": "hand",
-                  					"value": "items:sword_t"
-                				}
-              				]
-            			},
-            			"event": "stop_sword_t"
-					}
-          		},
-				{
-	        		"on_environment": {
-            			"filters": {
-              				"all_of": [
-                				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                   					"operator": "=",
-                 					"domain": "hand",
-                  					"value": "items:sword_b"
-                				}
-              				]
-            			},
-            			"event": "sword_b"
-          			}
-        		},
-				{
-          			"on_environment": {
-            			"filters": {
-              				"all_of": [
-               	 				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                 		 			"operator": "<>",
-                  					"domain": "hand",
-                  					"value": "items:sword_b"
-                				}
-              				]
-            			},
-            			"event": "stop_sword_b"
-					}
-          		},
-				{
-	        		"on_environment": {
-            			"filters": {
-              				"all_of": [
-                				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                   					"operator": "=",
-                 					"domain": "hand",
-                  					"value": "items:sword_q"
-                				}
-              				]
-            			},
-            			"event": "sword_q"
-          			}
-        		},
-				{
-          			"on_environment": {
-            			"filters": {
-              				"all_of": [
-               	 				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                 		 			"operator": "<>",
-                  					"domain": "hand",
-                  					"value": "items:sword_q"
-                				}
-              				]
-            			},
-            			"event": "stop_sword_q"
-					}
-          		},
-				{
-	        		"on_environment": {
-            			"filters": {
-              				"all_of": [
-                				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                   					"operator": "=",
-                 					"domain": "hand",
-                  					"value": "items:sword_l"
-                				}
-              				]
-            			},
-            			"event": "sword_l"
-          			}
-        		},
-				{
-          			"on_environment": {
-            			"filters": {
-              				"all_of": [
-               	 				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                 		 			"operator": "<>",
-                  					"domain": "hand",
-                  					"value": "items:sword_l"
-                				}
-              				]
-            			},
-            			"event": "stop_sword_l"
-					}
-          		},
-				{
-	        		"on_environment": {
-            			"filters": {
-              				"all_of": [
-                				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                   					"operator": "=",
-                 					"domain": "hand",
-                  					"value": "items:sword_s"
-                				}
-              				]
-            			},
-            			"event": "sword_s"
-          			}
-        		},
-				{
-          			"on_environment": {
-            			"filters": {
-              				"all_of": [
-               	 				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                 		 			"operator": "<>",
-                  					"domain": "hand",
-                  					"value": "items:sword_s"
-                				}
-              				]
-            			},
-            			"event": "stop_sword_s"
-					}
-          		},
-				{
-	        		"on_environment": {
-            			"filters": {
-              				"all_of": [
-                				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                   					"operator": "=",
-                 					"domain": "hand",
-                  					"value": "items:sword_e"
-                				}
-              				]
-            			},
-            			"event": "sword_e"
-          			}
-        		},
-				{
-          			"on_environment": {
-            			"filters": {
-              				"all_of": [
-               	 				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                 		 			"operator": "<>",
-                  					"domain": "hand",
-                  					"value": "items:sword_e"
-                				}
-              				]
-            			},
-            			"event": "stop_sword_e"
-					}
-          		},
-				{
-	        		"on_environment": {
-            			"filters": {
-              				"all_of": [
-                				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                   					"operator": "=",
-                 					"domain": "hand",
-                  					"value": "items:sword_w"
-                				}
-              				]
-            			},
-            			"event": "sword_w"
-          			}
-        		},
-				{
-          			"on_environment": {
-            			"filters": {
-              				"all_of": [
-               	 				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                 		 			"operator": "<>",
-                  					"domain": "hand",
-                  					"value": "items:sword_w"
-                				}
-              				]
-            			},
-            			"event": "stop_sword_w"
-					}
-          		},
-				{
-	        		"on_environment": {
-            			"filters": {
-              				"all_of": [
-                				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                   					"operator": "=",
-                 					"domain": "hand",
-                  					"value": "items:lightning_wood"
-                				}
-              				]
-            			},
-            			"event": "lightning_wood"
-          			}
-        		},
-				{
-          			"on_environment": {
-            			"filters": {
-              				"all_of": [
-               	 				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                 		 			"operator": "<>",
-                  					"domain": "hand",
-                  					"value": "items:lightning_wood"
-                				}
-              				]
-            			},
-            			"event": "stop_lightning_wood"
-					}
-          		},
-				{
-	        		"on_environment": {
-            			"filters": {
-              				"all_of": [
-                				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                   					"operator": "=",
-                 					"domain": "hand",
-                  					"value": "items:spirit"
-                				}
-              				]
-            			},
-            			"event": "spirit"
-          			}
-        		},
-				{
-          			"on_environment": {
-            			"filters": {
-              				"all_of": [
-               	 				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                 		 			"operator": "<>",
-                  					"domain": "hand",
-                  					"value": "items:spirit"
-                				}
-              				]
-            			},
-            			"event": "stop_spirit"
-					}
-          		},
-				{
-	        		"on_environment": {
-            			"filters": {
-              				"all_of": [
-                				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                   					"operator": "=",
-                 					"domain": "hand",
-                  					"value": "items:soul_banner"
-                				}
-              				]
-            			},
-            			"event": "soul_banner"
-          			}
-        		},
-				{
-          			"on_environment": {
-            			"filters": {
-              				"all_of": [
-               	 				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                 		 			"operator": "<>",
-                  					"domain": "hand",
-                  					"value": "items:soul_banner"
-                				}
-              				]
-            			},
-            			"event": "stop_soul_banner"
-					}
-          		},
-				{
-	        		"on_environment": {
-            			"filters": {
-              				"all_of": [
-                				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                   					"operator": "=",
-                 					"domain": "hand",
-                  					"value": "items:mirror_a"
-                				}
-              				]
-            			},
-            			"event": "mirror_a"
-          			}
-        		},
-				{
-          			"on_environment": {
-            			"filters": {
-              				"all_of": [
-               	 				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                 		 			"operator": "<>",
-                  					"domain": "hand",
-                  					"value": "items:mirror_a"
-                				}
-              				]
-            			},
-            			"event": "stop_mirror_a"
-					}
-          		},
-				{
-	        		"on_environment": {
-            			"filters": {
-              				"all_of": [
-                				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                   					"operator": "=",
-                 					"domain": "hand",
-                  					"value": "items:mirror_b"
-                				}
-              				]
-            			},
-            			"event": "mirror_b"
-          			}
-        		},
-				{
-          			"on_environment": {
-            			"filters": {
-              				"all_of": [
-               	 				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                 		 			"operator": "<>",
-                  					"domain": "hand",
-                  					"value": "items:mirror_b"
-                				}
-              				]
-            			},
-            			"event": "stop_mirror_b"
-					}
-          		},
-				{
-	        		"on_environment": {
-            			"filters": {
-              				"all_of": [
-                				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                   					"operator": "=",
-                 					"domain": "hand",
-                  					"value": "items:mirror_c"
-                				}
-              				]
-            			},
-            			"event": "mirror_c"
-          			}
-        		},
-				{
-          			"on_environment": {
-            			"filters": {
-              				"all_of": [
-               	 				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                 		 			"operator": "<>",
-                  					"domain": "hand",
-                  					"value": "items:mirror_c"
-                				}
-              				]
-            			},
-            			"event": "stop_mirror_c"
-					}
-          		},
-				{
-	        		"on_environment": {
-            			"filters": {
-              				"all_of": [
-                				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                   					"operator": "=",
-                 					"domain": "hand",
-                  					"value": "items:mirror_d"
-                				}
-              				]
-            			},
-            			"event": "mirror_d"
-          			}
-        		},
-				{
-          			"on_environment": {
-            			"filters": {
-              				"all_of": [
-               	 				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                 		 			"operator": "<>",
-                  					"domain": "hand",
-                  					"value": "items:mirror_d"
-                				}
-              				]
-            			},
-            			"event": "stop_mirror_d"
-					}
-          		},
-				{
-	        		"on_environment": {
-            			"filters": {
-              				"all_of": [
-                				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                   					"operator": "=",
-                 					"domain": "hand",
-                  					"value": "items:bell"
-                				}
-              				]
-            			},
-            			"event": "bell"
-          			}
-        		},
-				{
-          			"on_environment": {
-            			"filters": {
-              				"all_of": [
-               	 				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                 		 			"operator": "<>",
-                  					"domain": "hand",
-                  					"value": "items:bell"
-                				}
-              				]
-            			},
-            			"event": "stop_bell"
-					}
-          		},
-				{
-	        		"on_environment": {
-            			"filters": {
-              				"all_of": [
-                				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                   					"operator": "=",
-                 					"domain": "hand",
-                  					"value": "items:gourd"
-                				}
-              				]
-            			},
-            			"event": "gourd"
-          			}
-        		},
-				{
-          			"on_environment": {
-            			"filters": {
-              				"all_of": [
-               	 				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                 		 			"operator": "<>",
-                  					"domain": "hand",
-                  					"value": "items:gourd"
-                				}
-              				]
-            			},
-            			"event": "stop_gourd"
-					}
-          		},
-				{
-	        		"on_environment": {
-            			"filters": {
-              				"all_of": [
-                				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                   					"operator": "=",
-                 					"domain": "hand",
-                  					"value": "items:wul"
-                				}
-              				]
-            			},
-            			"event": "wul"
-          			}
-        		},
-				{
-          			"on_environment": {
-            			"filters": {
-              				"all_of": [
-               	 				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                 		 			"operator": "<>",
-                  					"domain": "hand",
-                  					"value": "items:wul"
-                				}
-              				]
-            			},
-            			"event": "stop_wul"
-					}
-          		},
-				{
-	        		"on_environment": {
-            			"filters": {
-              				"all_of": [
-                				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                   					"operator": "=",
-                 					"domain": "hand",
-                  					"value": "items:ring"
-                				}
-              				]
-            			},
-            			"event": "ring"
-          			}
-        		},
-				{
-          			"on_environment": {
-            			"filters": {
-              				"all_of": [
-               	 				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                 		 			"operator": "<>",
-                  					"domain": "hand",
-                  					"value": "items:ring"
-                				}
-              				]
-            			},
-            			"event": "stop_ring"
-					}
-          		},
-				{
-	        		"on_environment": {
-            			"filters": {
-              				"all_of": [
-                				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                   					"operator": "=",
-                 					"domain": "hand",
-                  					"value": "items:whisk"
-                				}
-              				]
-            			},
-            			"event": "whisk"
-          			}
-        		},
-				{
-          			"on_environment": {
-            			"filters": {
-              				"all_of": [
-               	 				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                 		 			"operator": "<>",
-                  					"domain": "hand",
-                  					"value": "items:whisk"
-                				}
-              				]
-            			},
-            			"event": "stop_whisk"
-					}
-          		},
-				{
-	        		"on_environment": {
-            			"filters": {
-              				"all_of": [
-                				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                   					"operator": "=",
-                 					"domain": "hand",
-                  					"value": "items:tab"
-                				}
-              				]
-            			},
-            			"event": "tab"
-          			}
-        		},
-				{
-          			"on_environment": {
-            			"filters": {
-              				"all_of": [
-               	 				{
-                  					"test": "has_equipment",
-                  					"subject": "self",
-                 		 			"operator": "<>",
-                  					"domain": "hand",
-                  					"value": "items:tab"
-                				}
-              				]
-            			},
-            			"event": "stop_tab"
-					}
-          		}
-      		],
-      		"minecraft:type_family": {
-        		"family": [ "player" ]
-      		},
-      		"minecraft:is_hidden_when_invisible": {},
-      		"minecraft:loot": {
-        		"table": "loot_tables/empty.json"
-      		},
-      		"minecraft:collision_box": {
-        		"width": 0.6,
-        		"height": 1.8
-      		},
-      		"minecraft:can_climb": {},
-      		"minecraft:movement": {
-        		"value": 0.1
-      		},
-      		"minecraft:attack": {
-        		"damage": 1
-      		},
-      		"minecraft:player.saturation": {
-        		"value": 20
-      		},
-      		"minecraft:player.exhaustion": {
-        		"value": 0,
-        		"max": 4
-      		},
-      		"minecraft:player.level": {
-        		"value": 0,
-        		"max": 24791
-      		},
-      		"minecraft:player.experience": {
-        		"value": 0,
-        		"max": 1
-      		},
-      		"minecraft:breathable": {
-        		"totalSupply": 15,
-        		"suffocateTime": -1,
-        		"inhaleTime": 3.75,
-        		"generatesBubbles": false
-      		},
-      		"minecraft:nameable": {
-        		"alwaysShow": true,
-        		"allowNameTagRenaming": false
-      		},
-      		"minecraft:physics": {},
-      		"minecraft:insomnia": {
-        		"days_until_insomnia": 3
-      		},
-      		"minecraft:rideable": {
-        		"seat_count": 2,
-        		"family_types": [
-          			"parrot_tame"
-    			],
-        		"pull_in_entities": true,
-        		"seats": [
-          			{
-						"position": [ 0.4, -0.15, 0.04 ],
-						"min_rider_count": 0,
-						"max_rider_count": 0,
-						"lock_rider_rotation": 0
-          			},
-          			{
-						"position": [ -0.4, -0.15, 0.04 ],
-						"min_rider_count": 1,
-						"max_rider_count": 2,
-						"lock_rider_rotation": 0
-          			}
-        		]
-      		},
-      		"minecraft:scaffolding_climber": {
-      		}
-    	},
-    	"events": {
-			"scripture_t": {
-        		"add": {
-        			"component_groups": [
-          		  		"scripture_t"
-          			]
-        		}
-      		},
-        	"stop_scripture_t": {
-        		"remove": {
-          			"component_groups": [
-            			"scripture_t"
-          			]
-        		},
-        		"add": {
-          			"component_groups": [
-            			"base"
-          			]
-        		}
-      		},
-        	"scripture_f": {
-        		"add": {
-        			"component_groups": [
-          		  		"scripture_f"
-          			]
-        		}
-      		},
-        	"stop_scripture_f": {
-        		"remove": {
-          			"component_groups": [
-            			"scripture_f"
-          			]
-        		},
-        		"add": {
-          			"component_groups": [
-            			"base"
-          			]
-        		}
-      		},
-			"talisman_t": {
-        		"add": {
-        			"component_groups": [
-          		  		"talisman_t"
-          			]
-        		}
-      		},
-        	"stop_talisman_t": {
-        		"remove": {
-          			"component_groups": [
-            			"talisman_t"
-          			]
-        		},
-        		"add": {
-          			"component_groups": [
-            			"base"
-          			]
-        		}
-      		},
-			"talisman": {
-        		"add": {
-        			"component_groups": [
-          		  		"talisman"
-          			]
-        		}
-      		},
-        	"stop_talisman": {
-        		"remove": {
-          			"component_groups": [
-            			"talisman"
-          			]
-        		},
-        		"add": {
-          			"component_groups": [
-            			"base"
-          			]
-        		}
-      		},
-			"sword_t": {
-        		"add": {
-        			"component_groups": [
-          		  		"sword_t"
-          			]
-        		}
-      		},
-        	"stop_sword_t": {
-        		"remove": {
-          			"component_groups": [
-            			"sword_t"
-          			]
-        		},
-        		"add": {
-          			"component_groups": [
-            			"base"
-          			]
-        		}
-      		},
-			"sword_b": {
-        		"add": {
-        			"component_groups": [
-          		  		"sword_b"
-          			]
-        		}
-      		},
-        	"stop_sword_b": {
-        		"remove": {
-          			"component_groups": [
-            			"sword_b"
-          			]
-        		},
-        		"add": {
-          			"component_groups": [
-            			"base"
-          			]
-        		}
-      		},
-			"sword_q": {
-        		"add": {
-        			"component_groups": [
-          		  		"sword_q"
-          			]
-        		}
-      		},
-        	"stop_sword_q": {
-        		"remove": {
-          			"component_groups": [
-            			"sword_q"
-          			]
-        		},
-        		"add": {
-          			"component_groups": [
-            			"base"
-          			]
-        		}
-      		},
-			"sword_l": {
-        		"add": {
-        			"component_groups": [
-          		  		"sword_l"
-          			]
-        		}
-      		},
-        	"stop_sword_l": {
-        		"remove": {
-          			"component_groups": [
-            			"sword_l"
-          			]
-        		},
-        		"add": {
-          			"component_groups": [
-            			"base"
-          			]
-        		}
-      		},
-			"sword_s": {
-        		"add": {
-      			    "component_groups": [
-       				     "sword_s"
-          			]
-        		}
-      		},
-        	"stop_sword_s": {
-        		"remove": {
-					"component_groups": [
-						"sword_s"
-					]
-        		},
-      			"add": {
-          			"component_groups": [
-            			"base"
-          			]
-        		}
-      		},
-			"sword_e": {
-        		"add": {
-        			"component_groups": [
-          		  		"sword_e"
-          			]
-        		}
-      		},
-        	"stop_sword_e": {
-        		"remove": {
-          			"component_groups": [
-            			"sword_e"
-          			]
-        		},
-        		"add": {
-          			"component_groups": [
-            			"base"
-          			]
-        		}
-      		},
-			"sword_w": {
-        		"add": {
-        			"component_groups": [
-          		  		"sword_w"
-          			]
-        		}
-      		},
-        	"stop_sword_w": {
-        		"remove": {
-          			"component_groups": [
-            			"sword_w"
-          			]
-        		},
-        		"add": {
-          			"component_groups": [
-            			"base"
-          			]
-        		}
-      		},
-			"lightning_wood": {
-        		"add": {
-        			"component_groups": [
-          		  		"lightning_wood"
-          			]
-        		}
-      		},
-        	"stop_lightning_wood": {
-        		"remove": {
-          			"component_groups": [
-            			"lightning_wood"
-          			]
-        		},
-        		"add": {
-          			"component_groups": [
-            			"base"
-          			]
-        		}
-      		},
-			"spirit": {
-        		"add": {
-        			"component_groups": [
-          		  		"spirit"
-          			]
-        		}
-      		},
-        	"stop_spirit": {
-        		"remove": {
-          			"component_groups": [
-            			"spirit"
-          			]
-        		},
-        		"add": {
-          			"component_groups": [
-            			"base"
-          			]
-        		}
-      		},
-			"sword_sp": {
-        		"add": {
-        			"component_groups": [
-          		  		"sword_sp"
-          			]
-        		}
-      		},
-        	"stop_sword_sp": {
-        		"remove": {
-          			"component_groups": [
-            			"sword_sp"
-          			]
-        		},
-        		"add": {
-          			"component_groups": [
-            			"base"
-          			]
-        		}
-      		},
-			"soul_banner": {
-        		"add": {
-        			"component_groups": [
-          		  		"soul_banner"
-          			]
-        		}
-      		},
-        	"stop_soul_banner": {
-        		"remove": {
-          			"component_groups": [
-            			"soul_banner"
-          			]
-        		},
-        		"add": {
-          			"component_groups": [
-            			"base"
-          			]
-        		}
-      		},
-			"mirror_a": {
-        		"add": {
-        			"component_groups": [
-          		  		"mirror_a"
-          			]
-        		}
-      		},
-        	"stop_mirror_a": {
-        		"remove": {
-          			"component_groups": [
-            			"mirror_a"
-          			]
-        		},
-        		"add": {
-          			"component_groups": [
-            			"base"
-          			]
-        		}
-      		},
-			"mirror_b": {
-        		"add": {
-        			"component_groups": [
-          		  		"mirror_b"
-          			]
-        		}
-      		},
-        	"stop_mirror_b": {
-        		"remove": {
-          			"component_groups": [
-            			"mirror_b"
-          			]
-        		},
-        		"add": {
-          			"component_groups": [
-            			"base"
-          			]
-        		}
-      		},
-			"mirror_c": {
-        		"add": {
-        			"component_groups": [
-          		  		"mirror_c"
-          			]
-        		}
-      		},
-        	"stop_mirror_c": {
-        		"remove": {
-          			"component_groups": [
-            			"mirror_c"
-          			]
-        		},
-        		"add": {
-          			"component_groups": [
-            			"base"
-          			]
-        		}
-      		},
-			"mirror_d": {
-        		"add": {
-        			"component_groups": [
-          		  		"mirror_d"
-          			]
-        		}
-      		},
-        	"stop_mirror_d": {
-        		"remove": {
-          			"component_groups": [
-            			"mirror_d"
-          			]
-        		},
-        		"add": {
-          			"component_groups": [
-            			"base"
-          			]
-        		}
-      		},
-			"bell": {
-        		"add": {
-        			"component_groups": [
-          		  		"bell"
-          			]
-        		}
-      		},
-        	"stop_bell": {
-        		"remove": {
-          			"component_groups": [
-            			"bell"
-          			]
-        		},
-        		"add": {
-          			"component_groups": [
-            			"base"
-          			]
-        		}
-      		},
-			"gourd": {
-        		"add": {
-        			"component_groups": [
-          		  		"gourd"
-          			]
-        		}
-      		},
-        	"stop_gourd": {
-        		"remove": {
-          			"component_groups": [
-            			"gourd"
-          			]
-        		},
-        		"add": {
-          			"component_groups": [
-            			"base"
-          			]
-        		}
-      		},
-			"wul": {
-        		"add": {
-        			"component_groups": [
-          		  		"wul"
-          			]
-        		}
-      		},
-        	"stop_wul": {
-        		"remove": {
-          			"component_groups": [
-            			"wul"
-          			]
-        		},
-        		"add": {
-          			"component_groups": [
-            			"base"
-          			]
-        		}
-      		},
-			"ring": {
-        		"add": {
-        			"component_groups": [
-          		  		"gourd"
-          			]
-        		}
-      		},
-        	"stop_ring": {
-        		"remove": {
-          			"component_groups": [
-            			"ring"
-          			]
-        		},
-        		"add": {
-          			"component_groups": [
-            			"base"
-          			]
-        		}
-      		},
-			"whisk": {
-        		"add": {
-        			"component_groups": [
-          		  		"whisk"
-          			]
-        		}
-      		},
-        	"stop_whisk": {
-        		"remove": {
-          			"component_groups": [
-            			"whisk"
-          			]
-        		},
-        		"add": {
-          			"component_groups": [
-            			"base"
-          			]
-        		}
-      		},
-			"tab": {
-        		"add": {
-        			"component_groups": [
-          		  		"tab"
-          			]
-        		}
-      		},
-        	"stop_tab": {
-        		"remove": {
-          			"component_groups": [
-            			"tab"
-          			]
-        		},
-        		"add": {
-          			"component_groups": [
-            			"base"
-          			]
-        		}
-      		},
-      		"minecraft:gain_bad_omen": {
-        		"add": {
-          			"component_groups": [
-            			"minecraft:add_bad_omen"
-          			]
-        		}
-      		},
-      		"minecraft:clear_add_bad_omen": {
-        		"remove": {
-          			"component_groups": [
-            			"minecraft:add_bad_omen"
-          			]
-        		},
-        		"add": {
-          			"component_groups": [
-            			"minecraft:clear_bad_omen_spell_effect"
-          			]
-        		}
-      		},
-      		"minecraft:trigger_raid": {
-        		"add": {
-          			"component_groups": [ "minecraft:raid_trigger" ]
-        		}
-      		},
-      		"minecraft:remove_raid_trigger": {
-        		"remove": {
-          		"component_groups": [ "minecraft:raid_trigger" ]
-        		}
-      		}
-    	}
-  	}
+    },
+
+    "component_groups": {
+      "minecraft:add_raid_omen": {
+        "minecraft:spell_effects": {
+          "add_effects": [
+            {
+              "effect": "raid_omen",
+              "duration": 30,
+              "display_on_screen_animation": true
+            }
+          ],
+          "remove_effects": "bad_omen"
+        },
+        "minecraft:timer": {
+          "time": [ 0.0, 0.0 ],
+          "looping": false,
+          "time_down_event": {
+            "event": "minecraft:clear_add_raid_omen",
+            "target": "self"
+          }
+        }
+      },
+      "minecraft:clear_raid_omen_spell_effect": {
+        "minecraft:spell_effects": {
+        }
+      },
+      "minecraft:raid_trigger": {
+        "minecraft:raid_trigger": {
+          "triggered_event": {
+            "event": "minecraft:remove_raid_trigger",
+            "target": "self"
+          }
+        }
+      }
+    },
+
+    "components": {
+      "minecraft:experience_reward": {
+        "on_death": "Math.Min(query.player_level * 7, 100)"
+      },
+      "minecraft:type_family": {
+        "family": [ "player" ]
+      },
+      "minecraft:is_hidden_when_invisible": {
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/empty.json"
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.8
+      },
+      "minecraft:can_climb": {
+      },
+      "minecraft:movement": {
+        "value": 0.1
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:attack": {
+        "damage": 1
+      },
+      "minecraft:exhaustion_values": {
+        "heal": 6.0,
+        "jump": 0.05,
+        "sprint_jump": 0.2,
+        "mine": 0.005,
+        "attack": 0.1,
+        "damage": 0.1,
+        "walk": 0.0,
+        "sprint": 0.1,
+        "swim": 0.01,
+        "lunge": 4.0
+      },
+      "minecraft:player.saturation": {
+        "value": 5,
+        "max": 20
+      },
+      "minecraft:player.exhaustion": {
+        "value": 0,
+        "max": 20
+      },
+      "minecraft:player.level": {
+        "value": 0,
+        "max": 24791
+      },
+      "minecraft:player.experience": {
+        "value": 0,
+        "max": 1
+      },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": -1,
+        "inhale_time": 3.75,
+        "generates_bubbles": false
+      },
+      "minecraft:nameable": {
+        "always_show": true,
+        "allow_name_tag_renaming": false
+      },
+      "minecraft:physics": {
+        "push_towards_closest_space": true
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:insomnia": {
+        "days_until_insomnia": 3
+      },
+      "minecraft:rideable": {
+        "seat_count": 2,
+        "family_types": [
+          "parrot_tame"
+        ],
+        "pull_in_entities": true,
+        "seats": [
+          {
+            "position": [ 0.4, -0.2, -0.1 ],
+            "min_rider_count": 0,
+            "max_rider_count": 0,
+            "lock_rider_rotation": 0
+          },
+          {
+            "position": [ -0.4, -0.2, -0.1 ],
+            "min_rider_count": 1,
+            "max_rider_count": 2,
+            "lock_rider_rotation": 0
+          }
+        ]
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+      },
+      "minecraft:block_climber": {},
+      "minecraft:environment_sensor": {
+        "triggers": {
+          "filters": {
+            "all_of": [
+              {
+                "test": "has_mob_effect",
+                "subject": "self",
+                "value": "bad_omen"
+              },
+              {
+                "test": "is_in_village",
+                "subject": "self",
+                "value": true
+              }
+            ]
+          },
+          "event": "minecraft:gain_raid_omen"
+        }
+      }
+    },
+
+    "events": {
+      "minecraft:gain_raid_omen": {
+        "add": {
+          "component_groups": [
+            "minecraft:add_raid_omen"
+          ]
+        }
+      },
+      "minecraft:clear_add_raid_omen": {
+        "remove": {
+          "component_groups": [
+            "minecraft:add_raid_omen"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "minecraft:clear_raid_omen_spell_effect"
+          ]
+        }
+      },
+      "minecraft:trigger_raid": {
+        "add": {
+          "component_groups": [ "minecraft:raid_trigger" ]
+        }
+      },
+      "minecraft:remove_raid_trigger": {
+        "remove": {
+          "component_groups": [ "minecraft:raid_trigger" ]
+        }
+      }
+    }
+  }
 }
