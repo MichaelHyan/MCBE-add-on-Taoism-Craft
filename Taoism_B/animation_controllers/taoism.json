@@ -161,7 +161,7 @@
 					],
 					"on_entry": [
 						"/particle minecraft:totem_particle ~ ~1 ~",
-						"/effect @e[r=3,type=!player] instant_health 1 255 true"
+						"/damage @e[r=3,family=undead] 100"
 					]
 				},
 				"talisman_g": {

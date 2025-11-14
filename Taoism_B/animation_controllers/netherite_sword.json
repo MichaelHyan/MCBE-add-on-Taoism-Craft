@@ -1,53 +1,48 @@
 {
 	"format_version": "1.8.0",
 	"animation_controllers": {
-		"controller.animation.klj":{
+		"controller.animation.netherite_sword":{
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"klj_a":"query.get_equipped_item_name=='klj' && !query.is_using_item && query.is_sneaking"},
-						{"klj_b":"query.get_equipped_item_name=='klj' && query.is_using_item && query.scoreboard('charge') == 10"},
-						{"klj_c":"query.get_equipped_item_name=='klj' && !query.is_sneaking && query.scoreboard('charge') == 0"},
-						{"klj_d":"query.get_equipped_item_name=='klj' && !query.is_sneaking && query.scoreboard('charge') == 1"},
-						{"klj_e":"query.get_equipped_item_name=='klj' && !query.is_sneaking && query.scoreboard('charge') == 2"},
-						{"klj_f":"query.get_equipped_item_name=='klj' && !query.is_sneaking && query.scoreboard('charge') == 3"},
-						{"klj_g":"query.get_equipped_item_name=='klj' && !query.is_sneaking && query.scoreboard('charge') == 4"},
-						{"klj_h":"query.get_equipped_item_name=='klj' && !query.is_sneaking && query.scoreboard('charge') == 5"},
-						{"klj_i":"query.get_equipped_item_name=='klj' && !query.is_sneaking && query.scoreboard('charge') == 6"},
-						{"klj_j":"query.get_equipped_item_name=='klj' && !query.is_sneaking && query.scoreboard('charge') == 7"},
-						{"klj_k":"query.get_equipped_item_name=='klj' && !query.is_sneaking && query.scoreboard('charge') == 8"},
-						{"klj_l":"query.get_equipped_item_name=='klj' && !query.is_sneaking && query.scoreboard('charge') == 9"}
+						{"netherite_a":"query.get_equipped_item_name=='netherite_sword' && !variable.attack_time && query.is_sneaking && query.is_item_name_any('slot.weapon.offhand', 0, 'minecraft:shield') != 1"},
+						{"netherite_b":"query.get_equipped_item_name=='netherite_sword' && variable.attack_time && query.scoreboard('charge') == 10"},
+						{"netherite_c":"query.get_equipped_item_name=='netherite_sword' && !query.is_sneaking && query.scoreboard('charge') == 0"},
+						{"netherite_d":"query.get_equipped_item_name=='netherite_sword' && !query.is_sneaking && query.scoreboard('charge') == 1"},
+						{"netherite_e":"query.get_equipped_item_name=='netherite_sword' && !query.is_sneaking && query.scoreboard('charge') == 2"},
+						{"netherite_f":"query.get_equipped_item_name=='netherite_sword' && !query.is_sneaking && query.scoreboard('charge') == 3"},
+						{"netherite_g":"query.get_equipped_item_name=='netherite_sword' && !query.is_sneaking && query.scoreboard('charge') == 4"},
+						{"netherite_h":"query.get_equipped_item_name=='netherite_sword' && !query.is_sneaking && query.scoreboard('charge') == 5"},
+						{"netherite_i":"query.get_equipped_item_name=='netherite_sword' && !query.is_sneaking && query.scoreboard('charge') == 6"},
+						{"netherite_j":"query.get_equipped_item_name=='netherite_sword' && !query.is_sneaking && query.scoreboard('charge') == 7"},
+						{"netherite_k":"query.get_equipped_item_name=='netherite_sword' && !query.is_sneaking && query.scoreboard('charge') == 8"},
+						{"netherite_l":"query.get_equipped_item_name=='netherite_sword' && !query.is_sneaking && query.scoreboard('charge') == 9"}
 					]
 				},
-				"klj_a": {
+				"netherite_a": {
 					"transitions": [
 						{
 							"base_jeta": "(1.0)"
 						}
 					],
 					"on_entry": [
-						"/title @s actionbar 开发者物品——韩言悦欣"
+						"/effect @s resistance 1 3 true",
+						"/effect @s hunger 1 1 true"
 					]
 				},
-				"klj_b": {
+				"netherite_b": {
 					"transitions": [
 						{
 							"base_jeta": "(1.0)"
 						}
 					],
 					"on_entry": [
-						"/function bglp2",
-						"/tag @n[rm=1,type=!item,type=!arrow] add klj",
-						"/summon armor_stand (H) ~ ~ ~",
-						"/tp @e[tag=klj]",
-						"/tp @e[tag=klj] @e[name=(H)]",
-						"/kill @e[name=(H)]",
-						"/tag @e remove klj",
-						"/function bglp2",
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
+						"/damage @e[type=!player,type=!item,r=3] 4",
 						"/scoreboard players set @s charge 0"
 					]
 				},
-				"klj_c": {
+				"netherite_c": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
@@ -59,7 +54,7 @@
 						"/title @s actionbar §7|§0|||||||||"
 					]
 				},
-				"klj_d": {
+				"netherite_d": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
@@ -70,7 +65,7 @@
 						"/title @s actionbar §7||§0||||||||"
 					]
 				},
-				"klj_e": {
+				"netherite_e": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
@@ -81,7 +76,7 @@
 						"/title @s actionbar §7|||§0|||||||"
 					]
 				},
-				"klj_f": {
+				"netherite_f": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
@@ -92,7 +87,7 @@
 						"/title @s actionbar §7||||§0||||||"
 					]
 				},
-				"klj_g": {
+				"netherite_g": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
@@ -103,7 +98,7 @@
 						"/title @s actionbar §7|||||§0|||||"
 					]
 				},
-				"klj_h": {
+				"netherite_h": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
@@ -114,7 +109,7 @@
 						"/title @s actionbar §7||||||§0||||"
 					]
 				},
-				"klj_i": {
+				"netherite_i": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
@@ -125,7 +120,7 @@
 						"/title @s actionbar §7|||||||§0|||"
 					]
 				},
-				"klj_j": {
+				"netherite_j": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
@@ -136,7 +131,7 @@
 						"/title @s actionbar §7||||||||§0||"
 					]
 				},
-				"klj_k": {
+				"netherite_k": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
@@ -147,7 +142,7 @@
 						"/title @s actionbar §7|||||||||§0|"
 					]
 				},
-				"klj_l": {
+				"netherite_l": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"

@@ -14,7 +14,15 @@
 					"klj",
 					"phase",
 					"bglp",
-					"compass"
+					"compass",
+          "wooden_sword",
+					"stone_sword",
+					"copper_sword",
+					"iron_sword",
+					"golden_sword",
+					"diamond_sword",
+					"netherite_sword",
+					"mace"
 				]
 			},
       "animations": {
@@ -24,7 +32,16 @@
 				"klj": "controller.animation.klj",
 				"phase": "controller.animation.phase",
 				"bglp": "controller.animation.bglp",
-				"compass": "controller.animation.compass"
+				"compass": "controller.animation.compass",
+        "wooden_sword": "controller.animation.wooden_sword",
+				"stone_sword": "controller.animation.stone_sword",
+				"copper_sword": "controller.animation.copper_sword",
+				"iron_sword": "controller.animation.iron_sword",
+				"golden_sword": "controller.animation.golden_sword",
+				"diamond_sword": "controller.animation.diamond_sword",
+				"netherite_sword": "controller.animation.netherite_sword",
+				"elytra": "controller.animation.elytra",
+				"mace":"controller.animation.mace"
 			}
     },
 

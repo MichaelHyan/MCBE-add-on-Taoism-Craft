@@ -1,53 +1,48 @@
 {
 	"format_version": "1.8.0",
 	"animation_controllers": {
-		"controller.animation.klj":{
+		"controller.animation.golden_sword":{
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"klj_a":"query.get_equipped_item_name=='klj' && !query.is_using_item && query.is_sneaking"},
-						{"klj_b":"query.get_equipped_item_name=='klj' && query.is_using_item && query.scoreboard('charge') == 10"},
-						{"klj_c":"query.get_equipped_item_name=='klj' && !query.is_sneaking && query.scoreboard('charge') == 0"},
-						{"klj_d":"query.get_equipped_item_name=='klj' && !query.is_sneaking && query.scoreboard('charge') == 1"},
-						{"klj_e":"query.get_equipped_item_name=='klj' && !query.is_sneaking && query.scoreboard('charge') == 2"},
-						{"klj_f":"query.get_equipped_item_name=='klj' && !query.is_sneaking && query.scoreboard('charge') == 3"},
-						{"klj_g":"query.get_equipped_item_name=='klj' && !query.is_sneaking && query.scoreboard('charge') == 4"},
-						{"klj_h":"query.get_equipped_item_name=='klj' && !query.is_sneaking && query.scoreboard('charge') == 5"},
-						{"klj_i":"query.get_equipped_item_name=='klj' && !query.is_sneaking && query.scoreboard('charge') == 6"},
-						{"klj_j":"query.get_equipped_item_name=='klj' && !query.is_sneaking && query.scoreboard('charge') == 7"},
-						{"klj_k":"query.get_equipped_item_name=='klj' && !query.is_sneaking && query.scoreboard('charge') == 8"},
-						{"klj_l":"query.get_equipped_item_name=='klj' && !query.is_sneaking && query.scoreboard('charge') == 9"}
+						{"golden_a":"query.get_equipped_item_name=='golden_sword' && !variable.attack_time && query.is_sneaking && query.is_item_name_any('slot.weapon.offhand', 0, 'minecraft:shield') != 1"},
+						{"golden_b":"query.get_equipped_item_name=='golden_sword' && variable.attack_time && query.scoreboard('charge') == 10"},
+						{"golden_c":"query.get_equipped_item_name=='golden_sword' && !query.is_sneaking && query.scoreboard('charge') == 0"},
+						{"golden_d":"query.get_equipped_item_name=='golden_sword' && !query.is_sneaking && query.scoreboard('charge') == 1"},
+						{"golden_e":"query.get_equipped_item_name=='golden_sword' && !query.is_sneaking && query.scoreboard('charge') == 2"},
+						{"golden_f":"query.get_equipped_item_name=='golden_sword' && !query.is_sneaking && query.scoreboard('charge') == 3"},
+						{"golden_g":"query.get_equipped_item_name=='golden_sword' && !query.is_sneaking && query.scoreboard('charge') == 4"},
+						{"golden_h":"query.get_equipped_item_name=='golden_sword' && !query.is_sneaking && query.scoreboard('charge') == 5"},
+						{"golden_i":"query.get_equipped_item_name=='golden_sword' && !query.is_sneaking && query.scoreboard('charge') == 6"},
+						{"golden_j":"query.get_equipped_item_name=='golden_sword' && !query.is_sneaking && query.scoreboard('charge') == 7"},
+						{"golden_k":"query.get_equipped_item_name=='golden_sword' && !query.is_sneaking && query.scoreboard('charge') == 8"},
+						{"golden_l":"query.get_equipped_item_name=='golden_sword' && !query.is_sneaking && query.scoreboard('charge') == 9"}
 					]
 				},
-				"klj_a": {
+				"golden_a": {
 					"transitions": [
 						{
 							"base_jeta": "(1.0)"
 						}
 					],
 					"on_entry": [
-						"/title @s actionbar 开发者物品——韩言悦欣"
+						"/effect @s resistance 1 3 true",
+						"/effect @s hunger 1 1 true"
 					]
 				},
-				"klj_b": {
+				"golden_b": {
 					"transitions": [
 						{
 							"base_jeta": "(1.0)"
 						}
 					],
 					"on_entry": [
-						"/function bglp2",
-						"/tag @n[rm=1,type=!item,type=!arrow] add klj",
-						"/summon armor_stand (H) ~ ~ ~",
-						"/tp @e[tag=klj]",
-						"/tp @e[tag=klj] @e[name=(H)]",
-						"/kill @e[name=(H)]",
-						"/tag @e remove klj",
-						"/function bglp2",
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
+						"/damage @e[type=!player,type=!item,r=3] 2",
 						"/scoreboard players set @s charge 0"
 					]
 				},
-				"klj_c": {
+				"golden_c": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
@@ -59,7 +54,7 @@
 						"/title @s actionbar §7|§0|||||||||"
 					]
 				},
-				"klj_d": {
+				"golden_d": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
@@ -70,7 +65,7 @@
 						"/title @s actionbar §7||§0||||||||"
 					]
 				},
-				"klj_e": {
+				"golden_e": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
@@ -81,7 +76,7 @@
 						"/title @s actionbar §7|||§0|||||||"
 					]
 				},
-				"klj_f": {
+				"golden_f": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
@@ -92,7 +87,7 @@
 						"/title @s actionbar §7||||§0||||||"
 					]
 				},
-				"klj_g": {
+				"golden_g": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
@@ -103,7 +98,7 @@
 						"/title @s actionbar §7|||||§0|||||"
 					]
 				},
-				"klj_h": {
+				"golden_h": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
@@ -114,7 +109,7 @@
 						"/title @s actionbar §7||||||§0||||"
 					]
 				},
-				"klj_i": {
+				"golden_i": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
@@ -125,7 +120,7 @@
 						"/title @s actionbar §7|||||||§0|||"
 					]
 				},
-				"klj_j": {
+				"golden_j": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
@@ -136,7 +131,7 @@
 						"/title @s actionbar §7||||||||§0||"
 					]
 				},
-				"klj_k": {
+				"golden_k": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
@@ -147,7 +142,7 @@
 						"/title @s actionbar §7|||||||||§0|"
 					]
 				},
-				"klj_l": {
+				"golden_l": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
