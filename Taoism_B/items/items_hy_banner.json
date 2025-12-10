@@ -31,7 +31,7 @@
                         "items":[
                             "items:talisman"
                         ],
-                        "repair_amount":10
+                        "repair_amount": "query.max_durability * 0.25"
                     }
                 ]
             },

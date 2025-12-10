@@ -1,0 +1,29 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.sword_ua":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"swua":"1==1"}
+					]
+				},
+				"swua": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @n[tag=sbt]",
+						"/damage @e[tag=sbt,r=2] 6",
+						"/effect @s resistance 1 255 true",
+						"/effect @e[type=player,r=2] regeneration 1 5 true",
+						"/effect @e[type=!player,rm=1,r=2] wither 1 10 true",
+						"/particle minecraft:basic_flame_particle ~ ~1 ~"
+					]
+				}
+			}
+		}
+ 	}
+ }

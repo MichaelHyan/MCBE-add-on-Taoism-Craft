@@ -25,9 +25,13 @@
         "item": "items:brush_p"
       }
     },
-    "result": {
+    "result": [{
       "item": "items:tca",
       "count": 4
-    }
+    },
+    {
+      "item": "items:brush_n",
+      "count": 1
+    }]
   }
 }

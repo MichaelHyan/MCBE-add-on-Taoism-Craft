@@ -1,0 +1,26 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.spirit":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"swub":"1==1"}
+					]
+				},
+				"swub": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp ^ ^ ^0.1 facing @p[tag=tao,r=5]",
+						"/particle minecraft:balloon_gas_particle ~ ~ ~1",
+						"/effect @e[type=player,tag=tao,r=2] regeneration 1 3 true"
+					]
+				}
+			}
+		}
+ 	}
+ }
