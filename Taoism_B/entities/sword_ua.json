@@ -34,12 +34,6 @@
               "event": "minecraft:explode",
               "target": "self"
             }
-          },
-          "particle_on_hit": {
-            "particle_type": "snowballpoof",
-            "num_particles": 10,
-            "on_entity_hit": true,
-            "on_other_hit": true
           }
         },
         "power": 5,

@@ -20,39 +20,6 @@
         "width": 1,
         "height": 1
       },
-      "minecraft:projectile": {
-        "on_hit": {
-          "impact_damage": {
-            "damage": 0,
-            "knockback": true,
-            "semi_random_diff_damage": true,
-            "remove_on_hit": {}
-          },
-          "definition_event": {
-            "affect_projectile": true,
-            "event_trigger": {
-              "event": "minecraft:explode",
-              "target": "self"
-            }
-          },
-          "particle_on_hit": {
-            "particle_type": "snowballpoof",
-            "num_particles": 10,
-            "on_entity_hit": true,
-            "on_other_hit": true
-          }
-        },
-        "power": 5,
-        "gravity": 0,
-        "inertia": 1,
-        "liquid_inertia": 1,
-        "uncertainty_base": 0,
-        "uncertainty_multiplier": 0,
-        "anchor": 2,
-        "offset": [ 0, -0.1, 0 ],
-        "reflect_on_hurt": true,
-        "catch_fire": false
-      },
 	    "minecraft:physics": {
       },
       "minecraft:pushable": {
