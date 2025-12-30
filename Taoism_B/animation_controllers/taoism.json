@@ -5,6 +5,8 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
+						{"disk_a":"query.get_equipped_item_name=='disk_taoism' && query.is_using_item"},
+						{"disk_b":"query.get_equipped_item_name=='disk_taoism' && variable.attack_time"},
 						{"cinnabar":"query.get_equipped_item_name=='cinnabar_crystal' && query.player_level > 0"},
 						{"scripture_t":"query.get_equipped_item_name=='scripture_t' && variable.attack_time && query.player_level > 4"},
 						{"scripture_fa":"query.get_equipped_item_name=='scripture_f' && variable.attack_time && query.moon_phase == 1 && query.player_level > 4"},
@@ -37,6 +39,26 @@
 						{"tup_b":"query.get_equipped_item_name=='tup' && !query.is_sneaking && query.is_jumping && !variable.attack_time && query.player_level > 14"},
 						{"tup_c":"query.get_equipped_item_name=='tup' && query.is_sneaking && !query.is_jumping && !variable.attack_time && query.player_level > 14"},
 						{"tup_d":"query.get_equipped_item_name=='tup' && !query.is_sneaking && !query.is_jumping && !variable.attack_time && query.player_level > 14"}
+					]
+				},
+				"disk_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/playsound disk_taoism"
+					]
+				},
+				"disk_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/stopsound @s disk_taoism"
 					]
 				},
 				"cinnabar": {

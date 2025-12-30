@@ -1,0 +1,22 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "items:disk_taoism"
+   },
+
+    "components": {
+      "minecraft:stacked_by_data": true,
+      "minecraft:foil": false,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 999999,
+      "minecraft:food": {
+        "nutrition": 0,
+        "nutritionalValue": "poor",
+        "saturation_modifier": "low",
+        "can_always_eat": true,
+        "is_meat": false
+      }
+    }
+  }
+}

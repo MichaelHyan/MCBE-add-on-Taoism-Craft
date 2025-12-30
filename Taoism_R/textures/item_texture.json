@@ -2,7 +2,10 @@
   "resource_pack_name": "vanilla",
   "texture_name": "atlas.items",
   "texture_data": {
-	  "scripture": {
+	  "disk_taoism": {
+      "textures": "textures/disk_taoism.png"
+    },
+    "scripture": {
       "textures": "textures/scripture.png"
     },
     "scripture_s": {

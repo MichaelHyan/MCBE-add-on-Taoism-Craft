@@ -5,5 +5,17 @@
     "sounds": [
       "sounds/sw"
     ]
+  },
+  "disk_taoism": {
+    "sounds": [{
+      "name": "sounds/taoism",
+      "stream": true
+  }]
+  },
+  "empty": {
+    "sounds": [{
+      "name": "sounds/empty",
+      "stream": true
+  }]
   }
 }

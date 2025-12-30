@@ -1,0 +1,15 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "items:disk_taoism",
+      "category": "Nature"
+    },
+
+    "components": {
+      "minecraft:icon": "disk_taoism",
+      "minecraft:hover_text_color": "light_purple",
+      "minecraft:render_offsets": "disk"
+    }
+  }
+}
