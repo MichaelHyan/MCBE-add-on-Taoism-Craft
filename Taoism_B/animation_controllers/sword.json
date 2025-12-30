@@ -260,7 +260,6 @@
 							}
 					],
 					"on_entry": [
-						"/effect @s wither 1 5 true",
 						"/tag @n[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,type=!entity:sword_ua,r=20] add sbt",
 						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
 						"/playsound sw"
