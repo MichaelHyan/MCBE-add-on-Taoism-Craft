@@ -1,6 +1,6 @@
 # [add-on]道教仙术扩展包
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/title.png)
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/title.png)
 
 ## 一个融合传统道教文化与奇幻玩法的add-on
 ## 道教之道，法于自然，和于阴阳，通于鬼神。
