@@ -5,14 +5,14 @@
 "name":"道术 Taoism Craft",
 "platform_locked":false,
 "uuid":"43a0af9b-c74c-47ed-8972-6e79c77111d7",
-"version":[4,1,0]
+"version":[4,1,1]
 },
 "modules":[
 {
 "description":"作者：韩言悦欣 zz纸张神探st",
 "type":"resources",
 "uuid":"b021dcb1-8550-4e4f-9ea5-546dc08a4429",
-"version":[4,1,0]
+"version":[4,1,1]
 }
 ],
 "metadata": { "product_type": "addon" }

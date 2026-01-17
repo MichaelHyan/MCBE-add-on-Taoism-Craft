@@ -22,7 +22,8 @@
 					"golden_sword",
 					"diamond_sword",
 					"netherite_sword",
-					"mace"
+					"mace",
+          "ranged"
 				]
 			},
       "animations": {
@@ -41,7 +42,8 @@
 				"diamond_sword": "controller.animation.diamond_sword",
 				"netherite_sword": "controller.animation.netherite_sword",
 				"elytra": "controller.animation.elytra",
-				"mace":"controller.animation.mace"
+				"mace":"controller.animation.mace",
+        "ranged":"controller.animation.ranged"
 			}
     },
 

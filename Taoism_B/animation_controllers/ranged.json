@@ -1,0 +1,36 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.ranged":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"bow":"query.get_equipped_item_name=='bow' && query.is_sneaking"},
+						{"crossbow":"query.get_equipped_item_name=='crossbow' && query.is_sneaking"}
+					]
+				},
+				"bow": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s slowness 1 5 true"
+					]
+				},
+				"crossbow": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s slowness 1 20 true",
+						"/effect @s resistance 1 5 true"
+					]
+				}
+			}
+		}
+ 	}
+ }
