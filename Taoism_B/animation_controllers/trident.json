@@ -1,0 +1,24 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.trident":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"trident":"query.get_equipped_item_name=='trident' && query.is_in_water_or_rain"}
+					]
+				},
+				"trident": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s strength 60 3 true"
+					]
+				}
+			}
+		}
+ 	}
+ }

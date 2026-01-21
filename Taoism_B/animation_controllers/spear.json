@@ -1,0 +1,90 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.spear":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"wooden_s":"query.get_equipped_item_name=='wooden_spear' && query.is_sprinting"},
+						{"stone_s":"query.get_equipped_item_name=='stone_spear' && query.is_sprinting"},
+						{"copper_s":"query.get_equipped_item_name=='copper_spear' && query.is_sprinting"},
+						{"iron_s":"query.get_equipped_item_name=='iron_spear' && query.is_sprinting"},
+						{"golden_s":"query.get_equipped_item_name=='golden_spear' && query.is_sprinting"},
+						{"diamond_s":"query.get_equipped_item_name=='diamond_spear' && query.is_sprinting"},
+						{"netherite_s":"query.get_equipped_item_name=='netherite_spear' && query.is_sprinting"}
+					]
+				},
+				"wooden_s": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s speed 1 1 true"
+					]
+				},
+				"stone_s": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s speed 1 1 true"
+					]
+				},
+				"copper_s": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s speed 1 1 true"
+					]
+				},
+				"iron_s": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s speed 1 1 true"
+					]
+				},
+				"golden_s": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s speed 1 1 true"
+					]
+				},
+				"diamond_s": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s speed 1 1 true"
+					]
+				},
+				"netherite_s": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s speed 1 1 true"
+					]
+				}
+			}
+		}
+ 	}
+ }
