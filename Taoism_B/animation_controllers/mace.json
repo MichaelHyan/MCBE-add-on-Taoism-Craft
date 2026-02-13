@@ -5,10 +5,11 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"mace":"query.get_equipped_item_name=='mace' && query.vertical_speed <= -15"}
+						{"macea":"query.get_equipped_item_name=='mace' && query.vertical_speed <= -15"},
+						{"maceb":"query.get_equipped_item_name=='mace' && query.is_sneaking && variable.attack_time && query.vertical_speed > -15"}
 					]
 				},
-				"mace": {
+				"macea": {
 					"transitions": [
 						{
 							"base_jeta": "(1.0)"
@@ -17,6 +18,16 @@
 					"on_entry": [
 						"/effect @s resistance 1 255 true",
 						"/particle minecraft:balloon_gas_particle ~~~"
+					]
+				},
+				"maceb": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/summon wind_charge_projectile"
 					]
 				}
 			}
