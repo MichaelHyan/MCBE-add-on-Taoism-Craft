@@ -799,11 +799,23 @@
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/ny/braised_pork.png)
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/ny/braised_fish.png)
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/ny/noodles.png)
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/ny/steamed_bun.png)
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/ny/rice_cake.png)
 
 可从村民处(屠夫，农民)购买食材，制作年夜饭
 
 部分饭菜可提供特殊效果
 
+食物效果：
+- 饺子使用牛肉，羊肉，猪肉时分别提供力量，抗性提升，生命恢复，使用葱，白菜分别指定作用时间3分钟，5分钟
+- 猪皮冻，红烧肉提供生命恢复，红烧肉的效果优先
+- 炒鸡可解除虚弱，挖掘疲劳，凋零
+- 红烧鱼可解除缓慢，中毒，失明
+- 其余食材仅提供饱食度回复，调味品不可食用
+
+替换部分画替换为“福”字
+
+##
 
 ### 「道生一，一生二，二生三，三生万物。」——《道德经》第四十二章
 ### 「上善若水，水善利万物而不争，处众人之所恶，故几于道。」——《道德经》第八章
