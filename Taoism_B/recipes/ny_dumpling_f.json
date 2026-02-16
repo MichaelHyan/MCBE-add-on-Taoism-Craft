@@ -13,17 +13,16 @@
         "item": "ny:cabbage"
       },
       {
-        "item": "ny:salt",
-        "count": 4
+        "item": "ny:salt"
       },
       {
         "item": "ny:dumpling_wrapper",
-        "count": 16
+        "count": 4
       }
     ],
     "result": {
       "item": "ny:dumpling_f",
-      "count": 16
+      "count": 4
     }
   }
 }
