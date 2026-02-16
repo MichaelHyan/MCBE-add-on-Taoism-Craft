@@ -1,0 +1,15 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ny:braised_fish",
+      "category": "Nature"
+    },
+
+    "components": {
+      "minecraft:icon": "braised_fish",
+      "minecraft:hover_text_color": "light_purple",
+      "minecraft:render_offsets": "braised_fish"
+    }
+  }
+}

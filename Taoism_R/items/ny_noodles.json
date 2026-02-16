@@ -1,0 +1,15 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ny:noodles",
+      "category": "Nature"
+    },
+
+    "components": {
+      "minecraft:icon": "noodles",
+      "minecraft:hover_text_color": "light_purple",
+      "minecraft:render_offsets": "noodles"
+    }
+  }
+}

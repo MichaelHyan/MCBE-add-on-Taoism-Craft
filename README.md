@@ -791,6 +791,20 @@
 
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/disk_taoism.png)
 
+## 26年春节更新内容
+
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/ny/dumpling_a.png)
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/ny/pigskin_jelly.png)
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/ny/scrambled_chicken.png)
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/ny/braised_pork.png)
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/ny/braised_fish.png)
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/ny/noodles.png)
+
+可从村民处(屠夫，农民)购买食材，制作年夜饭
+
+部分饭菜可提供特殊效果
+
+
 ### 「道生一，一生二，二生三，三生万物。」——《道德经》第四十二章
 ### 「上善若水，水善利万物而不争，处众人之所恶，故几于道。」——《道德经》第八章
 ### 「修之于身，其德乃真；修之于家，其德乃余；修之于乡，其德乃长。」——《道德经》第五十四章

@@ -5,11 +5,21 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"macea":"query.get_equipped_item_name=='mace' && query.vertical_speed <= -15"},
-						{"maceb":"query.get_equipped_item_name=='mace' && query.is_sneaking && variable.attack_time && query.vertical_speed > -15"}
+						{"mace_a":"query.get_equipped_item_name=='mace' && query.vertical_speed <= -15"},
+						{"mace_b":"query.get_equipped_item_name=='mace' && query.is_sneaking && variable.attack_time && query.scoreboard('charge') == 10"},
+						{"mace_c":"query.get_equipped_item_name=='mace' && query.vertical_speed > -15 && query.scoreboard('charge') == 0"},
+						{"mace_d":"query.get_equipped_item_name=='mace' && query.vertical_speed > -15 && query.scoreboard('charge') == 1"},
+						{"mace_e":"query.get_equipped_item_name=='mace' && query.vertical_speed > -15 && query.scoreboard('charge') == 2"},
+						{"mace_f":"query.get_equipped_item_name=='mace' && query.vertical_speed > -15 && query.scoreboard('charge') == 3"},
+						{"mace_g":"query.get_equipped_item_name=='mace' && query.vertical_speed > -15 && query.scoreboard('charge') == 4"},
+						{"mace_h":"query.get_equipped_item_name=='mace' && query.vertical_speed > -15 && query.scoreboard('charge') == 5"},
+						{"mace_i":"query.get_equipped_item_name=='mace' && query.vertical_speed > -15 && query.scoreboard('charge') == 6"},
+						{"mace_j":"query.get_equipped_item_name=='mace' && query.vertical_speed > -15 && query.scoreboard('charge') == 7"},
+						{"mace_k":"query.get_equipped_item_name=='mace' && query.vertical_speed > -15 && query.scoreboard('charge') == 8"},
+						{"mace_l":"query.get_equipped_item_name=='mace' && query.vertical_speed > -15 && query.scoreboard('charge') == 9"}
 					]
 				},
-				"macea": {
+				"mace_a": {
 					"transitions": [
 						{
 							"base_jeta": "(1.0)"
@@ -20,14 +30,126 @@
 						"/particle minecraft:balloon_gas_particle ~~~"
 					]
 				},
-				"maceb": {
+				"mace_b": {
 					"transitions": [
 						{
 							"base_jeta": "(1.0)"
 						}
 					],
 					"on_entry": [
-						"/summon wind_charge_projectile"
+						"/summon wind_charge_projectile",
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"mace_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add charge dummy",
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7|§0|||||||||"
+					]
+				},
+				"mace_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||§0||||||||"
+					]
+				},
+				"mace_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7|||§0|||||||"
+					]
+				},
+				"mace_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||§0||||||"
+					]
+				},
+				"mace_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7|||||§0|||||"
+					]
+				},
+				"mace_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||||§0||||"
+					]
+				},
+				"mace_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7|||||||§0|||"
+					]
+				},
+				"mace_j": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||||||§0||"
+					]
+				},
+				"mace_k": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7|||||||||§0|"
+					]
+				},
+				"mace_l": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||||||||"
 					]
 				}
 			}

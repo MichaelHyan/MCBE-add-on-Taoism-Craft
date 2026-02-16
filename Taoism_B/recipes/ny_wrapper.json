@@ -1,0 +1,18 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "ny:wrapper"
+    },
+    "tags": [ "crafting_table" ],
+    "ingredients": [
+      {
+        "item": "ny:flour"
+      }
+    ],
+    "result": {
+      "item": "ny:dumpling_wrapper",
+      "count": 4
+    }
+  }
+}

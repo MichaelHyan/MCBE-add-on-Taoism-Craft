@@ -1,0 +1,45 @@
+{
+  "format_version":"1.21.50",
+  "minecraft:item":{
+    "description":{
+      "identifier":"ny:knife",
+      "menu_category":{
+        "category":"equipment",
+        "group":"itemGroup.name.sword"
+      }
+    },
+    "components":{
+      "minecraft:max_stack_size":1,
+      "minecraft:tags":{
+        "tags":[
+          "minecraft:is_sword"
+        ]
+      },
+      "minecraft:enchantable":{
+        "value":20,
+        "slot":"sword"
+      },
+      "minecraft:hand_equipped":true,
+      "minecraft:icon":{
+        "textures":{
+          "default":"knife"
+        }
+      },
+      "minecraft:damage":4,
+      "minecraft:durability":{
+        "max_durability":128
+      },
+      "minecraft:repairable":{
+        "repair_items":[
+          {
+            "items":[
+              "minecraft:iron_ingot"
+            ],
+            "repair_amount": "query.max_durability * 0.25"
+          }
+        ]
+      },
+      "minecraft:can_destroy_in_creative":false
+    }
+  }
+}

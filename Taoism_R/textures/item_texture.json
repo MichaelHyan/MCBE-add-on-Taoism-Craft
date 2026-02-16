@@ -229,6 +229,78 @@
     },
     "txpa": {
       "textures":"textures/txpa.png"
+    },
+    "dumpling_a": {
+      "textures":"textures/ny/dumpling_a.png"
+    },
+    "dumpling_b": {
+      "textures":"textures/ny/dumpling_b.png"
+    },
+    "dumpling_c": {
+      "textures":"textures/ny/dumpling_c.png"
+    },
+    "dumpling_d": {
+      "textures":"textures/ny/dumpling_d.png"
+    },
+    "dumpling_e": {
+      "textures":"textures/ny/dumpling_e.png"
+    },
+    "dumpling_f": {
+      "textures":"textures/ny/dumpling_f.png"
+    },
+    "pigskin_jelly": {
+      "textures":"textures/ny/pigskin_jelly.png"
+    },
+    "scrambled_chicken": {
+      "textures":"textures/ny/scrambled_chicken.png"
+    },
+    "braised_pork": {
+      "textures":"textures/ny/braised_pork.png"
+    },
+    "braised_fish": {
+      "textures":"textures/ny/braised_fish.png"
+    },
+    "noodles": {
+      "textures":"textures/ny/noodles.png"
+    },
+    "flour": {
+      "textures":"textures/ny/flour.png"
+    },
+    "rice": {
+      "textures":"textures/ny/rice.png"
+    },
+    "steamed_bun": {
+      "textures":"textures/ny/steamed_bun.png"
+    },
+    "cabbage": {
+      "textures":"textures/ny/cabbage.png"
+    },
+    "rice_cake": {
+      "textures":"textures/ny/rice_cake.png"
+    },
+    "onion": {
+      "textures":"textures/ny/onion.png"
+    },
+    "ginger": {
+      "textures":"textures/ny/ginger.png"
+    },
+    "garlic": {
+      "textures":"textures/ny/garlic.png"
+    },
+    "seasoning": {
+      "textures":"textures/ny/seasoning.png"
+    },
+    "salt": {
+      "textures":"textures/ny/salt.png"
+    },
+    "dumpling_wrapper": {
+      "textures":"textures/ny/dumpling_wrapper.png"
+    },
+    "pigskin": {
+      "textures":"textures/ny/pigskin.png"
+    },
+    "knife": {
+      "textures":"textures/ny/knife.png"
     }
   }
 }

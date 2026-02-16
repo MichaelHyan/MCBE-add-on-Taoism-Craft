@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "ny:dumpling_e"
+    },
+    "tags": [ "crafting_table" ],
+    "ingredients": [
+      {
+        "item": "mutton"
+      },
+      {
+        "item": "ny:cabbage"
+      },
+      {
+        "item": "ny:salt",
+        "count": 4
+      },
+      {
+        "item": "ny:dumpling_wrapper",
+        "count": 16
+      }
+    ],
+    "result": {
+      "item": "ny:dumpling_e",
+      "count": 16
+    }
+  }
+}

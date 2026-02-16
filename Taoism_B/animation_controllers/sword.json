@@ -26,9 +26,6 @@
 						{"sword_u_c":"query.get_equipped_item_name=='sword_u' && variable.attack_time && query.is_sneaking && query.player_level > 49"},
 						{"sword_u_d":"query.get_equipped_item_name=='sword_u' && !variable.attack_time && query.is_jumping && query.player_level > 49"},
 						{"sword_u_e":"query.get_equipped_item_name=='sword_u' && variable.attack_time && query.is_jumping && query.player_level > 49"},
-						{"wond_a":"query.get_equipped_item_name=='wond' && !variable.attack_time && !query.is_jumping && query.player_level > 9"},
-						{"wond_b":"query.get_equipped_item_name=='wond' && variable.attack_time && !query.is_jumping && query.player_level > 9"},
-						{"wond_c":"query.get_equipped_item_name=='wond' && variable.attack_time && query.is_jumping && query.player_level > 9"},
 						{"sword_sp_a":"query.get_equipped_item_name=='sword_sp' && !variable.attack_time && query.player_level > 19"},
 						{"sword_sp_b":"query.get_equipped_item_name=='sword_sp' && variable.attack_time && query.player_level > 19"},
 						{"soul_banner_a":"query.get_equipped_item_name=='soul_banner' && !variable.attack_time && query.player_level > 24"},
@@ -297,41 +294,6 @@
 						"/tp @n[type=entity:sword_ua]",
 						"/summon lightning_bolt",
 						"/kill @e[tag=sbt,r=3]"
-					]
-				},
-				"wond_a": {
-					"transitions": [
-							{
-								"base_jeta": "(1.0)"
-							}
-					],
-					"on_entry": [
-						"/effect @s resistance 1 3 true",
-						"/effect @s regeneration 1 3 true"
-					]
-				},
-				"wond_b": {
-					"transitions": [
-							{
-								"base_jeta": "(1.0)"
-							}
-					],
-					"on_entry": [
-						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
-						"/enchant @s smite 5",
-						"/enchant @s mending",
-						"/enchant @s knockback 1"
-					]
-				},
-				"wond_c": {
-					"transitions": [
-							{
-								"base_jeta": "(1.0)"
-							}
-					],
-					"on_entry": [
-						"/tp ^ ^1 ^5",
-						"/replaceitem entity @s slot.weapon.mainhand 0 items:wond"
 					]
 				},
 				"sword_sp_a": {

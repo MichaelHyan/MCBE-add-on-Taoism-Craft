@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "ny:braised_pork"
+    },
+    "tags": [ "crafting_table" ],
+    "ingredients": [
+      {
+        "item": "porkchop"
+      },
+      {
+        "item": "ny:onion"
+      },
+      {
+        "item": "ny:salt"
+      },
+      {
+        "item": "ny:ginger"
+      },
+      {
+        "item": "ny:seasoning"
+      }
+    ],
+    "result": {
+      "item": "ny:braised_pork",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ny:braised_fish"
+    },
+    
+    "components": {
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:use_duration": 32,
+      "minecraft:foil": false,
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+        "nutrition": 4,
+        "saturation_modifier": "supernatural",
+        "can_always_eat": true,
+        "effects": [
+          {
+            "name": "slowness",
+            "chance": 1.0,
+            "duration": 0,
+            "amplifier": 255
+          },
+          {
+            "name": "poison",
+            "chance": 1.0,
+            "duration": 0,
+            "amplifier": 255
+          },
+          {
+            "name": "blindness",
+            "chance": 1.0,
+            "duration": 0,
+            "amplifier": 255
+          }
+        ]
+      }
+    }
+  }
+}

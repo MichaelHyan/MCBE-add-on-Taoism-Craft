@@ -1,0 +1,15 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ny:scrambled_chicken",
+      "category": "Nature"
+    },
+
+    "components": {
+      "minecraft:icon": "scrambled_chicken",
+      "minecraft:hover_text_color": "light_purple",
+      "minecraft:render_offsets": "scrambled_chicken"
+    }
+  }
+}
