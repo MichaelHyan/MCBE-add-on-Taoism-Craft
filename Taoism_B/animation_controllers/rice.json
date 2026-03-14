@@ -1,0 +1,36 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.rice":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"rice_a":"query.life_time < 10"},
+						{"rice_b":"query.life_time >= 0"}
+					]
+				},
+				"rice_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/damage @e[r=3,family=undead] 1",
+						"/particle minecraft:cauldron_explosion_emitter ~ ~ ~"
+					]
+				},
+				"rice_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

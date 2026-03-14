@@ -230,6 +230,9 @@
     "txpa": {
       "textures":"textures/txpa.png"
     },
+    "glutinous_rice": {
+      "textures":"textures/glutinous_rice.png"
+    },
     "dumpling_a": {
       "textures":"textures/ny/dumpling_a.png"
     },

@@ -47,6 +47,7 @@ item.items:klj.name=KunLun Mirror\n§o§7level limit:???\n§r§bexchange positio
 item.items:phase.name=moon phase detecter\n§o§7level limit:none
 item.items:bglpa.name=BaGua Compass\n§o§7level limit:???\n§r§bdomain expansion!§r
 item.items:bglpb.name=BaGua Compass\n§o§7level limit:???\n§r§bdomain expansion!§r
+item.items:glutinous_rice=glutinous_rice\n§o§7consumable
 item.items:ta.name=incomplete talisman (SanQing)\n§o§7crafting material
 item.items:tb.name=incomplete talisman (ChiLing)\n§o§7crafting material
 item.items:tc.name=incomplete talisman (LeiLing)\n§o§7crafting material
