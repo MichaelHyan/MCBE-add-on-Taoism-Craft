@@ -20,6 +20,11 @@
         "item": "white_wool"
       }
     },
+    "unlock": [
+      {
+        "item": "items:cinnabar_crystal"
+      }
+    ],
     "result": {
       "item": "items:brush_n",
       "count": 4

@@ -35,6 +35,11 @@
         "item": "netherite_block"
       }
     },
+    "unlock": [
+      {
+        "item": "items:pearl"
+      }
+    ],
     "result": {
       "item": "items:sword_s",
       "count": 1

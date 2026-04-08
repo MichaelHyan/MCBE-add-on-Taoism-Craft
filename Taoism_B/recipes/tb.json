@@ -12,7 +12,7 @@
     ],
     "key": {
       "a": {
-        "item": "items:pearl"
+        "item": "items:spe"
       },
       "b": {
         "item": "paper"
@@ -21,9 +21,14 @@
         "item": "items:sword_t"
       }
     },
-    "result": {
+    "unlock": [
+      {
+        "item": "items:talisman"
+      }
+    ],
+    "result": [{
       "item": "items:tb",
       "count": 4
-    }
+    }]
   }
 }

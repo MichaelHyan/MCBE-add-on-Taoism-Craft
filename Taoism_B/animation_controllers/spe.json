@@ -1,0 +1,158 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.spe":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"spe_a":"query.get_equipped_item_name=='pearl' && !query.is_using_item"},
+						{"spe_b":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('charge') == 10"},
+						{"spe_c":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('charge') == 0"},
+						{"spe_d":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('charge') == 1"},
+						{"spe_e":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('charge') == 2"},
+						{"spe_f":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('charge') == 3"},
+						{"spe_g":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('charge') == 4"},
+						{"spe_h":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('charge') == 5"},
+						{"spe_i":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('charge') == 6"},
+						{"spe_j":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('charge') == 7"},
+						{"spe_k":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('charge') == 8"},
+						{"spe_l":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('charge') == 9"}
+					]
+				},
+				"spe_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"spe_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/give @s items:spe",
+						"/damage @s 3",
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"spe_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add charge dummy",
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7|§0|||||||||"
+					]
+				},
+				"spe_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||§0||||||||"
+					]
+				},
+				"spe_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7|||§0|||||||"
+					]
+				},
+				"spe_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||§0||||||"
+					]
+				},
+				"spe_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7|||||§0|||||"
+					]
+				},
+				"spe_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||||§0||||"
+					]
+				},
+				"spe_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7|||||||§0|||"
+					]
+				},
+				"spe_j": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||||||§0||"
+					]
+				},
+				"spe_k": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7|||||||||§0|"
+					]
+				},
+				"spe_l": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||||||||"
+					]
+				}
+			}
+		}
+ 	}
+ }

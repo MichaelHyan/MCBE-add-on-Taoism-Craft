@@ -23,6 +23,11 @@
         "item": "diamond"
       }
     },
+    "unlock": [
+      {
+        "item": "items:pearl"
+      }
+    ],
     "result": {
       "item": "items:bglpa",
       "count": 1

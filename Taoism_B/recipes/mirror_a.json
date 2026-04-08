@@ -20,6 +20,11 @@
         "item": "items:cinnabar"
       }
     },
+    "unlock": [
+      {
+        "item": "items:pearl"
+      }
+    ],
     "result": {
       "item": "items:mirror_a",
       "count": 1

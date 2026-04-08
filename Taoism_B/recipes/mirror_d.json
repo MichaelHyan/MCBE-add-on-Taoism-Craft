@@ -17,12 +17,17 @@
         "item": "items:mirror_b"
       },
       "b": {
-        "item": "items:pearl"
+        "item": "items:spe"
       }
     },
-    "result": {
+    "unlock": [
+      {
+        "item": "items:pearl"
+      }
+    ],
+    "result": [{
       "item": "items:mirror_d",
       "count": 1
-    }
+    }]
   }
 }

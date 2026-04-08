@@ -1,0 +1,36 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:partner"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " c ",
+      "aba",
+      " a "
+    ],
+    "key": {
+      "a": {
+        "item": "items:cinnabar_crystal"
+      },
+      "b": {
+        "item": "minecraft:totem"
+      },
+      "c": {
+        "item": "minecraft:emerald"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:totem"
+      }
+    ],
+    "result": {
+      "item": "items:partner",
+      "count": 1
+    }
+  }
+}

@@ -23,6 +23,11 @@
         "item": "items:brush_n"
       }
     },
+    "unlock": [
+      {
+        "item": "items:cinnabar_crystal"
+      }
+    ],
     "result": {
       "item": "items:scripture_f",
       "count": 1

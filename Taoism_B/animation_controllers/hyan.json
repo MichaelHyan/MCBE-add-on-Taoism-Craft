@@ -1,0 +1,266 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.hyan":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"h_chat":"query.life_time == 1"},
+						{"h_chat_a":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 0"},
+						{"h_chat_b":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 1"},
+						{"h_chat_c":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 2"},
+						{"h_chat_d":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 3"},
+						{"h_chat_e":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 4"},
+						{"h_chat_f":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 5"},
+						{"h_chat_g":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 6"},
+						{"h_chat_h":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 7"},
+						{"h_chat_i":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 8"},
+						{"h_chat_j":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 9"},
+						{"h_chat_k":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 10"},
+						{"h_chat_l":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 11"},
+						{"h_chat_m":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 12"},
+						{"h_chat_n":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 13"},
+						{"h_chat_o":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 14"},
+						{"h_chat_p":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 15"},
+						{"h_chat_sa":"query.is_item_name_any('slot.weapon.mainhand', 0, 'items:sword_s')"},
+						{"h_chat_sb":"query.is_item_name_any('slot.weapon.mainhand', 0, 'items:pearl')"},
+						{"h_chat_sc":"query.is_item_name_any('slot.weapon.offhand', 0, 'minecraft:totem_of_undying')"},
+						{"h_chat_sd":"query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:emerald')"},
+						{"h_chat_se":"query.is_item_name_any('slot.weapon.mainhand', 0, 'items:cinnabar_crystal')"}
+					]
+				},
+				"h_chat": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say ！你是怎么发现我的？"
+					]
+				},
+				"h_chat_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say ：）"
+					]
+				},
+				"h_chat_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 你好，有什么需要帮助的吗：）"
+					]
+				},
+				"h_chat_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 我是韩言，是的，这个模组的开发者韩言。如果你喜欢这个模组，想了解更多内容的话。。。。(低头弯腰)请给我一些绿宝石！(; ;)"
+					]
+				},
+				"h_chat_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 为什么我长这个样子？好问题，因为放我自用的皮肤会侵权啊：（"
+					]
+				},
+				"h_chat_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 这个实体的代码和盟友系统其实是一模一样的。。。除了没有对法器的免疫处理。"
+					]
+				},
+				"h_chat_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 盟友系统最开始是个目的于陪伴玩家的设计，后来才拥有了对话和交互。"
+					]
+				},
+				"h_chat_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 你敢信这些剑在3.0版本前是无限耐久也没有等级限制的？"
+					]
+				},
+				"h_chat_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 使用符箓的时候消耗逻辑其实是把他吃下去。。。之前甚至能回饱食度（张角：这我熟啊）"
+					]
+				},
+				"h_chat_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 人有没有来世呢？不管有没有，只有这一世的你是现在的你，去做现在的你应当去做的吧。"
+					]
+				},
+				"h_chat_j": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 这个世界的主线任务就是打那个黑黑的龙吗？"
+					]
+				},
+				"h_chat_k": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 有时候我想设计一个很帅的武器，有三种颜色状态，大招是飞起来然后从空中劈下去。。。"
+					]
+				},
+				"h_chat_l": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 白金之星！世界！",
+						"/effect @e[type=!player,type=!entity:hyan] slowness 5 255 true",
+						"/effect @e darkness 5 255 true"
+					]
+				},
+				"h_chat_m": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 其实那些寺庙房梁上藏东西了。"
+					]
+				},
+				"h_chat_n": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 贴图/设定/音乐 by zz纸张神探st！"
+					]
+				},
+				"h_chat_o": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 其实你可以替换盟友（包括我）的贴图，换成你喜欢的皮肤。"
+					]
+				},
+				"h_chat_p": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 白蛇扇了zzst一巴掌掉出来个画着粉色世界的碟片，普奇神父看到后跪下了。"
+					]
+				},
+				"h_chat_sa": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 首先，在没有附魔的情况下，后面忘了，总之老君剑就要退出舞台了",
+						"/give @p items:sword_s",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air"
+					]
+				},
+				"h_chat_sb": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 这是从你身体里拿出来的？好厉害！",
+						"/give @p items:pearl",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air"
+					]
+				},
+				"h_chat_sc": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 谢谢，我不需要这个。",
+						"/give @p totem",
+						"/replaceitem entity @s slot.weapon.offhand 0 air"
+					]
+				},
+				"h_chat_sd": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 谢谢，不过剧透嘛。。。我也不知道，可以去我的GitHub仓库看看，有点子的时候会更新的 https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air"
+					]
+				},
+				"h_chat_se": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 其实我们原本是想做朱砂矿的，但是当时没学会自定义方块。。。然后一年后麻将给辰砂块加进来了（还有这种好事？）",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/give @p items:cinnabar_crystal"
+					]
+				}
+			}
+		}
+ 	}
+ }

@@ -23,6 +23,11 @@
         "item": "paper"
       }
     },
+    "unlock": [
+      {
+        "item": "items:talisman"
+      }
+    ],
     "result": [{
       "item": "items:ud",
       "count": 4

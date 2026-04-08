@@ -17,12 +17,17 @@
         "item": "copper_ingot"
       },
       "b": {
-        "item": "items:pearl"
+        "item": "items:spe"
       }
     },
-    "result": {
+    "unlock": [
+      {
+        "item": "items:pearl"
+      }
+    ],
+    "result": [{
       "item": "items:bell",
       "count": 1
-    }
+    }]
   }
 }

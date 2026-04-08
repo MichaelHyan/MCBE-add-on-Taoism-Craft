@@ -1,0 +1,255 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.zzst":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"h_chat":"query.life_time == 1"},
+						{"h_chat_a":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,14) == 0"},
+						{"h_chat_b":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,14) == 1"},
+						{"h_chat_c":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,14) == 2"},
+						{"h_chat_d":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,14) == 3"},
+						{"h_chat_e":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,14) == 4"},
+						{"h_chat_f":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,14) == 5"},
+						{"h_chat_g":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,14) == 6"},
+						{"h_chat_h":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,14) == 7"},
+						{"h_chat_i":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,14) == 8"},
+						{"h_chat_j":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,14) == 9"},
+						{"h_chat_k":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,14) == 10"},
+						{"h_chat_l":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,14) == 11"},
+						{"h_chat_m":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,14) == 12"},
+						{"h_chat_n":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,14) == 13"},
+						{"h_chat_o":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,14) == 14"},
+						{"h_chat_sa":"query.is_item_name_any('slot.weapon.mainhand', 0, 'items:sword_s')"},
+						{"h_chat_sb":"query.is_item_name_any('slot.weapon.mainhand', 0, 'items:pearl')"},
+						{"h_chat_sc":"query.is_item_name_any('slot.weapon.offhand', 0, 'minecraft:totem_of_undying')"},
+						{"h_chat_sd":"query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:tnt')"},
+						{"h_chat_se":"query.is_item_name_any('slot.weapon.mainhand', 0, 'items:cinnabar_crystal')"}
+					]
+				},
+				"h_chat": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 颤抖吧世界！我复活了！"
+					]
+				},
+				"h_chat_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say ：）"
+					]
+				},
+				"h_chat_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 你好，知道犯什么事了吗？"
+					]
+				},
+				"h_chat_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 我是纸张神探，这个模组的开发者之一纸张神探。如果你喜欢这个模组，想了解更多内容的话，请召唤韩言悦欣，或者给我TNT"
+					]
+				},
+				"h_chat_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 史努比对我来说是一段回忆"
+					]
+				},
+				"h_chat_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 虽然我一行代码都没写，但是进行了世界观设计和贴图设计，你们看到的句子也基本是我写的。"
+					]
+				},
+				"h_chat_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 其实内丹一开始叫灵珠，本来就是当消耗品用的，但是【哪吒2】太火了……"
+					]
+				},
+				"h_chat_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 告诉你们个小秘密，其实这些符的贴图都在现实世界有母版，而且是我亲手画的，所以理论上你们能打开背包、抱着电脑显示屏驱邪。"
+					]
+				},
+				"h_chat_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 实际上，为了宣扬正确的价值观，万魂幡被暗削了好几次……"
+					]
+				},
+				"h_chat_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say ——家里不要摆太多驱邪的物品。",
+                    	"/say ——请大师指点！",
+                        "/say ——费钱。"
+					]
+				},
+				"h_chat_j": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 这个模组的世界观有很多暗喻，含沙射影了一些东西，但我不能多说。"
+					]
+				},
+				"h_chat_k": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 可惜的是有很多功能和想法还没有实现，等我们精进一下技术吧……"
+					]
+				},
+				"h_chat_l": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 疯狂钻石！",
+						"/effect @a[r=10] regeneration 3 5 true"
+					]
+				},
+				"h_chat_m": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 你们真的能看懂道馆门口的那本书吗？"
+					]
+				},
+				"h_chat_n": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 代码/设定/后端 by 韩言悦欣！"
+					]
+				},
+				"h_chat_o": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 其实你可以替换盟友（包括我）的贴图，换成你喜欢的皮肤。"
+					]
+				},
+				"h_chat_sa": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 我还是想说，其实现在邪修还是比走正道要强，游戏机制并不平衡，你懂我的意思。",
+						"/give @p items:sword_s",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air"
+					]
+				},
+				"h_chat_sb": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 天若有情天亦老，人间正道是沧桑！",
+						"/give @p items:pearl",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air"
+					]
+				},
+				"h_chat_sc": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 拿来吧你！",
+						"/replaceitem entity @s slot.weapon.offhand 0 air"
+					]
+				},
+				"h_chat_sd": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 谢谢，不过剧透吗……你用白蛇把我脑子扒开吧，扒韩言悦欣的GitHub仓库也行。",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air"
+					]
+				},
+				"h_chat_se": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 只有道教才是中华民族的本土传统宗教，佛教什么的都是从异国传来的。",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/give @p items:cinnabar_crystal"
+					]
+				}
+			}
+		}
+ 	}
+ }

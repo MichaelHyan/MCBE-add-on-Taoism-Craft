@@ -19,6 +19,11 @@
         "item": "paper"
       }
     },
+    "unlock": [
+      {
+        "item": "items:pearl"
+      }
+    ],
     "result": [{
       "item": "items:talisman",
       "count": 4

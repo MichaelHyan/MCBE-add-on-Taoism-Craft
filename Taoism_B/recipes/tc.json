@@ -12,7 +12,7 @@
     ],
     "key": {
       "a": {
-        "item": "items:pearl"
+        "item": "items:spe"
       },
       "b": {
         "item": "paper"
@@ -21,9 +21,14 @@
         "item": "lightning_rod"
       }
     },
-    "result": {
+    "unlock": [
+      {
+        "item": "items:talisman"
+      }
+    ],
+    "result": [{
       "item": "items:tc",
       "count": 4
-    }
+    }]
   }
 }

@@ -14,7 +14,7 @@
     ],
     "key": {
       "a": {
-        "item": "items:pearl"
+        "item": "items:spe"
       },
       "b": {
         "item": "diamond"
@@ -26,9 +26,14 @@
         "item": "gold_ingot"
       }
     },
-    "result": {
+    "unlock": [
+      {
+        "item": "items:pearl"
+      }
+    ],
+    "result": [{
       "item": "items:txpa",
       "count": 1
-    }
+    }]
   }
 }

@@ -20,6 +20,11 @@
         "item": "items:talisman_t"
       }
     },
+    "unlock": [
+      {
+        "item": "items:pearl"
+      }
+    ],
     "result": {
       "item": "items:lightning_wood",
       "count": 1

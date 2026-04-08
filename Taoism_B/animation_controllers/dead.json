@@ -1,0 +1,39 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.dead":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"dead_a":"query.is_alive == 0 && query.scoreboard('spawnc') == 0"},
+						{"dead_b":"query.is_alive != 0 && query.scoreboard('spawnc') == 1"}
+					]
+				},
+				"dead_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard objectives add spawnc dummy",
+						"/scoreboard players set @s spawnc 1",
+						"/summon zombie ?",
+						"/effect @e[name=?,type=zombie] fire_resistance infinite 1 true",
+						"/effect @e[name=?,type=zombie] slowness infinite 3 true"
+					]
+				},
+				"dead_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s spawnc 0"
+					]
+				}
+			}
+		}
+ 	}
+ }

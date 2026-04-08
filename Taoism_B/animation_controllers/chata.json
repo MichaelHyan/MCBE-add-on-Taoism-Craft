@@ -1,0 +1,145 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.chata":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"chata_a":"query.life_time == 1"},
+						{"chata_b":"query.life_time == 4"},
+						{"chata_c":"query.life_time == 7"},
+						{"chata_d":"query.life_time == 10"},
+						{"chata_e":"query.life_time == 13"},
+						{"chata_f":"query.life_time == 16"},
+						{"chata_g":"query.life_time == 19"},
+						{"chata_h":"query.life_time == 22"},
+						{"chata_i":"query.life_time == 25"},
+						{"chata_j":"query.life_time == 28"},
+						{"chata_k":"query.life_time == 31"},
+						{"chata_l":"query.life_time == 34"}
+					]
+				},
+				"chata_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 正午的阳气最盛…… 可这天地，早已没了半分生气。"
+					]
+				},
+				"chata_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 这东西…… 我竟有上千年没碰过了。"
+					]
+				},
+				"chata_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 你可知，太多人求长生，最后连活着都成了奢望。"
+					]
+				},
+				"chata_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 道馆遍地，炊烟却稀…… 这便是我们修出来的世道。"
+					]
+				},
+				"chata_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 有人成仙离去，有人饿死道中，无人愿拾起锄头。"
+					]
+				},
+				"chata_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 纯阳飞升，地仙守土，可人间，早已无土可守。"
+					]
+				},
+				"chata_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 灵气漫溢，凡人枯骨，灵气恒定，取之无度，天地自会反噬。天道终究是看不下去了。"
+					]
+				},
+				"chata_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 我曾也是求道之人，如今只剩一缕残魂罢了。"
+					]
+				},
+				"chata_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 不死图腾…… 那是世人对长生最愚蠢的执念…… 也是我的执念。"
+					]
+				},
+				"chata_j": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 长生长生，世间多少罪孽，都假借着这两个字而生。"
+					]
+				},
+				"chata_k": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 内丹、长生、飞升…… 到头来，不过一场虚空。"
+					]
+				},
+				"chata_l": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

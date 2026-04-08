@@ -19,6 +19,11 @@
         "item": "wooden_sword"
       }
     },
+    "unlock": [
+      {
+        "item": "items:pearl"
+      }
+    ],
     "result": {
       "item": "items:sword_t",
       "count": 1

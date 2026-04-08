@@ -22,8 +22,12 @@
       "c": {
         "item": "clay"
       }
-
     },
+    "unlock": [
+      {
+        "item": "items:pearl"
+      }
+    ],
     "result": {
       "item": "items:bottle",
       "count": 1

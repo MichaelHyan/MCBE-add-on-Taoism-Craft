@@ -1,0 +1,40 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.mimic_spawner":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"spawn_a":"query.moon_phase == 0 && query.time_of_day == 0"},
+						{"despawn":"query.life_time >= 600"}
+					]
+				},
+				"spawn_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tag @n[type=zombie] add ???",
+						"/effect @e[type=zombie,tag=???] speed infinite 3 true",
+						"/effect @e[type=zombie,tag=???] health_boost infinite 10 true",
+						"/effect @e[type=zombie,tag=???] instant_damage 10 255 true",
+						"/effect @e[type=zombie,tag=???] strength infinite 3",
+						"/effect @e[type=zombie,tag=???] fire_resistance infinite 1 true"
+					]
+				},
+				"despawn": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @e[type=entity.mimic_spawner]"
+					]
+				}
+			}
+		}
+ 	}
+ }

@@ -20,6 +20,11 @@
         "item": "items:talisman"
       }
     },
+    "unlock": [
+      {
+        "item": "items:pearl"
+      }
+    ],
     "result": {
       "item": "items:mirror_b",
       "count": 1

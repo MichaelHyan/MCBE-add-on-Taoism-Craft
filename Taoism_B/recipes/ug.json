@@ -29,6 +29,11 @@
         "item": "items:ue"
       }
     },
+    "unlock": [
+      {
+        "item": "items:talisman"
+      }
+    ],
     "result": [{
       "item": "items:ug",
       "count": 4

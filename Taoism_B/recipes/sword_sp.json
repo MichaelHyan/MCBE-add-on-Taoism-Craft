@@ -20,6 +20,11 @@
         "item": "items:sword_e"
       }
     },
+    "unlock": [
+      {
+        "item": "items:pearl"
+      }
+    ],
     "result": {
       "item": "items:sword_sp",
       "count": 1

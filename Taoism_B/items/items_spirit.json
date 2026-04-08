@@ -4,7 +4,6 @@
     "description": {
       "identifier": "items:spirit"
    },
-
     "components": {
       "minecraft:stacked_by_data": true,
       "minecraft:foil": false,

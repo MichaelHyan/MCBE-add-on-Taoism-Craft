@@ -1,0 +1,1212 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "entity:hyan",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false,
+      "scripts": {
+				"animate": [
+					"hyan"
+				]
+			},
+      "animations": {
+				"hyan": "controller.animation.hyan"
+			}
+    },
+    "component_groups": {
+      "bow": {
+        "minecraft:equipment": {
+          "table": "partner/bow.json"
+        },
+        "minecraft:behavior.ranged_attack": {
+          "priority": 2,
+          "attack_interval_min": 1.0,
+          "attack_interval_max": 1.0,
+          "attack_radius": 27
+        },
+        "minecraft:shooter": {
+          "type": "Arrow",
+          "def": "minecraft:arrow"
+        }
+      },
+      "trident": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/trident.json"
+        }
+      },
+      "mace": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/mace.json"
+        }
+      },
+      "emerald": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/emerald.json"
+        }
+      },
+      "cinnabar": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/cinnabar.json"
+        }
+      },
+      "sword_s": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/sword_s.json"
+        }
+      },
+      "pearl": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/pearl.json"
+        }
+      },
+      "totem": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/totem.json"
+        }
+      },
+      "wooden_sword": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/wooden.json"
+        }
+      },
+      "stone_sword": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/stone.json"
+        }
+      },
+      "copper_sword": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/copper.json"
+        }
+      },
+      "golden_sword": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/golden.json"
+        }
+      },
+      "iron_sword": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/iron.json"
+        }
+      },
+      "diamond_sword": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/diamond.json"
+        }
+      },
+      "netherite_sword": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/netherite.json"
+        }
+      },
+      "wooden_spear": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/wooden_spear.json"
+        }
+      },
+      "stone_spear": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/stone_spear.json"
+        }
+      },
+      "copper_spear": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/copper_spear.json"
+        }
+      },
+      "golden_spear": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/golden_spear.json"
+        }
+      },
+      "iron_spear": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/iron_spear.json"
+        }
+      },
+      "diamond_spear": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/diamond_spear.json"
+        }
+      },
+      "netherite_spear": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/netherite_spear.json"
+        }
+      },
+      "tame": {
+        "minecraft:interact": [
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "bow"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "bow"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "crossbow"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "bow"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "trident"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "trident"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "mace"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "mace"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "emerald"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "emerald"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "items:cinnabar_crystal"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "cinnabar"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "items:sword_s"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "sword_s"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "items:pearl"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "pearl"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "totem"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "totem"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "wooden_sword"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "wooden_sword"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "copper_sword"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "copper_sword"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "stone_sword"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "stone_sword"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "diamond_sword"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "diamond_sword"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "golden_sword"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "golden_sword"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "iron_sword"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "iron_sword"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "netherite_sword"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "netherite_sword"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "wooden_spear"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "wooden_spear"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "stone_spear"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "stone_spear"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "copper_spear"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "copper_spear"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "iron_spear"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "iron_spear"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "golden_spear"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "golden_spear"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "diamond_spear"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "diamond_spear"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "netherite_spear"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "netherite_spear"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          }
+        ],
+        "minecraft:health": {
+          "value": 20,
+          "max": 20,
+          "min": 0
+        },
+        "minecraft:behavior.follow_owner": {
+          "priority": 0,
+          "speed_multiplier": 1.2,
+          "start_distance": 15,
+          "stop_distance": 3
+        },
+        "minecraft:is_tamed": {},
+        "minecraft:behavior.owner_hurt_by_target": {
+          "priority": 1
+        },
+        "minecraft:behavior.owner_hurt_target": {
+          "priority": 2
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 2,
+          "entity_types": [
+            {
+              "filters": {
+                "test": "is_family",
+                "subject": "other",
+                "value": "monster"
+              },
+              "max_dist": 25
+            }
+          ],
+          "must_see": true
+        },
+        "minecraft:spell_effects": {
+          "add_effects": [
+            {
+              "effect": "regeneration",
+              "amplifier": 3,
+              "visible": false,
+              "ambient": true,
+              "duration": 99999999
+            }
+          ]
+        }
+      },
+      "mode_one": {
+        "minecraft:variant": {
+          "value": 1
+        },
+        "minecraft:angry": {
+          "duration": -1,
+          "broadcastAnger": false,
+          "calm_event": {
+            "event": "stop_anger",
+            "target": "self"
+          }
+        },
+        "minecraft:timer": {
+          "looping": true,
+          "randomInterval": false,
+          "time": 300.0,
+          "time_down_event": {
+            "event": "stop_anger",
+            "target": "self"
+          }
+        }
+      },
+      "mode_zero": {
+        "minecraft:variant": {
+          "value": 0
+        }
+      }
+    },
+    "components": {
+      "minecraft:nameable": {},
+      "minecraft:tameable": {
+        "probability": 1,
+        "tameItems": "minecraft:emerald",
+        "tame_event": {
+          "event": "tamed",
+          "target": "self"
+        }
+      },
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": 0,
+        "breathesWater": true
+      },
+      "minecraft:on_target_acquired": {
+        "event": "anger",
+        "target": "self"
+      },
+      "minecraft:on_target_escape": {
+        "event": "stop_anger",
+        "target": "self"
+      },
+      "minecraft:follow_range": {
+        "value": 30,
+        "max": 30
+      },
+      "minecraft:health": {
+        "value": 20,
+        "max": 20,
+        "min": 0
+      },
+      "minecraft:collision_box": {
+        "width": 0.72,
+        "height": 1.88
+      },
+      "minecraft:behavior.sleep": {
+        "priority": 3,
+        "goal_radius": 5,
+        "speed_multiplier": 1.2,
+        "sleep_collider_height": 0.3,
+        "sleep_collider_width": 1.0,
+        "sleep_y_offset": 0.6
+      },
+      "minecraft:attack": {
+        "damage": 2
+      },
+      "minecraft:movement": {
+        "value": 0.25
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
+      "minecraft:fire_immune": true,
+      "minecraft:behavior.hurt_by_target": {
+        "priority": 1
+      },
+      "minecraft:behavior.nearest_attackable_target": {
+        "priority": 2,
+        "reselect_targets": true,
+        "entity_types": [
+          {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "value": "dragon"
+            },
+            "max_dist": 25
+          }
+        ],
+        "must_see": true
+      },
+      "minecraft:behavior.melee_attack": {
+        "priority": 4,
+        "target_dist": 1.2,
+        "speed_multiplier": 1.25
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 5,
+        "speed_multiplier": 1
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 6,
+        "look_distance": 8
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 6
+      },
+      "minecraft:physics": {}
+    },
+    "events": {
+      "minecraft:entity_spawned": {},
+      "tamed": {
+        "add": {
+          "component_groups": [
+            "tame"
+          ]
+        }
+      },
+      "wooden_sword": {
+        "add": {
+          "component_groups": [
+            "wooden_sword"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "stone_sword": {
+        "add": {
+          "component_groups": [
+            "stone_sword"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "copper_sword": {
+        "add": {
+          "component_groups": [
+            "copper_sword"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "iron_sword": {
+        "add": {
+          "component_groups": [
+            "iron_sword"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "golden_sword": {
+        "add": {
+          "component_groups": [
+            "golden_sword"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "diamond_sword": {
+        "add": {
+          "component_groups": [
+            "diamond_sword"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "netherite_sword": {
+        "add": {
+          "component_groups": [
+            "netherite_sword"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "wooden_spear": {
+        "add": {
+          "component_groups": [
+            "wooden_spear"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "stone_spear": {
+        "add": {
+          "component_groups": [
+            "stone_spear"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "copper_spear": {
+        "add": {
+          "component_groups": [
+            "copper_spear"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "iron_spear": {
+        "add": {
+          "component_groups": [
+            "iron_spear"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "golden_spear": {
+        "add": {
+          "component_groups": [
+            "golden_spear"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "diamond_spear": {
+        "add": {
+          "component_groups": [
+            "diamond_spear"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "netherite_spear": {
+        "add": {
+          "component_groups": [
+            "netherite_spear"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "bow": {
+        "add": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "trident": {
+        "add": {
+          "component_groups": [
+            "trident"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "mace": {
+        "add": {
+          "component_groups": [
+            "mace"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "emerald": {
+        "add": {
+          "component_groups": [
+            "emerald"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "cinnabar": {
+        "add": {
+          "component_groups": [
+            "cinnabar"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "pearl": {
+        "add": {
+          "component_groups": [
+            "pearl"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "sword_s": {
+        "add": {
+          "component_groups": [
+            "sword_s"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "totem": {
+        "add": {
+          "component_groups": [
+            "totem"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "anger": {
+        "add": {
+          "component_groups": [
+            "mode_one"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mode_zero"
+          ]
+        }
+      },
+      "stop_anger": {
+        "add": {
+          "component_groups": [
+            "mode_zero"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mode_one"
+          ]
+        }
+      }
+    }
+  }
+}

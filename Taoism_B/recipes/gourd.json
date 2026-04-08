@@ -23,6 +23,11 @@
         "item": "items:lightning_wood"
       }
     },
+    "unlock": [
+      {
+        "item": "items:pearl"
+      }
+    ],
     "result": {
       "item": "items:gourd",
       "count": 1

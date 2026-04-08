@@ -52,8 +52,8 @@
 						"/effect @e[type=!player,rm=10,r=25] slowness 1 1 true",
 						"/effect @e[type=!player,rm=5,r=10] slowness 1 3 true",
 						"/effect @e[type=!player,rm=1,r=5] slowness 1 255 true",
-						"/damage @e[type=!item,type=!player,rm=5,r=25] 1",
-						"/damage @e[type=!item,type=!player,r=5] 3",
+						"/damage @e[type=!item,type=!player,type=!entity:partner,rm=5,r=25] 1",
+						"/damage @e[type=!item,type=!player,type=!entity:partner,r=5] 3",
 						"/effect @e[type=player,rm=5,r=25] regeneration 1 3 true",
 						"/effect @e[type=player,r=5] regeneration 1 5 true",
 						"/function bglp1"
@@ -66,8 +66,8 @@
 							}
 					],
 					"on_entry": [
-						"/effect @e[type=!player,r=25] slowness 1 1 true",
-						"/effect @e[type=!player,r=25] levitation 1 1 true",
+						"/effect @e[type=!player,type=!entity:partner,r=25] slowness 1 1 true",
+						"/effect @e[type=!player,type=!entity:partner,r=25] levitation 1 1 true",
 						"/function bglp1"
 					]
 				}

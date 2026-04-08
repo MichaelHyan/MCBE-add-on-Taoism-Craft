@@ -23,6 +23,11 @@
         "item": "items:lightning_wood"
       }
     },
+    "unlock": [
+      {
+        "item": "items:talisman"
+      }
+    ],
     "result": {
       "item": "items:tup",
       "count": 1

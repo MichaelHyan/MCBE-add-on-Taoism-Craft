@@ -29,6 +29,11 @@
         "item": "items:talisman"
       }
     },
+    "unlock": [
+      {
+        "item": "items:pearl"
+      }
+    ],
     "result": {
       "item": "items:soul_banner",
       "count": 1

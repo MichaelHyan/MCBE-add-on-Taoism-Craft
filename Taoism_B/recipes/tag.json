@@ -25,6 +25,11 @@
         "item": "items:brush_p"
       }
     },
+    "unlock": [
+      {
+        "item": "items:talisman"
+      }
+    ],
     "result": [{
       "item": "items:tag",
       "count": 1

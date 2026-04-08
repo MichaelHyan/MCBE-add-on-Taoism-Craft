@@ -26,6 +26,11 @@
         "item": "oak_slab"
       }
     },
+    "unlock": [
+      {
+        "item": "items:cinnabar_crystal"
+      }
+    ],
     "result": {
       "item": "items:phase",
       "count": 1

@@ -22,8 +22,12 @@
       "c": {
         "item": "gold_ingot"
       }
-
     },
+    "unlock": [
+      {
+        "item": "items:pearl"
+      }
+    ],
     "result": {
       "item": "items:wond",
       "count": 1

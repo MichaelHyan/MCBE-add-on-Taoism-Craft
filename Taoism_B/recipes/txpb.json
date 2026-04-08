@@ -23,6 +23,11 @@
         "item": "gold_ingot"
       }
     },
+    "unlock": [
+      {
+        "item": "items:pearl"
+      }
+    ],
     "result": {
       "item": "items:txpb",
       "count": 1

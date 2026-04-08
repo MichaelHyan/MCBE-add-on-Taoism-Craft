@@ -18,6 +18,11 @@
         "item": "feather"
       }
     },
+    "unlock": [
+      {
+        "item": "items:pearl"
+      }
+    ],
     "result": {
       "item": "items:scripture_ft",
       "count": 1

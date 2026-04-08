@@ -9,15 +9,20 @@
     ],
     "ingredients": [
       {
-        "item": "items:pearl"
+        "item": "items:spe"
       },
       {
         "item": "items:cinnabar_crystal"
       }
     ],
-    "result": {
+    "unlock": [
+      {
+        "item": "items:pearl"
+      }
+    ],
+    "result": [{
       "item": "items:cinnabar",
       "count": 9
-    }
+    }]
   }
 }

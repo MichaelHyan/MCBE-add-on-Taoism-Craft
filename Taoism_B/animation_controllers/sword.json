@@ -420,10 +420,10 @@
 					],
 					"on_entry": [
 						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
-						"/replaceitem entity @e[type=!player,r=10] slot.weapon.mainhand 0 air",
+						"/replaceitem entity @e[type=!player,type=!entity:partner,type=!entity:hyan,type=!entity:zzst,r=10] slot.weapon.mainhand 0 air",
 						"/enchant @s looting 3",
 						"/enchant @s mending",
-						"/effect @e[type=!player,r=10] weakness 30 255 true"
+						"/effect @e[type=!player,type=!entity:partner,r=10] weakness 30 255 true"
 					]
 				},
 				"whisk": {

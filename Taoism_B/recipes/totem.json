@@ -1,0 +1,39 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:totem"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "cdc",
+      "bab",
+      "cbc"
+    ],
+    "key": {
+      "a": {
+        "item": "items:pearl"
+      },
+      "b": {
+        "item": "gold_ingot"
+      },
+      "c": {
+        "item": "dragon_breath"
+      },
+      "d": {
+        "item": "emerald"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:dragon_breath"
+      }
+    ],
+    "result": {
+      "item": "minecraft:totem",
+      "count": 1
+    }
+  }
+}

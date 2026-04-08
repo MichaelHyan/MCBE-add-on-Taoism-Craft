@@ -1,0 +1,167 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.chatb":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"chatb_a":"query.life_time == 1"},
+						{"chatb_b":"query.life_time == 4"},
+						{"chatb_c":"query.life_time == 7"},
+						{"chatb_d":"query.life_time == 10"},
+						{"chatb_e":"query.life_time == 13"},
+						{"chatb_f":"query.life_time == 16"},
+						{"chatb_g":"query.life_time == 19"},
+						{"chatb_h":"query.life_time == 22"},
+						{"chatb_i":"query.life_time == 25"},
+						{"chatb_j":"query.life_time == 28"},
+						{"chatb_k":"query.life_time == 31"},
+						{"chatb_l":"query.life_time == 34"},
+						{"chatb_m":"query.life_time == 37"},
+						{"chatb_n":"query.life_time == 40"}
+					]
+				},
+				"chatb_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 握着这图腾，倒像握着千年来所有求道者的一场大梦。"
+					]
+				},
+				"chatb_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 你看，连一块木头都能被执念喂出灵气，这世道，怎么能不疯？"
+					]
+				},
+				"chatb_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 末地深处，有团扭曲的灵，那是无数执念聚成的魔。"
+					]
+				},
+				"chatb_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 这图腾里锁着太多不甘的残魂，和末地那团魔障，本就是同根而生的东西。"
+					]
+				},
+				"chatb_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 他们求了一辈子的长生，走火入魔，最后都成了这图腾里，一缕散不去的烟……"
+					]
+				},
+				"chatb_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 末地深处，有团扭曲的灵，那是无数执念聚成的魔。"
+					]
+				},
+				"chatb_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 轮回无情，死一次，便丢一世修行与记忆；我困在此处太久，执念不散，便入不得轮回。"
+					]
+				},
+				"chatb_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 但你与我们不同，你是天地凝出来的，不是生出来的。"
+					]
+				},
+				"chatb_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 你天生便该走这条路，找回过往，救这苍生。"
+					]
+				},
+				"chatb_j": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 多谢你。有了它，我能想起更多被轮回吞掉的往事，也能…… 陪你走到这条路的尽头。"
+					]
+				},
+				"chatb_k": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 这世界，早已走到坏灭的边缘，劫数将至。乾坤颠倒，需重立天地。"
+					]
+				},
+				"chatb_l": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 等你走到尽头，便会明白，何为重启乾坤。"
+					]
+				},
+				"chatb_m": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 等这一切了结，我会带着这图腾一起入轮回，也算给这些痴妄，一个交代。"
+					]
+				},
+				"chatb_n": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

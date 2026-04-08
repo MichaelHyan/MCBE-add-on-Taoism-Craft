@@ -26,6 +26,11 @@
         "item": "items:fish_gelatin"
       }
     },
+    "unlock": [
+      {
+        "item": "items:talisman"
+      }
+    ],
     "result": [{
       "item": "items:talisman_t",
       "count": 4

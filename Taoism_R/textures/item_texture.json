@@ -134,6 +134,9 @@
     "phase": {
       "textures": "textures/phase.png"
     },
+    "spe": {
+      "textures": "textures/spe.png"
+    },
     "tup": {
       "textures": "textures/tup.png"
     },
@@ -229,6 +232,9 @@
     },
     "txpa": {
       "textures":"textures/txpa.png"
+    },
+    "partner": {
+      "textures":"textures/partner.png"
     },
     "glutinous_rice": {
       "textures":"textures/glutinous_rice.png"
