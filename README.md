@@ -129,7 +129,7 @@
 - 特殊说明：元气无形无相，动则生阳，耗则需补，乃修行之根基
 - 获取方式：使用「内丹」运气调出
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/pearl.png)
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/spe.png)
 
 “元气者，性命之本，先天真炁所聚，可通万法。”
 
