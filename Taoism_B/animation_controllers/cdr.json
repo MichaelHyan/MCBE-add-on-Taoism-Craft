@@ -1,0 +1,146 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.cdr":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"cdr_a":"query.get_equipped_item_name=='spe' && query.is_using_item && query.scoreboard('cdr') == 0"},
+						{"cdr_b":"query.get_equipped_item_name=='spe' && query.is_using_item && query.scoreboard('cdr') == 1"},
+						{"cdr_c":"query.get_equipped_item_name=='spe' && query.is_using_item && query.scoreboard('cdr') == 2"},
+						{"cdr_d":"query.get_equipped_item_name=='spe' && query.is_using_item && query.scoreboard('cdr') == 3"},
+						{"cdr_e":"query.get_equipped_item_name=='spe' && query.is_using_item && query.scoreboard('cdr') == 4"},
+						{"cdr_f":"query.get_equipped_item_name=='spe' && query.is_using_item && query.scoreboard('cdr') == 5"},
+						{"cdr_g":"query.get_equipped_item_name=='spe' && query.is_using_item && query.scoreboard('cdr') == 6"},
+						{"cdr_h":"query.get_equipped_item_name=='spe' && query.is_using_item && query.scoreboard('cdr') == 7"},
+						{"cdr_i":"query.get_equipped_item_name=='spe' && query.is_using_item && query.scoreboard('cdr') == 8"},
+						{"cdr_j":"query.get_equipped_item_name=='spe' && query.is_using_item && query.scoreboard('cdr') >= 9"},
+						{"cdr_k":"query.scoreboard('cdr') >= 3 && query.scoreboard('charge') < -5 || query.scoreboard('bell') < -5"}
+					]
+				},
+				"cdr_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add cdr dummy",
+						"/scoreboard players add @s cdr 1",
+						"/title @s actionbar §7=§0== === ==="
+					]
+				},
+				"cdr_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s cdr 1",
+						"/title @s actionbar §7==§0= === ==="
+					]
+				},
+				"cdr_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s cdr 1",
+						"/title @s actionbar §7=== §0=== ==="
+					]
+				},
+				"cdr_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s cdr 1",
+						"/title @s actionbar §7=== =§0== ==="
+					]
+				},
+				"cdr_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s cdr 1",
+						"/title @s actionbar §7=== ==§0= ==="
+					]
+				},
+				"cdr_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s cdr 1",
+						"/title @s actionbar §7=== ===§0 ==="
+					]
+				},
+				"cdr_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s cdr 1",
+						"/title @s actionbar §7=== === =§0=="
+					]
+				},
+				"cdr_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s cdr 1",
+						"/title @s actionbar §7=== === ==§0="
+					]
+				},
+				"cdr_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s cdr 1",
+						"/title @s actionbar §7=== === ===§0"
+					]
+				},
+				"cdr_j": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar §7=x= =x= =x=§0"
+					]
+				},
+				"cdr_k": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s charge -5",
+						"/scoreboard players set @s bell -5",
+						"/scoreboard players add @s cdr -3"
+					]
+				}
+			}
+		}
+ 	}
+ }

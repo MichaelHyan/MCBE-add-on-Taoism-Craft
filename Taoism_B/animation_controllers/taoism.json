@@ -25,14 +25,15 @@
 						{"talisman_e_d":"query.get_equipped_item_name=='talisman_e' && variable.attack_time && !query.is_using_item && query.is_sneaking && query.player_level > 14"},
 						{"lightning_wood":"query.get_equipped_item_name=='lightning_wood' && query.player_level > 14"},							
 						{"spirit":"query.get_equipped_item_name=='spirit' && query.player_level < 25"},
-						{"spirit_a":"query.get_equipped_item_name=='spirit' && query.player_level >= 25 && query.is_using_item"},
+						{"spirit_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:bottle') == 0 && query.get_equipped_item_name=='spirit' && query.player_level >= 25 && query.is_using_item"},
+						{"spirit_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:bottle') != 0 && query.get_equipped_item_name=='spirit' && query.player_level >= 15 && query.is_using_item"},
 						{"mirror_a":"query.get_equipped_item_name=='mirror_a' && variable.attack_time && query.player_level > 14"},
 						{"mirror_b":"query.get_equipped_item_name=='mirror_b' && variable.attack_time && query.player_level > 14"},
 						{"mirror_c":"query.get_equipped_item_name=='mirror_c' && variable.attack_time && query.player_level > 14"},
 						{"mirror_d":"query.get_equipped_item_name=='mirror_d' && variable.attack_time && query.player_level > 14"},
 						{"bell_a":"query.get_equipped_item_name=='bell' && !variable.attack_time && query.player_level > 14"},
 						{"bell_b":"query.get_equipped_item_name=='bell' && variable.attack_time && query.player_level > 14 && query.scoreboard('bell') >= 0"},
-						{"bottle":"query.get_equipped_item_name=='bottle' && variable.attack_time && query.player_level > 14"},
+						{"bottle":"query.get_equipped_item_name=='bottle' && query.player_level > 14"},
 						{"gourd_a":"query.get_equipped_item_name=='gourd' && variable.attack_time && !query.is_sneaking && query.player_level > 14"},
 						{"gourd_b":"query.get_equipped_item_name=='gourd' && variable.attack_time && query.is_sneaking && query.player_level > 14"},
 						{"wul":"query.get_equipped_item_name=='wul' && variable.attack_time && query.player_level > 14"},
@@ -168,18 +169,19 @@
 							}
 					],
 					"on_entry": [
-						"/summon lightning_bolt ~ ~ ~5",
-						"/summon lightning_bolt ~2 ~ ~4",
-						"/summon lightning_bolt ~4 ~ ~2",
-						"/summon lightning_bolt ~5 ~ ~",
-						"/summon lightning_bolt ~4 ~ ~-2",
-						"/summon lightning_bolt ~2 ~ ~-4",
-						"/summon lightning_bolt ~ ~ ~-5",
-						"/summon lightning_bolt ~-2 ~ ~-4",
-						"/summon lightning_bolt ~-4 ~ ~-2",
-						"/summon lightning_bolt ~-5 ~ ~",
-						"/summon lightning_bolt ~-4 ~ ~2",
-						"/summon lightning_bolt ~-2 ~ ~4"					
+						"/tag @e[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,type=!entity:sword_ua,type=!entity:sword_sa,type=!entity:bell,type=!entity:partner,r=20] add sbt",
+						"/summon entity:sword_sa ~ ~ ~5",
+						"/summon entity:sword_sa ~2 ~ ~4",
+						"/summon entity:sword_sa ~4 ~ ~2",
+						"/summon entity:sword_sa ~5 ~ ~",
+						"/summon entity:sword_sa ~4 ~ ~-2",
+						"/summon entity:sword_sa ~2 ~ ~-4",
+						"/summon entity:sword_sa ~ ~ ~-5",
+						"/summon entity:sword_sa ~-2 ~ ~-4",
+						"/summon entity:sword_sa ~-4 ~ ~-2",
+						"/summon entity:sword_sa ~-5 ~ ~",
+						"/summon entity:sword_sa ~-4 ~ ~2",
+						"/summon entity:sword_sa ~-2 ~ ~4"				
 					]
 				},
 				"talisman_a": {
@@ -292,6 +294,16 @@
 					],
 					"on_entry": [
 						"/scoreboard players add @s spirit 1"
+					]
+				},
+				"spirit_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/give @s items:spe"
 					]
 				},
 				"mirror_a": {
@@ -425,7 +437,8 @@
 							}
 					],
 					"on_entry": [
-						"/effect @e[r=2] regeneration 1 5 true"
+						"/effect @e[r=3] regeneration 1 5 true",
+						"/effect @e[r=10] conduit_power 1 1 true"
 					]
 				},
 				"tup_a": {

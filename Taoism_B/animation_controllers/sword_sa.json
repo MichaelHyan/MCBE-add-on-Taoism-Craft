@@ -17,6 +17,7 @@
 					"on_entry": [
 						"/tp @n[tag=sbt]",
 						"/damage @e[tag=sbt,r=2] 20",
+						"/damage @e[type=entity:zombie_mimic,r=2] 10",
 						"/summon lightning_bolt",
 						"/damage @e[type=entity:sword_sa] 999"
 					]

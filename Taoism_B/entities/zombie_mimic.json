@@ -22,8 +22,8 @@
     "components": {
       "minecraft:nameable": {},
       "minecraft:health": {
-        "value": 150,
-        "max": 150
+        "value": 300,
+        "max": 400
       },
       "minecraft:loot": {
         "table": "loot_tables/entities/zombie_mimic.json"
