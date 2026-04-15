@@ -16,7 +16,6 @@
 						{"tbc_b":"query.get_equipped_item_name=='tbc' && query.is_using_item && query.is_sneaking && query.player_level > 9"},
 						{"tbd":"query.get_equipped_item_name=='tbd' && query.is_using_item && query.player_level > 9"},
 						{"tbe":"query.get_equipped_item_name=='tbe' && query.player_level > 9"},
-						{"tbf":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 9"},
 						{"tbg":"query.is_item_name_any('slot.hotbar', 0, 'items:tbg') && variable.attack_time && query.player_level > 9"},
 						{"tca":"query.get_equipped_item_name=='tca' && query.is_using_item && query.player_level > 14"},
 						{"tcb":"query.get_equipped_item_name=='tcb' && query.is_using_item && query.player_level > 14"},
@@ -156,25 +155,6 @@
 					],
 					"on_entry": [
 						"/fill ~ ~-1 ~ ~ ~-1 ~ dirt replace air"
-					]
-				},
-				"tbf": {
-					"transitions": [
-							{
-								"base_jeta": "(1.0)"
-							}
-					],
-					"on_entry": [
-						"/particle minecraft:totem_particle ~ ~1 ~",
-						"/summon wind_charge_projectile ^1 ^1 ^1",
-						"/summon wind_charge_projectile ^-1 ^1 ^1",
-						"/summon wind_charge_projectile ^1 ^1 ^-1",
-						"/summon wind_charge_projectile ^-1 ^1 ^-1",
-						"/summon wind_charge_projectile ^0 ^1 ^1",
-						"/summon wind_charge_projectile ^0 ^1 ^-1",
-						"/summon wind_charge_projectile ^1 ^1 ^0",
-						"/summon wind_charge_projectile ^-1 ^1 ^0",
-						"/effect @s resistance 10 255 true"
 					]
 				},
 				"tbg": {

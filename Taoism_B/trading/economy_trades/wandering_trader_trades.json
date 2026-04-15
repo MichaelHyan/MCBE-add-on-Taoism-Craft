@@ -10,12 +10,13 @@
               "wants": [
                 {
                   "item": "minecraft:emerald",
-                  "quantity": 2
+                  "quantity": 1
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:sea_pickle"
+                  "item": "minecraft:sea_pickle",
+                  "quantity": 4
                 }
               ]
             },
@@ -52,12 +53,13 @@
               "wants": [
                 {
                   "item": "minecraft:emerald",
-                  "quantity": 4
+                  "quantity": 1
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:slime_ball"
+                  "item": "minecraft:slime_ball",
+                  "quantity": 8
                 }
               ]
             },
@@ -66,13 +68,14 @@
               "wants": [
                 {
                   "item": "minecraft:emerald",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:glowstone",
                   "quantity": 2
                 }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:glowstone"
-                }
               ]
             },
             {
@@ -80,7 +83,7 @@
               "wants": [
                 {
                   "item": "minecraft:emerald",
-                  "quantity": 5
+                  "quantity": 1
                 }
               ],
               "gives": [
@@ -113,7 +116,8 @@
               ],
               "gives": [
                 {
-                  "item": "minecraft:reeds"
+                  "item": "minecraft:reeds",
+                  "quantity": 1
                 }
               ]
             },
@@ -136,12 +140,13 @@
               "wants": [
                 {
                   "item": "minecraft:emerald",
-                  "quantity": 3
+                  "quantity": 1
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:kelp"
+                  "item": "minecraft:kelp",
+                  "quantity": 3
                 }
               ]
             },

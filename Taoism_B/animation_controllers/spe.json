@@ -37,6 +37,8 @@
 					],
 					"on_entry": [
 						"/give @s items:spe",
+						"/kill @e[type=entity:spirit,r=5]",
+						"/tp @e[type=item,r=5] @s",
 						"/damage @s 3",
 						"/scoreboard players set @s charge 0"
 					]

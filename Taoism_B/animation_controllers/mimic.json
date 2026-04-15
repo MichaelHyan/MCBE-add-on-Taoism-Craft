@@ -1,0 +1,36 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.mimic":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"despawn":"query.moon_phase != 0 && query.moon_phase != 4"},
+						{"enchant":"query.moon_phase == 0 || query.moon_phase == 4"}
+					]
+				},
+				"despawn": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @s"
+					]
+				},
+				"enchant": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @e[family=undead,r=20] resistance 1 1",
+						"/effect @e[family=undead,r=20] strength 1 1"
+					]
+				}
+			}
+		}
+ 	}
+ }

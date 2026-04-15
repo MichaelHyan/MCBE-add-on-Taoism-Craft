@@ -1,0 +1,27 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.sword_sa":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"swsa":"1==1"}
+					]
+				},
+				"swsa": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @n[tag=sbt]",
+						"/damage @e[tag=sbt,r=2] 20",
+						"/summon lightning_bolt",
+						"/damage @e[type=entity:sword_sa] 999"
+					]
+				}
+			}
+		}
+ 	}
+ }

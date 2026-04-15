@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:qi_b"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "a"
+    ],
+    "key": {
+      "a": {
+        "item": "items:qi_sword_off"
+      }
+    },
+    "unlock": [
+      {
+        "item": "items:qi_sword"
+      }
+    ],
+    "result": {
+      "item": "items:qi_c",
+      "count": 1
+    }
+  }
+}

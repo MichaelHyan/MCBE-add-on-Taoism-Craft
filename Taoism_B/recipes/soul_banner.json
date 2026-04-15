@@ -17,10 +17,11 @@
         "item": "items:sword_sp"
       },
       "b": {
-        "item": "paper"
+        "item": "minecraft:banner",
+        "data": 0
       },
       "c": {
-        "item": "black_wool"
+        "item": "items:qi"
       },
       "d": {
         "item": "items:spirit"

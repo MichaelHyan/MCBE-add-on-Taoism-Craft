@@ -2,7 +2,7 @@
 	"format_version": "1.13.0",
 	"minecraft:structure_template_feature": {
 		"description": {
-			"identifier": "templet_feature_mcstructure"
+			"identifier": "taoism:templet_feature_mcstructure"
 		},
 		"structure_name": "mystructure:templet",
 		"adjustment_radius": 8,

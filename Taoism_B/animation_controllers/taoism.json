@@ -31,7 +31,7 @@
 						{"mirror_c":"query.get_equipped_item_name=='mirror_c' && variable.attack_time && query.player_level > 14"},
 						{"mirror_d":"query.get_equipped_item_name=='mirror_d' && variable.attack_time && query.player_level > 14"},
 						{"bell_a":"query.get_equipped_item_name=='bell' && !variable.attack_time && query.player_level > 14"},
-						{"bell_b":"query.get_equipped_item_name=='bell' && variable.attack_time && query.player_level > 14"},
+						{"bell_b":"query.get_equipped_item_name=='bell' && variable.attack_time && query.player_level > 14 && query.scoreboard('bell') >= 0"},
 						{"bottle":"query.get_equipped_item_name=='bottle' && variable.attack_time && query.player_level > 14"},
 						{"gourd_a":"query.get_equipped_item_name=='gourd' && variable.attack_time && !query.is_sneaking && query.player_level > 14"},
 						{"gourd_b":"query.get_equipped_item_name=='gourd' && variable.attack_time && query.is_sneaking && query.player_level > 14"},
@@ -291,7 +291,6 @@
 						}
 					],
 					"on_entry": [
-						"/effect @s wither 1 3 true",
 						"/scoreboard players add @s spirit 1"
 					]
 				},
@@ -367,7 +366,23 @@
 						}
 					],
 					"on_entry": [
-						"/effect @e[r=3,type=!player,type=!entity:partner] slowness 10 255 true"
+						"/scoreboard objectives add bell dummy",
+						"/playsound bell",
+						"/effect @e[r=15,type=!player,type=!entity:partner] slowness 15 255 true",
+						"/scoreboard players set @s bell -500",
+						"/summon entity:bell ~ ~ ~5",
+						"/summon entity:bell ~2 ~ ~4",
+						"/summon entity:bell ~4 ~ ~2",
+						"/summon entity:bell ~5 ~ ~",
+						"/summon entity:bell ~4 ~ ~-2",
+						"/summon entity:bell ~2 ~ ~-4",
+						"/summon entity:bell ~ ~ ~-5",
+						"/summon entity:bell ~-2 ~ ~-4",
+						"/summon entity:bell ~-4 ~ ~-2",
+						"/summon entity:bell ~-5 ~ ~",
+						"/summon entity:bell ~-4 ~ ~2",
+						"/summon entity:bell ~-2 ~ ~4",
+						"/particle minecraft:totem_particle ~ ~1 ~"
 					]
 				},
 				"gourd_a": {
@@ -377,7 +392,9 @@
 							}
 					],
 					"on_entry": [
-						"/tp @e[rm=1,r=10] @s"
+						"/tp @e[rm=1,type=!item,r=5] @s",
+						"/tp @e[type=item,r=30] @s",
+						"/tp @e[type=entity:spirit] @s"
 					]
 				},
 				"gourd_b": {

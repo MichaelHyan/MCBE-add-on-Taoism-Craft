@@ -9,7 +9,7 @@
     ],
     "pattern": [
       " a ",
-      "a a",
+      "aba",
       " b "
     ],
     "key": {
@@ -17,7 +17,7 @@
         "item": "copper_ingot"
       },
       "b": {
-        "item": "items:spe"
+        "item": "items:qi"
       }
     },
     "unlock": [

@@ -1,0 +1,437 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.sword_qi":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"sword_qi_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.get_equipped_item_name=='sword_qi' && !variable.attack_time && !query.is_jumping && !query.is_sneaking && query.scoreboard('charge') >= 10"},
+						{"sword_qi_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.get_equipped_item_name=='sword_qi' && variable.attack_time && query.is_jumping && !query.is_sneaking && query.scoreboard('charge') >= 10"},
+						{"sword_qi_c":"query.get_equipped_item_name=='sword_qi' && !variable.attack_time && !query.is_sneaking && query.scoreboard('charge') >= 0 && query.scoreboard('charge') < 2"},
+						{"sword_qi_d":"query.get_equipped_item_name=='sword_qi' && !variable.attack_time && !query.is_sneaking && query.scoreboard('charge') >= 2 && query.scoreboard('charge') < 4"},
+						{"sword_qi_e":"query.get_equipped_item_name=='sword_qi' && !variable.attack_time && !query.is_sneaking && query.scoreboard('charge') >= 4 && query.scoreboard('charge') < 6"},
+						{"sword_qi_f":"query.get_equipped_item_name=='sword_qi' && !variable.attack_time && !query.is_sneaking && query.scoreboard('charge') >= 6 && query.scoreboard('charge') < 8"},
+						{"sword_qi_g":"query.get_equipped_item_name=='sword_qi' && !variable.attack_time && !query.is_sneaking && query.scoreboard('charge') >= 8 && query.scoreboard('charge') < 10"},
+						{"sword_qi_h":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.get_equipped_item_name=='sword_qi' && variable.attack_time && !query.is_jumping && !query.is_sneaking && query.player_level >= 25"},
+						{"sword_qi_i":"query.scoreboard('charge') < 0"},
+						{"sword_qi_j":"query.scoreboard('charge') > 10"},
+						{"qi_trans_a":"query.get_equipped_item_name=='qi_sword_off'"},
+						{"qi_trans_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword')"},
+						{"qi_summon_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.is_item_equipped == 0 && variable.attack_time && !query.is_sneaking"},
+						{"qi_summon_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.get_equipped_item_name== 'sword_qi_t3' && !query.is_sneaking"},
+						{"qi_summon_c":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.get_equipped_item_name== 'sword_qi_t2' && !query.is_sneaking"},
+						{"qi_summon_d":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.get_equipped_item_name== 'sword_qi_t1' && !query.is_sneaking"},
+						{"qi_desummon_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.get_equipped_item_name== 'sword_qi' && variable.attack_time && query.is_sneaking"},
+						{"qi_desummon_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.get_equipped_item_name== 'sword_qi_t1' && query.is_sneaking"},
+						{"qi_desummon_c":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.get_equipped_item_name== 'sword_qi_t2' && query.is_sneaking"},
+						{"qi_desummon_d":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.get_equipped_item_name== 'sword_qi_t3' && query.is_sneaking"},
+						{"qi_lksummon_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') != 1 && query.get_equipped_item_name== 'sword_qi'"},
+						{"qi_lksummon_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') != 1 && query.get_equipped_item_name== 'sword_qi_t1'"},
+						{"qi_lksummon_c":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') != 1 && query.get_equipped_item_name== 'sword_qi_t2'"},
+						{"qi_lksummon_d":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') != 1 && query.get_equipped_item_name== 'sword_qi_t3'"},
+						{"qi_guard_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.get_equipped_item_name== 'sword_qi' && !variable.attack_time && query.is_sneaking && query.scoreboard('charge') >= 10"},
+						{"qi_guard_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.get_equipped_item_name== 'sword_qi' && !variable.attack_time && query.is_sneaking && query.scoreboard('charge') == 9"},
+						{"qi_guard_c":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.get_equipped_item_name== 'sword_qi' && !variable.attack_time && query.is_sneaking && query.scoreboard('charge') == 8"},
+						{"qi_guard_d":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.get_equipped_item_name== 'sword_qi' && !variable.attack_time && query.is_sneaking && query.scoreboard('charge') == 7"},
+						{"qi_guard_e":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.get_equipped_item_name== 'sword_qi' && !variable.attack_time && query.is_sneaking && query.scoreboard('charge') == 6"},
+						{"qi_guard_f":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.get_equipped_item_name== 'sword_qi' && !variable.attack_time && query.is_sneaking && query.scoreboard('charge') == 5"},
+						{"qi_guard_g":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.get_equipped_item_name== 'sword_qi' && !variable.attack_time && query.is_sneaking && query.scoreboard('charge') == 4"},
+						{"qi_guard_h":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.get_equipped_item_name== 'sword_qi' && !variable.attack_time && query.is_sneaking && query.scoreboard('charge') == 3"},
+						{"qi_guard_i":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.get_equipped_item_name== 'sword_qi' && !variable.attack_time && query.is_sneaking && query.scoreboard('charge') == 2"},
+						{"qi_guard_j":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.get_equipped_item_name== 'sword_qi' && !variable.attack_time && query.is_sneaking && query.scoreboard('charge') == 1"},
+						{"qi_guard_k":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.get_equipped_item_name== 'sword_qi' && !variable.attack_time && query.is_sneaking && query.scoreboard('charge') == 0"}
+					]
+				},
+				"qi_trans_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:qi_sword"
+					]
+				},
+				"qi_trans_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.offhand 0 items:qi_sword_off"
+					]
+				},
+				"qi_summon_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:sword_qi_t3"
+					]
+				},
+				"qi_summon_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:sword_qi_t2"
+					]
+				},
+				"qi_summon_c": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:sword_qi_t1"
+					]
+				},
+				"qi_summon_d": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:sword_qi"
+					]
+				},
+				"qi_desummon_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:sword_qi_t1"
+					]
+				},
+				"qi_desummon_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:sword_qi_t2"
+					]
+				},
+				"qi_desummon_c": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:sword_qi_t3"
+					]
+				},
+				"qi_desummon_d": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 air"
+					]
+				},
+				"qi_lksummon_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:sword_qi_t1"
+					]
+				},
+				"qi_lksummon_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:sword_qi_t2"
+					]
+				},
+				"qi_lksummon_c": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:sword_qi_t3"
+					]
+				},
+				"qi_lksummon_d": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 air"
+					]
+				},
+				"sword_qi_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s resistance 1 3 true",
+						"/effect @s regeneration 1 3 true"
+					]
+				},
+				"sword_qi_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/tp ^ ^1 ^7",
+						"/particle minecraft:totem_particle",
+						"/playsound mob.shulker.teleport",
+						"/effect @s slow_falling 5 1 true",
+						"/damage @e[type=!player,r=3] 5",
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"sword_qi_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add charge dummy",
+						"/scoreboard players add @s charge 2",
+						"/title @s actionbar §7||§0||||||||"
+					]
+				},
+				"sword_qi_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 2",
+						"/title @s actionbar §7||||§0||||||"
+					]
+				},
+				"sword_qi_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 2",
+						"/title @s actionbar §7||||||§0||||"
+					]
+				},
+				"sword_qi_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 2",
+						"/title @s actionbar §7||||||||§0||"
+					]
+				},
+				"sword_qi_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 2",
+						"/title @s actionbar §7||||||||||§0"
+					]
+				},
+				"sword_qi_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
+						"/enchant @s looting 3",
+						"/enchant @s sharpness 5"
+					]
+				},
+				"sword_qi_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7|==x==|§0"
+					]
+				},
+				"sword_qi_j": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s charge 10"
+					]
+				},
+				"qi_guard_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:cauldron_explosion_emitter ~ ~ ~",
+						"/scoreboard players add @s charge -1",
+						"/title @s actionbar §7||||||||||§0"
+					]
+				},
+				"qi_guard_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:cauldron_explosion_emitter ~ ~ ~",
+						"/scoreboard players add @s charge -1",
+						"/title @s actionbar §7|||||||||§0|"
+					]
+				},
+				"qi_guard_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:cauldron_explosion_emitter ~ ~ ~",
+						"/scoreboard players add @s charge -1",
+						"/title @s actionbar §7||||||||§0||"
+					]
+				},
+				"qi_guard_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:cauldron_explosion_emitter ~ ~ ~",
+						"/scoreboard players add @s charge -1",
+						"/title @s actionbar §7|||||||§0|||"
+					]
+				},
+				"qi_guard_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:cauldron_explosion_emitter ~ ~ ~",
+						"/scoreboard players add @s charge -1",
+						"/title @s actionbar §7||||||§0||||"
+					]
+				},
+				"qi_guard_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:cauldron_explosion_emitter ~ ~ ~",
+						"/scoreboard players add @s charge -1",
+						"/title @s actionbar §7|||||§0|||||"
+					]
+				},
+				"qi_guard_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:cauldron_explosion_emitter ~ ~ ~",
+						"/scoreboard players add @s charge -1",
+						"/title @s actionbar §7||||§0||||||"
+					]
+				},
+				"qi_guard_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:cauldron_explosion_emitter ~ ~ ~",
+						"/scoreboard players add @s charge -1",
+						"/title @s actionbar §7|||§0|||||||"
+					]
+				},
+				"qi_guard_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:cauldron_explosion_emitter ~ ~ ~",
+						"/scoreboard players add @s charge -1",
+						"/title @s actionbar §7||§0||||||||"
+					]
+				},
+				"qi_guard_j": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:cauldron_explosion_emitter ~ ~ ~",
+						"/scoreboard players add @s charge -1",
+						"/title @s actionbar §7|§0|||||||||"
+					]
+				},
+				"qi_guard_k": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @a[r=30] darkness 10 255 true",
+						"/effect @e[rm=1] slowness 10 255 true",
+						"/playsound hs",
+						"/title @s actionbar §7§0||||||||||",
+						"/scoreboard players set @s charge -150"
+					]
+				}
+			}
+		}
+ 	}
+ }

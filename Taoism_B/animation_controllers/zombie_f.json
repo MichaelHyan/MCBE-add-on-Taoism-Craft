@@ -1,0 +1,24 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.zombie_f":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"zf":"query.life_time > 60"}
+					]
+				},
+				"zf": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:cinnabar_fromblock"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "a"
+    ],
+    "key": {
+      "a": {
+        "item": "minecraft:cinnabar"
+      }
+    },
+    "unlock": [
+      {
+        "item": "items:cinnabar_crystal"
+      }
+    ],
+    "result": {
+      "item": "items:cinnabar_crystal",
+      "count": 9
+    }
+  }
+}

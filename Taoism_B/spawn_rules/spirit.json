@@ -12,13 +12,13 @@
         "minecraft:brightness_filter": {
           "min": 0,
           "max": 10,
-          "adjust_for_weather": true
+          "adjust_for_weather": false
         },
         "minecraft:weight": {
-          "default": 4
+          "default": 8
         },
         "minecraft:density_limit": {
-          "surface": 3,
+          "surface": 1,
           "underground": 0
         },
         "minecraft:biome_filter": {

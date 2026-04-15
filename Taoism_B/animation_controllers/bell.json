@@ -1,0 +1,39 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.bell":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"bella":"query.life_time <= 15"},
+						{"bellb":"query.life_time > 15"}
+					]
+				},
+				"bella": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @n[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,type=!entity:sword_ua,type=!entity:sword_sa,type=!entity:bell,type=!entity:partner,r=20]",
+						"/damage @e[r=2,type=!entity:bell] 5",
+						"/effect @e[type=player,r=2] regeneration 1 5 true",
+						"/effect @e[type=!player,type=!entity:bell,rm=1,r=2] wither 1 10 true",
+						"/particle minecraft:blue_flame_particle ~ ~1 ~"
+					]
+				},
+				"bellb": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @e[type=entity:bell]"
+					]
+				}
+			}
+		}
+ 	}
+ }

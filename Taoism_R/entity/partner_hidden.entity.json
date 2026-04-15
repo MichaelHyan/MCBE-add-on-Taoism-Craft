@@ -8,7 +8,7 @@
         "default": "textures/entity/steve"
       },
       "geometry": {
-        "default": "geometry.unknown"
+        "default": "geometry.default"
       },
 
       "scripts": {

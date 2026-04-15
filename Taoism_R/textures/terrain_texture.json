@@ -1,0 +1,38 @@
+{
+  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 0,
+  "texture_data": {
+    "cinnabar_ore_up": {
+      "textures": [
+        "textures/blocks/cinnabar_ore"
+      ]
+    },
+    "cinnabar_ore_down": {
+      "textures": [
+        "textures/blocks/cinnabar_ore"
+      ]
+    },
+    "cinnabar_ore_south": {
+      "textures": [
+        "textures/blocks/cinnabar_ore"
+      ]
+    },
+    "cinnabar_ore_north": {
+      "textures": [
+        "textures/blocks/cinnabar_ore"
+      ]
+    },
+    "cinnabar_ore_west": {
+      "textures": [
+        "textures/blocks/cinnabar_ore"
+      ]
+    },
+    "cinnabar_ore_east": {
+      "textures": [
+        "textures/blocks/cinnabar_ore"
+      ]
+    }
+  }
+}

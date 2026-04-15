@@ -3,7 +3,7 @@
   "minecraft:feature_rules": {
     "description": {
       "identifier": "cinnabar_ore_feature_rule",
-      "places_feature": "cinnabar_ore_feature"
+      "places_feature": "blocks:cinnabar_ore_feature"
     },
     "conditions": {
       "placement_pass": "underground_pass",

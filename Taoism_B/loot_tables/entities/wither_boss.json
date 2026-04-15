@@ -1,0 +1,30 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:netherStar",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "items:fbusket",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "items:lotus",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}
+                    

@@ -8,27 +8,25 @@
       "crafting_table"
     ],
     "pattern": [
-      "eae",
-      "cbd",
-      "fef"
+      "dad",
+      "cbc",
+      "ede"
     ],
     "key": {
       "a": {
-        "item": "paper"
+        "item": "minecraft:banner",
+        "data": 11
       },
       "b": {
         "item": "items:sword_t"
       },
       "c": {
-        "item": "white_wool"
+        "item": "items:qi"
       },
       "d": {
-        "item": "yellow_wool"
+        "item": "items:cinnabar_powder"
       },
       "e": {
-        "item": "items:cinnabar"
-      },
-      "f": {
         "item": "items:talisman"
       }
     },

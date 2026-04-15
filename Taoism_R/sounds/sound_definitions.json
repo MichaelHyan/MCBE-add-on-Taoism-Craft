@@ -10,12 +10,24 @@
     "sounds": [{
       "name": "sounds/taoism",
       "stream": true
-  }]
+    }]
+  },
+  "bell": {
+    "sounds": [{
+      "name": "sounds/bell",
+      "stream": true
+    }]
+  },
+  "hs": {
+    "sounds": [{
+      "name": "sounds/hs",
+      "stream": true
+    }]
   },
   "empty": {
     "sounds": [{
       "name": "sounds/empty",
       "stream": true
-  }]
+    }]
   }
 }

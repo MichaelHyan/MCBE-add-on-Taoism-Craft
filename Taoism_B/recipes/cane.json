@@ -1,0 +1,39 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:cane"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "bab",
+      "dad",
+      "cac"
+    ],
+    "key": {
+      "a": {
+        "item": "minecraft:stick"
+      },
+      "b": {
+        "item": "minecraft:iron_ingot"
+      },
+      "c": {
+        "item": "items:spe"
+      },
+      "d": {
+        "item": "items:lightning_wood"
+      }
+    },
+    "unlock": [
+      {
+        "item": "items:pearl"
+      }
+    ],
+    "result": {
+      "item": "items:cane",
+      "count": 1
+    }
+  }
+}

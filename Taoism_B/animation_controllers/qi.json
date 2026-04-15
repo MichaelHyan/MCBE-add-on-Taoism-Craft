@@ -1,0 +1,105 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.qi":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"qi_a":"query.get_equipped_item_name=='qi' && query.scoreboard('qi') < 3 && query.is_using_item && query.player_level >= 25"},
+						{"qi_b":"query.get_equipped_item_name=='qi' && query.scoreboard('qi') >= 3 && query.scoreboard('qi') < 6 && query.is_using_item && query.player_level >= 25"},
+						{"qi_c":"query.get_equipped_item_name=='qi' && query.scoreboard('qi') >= 6 && query.scoreboard('qi') < 9 && query.is_using_item && query.player_level >= 25"},
+						{"qi_d":"query.get_equipped_item_name=='qi' && query.scoreboard('qi') >= 9 && query.scoreboard('qi') < 12 && query.is_using_item && query.player_level >= 25"},
+						{"qi_e":"query.get_equipped_item_name=='qi' && query.scoreboard('qi') >= 12 && query.scoreboard('qi') < 15 && query.is_using_item && query.player_level >= 25"},
+						{"qi_f":"query.get_equipped_item_name=='qi' && query.scoreboard('qi') >= 15 && query.scoreboard('qi') < 18 && query.is_using_item && query.player_level >= 25"},
+						{"qi_g":"query.get_equipped_item_name=='qi' && query.scoreboard('qi') >= 18"}
+					]
+				},
+				"qi_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard objectives add qi dummy",
+						"/scoreboard players set @s charge 0",
+						"/title @s actionbar §7=§0=====",
+						"/scoreboard players add @s qi 1"
+					]
+				},
+				"qi_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s charge 0",
+						"/title @s actionbar §7==§0====",
+						"/scoreboard players add @s qi 1"
+					]
+				},
+				"qi_c": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s charge 0",
+						"/title @s actionbar §7===§0===",
+						"/scoreboard players add @s qi 1"
+					]
+				},
+				"qi_d": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s charge 0",
+						"/title @s actionbar §7====§0==",
+						"/scoreboard players add @s qi 1"
+					]
+				},
+				"qi_e": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s charge 0",
+						"/title @s actionbar §7=====§0=",
+						"/scoreboard players add @s qi 1"
+					]
+				},
+				"qi_f": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s charge 0",
+						"/title @s actionbar §7======§0",
+						"/scoreboard players add @s qi 1"
+					]
+				},
+				"qi_g": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/give @s[tag=tao] items:qi_sword",
+						"/title @s actionbar §7§0======",
+						"/scoreboard players add @s qi -18"
+					]
+				}
+			}
+		}
+ 	}
+ }

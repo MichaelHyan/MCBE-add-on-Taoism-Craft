@@ -1,0 +1,36 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.sword_qi_entity":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"qi_a":"query.life_time < 1"},
+						{"qi_b":"query.life_time >= 1"}
+					]
+				},
+				"qi_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @e[type=!player,r=3] @s",
+						"/particle minecraft:basic_balloon_particle ~ ~ ~"
+					]
+				},
+				"qi_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

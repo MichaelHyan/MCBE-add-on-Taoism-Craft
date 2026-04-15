@@ -2,6 +2,36 @@
   "resource_pack_name": "vanilla",
   "texture_name": "atlas.items",
   "texture_data": {
+    "qi_sword": {
+      "textures": "textures/qi_sword.png"
+    },
+    "sword_qi": {
+      "textures": "textures/sword_qi.png"
+    },
+    "sword_qi_t1": {
+      "textures": "textures/sword_qi_t1.png"
+    },
+    "sword_qi_t2": {
+      "textures": "textures/sword_qi_t2.png"
+    },
+    "sword_qi_t3": {
+      "textures": "textures/sword_qi_t3.png"
+    },
+    "qi": {
+      "textures": "textures/qi.png"
+    },
+    "qi_c": {
+      "textures": "textures/qi_c.png"
+    },
+    "cane": {
+      "textures": "textures/cane.png"
+    },
+    "lotus": {
+      "textures": "textures/lotus.png"
+    },
+    "fbusket": {
+      "textures": "textures/fbusket.png"
+    },
 	  "disk_taoism": {
       "textures": "textures/disk_taoism.png"
     },

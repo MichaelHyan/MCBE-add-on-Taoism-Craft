@@ -255,7 +255,7 @@
 							}
 					],
 					"on_entry": [
-						"/say 其实我们原本是想做朱砂矿的，但是当时没学会自定义方块。。。然后一年后麻将给辰砂块加进来了（还有这种好事？）",
+						"/say 早在1.0版本就存在朱砂矿的设定，但是一直没做成功，现在还保留着原始代码。。。现在来看居然只是键名写错了？！",
 						"/replaceitem entity @s slot.weapon.mainhand 0 air",
 						"/give @p items:cinnabar_crystal"
 					]

@@ -1,0 +1,147 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.qi_c":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"qi_c_b":"query.get_equipped_item_name=='qi_c' && query.is_using_item && query.scoreboard('charge') == 10"},
+						{"qi_c_c":"query.get_equipped_item_name=='qi_c' && !query.is_sneaking && query.scoreboard('charge') == 0"},
+						{"qi_c_d":"query.get_equipped_item_name=='qi_c' && !query.is_sneaking && query.scoreboard('charge') == 1"},
+						{"qi_c_e":"query.get_equipped_item_name=='qi_c' && !query.is_sneaking && query.scoreboard('charge') == 2"},
+						{"qi_c_f":"query.get_equipped_item_name=='qi_c' && !query.is_sneaking && query.scoreboard('charge') == 3"},
+						{"qi_c_g":"query.get_equipped_item_name=='qi_c' && !query.is_sneaking && query.scoreboard('charge') == 4"},
+						{"qi_c_h":"query.get_equipped_item_name=='qi_c' && !query.is_sneaking && query.scoreboard('charge') == 5"},
+						{"qi_c_i":"query.get_equipped_item_name=='qi_c' && !query.is_sneaking && query.scoreboard('charge') == 6"},
+						{"qi_c_j":"query.get_equipped_item_name=='qi_c' && !query.is_sneaking && query.scoreboard('charge') == 7"},
+						{"qi_c_k":"query.get_equipped_item_name=='qi_c' && !query.is_sneaking && query.scoreboard('charge') == 8"},
+						{"qi_c_l":"query.get_equipped_item_name=='qi_c' && !query.is_sneaking && query.scoreboard('charge') == 9"}
+					]
+				},
+				"qi_c_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s resistance 1 255 true",
+						"/summon entity:qi",
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"qi_c_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add charge dummy",
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7|§0|||||||||"
+					]
+				},
+				"qi_c_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||§0||||||||"
+					]
+				},
+				"qi_c_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7|||§0|||||||"
+					]
+				},
+				"qi_c_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||§0||||||"
+					]
+				},
+				"qi_c_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7|||||§0|||||"
+					]
+				},
+				"qi_c_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||||§0||||"
+					]
+				},
+				"qi_c_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7|||||||§0|||"
+					]
+				},
+				"qi_c_j": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||||||§0||"
+					]
+				},
+				"qi_c_k": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7|||||||||§0|"
+					]
+				},
+				"qi_c_l": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||||||||"
+					]
+				}
+			}
+		}
+ 	}
+ }

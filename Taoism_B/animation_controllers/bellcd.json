@@ -1,0 +1,24 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.bellcd":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"bellcd_a":"query.scoreboard('bell') < 0"}						
+					]
+				},
+				"bellcd_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s bell 1"
+					]
+				}
+			}
+		}
+ 	}
+ }

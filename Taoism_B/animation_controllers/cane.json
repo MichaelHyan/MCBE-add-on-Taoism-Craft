@@ -1,0 +1,65 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.cane":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"cane_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:cane') && !query.is_sneaking && query.player_level >= 25"},
+						{"cane_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:cane') && query.is_sneaking && query.player_level >= 25"},
+						{"cane_c":"query.get_equipped_item_name=='cane' && !variable.attack_time && query.player_level >= 25"},
+						{"cane_d":"query.get_equipped_item_name=='cane' && variable.attack_time && query.player_level >= 25"}
+					]
+				},
+				"cane_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s resistance 1 3 true",
+						"/effect @s speed 1 1 true",
+						"/effect @s jump_boost 1 1 true"
+					]
+				},
+				"cane_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s resistance 1 255 true",
+						"/particle minecraft:cauldron_explosion_emitter ~ ~ ~",
+						"/effect @s speed 1 1 true"
+					]
+				},
+				"cane_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s resistance 1 1 true",
+						"/effect @s speed 1 3 true",
+						"/effect @s jump_boost 1 1 true"
+					]
+				},
+				"cane_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s resistance 1 1 true",
+						"/effect @s speed 1 5 true",
+						"/effect @s jump_boost 1 1 true"
+					]
+				}
+			}
+		}
+ 	}
+ }

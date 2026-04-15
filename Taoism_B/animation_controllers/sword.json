@@ -16,7 +16,7 @@
 						{"sword_s_a":"query.get_equipped_item_name=='sword_s' && !variable.attack_time && !query.is_jumping && !query.is_sneaking && query.player_level > 49"},
 						{"sword_s_b":"query.get_equipped_item_name=='sword_s' && variable.attack_time && !query.is_jumping && !query.is_sneaking && query.player_level > 49"},
 						{"sword_s_c":"query.get_equipped_item_name=='sword_s' && !variable.attack_time && query.is_jumping && !query.is_sneaking && query.player_level > 49"},
-						{"sword_s_d":"query.get_equipped_item_name=='sword_s' && query.is_sneaking && query.player_level > 49"},
+						{"sword_s_d":"query.get_equipped_item_name=='sword_s' && query.is_sneaking && query.player_level > 49 && query.scoreboard('charge') >= 0"},
 						{"sword_e_a":"query.get_equipped_item_name=='sword_e' && !variable.attack_time && query.player_level > 9"},
 						{"sword_e_b":"query.get_equipped_item_name=='sword_e' && variable.attack_time && query.player_level > 9"},
 						{"sword_w_a":"query.get_equipped_item_name=='sword_w' && !variable.attack_time && query.player_level > 9"},
@@ -28,13 +28,6 @@
 						{"sword_u_e":"query.get_equipped_item_name=='sword_u' && variable.attack_time && query.is_jumping && query.player_level > 49"},
 						{"sword_sp_a":"query.get_equipped_item_name=='sword_sp' && !variable.attack_time && query.player_level > 19"},
 						{"sword_sp_b":"query.get_equipped_item_name=='sword_sp' && variable.attack_time && query.player_level > 19"},
-						{"soul_banner_a":"query.get_equipped_item_name=='soul_banner' && !variable.attack_time && query.player_level > 24"},
-						{"soul_banner_b":"query.get_equipped_item_name=='soul_banner' && variable.attack_time && query.is_sneaking && query.player_level > 24 && query.scoreboard('spirit') >= 4"},
-						{"soul_banner_c":"query.get_equipped_item_name=='soul_banner' && variable.attack_time && query.is_sneaking && query.player_level > 24 && query.scoreboard('spirit') < 4"},
-						{"soul_banner_d":"query.get_equipped_item_name=='soul_banner' && variable.attack_time && !query.is_sneaking && query.player_level > 24"},
-						{"hy_banner_a":"query.get_equipped_item_name=='hy_banner' && !variable.attack_time && !query.is_sneaking && query.player_level > 14"},
-						{"hy_banner_b":"query.get_equipped_item_name=='hy_banner' && variable.attack_time && !query.is_sneaking && query.player_level > 14"},
-						{"hy_banner_c":"query.get_equipped_item_name=='hy_banner' && !variable.attack_time && query.is_sneaking && query.player_level > 14"},
 						{"ring_a":"query.get_equipped_item_name=='ring' && !variable.attack_time && query.player_level > 14"},
 						{"ring_b":"query.get_equipped_item_name=='ring' && variable.attack_time && query.player_level > 14"},
 						{"whisk":"query.get_equipped_item_name=='whisk' && variable.attack_time && query.player_level > 14"}
@@ -143,6 +136,7 @@
 					"on_entry": [
 						"/effect @s resistance 1 255 true",
 						"/effect @s regeneration 3 3 true",
+						"/effect @s strength 3 255 true",
 						"/effect @s speed 1 5 true",
 						"/effect @s slow_falling 1 1 true"
 					]
@@ -177,18 +171,21 @@
 					],
 					"on_entry": [
 						"/effect @s fire_resistance 60 1 true",
-						"/summon lightning_bolt ~ ~ ~5",
-						"/summon lightning_bolt ~2 ~ ~4",
-						"/summon lightning_bolt ~4 ~ ~2",
-						"/summon lightning_bolt ~5 ~ ~",
-						"/summon lightning_bolt ~4 ~ ~-2",
-						"/summon lightning_bolt ~2 ~ ~-4",
-						"/summon lightning_bolt ~ ~ ~-5",
-						"/summon lightning_bolt ~-2 ~ ~-4",
-						"/summon lightning_bolt ~-4 ~ ~-2",
-						"/summon lightning_bolt ~-5 ~ ~",
-						"/summon lightning_bolt ~-4 ~ ~2",
-						"/summon lightning_bolt ~-2 ~ ~4"
+						"/scoreboard objectives add charge dummy",
+						"/scoreboard players set @s charge -50",
+						"/tag @e[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,type=!entity:sword_ua,type=!entity:sword_sa,type=!entity:bell,type=!entity:partner,r=20] add sbt",
+						"/summon entity:sword_sa ~ ~ ~5",
+						"/summon entity:sword_sa ~2 ~ ~4",
+						"/summon entity:sword_sa ~4 ~ ~2",
+						"/summon entity:sword_sa ~5 ~ ~",
+						"/summon entity:sword_sa ~4 ~ ~-2",
+						"/summon entity:sword_sa ~2 ~ ~-4",
+						"/summon entity:sword_sa ~ ~ ~-5",
+						"/summon entity:sword_sa ~-2 ~ ~-4",
+						"/summon entity:sword_sa ~-4 ~ ~-2",
+						"/summon entity:sword_sa ~-5 ~ ~",
+						"/summon entity:sword_sa ~-4 ~ ~2",
+						"/summon entity:sword_sa ~-2 ~ ~4"
 					]
 				},
 				"sword_e_a": {
@@ -257,7 +254,7 @@
 							}
 					],
 					"on_entry": [
-						"/tag @n[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,type=!entity:sword_ua,r=20] add sbt",
+						"/tag @n[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,type=!entity:sword_ua,type=!entity:sword_sa,type=!entity:bell,type=!entity:partner,r=20] add sbt",
 						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
 						"/playsound sw"
 					]
@@ -270,7 +267,7 @@
 					],
 					"on_entry": [
 						"/kill @e[type=entity:sword_ua]",
-						"/tag @e[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,type=!entity:sword_ua,r=20] add sbt",
+						"/tag @e[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,type=!entity:sword_ua,type=!entity:sword_sa,type=!entity:bell,type=!entity:partner,r=20] add sbt",
 						"/summon entity:sword_ua"
 					]
 				},
@@ -318,88 +315,6 @@
 					"on_entry": [
 						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
 						"/effect @s wither 2 255 true"
-					]
-				},
-				"soul_banner_a": {
-					"transitions": [
-							{
-								"base_jeta": "(1.0)"
-							}
-					],
-					"on_entry": [
-						"/effect @s resistance 1 3 true",
-						"/effect @s hunger 1 5 true",
-						"/effect @s speed 1 1 true",
-						"/scoreboard objectives add spirit dummy"
-					]
-				},
-				"soul_banner_b": {
-					"transitions": [
-						{
-							"base_jeta": "(1.0)"
-						}
-					],
-					"on_entry": [
-						"/effect @e[r=15,type=!player] slowness 10 255 true",
-						"/summon iron_golem",
-						"/effect @e[type=iron_golem,r=5] strength infinite 10 true",
-						"/effect @e[type=iron_golem,r=5] speed infinite 10 true",
-						"/effect @e[type=!player,r=15] wither infinite 255 true",
-						"/summon lightning_bolt",
-						"/scoreboard players add @s spirit -4"
-					]
-				},
-				"soul_banner_c": {
-					"transitions": [
-						{
-							"base_jeta": "(1.0)"
-						}
-					],
-					"on_entry": [
-						"/title @s actionbar 魂魄不足"
-					]
-				},
-				"soul_banner_d": {
-					"transitions": [
-						{
-							"base_jeta": "(1.0)"
-						}
-					],
-					"on_entry": [
-						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
-						"/enchant @s mending"
-					]
-				},
-				"hy_banner_a": {
-					"transitions": [
-							{
-								"base_jeta": "(1.0)"
-							}
-					],
-					"on_entry": [
-						"/effect @s resistance 1 3 true",
-						"/effect @s slow_falling 1 1 true"
-					]
-				},
-				"hy_banner_b": {
-					"transitions": [
-						{
-							"base_jeta": "(1.0)"
-						}
-					],
-					"on_entry": [
-						"/enchant @s smite 5",
-						"/enchant @s mending"
-					]
-				},
-				"hy_banner_c": {
-					"transitions": [
-						{
-							"base_jeta": "(1.0)"
-						}
-					],
-					"on_entry": [
-						"/effect @s invisibility 10 1 true"
 					]
 				},
 				"ring_a": {

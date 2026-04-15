@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "items:qi_c",
+      "category": "Nature"
+    },
+
+    "components": {
+      "minecraft:icon": "qi_c",
+      "minecraft:render_offsets": "qi_c"
+    }
+  }
+}

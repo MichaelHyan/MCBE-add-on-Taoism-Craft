@@ -2,8 +2,8 @@
 	"format_version": "1.13.0",
 	"minecraft:feature_rules": {
 		"description": {
-			"places_feature": "templet_feature_mcstructure",
-			"identifier": "templet_feature_rule"
+			"places_feature": "taoism:templet_feature_mcstructure",
+			"identifier": "taoism:templet_feature_rule"
 		},
 		"conditions": {
 			"placement_pass": "surface_pass",
@@ -30,17 +30,7 @@
 								{
 									"test": "has_biome_tag",
 									"operator": "==",
-									"value": "forest"
-								},
-								{
-									"test": "has_biome_tag",
-									"operator": "==",
-									"value": "flower_forest"
-								},
-								{
-									"test": "has_biome_tag",
-									"operator": "==",
-									"value": "plains"
+									"value": "overworld"
 								}
 							]
 						}
@@ -50,7 +40,7 @@
 		},
 		"distribution": {
 			"iterations": 1,
-			"scatter_chance": 1,
+			"scatter_chance": 0.5,
 			"x": {
 				"distribution": "uniform",
 				"extent": [

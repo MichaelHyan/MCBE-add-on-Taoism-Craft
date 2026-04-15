@@ -1,0 +1,169 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.tbf":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"tbf_m":"query.get_equipped_item_name=='tbf' && !query.is_using_item && query.player_level > 9"},
+						{"tbf_a":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 9 && query.scoreboard('wind') == 0"},
+						{"tbf_b":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 9 && query.scoreboard('wind') == 1"},
+						{"tbf_c":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 9 && query.scoreboard('wind') == 2"},
+						{"tbf_d":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 9 && query.scoreboard('wind') == 3"},
+						{"tbf_e":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 9 && query.scoreboard('wind') == 4"},
+						{"tbf_f":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 9 && query.scoreboard('wind') == 5"},
+						{"tbf_g":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 9 && query.scoreboard('wind') == 6"},
+						{"tbf_h":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 9 && query.scoreboard('wind') == 7"},
+						{"tbf_i":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 9 && query.scoreboard('wind') == 8"},
+						{"tbf_j":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 9 && query.scoreboard('wind') == 9"},
+						{"tbf_k":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 9 && query.scoreboard('wind') == 10"},
+						{"tbf_l":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 9 && query.scoreboard('wind') == 11"}						
+					]
+				},
+				"tbf_m": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s slow_falling 1 1 true"
+					]
+				},
+				"tbf_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon wind_charge_projectile ^1 ^ ^",
+						"/scoreboard objectives add wind dummy",
+						"/scoreboard players set @s wind 1"
+					]
+				},
+				"tbf_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @e[type=wind_charge_projectile] ^ ^1.5^2.5",
+						"/scoreboard players set @s wind 2"
+					]
+				},
+				"tbf_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon wind_charge_projectile ^-1 ^ ^",
+						"/scoreboard players set @s wind 3"
+					]
+				},
+				"tbf_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @e[type=wind_charge_projectile] ^ ^1.5^2.5",
+						"/scoreboard players set @s wind 4"
+					]
+				},
+				"tbf_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon wind_charge_projectile ^1 ^2 ^",
+						"/scoreboard players set @s wind 5"
+					]
+				},
+				"tbf_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @e[type=wind_charge_projectile] ^ ^1.5^2.5",
+						"/scoreboard players set @s wind 6"
+					]
+				},
+				"tbf_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon wind_charge_projectile ^-1 ^2 ^",
+						"/scoreboard players set @s wind 7"
+					]
+				},
+				"tbf_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @e[type=wind_charge_projectile] ^ ^1.5^2.5",
+						"/scoreboard players set @s wind 8"
+					]
+				},
+				"tbf_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon wind_charge_projectile ^1 ^1 ^",
+						"/scoreboard players set @s wind 9"
+					]
+				},
+				"tbf_j": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @e[type=wind_charge_projectile] ^ ^1.5^2.5",
+						"/scoreboard players set @s wind 10"
+					]
+				},
+				"tbf_k": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon wind_charge_projectile ^-1 ^1 ^",
+						"/scoreboard players set @s wind 11"
+					]
+				},
+				"tbf_l": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @e[type=wind_charge_projectile] ^ ^1.5^2.5",
+						"/scoreboard players set @s wind 0"
+					]
+				}
+			}
+		}
+ 	}
+ }

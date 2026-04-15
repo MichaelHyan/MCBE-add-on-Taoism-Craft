@@ -6,7 +6,8 @@
 				"base_jeta":{
 					"transitions":[
 						{"dead_a":"query.is_alive == 0 && query.scoreboard('spawnc') == 0"},
-						{"dead_b":"query.is_alive != 0 && query.scoreboard('spawnc') == 1"}
+						{"dead_b":"query.is_alive != 0 && query.scoreboard('spawnc') == 1"},
+						{"dead_c":"query.is_alive != 0 && query.scoreboard('spawnc') == 0"}
 					]
 				},
 				"dead_a": {
@@ -30,7 +31,20 @@
 						}
 					],
 					"on_entry": [
-						"/scoreboard players set @s spawnc 0"
+						"/scoreboard players set @s spawnc 0",
+						"/effect @s[tag=tao] regeneration 5 3 true"
+					]
+				},
+				"dead_c": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s[tag=tao] strength infinite 1 true",
+						"/effect @s[tag=tao] night_vision infinite 1 true",
+						"/effect @s[tag=tao] health_boost infinite 4 true"
 					]
 				}
 			}

@@ -1,0 +1,50 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.lotus":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"lotus_a":"query.get_equipped_item_name=='lotus' || query.is_item_name_any('slot.weapon.offhand', 0, 'items:lotus') && query.scoreboard('charge') == 0 && query.player_level >= 25"},
+						{"lotus_b":"query.get_equipped_item_name=='lotus' || query.is_item_name_any('slot.weapon.offhand', 0, 'items:lotus') && query.scoreboard('charge') > 0 && query.player_level >= 25"}
+					]
+				},
+				"lotus_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard objectives add charge dummy",
+						"/damage @e[family=undead,r=25] 1",
+						"/effect @e[family=undead,r=25] slowness 1 255 true",
+						"/effect @e[type=player,r=25] slowness 0 255 true",
+						"/effect @e[type=player,r=25] instant_health 1 1 true",
+						"/effect @e[type=player,r=25] nausea 0 255 true",
+						"/effect @e[type=player,r=25] poision 0 255 true",
+						"/effect @e[type=player,r=25] fatal_poision 0 255 true",
+						"/effect @e[type=player,r=25] mining_fatigue 0 255 true",
+						"/effect @e[type=player,r=25] weakness 0 255 true",
+						"/effect @e[type=player,r=25] wither 0 255 true",
+						"/effect @e[type=player,r=25] hunger 0 255 true",
+						"/function lotus",
+						"/scoreboard players set @s charge 3"
+					]
+				},
+				"lotus_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/damage @e[family=undead,r=25] 1",
+						"/effect @e[type=player,r=25] instant_health 1 1 true",
+						"/scoreboard players add @s charge -1"
+					]
+				}
+			}
+		}
+ 	}
+ }

@@ -2,7 +2,7 @@
   "format_version": "1.8.0",
   "minecraft:spawn_rules": {
     "description": {
-      "identifier": "entity:mimic_spawner",
+      "identifier": "entity:zombie_mimic",
       "population_control": "monster"
     },
     "conditions": [
@@ -18,7 +18,7 @@
           "default": 4
         },
         "minecraft:density_limit": {
-          "surface": 3,
+          "surface": 1,
           "underground": 0
         },
         "minecraft:biome_filter": {
