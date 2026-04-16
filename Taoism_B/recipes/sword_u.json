@@ -9,21 +9,18 @@
     ],
     "pattern": [
       "aea",
-      "bfc",
+      "cfc",
       "dgd"
     ],
     "key": {
       "a": {
         "item": "items:ring"
       },
-      "b": {
-        "item": "items:mirror_c"
-      },
       "c": {
-        "item": "items:mirror_d"
+        "item": "items:bell"
       },
       "d": {
-        "item": "items:lightning_wood"
+        "item": "items:qi"
       },
       "e": {
         "item": "items:tca"
@@ -37,7 +34,7 @@
     },
     "unlock": [
       {
-        "item": "items:pearl"
+        "item": "items:soul_banner"
       }
     ],
     "result": {

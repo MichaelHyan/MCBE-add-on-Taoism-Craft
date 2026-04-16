@@ -148,6 +148,7 @@
 					"on_entry": [
 						"/effect @s speed infinite 1 true",
 						"/effect @s jump_boost infinite 1 true",
+						"/tag @s add ft",
 						"/replaceitem entity @s slot.weapon.mainhand 0 air"
 					]
 				},

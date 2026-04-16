@@ -8,9 +8,9 @@
       "crafting_table"
     ],
     "pattern": [
-      "aaa",
+      "cac",
       "aba",
-      "aaa"
+      "cac"
     ],
     "key": {
       "a": {
@@ -18,11 +18,14 @@
       },
       "b": {
         "item": "items:sword_e"
+      },
+      "c": {
+        "item": "items:qi"
       }
     },
     "unlock": [
       {
-        "item": "items:pearl"
+        "item": "items:sword_e"
       }
     ],
     "result": {

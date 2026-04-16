@@ -9,7 +9,7 @@
     ],
     "pattern": [
       " a ",
-      "c d",
+      "ced",
       " b "
     ],
     "key": {
@@ -24,6 +24,9 @@
       },
       "d": {
         "item": "items:fish_gelatin"
+      },
+      "e": {
+        "item": "items:spe"
       }
     },
     "unlock": [

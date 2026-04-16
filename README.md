@@ -225,7 +225,7 @@
 
 #### 残符【敕令】
 - 核心功能：合成材料（用于制作补金符、补木符等敕令系列符箓），自带法力
-- 合成方式：1个元气 + 1个避雷针 + 1张纸
+- 合成方式：1个元气 + 1个桃木剑 + 1张纸
 
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/tb.png)
 
@@ -313,7 +313,7 @@
   1. 主手持有时：移速提升、抗性提升
   2. 使用时(右键/交互键)：会借用太上老君的法力，在周身降下天雷，天雷会自动寻找目标劈下
 - 副作用：一次性物品，使用后消耗
-- 合成方式：1个画符毛笔 + 1个残符【雷令】 + 1张纸 + 1个鱼胶
+- 合成方式：1个画符毛笔 + 1个残符【雷令】 + 1张纸 + 1个元气 + 1个鱼胶
 
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/talisman_t.png)
 
@@ -522,7 +522,7 @@
 #### 符箓卷轴
 - 核心功能：使用后获得游戏内所有正面buff（除漂浮外），buff持续1分钟
 - 副作用：一次性物品，使用后消耗
-- 合成方式：2个普通的符箓 + 1个钻石 + 4个金锭
+- 合成方式：2个普通的符箓 + 1个元气 + 4个金锭
 
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/txpb.png)
 
@@ -534,7 +534,7 @@
   1. 首次攻击自动附魔亡灵杀手III
   2. 普攻一般生物：伤害略高于普通木剑
   3. 主手持有时：获得回血buff
-- 合成方式：1个木剑 + 1个朱砂粉
+- 合成方式：1个木剑 + 1个朱砂粉+1个炁 + 6个元气
 
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/sword_t.png)
 
@@ -545,7 +545,7 @@
   1. 首次攻击自动附魔亡灵杀手III
   2. 普攻一般生物：伤害略高于「桃木剑」
   3. 主手持有时：抗性提升
-- 合成方式：1个金剑 + 1个朱砂粉
+- 合成方式：1个金剑 + 1个朱砂粉+1个炁 + 6个元气
 
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/sword_b.png)
 
@@ -556,7 +556,7 @@
   1. 首次攻击自动附魔亡灵杀手IV
   2. 普攻一般生物：伤害略高于「宝剑」
   3. 主手持有时：回血buff + 移速提升
-- 合成方式：1个桃木剑 + 1个普通的符箓
+- 合成方式：1个桃木剑 + 4张普通符箓 + 3个炁 + 1个元气
 
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/sword_q.png)
 
@@ -567,7 +567,7 @@
   1. 首次攻击自动附魔亡灵杀手V
   2. 普攻一般生物：伤害略高于「七星剑」
   3. 主手持有时：抗性提升 + 移速提升
-- 合成方式：1个宝剑 + 1个普通的符箓
+- 合成方式：1个宝剑 + 4张普通符箓 + 3个炁 + 1个元气
 
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/sword_l.png)
 
@@ -599,7 +599,7 @@
   1. 普攻伤害：略高于普通木剑
   2. 主手持有时：移速提升 + 跳跃提升
 - 副作用：「合理的邪修」（无实际负面效果）
-- 合成方式：1个噬魂术（经书） + 1个木剑
+- 合成方式：1个木剑 + 1个噬魂术（经书） + 7个元气
 
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/sword_e.png)
 
@@ -607,8 +607,8 @@
 
 #### 奇怪的木剑【异】
 - 核心功能：主手持有时，移速提升 + 跳跃提升
-- 副作用：玩家尝试攻击时，触发雷劈致死（致命效果）
-- 合成方式：1个噬魂术（经书） + 1个桃木剑
+- 副作用：玩家尝试攻击时，触发雷劈致残
+- 合成方式：1个噬魂术（经书） + 1个桃木剑 + 7个元气
 
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/sword_w.png)
 
@@ -619,7 +619,7 @@
   1. 综合能力：强于「令剑」
   2. 主手持有时：抗性提升 + 移速提升 + 回血buff，伴有持续饥饿效果
   3. 攻击会消耗自身精力，获得凋零效果
-- 合成方式：8个魂魄 + 1个奇怪的木剑【邪】
+- 合成方式： 4个魂魄 + 4个炁 + 1个奇怪的木剑【邪】
 
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/sword_sp.png)
 
@@ -675,9 +675,8 @@
 
 #### 纯阳飞剑
 - 唯一获取方式：通过在副手装备清阳之炁可凝聚纯阳之炁为剑
-  1. 基础攻击力：8点
-  2. 主动技能：同时按空格键 + 鼠标左键，向前瞬移一段距离，并获得缓降效果
-  3. 同时按shift + 鼠标右键收起佩剑
+  1. 主动技能：同时按空格键 + 鼠标左键，向前瞬移一段距离，并获得缓降效果
+  2. 同时按shift + 鼠标右键收起佩剑
 
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/sword_qi.png)
 
@@ -692,7 +691,7 @@
   1. 召唤时，自动标记范围20格内生物，剑灵将自动攻击被标记的生物，攻击可追加标记
   2. 不存在目标时剑灵将为玩家提供生命恢复效果
 - 副作用：攻击时由于需要驱动剑灵耗费精力，获得凋零效果
-- 合成方式：2个金刚琢 + 1个万魂幡 + 1个凸八卦镜 + 1个凹八卦镜 + 1个金雷镇煞符 + 2个雷击木 + 1个金块
+- 合成方式：2个金刚琢 + 1个万魂幡 + 2个法钟 + 1个金雷镇煞符 + 2个炁 + 1个金块
 
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/sword_u.png)
 
@@ -704,7 +703,7 @@
   2. 持剑者获得无敌效果，可御剑飞行，攻击时秒杀一切目标
   3. 下蹲时释放八道闪电，可自动追踪，有短暂冷却
 - 副作用：容易把自己帅死（无实际负面效果）
-- 合成方式：2个金刚琢 + 1个混元幡 + 1个令剑 + 1个七星剑 + 1个三清镇元三台符 + 2个雷击木 + 1个下界合金块
+- 合成方式：2个金刚琢 + 1个混元幡 + 1个令剑 + 1个七星剑 + 1个三清镇元三台符 + 2个炁 + 1个清阳之炁
 
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/sword_s.png)
 
@@ -777,7 +776,7 @@
   2. 或破坏面前方块并吸收
   3. 可主动吸引炁
 - 副作用：吸收后的物品回归自然循环
-- 合成方式：5个铜锭 + 2个普通的符箓 + 1个雷击木（木板）
+- 合成方式：5个铜锭 + 1个普通的符箓 + 1个元气
 
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/gourd.png)
 
@@ -833,7 +832,7 @@
 #### 浑仪
 - 核心功能：使用可观测星空，明确月相，以作修行参考
 - 使用方式：左键单击使用
-- 合成方式：3个橡木原木+2个木棍+1个铜锭+3个橡木台阶
+- 合成方式：3个木原木+2个木棍+1个铜锭+3个木台阶
 
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/hy.png)
 
@@ -865,7 +864,7 @@
 #### 浊阴之炁
 - 核心功能：使用后原地进行“暴炁”，对四周产生爆炸伤害，本体增加抗性
 - 使用方式：右键单击使用
-- 合成方式：通过吸收18个“炁”在内丹中自动炼化而成，可与浊阴之炁互相转化
+- 合成方式：通过吸收23个“炁”在内丹中自动炼化而成，可与浊阴之炁互相转化
 
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/qi_c.png)
 
@@ -874,7 +873,7 @@
 #### 清阳之炁
 - 核心功能：置于副手后，主手空手时可召唤「纯阳飞剑」
 - 使用方式：置于副手手持，手持状态不再显示，放回主手恢复
-- 合成方式：通过吸收18个“炁”在内丹中自动炼化而成，可与清阳之炁互相转化
+- 合成方式：通过吸收23个“炁”在内丹中自动炼化而成，可与清阳之炁互相转化
 
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/sword_qi.png)
 
@@ -885,7 +884,7 @@
   - 召唤一个队友，使用朱砂晶体驯服（？）
   - 可以为他装备原版武器
   - 可能会告诉你一些信息（？）
-- 合成方式：3个朱砂晶体，1个绿宝石，1个不死图腾
+- 合成方式：3个朱砂晶体 + 1个绿宝石 + 1个不死图腾 + 4个炁
 
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/partner.png)
 

@@ -2,37 +2,37 @@
   "format_version": "1.12",
   "minecraft:recipe_shaped": {
     "description": {
-      "identifier": "items:sword_l"
+      "identifier": "items:phasec"
     },
     "tags": [
       "crafting_table"
     ],
     "pattern": [
-      "dad",
-      "cbc",
-      "dcd"
+      "ccc",
+      "aba",
+      "ddd"
     ],
     "key": {
       "a": {
-        "item": "items:spe"
+        "item": "stick"
       },
       "b": {
-        "item": "items:sword_b"
+        "item": "copper_ingot"
       },
       "c": {
-        "item": "items:qi"
+        "item": "dark_oak_log"
       },
       "d": {
-        "item": "items:talisman"
+        "item": "dark_oak_slab"
       }
     },
     "unlock": [
       {
-        "item": "items:sword_b"
+        "item": "items:cinnabar_crystal"
       }
     ],
     "result": {
-      "item": "items:sword_l",
+      "item": "items:phase",
       "count": 1
     }
   }

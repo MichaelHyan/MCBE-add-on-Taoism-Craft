@@ -8,9 +8,9 @@
       "crafting_table"
     ],
     "pattern": [
-      " c ",
+      "dcd",
       "aba",
-      " a "
+      "dad"
     ],
     "key": {
       "a": {
@@ -21,6 +21,9 @@
       },
       "c": {
         "item": "minecraft:emerald"
+      },
+      "d": {
+        "item": "items:qi"
       }
     },
     "unlock": [

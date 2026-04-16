@@ -8,8 +8,8 @@
       "crafting_table"
     ],
     "pattern": [
-      "bcb",
-      "a a",
+      " b ",
+      "aca",
       "aaa"
     ],
     "key": {
@@ -20,7 +20,7 @@
         "item": "items:talisman"
       },
       "c": {
-        "item": "items:lightning_wood"
+        "item": "items:spe"
       }
     },
     "unlock": [

@@ -11,7 +11,9 @@
 						{"qi_d":"query.get_equipped_item_name=='qi' && query.scoreboard('qi') >= 9 && query.scoreboard('qi') < 12 && query.is_using_item && query.player_level >= 25"},
 						{"qi_e":"query.get_equipped_item_name=='qi' && query.scoreboard('qi') >= 12 && query.scoreboard('qi') < 15 && query.is_using_item && query.player_level >= 25"},
 						{"qi_f":"query.get_equipped_item_name=='qi' && query.scoreboard('qi') >= 15 && query.scoreboard('qi') < 18 && query.is_using_item && query.player_level >= 25"},
-						{"qi_g":"query.get_equipped_item_name=='qi' && query.scoreboard('qi') >= 18"}
+						{"qi_g":"query.get_equipped_item_name=='qi' && query.scoreboard('qi') >= 18 && query.scoreboard('qi') < 21 && query.is_using_item && query.player_level >= 25"},
+						{"qi_h":"query.get_equipped_item_name=='qi' && query.scoreboard('qi') >= 21 && query.scoreboard('qi') < 23 && query.is_using_item && query.player_level >= 25"},
+						{"qi_i":"query.get_equipped_item_name=='qi' && query.scoreboard('qi') >= 23"}
 					]
 				},
 				"qi_a": {
@@ -23,7 +25,7 @@
 					"on_entry": [
 						"/scoreboard objectives add qi dummy",
 						"/scoreboard players set @s charge 0",
-						"/title @s actionbar §7=§0=====",
+						"/title @s actionbar §7=§0=======",
 						"/scoreboard players add @s qi 1"
 					]
 				},
@@ -35,7 +37,7 @@
 					],
 					"on_entry": [
 						"/scoreboard players set @s charge 0",
-						"/title @s actionbar §7==§0====",
+						"/title @s actionbar §7==§0======",
 						"/scoreboard players add @s qi 1"
 					]
 				},
@@ -47,7 +49,7 @@
 					],
 					"on_entry": [
 						"/scoreboard players set @s charge 0",
-						"/title @s actionbar §7===§0===",
+						"/title @s actionbar §7===§0=====",
 						"/scoreboard players add @s qi 1"
 					]
 				},
@@ -59,7 +61,7 @@
 					],
 					"on_entry": [
 						"/scoreboard players set @s charge 0",
-						"/title @s actionbar §7====§0==",
+						"/title @s actionbar §7====§0====",
 						"/scoreboard players add @s qi 1"
 					]
 				},
@@ -71,7 +73,7 @@
 					],
 					"on_entry": [
 						"/scoreboard players set @s charge 0",
-						"/title @s actionbar §7=====§0=",
+						"/title @s actionbar §7=====§0===",
 						"/scoreboard players add @s qi 1"
 					]
 				},
@@ -83,7 +85,7 @@
 					],
 					"on_entry": [
 						"/scoreboard players set @s charge 0",
-						"/title @s actionbar §7======§0",
+						"/title @s actionbar §7======§0==",
 						"/scoreboard players add @s qi 1"
 					]
 				},
@@ -94,9 +96,33 @@
 						}
 					],
 					"on_entry": [
+						"/scoreboard players set @s charge 0",
+						"/title @s actionbar §7=======§0=",
+						"/scoreboard players add @s qi 1"
+					]
+				},
+				"qi_h": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s charge 0",
+						"/title @s actionbar §7========§0",
+						"/scoreboard players add @s qi 1"
+					]
+				},
+				"qi_i": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
 						"/give @s[tag=tao] items:qi_sword",
-						"/title @s actionbar §7§0======",
-						"/scoreboard players add @s qi -18"
+						"/title @s actionbar §7§0========",
+						"/scoreboard players add @s qi -23"
 					]
 				}
 			}

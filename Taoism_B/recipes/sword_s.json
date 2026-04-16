@@ -23,7 +23,7 @@
         "item": "items:sword_q"
       },
       "d": {
-        "item": "items:lightning_wood"
+        "item": "items:qi"
       },
       "e": {
         "item": "items:tag"
@@ -32,12 +32,12 @@
         "item": "items:hy_banner"
       },
       "g": {
-        "item": "netherite_block"
+        "item": "items:qi_sword"
       }
     },
     "unlock": [
       {
-        "item": "items:pearl"
+        "item": "items:hy_banner"
       }
     ],
     "result": {

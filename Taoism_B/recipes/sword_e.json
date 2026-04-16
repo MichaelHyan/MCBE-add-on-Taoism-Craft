@@ -8,8 +8,9 @@
       "crafting_table"
     ],
     "pattern": [
-      " a ",
-      " b "
+      "cac",
+      "cbc",
+      "ccc"
     ],
     "key": {
       "a": {
@@ -17,6 +18,9 @@
       },
       "b": {
         "item": "wooden_sword"
+      },
+      "c": {
+        "item": "items:spe"
       }
     },
     "unlock": [

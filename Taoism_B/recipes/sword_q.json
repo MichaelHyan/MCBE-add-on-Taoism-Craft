@@ -8,20 +8,27 @@
       "crafting_table"
     ],
     "pattern": [
-      " a ",
-      " b "
+      "dad",
+      "cbc",
+      "dcd"
     ],
     "key": {
       "a": {
-        "item": "items:talisman"
+        "item": "items:spe"
       },
       "b": {
         "item": "items:sword_t"
+      },
+      "c": {
+        "item": "items:qi"
+      },
+      "d": {
+        "item": "items:talisman"
       }
     },
     "unlock": [
       {
-        "item": "items:pearl"
+        "item": "items:sword_t"
       }
     ],
     "result": {

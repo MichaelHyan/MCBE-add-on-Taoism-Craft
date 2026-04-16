@@ -8,8 +8,9 @@
       "crafting_table"
     ],
     "pattern": [
-      " a ",
-      " b "
+      "dad",
+      "dbd",
+      "dcd"
     ],
     "key": {
       "a": {
@@ -17,6 +18,12 @@
       },
       "b": {
         "item": "wooden_sword"
+      },
+      "c": {
+        "item": "items:qi"
+      },
+      "d": {
+        "item": "items:spe"
       }
     },
     "unlock": [
