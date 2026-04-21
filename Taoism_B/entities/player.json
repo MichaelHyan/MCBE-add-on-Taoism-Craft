@@ -10,6 +10,7 @@
 				"animate": [
 					"taoism",
 					"sword",
+          "sword_ech",
           "sword_qi",
           "banner",
 					"talisman",
@@ -44,6 +45,7 @@
       "animations": {
 				"taoism": "controller.animation.taoism",
 				"sword": "controller.animation.sword",
+        "sword_ech": "controller.animation.sword_ech",
         "sword_qi": "controller.animation.sword_qi",
         "banner": "controller.animation.banner",
 				"talisman": "controller.animation.talisman",

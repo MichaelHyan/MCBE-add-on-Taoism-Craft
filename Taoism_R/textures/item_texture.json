@@ -2,6 +2,12 @@
   "resource_pack_name": "vanilla",
   "texture_name": "atlas.items",
   "texture_data": {
+    "echa": {
+      "textures": "textures/echa.png"
+    },
+    "echb": {
+      "textures": "textures/echb.png"
+    },
     "qi_sword": {
       "textures": "textures/qi_sword.png"
     },
@@ -268,6 +274,9 @@
     },
     "glutinous_rice": {
       "textures":"textures/glutinous_rice.png"
+    },
+    "ball": {
+      "textures":"textures/ball.png"
     },
     "dumpling_a": {
       "textures":"textures/ny/dumpling_a.png"

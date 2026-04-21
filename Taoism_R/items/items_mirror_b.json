@@ -8,7 +8,6 @@
 
     "components": {
       "minecraft:icon": "mirror_b",
-      "minecraft:hover_text_color": "light_purple",
       "minecraft:render_offsets": "mirror_b"
     }
   }

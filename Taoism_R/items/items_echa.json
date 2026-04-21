@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "items:echa",
+      "category": "Nature"
+    },
+
+    "components": {
+      "minecraft:icon": "echa",
+      "minecraft:render_offsets": "echa"
+    }
+  }
+}

@@ -8,7 +8,6 @@
 
     "components": {
       "minecraft:icon": "cinnabar_crystal",
-      "minecraft:hover_text_color": "light_purple",
       "minecraft:render_offsets": "cinnabar_crystal"
     }
   }

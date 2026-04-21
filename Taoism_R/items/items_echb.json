@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "items:echb",
+      "category": "Nature"
+    },
+
+    "components": {
+      "minecraft:icon": "echb",
+      "minecraft:render_offsets": "echb"
+    }
+  }
+}

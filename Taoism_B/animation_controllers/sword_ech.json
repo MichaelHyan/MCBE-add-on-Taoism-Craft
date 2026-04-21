@@ -1,0 +1,406 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.sword_ech":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"base_ech_a":"query.is_item_name_any('slot.weapon.mainhand', 0, 'items:echa') && query.moon_phase == 4 && query.is_using_item"},
+						{"base_ech_b":"query.is_item_name_any('slot.weapon.mainhand', 0, 'items:echa') && query.moon_phase != 4"},
+						{"sword_t_ech_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase == 2 || query.moon_phase == 6 && query.get_equipped_item_name=='sword_t' && variable.attack_time && query.player_level > 9"},
+						{"sword_b_ech_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase == 2 || query.moon_phase == 6 && query.get_equipped_item_name=='sword_b' && variable.attack_time && query.player_level > 9"},
+						{"sword_q_ech_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase == 2 || query.moon_phase == 6 && query.get_equipped_item_name=='sword_q' && variable.attack_time && query.player_level > 19"},
+						{"sword_l_ech_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase == 2 || query.moon_phase == 6 && query.get_equipped_item_name=='sword_l' && variable.attack_time && query.player_level > 19"},
+						{"sword_e_ech_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase == 2 || query.moon_phase == 6 && query.get_equipped_item_name=='sword_e' && variable.attack_time && query.player_level > 9"},
+						{"sword_sp_ech_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase == 2 || query.moon_phase == 6 && query.get_equipped_item_name=='sword_sp' && variable.attack_time && query.player_level > 19"},
+						{"wond_ech_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase == 2 || query.moon_phase == 6 && query.get_equipped_item_name=='wond' && variable.attack_time && query.player_level > 9"},
+						{"sword_w_ech_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase == 2 || query.moon_phase == 6 && query.get_equipped_item_name=='sword_w' && variable.attack_time && query.player_level > 9"},
+						{"ring_ech_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase == 2 || query.moon_phase == 6 && query.get_equipped_item_name=='ring' && variable.attack_time && query.player_level > 14"},
+						{"soul_banner_ech_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase == 2 || query.moon_phase == 6 && query.get_equipped_item_name=='soul_banner' && variable.attack_time && query.player_level > 24"},
+						{"hy_banner_ech_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase == 2 || query.moon_phase == 6 && query.get_equipped_item_name=='hy_banner' && variable.attack_time && query.player_level > 24"},
+						{"sword_t_ech_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase != 2 && query.moon_phase != 6 && query.get_equipped_item_name=='sword_t' && !variable.attack_time && query.player_level > 9"},
+						{"sword_b_ech_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase != 2 && query.moon_phase != 6 && query.get_equipped_item_name=='sword_b' && !variable.attack_time && query.player_level > 9"},
+						{"sword_q_ech_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase != 2 && query.moon_phase != 6 && query.get_equipped_item_name=='sword_q' && !variable.attack_time && query.player_level > 19"},
+						{"sword_l_ech_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase != 2 && query.moon_phase != 6 && query.get_equipped_item_name=='sword_l' && !variable.attack_time && query.player_level > 19"},
+						{"sword_e_ech_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase != 2 && query.moon_phase != 6 && query.get_equipped_item_name=='sword_e' && !variable.attack_time && query.player_level > 9"},
+						{"sword_sp_ech_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase != 2 && query.moon_phase != 6 && query.get_equipped_item_name=='sword_sp' && !variable.attack_time && query.player_level > 19"},
+						{"wond_ech_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase != 2 && query.moon_phase != 6 && query.get_equipped_item_name=='wond' && !variable.attack_time && query.player_level > 9"},
+						{"sword_w_ech_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase != 2 && query.moon_phase != 6 && query.get_equipped_item_name=='sword_w' && !variable.attack_time && query.player_level > 9"},
+						{"ring_ech_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase != 2 && query.moon_phase != 6 && query.get_equipped_item_name=='ring' && !variable.attack_time && query.player_level > 14"},
+						{"soul_banner_ech_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase != 2 && query.moon_phase != 6 && query.get_equipped_item_name=='soul_banner' && !variable.attack_time && query.player_level > 24"},
+						{"hy_banner_ech_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase != 2 && query.moon_phase != 6 && query.get_equipped_item_name=='hy_banner' && !variable.attack_time && query.player_level > 24"},
+						{"sword_t_ech_c":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase != 2 && query.moon_phase != 6 && query.get_equipped_item_name=='sword_t' && variable.attack_time && query.player_level > 9"},
+						{"sword_b_ech_c":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase != 2 && query.moon_phase != 6 && query.get_equipped_item_name=='sword_b' && variable.attack_time && query.player_level > 9"},
+						{"sword_q_ech_c":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase != 2 && query.moon_phase != 6 && query.get_equipped_item_name=='sword_q' && variable.attack_time && query.player_level > 19"},
+						{"sword_l_ech_c":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase != 2 && query.moon_phase != 6 && query.get_equipped_item_name=='sword_l' && variable.attack_time && query.player_level > 19"},
+						{"sword_e_ech_c":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase != 2 && query.moon_phase != 6 && query.get_equipped_item_name=='sword_e' && variable.attack_time && query.player_level > 9"},
+						{"sword_sp_ech_c":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase != 2 && query.moon_phase != 6 && query.get_equipped_item_name=='sword_sp' && variable.attack_time && query.player_level > 19"},
+						{"wond_ech_c":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase != 2 && query.moon_phase != 6 && query.get_equipped_item_name=='wond' && variable.attack_time && query.player_level > 9"},
+						{"sword_w_ech_c":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase != 2 && query.moon_phase != 6 && query.get_equipped_item_name=='sword_w' && variable.attack_time && query.player_level > 9"},
+						{"ring_ech_c":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase != 2 && query.moon_phase != 6 && query.get_equipped_item_name=='ring' && variable.attack_time && query.player_level > 14"},
+						{"soul_banner_ech_c":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase != 2 && query.moon_phase != 6 && query.get_equipped_item_name=='soul_banner' && variable.attack_time && query.player_level > 24"},
+						{"hy_banner_ech_c":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:echb') && query.moon_phase != 2 && query.moon_phase != 6 && query.get_equipped_item_name=='hy_banner' && variable.attack_time && query.player_level > 24"}
+					]
+				},
+				"base_ech_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/give @s items:echb"
+					]
+				},
+				"base_ech_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar 地利人和天不和"
+					]
+				},
+				"sword_t_ech_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/enchant @s smite 3",
+						"/enchant @s mending",
+						"/replaceitem entity @s slot.weapon.offhand 0 air"
+					]
+				},
+				"sword_b_ech_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/enchant @s smite 3",
+						"/enchant @s mending",
+						"/replaceitem entity @s slot.weapon.offhand 0 air"
+					]
+				},
+				"sword_q_ech_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/enchant @s smite 4",
+						"/enchant @s mending",
+						"/replaceitem entity @s slot.weapon.offhand 0 air"
+					]
+				},
+				"sword_l_ech_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/enchant @s smite 5",
+						"/enchant @s mending",
+						"/replaceitem entity @s slot.weapon.offhand 0 air"
+					]
+				},
+				"sword_e_ech_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/enchant @s mending",
+						"/replaceitem entity @s slot.weapon.offhand 0 air"
+					]
+				},
+				"sword_sp_ech_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/enchant @s mending",
+						"/replaceitem entity @s slot.weapon.offhand 0 air"
+					]
+				},
+				"wond_ech_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/enchant @s smite 5",
+						"/enchant @s mending",
+						"/enchant @s knockback 1",
+						"/replaceitem entity @s slot.weapon.offhand 0 air"
+					]
+				},
+				"ring_ech_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/enchant @s looting 3",
+						"/enchant @s mending",
+						"/replaceitem entity @s slot.weapon.offhand 0 air"
+					]
+				},
+				"soul_banner_ech_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/enchant @s mending",
+						"/replaceitem entity @s slot.weapon.offhand 0 air"
+					]
+				},
+				"hy_banner_ech_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/enchant @s smite 3",
+						"/enchant @s mending",
+						"/replaceitem entity @s slot.weapon.offhand 0 air"
+					]
+				},
+				"sword_t_ech_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar 地利人和天不和"
+					]
+				},
+				"sword_b_ech_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/title @s actionbar 地利人和天不和"
+					]
+				},
+				"sword_q_ech_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar 地利人和天不和"
+					]
+				},
+				"sword_l_ech_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/title @s actionbar 地利人和天不和"
+					]
+				},
+				"sword_e_ech_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar 地利人和天不和"
+					]
+				},
+				"sword_sp_ech_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar 地利人和天不和"
+					]
+				},
+				"wond_ech_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar 地利人和天不和"
+					]
+				},
+				"ring_ech_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar 地利人和天不和"
+					]
+				},
+				"soul_banner_ech_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/title @s actionbar 地利人和天不和"
+					]
+				},
+				"hy_banner_ech_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/title @s actionbar 地利人和天不和"
+					]
+				},
+				"sword_t_ech_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/damage @s 1",
+						"/replaceitem entity @s slot.weapon.offhand 0 air"
+					]
+				},
+				"sword_b_ech_c": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/damage @s 1",
+						"/replaceitem entity @s slot.weapon.offhand 0 air"
+					]
+				},
+				"sword_q_ech_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/damage @s 1",
+						"/replaceitem entity @s slot.weapon.offhand 0 air"
+					]
+				},
+				"sword_l_ech_c": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/damage @s 1",
+						"/replaceitem entity @s slot.weapon.offhand 0 air"
+					]
+				},
+				"sword_e_ech_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/damage @s 1",
+						"/replaceitem entity @s slot.weapon.offhand 0 air"
+					]
+				},
+				"sword_sp_ech_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/damage @s 1",
+						"/replaceitem entity @s slot.weapon.offhand 0 air"
+					]
+				},
+				"wond_ech_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/damage @s 1",
+						"/replaceitem entity @s slot.weapon.offhand 0 air"
+					]
+				},
+				"ring_ech_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/damage @s 1",
+						"/replaceitem entity @s slot.weapon.offhand 0 air"
+					]
+				},
+				"soul_banner_ech_c": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/damage @s 1",
+						"/replaceitem entity @s slot.weapon.offhand 0 air"
+					]
+				},
+				"hy_banner_ech_c": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/damage @s 1",
+						"/replaceitem entity @s slot.weapon.offhand 0 air"
+					]
+				}
+			}
+		}
+ 	}
+ }

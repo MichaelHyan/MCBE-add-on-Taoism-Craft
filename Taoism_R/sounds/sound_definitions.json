@@ -7,6 +7,8 @@
     ]
   },
   "disk_taoism": {
+    "category": "neutral",
+    "max_distance": 999999.0,
     "sounds": [{
       "name": "sounds/taoism",
       "stream": true

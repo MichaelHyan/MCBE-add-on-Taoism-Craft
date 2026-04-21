@@ -8,7 +8,6 @@
 
     "components": {
       "minecraft:icon": "fish_gelatin",
-      "minecraft:hover_text_color": "light_purple",
       "minecraft:render_offsets": "fish_gelatin"
     }
   }

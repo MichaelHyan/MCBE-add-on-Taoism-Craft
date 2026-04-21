@@ -1,0 +1,36 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.ball":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"ball_a":"query.life_time < 300"},
+						{"ball_b":"query.life_time >= 300"}
+					]
+				},
+				"ball_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:balloon_gas_particle ~ ~0.2 ~",
+						"/effect @s resistance 1 255 true"
+					]
+				},
+				"ball_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

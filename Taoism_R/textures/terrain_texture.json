@@ -33,6 +33,36 @@
       "textures": [
         "textures/blocks/cinnabar_ore"
       ]
+    },
+    "ball_up": {
+      "textures": [
+        "textures/blocks/bup"
+      ]
+    },
+    "ball_down": {
+      "textures": [
+        "textures/blocks/bup"
+      ]
+    },
+    "ball_south": {
+      "textures": [
+        "textures/blocks/bfront"
+      ]
+    },
+    "ball_north": {
+      "textures": [
+        "textures/blocks/bfront"
+      ]
+    },
+    "ball_west": {
+      "textures": [
+        "textures/blocks/bside"
+      ]
+    },
+    "ball_east": {
+      "textures": [
+        "textures/blocks/bside"
+      ]
     }
   }
 }

@@ -10,5 +10,16 @@
       "east": "cinnabar_ore_east"
     },
     "sound": "dripstone_block"
+  },
+  "blocks:ball": {
+    "textures": {
+      "up": "ball_up",
+      "down": "ball_down",
+      "south": "ball_south",
+      "north": "ball_north",
+      "west": "ball_west",
+      "east": "ball_east"
+    },
+    "sound": "dripstone_block"
   }
 }

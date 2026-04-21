@@ -65,7 +65,7 @@
 					],
 					"on_entry": [
 						"/summon entity:zombie_friendly",
-						"/damage @s 2",
+						"/damage @s 6",
 						"/particle minecraft:totem_particle ~ ~1 ~"
 					]
 				},
@@ -76,8 +76,7 @@
 						}
 					],
 					"on_entry": [
-						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
-						"/enchant @s mending"
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5"
 					]
 				},
 				"hy_banner_a": {
@@ -121,9 +120,7 @@
 						}
 					],
 					"on_entry": [
-						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
-						"/enchant @s smite 3",
-						"/enchant @s mending"
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5"
 					]
 				}
 			}

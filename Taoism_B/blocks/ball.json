@@ -1,0 +1,22 @@
+{
+  "format_version": "1.17.3",
+  "minecraft:block": {
+    "description": {
+      "identifier": "blocks:ball",
+      "is_experimental": false,
+      "register_to_creative_menu ": true
+    },
+    "components": {
+      "minecraft:map_color": "#FF8000",
+      "minecraft:loot": "loot_tables/blocks/ball_block.json",
+      "minecraft:block_light_emission": 0,
+      "minecraft:destroy_time": 10,
+      "minecraft:explosion_resistance": 1200,
+      "minecraft:friction": 0.6,
+      "minecraft:flammable": {
+        "flame_odds": 0,
+        "burn_odds": 0
+      }
+    }
+  }
+}

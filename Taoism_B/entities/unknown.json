@@ -42,8 +42,8 @@
       "minecraft:can_climb": {
       },
       "minecraft:health": {
-        "value": 200,
-        "max": 200
+        "value": 1000,
+        "max": 1000
       },
       "minecraft:boss": {
         "should_darken_sky": true,
@@ -65,7 +65,7 @@
         "breathes_water": true
       },
       "minecraft:attack": {
-        "damage": 10
+        "damage": 1
       },
       "minecraft:loot": {
         "table": "loot_tables/entities/unknown.json"

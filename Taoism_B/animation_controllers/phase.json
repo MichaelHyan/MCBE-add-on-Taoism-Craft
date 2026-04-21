@@ -42,7 +42,7 @@
 							}
 					],
 					"on_entry": [
-						"/title @s actionbar 今日月相 上弦月"
+						"/title @s actionbar 今日月相 下弦月"
 					]
 				},
 				"phase_d": {

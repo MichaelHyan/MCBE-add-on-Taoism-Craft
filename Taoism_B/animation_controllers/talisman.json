@@ -9,14 +9,14 @@
 						{"tac":"query.get_equipped_item_name=='tac' && query.is_using_item && query.player_level > 19"},
 						{"tad":"query.get_equipped_item_name=='tad' && query.is_using_item && query.player_level > 19"},
 						{"tae":"query.get_equipped_item_name=='tae' && query.is_using_item && query.player_level > 19"},
-						{"tag":"query.is_item_name_any('slot.hotbar', 0, 'items:tag') && variable.attack_time && query.player_level > 19"},
+						{"tag":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:tag') && variable.attack_time && query.player_level > 19"},
 						{"tba":"query.get_equipped_item_name=='tba' && query.is_using_item && query.player_level > 9"},
 						{"tbb":"query.get_equipped_item_name=='tbb' && query.is_using_item && query.player_level > 9"},
 						{"tbc_a":"query.get_equipped_item_name=='tbc' && query.is_using_item && !query.is_sneaking && query.player_level > 9"},
 						{"tbc_b":"query.get_equipped_item_name=='tbc' && query.is_using_item && query.is_sneaking && query.player_level > 9"},
 						{"tbd":"query.get_equipped_item_name=='tbd' && query.is_using_item && query.player_level > 9"},
 						{"tbe":"query.get_equipped_item_name=='tbe' && query.player_level > 9"},
-						{"tbg":"query.is_item_name_any('slot.hotbar', 0, 'items:tbg') && variable.attack_time && query.player_level > 9"},
+						{"tbg":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:tbg') && variable.attack_time && query.player_level > 9"},
 						{"tca":"query.get_equipped_item_name=='tca' && query.is_using_item && query.player_level > 14"},
 						{"tcb":"query.get_equipped_item_name=='tcb' && query.is_using_item && query.player_level > 14"},
 						{"tcc":"query.get_equipped_item_name=='tcc' && query.is_using_item && query.player_level > 14"},
@@ -24,7 +24,7 @@
 						{"tcd_b":"query.get_equipped_item_name=='tcd' && query.is_using_item && query.is_sneaking && query.player_level > 14"},
 						{"tce":"query.get_equipped_item_name=='tce' && query.is_using_item && query.player_level > 14"},
 						{"tcf":"query.get_equipped_item_name=='tcf' && query.is_using_item && query.player_level > 14"},
-						{"tcg":"query.is_item_name_any('slot.hotbar', 0, 'items:tcg') && variable.attack_time && query.player_level > 14"},
+						{"tcg":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:tcg') && variable.attack_time && query.player_level > 14"},
 						{"txpa":"query.get_equipped_item_name=='txpa' && query.is_using_item"},
 						{"txpb":"query.get_equipped_item_name=='txpb' && query.is_using_item && query.player_level > 4"},
 						{"txpc":"query.get_equipped_item_name=='txpc' && query.is_using_item"}
@@ -83,9 +83,8 @@
 					],
 					"on_entry": [
 						"/particle minecraft:totem_particle ~ ~1 ~",
-						"/effect @s weakness 1 1 true",
-						"/effect @s mining_fatigue 1 1 true",
-						"/enchant @s fortune 3"
+						"/enchant @s fortune 3",
+						"/replaceitem entity @s slot.weapon.offhand 0 air"
 					]
 				},
 				"tba": {
@@ -165,9 +164,8 @@
 					],
 					"on_entry": [
 						"/particle minecraft:totem_particle ~ ~1 ~",
-						"/effect @s weakness 1 1 true",
-						"/effect @s mining_fatigue 1 1 true",
-						"/enchant @s looting 3"
+						"/enchant @s looting 3",
+						"/replaceitem entity @s slot.weapon.offhand 0 air"
 					]
 				},
 				"tca": {
@@ -292,7 +290,8 @@
 						"/particle minecraft:totem_particle ~ ~1 ~",
 						"/effect @s weakness 1 1 true",
 						"/effect @s mining_fatigue 1 1 true",
-						"/enchant @s fire_aspect 1"
+						"/enchant @s fire_aspect 1",
+						"/replaceitem entity @s slot.weapon.offhand 0 air"
 					]
 				},
 				"txpa": {

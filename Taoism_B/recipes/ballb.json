@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:ballb"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "a"
+    ],
+    "key": {
+      "a": {
+        "item": "blocks:ball"
+      }
+    },
+    "unlock": [
+      {
+        "item": "items:ball"
+      }
+    ],
+    "result": [{
+      "item": "items:ball",
+      "count": 9
+    }]
+  }
+}

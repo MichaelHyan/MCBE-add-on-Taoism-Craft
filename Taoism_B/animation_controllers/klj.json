@@ -5,7 +5,6 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"klj_a":"query.get_equipped_item_name=='klj' && !query.is_using_item && query.is_sneaking"},
 						{"klj_b":"query.get_equipped_item_name=='klj' && query.is_using_item && query.scoreboard('charge') == 10"},
 						{"klj_c":"query.get_equipped_item_name=='klj' && !query.is_sneaking && query.scoreboard('charge') == 0"},
 						{"klj_d":"query.get_equipped_item_name=='klj' && !query.is_sneaking && query.scoreboard('charge') == 1"},
@@ -17,16 +16,6 @@
 						{"klj_j":"query.get_equipped_item_name=='klj' && !query.is_sneaking && query.scoreboard('charge') == 7"},
 						{"klj_k":"query.get_equipped_item_name=='klj' && !query.is_sneaking && query.scoreboard('charge') == 8"},
 						{"klj_l":"query.get_equipped_item_name=='klj' && !query.is_sneaking && query.scoreboard('charge') == 9"}
-					]
-				},
-				"klj_a": {
-					"transitions": [
-						{
-							"base_jeta": "(1.0)"
-						}
-					],
-					"on_entry": [
-						"/title @s actionbar 开发者物品——韩言悦欣"
 					]
 				},
 				"klj_b": {
