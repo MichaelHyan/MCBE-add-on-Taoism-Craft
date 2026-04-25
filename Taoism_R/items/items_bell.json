@@ -2,7 +2,7 @@
   "format_version": "1.10",
   "minecraft:item": {
     "description": {
-      "identifier": "items:bell",
+      "identifier": "items:bell_s",
       "category": "Nature"
     },
 

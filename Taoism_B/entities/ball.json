@@ -17,13 +17,13 @@
     },
     "components": {
       "minecraft:collision_box": {
-        "width": 1,
-        "height": 1
+        "width": 0.5,
+        "height": 0.5
       },
       "minecraft:projectile": {
         "on_hit": {
           "impact_damage": {
-            "damage": 10,
+            "damage": 1,
             "knockback": true,
             "semi_random_diff_damage": true
           },
@@ -36,7 +36,7 @@
           }
         },
         "power": 3,
-        "gravity": 0,
+        "gravity": 0.02,
         "inertia": 1,
         "liquid_inertia": 1,
         "uncertainty_base": 0,
@@ -58,7 +58,12 @@
           "max_dropped_ticks": 7,
           "use_motion_prediction_hints": true
         }
-      }
+      },
+      "minecraft:leashable": {},
+      "minecraft:leashable_to": {}
+    },
+    "component_groups": {
+      "minecraft:leashable_to": {}
     }
   }
 }
