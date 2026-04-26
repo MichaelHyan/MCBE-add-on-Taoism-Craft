@@ -405,9 +405,9 @@
 							}
 					],
 					"on_entry": [
-						"/tp @e[rm=1,type=!item,r=5] @s",
+						"/tp @e[rm=1,type=!item,type=!entity:spirit,r=5] @s",
 						"/tp @e[type=item,r=30] @s",
-						"/tp @e[type=entity:spirit] @s"
+						"/tp @e[type=entity:spirit] ^ ^ ^0.5"
 					]
 				},
 				"gourd_b": {
