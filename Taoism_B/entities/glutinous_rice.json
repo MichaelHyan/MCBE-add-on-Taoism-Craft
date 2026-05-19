@@ -20,6 +20,12 @@
         "width": 1,
         "height": 1
       },
+      "minecraft:type_family": {
+        "family": [
+          "mob",
+          "taoism"
+        ]
+      },
       "minecraft:projectile": {
         "on_hit": {
           "impact_damage": {

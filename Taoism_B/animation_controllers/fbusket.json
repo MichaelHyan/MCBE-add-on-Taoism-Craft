@@ -28,7 +28,7 @@
 						}
 					],
 					"on_entry": [
-						"/effect @e[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,type=!entity:flo,type=!entity:sword_ua,type=!entity:sword_sa,type=!entity:bell,type=!entity:partner,r=25] slowness 1 3 true",
+						"/effect @e[type=!arrow,type=!item,type=!villager,type=!armor_stand,family=!taoism,r=25] slowness 1 3 true",
 						"/particle minecraft:blue_flame_particle ^-0.5 ^1.5 ^-1"
 					]
 				},
@@ -75,8 +75,8 @@
 						}
 					],
 					"on_entry": [
-						"/effect @e[type=!player,r=25] slowness 1 3 true",
-						"/effect @e[type=player,r=25] instant_health 1 1 true"
+						"/effect @e[family=!taoism,r=25] slowness 1 3 true",
+						"/effect @e[family=!taoism,r=25] instant_health 1 1 true"
 					]
 				},
 				"fbusket_c": {

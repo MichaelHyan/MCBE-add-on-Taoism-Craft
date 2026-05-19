@@ -5,7 +5,7 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"mark":"1==1"}
+						{"mark":"query.is_alive == 0"}
 					]
 				},
 				"mark": {
@@ -15,7 +15,7 @@
 							}
 					],
 					"on_entry": [
-						"/particle minecraft:totem_particle ~ ~ ~1"
+						"/tp @s ~ ~-1 ~"
 					]
 				}
 			}

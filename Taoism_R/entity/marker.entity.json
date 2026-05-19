@@ -1,0 +1,29 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "entity:marker",
+      "materials": { "default": "base", "invisible": "baseb" },
+      "textures": {
+        "default": "textures/entity/marker"
+      },
+      "geometry": {
+        "default": "geometry.marker"
+      },
+
+      "scripts": {
+        "pre_animation": [
+          "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+        ]
+      },
+      "animations": {
+        "idle": "animation.bss.idle"
+      },
+      "animation_controllers": [
+        { "idle": "controller.animation.bss.idle" }
+      ],
+      "render_controllers": [ "controller.render.zombie" ],
+      "enable_attachables": true
+    }
+  }
+}

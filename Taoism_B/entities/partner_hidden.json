@@ -837,6 +837,12 @@
         "suffocateTime": 0,
         "breathesWater": true
       },
+      "minecraft:type_family": {
+        "family": [
+          "mob",
+          "taoism"
+        ]
+      },
       "minecraft:on_target_acquired": {
         "event": "anger",
         "target": "self"

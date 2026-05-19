@@ -1,0 +1,30 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.sword_f":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"sword_f_a":"query.life_time >= 0"}
+					]
+				},
+				"sword_f_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:balloon_gas_particle ^ ^0.1 ^-1",
+						"/particle minecraft:balloon_gas_particle ^0.2 ^0.1 ^-1",
+						"/particle minecraft:balloon_gas_particle ^-0.2 ^0.1 ^-1",
+						"/particle minecraft:balloon_gas_particle ^ ^0.3 ^-1",
+						"/particle minecraft:balloon_gas_particle ^ ^-0.1 ^-1",
+						"/particle minecraft:balloon_gas_particle ^ ^0.1 ^-1.2",
+						"/particle minecraft:balloon_gas_particle ^ ^0.1 ^-0.8"
+					]
+				}
+			}
+		}
+ 	}
+ }

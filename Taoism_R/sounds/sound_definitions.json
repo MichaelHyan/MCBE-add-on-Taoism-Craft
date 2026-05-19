@@ -14,6 +14,30 @@
       "stream": true
     }]
   },
+  "bsp1": {
+    "category": "neutral",
+    "max_distance": 999999.0,
+    "sounds": [{
+      "name": "sounds/bsp1",
+      "stream": true
+    }]
+  },
+  "bsp2": {
+    "category": "neutral",
+    "max_distance": 999999.0,
+    "sounds": [{
+      "name": "sounds/bsp2",
+      "stream": true
+    }]
+  },
+  "bsp3": {
+    "category": "neutral",
+    "max_distance": 999999.0,
+    "sounds": [{
+      "name": "sounds/bsp3",
+      "stream": true
+    }]
+  },
   "bell": {
     "sounds": [{
       "name": "sounds/bell",

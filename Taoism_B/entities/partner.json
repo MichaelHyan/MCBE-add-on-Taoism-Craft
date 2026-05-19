@@ -794,7 +794,7 @@
       "minecraft:nameable": {},
       "minecraft:tameable": {
         "probability": 1,
-        "tameItems": "items:cinnabar_crystal",
+        "tameItems": "minecraft:emerald",
         "tame_event": {
           "event": "tamed",
           "target": "self"
@@ -842,6 +842,12 @@
       },
       "minecraft:navigation.walk": {
         "can_path_over_water": true
+      },
+      "minecraft:type_family": {
+        "family": [
+          "mob",
+          "taoism"
+        ]
       },
       "minecraft:movement.basic": {},
       "minecraft:jump.static": {},

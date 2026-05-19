@@ -6,6 +6,7 @@
 				"base_jeta":{
 					"transitions":[
 						{"bow":"query.get_equipped_item_name=='bow' && query.is_sneaking"},
+						{"bow_rec":"query.get_equipped_item_name=='bow' && variable.attack_time"},
 						{"crossbow":"query.get_equipped_item_name=='crossbow' && query.is_sneaking"}
 					]
 				},
@@ -17,6 +18,16 @@
 					],
 					"on_entry": [
 						"/effect @s slowness 1 5 true"
+					]
+				},
+				"bow_rec": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/tp @e[type=arrow] ^ ^ ^1"
 					]
 				},
 				"crossbow": {

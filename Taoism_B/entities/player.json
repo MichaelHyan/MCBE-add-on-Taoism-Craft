@@ -12,6 +12,7 @@
 					"sword",
           "sword_ech",
           "sword_qi",
+          "sword_fa",
           "banner",
 					"talisman",
 					"klj",
@@ -39,7 +40,9 @@
 					"mace",
           "ranged",
           "trident",
-          "spear"
+          "spear",
+          "fcka",
+          "fckb"
 				]
 			},
       "animations": {
@@ -47,6 +50,7 @@
 				"sword": "controller.animation.sword",
         "sword_ech": "controller.animation.sword_ech",
         "sword_qi": "controller.animation.sword_qi",
+        "sword_fa": "controller.animation.sword_fa",
         "banner": "controller.animation.banner",
 				"talisman": "controller.animation.talisman",
 				"klj": "controller.animation.klj",
@@ -75,7 +79,9 @@
 				"mace": "controller.animation.mace",
         "ranged": "controller.animation.ranged",
         "trident": "controller.animation.trident",
-        "spear": "controller.animation.spear"
+        "spear": "controller.animation.spear",
+        "fcka": "controller.animation.fcka",
+        "fckb": "controller.animation.fckb"
 			}
     },
 
@@ -119,7 +125,10 @@
         "on_death": "Math.Min(query.player_level * 7, 100)"
       },
       "minecraft:type_family": {
-        "family": [ "player" ]
+        "family": [
+          "player",
+          "taoism"
+        ]
       },
       "minecraft:is_hidden_when_invisible": {
       },

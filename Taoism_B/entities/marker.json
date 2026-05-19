@@ -20,6 +20,12 @@
         "width": 0.1,
         "height": 0.1
       },
+      "minecraft:type_family": {
+        "family": [
+          "mob",
+          "taoism"
+        ]
+      },
 	    "minecraft:physics": {
       },
       "minecraft:pushable": {

@@ -1,0 +1,22 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "entity:sword",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/sword"
+			},
+			"geometry": {
+				"default": "geometry.sword"
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#f4f2ef",
+				"overlay_color": "#ffffff"
+			}
+		}
+	}
+}

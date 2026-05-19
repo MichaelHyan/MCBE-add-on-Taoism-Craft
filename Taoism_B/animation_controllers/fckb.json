@@ -1,0 +1,46 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.fckb":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"fckb_a":"query.health <= 10 && query.health >= 5"},
+						{"fckb_b":"query.health < 5"},
+						{"fckb_c":"query.health >= 20"}
+					]
+				}, 
+				"fckb_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s resistance 1 1 true"
+					]
+				},
+				"fckb_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s resistance 1 3 true"
+					]
+				},
+				"fckb_c": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s strength 1 1 true"
+					]
+				}
+			}
+		}
+ 	}
+ }

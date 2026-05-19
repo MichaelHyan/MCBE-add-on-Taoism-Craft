@@ -256,7 +256,6 @@
           "minecraft:zombie": "minecraft:zombie"
         }
       },
-      "minecraft:spawn_egg_interaction": {},
       "minecraft:rotation_locked_to_vehicle": {},
       "minecraft:equip_item": {
         "excluded_items": [

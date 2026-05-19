@@ -16,10 +16,10 @@
 							}
 					],
 					"on_entry": [
-						"/tp @n[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,type=!entity:sword_ua,type=!entity:sword_sa,type=!entity:bell,type=!entity:partner,r=20]",
-						"/damage @e[r=2,type=!entity:bell,type=!item,type=!player] 5",
+						"/tp @n[type=!arrow,type=!item,type=!villager,type=!armor_stand,family=!taoism,r=20]",
+						"/damage @e[r=2,family=!taoism,type=!item] 5",
 						"/effect @e[type=player,r=2] regeneration 1 5 true",
-						"/effect @e[type=!player,type=!entity:bell,rm=1,r=2] wither 1 10 true",
+						"/effect @e[r=2,family=!taoism,type=!item] wither 1 10 true",
 						"/particle minecraft:blue_flame_particle ~ ~1 ~"
 					]
 				},

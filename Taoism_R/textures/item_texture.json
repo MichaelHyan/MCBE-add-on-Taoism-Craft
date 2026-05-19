@@ -3,280 +3,283 @@
   "texture_name": "atlas.items",
   "texture_data": {
     "echa": {
-      "textures": "textures/echa.png"
+      "textures": "textures/items/echa.png"
     },
     "echb": {
-      "textures": "textures/echb.png"
+      "textures": "textures/items/echb.png"
     },
     "qi_sword": {
-      "textures": "textures/qi_sword.png"
+      "textures": "textures/items/qi_sword.png"
+    },
+    "sword_f": {
+      "textures": "textures/items/sword_f.png"
     },
     "sword_qi": {
-      "textures": "textures/sword_qi.png"
+      "textures": "textures/items/sword_qi.png"
     },
     "sword_qi_t1": {
-      "textures": "textures/sword_qi_t1.png"
+      "textures": "textures/items/sword_qi_t1.png"
     },
     "sword_qi_t2": {
-      "textures": "textures/sword_qi_t2.png"
+      "textures": "textures/items/sword_qi_t2.png"
     },
     "sword_qi_t3": {
-      "textures": "textures/sword_qi_t3.png"
+      "textures": "textures/items/sword_qi_t3.png"
     },
     "qi": {
-      "textures": "textures/qi.png"
+      "textures": "textures/items/qi.png"
     },
     "qi_c": {
-      "textures": "textures/qi_c.png"
+      "textures": "textures/items/qi_c.png"
     },
     "cane": {
-      "textures": "textures/cane.png"
+      "textures": "textures/items/cane.png"
     },
     "lotus": {
-      "textures": "textures/lotus.png"
+      "textures": "textures/items/lotus.png"
     },
     "fbusket": {
-      "textures": "textures/fbusket.png"
+      "textures": "textures/items/fbusket.png"
     },
 	  "disk_taoism": {
-      "textures": "textures/disk_taoism.png"
+      "textures": "textures/items/disk_taoism.png"
     },
     "scripture": {
-      "textures": "textures/scripture.png"
+      "textures": "textures/items/scripture.png"
     },
     "scripture_s": {
-      "textures": "textures/scripture_s.png"
+      "textures": "textures/items/scripture_s.png"
     },
     "scripture_f": {
-      "textures": "textures/scripture_f.png"
+      "textures": "textures/items/scripture_f.png"
     },
     "pearl": {
-      "textures": "textures/pearl.png"
+      "textures": "textures/items/pearl.png"
     },
     "brush_n": {
-      "textures": "textures/brush_n.png"
+      "textures": "textures/items/brush_n.png"
     },
     "brush_p": {
-      "textures": "textures/brush_p.png"
+      "textures": "textures/items/brush_p.png"
     },
     "cinnabar_crystal": {
-      "textures": "textures/cinnabar_crystal.png"
+      "textures": "textures/items/cinnabar_crystal.png"
     },
     "cinnabar": {
-      "textures": "textures/cinnabar.png"
+      "textures": "textures/items/cinnabar.png"
     },
     "talisman_t": {
-      "textures": "textures/talisman_t.png"
+      "textures": "textures/items/talisman_t.png"
     },
     "talisman": {
-      "textures": "textures/talisman.png"
+      "textures": "textures/items/talisman.png"
     },
     "talisman_g": {
-      "textures": "textures/talisman_g.png"
+      "textures": "textures/items/talisman_g.png"
     },
     "talisman_e": {
-      "textures": "textures/talisman_e.png"
+      "textures": "textures/items/talisman_e.png"
     },
     "sword_t": {
-      "textures": "textures/sword_t.png"
+      "textures": "textures/items/sword_t.png"
     },
     "sword_b": {
-      "textures": "textures/sword_b.png"
+      "textures": "textures/items/sword_b.png"
     },
     "sword_q": {
-      "textures": "textures/sword_q.png"
+      "textures": "textures/items/sword_q.png"
     },
     "sword_l": {
-      "textures": "textures/sword_l.png"
+      "textures": "textures/items/sword_l.png"
     },
     "sword_s": {
-      "textures": "textures/sword_s.png"
+      "textures": "textures/items/sword_s.png"
     },
     "sword_e": {
-      "textures": "textures/sword_e.png"
+      "textures": "textures/items/sword_e.png"
     },
     "sword_w": {
-      "textures": "textures/sword_w.png"
+      "textures": "textures/items/sword_w.png"
     },
     "sword_u": {
-      "textures": "textures/sword_ua.png"
+      "textures": "textures/items/sword_ua.png"
     },
     "sword_ua": {
-      "textures": "textures/sword_u.png"
+      "textures": "textures/items/sword_u.png"
     },
     "lightning_wood": {
-      "textures": "textures/lightning_wood.png"
+      "textures": "textures/items/lightning_wood.png"
     },
     "spirit": {
-      "textures": "textures/spirit.png"
+      "textures": "textures/items/spirit.png"
     },
     "sword_sp": {
-      "textures": "textures/sword_sp.png"
+      "textures": "textures/items/sword_sp.png"
     },
     "wond":{
-      "textures": "textures/wond.png"
+      "textures": "textures/items/wond.png"
     },
 	  "soul_banner": {
-      "textures": "textures/soul_banner.png"
+      "textures": "textures/items/soul_banner.png"
     },
     "hy_banner": {
-      "textures": "textures/hy_banner.png"
+      "textures": "textures/items/hy_banner.png"
     },
     "mirror_a": {
-      "textures": "textures/mirror_a.png"
+      "textures": "textures/items/mirror_a.png"
     },
     "mirror_b": {
-      "textures": "textures/mirror_b.png"
+      "textures": "textures/items/mirror_b.png"
     },
     "mirror_c": {
-      "textures": "textures/mirror_c.png"
+      "textures": "textures/items/mirror_c.png"
     },
     "mirror_d": {
-      "textures": "textures/mirror_d.png"
+      "textures": "textures/items/mirror_d.png"
     },
     "bell": {
-      "textures": "textures/bell.png"
+      "textures": "textures/items/bell.png"
     },
     "gourd": {
-      "textures": "textures/gourd.png"
+      "textures": "textures/items/gourd.png"
     },
     "wul": {
-      "textures": "textures/wul.png"
+      "textures": "textures/items/wul.png"
     },
     "whisk": {
-      "textures": "textures/whisk.png"
+      "textures": "textures/items/whisk.png"
     },
     "ring": {
-      "textures": "textures/ring.png"
+      "textures": "textures/items/ring.png"
     },
     "bottle": {
-      "textures": "textures/bottle.png"
+      "textures": "textures/items/bottle.png"
     },
     "fish_belly": {
-      "textures": "textures/fish_belly.png"
+      "textures": "textures/items/fish_belly.png"
     },
     "fish_gelatin": {
-      "textures": "textures/fish_gelatin.png"
+      "textures": "textures/items/fish_gelatin.png"
     },
     "klj": {
-      "textures": "textures/klj.png"
+      "textures": "textures/items/klj.png"
     },
     "bglpa": {
-      "textures": "textures/bglpa.png"
+      "textures": "textures/items/bglpa.png"
     },
     "bglpb": {
-      "textures": "textures/bglpb.png"
+      "textures": "textures/items/bglpb.png"
     },
     "phase": {
-      "textures": "textures/phase.png"
+      "textures": "textures/items/phase.png"
     },
     "spe": {
-      "textures": "textures/spe.png"
+      "textures": "textures/items/spe.png"
     },
     "tup": {
-      "textures": "textures/tup.png"
+      "textures": "textures/items/tup.png"
     },
     "ta": {
-      "textures": "textures/ta.png"
+      "textures": "textures/items/ta.png"
     },
     "tb": {
-      "textures": "textures/tb.png"
+      "textures": "textures/items/tb.png"
     },
     "tc": {
-      "textures": "textures/tc.png"
+      "textures": "textures/items/tc.png"
     },
     "ua": {
-      "textures": "textures/ua.png"
+      "textures": "textures/items/ua.png"
     },
     "ub": {
-      "textures": "textures/ub.png"
+      "textures": "textures/items/ub.png"
     },
     "uc": {
-      "textures": "textures/uc.png"
+      "textures": "textures/items/uc.png"
     },
     "ud": {
-      "textures": "textures/ud.png"
+      "textures": "textures/items/ud.png"
     },
     "ue": {
-      "textures": "textures/ue.png"
+      "textures": "textures/items/ue.png"
     },
     "uf": {
-      "textures": "textures/uf.png"
+      "textures": "textures/items/uf.png"
     },
     "ug": {
-      "textures": "textures/ug.png"
+      "textures": "textures/items/ug.png"
     },
     "tab": {
-      "textures": "textures/tab.png"
+      "textures": "textures/items/tab.png"
     },
     "tac": {
-      "textures": "textures/tac.png"
+      "textures": "textures/items/tac.png"
     },
     "tad": {
-      "textures": "textures/tad.png"
+      "textures": "textures/items/tad.png"
     },
     "tae": {
-      "textures": "textures/tae.png"
+      "textures": "textures/items/tae.png"
     },
     "tag": {
-      "textures": "textures/tag.png"
+      "textures": "textures/items/tag.png"
     },
     "tba": {
-      "textures": "textures/tba.png"
+      "textures": "textures/items/tba.png"
     },
     "tbb": {
-      "textures": "textures/tbb.png"
+      "textures": "textures/items/tbb.png"
     },
     "tbc": {
-      "textures": "textures/tbc.png"
+      "textures": "textures/items/tbc.png"
     },
     "tbd": {
-      "textures": "textures/tbd.png"
+      "textures": "textures/items/tbd.png"
     },
     "tbe": {
-      "textures": "textures/tbe.png"
+      "textures": "textures/items/tbe.png"
     },
     "tbf": {
-      "textures": "textures/tbf.png"
+      "textures": "textures/items/tbf.png"
     },
     "tbg": {
-      "textures": "textures/tbg.png"
+      "textures": "textures/items/tbg.png"
     },
     "tca": {
-      "textures": "textures/tca.png"
+      "textures": "textures/items/tca.png"
     },
     "tcb": {
-      "textures": "textures/tcb.png"
+      "textures": "textures/items/tcb.png"
     },
     "tcc": {
-      "textures": "textures/tcc.png"
+      "textures": "textures/items/tcc.png"
     },
     "tcd": {
-      "textures": "textures/tcd.png"
+      "textures": "textures/items/tcd.png"
     },
     "tce": {
-      "textures": "textures/tce.png"
+      "textures": "textures/items/tce.png"
     },
     "tcf": {
-      "textures": "textures/tcf.png"
+      "textures": "textures/items/tcf.png"
     },
     "tcg": {
-      "textures": "textures/tcg.png"
+      "textures": "textures/items/tcg.png"
     },
     "txp": {
-      "textures":"textures/txp.png"
+      "textures":"textures/items/txp.png"
     },
     "txpa": {
-      "textures":"textures/txpa.png"
+      "textures":"textures/items/txpa.png"
     },
     "partner": {
-      "textures":"textures/partner.png"
+      "textures":"textures/items/partner.png"
     },
     "glutinous_rice": {
-      "textures":"textures/glutinous_rice.png"
+      "textures":"textures/items/glutinous_rice.png"
     },
     "ball": {
-      "textures":"textures/ball.png"
+      "textures":"textures/items/ball.png"
     },
     "dumpling_a": {
       "textures":"textures/ny/dumpling_a.png"

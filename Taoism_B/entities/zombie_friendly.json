@@ -127,7 +127,8 @@
         "family": [
           "zombie",
           "undead",
-          "mob"
+          "mob",
+          "taoism"
         ]
       },
       "minecraft:collision_box": {

@@ -165,7 +165,7 @@
 						"/effect @s fire_resistance 60 1 true",
 						"/scoreboard objectives add charge dummy",
 						"/scoreboard players set @s charge -50",
-						"/tag @e[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,type=!entity:sword_ua,type=!entity:sword_sa,type=!entity:bell,type=!entity:partner,r=20] add sbt",
+						"/tag @e[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,family=!taoism,r=20] add sbt",
 						"/summon entity:sword_sa ~ ~ ~5",
 						"/summon entity:sword_sa ~2 ~ ~4",
 						"/summon entity:sword_sa ~4 ~ ~2",
@@ -244,7 +244,8 @@
 							}
 					],
 					"on_entry": [
-						"/tag @n[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,type=!entity:sword_ua,type=!entity:sword_sa,type=!entity:bell,type=!entity:partner,r=20] add sbt",
+						"/tag @n[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,family=!taoism,r=20] add sbt",
+						"/tag @n[type=entity:unknow,tag=boss,r=20] add sbt",
 						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
 						"/playsound sw"
 					]
@@ -257,7 +258,8 @@
 					],
 					"on_entry": [
 						"/kill @e[type=entity:sword_ua]",
-						"/tag @e[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,type=!entity:sword_ua,type=!entity:sword_sa,type=!entity:bell,type=!entity:partner,r=20] add sbt",
+						"/tag @e[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,family=!taoism,r=20] add sbt",
+						"/tag @n[type=entity:unknow,tag=boss,r=20] add sbt",
 						"/summon entity:sword_ua"
 					]
 				},
@@ -325,8 +327,8 @@
 					],
 					"on_entry": [
 						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
-						"/replaceitem entity @e[type=!player,type=!entity:partner,type=!entity:hyan,type=!entity:zzst,r=10] slot.weapon.mainhand 0 air",
-						"/effect @e[type=!player,type=!entity:partner,r=10] weakness 30 255 true"
+						"/replaceitem entity @e[family=!taoism,r=10] slot.weapon.mainhand 0 air",
+						"/effect @e[family=!taoism,r=10] weakness 30 255 true"
 					]
 				},
 				"whisk": {

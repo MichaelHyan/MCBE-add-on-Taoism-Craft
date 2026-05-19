@@ -6,22 +6,32 @@
 				"base_jeta":{
 					"transitions":[
 						{"h_chat":"query.life_time == 1"},
-						{"h_chat_a":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 0"},
-						{"h_chat_b":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 1"},
-						{"h_chat_c":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 2"},
-						{"h_chat_d":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 3"},
-						{"h_chat_e":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 4"},
-						{"h_chat_f":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 5"},
-						{"h_chat_g":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 6"},
-						{"h_chat_h":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 7"},
-						{"h_chat_i":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 8"},
-						{"h_chat_j":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 9"},
-						{"h_chat_k":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 10"},
-						{"h_chat_l":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 11"},
-						{"h_chat_m":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 12"},
-						{"h_chat_n":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 13"},
-						{"h_chat_o":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 14"},
-						{"h_chat_p":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,15) == 15"},
+						{"h_chat_a":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,25) == 0"},
+						{"h_chat_b":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,25) == 1"},
+						{"h_chat_c":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,25) == 2"},
+						{"h_chat_d":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,25) == 3"},
+						{"h_chat_e":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,25) == 4"},
+						{"h_chat_f":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,25) == 5"},
+						{"h_chat_g":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,25) == 6"},
+						{"h_chat_h":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,25) == 7"},
+						{"h_chat_i":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,25) == 8"},
+						{"h_chat_j":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,25) == 9"},
+						{"h_chat_k":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,25) == 10"},
+						{"h_chat_l":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,25) == 11"},
+						{"h_chat_m":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,25) == 12"},
+						{"h_chat_n":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,25) == 13"},
+						{"h_chat_o":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,25) == 14"},
+						{"h_chat_p":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,25) == 15"},
+						{"h_chat_q":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,25) == 16"},
+						{"h_chat_r":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,25) == 17"},
+						{"h_chat_s":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,25) == 18"},
+						{"h_chat_t":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,25) == 19"},
+						{"h_chat_u":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,25) == 20"},
+						{"h_chat_v":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,25) == 21"},
+						{"h_chat_w":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,25) == 22"},
+						{"h_chat_x":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,25) == 23"},
+						{"h_chat_y":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,25) == 24"},
+						{"h_chat_z":"query.time_of_day == 0 || query.time_of_day == 0.25 || query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,25) == 25"},
 						{"h_chat_sa":"query.is_item_name_any('slot.weapon.mainhand', 0, 'items:sword_s')"},
 						{"h_chat_sb":"query.is_item_name_any('slot.weapon.mainhand', 0, 'items:pearl')"},
 						{"h_chat_sc":"query.is_item_name_any('slot.weapon.offhand', 0, 'minecraft:totem_of_undying')"},
@@ -86,7 +96,7 @@
 							}
 					],
 					"on_entry": [
-						"/say 这个实体的代码和盟友系统其实是一模一样的。。。除了没有对法器的免疫处理。"
+						"/say 这个实体的代码和盟友系统其实是一模一样的。。。只不过正常流程下你看不见我。"
 					]
 				},
 				"h_chat_f": {
@@ -199,6 +209,107 @@
 					],
 					"on_entry": [
 						"/say 白蛇扇了zzst一巴掌掉出来个画着粉色世界的碟片，普奇神父看到后跪下了。"
+					]
+				},
+				"h_chat_q": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 为什么要做盟友这个看起来就不完善且粗糙的系统？可能只是单纯的因为作者怕孤独。。。"
+					]
+				},
+				"h_chat_r": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 也试试泰拉瑞亚！"
+					]
+				},
+				"h_chat_s": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 如果你尝试在这个模组下玩原版武器的话，你会发现他们大多数都增强了。。。现在大部分原版武器拥有了自己的特殊效果，每一个都有独一无二的新功能。"
+					]
+				},
+				"h_chat_t": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 打败黑黑的龙其实只是个开始。。。值得尝试的还很多。"
+					]
+				},
+				"h_chat_u": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 如果你觉得自己的力量不足，试试这个。",
+						"/summon entity:chair"
+					]
+				},
+				"h_chat_v": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 当你把鸡和篮球联系在一起，你会得到？？？"
+					]
+				},
+				"h_chat_w": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 我真不是Herobrine，我只是单纯的视力不好。"
+					]
+				},
+				"h_chat_x": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say "
+					]
+				},
+				"h_chat_y": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say "
+					]
+				},
+				"h_chat_z": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say "
 					]
 				},
 				"h_chat_sa": {

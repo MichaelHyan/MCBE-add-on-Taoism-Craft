@@ -31,6 +31,12 @@
           "def": "minecraft:arrow"
         }
       },
+      "minecraft:type_family": {
+        "family": [
+          "mob",
+          "taoism"
+        ]
+      },
       "trident": {
         "minecraft:behavior.melee_attack": {
           "priority": 3,

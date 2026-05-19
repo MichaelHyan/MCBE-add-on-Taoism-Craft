@@ -122,7 +122,8 @@
       },
       "minecraft:type_family": {
         "family": [
-          "mob"
+          "mob",
+          "taoism"
         ]
       },
       "minecraft:collision_box": {

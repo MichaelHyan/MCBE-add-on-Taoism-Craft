@@ -1,0 +1,24 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.chair":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"chair":"query.life_time >= 0"}
+					]
+				},
+				"chair": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @e[type=player,r=2] resistance 1 255 true"
+					]
+				}
+			}
+		}
+ 	}
+ }

@@ -18,6 +18,7 @@
 						"/tp @n[tag=sbt]",
 						"/damage @e[tag=sbt,r=2] 20",
 						"/kill @e[type=entity:zombie_mimic,r=2]",
+						"/kill @e[type=entity:zombie_mimic_sp,r=2]",
 						"/summon lightning_bolt",
 						"/damage @e[type=entity:sword_sa] 999"
 					]

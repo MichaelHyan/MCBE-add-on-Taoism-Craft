@@ -5,16 +5,21 @@
       "identifier": "entity:unknown",
       "is_spawnable": true,
       "is_summonable": true,
-      "is_experimental": false
+      "is_experimental": false,
+      "scripts": {
+				"animate": [
+					"unknown"
+				]
+			},
+      "animations": {
+				"unknown": "controller.animation.unknown"
+			}
     },
     "component_groups": {
         "minecraft:movement": {
           "value": 0.3
         },
       "minecraft:can_have_equipment": {
-        "minecraft:equipment": {
-          "table": "loot_tables/entities/zombie_equipment.json"
-        }
       }
     },
     "components": {
@@ -65,7 +70,7 @@
         "breathes_water": true
       },
       "minecraft:attack": {
-        "damage": 1
+        "damage": 10
       },
       "minecraft:loot": {
         "table": "loot_tables/entities/unknown.json"
@@ -74,15 +79,6 @@
         "priority": 3,
         "speed_multiplier": 1,
         "track_target": false
-      },
-      "minecraft:behavior.stomp_turtle_egg": {
-        "priority": 4,
-        "speed_multiplier": 1,
-        "search_range": 10,
-        "search_height": 3,
-        "goal_radius": 1.14,
-        "search_count": 4,
-        "interval": 20
       },
       "minecraft:behavior.move_towards_restriction": {
         "priority": 5,

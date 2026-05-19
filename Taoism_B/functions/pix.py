@@ -18,7 +18,7 @@ def get_non_transparent_pixel_coordinates(image_path):
         centered_coords.append((new_x, new_y))
     return centered_coords
 
-path_to_image = 'C:\\Users\\wnaiq\\Desktop\\a.png' 
+path_to_image = 'D:\\a.png' 
 coordinates = get_non_transparent_pixel_coordinates(path_to_image)
     
 print(len(coordinates))

@@ -1,0 +1,123 @@
+{
+  "format_version": "1.26.10",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "entity:sword",
+      "spawn_category": "creature",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "properties": {
+        "minecraft:can_move": {
+          "type": "bool",
+          "default": true,
+          "client_sync": true
+        }
+      },
+      "scripts": {
+				"animate": [
+					"sword_f"
+				]
+			},
+      "animations": {
+				"sword_f": "controller.animation.sword_f"
+			}
+    },
+
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "mob",
+          "taoism"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 1.0,
+        "height": 1.0
+      },
+      "minecraft:physics": {
+        "has_gravity": false
+      },
+      "minecraft:can_fly": {
+      },
+      "minecraft:jump.static": {
+      },
+      "minecraft:follow_range": {
+        "value": 16,
+        "max": 16
+      },
+      "minecraft:is_tamed": {
+      },
+      "minecraft:leashable": {
+      },
+      "minecraft:leashable_to": {
+      },
+      "minecraft:nameable": {
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "fall",
+            "deals_damage": "no"
+          }
+        ]
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+      },
+      "minecraft:is_hidden_when_invisible": {
+      },
+      "minecraft:renders_when_invisible": {
+      },
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      },
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+      "minecraft:body_rotation_always_follows_head": {
+      },
+      "minecraft:health": {
+        "value": 20,
+        "max": 20
+      },
+      "minecraft:movement": {
+        "value": 0.2
+      },
+      "minecraft:movement.basic": {
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true,
+        "avoid_water": false,
+        "avoid_damage_blocks": false
+      },
+      "minecraft:can_power_jump": {
+      },
+      "minecraft:flying_speed": {
+        "value": 0.2
+      },
+      "minecraft:knockback_resistance": {
+        "value": 0.0
+      },
+      "minecraft:rideable": {
+        "seat_count": 1,
+        "family_types": ["player"],
+        "on_rider_enter_event": "minecraft:on_passenger_mount",
+        "on_rider_exit_event": "minecraft:on_passenger_dismount",
+        "interact_text": "action.interact.ride.horse",
+        "seats": {
+          "position": [0.0, 0.15, -0.4]
+        }
+      },
+      "minecraft:behavior.player_ride_tamed": {
+      },
+      "minecraft:free_camera_controlled": {
+        "strafe_speed_modifier": 1.0,
+        "backwards_movement_modifier": 0.5
+      },
+      "minecraft:vertical_movement_action": {
+        "vertical_velocity": 0.5
+      }
+    },
+    "component_groups": {
+    }
+  }
+}

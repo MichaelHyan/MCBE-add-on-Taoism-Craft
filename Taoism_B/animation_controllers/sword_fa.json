@@ -1,0 +1,48 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.sword_fa":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"sword_fa":"query.get_equipped_item_name=='sword_f' && query.is_using_item && query.scoreboard('sword') >= 0"},
+						{"sword_fb":"query.get_equipped_item_name=='sword_f' && variable.attack_time"},
+						{"sword_fc":"query.get_equipped_item_name=='sword_f' && query.scoreboard('sword') < 0"}
+					]
+				},
+				"sword_fa": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon entity:sword",
+						"/scoreboard objectives add sword dummy",
+						"/scoreboard players set @s sword -500"
+					]
+				},
+				"sword_fb": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @e[type=entity:sword]"
+					]
+				},
+				"sword_fc": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s sword 1"
+					]
+				}
+			}
+		}
+ 	}
+ }

@@ -16,7 +16,7 @@
 							}
 					],
 					"on_entry": [
-						"/damage @e[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,type=!entity:flo,type=!entity:sword_ua,type=!entity:sword_sa,type=!entity:bell,type=!entity:partner,r=2] 1",
+						"/damage @e[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,family=!taoism,r=2] 1",
 						"/effect @e[type=player,r=2] regeneration 1 1 true",
 						"/particle minecraft:blue_flame_particle ~ ~1 ~"
 					]
