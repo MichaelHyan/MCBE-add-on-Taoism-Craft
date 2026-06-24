@@ -913,7 +913,7 @@
 - 使用方式：置于副手手持，手持状态不再显示，放回主手恢复
 - 合成方式：通过吸收23个“炁”在内丹中自动炼化而成，可与清阳之炁互相转化
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/sword_qi.png)
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/qi_sword.png)
 
 “清阳之炁升于天，禀纯阳之精，涤荡阴秽，修行得之则神清气朗。”
 
