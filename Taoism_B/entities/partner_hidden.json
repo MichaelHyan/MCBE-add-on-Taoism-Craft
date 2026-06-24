@@ -3,7 +3,7 @@
   "minecraft:entity": {
     "description": {
       "identifier": "entity:hyan",
-      "is_spawnable": true,
+      "is_spawnable": false,
       "is_summonable": true,
       "is_experimental": false,
       "scripts": {
@@ -61,6 +61,16 @@
           "table": "partner/emerald.json"
         }
       },
+      "emerald_block": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/emerald_block.json"
+        }
+      },
       "cinnabar": {
         "minecraft:behavior.melee_attack": {
           "priority": 3,
@@ -69,6 +79,16 @@
         },
         "minecraft:equipment": {
           "table": "partner/cinnabar.json"
+        }
+      },
+      "longsword": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/longsword_iron.json"
         }
       },
       "sword_s": {
@@ -361,6 +381,28 @@
                     "test": "has_equipment",
                     "subject": "other",
                     "domain": "hand",
+                    "value": "emerald_block"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "emerald_block"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
                     "value": "items:cinnabar_crystal"
                   },
                   {
@@ -371,6 +413,28 @@
                 ]
               },
               "event": "cinnabar"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "items:longsword_iron"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "longsword"
             },
             "use_item": true,
             "interact_text": "addon.get.items"
@@ -1141,10 +1205,34 @@
           ]
         }
       },
+      "emerald_block": {
+        "add": {
+          "component_groups": [
+            "emerald_block"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
       "cinnabar": {
         "add": {
           "component_groups": [
             "cinnabar"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "longsword": {
+        "add": {
+          "component_groups": [
+            "longsword"
           ]
         },
         "remove": {

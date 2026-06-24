@@ -1,0 +1,483 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.longsword_diamond":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"longsword_diamond_release_a":"query.get_equipped_item_name=='longsword_diamond' && variable.attack_time && query.vertical_speed < 0 && query.scoreboard('reb') >= 10 && query.scoreboard('reb') < 20"},
+						{"longsword_diamond_release_b":"query.get_equipped_item_name=='longsword_diamond' && variable.attack_time && query.vertical_speed < 0 && query.scoreboard('reb') >= 20 && query.scoreboard('reb') < 30"},
+						{"longsword_diamond_release_c":"query.get_equipped_item_name=='longsword_diamond' && variable.attack_time && query.vertical_speed < 0 && query.scoreboard('reb') == 30"},
+						{"longsword_diamond_recharge_a":"query.get_equipped_item_name=='longsword_diamond' && !query.is_sneaking && !variable.attack_time && query.scoreboard('reb') >= 0 && query.scoreboard('reb') < 10"},
+						{"longsword_diamond_recharge_b":"query.get_equipped_item_name=='longsword_diamond' && !query.is_sneaking && !variable.attack_time && query.scoreboard('reb') >= 10 && query.scoreboard('reb') < 20"},
+						{"longsword_diamond_recharge_c":"query.get_equipped_item_name=='longsword_diamond' && !query.is_sneaking && !variable.attack_time && query.scoreboard('reb') >= 20 && query.scoreboard('reb') < 30"},
+						{"longsword_diamond_charge_a1":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 0"},
+						{"longsword_diamond_charge_a2":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 1"},
+						{"longsword_diamond_charge_a3":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 2"},
+						{"longsword_diamond_charge_a4":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 3"},
+						{"longsword_diamond_charge_a5":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 4"},
+						{"longsword_diamond_charge_a6":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 5"},
+						{"longsword_diamond_charge_a7":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 6"},
+						{"longsword_diamond_charge_a8":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 7"},
+						{"longsword_diamond_charge_a9":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 8"},
+						{"longsword_diamond_charge_a10":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 9"},
+						{"longsword_diamond_charge_b1":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 10"},
+						{"longsword_diamond_charge_b2":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 11"},
+						{"longsword_diamond_charge_b3":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 12"},
+						{"longsword_diamond_charge_b4":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 13"},
+						{"longsword_diamond_charge_b5":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 14"},
+						{"longsword_diamond_charge_b6":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 15"},
+						{"longsword_diamond_charge_b7":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 16"},
+						{"longsword_diamond_charge_b8":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 17"},
+						{"longsword_diamond_charge_b9":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 18"},
+						{"longsword_diamond_charge_b10":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 19"},
+						{"longsword_diamond_charge_c1":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 20"},
+						{"longsword_diamond_charge_c2":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 21"},
+						{"longsword_diamond_charge_c3":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 22"},
+						{"longsword_diamond_charge_c4":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 23"},
+						{"longsword_diamond_charge_c5":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 24"},
+						{"longsword_diamond_charge_c6":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 25"},
+						{"longsword_diamond_charge_c7":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 26"},
+						{"longsword_diamond_charge_c8":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 27"},
+						{"longsword_diamond_charge_c9":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 28"},
+						{"longsword_diamond_charge_c10":"query.get_equipped_item_name=='longsword_diamond' && query.is_sneaking && query.scoreboard('reb') == 29"}
+						
+					]
+				},
+				"longsword_diamond_release_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:smash_ground_particle ~~~",
+						"/damage @e[type=!player,family=!taoism,type=!item,r=3] 4",
+						"/title @s actionbar §7||||||||||",
+						"/scoreboard players set @s reb 0"
+					]
+				},
+				"longsword_diamond_release_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:smash_ground_particle ~~~",
+						"/damage @e[type=!player,family=!taoism,type=!item,r=5] 7",
+						"/title @s actionbar §7||||||||||",
+						"/scoreboard players set @s reb 0"
+					]
+				},
+				"longsword_diamond_release_c": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:smash_ground_particle ~~~",
+						"/damage @e[type=!player,family=!taoism,type=!item,r=5] 10",
+						"/title @s actionbar §7||||||||||",
+						"/scoreboard players set @s reb 0"
+					]
+				},
+				"longsword_diamond_recharge_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/title @s actionbar §7||||||||||",
+						"/scoreboard players set @s reb 0"
+					]
+				},
+				"longsword_diamond_recharge_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/title @s actionbar §2||||||||||",
+						"/scoreboard players set @s reb 10"
+					]
+				},
+				"longsword_diamond_recharge_c": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/title @s actionbar §9||||||||||",
+						"/scoreboard players set @s reb 20"
+					]
+				},
+				"longsword_diamond_charge_a1": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/scoreboard objectives add reb dummy",
+						"/title @s actionbar §2|§7|||||||||",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_a2": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §2||§7||||||||",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_a3": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §2|||§7|||||||",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_a4": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §2||||§7||||||",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_a5": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §2|||||§7|||||",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_a6": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §2||||||§7||||",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_a7": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §2|||||||§7|||",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_a8": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §2||||||||§7||",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_a9": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §2|||||||||§7|",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_a10": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §2||||||||||§7",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_b1": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §9|§2|||||||||",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_b2": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §9||§2||||||||",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_b3": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §9|||§2|||||||",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_b4": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §9||||§2||||||",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_b5": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §9|||||§2|||||",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_b6": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §9||||||§2||||",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_b7": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §9|||||||§2|||",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_b8": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §9||||||||§2||",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_b9": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §9|||||||||§2|",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_b10": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §9||||||||||§2",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_c1": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §4|§9|||||||||",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_c2": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §4||§9||||||||",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_c3": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §4|||§9|||||||",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_c4": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §4||||§9||||||",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_c5": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §4|||||§9|||||",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_c6": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §4||||||§9||||",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_c7": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §4|||||||§9|||",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_c8": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §4||||||||§9||",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_c9": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §4|||||||||§9|",
+						"/scoreboard players add @s reb 1"
+					]
+				},
+				"longsword_diamond_charge_c10": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/title @s actionbar §4||||||||||§9",
+						"/scoreboard players add @s reb 1"
+					]
+				}
+			}
+		}
+ 	}
+ }

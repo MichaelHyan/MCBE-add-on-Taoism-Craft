@@ -1,0 +1,168 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.rebh":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"rebh_a":"query.life_time == 2"},
+						{"rebh_b":"query.life_time == 5"},
+						{"rebh_c":"query.life_time == 7"},
+						{"rebh_d":"query.life_time == 11"},
+						{"rebh_e":"query.life_time == 13"},
+						{"rebh_f":"query.life_time == 17"},
+						{"rebh_g":"query.life_time == 20"},
+						{"rebh_h":"query.life_time == 22"},
+						{"rebh_i":"query.life_time == 26"},
+						{"rebh_j":"query.life_time == 28"},
+						{"rebh_k":"query.life_time == 32"},
+						{"rebh_l":"query.life_time == 34"},
+						{"rebh_m":"query.life_time == 36"},
+						{"rebh_n":"query.life_time == 37"}
+					]
+				},
+				"rebh_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §7。。。"
+					]
+				},
+				"rebh_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c不死图腾？一个人的命能救苍生吗？"
+					]
+				},
+				"rebh_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9这不应该叫不死图腾了。"
+					]
+				},
+				"rebh_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9现在它可以容下一个人的神，让这个人带着记忆和灵魂重生。"
+					]
+				},
+				"rebh_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9也许应该叫它复活图腾。"
+					]
+				},
+				"rebh_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9许久之后，当天下趋于平静，将会有一个人来解放[模糊不清的声音]的魂魄。"
+					]
+				},
+				"rebh_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9复活图腾可以将我们的遗愿传达给他。"
+					]
+				},
+				"rebh_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9这就是最后的机会了。"
+					]
+				},
+				"rebh_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c贫道这一生没什么才能，净读些经书，留不下什么。"
+					]
+				},
+				"rebh_j": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c姑且将这道观留给他罢。"
+					]
+				},
+				"rebh_k": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c说来这复活图腾需要一人的性命才能发挥作用。。。"
+					]
+				},
+				"rebh_l": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9就用我的命好了。"
+					]
+				},
+				"rebh_m": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §7。。。"
+					]
+				},
+				"rebh_n": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/inputpermission set @a movement enabled",
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

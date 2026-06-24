@@ -3,7 +3,7 @@
   "minecraft:entity": {
     "description": {
       "identifier": "entity:zombie_mimic",
-      "is_spawnable": true,
+      "is_spawnable": false,
       "is_summonable": true,
       "scripts": {
         "animate": [
@@ -114,6 +114,10 @@
       "minecraft:pushable": {},
       "minecraft:underwater_movement": {
         "value": 0.30
+      },
+      "minecraft:boss": {
+        "should_darken_sky": true,
+        "hud_range": 55
       },
       "minecraft:attack": {
         "damage": 10,

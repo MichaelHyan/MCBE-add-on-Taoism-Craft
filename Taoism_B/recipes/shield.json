@@ -1,0 +1,33 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:shield_q"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "aaa",
+      "aba",
+      "aaa"
+    ],
+    "key": {
+      "a": {
+        "item": "copper_ingot"
+      },
+      "b": {
+        "item": "items:tbd"
+      }
+    },
+    "unlock": [
+      {
+        "item": "items:talisman"
+      }
+    ],
+    "result": [{
+      "item": "items:shield_q",
+      "count": 1
+    }]
+  }
+}

@@ -1,0 +1,314 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.acbook":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"acbook_turn_a":"query.get_equipped_item_name=='acbook' && query.is_using_item && query.scoreboard('charge') >= 0 && query.scoreboard('chapter') <= 8 && query.scoreboard('maxchapter') <= 8"},
+						{"acbook_turn_b":"query.get_equipped_item_name=='acbook' && query.scoreboard('chapter') > 8 && query.scoreboard('maxchapter') <= 8"},
+						{"acbook_turn_c":"query.get_equipped_item_name=='acbook' && query.is_using_item && query.scoreboard('charge') >= 0 && query.scoreboard('chapter') <= 9 && query.scoreboard('maxchapter') == 9"},
+						{"acbook_turn_b":"query.get_equipped_item_name=='acbook' && query.scoreboard('chapter') > 9 && query.scoreboard('maxchapter') == 9"},
+						{"acbook_unread":"query.get_equipped_item_name=='acbook' && variable.attack_time && query.scoreboard('chapter') > query.scoreboard('maxchapter') && query.scoreboard('charge') >= 0"},
+						{"acbook_read_a":"query.get_equipped_item_name=='acbook' && variable.attack_time && query.scoreboard('chapter') <= query.scoreboard('maxchapter') && query.scoreboard('chapter') == 1"},
+						{"acbook_read_b":"query.get_equipped_item_name=='acbook' && variable.attack_time && query.scoreboard('chapter') <= query.scoreboard('maxchapter') && query.scoreboard('chapter') == 2"},
+						{"acbook_read_c":"query.get_equipped_item_name=='acbook' && variable.attack_time && query.scoreboard('chapter') <= query.scoreboard('maxchapter') && query.scoreboard('chapter') == 3"},
+						{"acbook_read_d":"query.get_equipped_item_name=='acbook' && variable.attack_time && query.scoreboard('chapter') <= query.scoreboard('maxchapter') && query.scoreboard('chapter') == 4"},
+						{"acbook_read_e":"query.get_equipped_item_name=='acbook' && variable.attack_time && query.scoreboard('chapter') <= query.scoreboard('maxchapter') && query.scoreboard('chapter') == 5"},
+						{"acbook_read_f":"query.get_equipped_item_name=='acbook' && variable.attack_time && query.scoreboard('chapter') <= query.scoreboard('maxchapter') && query.scoreboard('chapter') == 6"},
+						{"acbook_read_g":"query.get_equipped_item_name=='acbook' && variable.attack_time && query.scoreboard('chapter') <= query.scoreboard('maxchapter') && query.scoreboard('chapter') == 7"},
+						{"acbook_read_h":"query.get_equipped_item_name=='acbook' && variable.attack_time && query.scoreboard('chapter') <= query.scoreboard('maxchapter') && query.scoreboard('chapter') == 8"},
+						{"acbook_read_i":"query.get_equipped_item_name=='acbook' && variable.attack_time && query.scoreboard('chapter') <= query.scoreboard('maxchapter') && query.scoreboard('chapter') == 9"},
+						{"acbook_unlock_a":"query.get_equipped_item_name=='crafting_table' && query.scoreboard('maxchapter') == 0 && query.scoreboard('chapter') != 0"},
+						{"acbook_unlock_b":"query.get_equipped_item_name=='cinnabar_powder' && query.scoreboard('maxchapter') == 1"},
+						{"acbook_unlock_c":"query.get_equipped_item_name=='talisman' && query.scoreboard('maxchapter') == 2"},
+						{"acbook_unlock_d":"query.get_equipped_item_name=='qi' && query.scoreboard('maxchapter') == 3"},
+						{"acbook_unlock_e":"query.get_equipped_item_name=='totem_of_undying' && query.scoreboard('maxchapter') == 4"},
+						{"acbook_unlock_f":"query.get_equipped_item_name=='nether_star' && query.scoreboard('maxchapter') == 5"},
+						{"acbook_unlock_g":"query.get_equipped_item_name=='ender_eye' && query.scoreboard('maxchapter') == 6"},
+						{"acbook_unlock_h":"query.get_equipped_item_name=='partner' && query.scoreboard('maxchapter') == 7"}
+					]
+				},
+				"acbook_turn_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard objectives add charge dummy",
+						"/scoreboard objectives add chapter dummy",
+						"/scoreboard objectives add maxchapter dummy",
+						"/scoreboard players set @s charge -3",
+						"/scoreboard players add @s chapter 1"
+					]
+				},
+				"acbook_turn_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s chapter 1"
+					]
+				},
+				"acbook_turn_c": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s charge -3",
+						"/scoreboard players add @s chapter 1"
+					]
+				},
+				"acbook_turn_d": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s chapter 1"
+					]
+				},
+				"acbook_unread": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s charge -3",
+						"/say 文字模糊不清"
+					]
+				},
+				"acbook_read_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @e[family=reb]",
+						"/summon entity:reba",
+						"/effect @s resistance 42 255",
+						"/effect @s invisibility 42 255",
+						"/effect @s darkness 42 255",
+						"/inputpermission set @s movement disabled"
+					]
+				},
+				"acbook_read_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @e[family=reb]",
+						"/summon entity:rebb",
+						"/effect @s resistance 60 255",
+						"/effect @s invisibility 60 255",
+						"/effect @s darkness 60 255",
+						"/inputpermission set @s movement disabled"
+					]
+				},
+				"acbook_read_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @e[family=reb]",
+						"/summon entity:rebc",
+						"/effect @s resistance 61 255",
+						"/effect @s invisibility 61 255",
+						"/effect @s darkness 61 255",
+						"/inputpermission set @s movement disabled"
+					]
+				},
+				"acbook_read_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @e[family=reb]",
+						"/summon entity:rebd",
+						"/effect @s resistance 41 255",
+						"/effect @s invisibility 41 255",
+						"/effect @s darkness 41 255",
+						"/inputpermission set @s movement disabled"
+					]
+				},
+				"acbook_read_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @e[family=reb]",
+						"/summon entity:rebe",
+						"/effect @s resistance 53 255",
+						"/effect @s invisibility 53 255",
+						"/effect @s darkness 53 255",
+						"/inputpermission set @s movement disabled"
+					]
+				},
+				"acbook_read_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @e[family=reb]",
+						"/summon entity:rebf",
+						"/effect @s resistance 41 255",
+						"/effect @s invisibility 41 255",
+						"/effect @s darkness 41 255",
+						"/inputpermission set @s movement disabled"
+					]
+				},
+				"acbook_read_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @e[family=reb]",
+						"/summon entity:rebg",
+						"/effect @s resistance 50 255",
+						"/effect @s invisibility 50 255",
+						"/effect @s darkness 50 255",
+						"/inputpermission set @s movement disabled"
+					]
+				},
+				"acbook_read_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @e[family=reb]",
+						"/summon entity:rebh",
+						"/effect @s resistance 36 255",
+						"/effect @s invisibility 36 255",
+						"/effect @s darkness 36 255",
+						"/inputpermission set @s movement disabled"
+					]
+				},
+				"acbook_read_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @e[family=reb]",
+						"/summon entity:rebi",
+						"/effect @s resistance 59 255",
+						"/effect @s invisibility 59 255",
+						"/effect @s darkness 59 255",
+						"/inputpermission set @s movement disabled"
+					]
+				},
+				"acbook_unlock_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s maxchapter 1",
+						"/say 古书的一部分文字变清晰了"
+					]
+				},
+				"acbook_unlock_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s maxchapter 2",
+						"/say 古书的一部分文字变清晰了"
+					]
+				},
+				"acbook_unlock_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s maxchapter 3",
+						"/say 古书的一部分文字变清晰了"
+					]
+				},
+				"acbook_unlock_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s maxchapter 4",
+						"/say 古书的一部分文字变清晰了"
+					]
+				},
+				"acbook_unlock_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s maxchapter 5",
+						"/say 古书的一部分文字变清晰了"
+					]
+				},
+				"acbook_unlock_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s maxchapter 6",
+						"/say 古书的一部分文字变清晰了"
+					]
+				},
+				"acbook_unlock_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s maxchapter 7",
+						"/say 古书的一部分文字变清晰了"
+					]
+				},
+				"acbook_unlock_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s maxchapter 8",
+						"/say 古书的一部分文字变清晰了"
+					]
+				}
+			}
+		}
+ 	}
+ }

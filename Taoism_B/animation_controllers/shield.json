@@ -1,0 +1,55 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.shield":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"shield_a":"query.life_time < 10 && query.life_time != 5"},
+						{"shield_b":"query.life_time == 5"},
+						{"shield_c":"query.life_time > 10"}
+					]
+				},
+				"shield_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add shield dummy",
+						"/scoreboard objectives add shieldhit dummy",
+						"/scoreboard players set @p shield 1",
+						"/tp @p",
+						"/effect @s resistance 1 255 true"
+					]
+				},
+				"shield_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @p",
+						"/effect @s resistance 1 255 true",
+						"/give @p items:shield"
+					]
+				},
+				"shield_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s invisibility 1 1 true",
+						"/scoreboard players set @a shield 0",
+						"/tp ~ ~-5 ~",
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

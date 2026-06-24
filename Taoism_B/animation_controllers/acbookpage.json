@@ -1,0 +1,112 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.acbookpage":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"acbook_page_a":"query.get_equipped_item_name=='acbook' && query.scoreboard('chapter') == 1"},
+						{"acbook_page_b":"query.get_equipped_item_name=='acbook' && query.scoreboard('chapter') == 2"},
+						{"acbook_page_c":"query.get_equipped_item_name=='acbook' && query.scoreboard('chapter') == 3"},
+						{"acbook_page_d":"query.get_equipped_item_name=='acbook' && query.scoreboard('chapter') == 4"},
+						{"acbook_page_e":"query.get_equipped_item_name=='acbook' && query.scoreboard('chapter') == 5"},
+						{"acbook_page_f":"query.get_equipped_item_name=='acbook' && query.scoreboard('chapter') == 6"},
+						{"acbook_page_g":"query.get_equipped_item_name=='acbook' && query.scoreboard('chapter') == 7"},
+						{"acbook_page_h":"query.get_equipped_item_name=='acbook' && query.scoreboard('chapter') == 8"},
+						{"acbook_page_i":"query.get_equipped_item_name=='acbook' && query.scoreboard('chapter') == 9"}
+					]
+				},
+				"acbook_page_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar §0§c|§0|||||||"
+					]
+				},
+				"acbook_page_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar §0|§c|§0||||||"
+					]
+				},
+				"acbook_page_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar §0||§c|§0|||||"
+					]
+				},
+				"acbook_page_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar §0|||§c|§0||||"
+					]
+				},
+				"acbook_page_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar §0||||§c|§0|||"
+					]
+				},
+				"acbook_page_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar §0|||||§c|§0||"
+					]
+				},
+				"acbook_page_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar §0||||||§c|§0|"
+					]
+				},
+				"acbook_page_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar §0|||||||§c|§0"
+					]
+				},
+				"acbook_page_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar §0???"
+					]
+				}
+			}
+		}
+ 	}
+ }

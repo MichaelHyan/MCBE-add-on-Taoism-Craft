@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "items:totem_f",
+      "category": "Nature"
+    },
+
+    "components": {
+      "minecraft:icon": "totem_f",
+      "minecraft:render_offsets": "totem_f"
+    }
+  }
+}

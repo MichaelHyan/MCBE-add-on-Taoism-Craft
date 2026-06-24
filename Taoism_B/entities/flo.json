@@ -3,7 +3,7 @@
   "minecraft:entity": {
     "description": {
       "identifier": "entity:flo",
-      "is_spawnable": true,
+      "is_spawnable": false,
       "is_summonable": true,
       "scripts": {
         "animate": [

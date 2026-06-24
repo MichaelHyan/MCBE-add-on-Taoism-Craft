@@ -1,0 +1,345 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.sword_ql":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"sword_ql_dash":"query.get_equipped_item_name=='sword_ql' && !query.is_using_item && query.is_sprinting && variable.attack_time && query.scoreboard('charge') >= 10"},
+						{"sword_ql_jump":"query.get_equipped_item_name=='sword_ql' && !query.is_using_item && query.is_jumping && variable.attack_time && query.scoreboard('charge') >= 10"},						
+						{"sword_ql_expa_r":"query.get_equipped_item_name=='sword_ql' && !query.is_using_item && query.scoreboard('swql') > 0 && query.scoreboard('swql') <= 9"},
+						{"sword_ql_expb_r":"query.get_equipped_item_name=='sword_ql' && !query.is_using_item && query.scoreboard('swql') > 9 && query.scoreboard('swql') <= 18"},
+						{"sword_ql_expc_r":"query.get_equipped_item_name=='sword_ql' && !query.is_using_item && query.scoreboard('swql') > 18 && query.scoreboard('swql') <= 27"},
+						{"sword_ql_expd_r1":"query.get_equipped_item_name=='sword_ql' && !query.is_using_item && query.scoreboard('swql') > 27 && query.scoreboard('swql') < 30"},
+						{"sword_ql_expd_r2":"query.get_equipped_item_name=='sword_ql' && !query.is_using_item && query.scoreboard('swql') == 30"},
+						{"sword_ql_expd_r3":"query.get_equipped_item_name=='sword_ql' && !query.is_using_item && query.scoreboard('swql') == 31"},
+						{"sword_ql_expd_r4":"query.get_equipped_item_name=='sword_ql' && !query.is_using_item && query.scoreboard('swql') == 32"},
+						{"sword_ql_expd_r5":"query.get_equipped_item_name=='sword_ql' && !query.is_using_item && query.scoreboard('swql') == 33"},
+						{"sword_ql_expa_c1":"query.get_equipped_item_name=='sword_ql' && query.is_using_item && query.scoreboard('swql') <= 3"},
+						{"sword_ql_expa_c2":"query.get_equipped_item_name=='sword_ql' && query.is_using_item && query.scoreboard('swql') > 3 && query.scoreboard('swql') <= 6"},
+						{"sword_ql_expa_c3":"query.get_equipped_item_name=='sword_ql' && query.is_using_item && query.scoreboard('swql') > 6 && query.scoreboard('swql') <= 9"},
+						{"sword_ql_expb_c1":"query.get_equipped_item_name=='sword_ql' && query.is_using_item && query.scoreboard('swql') > 9 && query.scoreboard('swql') <= 12"},
+						{"sword_ql_expb_c2":"query.get_equipped_item_name=='sword_ql' && query.is_using_item && query.scoreboard('swql') > 12 && query.scoreboard('swql') <= 15"},
+						{"sword_ql_expb_c3":"query.get_equipped_item_name=='sword_ql' && query.is_using_item && query.scoreboard('swql') > 15 && query.scoreboard('swql') <= 18"},
+						{"sword_ql_expc_c1":"query.get_equipped_item_name=='sword_ql' && query.is_using_item && query.scoreboard('swql') > 18 && query.scoreboard('swql') <= 21"},
+						{"sword_ql_expc_c2":"query.get_equipped_item_name=='sword_ql' && query.is_using_item && query.scoreboard('swql') > 21 && query.scoreboard('swql') <= 24"},
+						{"sword_ql_expc_c3":"query.get_equipped_item_name=='sword_ql' && query.is_using_item && query.scoreboard('swql') > 24 && query.scoreboard('swql') <= 27"},
+						{"sword_ql_expd_c1":"query.get_equipped_item_name=='sword_ql' && query.is_using_item && query.scoreboard('swql') == 28"},
+						{"sword_ql_expd_c2":"query.get_equipped_item_name=='sword_ql' && query.is_using_item && query.scoreboard('swql') == 29"}
+					]
+				},
+				"sword_ql_jump": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/summon wind_charge_projectile",
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"sword_ql_dash": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/tp ^ ^1 ^7",
+						"/damage @e[type=!player,type=!item,r=3] 10",
+						"/playsound sw",
+						"/particle minecraft:totem_particle",
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"sword_ql_expa_r": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s slow_falling 1 1 true",
+						"/tp @n[type=entity:talisman_ql]",
+						"/kill @e[type=entity:talisman_ql,r=3]",
+						"/damage @e[tag=qlock,r=3] 10",
+						"/tag @e[r=3] remove qlock",
+						"/playsound sw",
+						"/particle minecraft:totem_particle",
+						"/scoreboard players set @s swql 0",
+						"/title @s actionbar §7>  §8x§7  <"
+					]
+				},
+				"sword_ql_expb_r": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s slow_falling 1 1 true",
+						"/tp @n[type=entity:talisman_ql]",
+						"/kill @e[type=entity:talisman_ql,r=3]",
+						"/damage @e[tag=qlock,r=3] 20",
+						"/tag @e[r=3] remove qlock",
+						"/playsound sw",
+						"/particle minecraft:totem_particle",
+						"/scoreboard players set @s swql 0",
+						"/title @s actionbar §7>  §8x§7  <"
+					]
+				},
+				"sword_ql_expc_r": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s slow_falling 1 1 true",
+						"/tp @n[type=entity:talisman_ql]",
+						"/summon lightning_bolt",
+						"/effect @s fire_resistance 3 1 true",
+						"/effect @s resistance 1 255 true",
+						"/kill @e[type=entity:talisman_ql,r=3]",
+						"/kill @e[tag=qlock,r=3]",
+						"/tag @e[r=3] remove qlock",
+						"/playsound sw",
+						"/particle minecraft:totem_particle",
+						"/scoreboard players set @s swql 0",
+						"/title @s actionbar §7>  §8x§7  <"
+					]
+				},
+				"sword_ql_expd_r1": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tag @e[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,family=!taoism,r=30] add qlock",
+						"/tp @n[tag=qlock]",
+						"/summon lightning_bolt",
+						"/effect @s fire_resistance 3 1 true",
+						"/effect @s resistance 1 255 true",
+						"/kill @e[tag=qlock,r=3]",
+						"/kill @e[type=entity:talisman_ql]",
+						"/playsound sw",
+						"/particle minecraft:totem_particle",
+						"/scoreboard players set @s swql 30",
+						"/title @s actionbar §7  >§6x§7<  "
+					]
+				},
+				"sword_ql_expd_r2": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @n[tag=qlock]",
+						"/summon lightning_bolt",
+						"/effect @s fire_resistance 3 1 true",
+						"/effect @s resistance 1 255 true",
+						"/kill @e[tag=qlock,r=3]",
+						"/playsound sw",
+						"/particle minecraft:totem_particle",
+						"/scoreboard players set @s swql 31",
+						"/title @s actionbar §7  >§4x§7<  "
+					]
+				},
+				"sword_ql_expd_r3": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @n[tag=qlock]",
+						"/summon lightning_bolt",
+						"/effect @s fire_resistance 3 1 true",
+						"/effect @s resistance 1 255 true",
+						"/kill @e[tag=qlock,r=3]",
+						"/playsound sw",
+						"/particle minecraft:totem_particle",
+						"/scoreboard players set @s swql 32",
+						"/title @s actionbar §7  >§6x§7<  "
+					]
+				},
+				"sword_ql_expd_r4": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @n[tag=qlock]",
+						"/summon lightning_bolt",
+						"/effect @s fire_resistance 3 1 true",
+						"/effect @s resistance 1 255 true",
+						"/kill @e[tag=qlock,r=3]",
+						"/playsound sw",
+						"/particle minecraft:totem_particle",
+						"/scoreboard players set @s swql 33",
+						"/title @s actionbar §7  >§4x§7<  "
+					]
+				},
+				"sword_ql_expd_r5": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s slow_falling 1 1 true",
+						"/tp @n[tag=qlock]",
+						"/summon lightning_bolt",
+						"/effect @s fire_resistance 3 1 true",
+						"/effect @s resistance 1 255 true",
+						"/kill @e[tag=qlock]",
+						"/kill @e[type=entity:talisman_ql]",
+						"/tag @e remove qlock",
+						"/playsound sw",
+						"/particle minecraft:totem_particle",
+						"/scoreboard players set @s swql 0",
+						"/title @s actionbar §7>  §8x§7  <"
+					]
+				},
+				"sword_ql_expa_c1": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add swql dummy",
+						"/scoreboard objectives add charge dummy",
+						"/particle minecraft:cauldron_explosion_emitter ~ ~ ~",
+						"/scoreboard players add @s swql 1",
+						"/title @s actionbar §7>  §8x§7  <"
+					]
+				},
+				"sword_ql_expa_c2": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:cauldron_explosion_emitter ~ ~ ~",
+						"/scoreboard players add @s swql 1",
+						"/title @s actionbar §7 > §8x§7 < "
+					]
+				},
+				"sword_ql_expa_c3": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:cauldron_explosion_emitter ~ ~ ~",
+						"/scoreboard players add @s swql 1",
+						"/title @s actionbar §7  >§8x§7<  "
+					]
+				},
+				"sword_ql_expb_c1": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:cauldron_explosion_emitter ~ ~ ~",
+						"/scoreboard players add @s swql 1",
+						"/title @s actionbar §7>  §2x§7  <"
+					]
+				},
+				"sword_ql_expb_c2": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:cauldron_explosion_emitter ~ ~ ~",
+						"/scoreboard players add @s swql 1",
+						"/title @s actionbar §7 > §2x§7 < "
+					]
+				},
+				"sword_ql_expb_c3": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:cauldron_explosion_emitter ~ ~ ~",
+						"/scoreboard players add @s swql 1",
+						"/title @s actionbar §7  >§2x§7<  "
+					]
+				},
+				"sword_ql_expc_c1": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:cauldron_explosion_emitter ~ ~ ~",
+						"/scoreboard players add @s swql 1",
+						"/title @s actionbar §7>  §1x§7  <"
+					]
+				},
+				"sword_ql_expc_c2": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:cauldron_explosion_emitter ~ ~ ~",
+						"/scoreboard players add @s swql 1",
+						"/title @s actionbar §7 > §1x§7 < "
+					]
+				},
+				"sword_ql_expc_c3": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:cauldron_explosion_emitter ~ ~ ~",
+						"/scoreboard players add @s swql 1",
+						"/title @s actionbar §7  >§1x§7<  "
+					]
+				},
+				"sword_ql_expd_c1": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:cauldron_explosion_emitter ~ ~ ~",
+						"/scoreboard players add @s swql 1",
+						"/title @s actionbar §7  >§4x§7<  "
+					]
+				},
+				"sword_ql_expd_c2": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:cauldron_explosion_emitter ~ ~ ~",
+						"/scoreboard players add @s swql -1",
+						"/title @s actionbar §7  >§6x§7<  "
+					]
+				}
+			}
+		}
+ 	}
+ }

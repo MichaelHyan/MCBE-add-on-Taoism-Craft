@@ -1,0 +1,38 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.talisman_ql":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"ql_a":"query.life_time < 1"},
+						{"ql_b":"query.life_time >= 1"}
+					]
+				},
+				"ql_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tag @n[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,family=!taoism,r=5] add qlock",
+						"/particle minecraft:balloon_gas_particle ~~~",
+						"/tp @n[tag=qlock,r=5]"
+					]
+				},
+				"ql_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @n[tag=qlock,r=3]",
+						"/effect @e[tag=qlock,r=3] weakness 1 255 true"
+					]
+				}
+			}
+		}
+ 	}
+ }

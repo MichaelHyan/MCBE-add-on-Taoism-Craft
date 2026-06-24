@@ -1,0 +1,20 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.shield.idle": {
+			"states": {
+				"default": {
+					"animations": ["idle"],
+					"transitions": [
+						{"active": "query.foo"}
+					]
+				},
+				"active": {
+					"transitions": [
+						{"default": "!query.foo"}
+					]
+				}
+			}
+		}
+	}
+}

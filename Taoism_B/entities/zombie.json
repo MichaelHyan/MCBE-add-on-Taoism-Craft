@@ -4,7 +4,7 @@
     "description": {
       "identifier": "minecraft:zombie",
       "spawn_category": "monster",
-      "is_spawnable": true,
+      "is_spawnable": false,
       "is_summonable": true,
       "properties": {
         "minecraft:is_riding_zombie_horse": {

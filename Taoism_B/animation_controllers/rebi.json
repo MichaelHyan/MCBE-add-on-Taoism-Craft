@@ -1,0 +1,201 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.rebi":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"rebi_a":"query.life_time == 4"},
+						{"rebi_b":"query.life_time == 7"},
+						{"rebi_c":"query.life_time == 10"},
+						{"rebi_d":"query.life_time == 12"},
+						{"rebi_e":"query.life_time == 16"},
+						{"rebi_f":"query.life_time == 18"},
+						{"rebi_g":"query.life_time == 20"},
+						{"rebi_h":"query.life_time == 22"},
+						{"rebi_i":"query.life_time == 25"},
+						{"rebi_j":"query.life_time == 27"},
+						{"rebi_k":"query.life_time == 34"},
+						{"rebi_l":"query.life_time == 37"},
+						{"rebi_m":"query.life_time == 42"},
+						{"rebi_n":"query.life_time == 46"},
+						{"rebi_o":"query.life_time == 52"},
+						{"rebi_p":"query.life_time == 57"},
+						{"rebi_q":"query.life_time == 59"}
+					]
+				},
+				"rebi_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c我曾有一位挚友。"
+					]
+				},
+				"rebi_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c他曾拜入我门下，想要得道成仙。"
+					]
+				},
+				"rebi_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c只可惜他先天缺陷，没有炼气化形的能力。"
+					]
+				},
+				"rebi_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c他问我，人究竟怎样能长生？"
+					]
+				},
+				"rebi_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c我只告诉了他一个粗略的回答。修仙不是唯一途径。"
+					]
+				},
+				"rebi_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c人和人的不同是什么？"
+					]
+				},
+				"rebi_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c你可以说，外貌，嗓音，习性。"
+					]
+				},
+				"rebi_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c你也可以说，功名，成就。"
+					]
+				},
+				"rebi_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c说到底，人的不同，还是在他人的认识。"
+					]
+				},
+				"rebi_j": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c人的本质是什么？"
+					]
+				},
+				"rebi_k": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c无论是科学认为的物质，还是道教认为的先天之炁与后天之精，只不过是将人物质地剖析开而已。"
+					]
+				},
+				"rebi_l": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c人之所以为人，需看他为世界留下了什么。"
+					]
+				},
+				"rebi_m": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c我的挚友认为应当让世界恢复正轨，所以他将恢复的方法用生命传递到后世。"
+					]
+				},
+				"rebi_n": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c没人说长生是要肉体永存，也没人说只有飞升成仙才算永存。"
+					]
+				},
+				"rebi_o": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c与道合真者，与天地同寿；为天地立心者，活在世人心中，这都是真正的长生。"
+					]
+				},
+				"rebi_p": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c倘若活在世上，只知掠夺他人、苟且偷生，就算活千万年，也不过是行尸走肉。"
+					]
+				},
+				"rebi_q": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/inputpermission set @a movement enabled",
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

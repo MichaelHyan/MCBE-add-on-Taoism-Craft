@@ -1,0 +1,179 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.rebb":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"rebb_a":"query.life_time == 2"},
+						{"rebb_b":"query.life_time == 5"},
+						{"rebb_c":"query.life_time == 6"},
+						{"rebb_d":"query.life_time == 8"},
+						{"rebb_e":"query.life_time == 13"},
+						{"rebb_f":"query.life_time == 18"},
+						{"rebb_g":"query.life_time == 26"},
+						{"rebb_h":"query.life_time == 35"},
+						{"rebb_i":"query.life_time == 38"},
+						{"rebb_j":"query.life_time == 43"},
+						{"rebb_k":"query.life_time == 48"},
+						{"rebb_l":"query.life_time == 49"},
+						{"rebb_m":"query.life_time == 58"},
+						{"rebb_n":"query.life_time == 60"},
+						{"rebb_o":"query.life_time == 61"}
+					]
+				},
+				"rebb_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §7。。。"
+					]
+				},
+				"rebb_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9关于这件事，我还有想要请教的问题。"
+					]
+				},
+				"rebb_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c说吧。"
+					]
+				},
+				"rebb_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9我们修炼到底是为了什么？"
+					]
+				},
+				"rebb_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c目的各有不同吧。有人为了修心养性，有人为了长生不老，各取所需。"
+					]
+				},
+				"rebb_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9可那些同僚总是想找捷径，是因为成仙这件事蕴含着他们的某种需求吗？"
+					]
+				},
+				"rebb_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c急功近利毕竟是人的天性……人最恐惧的，莫过于死亡。而世人眼中的修仙，恰好被当成了规避死亡的捷径。"
+					]
+				},
+				"rebb_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c却不知，真正的修仙，是修一颗与道相合的心，长生不过是水到渠成的结果。若只执着于肉体永存，终究是本末倒置。"
+					]
+				},
+				"rebb_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9那我们对此能选择的，只剩下修炼这条路吗？"
+					]
+				},
+				"rebb_j": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c你绕了这么多弯，想问的从来都不是“众生该如何”，而是“你该如何”。"
+					]
+				},
+				"rebb_k": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c你先天不足，无法炼精化炁，连最基础的桃木剑都驱动不了，对吗？"
+					]
+				},
+				"rebb_l": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9。。。是的。"
+					]
+				},
+				"rebb_m": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c如果你想要的答案是修炼成仙，那我确实不知道怎么去帮你。但如果你想问的是长生的事，我认为你自己能找到这个答案。"
+					]
+				},
+				"rebb_n": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §7。。。"
+					]
+				},
+				"rebb_o": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/inputpermission set @a movement enabled",
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

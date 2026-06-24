@@ -1,0 +1,190 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.rebc":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"rebc_a":"query.life_time == 2"},
+						{"rebc_b":"query.life_time == 5"},
+						{"rebc_c":"query.life_time == 9"},
+						{"rebc_d":"query.life_time == 17"},
+						{"rebc_e":"query.life_time == 23"},
+						{"rebc_f":"query.life_time == 28"},
+						{"rebc_g":"query.life_time == 35"},
+						{"rebc_h":"query.life_time == 40"},
+						{"rebc_i":"query.life_time == 42"},
+						{"rebc_j":"query.life_time == 43"},
+						{"rebc_k":"query.life_time == 49"},
+						{"rebc_l":"query.life_time == 53"},
+						{"rebc_m":"query.life_time == 54"},
+						{"rebc_n":"query.life_time == 59"},
+						{"rebc_o":"query.life_time == 61"},
+						{"rebc_p":"query.life_time == 62"}
+					]
+				},
+				"rebc_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §7。。。"
+					]
+				},
+				"rebc_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c好久不见，回到人间的生活适应得怎么样？"
+					]
+				},
+				"rebc_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9道长您净会开玩笑了。人间疾苦这四个字可不是乱说的。"
+					]
+				},
+				"rebc_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c你离开道观这么久了我肯定是会担心的嘛。贫道只是关心一下许久未见的朋友而已，不必太客气，我又不是旧世代的老学究。"
+					]
+				},
+				"rebc_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9真要说近况其实还好，还是很安稳的。不过我之前没有注意到现在修仙已经很流行了吗？"
+					]
+				},
+				"rebc_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9我认识很多朋友都在研究修仙，各种修炼秘籍什么的快成了家家必备的了。"
+					]
+				},
+				"rebc_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c那怪了。我竟不知还有这种秘籍的存在，真要有这种秘籍那我们修这些道观来供人修行作甚？"
+					]
+				},
+				"rebc_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9我偶然也看过两本，说的大概是没什么问题的，就是总觉得差了点什么。"
+					]
+				},
+				"rebc_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c是不是大部分都是关于修命功的？"
+					]
+				},
+				"rebc_j": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9您也看过？"
+					]
+				},
+				"rebc_k": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c猜得出来嘛！人人都要争先恐后购入阅读的书，那必然是戳中了他们想要成仙的急切性子。"
+					]
+				},
+				"rebc_l": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c你说要是我写一本修性的你说他们能不能读得下去吧。"
+					]
+				},
+				"rebc_m": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9还真是。"
+					]
+				},
+				"rebc_n": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c但愿人们能读懂吧，人要是读不懂自己需要的是什么，是成不了仙的。"
+					]
+				},
+				"rebc_o": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §7。。。"
+					]
+				},
+				"rebc_p": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/inputpermission set @a movement enabled",
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

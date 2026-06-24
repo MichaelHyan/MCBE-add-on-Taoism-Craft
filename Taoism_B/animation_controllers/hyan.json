@@ -36,7 +36,9 @@
 						{"h_chat_sb":"query.is_item_name_any('slot.weapon.mainhand', 0, 'items:pearl')"},
 						{"h_chat_sc":"query.is_item_name_any('slot.weapon.offhand', 0, 'minecraft:totem_of_undying')"},
 						{"h_chat_sd":"query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:emerald')"},
-						{"h_chat_se":"query.is_item_name_any('slot.weapon.mainhand', 0, 'items:cinnabar_crystal')"}
+						{"h_chat_se":"query.is_item_name_any('slot.weapon.mainhand', 0, 'items:cinnabar_crystal')"},
+						{"h_chat_sf":"query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:emerald_block')"},
+						{"h_chat_sg":"query.is_item_name_any('slot.weapon.mainhand', 0, 'items:longsword_iron')"}
 					]
 				},
 				"h_chat": {
@@ -369,6 +371,29 @@
 						"/say 早在1.0版本就存在朱砂矿的设定，但是一直没做成功，现在还保留着原始代码。。。现在来看居然只是键名写错了？！",
 						"/replaceitem entity @s slot.weapon.mainhand 0 air",
 						"/give @p items:cinnabar_crystal"
+					]
+				},
+				"h_chat_sf": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 谢谢了，不瞒你说，我因为放洪水冲了城墙导致在阿克塞尔欠了一大笔钱。。。",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air"
+					]
+				},
+				"h_chat_sg": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/give @p items:longsword_iron",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/say 这不那谁的剑吗？"
 					]
 				}
 			}

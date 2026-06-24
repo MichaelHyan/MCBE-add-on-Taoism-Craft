@@ -2,7 +2,7 @@
   "format_version": "1.12",
   "minecraft:recipe_shaped": {
     "description": {
-      "identifier": "items:totem"
+      "identifier": "items:totemc"
     },
     "tags": [
       "crafting_table"
@@ -17,13 +17,13 @@
         "item": "items:pearl"
       },
       "b": {
-        "item": "gold_ingot"
+        "item": "dark_oak_sapling"
       },
       "c": {
         "item": "dragon_breath"
       },
       "d": {
-        "item": "emerald"
+        "item": "gold_ingot"
       }
     },
     "unlock": [
@@ -32,7 +32,7 @@
       }
     ],
     "result": {
-      "item": "minecraft:totem",
+      "item": "items:totem_f",
       "count": 1
     }
   }

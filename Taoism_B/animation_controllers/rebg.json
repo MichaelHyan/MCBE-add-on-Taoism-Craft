@@ -1,0 +1,223 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.rebg":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"rebg_a":"query.life_time == 2"},
+						{"rebg_b":"query.life_time == 4"},
+						{"rebg_c":"query.life_time == 8"},
+						{"rebg_d":"query.life_time == 10"},
+						{"rebg_e":"query.life_time == 15"},
+						{"rebg_f":"query.life_time == 16"},
+						{"rebg_g":"query.life_time == 19"},
+						{"rebg_h":"query.life_time == 24"},
+						{"rebg_i":"query.life_time == 26"},
+						{"rebg_j":"query.life_time == 28"},
+						{"rebg_k":"query.life_time == 31"},
+						{"rebg_l":"query.life_time == 34"},
+						{"rebg_m":"query.life_time == 36"},
+						{"rebg_n":"query.life_time == 38"},
+						{"rebg_o":"query.life_time == 40"},
+						{"rebg_p":"query.life_time == 46"},
+						{"rebg_q":"query.life_time == 48"},
+						{"rebg_r":"query.life_time == 50"},
+						{"rebg_s":"query.life_time == 51"}
+					]
+				},
+				"rebg_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §7。。。"
+					]
+				},
+				"rebg_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9道长，我要离开了。"
+					]
+				},
+				"rebg_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c保重。贫道不敢祝你能飞黄腾达，只求你能平安无事。"
+					]
+				},
+				"rebg_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9这时候了您还有心情说笑话。"
+					]
+				},
+				"rebg_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9现在连庄稼都没人种了，一个村找不到半个活人，这怎么过得下去？"
+					]
+				},
+				"rebg_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9苟活着算不错了。"
+					]
+				},
+				"rebg_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c确实。今天来找贫道，是有什么事想告诉我吧？"
+					]
+				},
+				"rebg_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9那些被夺取性命的人，被执念所困的人，并不能进入轮回来世。"
+					]
+				},
+				"rebg_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9他们的魂魄被困在[模糊不清的声音]。"
+					]
+				},
+				"rebg_j": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9我想最后为他们做点什么。"
+					]
+				},
+				"rebg_k": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9至少要给这个破碎的世界留下一个结尾。"
+					]
+				},
+				"rebg_l": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c你我如今的状态，恐怕是心有余力不足了。"
+					]
+				},
+				"rebg_m": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §7。。。"
+					]
+				},
+				"rebg_n": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9道长，您认为我是恶人吗？"
+					]
+				},
+				"rebg_o": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c世道混乱，善恶难分。"
+					]
+				},
+				"rebg_p": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c有的人，心善却行差踏错，好心办了坏事；有的人，行迹看似乖戾，却护了一方苍生。"
+					]
+				},
+				"rebg_1": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c善恶二字怎能定义得了？"
+					]
+				},
+				"rebg_r": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §7。。。"
+					]
+				},
+				"rebg_s": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/inputpermission set @a movement enabled",
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

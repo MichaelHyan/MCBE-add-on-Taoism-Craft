@@ -1,0 +1,201 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.rebf":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"rebf_a":"query.life_time == 2"},
+						{"rebf_b":"query.life_time == 6"},
+						{"rebf_c":"query.life_time == 9"},
+						{"rebf_d":"query.life_time == 12"},
+						{"rebf_e":"query.life_time == 15"},
+						{"rebf_f":"query.life_time == 18"},
+						{"rebf_g":"query.life_time == 20"},
+						{"rebf_h":"query.life_time == 22"},
+						{"rebf_i":"query.life_time == 25"},
+						{"rebf_j":"query.life_time == 27"},
+						{"rebf_k":"query.life_time == 29"},
+						{"rebf_l":"query.life_time == 31"},
+						{"rebf_m":"query.life_time == 34"},
+						{"rebf_n":"query.life_time == 36"},
+						{"rebf_o":"query.life_time == 39"},
+						{"rebf_p":"query.life_time == 41"},
+						{"rebf_q":"query.life_time == 42"}
+					]
+				},
+				"rebf_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §7。。。"
+					]
+				},
+				"rebf_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c正如我曾经所说，修仙并不是唯一寻求长生的方式。"
+					]
+				},
+				"rebf_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c若能化过劫难，那也能做到肉体的长生。"
+					]
+				},
+				"rebf_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c劫难，只不过是漫长生命必然遇到的一环。"
+					]
+				},
+				"rebf_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c在劫难中活下来也算是延长了生命。"
+					]
+				},
+				"rebf_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c但谁能料到，渡劫最终也可以毫无代价。"
+					]
+				},
+				"rebf_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c或者说不用自己付出代价。"
+					]
+				},
+				"rebf_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c不死图腾，是用人命做的。"
+					]
+				},
+				"rebf_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c只要有足够多的不死图腾，足以随意躲过灾难。"
+					]
+				},
+				"rebf_j": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c甚至不需要任何修行。"
+					]
+				},
+				"rebf_k": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c从此，修炼不再是正道。"
+					]
+				},
+				"rebf_l": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c掠夺生命反而成了正统。"
+					]
+				},
+				"rebf_m": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c弄得人间混乱，天道覆灭。"
+					]
+				},
+				"rebf_n": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c人啊，到底是怎样的存在啊！"
+					]
+				},
+				"rebf_o": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c竟然可以将他人视为自己生命的耗材。"
+					]
+				},
+				"rebf_p": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §7。。。"
+					]
+				},
+				"rebf_q": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/inputpermission set @a movement enabled",
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

@@ -1,0 +1,179 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.rebd":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"rebd_a":"query.life_time == 2"},
+						{"rebd_b":"query.life_time == 4"},
+						{"rebd_c":"query.life_time == 5"},
+						{"rebd_d":"query.life_time == 7"},
+						{"rebd_e":"query.life_time == 8"},
+						{"rebd_f":"query.life_time == 14"},
+						{"rebd_g":"query.life_time == 15"},
+						{"rebd_h":"query.life_time == 20"},
+						{"rebd_i":"query.life_time == 24"},
+						{"rebd_j":"query.life_time == 28"},
+						{"rebd_k":"query.life_time == 32"},
+						{"rebd_l":"query.life_time == 38"},
+						{"rebd_m":"query.life_time == 39"},
+						{"rebd_n":"query.life_time == 41"},
+						{"rebd_o":"query.life_time == 42"}
+					]
+				},
+				"rebd_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §7。。。"
+					]
+				},
+				"rebd_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9有件事我不知道当不当讲。"
+					]
+				},
+				"rebd_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c姑且说来听听。"
+					]
+				},
+				"rebd_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9道长可否听说过[模糊不清的声音]？"
+					]
+				},
+				"rebd_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c这是何物？"
+					]
+				},
+				"rebd_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9一种和人体极为相似的物质，可以利用炁来构成形体，甚至可以做到近似人的生理特性。"
+					]
+				},
+				"rebd_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c这是做何用？"
+					]
+				},
+				"rebd_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9如果能正确使用，可能可以让像我一样身体缺陷的人重新获得修炼的能力。"
+					]
+				},
+				"rebd_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c你究竟是没有放下吗。如真能有此用，那么确实有可取之处。"
+					]
+				},
+				"rebd_j": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c但你应明白，这毕竟是一种旁门左道，还是不要滥用为好。"
+					]
+				},
+				"rebd_k": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c万一被心思不正的人偷去，那可能会有意外的后果。"
+					]
+				},
+				"rebd_l": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c如果你只是将其用来帮助你驱动法器，应该没有问题，但万万不要向他人炫耀此事。"
+					]
+				},
+				"rebd_m": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c还需谨慎一些。"
+					]
+				},
+				"rebd_n": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §7。。。"
+					]
+				},
+				"rebd_o": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/inputpermission set @a movement enabled",
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

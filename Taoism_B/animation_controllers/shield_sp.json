@@ -1,0 +1,37 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.shield_sp":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"shield_sp_a":"query.life_time < 10"},
+						{"shield_sp_b":"query.life_time >= 10"}
+					]
+				},
+				"shield_sp_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @n[type=entity:unknow]",
+						"/effect @s resistance 1 255 true"
+					]
+				},
+				"shield_sp_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s invisibility 1 1 true",
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

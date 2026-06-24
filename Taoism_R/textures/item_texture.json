@@ -14,6 +14,12 @@
     "sword_f": {
       "textures": "textures/items/sword_f.png"
     },
+    "sword_ql": {
+      "textures": "textures/items/sword_ql.png"
+    },
+    "talisman_ql": {
+      "textures": "textures/items/talisman_ql.png"
+    },
     "sword_qi": {
       "textures": "textures/items/sword_qi.png"
     },
@@ -115,6 +121,27 @@
     },
     "sword_sp": {
       "textures": "textures/items/sword_sp.png"
+    },
+    "longsword_wood": {
+      "textures": "textures/items/longsword_wood.png"
+    },
+    "longsword_stone": {
+      "textures": "textures/items/longsword_stone.png"
+    },
+    "longsword_copper": {
+      "textures": "textures/items/longsword_copper.png"
+    },
+    "longsword_iron": {
+      "textures": "textures/items/longsword_iron.png"
+    },
+    "longsword_gold": {
+      "textures": "textures/items/longsword_gold.png"
+    },
+    "longsword_diamond": {
+      "textures": "textures/items/longsword_diamond.png"
+    },
+    "longsword_netherite": {
+      "textures": "textures/items/longsword_netherite.png"
     },
     "wond":{
       "textures": "textures/items/wond.png"
@@ -272,6 +299,9 @@
     "txpa": {
       "textures":"textures/items/txpa.png"
     },
+    "totem_f": {
+      "textures":"textures/items/totem_f.png"
+    },
     "partner": {
       "textures":"textures/items/partner.png"
     },
@@ -280,6 +310,12 @@
     },
     "ball": {
       "textures":"textures/items/ball.png"
+    },
+    "acbook": {
+      "textures":"textures/items/acbook.png"
+    },
+    "shield_q": {
+      "textures":"textures/items/shield.png"
     },
     "dumpling_a": {
       "textures":"textures/ny/dumpling_a.png"

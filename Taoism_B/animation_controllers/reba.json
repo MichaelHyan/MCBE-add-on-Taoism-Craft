@@ -1,0 +1,135 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.reba":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"reba_a":"query.life_time == 2"},
+						{"reba_b":"query.life_time == 4"},
+						{"reba_c":"query.life_time == 9"},
+						{"reba_d":"query.life_time == 14"},
+						{"reba_e":"query.life_time == 20"},
+						{"reba_f":"query.life_time == 25"},
+						{"reba_g":"query.life_time == 32"},
+						{"reba_h":"query.life_time == 37"},
+						{"reba_i":"query.life_time == 40"},
+						{"reba_j":"query.life_time == 42"},
+						{"reba_k":"query.life_time == 43"}
+					]
+				},
+				"reba_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §7。。。"
+					]
+				},
+				"reba_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c人，物，都是一样的。"
+					]
+				},
+				"reba_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c道生一，一生二，二生三，三生万物，万物皆由道所生。"
+					]
+				},
+				"reba_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c人本是天地造化，先天之炁与后天之精的结合产物。"
+					]
+				},
+				"reba_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c而我们日常所见的人，以形为舍，以精为基，以气为用，以神为主宰。"
+					]
+				},
+				"reba_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c精滋养身心，气推动运化，神统摄精气，三者缺一不可。"
+					]
+				},
+				"reba_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c所谓修炼，便是性命双修：修命则炼精炼气，脱胎换骨；修性则炼神合道，明心见性。"
+					]
+				},
+				"reba_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c所谓修仙，不过是复归大道本源，却是无数人穷尽一生所求。"
+					]
+				},
+				"reba_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c到头来，那还算得上是修仙吗？"
+					]
+				},
+				"reba_j": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §7。。。"
+					]
+				},
+				"reba_k": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/inputpermission set @a movement enabled",
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

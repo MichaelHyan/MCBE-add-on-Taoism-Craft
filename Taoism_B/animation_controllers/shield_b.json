@@ -1,0 +1,134 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.shield_b":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"shield_ca":"query.scoreboard('shield') == 1 && query.scoreboard('shieldhit') > 0 && query.scoreboard('shieldhit') <= 10"},
+						{"shield_cb":"query.scoreboard('shield') == 1 && query.scoreboard('shieldhit') > 10 && query.scoreboard('shieldhit') <= 20"},
+						{"shield_cc":"query.scoreboard('shield') == 1 && query.scoreboard('shieldhit') > 20 && query.scoreboard('shieldhit') <= 30"},
+						{"shield_cd":"query.scoreboard('shield') == 1 && query.scoreboard('shieldhit') > 30 && query.scoreboard('shieldhit') <= 40"},
+						{"shield_ce":"query.scoreboard('shield') == 1 && query.scoreboard('shieldhit') > 40 && query.scoreboard('shieldhit') <= 50"},
+						{"shield_cf":"query.scoreboard('shield') == 1 && query.scoreboard('shieldhit') > 50 && query.scoreboard('shieldhit') <= 60"},
+						{"shield_cg":"query.scoreboard('shield') == 1 && query.scoreboard('shieldhit') > 60 && query.scoreboard('shieldhit') <= 70"},
+						{"shield_ch":"query.scoreboard('shield') == 1 && query.scoreboard('shieldhit') > 70 && query.scoreboard('shieldhit') <= 80"},
+						{"shield_ci":"query.scoreboard('shield') == 1 && query.scoreboard('shieldhit') > 80 && query.scoreboard('shieldhit') <= 90"},
+						{"shield_cj":"query.scoreboard('shield') == 1 && query.scoreboard('shieldhit') > 90 && query.scoreboard('shieldhit') <= 100"},
+						{"shield_ck":"query.scoreboard('shield') == 1 && query.scoreboard('shieldhit') > 100"}
+					]
+				},
+				"shield_ca": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar §7>§7x§7<"
+					]
+				},
+				"shield_cb": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar §7>§fx§7<"
+					]
+				},
+				"shield_cc": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar §7>§ex§7<"
+					]
+				},
+				"shield_cd": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar §7>§dx§7<"
+					]
+				},
+				"shield_ce": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar §7>§cx§7<"
+					]
+				},
+				"shield_cf": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar §7>§bx§7<"
+					]
+				},
+				"shield_cg": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar §7>§ax§7<"
+					]
+				},
+				"shield_ch": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar §7>§9x§7<"
+					]
+				},
+				"shield_ci": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar §7>§6x§7<"
+					]
+				},
+				"shield_cj": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar §7>§5x§7<"
+					]
+				},
+				"shield_ck": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar §7>§k§fx§r§7<"
+					]
+				}
+			}
+		}
+ 	}
+ }

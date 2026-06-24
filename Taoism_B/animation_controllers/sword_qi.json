@@ -286,6 +286,7 @@
 					],
 					"on_entry": [
 						"/scoreboard players add @s charge 1",
+						"/particle minecraft:end_chest ~ ~0.5 ~",
 						"/title @s actionbar §7|==x==|§0"
 					]
 				},

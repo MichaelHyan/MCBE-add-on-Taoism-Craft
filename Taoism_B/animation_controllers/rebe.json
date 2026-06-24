@@ -1,0 +1,234 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.rebe":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"rebe_a":"query.life_time == 2"},
+						{"rebe_b":"query.life_time == 4"},
+						{"rebe_c":"query.life_time == 5"},
+						{"rebe_d":"query.life_time == 8"},
+						{"rebe_e":"query.life_time == 12"},
+						{"rebe_f":"query.life_time == 16"},
+						{"rebe_g":"query.life_time == 20"},
+						{"rebe_h":"query.life_time == 21"},
+						{"rebe_i":"query.life_time == 23"},
+						{"rebe_j":"query.life_time == 29"},
+						{"rebe_k":"query.life_time == 31"},
+						{"rebe_l":"query.life_time == 33"},
+						{"rebe_m":"query.life_time == 37"},
+						{"rebe_n":"query.life_time == 40"},
+						{"rebe_o":"query.life_time == 41"},
+						{"rebe_p":"query.life_time == 44"},
+						{"rebe_q":"query.life_time == 47"},
+						{"rebe_r":"query.life_time == 51"},
+						{"rebe_s":"query.life_time == 53"},
+						{"rebe_t":"query.life_time == 54"}
+					]
+				},
+				"rebe_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §7。。。"
+					]
+				},
+				"rebe_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9道长，有件事我不明白。"
+					]
+				},
+				"rebe_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9不死图腾是什么？"
+					]
+				},
+				"rebe_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9这是什么东西，值得人们去相互残杀？"
+					]
+				},
+				"rebe_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9我甚至看到有的人为了得到这件东西，竟然连父母都不放过。"
+					]
+				},
+				"rebe_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c你常年留在人间，比我更接近真相，为何要问我呢？"
+					]
+				},
+				"rebe_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c我不妨告诉你，这正源于你为了偷用法器做的小把戏。"
+					]
+				},
+				"rebe_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9道长，这话怎讲？"
+					]
+				},
+				"rebe_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c人，大致可以认为由炁构成。"
+					]
+				},
+				"rebe_j": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c即使肉体破灭，如果有合适的方式重新聚集自然存在的炁，可依据残存的神重构身体。"
+					]
+				},
+				"rebe_k": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c不死图腾便是这种东西。"
+					]
+				},
+				"rebe_l": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c而它的前体，正是[模糊不清的声音]。"
+					]
+				},
+				"rebe_m": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c依我看，你到底是没有低调行事，让人发现了此物的存在了吧。"
+					]
+				},
+				"rebe_n": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §9可是它没有人的完整结构，没有自己驱动炁的能力啊？"
+					]
+				},
+				"rebe_o": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c你怎能断定没有？"
+					]
+				},
+				"rebe_p": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c缺少人的结构，可以用人的结构弥补。"
+					]
+				},
+				"rebe_q": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c以你的性格，肯定是无从得知如何做到的。"
+					]
+				},
+				"rebe_r": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §c但你为何不想想，为什么人们开始放弃了修炼，转而去杀人放火？"
+					]
+				},
+				"rebe_s": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say §7。。。"
+					]
+				},
+				"rebe_t": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/inputpermission set @a movement enabled",
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

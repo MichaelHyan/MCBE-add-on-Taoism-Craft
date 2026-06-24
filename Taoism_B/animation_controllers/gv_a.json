@@ -1,0 +1,65 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.gv_a":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"gv_a_a":"query.scoreboard('gv') == 1 || query.scoreboard('gv') == 2 && query.scoreboard('voltage') < 100 && query.is_in_water == 0 && !query.is_sneaking"},
+						{"gv_a_c":"query.scoreboard('gv') == 1 && query.scoreboard('voltage') > 0 && query.is_in_water == 0 && query.is_sneaking"},
+						{"gv_a_d":"query.scoreboard('gv') == 1 && query.scoreboard('voltage') > -5 && query.scoreboard('voltage') <= 0 && query.is_in_water == 0 && query.is_sneaking || query.is_jumping"},
+						{"gv_a_e":"query.scoreboard('gv') == 1 && query.scoreboard('voltage') >= 0 && query.is_in_water == 1 && query.is_sneaking"}
+					]
+				},
+				"gv_a_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s voltage 2",
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/effect @s health_boost infinite 4 true"
+					]
+				},
+				
+				"gv_a_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s voltage -2",
+						"/effect @s regeneration 1 5 true",
+						"/damage @e[r=3,type=!player,type=!item,family=!taoism] 1",
+						"/damage @e[tag=qlock] 5",
+						"/effect @s slow_falling 1 1 true",
+						"/particle minecraft:sonic_explosion ~ ~0.5 ~"
+					]
+				},
+				"gv_a_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s voltage -30"
+					]
+				},
+				"gv_a_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s voltage -50"
+					]
+				}
+			}
+		}
+ 	}
+ }

@@ -1,0 +1,25 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.shield.idle": {
+			"loop": true,
+			"animation_length": 4,
+			"bones": {
+				"a": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"2.0": [0, 180, 0],
+						"4.0": [0, 360, 0]
+					}
+				},
+				"b": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"2.0": [0, -177.5, 0],
+						"4.0": [0, -357.5, 0]
+					}
+				}
+			}
+		}
+	}
+}

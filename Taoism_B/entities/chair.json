@@ -4,7 +4,7 @@
     "description": {
       "identifier": "entity:chair",
       "spawn_category": "creature",
-      "is_spawnable": true,
+      "is_spawnable": false,
       "is_summonable": true,
       "properties": {
         "minecraft:can_move": {

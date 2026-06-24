@@ -3,16 +3,18 @@
   "minecraft:entity": {
     "description": {
       "identifier": "entity:partner",
-      "is_spawnable": true,
+      "is_spawnable": false,
       "is_summonable": true,
       "is_experimental": false,
       "scripts": {
 				"animate": [
-					"partner"
+					"partner",
+          "partnerheal"
 				]
 			},
       "animations": {
-				"partner": "controller.animation.partner"
+				"partner": "controller.animation.partner",
+        "partnerheal": "controller.animation.partnerheal"
 			}
     },
     "component_groups": {
@@ -229,6 +231,76 @@
         },
         "minecraft:equipment": {
           "table": "partner/netherite_spear.json"
+        }
+      },
+      "longsword_wood": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/longsword_wood.json"
+        }
+      },
+      "longsword_stone": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/longsword_stone.json"
+        }
+      },
+      "longsword_copper": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/longsword_copper.json"
+        }
+      },
+      "longsword_gold": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/longsword_gold.json"
+        }
+      },
+      "longsword_iron": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/longsword_iron.json"
+        }
+      },
+      "longsword_diamond": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/longsword_diamond.json"
+        }
+      },
+      "longsword_netherite": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "target_dist": 1.2,
+          "speed_multiplier": 1.25
+        },
+        "minecraft:equipment": {
+          "table": "partner/longsword_netherite.json"
         }
       },
       "tame": {
@@ -716,6 +788,160 @@
             },
             "use_item": true,
             "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "items:longsword_wooden"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "longsword_wood"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "items:longsword_copper"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "longsword_copper"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "items:longsword_stone"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "longsword_stone"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "items:longsword_diamond"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "longsword_diamond"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "items:longsword_gold"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "longsword_gold"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "items:longsword_iron"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "longsword_iron"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "items:longsword_netherite"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "longsword_netherite"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
           }
         ],
         "minecraft:health": {
@@ -792,9 +1018,14 @@
     },
     "components": {
       "minecraft:nameable": {},
+      "minecraft:inventory": {
+        "can_be_siphoned_from": false,
+        "inventory_size": 27,
+        "container_type": "chest_boat"
+      },
       "minecraft:tameable": {
         "probability": 1,
-        "tameItems": "minecraft:emerald",
+        "tameItems": "items:cinnabar_crystal",
         "tame_event": {
           "event": "tamed",
           "target": "self"
@@ -1058,6 +1289,90 @@
         "add": {
           "component_groups": [
             "netherite_spear"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "longsword_wood": {
+        "add": {
+          "component_groups": [
+            "longsword_wood"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "longsword_stone": {
+        "add": {
+          "component_groups": [
+            "longsword_stone"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "longsword_copper": {
+        "add": {
+          "component_groups": [
+            "longsword_copper"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "longsword_iron": {
+        "add": {
+          "component_groups": [
+            "longsword_iron"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "longsword_gold": {
+        "add": {
+          "component_groups": [
+            "longsword_gold"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "longsword_diamond": {
+        "add": {
+          "component_groups": [
+            "longsword_diamond"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "bow"
+          ]
+        }
+      },
+      "longsword_netherite": {
+        "add": {
+          "component_groups": [
+            "longsword_netherite"
           ]
         },
         "remove": {

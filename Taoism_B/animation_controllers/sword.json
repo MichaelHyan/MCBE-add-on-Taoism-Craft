@@ -28,8 +28,6 @@
 						{"sword_u_e":"query.get_equipped_item_name=='sword_u' && variable.attack_time && query.is_jumping && query.player_level > 49"},
 						{"sword_sp_a":"query.get_equipped_item_name=='sword_sp' && !variable.attack_time && query.player_level > 19"},
 						{"sword_sp_b":"query.get_equipped_item_name=='sword_sp' && variable.attack_time && query.player_level > 19"},
-						{"ring_a":"query.get_equipped_item_name=='ring' && !variable.attack_time && query.player_level > 14"},
-						{"ring_b":"query.get_equipped_item_name=='ring' && variable.attack_time && query.player_level > 14"},
 						{"whisk":"query.get_equipped_item_name=='whisk' && variable.attack_time && query.player_level > 14"}
 					]
 				},
@@ -307,28 +305,6 @@
 					"on_entry": [
 						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
 						"/effect @s wither 2 255 true"
-					]
-				},
-				"ring_a": {
-					"transitions": [
-							{
-								"base_jeta": "(1.0)"
-							}
-					],
-					"on_entry": [
-						"/effect @s resistance 1 3 true"
-					]
-				},
-				"ring_b": {
-					"transitions": [
-							{
-								"base_jeta": "(1.0)"
-							}
-					],
-					"on_entry": [
-						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
-						"/replaceitem entity @e[family=!taoism,r=10] slot.weapon.mainhand 0 air",
-						"/effect @e[family=!taoism,r=10] weakness 30 255 true"
 					]
 				},
 				"whisk": {

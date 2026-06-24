@@ -1,0 +1,61 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "entity:talisman_ql",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "scripts": {
+				"animate": [
+					"talisman_ql"
+				]
+			},
+      "animations": {
+				"talisman_ql": "controller.animation.talisman_ql"
+			}
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0.5,
+        "height": 0.5
+      },
+      "minecraft:type_family": {
+        "family": [
+          "mob",
+          "taoism"
+        ]
+      },
+      "minecraft:projectile": {
+        "on_hit": {
+        },
+        "arrow_effect": {
+          "apply_effect_to_blocking_targets": false
+        },
+        "power": 5,
+        "gravity": 0,
+        "inertia": 1,
+        "liquid_inertia": 1,
+        "uncertainty_base": 0,
+        "uncertainty_multiplier": 0,
+        "anchor": 2,
+        "offset": [ 0, -0.1, 0 ],
+        "reflect_on_hurt": false,
+        "catch_fire": false
+      },
+	    "minecraft:physics": {
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+        "default_values": {
+          "max_optimized_distance": 100.0,
+          "max_dropped_ticks": 7,
+          "use_motion_prediction_hints": true
+        }
+      }
+    }
+  }
+}

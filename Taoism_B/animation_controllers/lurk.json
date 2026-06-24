@@ -1,0 +1,62 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.lurk":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"lurk_a":"!query.is_sneaking"},
+						{"lurk_b":"query.is_sneaking && !variable.attack_time && query.scoreboard('lurk') < 30"},
+						{"lurk_c":"query.is_sneaking && !variable.attack_time && query.scoreboard('lurk') >= 30"},
+						{"lurk_d":"query.is_sneaking && variable.attack_time && query.scoreboard('lurk') >= 30"}
+					]
+				},
+				"lurk_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard objectives add lurk dummy",
+						"/scoreboard players set @s lurk 0"
+					]
+				},
+				"lurk_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s lurk 1"
+					]
+				},
+				"lurk_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s invisibility 1 1 true",
+						"/effect @s strength 1 5 true"
+					]
+				},
+				"lurk_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s lurk 0",
+						"/effect @s invisibility 0 255 true",
+						"/effect @s strength 0 255 true",
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5"
+					]
+				}
+			}
+		}
+ 	}
+ }

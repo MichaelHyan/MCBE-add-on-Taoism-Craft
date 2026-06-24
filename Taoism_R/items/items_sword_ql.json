@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "items:sword_ql",
+      "category": "Nature"
+    },
+
+    "components": {
+      "minecraft:icon": "sword_ql",
+      "minecraft:render_offsets": "sword_ql"
+    }
+  }
+}

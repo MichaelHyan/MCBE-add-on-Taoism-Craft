@@ -1,0 +1,38 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.shield_a":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"shield_c":"query.scoreboard('shield') == 0 && query.scoreboard('shieldhit') > 0"},
+						{"shield_d":"query.scoreboard('shield') == 1 && variable.attack_time"}
+					]
+				},
+				"shield_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:knockback_roar_particle ~ ~1 ~",
+						"/damage @e[r=15,type=!item,family=!taoism] 5",
+						"/scoreboard players add @s shieldhit -3"
+					]
+				},
+				"shield_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:cauldron_explosion_emitter ~ ~ ~",
+						"/scoreboard players add @s shieldhit 1"
+					]
+				}
+			}
+		}
+ 	}
+ }

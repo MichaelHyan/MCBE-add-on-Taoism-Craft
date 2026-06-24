@@ -1,0 +1,33 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:longsword_wooda"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "  a",
+      " a ",
+      "b  "
+    ],
+    "key": {
+      "a": {
+        "item": "oak_planks"
+      },
+      "b": {
+        "item": "stick"
+      }
+    },
+    "unlock": [
+      {
+        "item": "crafting_table"
+      }
+    ],
+    "result": {
+      "item": "items:longsword_wood",
+      "count": 1
+    }
+  }
+}

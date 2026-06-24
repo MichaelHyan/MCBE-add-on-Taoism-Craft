@@ -1,0 +1,26 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.sword_ql",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [4, 6, -5], "size": [1, 1, 17], "pivot": [6, 6, 10], "rotation": [-30, 0, 0], "uv": [0, 0]},
+						{"origin": [4, 6, -11], "size": [1, 1, 5], "pivot": [6, 6, 10], "rotation": [-30, 0, 0], "uv": [0, 18]},
+						{"origin": [4, 13, -4], "size": [1, 2, 2], "pivot": [0, 14, -4], "rotation": [15, 0, 0], "uv": [12, 18]}
+					]
+				}
+			]
+		}
+	]
+}

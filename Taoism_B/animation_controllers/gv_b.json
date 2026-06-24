@@ -1,0 +1,139 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.gv_b":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"gv_b_a":"query.scoreboard('gv') == 1 && query.is_sneaking && variable.attack_time"},
+						{"gv_b_b":"query.scoreboard('gv') == 1 && query.is_jumping && variable.attack_time"},
+						{"gv_b_c":"query.scoreboard('gv') == 2 && query.is_sneaking"},
+						{"gv_b_d":"query.scoreboard('gv') == 2 && !query.is_sneaking && !variable.attack_time"},
+						{"gv_b_e":"query.scoreboard('gv') == 2 && query.scoreboard('voltage') > 0 && !query.is_sneaking && variable.attack_time"},
+						{"gv_b_f":"query.scoreboard('gv') == 1 && query.is_jumping && query.scoreboard('charge') < 10"},
+						{"gv_b_g":"query.scoreboard('gv') == 1 && query.is_jumping && query.scoreboard('charge') == 10 && query.scoreboard('voltage') > 0"},
+						{"gv_b_h":"query.scoreboard('gv') == 1 && !query.is_jumping && !query.is_sneaking"}
+					]
+				},
+				"gv_b_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s voltage -20",
+						"/summon lightning_bolt ~ ~ ~5",
+						"/summon lightning_bolt ~2 ~ ~4",
+						"/summon lightning_bolt ~4 ~ ~2",
+						"/summon lightning_bolt ~5 ~ ~",
+						"/summon lightning_bolt ~4 ~ ~-2",
+						"/summon lightning_bolt ~2 ~ ~-4",
+						"/summon lightning_bolt ~ ~ ~-5",
+						"/summon lightning_bolt ~-2 ~ ~-4",
+						"/summon lightning_bolt ~-4 ~ ~-2",
+						"/summon lightning_bolt ~-5 ~ ~",
+						"/summon lightning_bolt ~-4 ~ ~2",
+						"/summon lightning_bolt ~-2 ~ ~4"
+					]
+				},
+				"gv_b_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s fire_resistance infinite 1 true",
+						"/effect @s resistance infinite 1 true",
+						"/effect @s invisibility infinite 1 true",
+						"/effect @s speed infinite 3 true",
+						"/effect @s darkness infinite 1 true",
+						"/effect @s jump_boost infinite 1 true",
+						"/tp @s ~ ~ ~ facing ~-1 ~1 ~-1",
+						"/camera @s set minecraft:fixed_boom pos ~-5 ~-5 ~3 facing ~ ~1 ~",
+						"/inputpermission set @s camera disabled",
+						"/scoreboard players set @s gv 2"
+					]
+				},
+				"gv_b_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s fire_resistance 0 1 true",
+						"/effect @s resistance 0 1 true",
+						"/effect @s invisibility 0 1 true",
+						"/effect @s speed 0 3 true",
+						"/effect @s darkness 0 1 true",
+						"/effect @s jump_boost 0 1 true",
+						"/camera @s clear",
+						"/inputpermission set @s camera enabled",
+						"/scoreboard players set @s gv 1"
+					]
+				},
+				"gv_b_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:sculk_sensor_redstone_particle ~ ~0.1 ~",
+						"/particle minecraft:sculk_sensor_redstone_particle ~0.1 ~0.1 ~",
+						"/particle minecraft:sculk_sensor_redstone_particle ~-0.1 ~0.1 ~",
+						"/particle minecraft:sculk_sensor_redstone_particle ~ ~0.1 ~0.1",
+						"/particle minecraft:sculk_sensor_redstone_particle ~ ~0.1 ~-0.1"
+					]
+				},
+				"gv_b_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon lightning_bolt",
+						"/particle minecraft:sonic_explosion ~ ~0.5 ~",
+						"/scoreboard players add @s voltage -20",
+						"/damage @e[r=3,type=!item,type=!player,family=!taoism] 10"
+					]
+				},
+				"gv_b_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1"
+					]
+				},
+				"gv_b_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s voltage -5",
+						"/effect @s levitation 1 3 true",
+						"/particle minecraft:sonic_explosion ~ ~0.5 ~"
+					]
+				},
+				"gv_b_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s charge 0"
+					]
+				}
+			}
+		}
+ 	}
+ }

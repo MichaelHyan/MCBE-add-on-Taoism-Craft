@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "items:shield_q",
+      "category": "Nature"
+    },
+
+    "components": {
+      "minecraft:icon": "shield_q",
+      "minecraft:render_offsets": "shield_q"
+    }
+  }
+}

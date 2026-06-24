@@ -1,0 +1,33 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:longsword_iron"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "  a",
+      " a ",
+      "b  "
+    ],
+    "key": {
+      "a": {
+        "item": "iron_ingot"
+      },
+      "b": {
+        "item": "stick"
+      }
+    },
+    "unlock": [
+      {
+        "item": "iron_ingot"
+      }
+    ],
+    "result": {
+      "item": "items:longsword_iron",
+      "count": 1
+    }
+  }
+}

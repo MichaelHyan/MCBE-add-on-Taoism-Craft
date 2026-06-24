@@ -1,0 +1,210 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.ring_a":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+                        {"ring_pa":"query.player_level > 24 && query.get_equipped_item_name=='ring' && !query.is_using_item && query.scoreboard('chargea') < 11"},
+						{"ring_pb":"query.player_level > 24 && query.get_equipped_item_name=='ring' && !query.is_using_item && query.scoreboard('chargea') >= 11"},
+						{"ring_ca":"query.player_level > 24 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 0"},
+                        {"ring_cb":"query.player_level > 24 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 1"},
+                        {"ring_cc":"query.player_level > 24 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 2"},
+                        {"ring_cd":"query.player_level > 24 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 3"},
+                        {"ring_ce":"query.player_level > 24 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 4"},
+                        {"ring_cf":"query.player_level > 24 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 5"},
+                        {"ring_cg":"query.player_level > 24 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 6"},
+                        {"ring_ch":"query.player_level > 24 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 7"},
+                        {"ring_ci":"query.player_level > 24 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 8"},
+                        {"ring_cj":"query.player_level > 24 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 9"},
+                        {"ring_ck":"query.player_level > 24 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 10"},
+                        {"ring_cl":"query.player_level > 24 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 11"},
+                        {"ring_cm":"query.player_level > 24 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 12"}
+					]
+				},
+				"ring_pa": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+                        "/effect @s resistance 1 3 true",
+						"/effect @s strength 1 3 true",
+						"/scoreboard players set @s chargea 0"
+					]
+				},
+                "ring_pb": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+                        "/tag @e[type=!item,type=!arrow,family=!taoism,r=15] add qlock",
+                        "/replaceitem entity @e[tag=qlock] slot.weapon.mainhand 0 air",
+                        "/summon entity:ring",
+						"/scoreboard players set @s chargea 0"
+					]
+				},
+				"ring_ca": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard objectives add chargea dummy",
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/scoreboard players add @s chargea 1",
+						"/title @s actionbar §7§0||||||||||"
+					]
+				},
+                "ring_cb": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/scoreboard players add @s chargea 1",
+						"/title @s actionbar §7|§0|||||||||"
+					]
+				},
+                "ring_cc": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/scoreboard players add @s chargea 1",
+						"/title @s actionbar §7||§0||||||||"
+					]
+				},
+                "ring_cd": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/scoreboard players add @s chargea 1",
+						"/title @s actionbar §7|||§0|||||||"
+					]
+				},
+                "ring_ce": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/scoreboard players add @s chargea 1",
+						"/title @s actionbar §7||||§0||||||"
+					]
+				},
+                "ring_cf": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/scoreboard players add @s chargea 1",
+						"/title @s actionbar §7|||||§0|||||"
+					]
+				},
+                "ring_cg": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/scoreboard players add @s chargea 1",
+						"/title @s actionbar §7||||||§0||||"
+					]
+				},
+                "ring_ch": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/scoreboard players add @s chargea 1",
+						"/title @s actionbar §7|||||||§0|||"
+					]
+				},
+                "ring_ci": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/scoreboard players add @s chargea 1",
+						"/title @s actionbar §7||||||||§0||"
+					]
+				},
+                "ring_cj": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/scoreboard players add @s chargea 1",
+						"/title @s actionbar §7|||||||||§0|"
+					]
+				},
+                "ring_ck": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/scoreboard players add @s chargea 1",
+						"/title @s actionbar §7||||||||||§0"
+					]
+				},
+                "ring_cl": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/scoreboard players add @s chargea 1",
+						"/title @s actionbar §4||||||||||"
+					]
+				},
+                "ring_cm": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/scoreboard players add @s chargea -1",
+						"/title @s actionbar §6||||||||||"
+					]
+				}
+			}
+		}
+ 	}
+ }
