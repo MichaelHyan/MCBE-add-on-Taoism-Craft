@@ -18,6 +18,8 @@
 			}
     },
     "component_groups": {
+      "minecraft:leashable": {},
+      "minecraft:leashable_to": {},
       "bow": {
         "minecraft:equipment": {
           "table": "partner/bow.json"

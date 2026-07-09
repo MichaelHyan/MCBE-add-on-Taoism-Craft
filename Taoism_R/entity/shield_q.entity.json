@@ -2,16 +2,16 @@
   "format_version": "1.8.0",
   "minecraft:client_entity": {
     "description": {
-      "identifier": "entity:shield",
+      "identifier": "entity:shield_q",
       "materials": {
         "default": "base",
         "invisible": "baseb"
       },
       "textures": {
-        "default": "textures/entity/shield"
+        "default": "textures/entity/shield_q"
       },
       "geometry": {
-        "default": "geometry.shield"
+        "default": "geometry.shield_q"
       },
 
       "scripts": {
