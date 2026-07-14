@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "items:sword_tg",
+      "category": "Nature"
+    },
+
+    "components": {
+      "minecraft:icon": "sword_tg",
+      "minecraft:render_offsets": "sword_tg"
+    }
+  }
+}

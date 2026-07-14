@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "items:sword_ts",
+      "category": "Nature"
+    },
+
+    "components": {
+      "minecraft:icon": "sword_ts",
+      "minecraft:render_offsets": "sword_ts"
+    }
+  }
+}

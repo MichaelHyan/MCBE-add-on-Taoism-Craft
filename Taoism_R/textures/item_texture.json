@@ -89,6 +89,12 @@
     "sword_t": {
       "textures": "textures/items/sword_t.png"
     },
+    "sword_tg": {
+      "textures": "textures/items/sword_tg.png"
+    },
+    "sword_ts": {
+      "textures": "textures/items/sword_ts.png"
+    },
     "sword_b": {
       "textures": "textures/items/sword_b.png"
     },

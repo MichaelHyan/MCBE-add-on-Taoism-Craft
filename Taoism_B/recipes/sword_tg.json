@@ -1,0 +1,39 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:sword_tg"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "dad",
+      "dbd",
+      "dcd"
+    ],
+    "key": {
+      "a": {
+        "item": "items:cinnabar_powder"
+      },
+      "b": {
+        "item": "items:sword_t"
+      },
+      "c": {
+        "item": "items:qi"
+      },
+      "d": {
+        "item": "items:spe"
+      }
+    },
+    "unlock": [
+      {
+        "item": "items:sword_t"
+      }
+    ],
+    "result": {
+      "item": "items:sword_tg",
+      "count": 1
+    }
+  }
+}
