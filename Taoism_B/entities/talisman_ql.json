@@ -28,20 +28,26 @@
       },
       "minecraft:projectile": {
         "on_hit": {
+          "impact_damage": {
+            "damage": [ 0, 0 ],
+            "knockback": true,
+            "semi_random_diff_damage": false,
+            "destroy_on_hit": false
+          },
+          "stick_in_ground": {
+            "shake_time": 0.0
+          },
+          "arrow_effect": {
+            "apply_effect_to_blocking_targets": false
+          }
         },
-        "arrow_effect": {
-          "apply_effect_to_blocking_targets": false
-        },
-        "power": 5,
+        "power": 1.6,
         "gravity": 0,
-        "inertia": 1,
-        "liquid_inertia": 1,
         "uncertainty_base": 0,
         "uncertainty_multiplier": 0,
-        "anchor": 2,
-        "offset": [ 0, -0.1, 0 ],
-        "reflect_on_hurt": false,
-        "catch_fire": false
+        "anchor": 1,
+        "should_bounce": true,
+        "offset": [ 0, -0.1, 0 ]
       },
 	    "minecraft:physics": {
       },

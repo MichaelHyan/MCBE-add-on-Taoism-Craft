@@ -20,6 +20,17 @@
         "width": 0.1,
         "height": 0.1
       },
+      "minecraft:behavior.hurt_by_target": {
+        "entity_types": {
+          "filters": {
+            "operator": "!=",
+            "test": "is_family",
+            "subject": "other",
+            "value": "shulker"
+          }
+        },
+        "priority": 2
+      },
       "minecraft:type_family": {
         "family": [
           "mob",

@@ -29,34 +29,26 @@
       "minecraft:projectile": {
         "on_hit": {
           "impact_damage": {
-            "damage": 1,
+            "damage": [ 3, 6 ],
             "knockback": true,
-            "semi_random_diff_damage": true
+            "semi_random_diff_damage": false,
+            "destroy_on_hit": true
           },
-          "definition_event": {
-            "affect_projectile": true,
-            "event_trigger": {
-              "event": "minecraft:explode",
-              "target": "self"
-            }
+          "stick_in_ground": {
+            "shake_time": 0.0
           },
-          "particle_on_hit": {
-            "particle_type": "snowballpoof",
-            "num_particles": 10,
-            "on_entity_hit": true,
-            "on_other_hit": true
+          "arrow_effect": {
+            "apply_effect_to_blocking_targets": false
           }
         },
-        "power": 5,
-        "gravity": 0,
-        "inertia": 1,
-        "liquid_inertia": 1,
-        "uncertainty_base": 0,
-        "uncertainty_multiplier": 0,
-        "anchor": 2,
-        "offset": [ 0, -0.1, 0 ],
-        "reflect_on_hurt": true,
-        "catch_fire": false
+        "hit_sound": "bow.hit",
+        "power": 1.6,
+        "gravity": 0.05,
+        "uncertainty_base": 16,
+        "uncertainty_multiplier": 4,
+        "anchor": 1,
+        "should_bounce": true,
+        "offset": [ 0, -0.1, 0 ]
       },
 	    "minecraft:physics": {
       },
