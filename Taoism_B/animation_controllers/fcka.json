@@ -5,7 +5,7 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"fcka_a":"query.health >= 20 && query.is_sprinting"},
+						{"fcka_a":"query.health == 20 || query.health == 40 && query.is_sprinting"},
 						{"fcka_b":"query.health <= 6 && query.health >= 3"},
 						{"fcka_c":"query.health < 3"}
 					]

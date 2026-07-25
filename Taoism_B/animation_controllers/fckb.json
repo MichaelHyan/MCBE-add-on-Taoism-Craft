@@ -7,7 +7,7 @@
 					"transitions":[
 						{"fckb_a":"query.health <= 10 && query.health >= 5"},
 						{"fckb_b":"query.health < 5"},
-						{"fckb_c":"query.health >= 20"}
+						{"fckb_c":"query.health == 20 || query.health == 40"}
 					]
 				}, 
 				"fckb_a": {
