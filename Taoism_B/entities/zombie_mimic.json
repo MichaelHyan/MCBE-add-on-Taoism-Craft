@@ -38,7 +38,7 @@
         }
       },
       "minecraft:movement": {
-        "value": 0.3
+        "value": 0.4
       },
       "minecraft:navigation.climb": {
         "is_amphibious": true,
@@ -128,7 +128,7 @@
         "priority": 2,
         "speed_multiplier": 1,
         "target_dist": 0,
-        "max_dist": 3,
+        "max_dist": 2,
         "random_stop_interval": 100,
         "track_target": true,
         "reach_multiplier": 1.4

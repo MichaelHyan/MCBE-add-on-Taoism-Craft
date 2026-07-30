@@ -209,7 +209,9 @@
 					],
 					"on_entry": [
 						"/particle minecraft:totem_particle ~ ~1 ~",
-						"/damage @e[r=3,family=undead] 100"
+						"/damage @e[r=3,family=undead] 1",
+						"/effect @e[r=3,family=undead] slowness 60 255 true",
+						"/effect @e[r=3,family=undead] weakness 60 255 true"
 					]
 				},
 				"talisman_g": {

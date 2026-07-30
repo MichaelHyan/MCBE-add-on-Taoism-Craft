@@ -2,7 +2,7 @@
   "format_version": "1.8.0",
   "minecraft:entity": {
     "description": {
-      "identifier": "entity:zombie_mimic_sp",
+      "identifier": "entity:zombie_mimic_p",
       "is_spawnable": false,
       "is_summonable": true
     },
@@ -15,7 +15,7 @@
       "minecraft:nameable": {},
       "minecraft:health": {
         "value": 100,
-        "max": 200
+        "max": 150
       },
       "minecraft:hurt_on_condition": {
         "damage_conditions": {
@@ -27,8 +27,12 @@
         }
       },
       "minecraft:movement": {
-        "value": 0.3
+        "value": 0.5
       },
+      "minecraft:movement.jump": {
+        "jump_delay": [0.5, 1.5]
+      },
+      "minecraft:jump.static": {},
       "minecraft:navigation.climb": {
         "is_amphibious": true,
         "can_swim": true,
@@ -36,16 +40,17 @@
         "can_sink": false,
         "avoid_damage_blocks": true
       },
-      "minecraft:movement.basic": {},
-      "minecraft:jump.static": {},
       "minecraft:can_climb": {},
       "minecraft:despawn": {
         "despawn_from_distance": {}
       },
-      "minecraft:behavior.float": {
+      "minecraft:behavior.slime_float": {
         "priority": 1
       },
-      "minecraft:behavior.random_stroll": {
+      "minecraft:behavior.slime_keep_on_jumping": {
+        "priority": 5
+      },
+      "minecraft:behavior.slime_random_direction": {
         "priority": 4
       },
       "minecraft:behavior.look_at_player": {
@@ -105,7 +110,7 @@
         "value": 0.30
       },
       "minecraft:attack": {
-        "damage": 10,
+        "damage": 2,
         "effect_name": "wither",
         "effect_duration": 60
       },
@@ -117,13 +122,6 @@
         "random_stop_interval": 100,
         "track_target": true,
         "reach_multiplier": 1.4
-      },
-      "minecraft:behavior.leap_at_target": {
-        "priority": 4,
-        "yd": 0.4,
-        "must_be_on_ground": false,
-        "target_dist": 0.4,
-        "speed_multiplier": 1
       },
       "minecraft:behavior.flee_sun": {
         "priority": 2,

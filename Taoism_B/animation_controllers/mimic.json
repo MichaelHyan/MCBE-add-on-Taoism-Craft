@@ -6,7 +6,7 @@
 				"base_jeta":{
 					"transitions":[
 						{"despawn":"query.moon_phase != 0 && query.moon_phase != 4"},
-						{"enchant":"query.moon_phase == 0 || query.moon_phase == 4"}
+						{"enchant":"query.moon_phase == 0 || query.moon_phase == 4 && math.mod(query.life_time,5) == 0"}
 					]
 				},
 				"despawn": {
@@ -26,6 +26,8 @@
 							}
 					],
 					"on_entry": [
+						"/effect @s slowness 0 255 true",
+						"/effect @s weakness 0 255 true",
 						"/effect @e[family=undead,r=20] resistance 1 1",
 						"/effect @e[family=undead,r=20] strength 1 1"
 					]

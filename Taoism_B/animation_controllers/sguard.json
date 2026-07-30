@@ -1,0 +1,26 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.sguard":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"guard":"math.mod(query.life_time,5) == 0"}
+					]
+				},
+				"guard": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/damage @e[family=monster,r=15] 2",
+						"/effect @e[r=15,family=undead] slowness 60 2 true",
+						"/effect @e[r=15,family=undead] weakness 60 2 true"
+					]
+				}
+			}
+		}
+ 	}
+ }

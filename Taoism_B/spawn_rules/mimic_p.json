@@ -1,0 +1,31 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:spawn_rules": {
+    "description": {
+      "identifier": "entity:zombie_mimic_p",
+      "population_control": "monster"
+    },
+    "conditions": [
+      {
+        "minecraft:spawns_on_surface": {},
+        "minecraft:brightness_filter": {
+          "min": 0,
+          "max": 10,
+          "adjust_for_weather": false
+        },
+        "minecraft:weight": {
+          "default": 4
+        },
+        "minecraft:density_limit": {
+          "surface": 3,
+          "underground": 0
+        },
+        "minecraft:structure_feature": {
+          "test": "has_structure_feature",
+          "operator": "==",
+          "value": "village"
+        }
+      }
+    ]
+  }
+}
