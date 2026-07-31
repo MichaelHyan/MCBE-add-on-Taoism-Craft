@@ -116,6 +116,7 @@
         "value": 0.30
       },
       "minecraft:boss": {
+        "name": "entity.entity:zombie_mimic.name",
         "should_darken_sky": true,
         "hud_range": 55
       },
