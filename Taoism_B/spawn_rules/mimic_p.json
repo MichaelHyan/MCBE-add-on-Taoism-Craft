@@ -20,8 +20,8 @@
           "surface": 3,
           "underground": 0
         },
-        "minecraft:structure_feature": {
-          "test": "has_structure_feature",
+        "minecraft:biome_filter": {
+          "test": "has_biome_tag",
           "operator": "==",
           "value": "village"
         }

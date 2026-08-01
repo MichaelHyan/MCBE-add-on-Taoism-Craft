@@ -20,6 +20,13 @@
         "width": 0.1,
         "height": 0.1
       },
+      "minecraft:health": {
+        "value": 1,
+        "max": 1
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/sguard.json"
+      },
       "minecraft:behavior.hurt_by_target": {
         "entity_types": {
           "filters": {

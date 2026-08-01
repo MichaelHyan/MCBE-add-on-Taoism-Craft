@@ -14,8 +14,8 @@
     "components": {
       "minecraft:nameable": {},
       "minecraft:health": {
-        "value": 100,
-        "max": 150
+        "value": 300,
+        "max": 300
       },
       "minecraft:hurt_on_condition": {
         "damage_conditions": {
@@ -26,8 +26,9 @@
           "damage_per_tick": 4
         }
       },
+      "minecraft:burns_in_daylight": {},
       "minecraft:movement": {
-        "value": 0.5
+        "value": 0.6
       },
       "minecraft:movement.jump": {
         "jump_delay": [0.5, 1.5]

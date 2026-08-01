@@ -311,6 +311,9 @@
     "partner": {
       "textures":"textures/items/partner.png"
     },
+    "sguard": {
+      "textures":"textures/items/sguard.png"
+    },
     "glutinous_rice": {
       "textures":"textures/items/glutinous_rice.png"
     },
