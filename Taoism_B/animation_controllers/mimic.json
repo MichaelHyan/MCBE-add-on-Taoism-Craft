@@ -6,8 +6,8 @@
 				"base_jeta":{
 					"transitions":[
 						{"despawn":"query.moon_phase != 0 && query.moon_phase != 4"},
-						{"damage":"query.is_in_water_or_rain && math.mod(query.life_time,1) == 0"},
-						{"enchant":"query.moon_phase == 0 || query.moon_phase == 4 && math.mod(query.life_time,5) == 0"}
+						{"enchant":"query.moon_phase == 0 || query.moon_phase == 4 && math.mod(query.life_time,5) == 0"},
+						{"damage":"query.is_in_water_or_rain && math.mod(query.life_time,1) == 0"}
 					]
 				},
 				"despawn": {
