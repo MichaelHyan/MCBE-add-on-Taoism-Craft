@@ -384,7 +384,7 @@
 						"/scoreboard players set @s charge -300",
 						"/particle minecraft:totem_particle ~ ~1 ~",
 						"/weather thunder",
-						"/effect @e[type=!monster,r=5] regeneration 10 5 true" 
+						"/effect @e[family=!monster,r=5] regeneration 10 5 true" 
 					]
 				},
 				"sword_zb_c": {
