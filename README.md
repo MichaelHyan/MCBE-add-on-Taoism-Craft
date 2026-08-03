@@ -19,9 +19,7 @@
 
 低版本部分功能可能失效(如长矛不存在，北剑索敌失效等)
 
-### add-on内容 %
-
-进行了部分美工修复，新增了两种自然结构，对部分法器和符箓进行了强度平衡，新增多个武器和道具。
+### add-on内容
 
 加入多种道教主题新物品，涵盖建筑、经书、基础材料、符箓、法器、特殊道具等类别
 
@@ -41,19 +39,15 @@
 
 “道之所存，馆宇所栖，修行由此启，大道自此寻。”
 
-#### 竖穴石室墓 %
+#### 竖穴石室墓
 - 生成机制：世界自然生成，为玩法扩展场景，属于中等官员的大型墓穴
 - 核心功能：仿照真实的墓穴场景搭建，充满刺激的探险与丰厚的奖励并存。
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/temple1.png)
-
 “潜寐黄泉下，千载永不寤。”
 
-#### 甲字型墓 %
+#### 甲字型墓
 - 生成机制：世界自然生成，为玩法扩展场景，属于普通官员的中型墓穴
 - 核心功能：仿照真实的墓穴场景搭建，充满刺激的探险与丰厚的奖励并存。
-
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/temple1.png)
 
 “幽室一已闭，千年不复朝。”
 
@@ -78,31 +72,14 @@
 
   50级 三五雌雄斩邪剑、北方黑驰衮角断魔雄剑
 
-### v4.9.2 新特性 %
-#### 修正
-1. 旱魃血条显示，现在旱魃的血条上会显示“旱魃”而非”未知“
-2. 凹八卦镜和凸八卦镜加入CD
-3. 普通符箓效果修正为镇压
-4. 平衡部分符效果，对世界阴阳做出平衡
-5. 修改法钟合成表，使其更难合成，平衡武器强度以及优化前中期过渡
-
-#### 更新：
-1. 加入跳僵
-2. 加入（泰山）石敢当
-3. 加入墓穴结构，主世界会自然生成
-4. 加入尸丹残片、尸丹、炼化尸丹、净炼尸丹
-6. 加入赤旱尸煌剑
-7. 加入五雷镇旱七星剑
-8. 加入枯魂旱火葫芦、火丹
-
 ### 敌对生物
 
-#### 旱魃 %
+#### 旱魃
 
 阴气最重的晚上（满月之夜）或新月之夜会随机生成。拥有极高的血量和伤害，可强化其他僵尸，但受雷系法术克制，有可能会掉落尸丹。
 旱魃生成之后会持续强制改天气为晴天，同时若遭强行降雨或被水浸泡则会持续扣血。
 
-#### 跳僵 %
+#### 跳僵
 
 夜晚会随机生成，拥有极高的血量，但移动速度较慢，有可能会掉落尸丹碎片。
 
@@ -239,35 +216,35 @@
 
 “鱼胶凝鳔之华，黏性强韧，聚符气而固其效。”
 
-#### 尸丹碎片 %
+#### 尸丹碎片
 - 核心功能：合成材料（用于合成尸丹）
 - 获取方式：击败跳僵有概率获得
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/fish_gelatin.png)
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/pearlz_p.png)
 
 “枯骸凝煞结残丹，碎屑犹含蚀骨寒。莫嫌微物无多用，邪器炼成赖此端。”
 
-#### 尸丹 %
+#### 尸丹
 - 核心功能：合成材料，用于合成部分武器，后期可能会设定为邪修常用道具（更新预告）
 - 获取方式：击败旱魃会获得一个尸丹
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/fish_gelatin.png)
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/pearlz_o.png)
 
 “枯尸历劫结丹砂，旱气阴精萃一家。留与旁门铸邪刃，一挥赤地起尘沙。”
 
-#### 炼化尸丹 %
+#### 炼化尸丹
 - 核心功能：合成材料，用于合成净炼尸丹
 - 合成方式：8个元气 + 1个尸丹
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/fish_gelatin.png)
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/pearlz_s.png)
 
 “元炁烹丹涤秽痕，阴尸残煞渐消泯。一番炼化除浊质，留取清基作净根。”
 
-#### 净炼尸丹 %
+#### 净炼尸丹
 - 核心功能：合成材料，用于合成部分武器，后期可能会设定为正派常用道具（更新预告）
 - 合成方式：1个普通符箓 + 2个朱砂粉 + 1个炼化尸丹 + 1个元气
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/fish_gelatin.png)
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/pearlz.png)
 
 “以符涤浊净阴丹，朱砂凝阳化旧寒。洗尽尸中千缕煞，堪为正道铸锋翰。”
 
@@ -352,7 +329,7 @@
 “三台星者，天之三阶，符脚承其力，合水火土之精，聚三才之气。”
 
 ### 符箓类
-#### 普通的符箓 %
+#### 普通的符箓
 - 核心功能：
   1. (右键/交互键)使用时对生物有镇压（禁止其移动）的效果
   2. 主手持有时：移速提升
@@ -374,7 +351,7 @@
 
 “雷为天怒，符引其威，雷击所及，邪祟消亡。”
 
-#### 缩地符 %
+#### 缩地符
 - 核心功能：记录当前位置风水，可主动触发瞬移（包含笏的瞬移至亲友功能）
 - 合成方式：1个画符毛笔 + 1个残符【三清】 + 1个符脚【风】 + 1个鱼胶
 - 使用方式：包含笏的效果，左键/攻击键记录位置，并在原地生成一个微型土地庙，随后随时可使用shift/潜行键回到土地庙，的位置，可同时存在多个位置，所有玩家共享，按住space/跳跃的同时按下shift/潜行删除所有记录地点
@@ -753,7 +730,7 @@
 
 “纯阳飞剑凝正阳之炁，剑出如雷，斩妖除邪，千里之外可取魑魅之首。”
 
-#### 赤旱尸煌剑 %
+#### 赤旱尸煌剑
 - 核心功能：
   1. 主手持有时，强制改为天气为晴天，并且削除周身5×5×5的水方块。
   2. 主手持有时，将周身3×3的草方块变成泥土，每隔3秒在玩家脚底生成3×3的火，玩家自身免疫火焰伤害和岩浆伤害。
@@ -761,18 +738,18 @@
 - 副作用：拥有旱魃的力量也会受到旱魃尸丹的反噬，使用时会持续饥饿。
 - 合成方式：1个奇怪的木剑（邪） + 2个尸丹 + 2个朱砂晶体
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/sword_u.png)
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/sword_za.png)
 
 “旱既大甚，涤涤山川。旱魃为虐，如惔如焚。我心惮暑，忧心如熏。”
 
-#### 五雷镇旱七星剑 %
+#### 五雷镇旱七星剑
 - 核心功能：
   1. 主手持有时，提高血量上限到30个心，并有回血效果，玩家免疫火焰伤害。
   2. 主手持有时，会将脚下5×5的岩浆变成黑曜石。
   3. 下蹲蓄力强制降雨，并且能给自己以及10×10×10范围内队友或者是友好生物回血。
 - 合成方式：1个七星剑 + 2个净炼尸丹 + 2个元气
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/sword_u.png)
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/sword_zb.png)
 
 “雷车轣辘起层阴，雨脚垂垂一寸深。解得田畴千里旱，全归天地一言心。”
 
@@ -854,11 +831,11 @@
 
 “凹镜纳灵气，八卦聚生机，护己及人，道之仁心。”
 
-#### 火丹 %
+#### 火丹
 - 核心功能：主手持有火丹时可将其发射出去
 - 合成方式：1个尸丹碎片 + 1个煤炭 + 1个黏土
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/cane.png)
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/fball.png)
 
 "火凝丹丸掌中擎，脱手星飞烈焰生。一瞬燎原三百丈，妖邪遇尽化尘轻。"
 
@@ -958,20 +935,20 @@
 
 “昆仑宝镜映乾坤，一念互换定方位，咫尺之间移形影，道法玄机藏镜中。”
 
-#### 枯魂旱火葫芦 %
+#### 枯魂旱火葫芦
 - 核心功能：置于副手后，主手空手可凝练出火丹
 - 使用方式：置于副手
 - 合成方式：1个紫金葫芦 + 4个尸丹碎片
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/klj.png)
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/firegourd.png)
 
 “枯魂锁入葫中藏，旱火凝丹发烈光。一点阴焰焚万物，赤地千里草不芳。”
 
-#### （泰山）石敢当 %
+#### （泰山）石敢当
 - 核心功能：置于地表上，每5秒对附近15×15范围内的所有敌对生物产生伤害与减速
 - 合成方式：8个深板岩 + 1个画符毛笔
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/klj.png)
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/sguard.png)
 
 “泰山片石号敢当，坐镇方隅慑不祥。魑魅逢之皆敛迹，郊原十里尽安昌。”
 

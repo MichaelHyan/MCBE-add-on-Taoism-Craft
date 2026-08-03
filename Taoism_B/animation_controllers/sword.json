@@ -327,6 +327,7 @@
 						"/effect @s fire_resistance 20 1 true",
 						"/weather clear",
 						"/effect @s resistance 20 2 true",
+						"/effect @s hunger 20 1 true",
 						"/enchant @s fire_aspect 2",
 						"/damage @e[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,family=!taoism,r=2] 5"
 					]
