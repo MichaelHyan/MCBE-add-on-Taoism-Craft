@@ -853,7 +853,7 @@
   1. 主手持有时：抗性提升拉满
   2. 使用时：对半径25格的范围内生物持续震慑，同时敌对生物会受法音攻击
 - 副作用：主手持有时，自身移速降低 + 饱食度降低「很可惜，你跑不快」
-- 合成方式：2个炁 + 5个铜锭 + 1个尸丹
+- 合成方式：2个炁 + 5个铜锭 + 1个净炼尸丹
 
 ![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/bell.png)
 
