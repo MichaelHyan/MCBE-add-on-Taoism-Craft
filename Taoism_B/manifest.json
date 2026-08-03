@@ -5,7 +5,7 @@
         "name":"道术 Taoism Craft",
         "uuid":"7cade011-ed3b-478b-8dbb-5824e75f657d",
         "version":[4,9,3],
-        "min_engine_version":[1,10,0]
+        "min_engine_version":[1,8,0]
     },
     "modules":[
         {
