@@ -2,35 +2,38 @@
   "format_version": "1.12",
   "minecraft:recipe_shaped": {
     "description": {
-      "identifier": "items:gourd"
+      "identifier": "items:pearlz"
     },
     "tags": [
       "crafting_table"
     ],
     "pattern": [
       " a ",
-      "cbc",
-      "ccc"
+      "bcb",
+      " d "
     ],
     "key": {
       "a": {
         "item": "items:talisman"
       },
       "b": {
-        "item": "items:spe"
+        "item": "items:cinnabar_powder"
       },
       "c": {
-        "item": "copper_ingot"
+        "item": "items:pearlz_s"
+      },
+      "d": {
+        "item": "items:spe"
       }
     },
     "unlock": [
       {
-        "item": "items:cinnabar_powder"
+        "item": "items:pearlz_s"
       }
     ],
-    "result": {
-      "item": "items:gourd",
+    "result": [{
+      "item": "items:pearlz",
       "count": 1
-    }
+    }]
   }
 }

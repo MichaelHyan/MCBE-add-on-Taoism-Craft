@@ -28,6 +28,13 @@
 						{"sword_u_e":"query.get_equipped_item_name=='sword_u' && variable.attack_time && query.is_jumping && query.player_level > 49"},
 						{"sword_sp_a":"query.get_equipped_item_name=='sword_sp' && !variable.attack_time && query.player_level > 19"},
 						{"sword_sp_b":"query.get_equipped_item_name=='sword_sp' && variable.attack_time && query.player_level > 19"},
+						{"sword_za_a":"query.get_equipped_item_name=='sword_za' && math.mod(query.life_time,3) == 0 && query.player_level > 24"},
+						{"sword_za_b":"query.get_equipped_item_name=='sword_za' && query.player_level > 24"},
+						{"sword_zb_a":"query.get_equipped_item_name=='sword_zb' && query.is_sneaking && query.scoreboard('charge') < 10 && query.scoreboard('charge') >= 0 && query.player_level > 24"},
+						{"sword_zb_b":"query.get_equipped_item_name=='sword_zb' && !query.is_sneaking && query.scoreboard('charge') == 10 && query.player_level > 24"},
+						{"sword_zb_c":"query.get_equipped_item_name=='sword_zb' && !query.is_sneaking && query.scoreboard('charge') < 10 && query.scoreboard('charge') >= 0 && query.player_level > 24"},
+						{"sword_zb_d":"query.get_equipped_item_name=='sword_zb' && variable.attack_time && query.player_level > 24"},
+						{"sword_zb_e":"query.get_equipped_item_name=='sword_zb' && query.player_level > 24"},
 						{"whisk":"query.get_equipped_item_name=='whisk' && variable.attack_time && query.player_level > 14"}
 					]
 				},
@@ -305,6 +312,93 @@
 					"on_entry": [
 						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
 						"/effect @s wither 2 255 true"
+					]
+				},
+				"sword_za_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/fill ~-1 ~-1 ~-1 ~1 ~1 ~1 fire replace air",
+						"/effect @s fire_resistance 20 1 true",
+						"/weather clear",
+						"/effect @s resistance 20 2 true",
+						"/enchant @s fire_aspect 2",
+						"/damage @e[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,family=!taoism,r=2] 5"
+					]
+				},
+				"sword_za_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/fill ~-2 ~-2 ~-2 ~2 ~2 ~2 air replace water",
+						"/fill ~-1 ~-1 ~-1 ~1 ~1 ~1 dirt replace grass_block",
+						"/effect @s fire_resistance 20 1 true"
+					]
+				},
+				"sword_zb_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard objectives add charge dummy",
+						"/scoreboard players add @s charge 1",
+						"/particle minecraft:cauldron_explosion_emitter ~ ~ ~"
+					]
+				},
+				"sword_zb_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s charge -300",
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/weather thunder",
+						"/effect @e[type=!monster,r=5] regeneration 10 5 true" 
+					]
+				},
+				"sword_zb_c": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"sword_zb_d": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/enchant @s sharpness 5",
+						"/fill ~-2 ~-2 ~-2 ~2 ~2 ~2 obsidian replace lava"
+					]
+				},
+				"sword_zb_e": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s health_boost 10 9 true",
+						"/effect @s fire_resistance 10 1 true",
+						"/effect @s water_breathing 10 1 true",
+						"/effect @s resistance 10 2 true",
+						"/fill ~-2 ~-2 ~-2 ~2 ~2 ~2 obsidian replace lava"
 					]
 				},
 				"whisk": {

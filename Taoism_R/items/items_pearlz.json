@@ -2,12 +2,13 @@
   "format_version": "1.10",
   "minecraft:item": {
     "description": {
-      "identifier": "items:sword_b",
+      "identifier": "items:pearlz",
       "category": "Nature"
     },
+
     "components": {
-      "minecraft:icon": "sword_b",
-      "minecraft:render_offsets": "sword_b"
+      "minecraft:icon": "pearlz",
+      "minecraft:render_offsets": "pearlz"
     }
   }
 }

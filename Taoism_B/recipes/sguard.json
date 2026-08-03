@@ -2,25 +2,22 @@
   "format_version": "1.12",
   "minecraft:recipe_shaped": {
     "description": {
-      "identifier": "items:gourd"
+      "identifier": "items:sguard"
     },
     "tags": [
       "crafting_table"
     ],
     "pattern": [
-      " a ",
-      "cbc",
-      "ccc"
+      "aaa",
+      "aba",
+      "aaa"
     ],
     "key": {
       "a": {
-        "item": "items:talisman"
+        "item": "cobbled_deepslate"
       },
       "b": {
-        "item": "items:spe"
-      },
-      "c": {
-        "item": "copper_ingot"
+        "item": "items:brush_p"
       }
     },
     "unlock": [
@@ -29,7 +26,7 @@
       }
     ],
     "result": {
-      "item": "items:gourd",
+      "item": "items:sguard",
       "count": 1
     }
   }

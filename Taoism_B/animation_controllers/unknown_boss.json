@@ -1,0 +1,118 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.unknown_boss":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"boss_bgm":"math.mod(query.life_time,176) == 0"},
+						{"boss_init":"query.life_time == 1"},
+						{"boss_p0a":"math.mod(query.life_time,88) == 1 || math.mod(query.life_time,88) == 8 || math.mod(query.life_time,88) == 9"},
+						{"boss_p0b":"math.mod(query.life_time,88) == 2 || math.mod(query.life_time,88) == 7 || math.mod(query.life_time,88) == 10"},
+						{"boss_p0c":"math.mod(query.life_time,88) == 3 || math.mod(query.life_time,88) == 6 || math.mod(query.life_time,88) == 11"},
+						{"boss_p0d":"math.mod(query.life_time,88) == 4 || math.mod(query.life_time,88) == 5 || math.mod(query.life_time,88) == 12"}
+						
+					]
+				},
+				"boss_bgm": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/function bgmstop",
+						"/function bgmbsp1"
+					]
+				},
+				"boss_init": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @a 0 220 0",
+						"/tp @s 0 210 0",
+						"/summon entity:bss 0 195 0",
+						"/fill 30 200 30 -30 200 -30 barrier",
+						"/function bgmbsp1",
+						"/effect @s slowness 12 255 true"
+					]
+				},
+				"boss_p0a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s slowness 1 255 true",
+						"/summon lightning_bolt 3 200 3",
+						"/summon lightning_bolt -3 200 3",
+						"/summon lightning_bolt -3 200 -3",
+						"/summon lightning_bolt 3 200 -3",
+						"/summon lightning_bolt 4 200 0",
+						"/summon lightning_bolt -4 200 0",
+						"/summon lightning_bolt 0 200 4",
+						"/summon lightning_bolt 0 200 -4"
+					]
+				},
+				"boss_p0b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s slowness 1 255 true",
+						"/summon lightning_bolt 5 200 5",
+						"/summon lightning_bolt -5 200 5",
+						"/summon lightning_bolt -5 200 -5",
+						"/summon lightning_bolt 5 200 -5",
+						"/summon lightning_bolt 7 200 0",
+						"/summon lightning_bolt -7 200 0",
+						"/summon lightning_bolt 0 200 7",
+						"/summon lightning_bolt 0 200 -7"
+					]
+				},
+				"boss_p0c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s slowness 1 255 true",
+						"/summon lightning_bolt 7 200 7",
+						"/summon lightning_bolt -7 200 7",
+						"/summon lightning_bolt -7 200 -7",
+						"/summon lightning_bolt 7 200 -7",
+						"/summon lightning_bolt 10 200 0",
+						"/summon lightning_bolt -10 200 0",
+						"/summon lightning_bolt 0 200 10",
+						"/summon lightning_bolt 0 200 -10"
+					]
+				},
+				"boss_p0d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s slowness 1 255 true",
+						"/summon lightning_bolt 9 200 9",
+						"/summon lightning_bolt -9 200 9",
+						"/summon lightning_bolt -9 200 -9",
+						"/summon lightning_bolt 9 200 -9",
+						"/summon lightning_bolt 13 200 0",
+						"/summon lightning_bolt -13 200 0",
+						"/summon lightning_bolt 0 200 13",
+						"/summon lightning_bolt 0 200 -13"
+					]
+				}
+			}
+		}
+ 	}
+ }

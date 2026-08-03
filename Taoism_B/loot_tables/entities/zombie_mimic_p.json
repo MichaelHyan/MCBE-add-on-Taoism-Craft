@@ -5,82 +5,14 @@
             "entries": [
                 {
                     "type": "item",
-                    "name": "items:spirit",
+                    "name": "items:pearlz_p",
                     "weight": 2,
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": {
-                                "min": 1,
-                                "max": 2
-                            }
-                        }
-                    ]
-                },
-                {
-                    "type": "item",
-                    "name": "items:cinnabar_crystal",
-                    "weight": 3,
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": {
-                                "min": 3,
-                                "max": 7
-                            }
-                        }
-                    ]
-                },
-                {
-                    "type": "item",
-                    "name": "items:spe",
-                    "weight": 3,
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": {
-                                "min": 3,
-                                "max": 8
-                            }
-                        }
-                    ]
-                },
-                {
-                    "type": "item",
-                    "name": "minecraft:rotten_flesh",
-                    "weight": 3,
                     "functions": [
                         {
                             "function": "set_count",
                             "count": {
                                 "min": 0,
                                 "max": 2
-                            }
-                        },
-                        {
-                            "function": "looting_enchant",
-                            "count": {
-                                "min": 0,
-                                "max": 1
-                            }
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "item",
-                    "name": "items:pearlz_o",
-                    "weight": 2,
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": {
-                                "min": 1,
-                                "max": 1
                             }
                         }
                     ]
@@ -119,8 +51,8 @@
                         {
                             "function": "set_count",
                             "count": {
-                                "min": 2,
-                                "max": 5
+                                "min": 0,
+                                "max": 3
                             }
                         }
                     ]
@@ -133,8 +65,8 @@
                         {
                             "function": "set_count",
                             "count": {
-                                "min": 2,
-                                "max": 5
+                                "min": 0,
+                                "max": 2
                             }
                         }
                     ]
@@ -147,29 +79,8 @@
                         {
                             "function": "set_count",
                             "count": {
-                                "min": 1,
-                                "max": 3
-                            }
-                        }
-                    ]
-                },
-                {
-                    "type": "item",
-                    "name": "minecraft:diamond",
-                    "weight": 2,
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": {
-                                "min": 1,
-                                "max": 2
-                            }
-                        },
-                        {
-                            "function": "looting_enchant",
-                            "count": {
-                                "min": 1,
-                                "max": 3
+                                "min": 0,
+                                "max": 1
                             }
                         }
                     ]

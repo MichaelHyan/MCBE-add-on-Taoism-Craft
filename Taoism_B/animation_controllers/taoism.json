@@ -44,7 +44,9 @@
 						{"totem":"query.get_equipped_item_name=='totem_f' && query.is_using_item"},
 						{"shield_use_a":"query.get_equipped_item_name=='shield_q' && query.is_using_item && query.scoreboard('shieldcd') >= 0 && query.player_level > 14"},
 						{"shield_use_b":"query.get_equipped_item_name=='shield_q' && query.scoreboard('shieldcd') < 0"},
-						{"sword_ts":"query.get_equipped_item_name=='sword_ts' && variable.attack_time && query.player_level > 4"}
+						{"sword_ts":"query.get_equipped_item_name=='sword_ts' && variable.attack_time && query.player_level > 4"},
+						{"firegourd_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:firegourd') && query.is_item_equipped == 0 && query.player_level > 19"},
+						{"firegourd_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:firegourd') && query.is_item_equipped != 0 && query.player_level > 19"}
 					]
 				},
 				"summonp": {
@@ -543,6 +545,26 @@
 					],
 					"on_entry": [
 						"/enchant @s smite 5"
+					]
+				},
+				"firegourd_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:fball"
+					]
+				},
+				"firegourd_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s fire_resistance 3 1 true"
 					]
 				}
 			}

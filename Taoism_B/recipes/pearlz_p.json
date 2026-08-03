@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:pearlz_p"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "a"
+    ],
+    "key": {
+      "a": {
+        "item": "items:pearlz_o"
+      }
+    },
+    "unlock": [
+      {
+        "item": "items:pearlz_o"
+      }
+    ],
+    "result": [{
+      "item": "items:pearlz_p",
+      "count": 9
+    }]
+  }
+}

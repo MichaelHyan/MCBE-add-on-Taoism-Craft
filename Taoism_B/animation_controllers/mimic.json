@@ -6,6 +6,7 @@
 				"base_jeta":{
 					"transitions":[
 						{"despawn":"query.moon_phase != 0 && query.moon_phase != 4"},
+						{"damage":"query_is_in_water_or_rain && math.mod(query.life_time,1) == 0"},
 						{"enchant":"query.moon_phase == 0 || query.moon_phase == 4 && math.mod(query.life_time,5) == 0"}
 					]
 				},
@@ -19,6 +20,16 @@
 						"/kill @s"
 					]
 				},
+				"damage": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/damage @s 2"
+					]
+				},
 				"enchant": {
 					"transitions": [
 							{
@@ -26,8 +37,10 @@
 							}
 					],
 					"on_entry": [
+						"/weather clear",
 						"/effect @s slowness 0 255 true",
 						"/effect @s weakness 0 255 true",
+						"/effect @s fire_resistance 10 1 true",
 						"/effect @e[family=undead,r=20] resistance 1 1",
 						"/effect @e[family=undead,r=20] strength 1 1"
 					]

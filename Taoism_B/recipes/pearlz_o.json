@@ -2,34 +2,28 @@
   "format_version": "1.12",
   "minecraft:recipe_shaped": {
     "description": {
-      "identifier": "items:bell_s"
+      "identifier": "items:pearlz_o"
     },
     "tags": [
       "crafting_table"
     ],
     "pattern": [
-      "aca",
-      "aba",
-      " b "
+      "aaa",
+      "aaa",
+      "aaa"
     ],
     "key": {
       "a": {
-        "item": "copper_ingot"
-      },
-      "b": {
-        "item": "items:qi"
-      },
-      "c": {
-        "item": "items:pearlz"
+        "item": "items:pearlz_p"
       }
     },
     "unlock": [
       {
-        "item": "items:pearl"
+        "item": "items:pearlz_p"
       }
     ],
     "result": [{
-      "item": "items:bell_s",
+      "item": "items:pearlz_o",
       "count": 1
     }]
   }

@@ -8,11 +8,11 @@
       "is_experimental": false,
       "scripts": {
 				"animate": [
-					"unknown"
+					"unknown_boss"
 				]
 			},
       "animations": {
-				"unknown": "controller.animation.unknown"
+				"unknown_boss": "controller.animation.unknown_boss"
 			}
     },
     "component_groups": {

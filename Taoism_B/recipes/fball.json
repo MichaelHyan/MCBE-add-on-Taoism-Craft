@@ -2,35 +2,35 @@
   "format_version": "1.12",
   "minecraft:recipe_shaped": {
     "description": {
-      "identifier": "items:gourd"
+      "identifier": "items:fball"
     },
     "tags": [
       "crafting_table"
     ],
     "pattern": [
       " a ",
-      "cbc",
-      "ccc"
+      " b ",
+      " c "
     ],
     "key": {
       "a": {
-        "item": "items:talisman"
+        "item": "items:pearlz_p"
       },
       "b": {
-        "item": "items:spe"
+        "item": "clay_ball"
       },
       "c": {
-        "item": "copper_ingot"
+        "item": "coal"
       }
     },
     "unlock": [
       {
-        "item": "items:cinnabar_powder"
+        "item": "items:pearlz_p"
       }
     ],
     "result": {
-      "item": "items:gourd",
-      "count": 1
+      "item": "items:fball",
+      "count": 16
     }
   }
 }

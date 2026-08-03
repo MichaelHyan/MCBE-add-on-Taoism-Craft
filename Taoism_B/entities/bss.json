@@ -5,15 +5,7 @@
       "identifier": "entity:bss",
       "is_spawnable": false,
       "is_summonable": true,
-      "is_experimental": false,
-      "scripts": {
-				"animate": [
-					"bss"
-				]
-			},
-      "animations": {
-				"bss": "controller.animation.bss"
-			}
+      "is_experimental": false
     },
     "components": {
       "minecraft:collision_box": {

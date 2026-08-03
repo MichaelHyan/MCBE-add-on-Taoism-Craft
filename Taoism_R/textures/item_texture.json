@@ -314,6 +314,30 @@
     "sguard": {
       "textures":"textures/items/sguard.png"
     },
+    "pearlz_p": {
+      "textures":"textures/items/pearlz_p.png"
+    },
+    "pearlz_o": {
+      "textures":"textures/items/pearlz_o.png"
+    },
+    "pearlz_s": {
+      "textures":"textures/items/pearlz_s.png"
+    },
+    "pearlz": {
+      "textures":"textures/items/pearlz.png"
+    },
+    "sword_za": {
+      "textures":"textures/items/sword_za.png"
+    },
+    "sword_zb": {
+      "textures":"textures/items/sword_zb.png"
+    },
+    "firegourd": {
+      "textures":"textures/items/firegourd.png"
+    },
+    "fball": {
+      "textures":"textures/items/fball.png"
+    },
     "glutinous_rice": {
       "textures":"textures/items/glutinous_rice.png"
     },
