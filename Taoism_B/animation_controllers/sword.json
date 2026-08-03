@@ -29,12 +29,14 @@
 						{"sword_sp_a":"query.get_equipped_item_name=='sword_sp' && !variable.attack_time && query.player_level > 19"},
 						{"sword_sp_b":"query.get_equipped_item_name=='sword_sp' && variable.attack_time && query.player_level > 19"},
 						{"sword_za_a":"query.get_equipped_item_name=='sword_za' && math.mod(query.life_time,3) == 0 && query.player_level > 24"},
-						{"sword_za_b":"query.get_equipped_item_name=='sword_za' && query.player_level > 24"},
+						{"sword_za_b":"query.get_equipped_item_name=='sword_za' && query.is_sneaking && variable.attack_time && query.player_level > 24"},
+						{"sword_za_c":"query.get_equipped_item_name=='sword_za' && query.player_level > 24"},
 						{"sword_zb_a":"query.get_equipped_item_name=='sword_zb' && query.is_sneaking && query.scoreboard('charge') < 10 && query.scoreboard('charge') >= 0 && query.player_level > 24"},
 						{"sword_zb_b":"query.get_equipped_item_name=='sword_zb' && !query.is_sneaking && query.scoreboard('charge') == 10 && query.player_level > 24"},
-						{"sword_zb_c":"query.get_equipped_item_name=='sword_zb' && !query.is_sneaking && query.scoreboard('charge') < 10 && query.scoreboard('charge') >= 0 && query.player_level > 24"},
-						{"sword_zb_d":"query.get_equipped_item_name=='sword_zb' && variable.attack_time && query.player_level > 24"},
-						{"sword_zb_e":"query.get_equipped_item_name=='sword_zb' && query.player_level > 24"},
+						{"sword_zb_c":"query.get_equipped_item_name=='sword_zb' && !query.is_sneaking && query.scoreboard('charge') < 10 && query.scoreboard('charge') > 0 && query.player_level > 24"},
+						{"sword_zb_d":"query.get_equipped_item_name=='sword_zb' && query.is_jumping && variable.attack_time && query.scoreboard('charge') >= 0 && query.player_level > 24"},
+						{"sword_zb_e":"query.get_equipped_item_name=='sword_zb' && !query.is_jumping && variable.attack_time && query.player_level > 24"},
+						{"sword_zb_f":"query.get_equipped_item_name=='sword_zb' && !variable.attack_time && query.player_level > 24"},
 						{"whisk":"query.get_equipped_item_name=='whisk' && variable.attack_time && query.player_level > 14"}
 					]
 				},
@@ -336,6 +338,25 @@
 						}
 					],
 					"on_entry": [
+						"/fill ^ ^1 ^0 ^ ^2 ^1 fire",
+						"/fill ^ ^1 ^1 ^ ^2 ^2 fire",
+						"/fill ^ ^1 ^2 ^ ^2 ^3 fire",
+						"/fill ^ ^1 ^3 ^ ^2 ^4 fire",
+						"/fill ^ ^1 ^4 ^ ^2 ^5 fire",
+						"/fill ^ ^1 ^5 ^ ^2 ^6 fire",
+						"/fill ^ ^1 ^6 ^ ^2 ^7 fire",
+						"/fill ^ ^1 ^7 ^ ^2 ^8 fire",
+						"/fill ^ ^1 ^8 ^ ^2 ^9 fire",
+						"/fill ^ ^1 ^9 ^ ^2 ^10 fire"
+					]
+				},
+				"sword_za_c": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
 						"/fill ~-2 ~-2 ~-2 ~2 ~2 ~2 air replace water",
 						"/fill ~-1 ~-1 ~-1 ~1 ~1 ~1 dirt replace grass_block",
 						"/effect @s fire_resistance 20 1 true"
@@ -383,11 +404,23 @@
 						}
 					],
 					"on_entry": [
+						"/tag @e[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,family=!taoism,r=20] add sbt",
+						"/summon entity:sword_sa ~ ~ ~",
+						"/scoreboard players set @s charge -4"
+					]
+				},
+				"sword_zb_e": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
 						"/enchant @s sharpness 5",
 						"/fill ~-2 ~-2 ~-2 ~2 ~2 ~2 obsidian replace lava"
 					]
 				},
-				"sword_zb_e": {
+				"sword_zb_f": {
 					"transitions": [
 						{
 							"base_jeta": "(1.0)"
