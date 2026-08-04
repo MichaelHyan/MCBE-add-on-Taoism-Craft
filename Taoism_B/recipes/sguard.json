@@ -25,9 +25,13 @@
         "item": "items:cinnabar_powder"
       }
     ],
-    "result": {
+    "result": [{
       "item": "items:sguard",
       "count": 1
-    }
+    },
+    {
+      "item": "items:brush_n",
+      "count": 1
+    }]
   }
 }
