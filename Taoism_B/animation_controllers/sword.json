@@ -172,7 +172,7 @@
 						"/effect @s fire_resistance 60 1 true",
 						"/scoreboard objectives add charge dummy",
 						"/scoreboard players set @s charge -50",
-						"/tag @e[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,family=!taoism,r=20] add sbt",
+						"/tag @e[family=monster,r=20] add sbt",
 						"/tag @e[type=entity:zombie_mimic] add sbtx",
 						"/tag @e[type=entity:zombie_mimic_p] add sbtx",
 						"/tag @e[type=entity:zombie_mimic_sp] add sbtx",
@@ -254,8 +254,7 @@
 							}
 					],
 					"on_entry": [
-						"/tag @n[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,family=!taoism,r=20] add sbt",
-						"/tag @n[type=entity:unknow,tag=boss,r=20] add sbt",
+						"/tag @n[family=monster,r=20] add sbt",
 						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
 						"/playsound sw"
 					]
@@ -268,8 +267,7 @@
 					],
 					"on_entry": [
 						"/kill @e[type=entity:sword_ua]",
-						"/tag @e[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,family=!taoism,r=20] add sbt",
-						"/tag @n[type=entity:unknow,tag=boss,r=20] add sbt",
+						"/tag @e[family=monster,r=20] add sbt",
 						"/summon entity:sword_ua"
 					]
 				},
@@ -332,7 +330,7 @@
 						"/effect @s resistance 20 2 true",
 						"/effect @s hunger 20 1 true",
 						"/enchant @s fire_aspect 2",
-						"/damage @e[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,family=!taoism,r=2] 5"
+						"/damage @e[family=monster,r=2] 5"
 					]
 				},
 				"sword_za_b": {
@@ -408,7 +406,7 @@
 						}
 					],
 					"on_entry": [
-						"/tag @e[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,family=!taoism,r=20] add sbt",
+						"/tag @e[family=monster,r=20] add sbt",
 						"/summon entity:sword_sa ~ ~ ~",
 						"/scoreboard players set @s charge -50"
 					]

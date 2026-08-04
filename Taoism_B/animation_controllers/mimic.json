@@ -17,7 +17,8 @@
 							}
 					],
 					"on_entry": [
-						"/kill @s"
+						"/kill @s",
+						"/kill @e[r=2,type=item]"
 					]
 				},
 				"damage": {

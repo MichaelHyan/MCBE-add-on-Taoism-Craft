@@ -206,7 +206,7 @@
 						"/particle minecraft:totem_particle",
 						"/playsound mob.shulker.teleport",
 						"/effect @s slow_falling 5 1 true",
-						"/damage @e[family=!taoism,type=!item,r=3] 5",
+						"/damage @e[family=monster,r=3] 5",
 						"/scoreboard players set @s charge 0"
 					]
 				},

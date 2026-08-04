@@ -1,0 +1,36 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:echa"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "aaa",
+      "aba",
+      "aca"
+    ],
+    "key": {
+      "a": {
+        "item": "items:spe"
+      },
+      "b": {
+        "item": "items:talisman"
+      },
+      "c": {
+        "item": "items:qi"
+      }
+    },
+    "unlock": [
+      {
+        "item": "items:qi"
+      }
+    ],
+    "result": [{
+      "item": "items:echa",
+      "count": 1
+    }]
+  }
+}

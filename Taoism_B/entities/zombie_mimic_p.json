@@ -39,7 +39,7 @@
       "minecraft:jump.static": {},
       "minecraft:navigation.climb": {
         "is_amphibious": true,
-        "can_swim": true,
+        "can_swim": false,
         "can_walk": true,
         "can_sink": false,
         "avoid_damage_blocks": true
@@ -116,7 +116,7 @@
       "minecraft:attack": {
         "damage": 2,
         "effect_name": "wither",
-        "effect_duration": 60
+        "effect_duration": 300
       },
       "minecraft:behavior.melee_attack": {
         "priority": 2,

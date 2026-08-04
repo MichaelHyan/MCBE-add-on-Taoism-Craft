@@ -17,7 +17,7 @@
 					],
 					"on_entry": [
 						"/particle minecraft:knockback_roar_particle ~ ~1 ~",
-						"/damage @e[r=15,type=!item,family=!taoism] 5",
+						"/damage @e[r=15,family=monster] 5",
 						"/scoreboard players add @s shieldhit -3"
 					]
 				},

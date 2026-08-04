@@ -16,10 +16,10 @@
 							}
 					],
 					"on_entry": [
-						"/tp @n[type=!arrow,type=!item,type=!villager,type=!armor_stand,family=!taoism,r=20]",
-						"/damage @e[r=2,type=!arrow,type=!item,type=!villager,type=!armor_stand,family=!taoism] 5",
+						"/tp @n[family=monster,r=20]",
+						"/damage @e[r=2,family=monster] 5",
 						"/effect @e[type=player,r=2] regeneration 1 5 true",
-						"/effect @e[r=2,family=!taoism,type=!item] wither 1 10 true",
+						"/effect @e[r=2,family=monster] wither 1 10 true",
 						"/particle minecraft:blue_flame_particle ~ ~1 ~"
 					]
 				},

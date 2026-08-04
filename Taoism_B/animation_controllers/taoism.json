@@ -178,7 +178,7 @@
 							}
 					],
 					"on_entry": [
-						"/tag @e[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,family=!taoism,r=20] add sbt",
+						"/tag @e[family=monster,r=20] add sbt",
 						"/tag @e[type=entity:zombie_mimic] add sbtx",
 						"/tag @e[type=entity:zombie_mimic_p] add sbtx",
 						"/tag @e[type=entity:zombie_mimic_sp] add sbtx",
@@ -357,9 +357,8 @@
 					"on_entry": [
 						"/scoreboard players set @s charge -300",
 						"/particle minecraft:totem_particle ~ ~1 ~",
-						"/effect @e[r=7,type=!player] slowness 10 255 true",
-						"/effect @e[r=7,type=!player] wither 10 5 true",
-						"/effect @e[r=7,type=!player] regeneration 10 5 true"
+						"/effect @e[r=7,family=monster] slowness 10 255 true",
+						"/effect @e[r=7,family=monster] wither 10 5 true"
 					]
 				},
 				"mirror_d": {
@@ -420,7 +419,7 @@
 							}
 					],
 					"on_entry": [
-						"/tp @e[rm=1,type=!item,type=!entity:spirit,r=5] @s",
+						"/tp @e[rm=1,type=!item,r=5] @s",
 						"/tp @e[type=item,r=30] @s",
 						"/tp @e[type=entity:spirit] ^ ^ ^0.5"
 					]
