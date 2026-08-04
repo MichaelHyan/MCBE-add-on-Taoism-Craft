@@ -26,6 +26,10 @@
           "taoism"
         ]
       },
+      "minecraft:health": {
+        "value": 1000,
+        "max": 1000
+      },
       "minecraft:projectile": {
         "on_hit": {
           "impact_damage": {

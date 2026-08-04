@@ -173,6 +173,9 @@
 						"/scoreboard objectives add charge dummy",
 						"/scoreboard players set @s charge -50",
 						"/tag @e[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,family=!taoism,r=20] add sbt",
+						"/tag @e[type=entity:zombie_mimic] add sbtx",
+						"/tag @e[type=entity:zombie_mimic_p] add sbtx",
+						"/tag @e[type=entity:zombie_mimic_sp] add sbtx",
 						"/summon entity:sword_sa ~ ~ ~5",
 						"/summon entity:sword_sa ~2 ~ ~4",
 						"/summon entity:sword_sa ~4 ~ ~2",
@@ -407,7 +410,7 @@
 					"on_entry": [
 						"/tag @e[type=!arrow,type=!player,type=!item,type=!villager,type=!armor_stand,family=!taoism,r=20] add sbt",
 						"/summon entity:sword_sa ~ ~ ~",
-						"/scoreboard players set @s charge -4"
+						"/scoreboard players set @s charge -50"
 					]
 				},
 				"sword_zb_e": {
