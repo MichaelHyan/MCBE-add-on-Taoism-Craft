@@ -529,7 +529,7 @@
 #### 开光符【闭灵】
 - 新月时使用可获得开光符【启灵】
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/echa.png)
+![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/echa.png)
 
 "新月凝灵闭中藏，待得弦时启锋芒。"
 
