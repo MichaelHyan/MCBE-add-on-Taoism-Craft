@@ -335,6 +335,9 @@
     "firegourd": {
       "textures":"textures/items/firegourd.png"
     },
+    "spegourd": {
+      "textures":"textures/items/spegourd.png"
+    },
     "fball": {
       "textures":"textures/items/fball.png"
     },

@@ -1,0 +1,33 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:spegourd"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " a ",
+      "aba",
+      " a "
+    ],
+    "key": {
+      "a": {
+        "item": "items:pearlz"
+      },
+      "b": {
+        "item": "items:gourd"
+      }
+    },
+    "unlock": [
+      {
+        "item": "items:pearlz"
+      }
+    ],
+    "result": {
+      "item": "items:spegourd",
+      "count": 1
+    }
+  }
+}

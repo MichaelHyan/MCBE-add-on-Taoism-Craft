@@ -178,7 +178,7 @@
 						"/effect @s slowness 2 255 true",
 						"/function lotus",
 						"/replaceitem entity @s slot.weapon.mainhand 0 items:lotus",
-						"/effect @s instant_health 1 3 true"
+						"/effect @s instant_health 1 1 true"
 					]
 				},
 				"boss_p5a": {
@@ -369,6 +369,12 @@
 							}
 					],
 					"on_entry": [
+						"/fill 30 200 30 -30 200 -30 barrier",
+						"/fill 30 210 30 -30 210 -30 barrier",
+						"/fill 30 200 30 30 210 -30 barrier",
+						"/fill 30 200 -30 -30 210 -30 barrier",
+						"/fill -30 200 -30 -30 210 30 barrier",
+						"/fill -30 200 30 30 210 30 barrier",
 						"/tp @a[rm=50] @s",
 						"/tp 0 201 0"
 					]
