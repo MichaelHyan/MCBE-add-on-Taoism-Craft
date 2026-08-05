@@ -122,8 +122,8 @@
         "priority": 2,
         "speed_multiplier": 1,
         "target_dist": 0,
-        "max_dist": 1,
-        "random_stop_interval": 100,
+        "max_dist": 2,
+        "random_stop_interval": 0,
         "track_target": true,
         "reach_multiplier": 1.4
       },

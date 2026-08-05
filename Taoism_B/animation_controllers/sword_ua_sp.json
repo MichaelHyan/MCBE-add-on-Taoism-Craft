@@ -1,0 +1,46 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.sword_ua_sp":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"uasp_a":"query.life_time < 10"},
+						{"uasp_b":"query.life_time >= 10"}
+					]
+				},
+				"uasp_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s resistance 1 255 true",
+						"/tp @s @n[type=player]",
+						"/particle minecraft:basic_flame_particle ~1 ~1 ~1",
+						"/particle minecraft:basic_flame_particle ~-1 ~1 ~1",
+						"/particle minecraft:basic_flame_particle ~1 ~1 ~-1",
+						"/particle minecraft:basic_flame_particle ~-1 ~1 ~-1",
+						"/particle minecraft:basic_flame_particle ~1.5 ~1 ~",
+						"/particle minecraft:basic_flame_particle ~-1.5 ~1 ~",
+						"/particle minecraft:basic_flame_particle ~ ~1 ~1.5",
+						"/particle minecraft:basic_flame_particle ~ ~1 ~-1.5"
+					]
+				},
+				"uasp_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon lightning_bolt",
+						"/kill @a[r=2]",
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

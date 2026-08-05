@@ -2,16 +2,16 @@
   "format_version": "1.8.0",
   "minecraft:entity": {
     "description": {
-      "identifier": "entity:flo",
+      "identifier": "entity:bell_sp",
       "is_spawnable": false,
       "is_summonable": true,
       "scripts": {
         "animate": [
-          "flo"
+          "bell_sp"
         ]
       },
       "animations": {
-        "flo": "controller.animation.flo"
+        "bell_sp": "controller.animation.bell_sp"
       }
     },
     "component_groups": {
@@ -35,7 +35,7 @@
         }
       },
       "minecraft:movement": {
-        "value": 0.1
+        "value": 0.3
       },
       "minecraft:navigation.climb": {
         "is_amphibious": true,
@@ -66,59 +66,21 @@
         "priority": 3
       },
       "minecraft:behavior.nearest_attackable_target": {
-        "must_reach": true,
-        "must_see": true,
+        "priority": 2,
+        "within_radius": 25,
+        "reselect_targets": true,
         "entity_types": [
           {
             "filters": {
-              "AND": [
-                {
-                  "test": "is_family",
-                  "subject": 1,
-                  "operator": 0,
-                  "value": "monster"
-                }
+              "any_of": [
+                { "test": "is_family", "subject": "other", "value": "player" }
               ]
-            }
-          },
-          {
-            "filters": {
-              "AND": [
-                {
-                  "test": "is_family",
-                  "subject": 1,
-                  "operator": 0,
-                  "value": "hoglin"
-                },
-                {
-                  "test": "is_difficulty",
-                  "subject": 0,
-                  "operator": 1,
-                  "value": 0
-                }
-              ]
-            }
-          },
-          {
-            "filters": {
-              "AND": [
-                {
-                  "test": "is_family",
-                  "subject": 1,
-                  "operator": 0,
-                  "value": "zoglin"
-                },
-                {
-                  "test": "is_difficulty",
-                  "subject": 0,
-                  "operator": 1,
-                  "value": 0
-                }
-              ]
-            }
+            },
+            "max_dist": 100
           }
         ],
-        "priority": 3
+        "must_see": true,
+        "must_see_forget_duration": 0
       },
       "minecraft:type_family": {
         "family": [
@@ -127,8 +89,8 @@
         ]
       },
       "minecraft:collision_box": {
-        "height": 0.6,
-        "width": 1.9
+        "height": 1,
+        "width": 1
       },
       "minecraft:physics": {},
       "minecraft:pushable": {},
@@ -136,9 +98,9 @@
         "value": 0.30
       },
       "minecraft:attack": {
-        "damage": 1,
-        "effect_name": "weakness",
-        "effect_duration": 60
+        "damage": 5,
+        "effect_name": "slowness",
+        "effect_duration": 3
       },
       "minecraft:behavior.melee_attack": {
         "priority": 2,

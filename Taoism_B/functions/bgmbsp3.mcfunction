@@ -1,1 +1,1 @@
-playsound bsp3 @a[r=40] 0 200 0
+music play bsp3 1

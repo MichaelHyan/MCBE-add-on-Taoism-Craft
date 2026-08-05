@@ -12,7 +12,7 @@
 				]
 			},
       "animations": {
-				"shield": "controller.animation.shield_sp"
+				"shield_sp": "controller.animation.shield_sp"
 			}
     },
     "components": {

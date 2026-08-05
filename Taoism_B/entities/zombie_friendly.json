@@ -70,7 +70,7 @@
       },
       "minecraft:behavior.nearest_attackable_target": {
         "must_reach": true,
-        "must_see": true,
+        "must_see": false,
         "entity_types": [
           {
             "filters": {

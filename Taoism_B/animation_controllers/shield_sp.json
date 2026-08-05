@@ -5,8 +5,8 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"shield_sp_a":"query.life_time < 10"},
-						{"shield_sp_b":"query.life_time >= 10"}
+						{"shield_sp_a":"query.life_time < 6"},
+						{"shield_sp_b":"query.life_time >= 6"}
 					]
 				},
 				"shield_sp_a": {
@@ -16,8 +16,10 @@
 							}
 					],
 					"on_entry": [
-						"/tp @n[type=entity:unknow]",
-						"/effect @s resistance 1 255 true"
+						"/effect @s fire_resistance infinite 1 true",
+						"/tp @n[type=entity:unknown]",
+						"/effect @s resistance 1 255 true",
+						"/damage @e[type=player,r=3] 4"
 					]
 				},
 				"shield_sp_b": {

@@ -1,0 +1,25 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.bss":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"bss":"1==1"}
+					]
+				},
+				"bss": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @s 0 195 0",
+						"/effect @s resistance 1 255 true"
+					]
+				}
+			}
+		}
+ 	}
+ }

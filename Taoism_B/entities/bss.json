@@ -5,7 +5,15 @@
       "identifier": "entity:bss",
       "is_spawnable": false,
       "is_summonable": true,
-      "is_experimental": false
+      "is_experimental": false,
+      "scripts": {
+				"animate": [
+					"bss"
+				]
+			},
+      "animations": {
+				"bss": "controller.animation.bss"
+			}
     },
     "components": {
       "minecraft:collision_box": {
@@ -17,6 +25,10 @@
           "mob",
           "taoism"
         ]
+      },
+      "minecraft:health": {
+        "value": 1000,
+        "max": 1000
       },
       "minecraft:pushable": {
         "is_pushable": false,

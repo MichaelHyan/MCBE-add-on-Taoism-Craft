@@ -8,10 +8,10 @@
         "invisible": "baseb"
       },
       "textures": {
-        "default": "textures/entity/shield"
+        "default": "textures/entity/shield_q"
       },
       "geometry": {
-        "default": "geometry.shield"
+        "default": "geometry.shield_q"
       },
 
       "scripts": {
