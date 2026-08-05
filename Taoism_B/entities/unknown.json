@@ -118,8 +118,8 @@
             "max_dist": 100
           }
         ],
-        "must_see": true,
-        "must_see_forget_duration": 0
+        "must_see": false,
+        "must_see_forget_duration": 10
       },
       "minecraft:physics": {
       },
