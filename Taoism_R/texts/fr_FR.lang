@@ -183,5 +183,6 @@ item.items:sword_za=Épée de la Sécheresse Écarlate\n§o§7Niveau requis : 25
 item.items:sword_zb=Épée des Sept Étoiles du Tonnerre\n§o§7Niveau requis : 25\n§r§bPuissance de l'Eau Pure§r
 item.items:fball=Calebasse de l'Âme Aride\n§o§7Consommable\n§r§bNe vous brûlez pas§r
 item.items:firegourd=Calebasse de l'âme flétrie et du feu aride\n§o§7Limite de niveau : 20\n§r§bNe vous brûlez pas§r
+item.items:spegourd=Calebasse de lueur fluide\n§o§7Niveau requis:Aucun
 item.items:fball=Pilule de feu\n§o§7Consommable\n§r§bChaud !!!§r
 entity.entity:qi.name=Qi du Yin trouble
