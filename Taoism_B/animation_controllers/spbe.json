@@ -1,0 +1,27 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.spbe":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"spbe":"query.life_time == 3"}
+					]
+				},
+				"spbe": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @n[type=player] @s",
+						"/effect @p resistance 5 5 true",
+						"/effect @s invisibility 1 1 true",
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

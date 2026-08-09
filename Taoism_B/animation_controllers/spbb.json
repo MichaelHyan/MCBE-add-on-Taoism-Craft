@@ -1,0 +1,25 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.spbb":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"spbb":"query.life_time == 3"}
+					]
+				},
+				"spbb": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon entity:spbb_a",
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

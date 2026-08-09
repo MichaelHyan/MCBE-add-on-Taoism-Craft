@@ -341,6 +341,21 @@
     "fball": {
       "textures":"textures/items/fball.png"
     },
+    "spba": {
+      "textures":"textures/items/spba.png"
+    },
+    "spbb": {
+      "textures":"textures/items/spbb.png"
+    },
+    "spbc": {
+      "textures":"textures/items/spbc.png"
+    },
+    "spbd": {
+      "textures":"textures/items/spbd.png"
+    },
+    "spbe": {
+      "textures":"textures/items/spbe.png"
+    },
     "glutinous_rice": {
       "textures":"textures/items/glutinous_rice.png"
     },
