@@ -356,6 +356,21 @@
     "spbe": {
       "textures":"textures/items/spbe.png"
     },
+    "spga": {
+      "textures":"textures/items/spga.png"
+    },
+    "spgb": {
+      "textures":"textures/items/spgb.png"
+    },
+    "spgc": {
+      "textures":"textures/items/spgc.png"
+    },
+    "spgd": {
+      "textures":"textures/items/spgd.png"
+    },
+    "spge": {
+      "textures":"textures/items/spge.png"
+    },
     "glutinous_rice": {
       "textures":"textures/items/glutinous_rice.png"
     },

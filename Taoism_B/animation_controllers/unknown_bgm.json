@@ -6,7 +6,7 @@
 				"base_jeta":{
 					"transitions":[
 						{"boss_dead":"query.is_alive == 0"},
-						{"boss_bgm":"math.mod(query.life_time,176) == 88"}
+						{"boss_bgm":"math.mod(query.life_time,176) == 0"}
 					]
 				},
 				"boss_bgm": {
@@ -27,7 +27,9 @@
 							}
 					],
 					"on_entry": [
-						"/function bgmstop"
+						"/function bgmstop",
+						"/kill @e[family=reb]",
+						"/summon entity:rebk"
 					]
 				}
 			}

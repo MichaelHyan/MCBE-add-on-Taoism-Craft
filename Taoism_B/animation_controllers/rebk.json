@@ -1,0 +1,143 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.rebk":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"rebk_a":"query.life_time == 2"},
+						{"rebk_b":"query.life_time == 4"},
+						{"rebk_c":"query.life_time == 6"},
+						{"rebk_d":"query.life_time == 9"},
+						{"rebk_e":"query.life_time == 10"},
+						{"rebk_f":"query.life_time == 12"},
+						{"rebk_g":"query.life_time == 14"},
+						{"rebk_h":"query.life_time == 15"},
+						{"rebk_i":"query.life_time == 16"},
+						{"rebk_j":"query.life_time == 18"},
+						{"rebk_k":"query.life_time == 20"}
+					]
+				},
+				"rebk_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 你这么做没有意义"
+					]
+				},
+				"rebk_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 这个世界不属于你"
+					]
+				},
+				"rebk_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 哪怕他相信你是能拯救他们的那个人"
+					]
+				},
+				"rebk_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 而你"
+					]
+				},
+				"rebk_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 虽然只是一个过客"
+					]
+				},
+				"rebk_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 但你还是为了“结束”"
+					]
+				},
+				"rebk_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 闯入了这里"
+					]
+				},
+				"rebk_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 我理解"
+					]
+				},
+				"rebk_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 我们的“真实”对你来说只是虚幻的"
+					]
+				},
+				"rebk_j": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 还请你，从哪里来，回到哪去"
+					]
+				},
+				"rebk_k": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @a 0 100 0",
+						"/effect @a slow_falling 60 1 true",
+						"/kill @e[type=entity:bss]",
+						"/fill 30 200 30 -30 200 -30 air",
+						"/fill 30 210 30 -30 210 -30 air",
+						"/fill 30 200 30 30 210 -30 air",
+						"/fill 30 200 -30 -30 210 -30 air",
+						"/fill -30 200 -30 -30 210 30 air",
+						"/fill -30 200 30 30 210 30 air",
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

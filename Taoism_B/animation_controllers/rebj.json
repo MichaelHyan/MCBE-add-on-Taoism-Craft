@@ -1,0 +1,167 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.rebj":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"rebj_a":"query.life_time == 1"},
+						{"rebj_b":"query.life_time == 2"},
+						{"rebj_c":"query.life_time == 4"},
+						{"rebj_d":"query.life_time == 6"},
+						{"rebj_e":"query.life_time == 7"},
+						{"rebj_f":"query.life_time == 8"},
+						{"rebj_g":"query.life_time == 10"},
+						{"rebj_h":"query.life_time == 11"},
+						{"rebj_i":"query.life_time == 13"},
+						{"rebj_j":"query.life_time == 15"},
+						{"rebj_k":"query.life_time == 16"},
+						{"rebj_l":"query.life_time == 18"},
+						{"rebj_m":"query.life_time == 20"}
+					]
+				},
+				"rebj_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 这么多年来"
+					]
+				},
+				"rebj_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 你是第一个来到这里的人"
+					]
+				},
+				"rebj_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 。。也许我应该质疑一下"
+					]
+				},
+				"rebj_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 你究竟是什么"
+					]
+				},
+				"rebj_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 我曾经也是人"
+					]
+				},
+				"rebj_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 但我能感受到你并不是我的同类"
+					]
+				},
+				"rebj_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 或者说，你"
+					]
+				},
+				"rebj_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 控制着这个没有魂魄的皮套的“人”"
+					]
+				},
+				"rebj_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 自以为躲在那个方形发光物后面"
+					]
+				},
+				"rebj_j": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 我就奈何不了你？"
+					]
+				},
+				"rebj_k": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 不错，我是对那个“你”做不了什么"
+					]
+				},
+				"rebj_l": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 但消灭你的傀儡足以！"
+					]
+				},
+				"rebj_m": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @a 0 203 0",
+						"/tp @s 0 201 0",
+						"/summon entity:bss 0 195 0",
+						"/summon entity:unknown",
+						"/fill 30 200 30 -30 200 -30 barrier",
+						"/fill 30 210 30 -30 210 -30 barrier",
+						"/fill 30 200 30 30 210 -30 barrier",
+						"/fill 30 200 -30 -30 210 -30 barrier",
+						"/fill -30 200 -30 -30 210 30 barrier",
+						"/fill -30 200 30 30 210 30 barrier",
+						"/function bgmbsp1",
+						"/effect @s slowness 12 255 true"
+					]
+				}
+			}
+		}
+ 	}
+ }

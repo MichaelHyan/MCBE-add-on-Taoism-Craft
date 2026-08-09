@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "items:spgd",
+      "category": "Nature"
+    },
+
+    "components": {
+      "minecraft:icon": "spgd",
+      "minecraft:render_offsets": "spgd"
+    }
+  }
+}

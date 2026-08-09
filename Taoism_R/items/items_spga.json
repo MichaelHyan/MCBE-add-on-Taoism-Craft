@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "items:spga",
+      "category": "Nature"
+    },
+
+    "components": {
+      "minecraft:icon": "spga",
+      "minecraft:render_offsets": "spga"
+    }
+  }
+}

@@ -1,0 +1,498 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.spg":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"spg_ta":"query.get_equipped_item_name=='spga' && variable.attack_time && query.scoreboard('charge') >= 0"},
+						{"spg_tb":"query.get_equipped_item_name=='spgb' && variable.attack_time && query.scoreboard('charge') >= 0"},
+						{"spg_tc":"query.get_equipped_item_name=='spgc' && variable.attack_time && query.scoreboard('charge') >= 0"},
+						{"spg_td":"query.get_equipped_item_name=='spgd' && variable.attack_time && query.scoreboard('charge') >= 0"},
+						{"spg_te":"query.get_equipped_item_name=='spge' && variable.attack_time && query.scoreboard('charge') >= 0"},
+						{"spga_a":"query.get_equipped_item_name=='spga' && !query.is_using_item && query.scoreboard('charge') >= 0"},
+						{"spga_b":"query.get_equipped_item_name=='spga' && query.is_using_item && query.scoreboard('charge') == 5"},
+						{"spga_c":"query.get_equipped_item_name=='spga' && query.is_using_item && query.scoreboard('charge') == 0"},
+						{"spga_d":"query.get_equipped_item_name=='spga' && query.is_using_item && query.scoreboard('charge') == 1"},
+						{"spga_e":"query.get_equipped_item_name=='spga' && query.is_using_item && query.scoreboard('charge') == 2"},
+						{"spga_f":"query.get_equipped_item_name=='spga' && query.is_using_item && query.scoreboard('charge') == 3"},
+						{"spga_g":"query.get_equipped_item_name=='spga' && query.is_using_item && query.scoreboard('charge') == 4"},
+						{"spgb_a":"query.get_equipped_item_name=='spgb' && !query.is_using_item && query.scoreboard('charge') >= 0"},
+						{"spgb_b":"query.get_equipped_item_name=='spgb' && query.is_using_item && query.scoreboard('charge') == 5"},
+						{"spgb_c":"query.get_equipped_item_name=='spgb' && query.is_using_item && query.scoreboard('charge') == 0"},
+						{"spgb_d":"query.get_equipped_item_name=='spgb' && query.is_using_item && query.scoreboard('charge') == 1"},
+						{"spgb_e":"query.get_equipped_item_name=='spgb' && query.is_using_item && query.scoreboard('charge') == 2"},
+						{"spgb_f":"query.get_equipped_item_name=='spgb' && query.is_using_item && query.scoreboard('charge') == 3"},
+						{"spgb_g":"query.get_equipped_item_name=='spgb' && query.is_using_item && query.scoreboard('charge') == 4"},
+						{"spgc_a":"query.get_equipped_item_name=='spgc' && !query.is_using_item && query.scoreboard('charge') >= 0"},
+						{"spgc_b":"query.get_equipped_item_name=='spgc' && query.is_using_item && query.scoreboard('charge') == 5"},
+						{"spgc_c":"query.get_equipped_item_name=='spgc' && query.is_using_item && query.scoreboard('charge') == 0"},
+						{"spgc_d":"query.get_equipped_item_name=='spgc' && query.is_using_item && query.scoreboard('charge') == 1"},
+						{"spgc_e":"query.get_equipped_item_name=='spgc' && query.is_using_item && query.scoreboard('charge') == 2"},
+						{"spgc_f":"query.get_equipped_item_name=='spgc' && query.is_using_item && query.scoreboard('charge') == 3"},
+						{"spgc_g":"query.get_equipped_item_name=='spgc' && query.is_using_item && query.scoreboard('charge') == 4"},
+						{"spgd_a":"query.get_equipped_item_name=='spgd' && !query.is_using_item && query.scoreboard('charge') >= 0"},
+						{"spgd_b":"query.get_equipped_item_name=='spgd' && query.is_using_item && query.scoreboard('charge') == 5"},
+						{"spgd_c":"query.get_equipped_item_name=='spgd' && query.is_using_item && query.scoreboard('charge') == 0"},
+						{"spgd_d":"query.get_equipped_item_name=='spgd' && query.is_using_item && query.scoreboard('charge') == 1"},
+						{"spgd_e":"query.get_equipped_item_name=='spgd' && query.is_using_item && query.scoreboard('charge') == 2"},
+						{"spgd_f":"query.get_equipped_item_name=='spgd' && query.is_using_item && query.scoreboard('charge') == 3"},
+						{"spgd_g":"query.get_equipped_item_name=='spgd' && query.is_using_item && query.scoreboard('charge') == 4"},
+						{"spge_a":"query.get_equipped_item_name=='spge' && !query.is_using_item && query.scoreboard('charge') >= 0"},
+						{"spge_b":"query.get_equipped_item_name=='spge' && query.is_using_item && query.scoreboard('charge') == 5"},
+						{"spge_c":"query.get_equipped_item_name=='spge' && query.is_using_item && query.scoreboard('charge') == 0"},
+						{"spge_d":"query.get_equipped_item_name=='spge' && query.is_using_item && query.scoreboard('charge') == 1"},
+						{"spge_e":"query.get_equipped_item_name=='spge' && query.is_using_item && query.scoreboard('charge') == 2"},
+						{"spge_f":"query.get_equipped_item_name=='spge' && query.is_using_item && query.scoreboard('charge') == 3"},
+						{"spge_g":"query.get_equipped_item_name=='spge' && query.is_using_item && query.scoreboard('charge') == 4"}
+					]
+				},
+				"spg_ta": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:spgb",
+						"/scoreboard players set @s charge -4"
+					]
+				},
+				"spg_tb": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:spgc",
+						"/scoreboard players set @s charge -4"
+					]
+				},
+				"spg_tc": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:spgd",
+						"/scoreboard players set @s charge -4"
+					]
+				},
+				"spg_td": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:spge",
+						"/scoreboard players set @s charge -4"
+					]
+				},
+				"spg_te": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:spga",
+						"/scoreboard players set @s charge -4"
+					]
+				},
+				"spga_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"spga_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/give @s items:spba",
+						"/damage @s 1",
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"spga_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add charge dummy",
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||§0|||||||"
+					]
+				},
+				"spga_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||§0||||||"
+					]
+				},
+				"spga_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||||§0||||"
+					]
+				},
+				"spga_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||||||§0||"
+					]
+				},
+				"spga_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||||||||§0"
+					]
+				},
+				"spgb_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"spgb_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/give @s items:spbb",
+						"/damage @s 1",
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"spgb_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add charge dummy",
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||§0|||||||"
+					]
+				},
+				"spgb_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||§0||||||"
+					]
+				},
+				"spgb_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||||§0||||"
+					]
+				},
+				"spgb_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||||||§0||"
+					]
+				},
+				"spgb_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||||||||§0"
+					]
+				},
+				"spgc_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"spgc_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/give @s items:spbc",
+						"/damage @s 1",
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"spgc_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add charge dummy",
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||§0|||||||"
+					]
+				},
+				"spgc_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||§0||||||"
+					]
+				},
+				"spgc_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||||§0||||"
+					]
+				},
+				"spgc_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||||||§0||"
+					]
+				},
+				"spgc_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||||||||§0"
+					]
+				},
+				"spgd_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"spgd_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/give @s items:spbd",
+						"/damage @s 1",
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"spgd_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add charge dummy",
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||§0|||||||"
+					]
+				},
+				"spgd_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||§0||||||"
+					]
+				},
+				"spgd_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||||§0||||"
+					]
+				},
+				"spgd_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||||||§0||"
+					]
+				},
+				"spgd_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||||||||§0"
+					]
+				},
+				"spge_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"spge_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/give @s items:spbe",
+						"/damage @s 1",
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"spge_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add charge dummy",
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||§0|||||||"
+					]
+				},
+				"spge_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||§0||||||"
+					]
+				},
+				"spge_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||||§0||||"
+					]
+				},
+				"spge_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||||||§0||"
+					]
+				},
+				"spge_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/title @s actionbar §7||||||||||§0"
+					]
+				}
+			}
+		}
+ 	}
+ }
