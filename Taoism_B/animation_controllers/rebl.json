@@ -1,0 +1,312 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.rebl":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"rebl_init":"query.life_time == 1"},
+						{"rebl_a":"query.life_time == 3"},
+						{"rebl_b":"query.life_time == 4"},
+						{"rebl_c":"query.life_time == 6"},
+						{"rebl_d":"query.life_time == 9"},
+						{"rebl_e":"query.life_time == 12"},
+						{"rebl_f":"query.life_time == 14"},
+						{"rebl_g":"query.life_time == 17"},
+						{"rebl_h":"query.life_time == 20"},
+						{"rebl_i":"query.life_time == 23"},
+						{"rebl_j":"query.life_time == 26"},
+						{"rebl_k":"query.life_time == 28"},
+						{"rebl_l":"query.life_time == 31"},
+						{"rebl_m":"query.life_time == 34"},
+						{"rebl_n":"query.life_time == 37"},
+						{"rebl_o":"query.life_time == 40"},
+						{"rebl_p":"query.life_time == 42"},
+						{"rebl_q":"query.life_time == 45"},
+						{"rebl_r":"query.life_time == 49"},
+						{"rebl_s":"query.life_time == 53"},
+						{"rebl_t":"query.life_time == 56"},
+						{"rebl_u":"query.life_time == 59"},
+						{"rebl_v":"query.life_time == 63"},
+						{"rebl_w":"query.life_time == 67"},
+						{"rebl_x":"query.life_time == 71"},
+						{"rebl_y":"query.life_time == 159"}
+
+					]
+				},
+				"rebl_init": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @a 0 203 0",
+						"/tp @s 0 201 0",
+						"/fill 30 200 30 -30 200 -30 barrier",
+						"/fill 30 210 30 -30 210 -30 barrier",
+						"/fill 30 200 30 30 210 -30 barrier",
+						"/fill 30 200 -30 -30 210 -30 barrier",
+						"/fill -30 200 -30 -30 210 30 barrier",
+						"/fill -30 200 30 30 210 30 barrier",
+						"/function bgmbsp2"
+					]
+				},
+				"rebl_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 你来了"
+					]
+				},
+				"rebl_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 一路走来，确实不易"
+					]
+				},
+				"rebl_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 我目睹了你这一路的坎坷"
+					]
+				},
+				"rebl_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 也许你已经见到我的一位旧友了"
+					]
+				},
+				"rebl_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 但他并不知道真相"
+					]
+				},
+				"rebl_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 只是在重复读取记忆副本"
+					]
+				},
+				"rebl_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 然后用并不属于他的躯体回到他留恋的世界"
+					]
+				},
+				"rebl_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 你，应该说，控制这个身体的人"
+					]
+				},
+				"rebl_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 你们认为这里叫做末地(The End)"
+					]
+				},
+				"rebl_j": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 这里从来不是结束"
+					]
+				},
+				"rebl_k": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 只不过是魂魄不应有的归宿"
+					]
+				},
+				"rebl_l": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 魂本应归于太阴，魄当散于大地"
+					]
+				},
+				"rebl_m": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 然此间有邪法困锁，使魂魄不得解脱"
+					]
+				},
+				"rebl_n": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 复活图腾的原理从来不是容纳魂魄"
+					]
+				},
+				"rebl_o": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 而是锚定魂魄的位置"
+					]
+				},
+				"rebl_p": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 需要时借助他人性命强行回到人世"
+					]
+				},
+				"rebl_q": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 这和曾经以屠杀为生的人没有区别，这一点我明白"
+					]
+				},
+				"rebl_r": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 后来也有人想借此长生，可惜也是白白丢了性命"
+					]
+				},
+				"rebl_s": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 复活图腾锚定魂魄的代价"
+					]
+				},
+				"rebl_t": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 就是有人愿意成为锚点"
+					]
+				},
+				"rebl_u": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 千年已去，复活图腾记得住的魂魄，竟还是只有一个"
+					]
+				},
+				"rebl_v": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 如今世间已变，道统断绝，坚持再无意义"
+					]
+				},
+				"rebl_w": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 还请你帮我解决这一切"
+					]
+				},
+				"rebl_x": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon entity:bss 0 195 0",
+						"/summon entity:unknown_boss",
+						"/effect @s resistance infinite 255 true"
+					]
+				},
+				"rebl_y": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/function bgmstop",
+						"/function bgmbsp1",
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

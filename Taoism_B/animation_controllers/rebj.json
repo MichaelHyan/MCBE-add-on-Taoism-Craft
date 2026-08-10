@@ -27,6 +27,15 @@
 							}
 					],
 					"on_entry": [
+						"/tp @a 0 203 0",
+						"/tp @s 0 201 0",
+						"/summon entity:bss 0 195 0",
+						"/fill 30 200 30 -30 200 -30 barrier",
+						"/fill 30 210 30 -30 210 -30 barrier",
+						"/fill 30 200 30 30 210 -30 barrier",
+						"/fill 30 200 -30 -30 210 -30 barrier",
+						"/fill -30 200 -30 -30 210 30 barrier",
+						"/fill -30 200 30 30 210 30 barrier",
 						"/say 这么多年来"
 					]
 				},
@@ -147,18 +156,9 @@
 							}
 					],
 					"on_entry": [
-						"/tp @a 0 203 0",
-						"/tp @s 0 201 0",
-						"/summon entity:bss 0 195 0",
 						"/summon entity:unknown",
-						"/fill 30 200 30 -30 200 -30 barrier",
-						"/fill 30 210 30 -30 210 -30 barrier",
-						"/fill 30 200 30 30 210 -30 barrier",
-						"/fill 30 200 -30 -30 210 -30 barrier",
-						"/fill -30 200 -30 -30 210 30 barrier",
-						"/fill -30 200 30 30 210 30 barrier",
 						"/function bgmbsp1",
-						"/effect @s slowness 12 255 true"
+						"/kill @s"
 					]
 				}
 			}

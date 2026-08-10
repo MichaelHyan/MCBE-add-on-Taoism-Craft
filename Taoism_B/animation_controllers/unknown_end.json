@@ -1,0 +1,35 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.unknown_end":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"boss_dead":"query.life_time <= 204 && query.is_alive == 0"}
+					]
+				},
+				"boss_dead": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/function bgmstop",
+						"/tp @a 0 100 0",
+						"/effect @a slow_falling 60 1 true",
+						"/kill @e[type=entity:bss]",
+						"/fill 30 200 30 -30 200 -30 air",
+						"/fill 30 210 30 -30 210 -30 air",
+						"/fill 30 200 30 30 210 -30 air",
+						"/fill 30 200 -30 -30 210 -30 air",
+						"/fill -30 200 -30 -30 210 30 air",
+						"/fill -30 200 30 30 210 30 air",
+						"/kill @e[family=reb]",
+						"/scoreboard players set @a maxchapter 9"
+					]
+				}
+			}
+		}
+ 	}
+ }

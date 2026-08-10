@@ -5,7 +5,7 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"spbd":"query.life_time == 3"}
+						{"spbd":"query.life_time == 1"}
 					]
 				},
 				"spbd": {

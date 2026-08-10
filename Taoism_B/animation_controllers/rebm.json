@@ -1,0 +1,236 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.rebm":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"rebm_a":"query.life_time == 3"},
+						{"rebm_b":"query.life_time == 5"},
+						{"rebm_c":"query.life_time == 7"},
+						{"rebm_d":"query.life_time == 9"},
+						{"rebm_e":"query.life_time == 12"},
+						{"rebm_f":"query.life_time == 16"},
+						{"rebm_g":"query.life_time == 18"},
+						{"rebm_h":"query.life_time == 20"},
+						{"rebm_i":"query.life_time == 22"},
+						{"rebm_j":"query.life_time == 24"},
+						{"rebm_k":"query.life_time == 26"},
+						{"rebm_l":"query.life_time == 29"},
+						{"rebm_m":"query.life_time == 30"},
+						{"rebm_n":"query.life_time == 34"},
+						{"rebm_o":"query.life_time == 36"},
+						{"rebm_p":"query.life_time == 206"},
+						{"rebm_q":"query.life_time == 207"},
+						{"rebm_r":"query.life_time == 208"},
+						{"rebm_s":"query.life_time == 209"}
+
+					]
+				},
+				"rebm_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon entity:unknown_end",
+						"/function bgmstop",
+						"/function bgmbsp3",
+						"/say 在我生活的时候"
+					]
+				},
+				"rebm_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 我们大多数人认为"
+					]
+				},
+				"rebm_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 长生就是人生的终极目标"
+					]
+				},
+				"rebm_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 那时候，家家户户都有修仙的典籍"
+					]
+				},
+				"rebm_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 如今，怕是连识得“道”这个字的人都怕是没有了"
+					]
+				},
+				"rebm_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 我曾窥探你来时的见闻"
+					]
+				},
+				"rebm_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 人们尚懂耕织"
+					]
+				},
+				"rebm_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 却不曾闻道术"
+					]
+				},
+				"rebm_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 纵使有心恢复那盛世"
+					]
+				},
+				"rebm_j": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 怕也是巧妇难为无米之炊"
+					]
+				},
+				"rebm_k": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 。。。"
+					]
+				},
+				"rebm_l": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 我死后"
+					]
+				},
+				"rebm_m": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 我旧友的魂魄将跟随曾经被禁锢的魂魄一同归于太阴"
+					]
+				},
+				"rebm_n": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 我也会跟随他们"
+					]
+				},
+				"rebm_o": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 勿忧，大道轮回，此亦归途，动手吧"
+					]
+				},
+				"rebm_p": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 你要这么选择吗"
+					]
+				},
+				"rebm_q": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 如果你另有留念"
+					]
+				},
+				"rebm_r": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 我不会强求"
+					]
+				},
+				"rebm_s": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @a 0 100 0",
+						"/effect @a slow_falling 60 1 true",
+						"/kill @e[type=entity:bss]",
+						"/fill 30 200 30 -30 200 -30 air",
+						"/fill 30 210 30 -30 210 -30 air",
+						"/fill 30 200 30 30 210 -30 air",
+						"/fill 30 200 -30 -30 210 -30 air",
+						"/fill -30 200 -30 -30 210 30 air",
+						"/fill -30 200 30 30 210 30 air",
+						"/kill @e[type=entity:unknown_end]",
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

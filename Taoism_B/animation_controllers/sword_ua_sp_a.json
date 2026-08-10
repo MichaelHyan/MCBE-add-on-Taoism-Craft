@@ -1,7 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"animation_controllers": {
-		"controller.animation.sword_ua_sp":{
+		"controller.animation.sword_ua_sp_a":{
 			"states":{
 				"base_jeta":{
 					"transitions":[
@@ -36,7 +36,6 @@
 					],
 					"on_entry": [
 						"/summon lightning_bolt",
-						"/kill @a[r=3]",
 						"/kill @s"
 					]
 				}

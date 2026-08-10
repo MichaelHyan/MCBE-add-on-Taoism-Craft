@@ -1,0 +1,39 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.shield_sp_a":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"shield_sp_a":"query.life_time < 6"},
+						{"shield_sp_b":"query.life_time >= 6"}
+					]
+				},
+				"shield_sp_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s fire_resistance infinite 1 true",
+						"/tp @n[type=entity:unknown_boss]",
+						"/effect @s resistance 1 255 true",
+						"/damage @e[type=player,r=3] 4"
+					]
+				},
+				"shield_sp_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s invisibility 1 1 true",
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

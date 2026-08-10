@@ -5,16 +5,30 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"spbe":"query.life_time == 3"}
+						{"spde_a":"query.life_time == 1"},
+						{"spbe_b":"query.life_time == 3"}
 					]
 				},
-				"spbe": {
+				"spbe_a": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
 							}
 					],
 					"on_entry": [
+						"/effect @e[r=3,family=monster] slowness 5 3 true",
+						"/effect @e[r=3,family=monster] weakness 5 3 true"
+					]
+				},
+				"spbe_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @e[r=3,family=monster] slowness 5 3 true",
+						"/effect @e[r=3,family=monster] weakness 5 3 true",
 						"/tp @n[type=player] @s",
 						"/effect @p resistance 5 5 true",
 						"/effect @s invisibility 1 1 true",

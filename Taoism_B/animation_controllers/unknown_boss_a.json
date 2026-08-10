@@ -1,0 +1,385 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.unknown_boss_a":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"boss_init":"query.life_time == 1 && 1 == 2"},
+						{"boss_p0a":"math.mod(query.life_time,88) == 1 || math.mod(query.life_time,88) == 8 || math.mod(query.life_time,88) == 9"},
+						{"boss_p0b":"math.mod(query.life_time,88) == 2 || math.mod(query.life_time,88) == 7 || math.mod(query.life_time,88) == 10"},
+						{"boss_p0c":"math.mod(query.life_time,88) == 3 || math.mod(query.life_time,88) == 6 || math.mod(query.life_time,88) == 11"},
+						{"boss_p0d":"math.mod(query.life_time,88) == 4 || math.mod(query.life_time,88) == 5 || math.mod(query.life_time,88) == 12"},
+						{"boss_p1a":"math.mod(query.life_time,88) == 13 || math.mod(query.life_time,88) == 14"},
+						{"boss_p2a":"math.mod(query.life_time,88) == 16"},
+						{"boss_p3a":"math.mod(query.life_time,88) == 27"},
+						{"boss_p4a":"math.mod(query.life_time,88) == 38 || math.mod(query.life_time,88) == 40 || math.mod(query.life_time,88) == 42 || math.mod(query.life_time,88) == 44 || math.mod(query.life_time,88) == 46"},
+						{"boss_p5a":"math.mod(query.life_time,88) == 48"},
+						{"boss_p5b":"math.mod(query.life_time,88) == 49"},
+						{"boss_p5c":"math.mod(query.life_time,88) == 50"},
+						{"boss_p5d":"math.mod(query.life_time,88) == 51"},
+						{"boss_p5e":"math.mod(query.life_time,88) == 52"},
+						{"boss_p5f":"math.mod(query.life_time,88) == 53"},
+						{"boss_p6a":"math.mod(query.life_time,88) == 54"},
+						{"boss_p7a":"math.mod(query.life_time,88) == 59"},
+						{"boss_p8a":"math.mod(query.life_time,88) == 65 || math.mod(query.life_time,88) == 68 || math.mod(query.life_time,88) == 71"},
+						{"boss_p9a":"math.mod(query.life_time,88) == 74"},
+						{"boss_p10a":"math.mod(query.life_time,88) == 84"}
+					]
+				},
+				"boss_init": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @a 0 203 0",
+						"/tp @s 0 201 0",
+						"/summon entity:bss 0 195 0",
+						"/fill 30 200 30 -30 200 -30 barrier",
+						"/fill 30 210 30 -30 210 -30 barrier",
+						"/fill 30 200 30 30 210 -30 barrier",
+						"/fill 30 200 -30 -30 210 -30 barrier",
+						"/fill -30 200 -30 -30 210 30 barrier",
+						"/fill -30 200 30 30 210 30 barrier",
+						"/function bgmbsp1",
+						"/effect @s slowness 12 255 true"
+					]
+				},
+				"boss_p0a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @a[rm=50] @s",
+						"/tp @s 0 201 0",
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:talisman_t",
+						"/effect @s slowness 4 255 true",
+						"/effect @s fire_resistance infinite 1 true",
+						"/summon lightning_bolt 3 200 3",
+						"/summon lightning_bolt -3 200 3",
+						"/summon lightning_bolt -3 200 -3",
+						"/summon lightning_bolt 3 200 -3",
+						"/summon lightning_bolt 4 200 0",
+						"/summon lightning_bolt -4 200 0",
+						"/summon lightning_bolt 0 200 4",
+						"/summon lightning_bolt 0 200 -4"
+					]
+				},
+				"boss_p0b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @a[rm=50] @s",
+						"/summon lightning_bolt 5 200 5",
+						"/summon lightning_bolt -5 200 5",
+						"/summon lightning_bolt -5 200 -5",
+						"/summon lightning_bolt 5 200 -5",
+						"/summon lightning_bolt 7 200 0",
+						"/summon lightning_bolt -7 200 0",
+						"/summon lightning_bolt 0 200 7",
+						"/summon lightning_bolt 0 200 -7"
+					]
+				},
+				"boss_p0c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @a[rm=50] @s",
+						"/summon lightning_bolt 7 200 7",
+						"/summon lightning_bolt -7 200 7",
+						"/summon lightning_bolt -7 200 -7",
+						"/summon lightning_bolt 7 200 -7",
+						"/summon lightning_bolt 10 200 0",
+						"/summon lightning_bolt -10 200 0",
+						"/summon lightning_bolt 0 200 10",
+						"/summon lightning_bolt 0 200 -10"
+					]
+				},
+				"boss_p0d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @a[rm=50] @s",
+						"/summon lightning_bolt 9 200 9",
+						"/summon lightning_bolt -9 200 9",
+						"/summon lightning_bolt -9 200 -9",
+						"/summon lightning_bolt 9 200 -9",
+						"/summon lightning_bolt 13 200 0",
+						"/summon lightning_bolt -13 200 0",
+						"/summon lightning_bolt 0 200 13",
+						"/summon lightning_bolt 0 200 -13"
+					]
+				},
+				"boss_p1a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @a[rm=50] @s",
+						"/fill 29 201 29 -29 201 -29 air",
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:bell_s",
+						"/summon entity:bell_sp ~4 ~ ~4",
+						"/summon entity:bell_sp ~4 ~ ~-4",
+						"/summon entity:bell_sp ~-4 ~ ~4",
+						"/summon entity:bell_sp ~-4 ~ ~-4"
+					]
+				},
+				"boss_p2a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @a[rm=50] @s",
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:sword_l",
+						"/effect @s speed 11 3 true"
+					]
+				},
+				"boss_p3a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @a[rm=50] @s",
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:soul_banner",
+						"/summon entity:zombie_mimic_sp ~4 ~ ~4",
+						"/summon entity:zombie_mimic_sp ~4 ~ ~-4",
+						"/summon entity:zombie_mimic_sp ~-4 ~ ~4",
+						"/summon entity:zombie_mimic_sp ~-4 ~ ~-4"
+					]
+				},
+				"boss_p4a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @a[rm=50] @s",
+						"/tp @s 0 201 0",
+						"/effect @s slowness 2 255 true",
+						"/function lotus",
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:lotus",
+						"/effect @s instant_health 1 1 true"
+					]
+				},
+				"boss_p5a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @a[rm=50] @s",
+						"/tp @s 0 201 0",
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:items:qi_c",
+						"/effect @s slowness 2 255 true",
+						"/particle minecraft:basic_flame_particle 5 202 5",
+						"/particle minecraft:basic_flame_particle -5 202 5",
+						"/particle minecraft:basic_flame_particle 5 202 -5",
+						"/particle minecraft:basic_flame_particle -5 202 -5",
+						"/particle minecraft:basic_flame_particle 7 202 0",
+						"/particle minecraft:basic_flame_particle -7 202 0",
+						"/particle minecraft:basic_flame_particle 0 202 7",
+						"/particle minecraft:basic_flame_particle 0 202 -7"
+					]
+				},
+				"boss_p5b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @a[rm=50] @s",
+						"/tp @s 0 201 0",
+						"/effect @s slowness 2 255 true",
+						"/particle minecraft:basic_flame_particle 8 202 8",
+						"/particle minecraft:basic_flame_particle -8 202 8",
+						"/particle minecraft:basic_flame_particle 8 202 -8",
+						"/particle minecraft:basic_flame_particle -8 202 -8",
+						"/particle minecraft:basic_flame_particle 12 202 0",
+						"/particle minecraft:basic_flame_particle -12 202 0",
+						"/particle minecraft:basic_flame_particle 0 202 12",
+						"/particle minecraft:basic_flame_particle 0 202 -12"
+					]
+				},
+				"boss_p5c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @a[rm=50] @s",
+						"/tp @s 0 201 0",
+						"/effect @s slowness 2 255 true",
+						"/particle minecraft:basic_flame_particle 12 202 12",
+						"/particle minecraft:basic_flame_particle -12 202 12",
+						"/particle minecraft:basic_flame_particle 12 202 -12",
+						"/particle minecraft:basic_flame_particle -12 202 -12",
+						"/particle minecraft:basic_flame_particle 17 202 0",
+						"/particle minecraft:basic_flame_particle -17 202 0",
+						"/particle minecraft:basic_flame_particle 0 202 17",
+						"/particle minecraft:basic_flame_particle 0 202 -17"
+					]
+				},
+				"boss_p5d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @a[rm=50] @s",
+						"/tp @s 0 201 0",
+						"/effect @s slowness 2 255 true",
+						"/effect @s resistance 2 255 true",
+						"/summon entity:qi 5 202 5",
+						"/summon entity:qi -5 202 5",
+						"/summon entity:qi 5 202 -5",
+						"/summon entity:qi -5 202 -5",
+						"/summon entity:qi 7 202 0",
+						"/summon entity:qi -7 202 0",
+						"/summon entity:qi 0 202 7",
+						"/summon entity:qi 0 202 -7"
+					]
+				},
+				"boss_p5e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @a[rm=50] @s",
+						"/tp @s 0 201 0",
+						"/effect @s slowness 2 255 true",
+						"/effect @s resistance 2 255 true",
+						"/summon entity:qi 8 202 8",
+						"/summon entity:qi -8 202 8",
+						"/summon entity:qi 8 202 -8",
+						"/summon entity:qi -8 202 -8",
+						"/summon entity:qi 12 202 0",
+						"/summon entity:qi -12 202 0",
+						"/summon entity:qi 0 202 12",
+						"/summon entity:qi 0 202 -12"
+					]
+				},
+				"boss_p5f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @a[rm=50] @s",
+						"/tp @s 0 201 0",
+						"/effect @s slowness 2 255 true",
+						"/effect @s resistance 2 255 true",
+						"/summon entity:qi 12 202 12",
+						"/summon entity:qi -12 202 12",
+						"/summon entity:qi 12 202 -12",
+						"/summon entity:qi -12 202 -12",
+						"/summon entity:qi 17 202 0",
+						"/summon entity:qi -17 202 0",
+						"/summon entity:qi 0 202 17",
+						"/summon entity:qi 0 202 -17"
+					]
+				},
+				"boss_p6a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @a[rm=50] @s",
+						"/tp @s 0 201 0",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/effect @s slowness 6 255 true",
+						"/effect @s resistance 6 255 true",
+						"/summon entity:shield_sp_a 0 195 0"
+					]
+				},
+				"boss_p7a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @a[rm=50] @s",
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:sword_qi",
+						"/effect @a[r=50] slowness 10 255 true",
+						"/effect @a[r=50] darkness 10 255 true",
+						"/playsound hs @a[r=50]"
+					]
+				},
+				"boss_p8a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @a[rm=50] @s",
+						"/effect @s speed 3 3 true",
+						"/tp @n[type=player,r=30]",
+						"/playsound mob.shulker.teleport @a[r=10]"
+					]
+				},
+				"boss_p9a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @a[rm=50] @s",
+						"/fill 29 201 29 -29 201 -29 air",
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:sword_u",
+						"/effect @s slowness 10 255 true",
+						"/tp 0 211 0",
+						"/summon entity:sword_ua_sp_a"
+					]
+				},
+				"boss_p10a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill 30 200 30 -30 200 -30 barrier",
+						"/fill 30 210 30 -30 210 -30 barrier",
+						"/fill 30 200 30 30 210 -30 barrier",
+						"/fill 30 200 -30 -30 210 -30 barrier",
+						"/fill -30 200 -30 -30 210 30 barrier",
+						"/fill -30 200 30 30 210 30 barrier",
+						"/tp @a[rm=50] @s",
+						"/tp 0 201 0"
+					]
+				}
+			}
+		}
+ 	}
+ }
