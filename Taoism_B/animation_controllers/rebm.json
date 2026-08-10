@@ -34,6 +34,8 @@
 							}
 					],
 					"on_entry": [
+						"/tp 0 201 0",
+						"/give @a[r=50] items:sword_f",
 						"/summon entity:unknown_end",
 						"/function bgmstop",
 						"/function bgmbsp3",

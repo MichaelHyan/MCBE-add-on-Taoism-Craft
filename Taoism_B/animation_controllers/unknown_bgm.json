@@ -28,6 +28,7 @@
 					],
 					"on_entry": [
 						"/function bgmstop",
+						"/fill 29 201 29 -29 201 -29 air",
 						"/kill @e[family=reb]",
 						"/summon entity:rebk"
 					]
