@@ -1,0 +1,52 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.sword_m":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"sword_m_a":"query.life_time < 3"},
+						{"sword_m_b":"query.life_time == 3"},
+						{"sword_m_b":"query.life_time == 4"}
+					]
+				},
+				"sword_m_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:basic_flame_particle ~ ~1 ~",
+						"/tp ^ ^ ^1 facing @n[tag=qlock]",
+						"/damage @e[tag=qlock,r=3] 15",
+						"/effect @e[tag=qlock,r=3] weakness 10 255 true",
+						"/tag @e[r=3] remove qlock"
+					]
+				},
+				"sword_m_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @p",
+						"/give @p items:sword_m",
+						"/effect @s invisibility 1 1 true"
+					]
+				},
+				"sword_m_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

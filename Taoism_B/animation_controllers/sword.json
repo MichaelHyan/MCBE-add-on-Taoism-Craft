@@ -38,6 +38,8 @@
 						{"sword_zb_e":"query.get_equipped_item_name=='sword_zb' && !query.is_jumping && variable.attack_time && query.player_level > 24"},
 						{"sword_zb_f":"query.get_equipped_item_name=='sword_zb' && !variable.attack_time && query.scoreboard('chargez') < 0 && query.player_level > 24"},
 						{"sword_zb_g":"query.get_equipped_item_name=='sword_zb' && !variable.attack_time && query.scoreboard('chargez') >= 0 && query.player_level > 24"},
+						{"sword_m_a":"query.get_equipped_item_name=='sword_m' && variable.attack_time && query.is_sneaking && query.player_level > 24"},
+						{"sword_m_b":"query.get_equipped_item_name=='sword_m' && variable.attack_time && !query.is_sneaking && query.player_level > 24"},
 						{"whisk":"query.get_equipped_item_name=='whisk' && variable.attack_time && query.player_level > 14"}
 					]
 				},
@@ -451,6 +453,28 @@
 						"/effect @s water_breathing 10 1 true",
 						"/effect @s resistance 10 2 true",
 						"/fill ~-2 ~-2 ~-2 ~2 ~2 ~2 obsidian replace lava"
+					]
+				},
+				"sword_m_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/tag @e[family=monster,r=20] add qlock",
+						"/summon entity:sword_m"
+					]
+				},
+				"sword_m_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/enchant @s smite 5"
 					]
 				},
 				"whisk": {
