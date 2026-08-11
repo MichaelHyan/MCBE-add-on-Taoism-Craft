@@ -5,10 +5,10 @@
       "identifier": "entity:meteor",
       "materials": { "default": "base", "invisible": "baseb" },
       "textures": {
-        "default": "textures/entity/ball"
+        "default": "textures/entity/meteor"
       },
       "geometry": {
-        "default": "geometry.ball"
+        "default": "geometry.meteor"
       },
 
       "scripts": {

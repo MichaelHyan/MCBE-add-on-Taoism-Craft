@@ -1,0 +1,36 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.meteor":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"meteor_a":"query.life_time > 1 && query.vertical_speed > -1"},
+						{"meteor_b":"query.life_time > 1 && query.vertical_speed < -1"}
+					]
+				},
+				"meteor_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @s",
+						"/summon entity:meteor_explosion"
+					]
+				},
+				"meteor_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:huge_explosion_emitter ~ ~ ~"
+					]
+				}
+			}
+		}
+ 	}
+ }

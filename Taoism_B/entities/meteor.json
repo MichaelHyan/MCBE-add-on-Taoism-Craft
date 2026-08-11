@@ -28,26 +28,28 @@
       },
       "minecraft:projectile": {
         "on_hit": {
-          "definition_event": {
-            "affect_projectile": true,
-            "event_trigger": {
-              "event": "form_explosion",
-              "target": "self"
-            }
+          "impact_damage": {
+            "damage": [ 0, 0 ],
+            "knockback": true,
+            "semi_random_diff_damage": false,
+            "destroy_on_hit": false
+          },
+          "stick_in_ground": {
+            "shake_time": 0.0
+          },
+          "arrow_effect": {
+            "apply_effect_to_blocking_targets": false
           }
         },
-        "stick_in_ground": {
-          "shake_time": 0
-        },
         "power": 1.6,
-        "gravity": 0,
+        "gravity": 0.1,
         "uncertainty_base": 0,
         "uncertainty_multiplier": 0,
         "anchor": 1,
-        "should_bounce": false,
+        "should_bounce": true,
         "offset": [ 0, -0.1, 0 ]
       },
-      "minecraft:physics": {
+	    "minecraft:physics": {
       },
       "minecraft:pushable": {
         "is_pushable": false,
@@ -58,28 +60,6 @@
           "max_optimized_distance": 100.0,
           "max_dropped_ticks": 7,
           "use_motion_prediction_hints": true
-        }
-      }
-    },
-    "component_groups": {
-      "explosion": {
-        "minecraft:explode": {
-          "causes_fire": false,
-          "fuse_lit": true,
-          "power": 10,
-          "fuse_length": {
-            "range_max": 2.0,
-            "range_min": 0.5
-          }
-        }
-      }
-    },
-    "events": {
-      "form_explosion": {
-        "add": {
-          "component_groups": [
-            "explosion"
-          ]
         }
       }
     }
