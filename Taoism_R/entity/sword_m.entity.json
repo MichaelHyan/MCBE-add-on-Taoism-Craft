@@ -5,10 +5,10 @@
       "identifier": "entity:sword_m",
       "materials": { "default": "base", "invisible": "baseb" },
       "textures": {
-        "default": "textures/entity/ring"
+        "default": "textures/entity/sword_m"
       },
       "geometry": {
-        "default": "geometry.ring"
+        "default": "geometry.sword_m"
       },
 
       "scripts": {

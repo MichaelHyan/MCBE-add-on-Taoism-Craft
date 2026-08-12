@@ -25,7 +25,7 @@
       "minecraft:hand_equipped":true,
       "minecraft:icon":{
         "textures":{
-          "default":"sword_t"
+          "default":"sword_m"
         }
       },
       "minecraft:damage":5,

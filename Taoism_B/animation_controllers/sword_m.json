@@ -5,9 +5,9 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"sword_m_a":"query.life_time < 3"},
+						{"sword_m_a":"query.life_time <= 2"},
 						{"sword_m_b":"query.life_time == 3"},
-						{"sword_m_b":"query.life_time == 4"}
+						{"sword_m_c":"query.life_time == 4"}
 					]
 				},
 				"sword_m_a": {
@@ -18,8 +18,8 @@
 					],
 					"on_entry": [
 						"/particle minecraft:basic_flame_particle ~ ~1 ~",
-						"/tp ^ ^ ^1 facing @n[tag=qlock]",
-						"/damage @e[tag=qlock,r=3] 15",
+						"/tp ^ ^ ^2 facing @n[tag=qlock]",
+						"/damage @e[tag=qlock,r=3] 25",
 						"/effect @e[tag=qlock,r=3] weakness 10 255 true",
 						"/tag @e[r=3] remove qlock"
 					]
