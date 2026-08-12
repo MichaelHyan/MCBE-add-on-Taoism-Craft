@@ -215,6 +215,7 @@
 					"on_entry": [
 						"/particle minecraft:totem_particle ~ ~1 ~",
 						"/kill @e[type=entity:sword_ua_sp,r=3]",
+						"/kill @e[type=entity:sword_ua_sp_a,r=3]",
 						"/damage @e[r=3,family=undead] 1",
 						"/effect @e[r=3,family=undead] slowness 60 255 true",
 						"/effect @e[r=3,family=undead] weakness 60 255 true"

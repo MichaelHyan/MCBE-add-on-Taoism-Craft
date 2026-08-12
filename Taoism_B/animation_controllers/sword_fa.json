@@ -19,7 +19,7 @@
 					"on_entry": [
 						"/summon entity:sword",
 						"/scoreboard objectives add sword dummy",
-						"/scoreboard players set @s sword -500"
+						"/scoreboard players set @s sword -100"
 					]
 				},
 				"sword_fb": {

@@ -52,6 +52,7 @@
         "max": 1000
       },
       "minecraft:boss": {
+        "name": "entity.entity:unknown_boss.name",
         "should_darken_sky": true,
         "hud_range": 55
       },
