@@ -6,7 +6,15 @@
       "is_experimental": false,
       "is_summonable": true,
       "is_spawnable": false,
-      "spawn_category": "misc"
+      "spawn_category": "misc",
+      "scripts": {
+				"animate": [
+					"spbc"
+				]
+			},
+      "animations": {
+				"spbc": "controller.animation.spbc"
+			}
     },
     "components": {
       "minecraft:attack": {

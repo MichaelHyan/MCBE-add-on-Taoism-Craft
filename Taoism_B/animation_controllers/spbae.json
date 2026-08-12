@@ -1,0 +1,37 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.spbae":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"spbae_a":"query.life_time <= 5"},
+						{"spbae_b":"query.life_time > 5"}
+					]
+				},
+				"spbae_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:cauldron_explosion_emitter ~ ~ ~",
+						"/tp @e[family=monster,r=5] @s"
+					]
+				},
+				"spbae_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/damage @e[family=monster,r=2] 1",
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

@@ -1,0 +1,80 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.spbce":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"spbce_a":"query.life_time == 1"},
+						{"spbce_b":"query.life_time == 5"},
+						{"spbce_c":"query.life_time == 6"},
+						{"spbce_d":"query.life_time == 7"}
+					]
+				},
+				"spbce_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s resistance 10 255 true"
+					]
+				},
+				"spbce_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:basic_flame_particle ~0.5 ~0.5 ~0.5",
+						"/particle minecraft:basic_flame_particle ~-0.5 ~0.5 ~0.5",
+						"/particle minecraft:basic_flame_particle ~0.5 ~0.5 ~-0.5",
+						"/particle minecraft:basic_flame_particle ~-0.5 ~0.5 ~-0.5",
+						"/particle minecraft:basic_flame_particle ~0.7 ~0.5 ~",
+						"/particle minecraft:basic_flame_particle ~-0.7 ~0.5 ~",
+						"/particle minecraft:basic_flame_particle ~ ~0.5 ~0.7",
+						"/particle minecraft:basic_flame_particle ~ ~0.5 ~-0.7"
+					]
+				},
+				"spbce_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:basic_flame_particle ~1 ~0.5 ~1",
+						"/particle minecraft:basic_flame_particle ~-1 ~0.5 ~1",
+						"/particle minecraft:basic_flame_particle ~1 ~0.5 ~-1",
+						"/particle minecraft:basic_flame_particle ~-1 ~0.5 ~-1",
+						"/particle minecraft:basic_flame_particle ~1.4 ~0.5 ~",
+						"/particle minecraft:basic_flame_particle ~-1.4 ~0.5 ~",
+						"/particle minecraft:basic_flame_particle ~ ~0.5 ~1.4",
+						"/particle minecraft:basic_flame_particle ~ ~0.5 ~-1.4"
+					]
+				},
+				"spbce_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon entity:meteor ~ ~500 ~",
+						"/particle minecraft:basic_flame_particle ~1.5 ~0.5 ~1.5",
+						"/particle minecraft:basic_flame_particle ~-1.5 ~0.5 ~1.5",
+						"/particle minecraft:basic_flame_particle ~1.5 ~0.5 ~-1.5",
+						"/particle minecraft:basic_flame_particle ~-1.5 ~0.5 ~-1.5",
+						"/particle minecraft:basic_flame_particle ~2.1 ~0.5 ~",
+						"/particle minecraft:basic_flame_particle ~-2.1 ~0.5 ~",
+						"/particle minecraft:basic_flame_particle ~ ~0.5 ~2.1",
+						"/particle minecraft:basic_flame_particle ~ ~0.5 ~-2.1",
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }
