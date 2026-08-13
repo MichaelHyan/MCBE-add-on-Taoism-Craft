@@ -1,0 +1,25 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.tornado_a":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"spin":"1==1"}
+					]
+				},
+				"spin": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @s ^ ^ ^ facing ^-1 ^ ^1",
+						"/effect @s resistance 1 255 true"
+					]
+				}
+			}
+		}
+ 	}
+ }

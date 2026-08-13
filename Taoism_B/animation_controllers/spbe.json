@@ -5,8 +5,8 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"spde_a":"query.life_time == 1"},
-						{"spbe_b":"query.life_time == 3"}
+						{"spbe_a":"query.life_time <= 1"},
+						{"spbe_b":"query.life_time > 1"}
 					]
 				},
 				"spbe_a": {
@@ -16,8 +16,11 @@
 							}
 					],
 					"on_entry": [
-						"/effect @e[r=3,family=monster] slowness 5 3 true",
-						"/effect @e[r=3,family=monster] weakness 5 3 true"
+						"/particle minecraft:falling_dust_sand_particle ~ ~ ~",
+						"/damage @e[tag=spbd,tag=!spbe,r=2] 15",
+						"/tag @e[type=!player,type=!item,family=!taoism,r=2] add spbe",
+						"/effect @e[tag=spbe,r=2] slowness 60 1",
+						"/tag @e[r=2] remove spbd"
 					]
 				},
 				"spbe_b": {
@@ -27,10 +30,6 @@
 							}
 					],
 					"on_entry": [
-						"/effect @e[r=3,family=monster] slowness 5 3 true",
-						"/effect @e[r=3,family=monster] weakness 5 3 true",
-						"/tp @n[type=player] @s",
-						"/effect @p resistance 5 5 true",
 						"/effect @s invisibility 1 1 true",
 						"/kill @s"
 					]

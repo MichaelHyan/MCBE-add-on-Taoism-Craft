@@ -1,0 +1,132 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.spb":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"spba_a":"query.get_equipped_item_name=='spba' && query.is_sneaking && variable.attack_time && query.scoreboard('charge') >= 0 && query.player_level > 4"},
+						{"spbb_a":"query.get_equipped_item_name=='spbb' && query.is_sneaking && variable.attack_time && query.scoreboard('charge') >= 0 && query.player_level > 9"},
+						{"spbb_b":"query.get_equipped_item_name=='spbb' && query.scoreboard('charge') < -2 && query.player_level > 9"},
+						{"spbb_c":"query.scoreboard('charge') >= -2 && query.scoreboard('charge') < 0 && query.player_level > 9"},
+						{"spbc_a":"query.get_equipped_item_name=='spbc' && query.is_sneaking && variable.attack_time && query.scoreboard('charge') >= 0 && query.player_level > 14"},
+						{"spbd_a":"query.get_equipped_item_name=='spbd' && query.is_sneaking && variable.attack_time && query.scoreboard('charge') >= 0 && query.player_level > 24"},
+						{"spbd_b":"query.get_equipped_item_name=='spbd' && !variable.attack_time && query.player_level > 24"},
+						{"spbe_a":"query.get_equipped_item_name=='spbe' && query.is_sneaking && variable.attack_time && query.scoreboard('charge') >= 0 && query.player_level > 19"}
+					]
+				},
+				"spba_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/damage @e[tag=spba] 20",
+						"/tag @e remove spba",
+						"/summon entity:spb_execute",
+						"/scoreboard players set @s charge -100"
+					]
+				},
+				"spbb_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/effect @s resistance infinite 1 true",
+						"/effect @s invisibility infinite 1 true",
+						"/effect @s speed infinite 3 true",
+						"/effect @s darkness infinite 1 true",
+						"/effect @s jump_boost infinite 1 true",
+						"/tp @s ~ ~ ~ facing ~-1 ~1 ~-1",
+						"/camera @s set minecraft:fixed_boom pos ~-5 ~-5 ~3 facing ~ ~1 ~",
+						"/inputpermission set @s camera disabled",
+						"/scoreboard players set @s charge -100"
+					]
+				},
+				"spbb_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:sculk_sensor_redstone_particle ~ ~0.1 ~",
+						"/particle minecraft:sculk_sensor_redstone_particle ~0.1 ~0.1 ~",
+						"/particle minecraft:sculk_sensor_redstone_particle ~-0.1 ~0.1 ~",
+						"/particle minecraft:sculk_sensor_redstone_particle ~ ~0.1 ~0.1",
+						"/particle minecraft:sculk_sensor_redstone_particle ~ ~0.1 ~-0.1"
+					]
+				},
+				"spbb_c": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/effect @s resistance 0 1 true",
+						"/effect @s invisibility 0 1 true",
+						"/effect @s speed 0 3 true",
+						"/effect @s darkness 0 1 true",
+						"/effect @s jump_boost 0 1 true",
+						"/camera @s clear",
+						"/inputpermission set @s camera enabled"
+					]
+				},
+				"spbc_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/effect @e[family=!monster,r=3] regeneration 5 5 true",
+						"/scoreboard players set @s charge -100"
+					]
+				},
+				"spbd_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/kill @e[type=entity:spb_lantern]",
+						"/summon entity:spb_lantern",
+						"/scoreboard players set @s charge -100"
+					]
+				},
+				"spbd_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @n[type=entity:spb_lantern] ^-0.5 ^0.5 ^-1"
+					]
+				},
+				"spbe_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/summon entity:tornado",
+						"/scoreboard players set @s charge -100"
+					]
+				}
+			}
+		}
+ 	}
+ }

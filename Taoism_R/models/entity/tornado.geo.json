@@ -1,0 +1,29 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.tornado",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 8,
+				"visible_bounds_offset": [0, 3, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-6, -3, -6], "size": [12, 8, 12], "uv": [162, 100]},
+						{"origin": [-9, 5, -7], "size": [18, 9, 18], "pivot": [0, 0, 2], "rotation": [0, -15, 0], "uv": [162, 73]},
+						{"origin": [-10, 14, -10], "size": [24, 12, 24], "pivot": [2, 0, 2], "rotation": [0, -30, 0], "uv": [130, 135]},
+						{"origin": [-14, 26, -16], "size": [33, 19, 32], "pivot": [2, 0, 0], "rotation": [0, -45, 0], "uv": [0, 135]},
+						{"origin": [-18, 45, -22], "size": [41, 22, 40], "pivot": [2, 0, -2], "rotation": [0, -60, 0], "uv": [0, 73]},
+						{"origin": [-25, 67, -27], "size": [51, 23, 50], "pivot": [0, 0, -2], "rotation": [0, -75, 0], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

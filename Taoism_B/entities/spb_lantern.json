@@ -2,18 +2,18 @@
   "format_version": "1.26.0",
   "minecraft:entity": {
     "description": {
-      "identifier": "entity:spbb_a",
+      "identifier": "entity:spb_lantern",
       "is_experimental": false,
       "is_summonable": true,
       "is_spawnable": false,
       "spawn_category": "misc",
       "scripts": {
 				"animate": [
-					"spbc"
+					"spb_lantern"
 				]
 			},
       "animations": {
-				"spbc": "controller.animation.spbc"
+				"spb_lantern": "controller.animation.spb_lantern"
 			}
     },
     "components": {
@@ -67,16 +67,9 @@
         "suffocate_time": 0,
         "total_supply": 15
       },
-      "minecraft:can_climb": {},
       "minecraft:collision_box": {
         "height": 1.8,
         "width": 0.4
-      },
-      "minecraft:damage_sensor": {
-        "triggers": {
-          "cause": "fall",
-          "deals_damage": "no"
-        }
       },
       "minecraft:health": {
         "max": 4,
@@ -102,13 +95,12 @@
         "using_door_annotation": true
       },
       "minecraft:persistent": {},
-      "minecraft:physics": {},
       "minecraft:pushable": {
         "is_pushable": true,
         "is_pushable_by_piston": true
       },
       "minecraft:shooter": {
-        "def": "entity:spba"
+        "def": "entity:spbd"
       },
       "minecraft:type_family": {
         "family": [

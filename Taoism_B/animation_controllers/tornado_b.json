@@ -1,33 +1,34 @@
 {
 	"format_version": "1.8.0",
 	"animation_controllers": {
-		"controller.animation.spbae":{
+		"controller.animation.tornado_b":{
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"spbae_a":"query.life_time <= 5"},
-						{"spbae_b":"query.life_time > 5"}
+						{"tornado":"query.life_time < 5"},
+						{"despawn":"query.life_time > 5"}
 					]
 				},
-				"spbae_a": {
+				"tornado": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
 							}
 					],
 					"on_entry": [
-						"/particle minecraft:cauldron_explosion_emitter ~ ~ ~",
-						"/tp @e[family=monster,r=5] @s"
+						"/effect @e[r=5] levitation 1 20 true",
+						"/effect @e[type=player,r=5] slow_falling 10 20 true",
+						"/tp @n[type=entity:spbe]"
 					]
 				},
-				"spbae_b": {
+				"despawn": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
 							}
 					],
 					"on_entry": [
-						"/damage @e[family=monster,r=2] 1",
+						"/tp ~~-3~",
 						"/kill @s"
 					]
 				}

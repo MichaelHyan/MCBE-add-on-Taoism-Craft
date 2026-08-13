@@ -5,8 +5,8 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"spba_a":"query.life_time <= 3"},
-						{"spba_b":"query.life_time > 3"}
+						{"spba_a":"query.life_time <= 1"},
+						{"spba_b":"query.life_time > 1"}
 					]
 				},
 				"spba_a": {
@@ -16,7 +16,10 @@
 							}
 					],
 					"on_entry": [
-						"/particle minecraft:balloon_gas_particle ~ ~ ~"
+						"/particle minecraft:balloon_gas_particle ~ ~ ~",
+						"/damage @e[tag=spbe,tag=!spba,r=2] 15",
+						"/tag @e[type=!player,type=!item,family=!taoism,r=2] add spba",
+						"/tag @e[r=2] remove spbe"
 					]
 				},
 				"spba_b": {

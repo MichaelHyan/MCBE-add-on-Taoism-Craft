@@ -5,18 +5,32 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"spbb":"query.life_time == 3"}
+						{"spbb_a":"query.life_time <= 1"},
+						{"spbb_b":"query.life_time > 1"}
 					]
 				},
-				"spbb": {
+				"spbb_a": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
 							}
 					],
 					"on_entry": [
-						"/particle minecraft:totem_particle ~ ~ ~",
-						"/summon entity:spbb_a",
+						"/particle minecraft:villager_happy ~ ~ ~",
+						"/damage @e[tag=spbc,tag=!spbb,r=2] 15",
+						"/tag @e[type=!player,type=!item,family=!taoism,r=2] add spbb",
+						"/effect @e[tag=spbb,r=2] poison 60 1",
+						"/tag @e[r=2] remove spbc"
+					]
+				},
+				"spbb_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s invisibility 1 1 true",
 						"/kill @s"
 					]
 				}

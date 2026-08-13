@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "entity:tornado",
+      "materials": {
+        "default": "entity_alphablend"
+      },
+      "textures": {
+        "default": "textures/entity/tornado"
+      },
+      "geometry": {
+        "default": "geometry.tornado"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

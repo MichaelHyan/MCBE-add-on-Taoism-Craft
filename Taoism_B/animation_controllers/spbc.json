@@ -5,8 +5,8 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"spbc_a":"query.life_time <= 3"},
-						{"spbc_b":"query.life_time > 3"}
+						{"spbc_a":"query.life_time <= 1"},
+						{"spbc_b":"query.life_time > 1"}
 					]
 				},
 				"spbc_a": {
@@ -17,7 +17,10 @@
 					],
 					"on_entry": [
 						"/particle minecraft:sculk_sensor_redstone_particle ~ ~ ~",
-						"/effect @e[family=!monster,r=5] regeneration 1 5 true"
+						"/damage @e[tag=spba,tag=!spbc,r=2] 15",
+						"/tag @e[type=!player,type=!item,family=!taoism,r=2] add spbc",
+						"/effect @e[tag=spbc,r=2] weakness 60 1",
+						"/tag @e[r=2] remove spba"
 					]
 				},
 				"spbc_b": {

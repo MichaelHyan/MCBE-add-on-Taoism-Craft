@@ -5,17 +5,32 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"spbd":"query.life_time == 1"}
+						{"spbd_a":"query.life_time <= 1"},
+						{"spbd_b":"query.life_time > 1"}
 					]
 				},
-				"spbd": {
+				"spbd_a": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
 							}
 					],
 					"on_entry": [
-						"/summon entity:spbd_a",
+						"/particle minecraft:basic_flame_particle ~ ~ ~",
+						"/damage @e[tag=spbb,tag=!spbd,r=2] 15",
+						"/tag @e[type=!player,type=!item,family=!taoism,r=2] add spbd",
+						"/effect @e[tag=spbd,r=2] wither 60 1",
+						"/tag @e[r=2] remove spbb"
+					]
+				},
+				"spbd_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s invisibility 1 1 true",
 						"/kill @s"
 					]
 				}

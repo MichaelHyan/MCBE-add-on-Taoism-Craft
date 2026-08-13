@@ -1,0 +1,70 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.spb_execute":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"spbex_a":"query.life_time == 0.6"},
+						{"spbex_b":"query.life_time == 1.2"},
+						{"spbex_c":"query.life_time == 1.8"},
+						{"spbex_d":"query.life_time == 2.4"}
+					]
+				},
+				"spbex_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @s @p",
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/damage @e[tag=spbb] 20",
+						"/tag @e remove spbb"
+					]
+				},
+				"spbex_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @s @p",
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/damage @e[tag=spbc] 20",
+						"/tag @e remove spbc"
+					]
+				},
+				"spbex_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @s @p",
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/damage @e[tag=spbd] 20",
+						"/tag @e remove spbd"
+					]
+				},
+				"spbex_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @s @p",
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/damage @e[tag=spbe] 20",
+						"/tag @e remove spbe",
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }
