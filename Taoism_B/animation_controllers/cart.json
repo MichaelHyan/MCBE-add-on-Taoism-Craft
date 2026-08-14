@@ -1,0 +1,26 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.cart":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"cart":"1==1"}
+					]
+				},
+				"cart": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:balloon_gas_particle ^0.3 ^ ^-0.3",
+						"/particle minecraft:balloon_gas_particle ^-0.3 ^ ^-0.3",
+						"/effect @s resistance 1 255 true"
+					]
+				}
+			}
+		}
+ 	}
+ }

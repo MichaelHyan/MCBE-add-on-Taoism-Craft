@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "entity:cart",
+      "materials": {
+        "default": "entity_alphablend"
+      },
+      "textures": {
+        "default": "textures/entity/cart"
+      },
+      "geometry": {
+        "default": "geometry.cart"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

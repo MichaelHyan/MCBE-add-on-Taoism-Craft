@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "entity:talisman_n",
+      "materials": {
+        "default": "entity_alphablend"
+      },
+      "textures": {
+        "default": "textures/entity/talisman_n"
+      },
+      "geometry": {
+        "default": "geometry.talisman_n"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

@@ -16,8 +16,6 @@
 						{"scripture_ft":"query.get_equipped_item_name=='scripture_ft' && variable.attack_time && query.player_level > 4"},
 						{"talisman_t_a":"query.get_equipped_item_name=='talisman_t' && !query.is_using_item && query.player_level > 9"},
 						{"talisman_t_b":"query.get_equipped_item_name=='talisman_t' && query.is_using_item && query.player_level > 9"},
-						{"talisman_a":"query.get_equipped_item_name=='talisman' && !query.is_using_item && query.player_level > 4"},
-						{"talisman_b":"query.get_equipped_item_name=='talisman' && query.is_using_item && query.player_level > 4"},
 						{"talisman_g":"query.get_equipped_item_name=='talisman_g' && query.is_using_item && query.player_level > 19"},
 						{"talisman_e_a":"query.get_equipped_item_name=='talisman_e' && variable.attack_time && !query.is_using_item && !query.is_sneaking && query.player_level > 14 && query.scoreboard('charge') >= 0"},
 						{"talisman_e_b":"query.get_equipped_item_name=='talisman_e' && !variable.attack_time && !query.is_using_item && query.is_sneaking && query.player_level > 14 && query.scoreboard('charge') >= 0"},
@@ -204,21 +202,6 @@
 					],
 					"on_entry": [
 						"/effect @s speed 1 1 true"
-					]
-				},
-				"talisman_b": {
-					"transitions": [
-						{
-							"base_jeta": "(1.0)"
-						}
-					],
-					"on_entry": [
-						"/particle minecraft:totem_particle ~ ~1 ~",
-						"/kill @e[type=entity:sword_ua_sp,r=3]",
-						"/kill @e[type=entity:sword_ua_sp_a,r=3]",
-						"/damage @e[r=3,family=undead] 1",
-						"/effect @e[r=3,family=undead] slowness 60 255 true",
-						"/effect @e[r=3,family=undead] weakness 60 255 true"
 					]
 				},
 				"talisman_g": {

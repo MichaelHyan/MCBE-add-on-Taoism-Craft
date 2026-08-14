@@ -1,0 +1,53 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.talisman_n":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"talisman_n_a":"query.life_time <= 1"},
+						{"talisman_n_b":"query.life_time == 1.2"},
+						{"talisman_n_c":"query.life_time > 1.2"}
+					]
+				},
+				"talisman_n_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:balloon_gas_particle ~ ~ ~",
+						"/kill @e[type=entity:sword_ua_sp,r=3]",
+						"/kill @e[type=entity:sword_ua_sp_a,r=3]",
+						"/effect @e[r=3,family=undead] slowness 60 255 true",
+						"/effect @e[r=3,family=undead] weakness 60 255 true"
+					]
+				},
+				"talisman_n_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:large_explosion",
+						"/effect @s invisibility 1 1 true",
+						"/kill @s"
+					]
+				},
+				"talisman_n_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s invisibility 1 1 true",
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }
