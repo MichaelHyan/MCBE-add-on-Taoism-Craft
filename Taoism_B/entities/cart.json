@@ -62,8 +62,8 @@
       "minecraft:nameable": {},
       "minecraft:horse.jump_strength": {
         "value": {
-          "range_min": 1.0,
-          "range_max": 3.0
+          "range_min": 0.8,
+          "range_max": 1.0
         }
       },
       "minecraft:balloonable": {},
