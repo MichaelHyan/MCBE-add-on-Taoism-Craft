@@ -37,7 +37,8 @@
           ]
         }
       },
-      "minecraft:input_ground_controlled": {},
+      "minecraft:input_ground_controlled": {
+      },
       "minecraft:health": {
         "value": {
           "range_min": 20,
