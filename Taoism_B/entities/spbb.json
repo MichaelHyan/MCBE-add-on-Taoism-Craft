@@ -8,11 +8,13 @@
       "is_experimental": false,
       "scripts": {
 				"animate": [
-					"spbb"
+					"spbb",
+          "spb_burst"
 				]
 			},
       "animations": {
-				"spbb": "controller.animation.spbb"
+				"spbb": "controller.animation.spbb",
+        "spb_burst": "controller.animation.spb_burst"
 			}
     },
     "components": {
@@ -29,19 +31,16 @@
       "minecraft:projectile": {
         "on_hit": {
           "impact_damage": {
-            "damage": [ 0, 0 ],
+            "damage": [ -4, -4 ],
             "knockback": true,
             "semi_random_diff_damage": false,
             "destroy_on_hit": false
           },
           "stick_in_ground": {
             "shake_time": 0.0
-          },
-          "arrow_effect": {
-            "apply_effect_to_blocking_targets": false
           }
         },
-        "power": 1,
+        "power": 3,
         "gravity": 0,
         "uncertainty_base": 0,
         "uncertainty_multiplier": 0,

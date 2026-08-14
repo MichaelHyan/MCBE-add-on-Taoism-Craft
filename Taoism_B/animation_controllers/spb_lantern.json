@@ -5,8 +5,8 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"spb_lantern_a":"query.life_time <= 60 && math.mod(query.life_time,1) == 0"},
-						{"spb_lantern_b":"query.life_time > 60"}
+						{"spb_lantern_a":"query.life_time <= 180 && math.mod(query.life_time,1) == 0"},
+						{"spb_lantern_b":"query.life_time > 180"}
 					]
 				},
 				"spb_lantern_a": {

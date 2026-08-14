@@ -6,12 +6,12 @@
 				"base_jeta":{
 					"transitions":[
 						{"spba_a":"query.get_equipped_item_name=='spba' && query.is_sneaking && variable.attack_time && query.scoreboard('charge') >= 0 && query.player_level > 4"},
+						{"spba_b":"query.get_equipped_item_name=='spba' && query.player_level > 14"},
 						{"spbb_a":"query.get_equipped_item_name=='spbb' && query.is_sneaking && variable.attack_time && query.scoreboard('charge') >= 0 && query.player_level > 9"},
 						{"spbb_b":"query.get_equipped_item_name=='spbb' && query.scoreboard('charge') < -2 && query.player_level > 9"},
 						{"spbb_c":"query.scoreboard('charge') >= -2 && query.scoreboard('charge') < 0 && query.player_level > 9"},
 						{"spbc_a":"query.get_equipped_item_name=='spbc' && query.is_sneaking && variable.attack_time && query.scoreboard('charge') >= 0 && query.player_level > 14"},
 						{"spbd_a":"query.get_equipped_item_name=='spbd' && query.is_sneaking && variable.attack_time && query.scoreboard('charge') >= 0 && query.player_level > 24"},
-						{"spbd_b":"query.get_equipped_item_name=='spbd' && !variable.attack_time && query.player_level > 24"},
 						{"spbe_a":"query.get_equipped_item_name=='spbe' && query.is_sneaking && variable.attack_time && query.scoreboard('charge') >= 0 && query.player_level > 19"}
 					]
 				},
@@ -25,8 +25,26 @@
 						"/particle minecraft:totem_particle ~ ~1 ~",
 						"/damage @e[tag=spba] 20",
 						"/tag @e remove spba",
-						"/summon entity:spb_execute",
+						"/damage @e[tag=spbb] 20",
+						"/tag @e remove spbb",
+						"/damage @e[tag=spbc] 20",
+						"/tag @e remove spbc",
+						"/damage @e[tag=spbd] 20",
+						"/tag @e remove spbd",
+						"/damage @e[tag=spbe] 20",
+						"/tag @e remove spbe",
 						"/scoreboard players set @s charge -100"
+					]
+				},
+				"spba_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/damage @e[tag=spbx] 10",
+						"/tag @e remove spbx"
 					]
 				},
 				"spbb_a": {
@@ -102,16 +120,6 @@
 						"/kill @e[type=entity:spb_lantern]",
 						"/summon entity:spb_lantern",
 						"/scoreboard players set @s charge -100"
-					]
-				},
-				"spbd_b": {
-					"transitions": [
-							{
-								"base_jeta": "(1.0)"
-							}
-					],
-					"on_entry": [
-						"/tp @n[type=entity:spb_lantern] ^-0.5 ^0.5 ^-1"
 					]
 				},
 				"spbe_a": {

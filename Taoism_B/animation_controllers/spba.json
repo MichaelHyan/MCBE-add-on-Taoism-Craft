@@ -6,7 +6,8 @@
 				"base_jeta":{
 					"transitions":[
 						{"spba_a":"query.life_time <= 1"},
-						{"spba_b":"query.life_time > 1"}
+						{"spba_b":"query.life_time == 1.2"},
+						{"spba_c":"query.life_time > 1.2"}
 					]
 				},
 				"spba_a": {
@@ -19,10 +20,23 @@
 						"/particle minecraft:balloon_gas_particle ~ ~ ~",
 						"/damage @e[tag=spbe,tag=!spba,r=2] 15",
 						"/tag @e[type=!player,type=!item,family=!taoism,r=2] add spba",
+						"/tag @e[type=!player,type=!item,family=!taoism,r=2] add spbx",
 						"/tag @e[r=2] remove spbe"
 					]
 				},
 				"spba_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:large_explosion",
+						"/effect @s invisibility 1 1 true",
+						"/kill @s"
+					]
+				},
+				"spba_c": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"

@@ -41,7 +41,7 @@
         "is_amphibious": true,
         "can_swim": false,
         "can_walk": true,
-        "can_sink": false,
+        "can_sink": true,
         "avoid_damage_blocks": true
       },
       "minecraft:can_climb": {},
@@ -105,8 +105,8 @@
         ]
       },
       "minecraft:collision_box": {
-        "height": 0.6,
-        "width": 1.9
+        "height": 1.9,
+        "width": 0.6
       },
       "minecraft:physics": {},
       "minecraft:pushable": {},
@@ -154,7 +154,6 @@
         "generatesBubbles": true,
         "breathesAir": true
       },
-      "minecraft:fire_immune": {},
       "minecraft:follow_range": {
         "value": 300
       }

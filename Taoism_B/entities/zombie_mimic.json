@@ -29,13 +29,21 @@
         "table": "loot_tables/entities/zombie_mimic.json"
       },
       "minecraft:hurt_on_condition": {
-        "damage_conditions": {
-          "filters": {
-            "test": "in_lava"
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self"
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
           },
-          "cause": "lava",
-          "damage_per_tick": 4
-        }
+          {
+            "filters": { "test": "in_contact_with_water" },
+            "cause": "drowning",
+            "damage_per_tick": 4
+          }
+        ]
       },
       "minecraft:movement": {
         "value": 0.4
@@ -107,8 +115,8 @@
         ]
       },
       "minecraft:collision_box": {
-        "height": 0.6,
-        "width": 1.9
+        "height": 1.9,
+        "width": 0.6
       },
       "minecraft:physics": {},
       "minecraft:pushable": {},
@@ -120,6 +128,7 @@
         "should_darken_sky": true,
         "hud_range": 55
       },
+      "minecraft:burns_in_daylight": {},
       "minecraft:attack": {
         "damage": 10,
         "effect_name": "wither",

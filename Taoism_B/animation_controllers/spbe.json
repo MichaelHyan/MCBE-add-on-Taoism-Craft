@@ -6,7 +6,8 @@
 				"base_jeta":{
 					"transitions":[
 						{"spbe_a":"query.life_time <= 1"},
-						{"spbe_b":"query.life_time > 1"}
+						{"spbe_b":"query.life_time == 1.2"},
+						{"spbe_c":"query.life_time > 1.2"}
 					]
 				},
 				"spbe_a": {
@@ -24,6 +25,18 @@
 					]
 				},
 				"spbe_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:large_explosion",
+						"/effect @s invisibility 1 1 true",
+						"/kill @s"
+					]
+				},
+				"spbe_c": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
