@@ -20,6 +20,7 @@
 						"/particle minecraft:balloon_gas_particle ~ ~ ~",
 						"/kill @e[type=entity:sword_ua_sp,r=3]",
 						"/kill @e[type=entity:sword_ua_sp_a,r=3]",
+						"/damage @e[type=entity:ghost,r=15] 10",
 						"/effect @e[r=3,family=undead] slowness 60 255 true",
 						"/effect @e[r=3,family=undead] weakness 60 255 true"
 					]

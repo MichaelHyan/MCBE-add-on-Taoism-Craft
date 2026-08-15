@@ -1,0 +1,24 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.ghost_despawn":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"die":"query.is_alive == 0"}
+					]
+				},
+				"die": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @a sleep 1"
+					]
+				}
+			}
+		}
+ 	}
+ }

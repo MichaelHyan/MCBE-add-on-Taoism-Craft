@@ -16,6 +16,7 @@
 					],
 					"on_entry": [
 						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/damage @e[type=entity:ghost,r=15] 10",
 						"/damage @e[family=monster,r=15] 2",
 						"/effect @e[family=monster,r=15] slowness 60 2 true",
 						"/effect @e[family=monster,r=15] weakness 60 2 true"

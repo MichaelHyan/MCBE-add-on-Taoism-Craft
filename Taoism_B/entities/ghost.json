@@ -6,17 +6,25 @@
       "is_experimental": false,
       "is_summonable": true,
       "is_spawnable": false,
-      "spawn_category": "monster"
+      "spawn_category": "monster",
+      "scripts": {
+				"animate": [
+					"ghost_despawn"
+				]
+			},
+      "animations": {
+				"ghost_despawn": "controller.animation.ghost_despawn"
+			}
     },
     "components": {
       "minecraft:attack": {
-        "damage": 3
+        "damage": 1
       },
       "minecraft:behavior.charge_attack": {
-        "priority": 4
+        "priority": 1
       },
       "minecraft:behavior.float": {
-        "priority": 0
+        "priority": 5
       },
       "minecraft:behavior.hurt_by_target": {
         "priority": 1
@@ -72,7 +80,7 @@
             "max_dist": 70
           }
         ],
-        "priority": 3
+        "priority": 1
       },
       "minecraft:can_fly": {},
       "minecraft:can_climb": {},
@@ -81,8 +89,8 @@
         "total_supply": 114514
       },
       "minecraft:collision_box": {
-        "height": 1.8,
-        "width": 0.6
+        "height": 0,
+        "width": 0
       },
       "minecraft:conditional_bandwidth_optimization": {},
       "minecraft:despawn": {
@@ -94,8 +102,8 @@
         "emit_swim": false
       },
       "minecraft:health": {
-        "max": 14,
-        "value": 14
+        "max": 50,
+        "value": 50
       },
       "minecraft:is_hidden_when_invisible": {},
       "minecraft:jump.static": {},

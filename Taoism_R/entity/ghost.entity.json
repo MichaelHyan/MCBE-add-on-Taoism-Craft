@@ -5,8 +5,7 @@
       "identifier": "entity:ghost",
       "min_engine_version": "1.8.0",
       "materials": {
-        "default": "base",
-        "invisible": "baseb"
+        "default": "entity_alphablend"
       },
       "textures": {
         "default": "textures/entity/unknown"

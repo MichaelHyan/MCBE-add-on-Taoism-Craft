@@ -1,0 +1,48 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.ghost":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"sleep":"query.is_sleeping && query.scoreboard('sleep') == 0 && math.random_integer(0,7) == 0"},
+						{"unsleep":"query.is_sleeping && query.scoreboard('sleep') == 2"},
+						{"awake":"!query.is_sleeping && query.scoreboard('sleep') == 1"}
+					]
+				},
+				"sleep": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard objectives add sleep dummy",
+						"/scoreboard players set @s sleep 2",
+						"/summon entity:ghost ~ ~3 ~"
+					]
+				},
+				"unsleep": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/damage @s 1"
+					]
+				},
+				"awake": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s sleep 0"
+					]
+				}
+			}
+		}
+ 	}
+ }
