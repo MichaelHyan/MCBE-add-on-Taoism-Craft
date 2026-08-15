@@ -10,7 +10,8 @@
 						{"spbb_a":"query.get_equipped_item_name=='spbb' && query.is_sneaking && variable.attack_time && query.scoreboard('charge') >= 0 && query.player_level > 9"},
 						{"spbc_a":"query.get_equipped_item_name=='spbc' && query.is_sneaking && variable.attack_time && query.scoreboard('charge') >= 0 && query.player_level > 14"},
 						{"spbd_a":"query.get_equipped_item_name=='spbd' && query.is_sneaking && variable.attack_time && query.scoreboard('charge') >= 0 && query.player_level > 19"},
-						{"spbe_a":"query.get_equipped_item_name=='spbe' && query.is_sneaking && variable.attack_time && query.scoreboard('charge') >= 0 && query.player_level > 14"}
+						{"spbe_a":"query.get_equipped_item_name=='spbe' && query.is_sneaking && variable.attack_time && query.scoreboard('charge') >= 0 && query.player_level > 14"},
+						{"spbd_follow":"query.get_equipped_item_name=='spbb' || query.get_equipped_item_name=='spbc' || query.get_equipped_item_name=='spbd' || query.get_equipped_item_name=='spbe'"}
 					]
 				},
 				"spba_a": {
@@ -41,6 +42,7 @@
 						}
 					],
 					"on_entry": [
+						"/tp @e[type=entity:spb_lantern] ^-0.5 ^ ^-0.5",
 						"/damage @e[tag=spbx] 10",
 						"/tag @e remove spbx"
 					]
@@ -92,6 +94,16 @@
 						"/particle minecraft:totem_particle ~ ~1 ~",
 						"/summon entity:tornado",
 						"/scoreboard players set @s charge -100"
+					]
+				},
+				"spbd_follow": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @e[type=entity:spb_lantern] ^-0.5 ^ ^-0.5"
 					]
 				}
 			}
