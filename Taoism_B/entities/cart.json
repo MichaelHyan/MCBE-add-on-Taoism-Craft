@@ -19,7 +19,7 @@
       "minecraft:is_hidden_when_invisible": {},
       "minecraft:ambient_sound_interval": {},
       "minecraft:type_family": {
-        "family": ["taoism", "mob"]
+        "family": ["mob"]
       },
       "minecraft:collision_box": {
         "width": 1.4,
@@ -60,6 +60,14 @@
       "minecraft:movement.basic": {},
       "minecraft:jump.static": {},
       "minecraft:can_power_jump": {},
+      "minecraft:navigation.climb": {
+        "is_amphibious": true,
+        "can_swim": true,
+        "can_walk": true,
+        "can_sink": false,
+        "avoid_damage_blocks": true
+      },
+      "minecraft:can_climb": {},
       "minecraft:nameable": {},
       "minecraft:horse.jump_strength": {
         "value": {
