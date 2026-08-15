@@ -1,0 +1,36 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.spb_life":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"spb_life_a":"query.life_time == 1"},
+						{"spb_life_b":"query.life_time == 60"}
+					]
+				},
+				"spb_life_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/gamerule randomTickSpeed 500"
+					]
+				},
+				"spb_life_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/gamerule randomTickSpeed 3",
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

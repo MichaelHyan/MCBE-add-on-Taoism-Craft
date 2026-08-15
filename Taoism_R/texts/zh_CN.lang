@@ -194,7 +194,6 @@ entity.entity:unknown_boss.name=最后的道士
 entity.entity:unknown_end.name=最后的道士
 entity.entity:meteor.name=流星
 entity.entity:meteor_explosion.name=流星
-entity.entity:spbd_a.name=火气弹
 item.items:spga.name=凝聚元气【金】\n§o§7等级限制:无
 item.items:spgb.name=凝聚元气【木】\n§o§7等级限制:无
 item.items:spgc.name=凝聚元气【水】\n§o§7等级限制:无

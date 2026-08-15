@@ -2,17 +2,17 @@
   "format_version": "1.16.0",
   "minecraft:entity": {
     "description": {
-      "identifier": "entity:spb_execute",
+      "identifier": "entity:spb_life",
       "is_spawnable": false,
       "is_summonable": true,
       "is_experimental": false,
       "scripts": {
 				"animate": [
-					"spb_execute"
+					"spb_life"
 				]
 			},
       "animations": {
-				"spb_execute": "controller.animation.spb_execute"
+				"spb_life": "controller.animation.spb_life"
 			}
     },
     "components": {
@@ -26,9 +26,7 @@
           "taoism"
         ]
       },
-      "minecraft:health": {
-        "value": 1000,
-        "max": 1000
+	    "minecraft:physics": {
       },
       "minecraft:pushable": {
         "is_pushable": false,
