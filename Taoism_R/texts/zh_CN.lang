@@ -200,5 +200,5 @@ item.items:spbc=气弹【水】\n§o§7进阶等级限制:15
 item.items:spbd=气弹【火】\n§o§7进阶等级限制:20
 item.items:spbe=气弹【土】\n§o§7进阶等级限制:15
 item.items:sword_m=铜钱剑\n§o§7等级限制:25\n§r§b经万人之手，气盛而不衰§r
-item.items:scripture_b.name=大还丹\n§o§7等级限制:5\n§r§b三气化五行§r
+item.items:scripture_b.name=大还丹\n§o§7等级限制:5\n§r§b呢粒大还丹，你食咗之后会功力大增§r
 item.items:pill.name=小还丹\n§o§7消耗品\n§r§b九鼎小？还丹§r
