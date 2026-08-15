@@ -1,0 +1,45 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:pilla"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "faf",
+      "bcd",
+      "fef"
+    ],
+    "key": {
+      "a": {
+        "item": "items:spe"
+      },
+      "b": {
+        "item": "clay_ball"
+      },
+      "c": {
+        "item": "gold_nugget"
+      },
+      "d": {
+        "item": "items:cinnabar_powder"
+      },
+      "e": {
+        "item": "gunpowder"
+      },
+      "f": {
+        "item": "diamond"
+      }
+    },
+    "unlock": [
+      {
+        "item": "items:pearl"
+      }
+    ],
+    "result": {
+      "item": "items:scripture_b",
+      "count": 1
+    }
+  }
+}

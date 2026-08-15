@@ -1,0 +1,42 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:pillb"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " a ",
+      "bcd",
+      " e "
+    ],
+    "key": {
+      "a": {
+        "item": "items:spe"
+      },
+      "b": {
+        "item": "clay_ball"
+      },
+      "c": {
+        "item": "gold_nugget"
+      },
+      "d": {
+        "item": "items:cinnabar_powder"
+      },
+      "e": {
+        "item": "gunpowder"
+      }
+    },
+    "unlock": [
+      {
+        "item": "items:pearl"
+      }
+    ],
+    "result": {
+      "item": "items:pill",
+      "count": 16
+    }
+  }
+}
