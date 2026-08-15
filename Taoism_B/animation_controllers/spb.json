@@ -5,12 +5,12 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"spba_a":"query.get_equipped_item_name=='spba' && query.is_sneaking && variable.attack_time && query.scoreboard('charge') >= 0 && query.player_level > 4"},
-						{"spba_b":"query.get_equipped_item_name=='spba' && query.player_level > 14"},
+						{"spba_a":"query.get_equipped_item_name=='spba' && query.is_sneaking && variable.attack_time && query.scoreboard('charge') >= 0 && query.player_level > 24"},
+						{"spba_b":"query.get_equipped_item_name=='spba' && query.player_level > 24"},
 						{"spbb_a":"query.get_equipped_item_name=='spbb' && query.is_sneaking && variable.attack_time && query.scoreboard('charge') >= 0 && query.player_level > 9"},
 						{"spbc_a":"query.get_equipped_item_name=='spbc' && query.is_sneaking && variable.attack_time && query.scoreboard('charge') >= 0 && query.player_level > 14"},
-						{"spbd_a":"query.get_equipped_item_name=='spbd' && query.is_sneaking && variable.attack_time && query.scoreboard('charge') >= 0 && query.player_level > 24"},
-						{"spbe_a":"query.get_equipped_item_name=='spbe' && query.is_sneaking && variable.attack_time && query.scoreboard('charge') >= 0 && query.player_level > 19"}
+						{"spbd_a":"query.get_equipped_item_name=='spbd' && query.is_sneaking && variable.attack_time && query.scoreboard('charge') >= 0 && query.player_level > 19"},
+						{"spbe_a":"query.get_equipped_item_name=='spbe' && query.is_sneaking && variable.attack_time && query.scoreboard('charge') >= 0 && query.player_level > 14"}
 					]
 				},
 				"spba_a": {

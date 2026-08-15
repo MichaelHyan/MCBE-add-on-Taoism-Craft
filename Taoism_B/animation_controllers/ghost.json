@@ -5,9 +5,93 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"sleep":"query.is_sleeping && query.scoreboard('sleep') == 0 && math.random_integer(0,7) == 0"},
+						{"choicea":"query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,6) == 0"},
+						{"choiceb":"query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,6) == 1"},
+						{"choicec":"query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,6) == 2"},
+						{"choiced":"query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,6) == 3"},
+						{"choicee":"query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,6) == 4"},
+						{"choicef":"query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,6) == 5"},
+						{"choiceg":"query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,6) == 6"},
+						{"sleep":"query.is_sleeping && query.scoreboard('sleep') == 0 && query.scoreboard('sleepchoice') == 6"},
 						{"unsleep":"query.is_sleeping && query.scoreboard('sleep') == 2"},
 						{"awake":"!query.is_sleeping && query.scoreboard('sleep') == 1"}
+					]
+				},
+				"choicea": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard objectives add sleepchoice dummy",
+						"/scoreboard players set @s sleepchoice 0"
+					]
+				},
+				"choiceb": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard objectives add sleepchoice dummy",
+						"/scoreboard players set @s sleepchoice 1"
+					]
+				},
+				"choicec": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard objectives add sleepchoice dummy",
+						"/scoreboard players set @s sleepchoice 2"
+					]
+				},
+				"choiced": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard objectives add sleepchoice dummy",
+						"/scoreboard players set @s sleepchoice 3"
+					]
+				},
+				"choicee": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard objectives add sleepchoice dummy",
+						"/scoreboard players set @s sleepchoice 4"
+					]
+				},
+				"choicef": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard objectives add sleepchoice dummy",
+						"/scoreboard players set @s sleepchoice 5"
+					]
+				},
+				"choiceg": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard objectives add sleepchoice dummy",
+						"/scoreboard players set @s sleepchoice 6"
 					]
 				},
 				"sleep": {
@@ -19,7 +103,8 @@
 					"on_entry": [
 						"/scoreboard objectives add sleep dummy",
 						"/scoreboard players set @s sleep 2",
-						"/summon entity:ghost ~ ~3 ~"
+						"/summon entity:ghost ~ ~3 ~",
+						"/scoreboard players set @s sleep 0"
 					]
 				},
 				"unsleep": {

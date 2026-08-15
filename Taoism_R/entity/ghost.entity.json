@@ -8,7 +8,7 @@
         "default": "entity_alphablend"
       },
       "textures": {
-        "default": "textures/entity/unknown"
+        "default": "textures/entity/ghost"
       },
       "geometry": {
         "default": "geometry.unknown"

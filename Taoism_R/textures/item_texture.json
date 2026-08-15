@@ -62,6 +62,12 @@
     "scripture_f": {
       "textures": "textures/items/scripture_f.png"
     },
+    "scripture_b": {
+      "textures": "textures/items/scripture_b.png"
+    },
+    "pill": {
+      "textures": "textures/items/pill.png"
+    },
     "pearl": {
       "textures": "textures/items/pearl.png"
     },
@@ -358,21 +364,6 @@
     },
     "spbe": {
       "textures":"textures/items/spbe.png"
-    },
-    "spga": {
-      "textures":"textures/items/spga.png"
-    },
-    "spgb": {
-      "textures":"textures/items/spgb.png"
-    },
-    "spgc": {
-      "textures":"textures/items/spgc.png"
-    },
-    "spgd": {
-      "textures":"textures/items/spgd.png"
-    },
-    "spge": {
-      "textures":"textures/items/spge.png"
     },
     "glutinous_rice": {
       "textures":"textures/items/glutinous_rice.png"

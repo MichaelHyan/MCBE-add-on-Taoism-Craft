@@ -5,13 +5,24 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"spe_a":"query.get_equipped_item_name=='pearl' && !query.is_using_item"},
-						{"spe_b":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('charge') == 5"},
+						{"spe_a":"query.get_equipped_item_name=='pearl' && !query.is_using_item && !variable.attack_time"},
+						{"spe_b":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('spb') == 0 && query.scoreboard('charge') == 5"},
+						{"spe_ba":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('spb') == 1 && query.scoreboard('charge') == 5"},
+						{"spe_bb":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('spb') == 2 && query.scoreboard('charge') == 5"},
+						{"spe_bc":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('spb') == 3 && query.scoreboard('charge') == 5"},
+						{"spe_bd":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('spb') == 4 && query.scoreboard('charge') == 5"},
+						{"spe_be":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('spb') == 5 && query.scoreboard('charge') == 5"},
 						{"spe_c":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('charge') == 0"},
 						{"spe_d":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('charge') == 1"},
 						{"spe_e":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('charge') == 2"},
 						{"spe_f":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('charge') == 3"},
-						{"spe_g":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('charge') == 4"}
+						{"spe_g":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('charge') == 4"},
+						{"spe_ra":"query.get_equipped_item_name=='pearl' && variable.attack_time && query.scoreboard('charge') >= 0 && query.scoreboard('spb') == 0 && query.scoreboard('spblock') == 1"},
+						{"spe_rb":"query.get_equipped_item_name=='pearl' && variable.attack_time && query.scoreboard('charge') >= 0 && query.scoreboard('spb') == 1 && query.scoreboard('spblock') == 1"},
+						{"spe_rc":"query.get_equipped_item_name=='pearl' && variable.attack_time && query.scoreboard('charge') >= 0 && query.scoreboard('spb') == 2 && query.scoreboard('spblock') == 1"},
+						{"spe_rd":"query.get_equipped_item_name=='pearl' && variable.attack_time && query.scoreboard('charge') >= 0 && query.scoreboard('spb') == 3 && query.scoreboard('spblock') == 1"},
+						{"spe_re":"query.get_equipped_item_name=='pearl' && variable.attack_time && query.scoreboard('charge') >= 0 && query.scoreboard('spb') == 4 && query.scoreboard('spblock') == 1"},
+						{"spe_rf":"query.get_equipped_item_name=='pearl' && variable.attack_time && query.scoreboard('charge') >= 0 && query.scoreboard('spb') == 5 && query.scoreboard('spblock') == 1"}
 					]
 				},
 				"spe_a": {
@@ -34,7 +45,77 @@
 						"/give @s items:spe",
 						"/kill @e[type=entity:spirit,r=5]",
 						"/tp @e[type=item,r=5] @s",
-						"/damage @s 3",
+						"/damage @s 2",
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"spe_ba": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/give @s items:spba",
+						"/kill @e[type=entity:spirit,r=5]",
+						"/tp @e[type=item,r=5] @s",
+						"/damage @s 2",
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"spe_bb": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/give @s items:spbb",
+						"/kill @e[type=entity:spirit,r=5]",
+						"/tp @e[type=item,r=5] @s",
+						"/damage @s 2",
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"spe_bc": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/give @s items:spbc",
+						"/kill @e[type=entity:spirit,r=5]",
+						"/tp @e[type=item,r=5] @s",
+						"/damage @s 2",
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"spe_bd": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/give @s items:spbd",
+						"/kill @e[type=entity:spirit,r=5]",
+						"/tp @e[type=item,r=5] @s",
+						"/damage @s 2",
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"spe_be": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/give @s items:spbe",
+						"/kill @e[type=entity:spirit,r=5]",
+						"/tp @e[type=item,r=5] @s",
+						"/damage @s 2",
 						"/scoreboard players set @s charge 0"
 					]
 				},
@@ -47,7 +128,7 @@
 					"on_entry": [
 						"/scoreboard objectives add charge dummy",
 						"/scoreboard players add @s charge 1",
-						"/title @s actionbar §7||§0|||||||"
+						"/title @s actionbar §7||§0||||||||"
 					]
 				},
 				"spe_d": {
@@ -92,6 +173,78 @@
 					"on_entry": [
 						"/scoreboard players add @s charge 1",
 						"/title @s actionbar §7||||||||||§0"
+					]
+				},
+				"spe_ra": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s spb 1",
+						"/title @s actionbar §7[§6金§7]",
+						"/scoreboard players set @s charge -3"
+					]
+				},
+				"spe_rb": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s spb 2",
+						"/title @s actionbar §7[§2木§7]",
+						"/scoreboard players set @s charge -3"
+					]
+				},
+				"spe_rc": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s spb 3",
+						"/title @s actionbar §7[§1水§7]",
+						"/scoreboard players set @s charge -3"
+					]
+				},
+				"spe_rd": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s spb 4",
+						"/title @s actionbar §7[§4火§7]",
+						"/scoreboard players set @s charge -3"
+					]
+				},
+				"spe_re": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s spb 5",
+						"/title @s actionbar §7[§e土§7]",
+						"/scoreboard players set @s charge -3"
+					]
+				},
+				"spe_rf": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s spb 0",
+						"/title @s actionbar §7[§f无§7]",
+						"/scoreboard players set @s charge -3"
 					]
 				}
 			}

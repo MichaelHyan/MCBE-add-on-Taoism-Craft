@@ -16,7 +16,8 @@
 							}
 					],
 					"on_entry": [
-						"/gamerule randomTickSpeed 500"
+						"/title @a[r=10] actionbar 生长加速已开始",
+						"/gamerule randomTickSpeed 100"
 					]
 				},
 				"spb_life_b": {
@@ -26,6 +27,7 @@
 							}
 					],
 					"on_entry": [
+						"/title @a[r=10] actionbar 生长加速已结束",
 						"/gamerule randomTickSpeed 3",
 						"/kill @s"
 					]

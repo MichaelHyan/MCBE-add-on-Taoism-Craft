@@ -2,13 +2,13 @@
   "format_version": "1.10",
   "minecraft:item": {
     "description": {
-      "identifier": "items:spgd",
+      "identifier": "items:pill",
       "category": "Nature"
     },
 
     "components": {
-      "minecraft:icon": "spgd",
-      "minecraft:render_offsets": "spgd"
+      "minecraft:icon": "pill",
+      "minecraft:render_offsets": "pill"
     }
   }
 }

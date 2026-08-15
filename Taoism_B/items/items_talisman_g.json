@@ -4,7 +4,6 @@
     "description": {
       "identifier": "items:talisman_g"
    },
-
     "components": {
       "minecraft:stacked_by_data": true,
       "minecraft:foil": false,

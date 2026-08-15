@@ -13,7 +13,9 @@
 						{"scripture_fa":"query.get_equipped_item_name=='scripture_f' && variable.attack_time && query.moon_phase == 1 && query.player_level > 4"},
 						{"scripture_fb":"query.get_equipped_item_name=='scripture_f' && variable.attack_time && query.moon_phase == 7 && query.player_level > 4"},
 						{"scripture_fc":"query.get_equipped_item_name=='scripture_f' && variable.attack_time && query.moon_phase != 1 && query.moon_phase != 7 && query.player_level > 4"},
+						{"scripture_b":"query.get_equipped_item_name=='scripture_b' && query.is_using_item && query.player_level > 4"},
 						{"scripture_ft":"query.get_equipped_item_name=='scripture_ft' && variable.attack_time && query.player_level > 4"},
+						{"pill":"query.get_equipped_item_name=='pill' && query.is_using_item"},
 						{"talisman_t_a":"query.get_equipped_item_name=='talisman_t' && !query.is_using_item && query.player_level > 9"},
 						{"talisman_t_b":"query.get_equipped_item_name=='talisman_t' && query.is_using_item && query.player_level > 9"},
 						{"talisman_g":"query.get_equipped_item_name=='talisman_g' && query.is_using_item && query.player_level > 19"},
@@ -145,6 +147,19 @@
 						"/replaceitem entity @s slot.weapon.mainhand 0 air"
 					]
 				},
+				"scripture_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/scoreboard objectives add spblock dummy",
+						"/scoreboard objectives add spb dummy",
+						"/scoreboard players set @s spblock 1"
+					]
+				},
 				"scripture_ft": {
 					"transitions": [
 							{
@@ -156,6 +171,16 @@
 						"/effect @s jump_boost infinite 1 true",
 						"/tag @s add ft",
 						"/replaceitem entity @s slot.weapon.mainhand 0 air"
+					]
+				},
+				"pill": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s sleepchoice 0"
 					]
 				},
 				"talisman_t_a": {
