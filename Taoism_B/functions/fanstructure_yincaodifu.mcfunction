@@ -4,7 +4,6 @@ structure load mystructure:yincaodifu1 ~1 ~ ~
 
 fill ~-5 ~4 ~36 ~-5 ~5 ~36 air
 setblock ~-5 ~4 ~36 emerald_block
-setblock ~ ~-1 ~ air
 tp @s ~-5 ~4 ~36
 structure load mystructure:yincaodifu2 ~1 ~ ~
 
