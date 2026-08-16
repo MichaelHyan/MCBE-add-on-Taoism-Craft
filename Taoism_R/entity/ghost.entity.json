@@ -11,7 +11,7 @@
         "default": "textures/entity/ghost"
       },
       "geometry": {
-        "default": "geometry.unknown"
+        "default": "geometry.ghost"
       },
       "scripts": {
         "scale": "query.is_baby ? 2.0 : 1.0",
