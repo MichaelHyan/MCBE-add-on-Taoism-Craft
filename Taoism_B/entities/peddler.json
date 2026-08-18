@@ -51,7 +51,7 @@
         "display_name": "entity.villager.farmer",
         "new_screen": true,
         "persist_trades": true,
-        "table": "trading/economy_trades/farmer_trades.json"
+        "table": "trading/economy_trades/peddler_trades.json"
       },
       "minecraft:nameable": {},
       "minecraft:health": {
