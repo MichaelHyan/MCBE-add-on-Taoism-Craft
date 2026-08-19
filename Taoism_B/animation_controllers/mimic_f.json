@@ -1,0 +1,24 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.mimic_f":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"restore":"math.mod(query.life_time,30) == 0"}
+					]
+				},
+				"restore": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s instant_health 1 1 true"
+					]
+				}
+			}
+		}
+ 	}
+ }
