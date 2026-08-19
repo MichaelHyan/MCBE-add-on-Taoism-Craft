@@ -5,21 +5,21 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-                        {"ring_pa":"query.player_level > 14 && query.get_equipped_item_name=='ring' && !query.is_using_item && query.scoreboard('chargea') < 11"},
-						{"ring_pb":"query.player_level > 14 && query.get_equipped_item_name=='ring' && !query.is_using_item && query.scoreboard('chargea') >= 11"},
-						{"ring_ca":"query.player_level > 14 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 0"},
-                        {"ring_cb":"query.player_level > 14 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 1"},
-                        {"ring_cc":"query.player_level > 14 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 2"},
-                        {"ring_cd":"query.player_level > 14 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 3"},
-                        {"ring_ce":"query.player_level > 14 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 4"},
-                        {"ring_cf":"query.player_level > 14 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 5"},
-                        {"ring_cg":"query.player_level > 14 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 6"},
-                        {"ring_ch":"query.player_level > 14 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 7"},
-                        {"ring_ci":"query.player_level > 14 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 8"},
-                        {"ring_cj":"query.player_level > 14 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 9"},
-                        {"ring_ck":"query.player_level > 14 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 10"},
-                        {"ring_cl":"query.player_level > 14 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 11"},
-                        {"ring_cm":"query.player_level > 14 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 12"}
+                        {"ring_pa":"query.player_level > 19 && query.get_equipped_item_name=='ring' && !query.is_using_item && query.scoreboard('chargea') < 11"},
+						{"ring_pb":"query.player_level > 19 && query.get_equipped_item_name=='ring' && !query.is_using_item && query.scoreboard('chargea') >= 11"},
+						{"ring_ca":"query.player_level > 19 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 0"},
+                        {"ring_cb":"query.player_level > 19 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 1"},
+                        {"ring_cc":"query.player_level > 19 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 2"},
+                        {"ring_cd":"query.player_level > 19 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 3"},
+                        {"ring_ce":"query.player_level > 19 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 4"},
+                        {"ring_cf":"query.player_level > 19 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 5"},
+                        {"ring_cg":"query.player_level > 19 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 6"},
+                        {"ring_ch":"query.player_level > 19 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 7"},
+                        {"ring_ci":"query.player_level > 19 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 8"},
+                        {"ring_cj":"query.player_level > 19 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 9"},
+                        {"ring_ck":"query.player_level > 19 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 10"},
+                        {"ring_cl":"query.player_level > 19 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 11"},
+                        {"ring_cm":"query.player_level > 19 && query.get_equipped_item_name=='ring' && query.is_using_item && query.scoreboard('chargea') == 12"}
 					]
 				},
 				"ring_pa": {

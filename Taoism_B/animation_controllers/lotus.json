@@ -5,8 +5,8 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"lotus_a":"query.get_equipped_item_name=='lotus' || query.is_item_name_any('slot.weapon.offhand', 0, 'items:lotus') && query.scoreboard('charge') == 0 && query.player_level >= 25"},
-						{"lotus_b":"query.get_equipped_item_name=='lotus' || query.is_item_name_any('slot.weapon.offhand', 0, 'items:lotus') && query.scoreboard('charge') > 0 && query.player_level >= 25"}
+						{"lotus_a":"query.get_equipped_item_name=='lotus' || query.is_item_name_any('slot.weapon.offhand', 0, 'items:lotus') && query.scoreboard('charge') == 0 && query.player_level > 29"},
+						{"lotus_b":"query.get_equipped_item_name=='lotus' || query.is_item_name_any('slot.weapon.offhand', 0, 'items:lotus') && query.scoreboard('charge') > 0 && query.player_level > 29"}
 					]
 				},
 				"lotus_a": {

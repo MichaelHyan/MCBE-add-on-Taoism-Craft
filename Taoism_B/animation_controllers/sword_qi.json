@@ -12,7 +12,7 @@
 						{"sword_qi_e":"query.get_equipped_item_name=='sword_qi' && !variable.attack_time && !query.is_sneaking && query.scoreboard('charge') >= 4 && query.scoreboard('charge') < 6"},
 						{"sword_qi_f":"query.get_equipped_item_name=='sword_qi' && !variable.attack_time && !query.is_sneaking && query.scoreboard('charge') >= 6 && query.scoreboard('charge') < 8"},
 						{"sword_qi_g":"query.get_equipped_item_name=='sword_qi' && !variable.attack_time && !query.is_sneaking && query.scoreboard('charge') >= 8 && query.scoreboard('charge') < 10"},
-						{"sword_qi_h":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.get_equipped_item_name=='sword_qi' && variable.attack_time && !query.is_jumping && !query.is_sneaking && query.player_level >= 25"},
+						{"sword_qi_h":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.get_equipped_item_name=='sword_qi' && variable.attack_time && !query.is_jumping && !query.is_sneaking"},
 						{"sword_qi_i":"query.scoreboard('charge') < -5"},
 						{"sword_qi_j":"query.scoreboard('charge') > 10"},
 						{"sword_qi_k":"query.scoreboard('charge') == -5"},

@@ -5,10 +5,10 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"cane_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:cane') && !query.is_sneaking && query.player_level >= 25"},
-						{"cane_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:cane') && query.is_sneaking && query.player_level >= 25"},
-						{"cane_c":"query.get_equipped_item_name=='cane' && !variable.attack_time && query.player_level >= 25"},
-						{"cane_d":"query.get_equipped_item_name=='cane' && variable.attack_time && query.player_level >= 25"}
+						{"cane_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:cane') && !query.is_sneaking && query.player_level > 29"},
+						{"cane_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:cane') && query.is_sneaking && query.player_level > 29"},
+						{"cane_c":"query.get_equipped_item_name=='cane' && !variable.attack_time && query.player_level > 29"},
+						{"cane_d":"query.get_equipped_item_name=='cane' && variable.attack_time && query.player_level > 29"}
 					]
 				},
 				"cane_a": {

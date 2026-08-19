@@ -6,7 +6,7 @@
 				"base_jeta":{
 					"transitions":[
 						{"wond_a":"query.get_equipped_item_name=='wond' && !variable.attack_time && !query.is_jumping && query.scoreboard('charge') == 10"},
-						{"wond_b":"query.get_equipped_item_name=='wond' && variable.attack_time && query.is_jumping && query.scoreboard('charge') == 10 && query.player_level > 9"},
+						{"wond_b":"query.get_equipped_item_name=='wond' && variable.attack_time && query.is_jumping && query.scoreboard('charge') == 10 && query.player_level > 14"},
 						{"wond_c":"query.get_equipped_item_name=='wond' && !variable.attack_time && query.scoreboard('charge') == 0"},
 						{"wond_d":"query.get_equipped_item_name=='wond' && !variable.attack_time && query.scoreboard('charge') == 1"},
 						{"wond_e":"query.get_equipped_item_name=='wond' && !variable.attack_time && query.scoreboard('charge') == 2"},
@@ -17,7 +17,7 @@
 						{"wond_j":"query.get_equipped_item_name=='wond' && !variable.attack_time && query.scoreboard('charge') == 7"},
 						{"wond_k":"query.get_equipped_item_name=='wond' && !variable.attack_time && query.scoreboard('charge') == 8"},
 						{"wond_l":"query.get_equipped_item_name=='wond' && !variable.attack_time && query.scoreboard('charge') == 9"},
-						{"wond_m":"query.get_equipped_item_name=='wond' && variable.attack_time && !query.is_jumping && query.player_level > 9"}
+						{"wond_m":"query.get_equipped_item_name=='wond' && variable.attack_time && !query.is_jumping && query.player_level > 14"}
 					]
 				},
 				"wond_a": {

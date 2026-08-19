@@ -5,19 +5,19 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"tbf_m":"query.get_equipped_item_name=='tbf' && !query.is_using_item && query.player_level > 9"},
-						{"tbf_a":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 9 && query.scoreboard('wind') == 0"},
-						{"tbf_b":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 9 && query.scoreboard('wind') == 1"},
-						{"tbf_c":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 9 && query.scoreboard('wind') == 2"},
-						{"tbf_d":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 9 && query.scoreboard('wind') == 3"},
-						{"tbf_e":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 9 && query.scoreboard('wind') == 4"},
-						{"tbf_f":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 9 && query.scoreboard('wind') == 5"},
-						{"tbf_g":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 9 && query.scoreboard('wind') == 6"},
-						{"tbf_h":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 9 && query.scoreboard('wind') == 7"},
-						{"tbf_i":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 9 && query.scoreboard('wind') == 8"},
-						{"tbf_j":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 9 && query.scoreboard('wind') == 9"},
-						{"tbf_k":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 9 && query.scoreboard('wind') == 10"},
-						{"tbf_l":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 9 && query.scoreboard('wind') == 11"}						
+						{"tbf_m":"query.get_equipped_item_name=='tbf' && !query.is_using_item && query.player_level > 14"},
+						{"tbf_a":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 14 && query.scoreboard('wind') == 0"},
+						{"tbf_b":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 14 && query.scoreboard('wind') == 1"},
+						{"tbf_c":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 14 && query.scoreboard('wind') == 2"},
+						{"tbf_d":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 14 && query.scoreboard('wind') == 3"},
+						{"tbf_e":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 14 && query.scoreboard('wind') == 4"},
+						{"tbf_f":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 14 && query.scoreboard('wind') == 5"},
+						{"tbf_g":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 14 && query.scoreboard('wind') == 6"},
+						{"tbf_h":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 14 && query.scoreboard('wind') == 7"},
+						{"tbf_i":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 14 && query.scoreboard('wind') == 8"},
+						{"tbf_j":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 14 && query.scoreboard('wind') == 9"},
+						{"tbf_k":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 14 && query.scoreboard('wind') == 10"},
+						{"tbf_l":"query.get_equipped_item_name=='tbf' && query.is_using_item && query.player_level > 14 && query.scoreboard('wind') == 11"}						
 					]
 				},
 				"tbf_m": {

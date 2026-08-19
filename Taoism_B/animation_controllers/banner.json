@@ -5,14 +5,14 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"soul_banner_a":"query.get_equipped_item_name=='soul_banner' && !variable.attack_time && query.player_level > 24 && query.scoreboard('spirit') >= 4"},
-						{"soul_banner_e":"query.get_equipped_item_name=='soul_banner' && !variable.attack_time && query.player_level > 24 && query.scoreboard('spirit') < 4"},
-						{"soul_banner_b":"query.get_equipped_item_name=='soul_banner' && variable.attack_time && query.is_sneaking && query.player_level > 24 && query.scoreboard('spirit') >= 4"},
-						{"soul_banner_c":"query.get_equipped_item_name=='soul_banner' && variable.attack_time && query.is_sneaking && query.player_level > 24 && query.scoreboard('spirit') < 4"},
-						{"soul_banner_d":"query.get_equipped_item_name=='soul_banner' && variable.attack_time && !query.is_sneaking && query.player_level > 24"},
-						{"hy_banner_a":"query.get_equipped_item_name=='hy_banner' && !variable.attack_time && query.player_level > 24"},
-						{"hy_banner_b":"query.get_equipped_item_name=='hy_banner' && variable.attack_time && query.is_sneaking && query.player_level > 24 && query.scoreboard('charge') >= 0"},
-						{"hy_banner_c":"query.get_equipped_item_name=='hy_banner' && variable.attack_time && !query.is_sneaking && query.player_level > 24"}
+						{"soul_banner_a":"query.get_equipped_item_name=='soul_banner' && !variable.attack_time && query.player_level > 29 && query.scoreboard('spirit') >= 4"},
+						{"soul_banner_e":"query.get_equipped_item_name=='soul_banner' && !variable.attack_time && query.player_level > 29 && query.scoreboard('spirit') < 4"},
+						{"soul_banner_b":"query.get_equipped_item_name=='soul_banner' && variable.attack_time && query.is_sneaking && query.player_level > 29 && query.scoreboard('spirit') >= 4"},
+						{"soul_banner_c":"query.get_equipped_item_name=='soul_banner' && variable.attack_time && query.is_sneaking && query.player_level > 29 && query.scoreboard('spirit') < 4"},
+						{"soul_banner_d":"query.get_equipped_item_name=='soul_banner' && variable.attack_time && !query.is_sneaking && query.player_level > 29"},
+						{"hy_banner_a":"query.get_equipped_item_name=='hy_banner' && !variable.attack_time && query.player_level > 29"},
+						{"hy_banner_b":"query.get_equipped_item_name=='hy_banner' && variable.attack_time && query.is_sneaking && query.player_level > 29 && query.scoreboard('charge') >= 0"},
+						{"hy_banner_c":"query.get_equipped_item_name=='hy_banner' && variable.attack_time && !query.is_sneaking && query.player_level > 29"}
 					]
 				},
 				"soul_banner_a": {
