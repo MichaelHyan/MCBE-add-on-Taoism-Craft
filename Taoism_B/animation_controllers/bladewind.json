@@ -1,0 +1,43 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.bladewind":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"bladewind_a":"query.life_time <= 1"},
+						{"bladewind_b":"query.life_time > 1"}
+					]
+				},
+				"bladewind_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:balloon_gas_particle ^ ^1.2 ^0.3",
+						"/particle minecraft:balloon_gas_particle ^ ^1.2 ^0.2",
+						"/particle minecraft:balloon_gas_particle ^0.1 ^1.2 ^0.2",
+						"/particle minecraft:balloon_gas_particle ^-0.1 ^1.2 ^0.2",
+						"/particle minecraft:balloon_gas_particle ^0.1 ^1.2 ^0.3",
+						"/particle minecraft:balloon_gas_particle ^-0.1 ^1.2 ^0.3",
+						"/effect @e[family=monster,r=3] slowness 15 3 true",
+						"/damage @e[family=monster,r=3] 1",
+						"/tp @s ^ ^ ^1.5"
+					]
+				},
+				"bladewind_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

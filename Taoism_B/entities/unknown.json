@@ -9,12 +9,14 @@
       "scripts": {
 				"animate": [
 					"unknown_boss",
-          "unknown_bgm"
+          "unknown_bgm",
+          "detectre"
 				]
 			},
       "animations": {
 				"unknown_boss": "controller.animation.unknown_boss",
-        "unknown_bgm": "controller.animation.unknown_bgm"
+        "unknown_bgm": "controller.animation.unknown_bgm",
+        "detectre": "controller.animation.detectre"
 			}
     },
     "component_groups": {},
@@ -22,7 +24,11 @@
       "minecraft:nameable": {
       },
       "minecraft:type_family": {
-        "family": ["monster", "mob" ]
+        "family": [
+          "monster",
+          "mob",
+          "taoism_monster"
+        ]
       },
       "minecraft:collision_box": {
         "width": 0.6,

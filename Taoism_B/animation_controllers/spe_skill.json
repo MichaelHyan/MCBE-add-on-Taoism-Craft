@@ -1,0 +1,290 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.spe_skill":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"skilla_a":"query.get_equipped_item_name=='pearl' && query.scoreboard('spb') == 6 && query.scoreboard('skilltype') == 1 && query.scoreboard('skillcharge') == 0 && query.is_using_item"},
+						{"skilla_b":"query.get_equipped_item_name=='pearl' && query.scoreboard('spb') == 6 && query.scoreboard('skilltype') == 1 && query.scoreboard('skillcharge') == 1 && query.is_using_item"},
+						{"skilla_c":"query.get_equipped_item_name=='pearl' && query.scoreboard('spb') == 6 && query.scoreboard('skilltype') == 1 && query.scoreboard('skillcharge') == 2 && query.is_using_item"},
+						{"skilla_d":"query.get_equipped_item_name=='pearl' && query.scoreboard('spb') == 6 && query.scoreboard('skilltype') == 1 && query.scoreboard('skillcharge') == 3 && query.is_using_item"},
+						{"skilla_e":"query.get_equipped_item_name=='pearl' && query.scoreboard('spb') == 6 && query.scoreboard('skilltype') == 1 && query.scoreboard('skillcharge') == 4 && query.is_using_item"},
+						{"skilla_f":"query.get_equipped_item_name=='pearl' && query.scoreboard('spb') == 6 && query.scoreboard('skilltype') == 1 && query.scoreboard('skillcharge') == 5 && query.is_using_item"},
+						{"skilla_g":"query.get_equipped_item_name=='pearl' && query.scoreboard('spb') == 6 && query.scoreboard('skilltype') == 1 && query.scoreboard('skillcharge') == 6 && query.is_using_item"},
+						{"skilla_h":"query.get_equipped_item_name=='pearl' && query.scoreboard('spb') == 6 && query.scoreboard('skilltype') == 1 && query.scoreboard('skillcharge') == 7 && query.is_using_item"},
+						{"skilla_i":"query.get_equipped_item_name=='pearl' && query.scoreboard('spb') == 6 && query.scoreboard('skilltype') == 1 && query.scoreboard('skillcharge') == 8 && query.is_using_item"},
+						{"skilla_j":"query.get_equipped_item_name=='pearl' && query.scoreboard('spb') == 6 && query.scoreboard('skilltype') == 1 && query.scoreboard('skillcharge') == 9 && query.is_using_item"},
+						{"skilla_k":"query.get_equipped_item_name=='pearl' && query.scoreboard('spb') == 6 && query.scoreboard('skilltype') == 1 && query.scoreboard('skillcharge') == 10 && query.is_using_item"},
+						{"skilla_l":"query.get_equipped_item_name=='pearl' && query.scoreboard('spb') == 6 && query.scoreboard('skilltype') == 1 && query.scoreboard('skillcharge') >= 11 && query.is_using_item"},
+						{"skill_b_a":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('skilltype') == 2 && query.scoreboard('skillcd') >= 0 && query.player_level < 20"},
+						{"skill_b_b":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('skilltype') == 2 && query.scoreboard('skillcd') >= 0 && query.player_level >= 20 && query.player_level < 30"},
+						{"skill_b_c":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('skilltype') == 2 && query.scoreboard('skillcd') >= 0 && query.player_level > 30"},
+						{"skill_b_d":"query.scoreboard('skilltype') == 2 && query.scoreboard('skillcharge') > 0 && query.scoreboard('charge') >= 0 && variable.attack_time && math.random_integer(0,20) != 10"},
+						{"skill_b_e":"query.scoreboard('skilltype') == 2 && query.scoreboard('skillcharge') > 0 && query.scoreboard('charge') >= 0 && variable.attack_time && math.random_integer(0,20) == 10"},
+						{"skill_c_a":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('skilltype') == 3 && query.scoreboard('skillcd') >= 0"},
+						{"skill_d_a":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('skilltype') == 4 && query.scoreboard('skillcd') >= 0 && query.player_level < 20"},
+						{"skill_d_b":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('skilltype') == 4 && query.scoreboard('skillcd') >= 0 && query.player_level >= 20"},
+						{"skill_e_a":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('skilltype') == 5 && query.scoreboard('skillcd') >= 0 && query.player_level < 20"},
+						{"skill_e_b":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('skilltype') == 5 && query.scoreboard('skillcd') >= 0 && query.player_level >= 20"}
+					]
+				},
+				"skilla_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s skillcharge 1",
+						"/summon entity:seeker ^1 ^ ^"
+					]
+				},
+				"skilla_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s skillcharge 1"
+					]
+				},
+				"skilla_c": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s skillcharge 1",
+						"/summon entity:seeker ^-1 ^ ^"
+					]
+				},
+				"skilla_d": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s skillcharge 1"
+					]
+				},
+				"skilla_e": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s skillcharge 1",
+						"/summon entity:seeker ^1 ^2 ^"
+					]
+				},
+				"skilla_f": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s skillcharge 1"
+					]
+				},
+				"skilla_g": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s skillcharge 1",
+						"/summon entity:seeker ^-1 ^2 ^"
+					]
+				},
+				"skilla_h": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s skillcharge 1"
+					]
+				},
+				"skilla_i": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s skillcharge 1",
+						"/summon entity:seeker ^1 ^1 ^"
+					]
+				},
+				"skilla_j": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s skillcharge 1"
+					]
+				},
+				"skilla_k": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s skillcharge 1",
+						"/summon entity:seeker ^-1 ^1 ^"
+					]
+				},
+				"skilla_l": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s skillcharge 0"
+					]
+				},
+				"skill_b_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s skillcharge 10",
+						"/scoreboard players set @s skillcd -300",
+						"/function bglp2"
+					]
+				},
+				"skill_b_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s skillcharge 20",
+						"/scoreboard players set @s skillcd -200",
+						"/function bglp2"
+					]
+				},
+				"skill_b_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s skillcharge 30",
+						"/scoreboard players set @s skillcd -100",
+						"/function bglp2"
+					]
+				},
+				"skill_b_d": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s skillcharge -1",
+						"/scoreboard players set @s charge -3",
+						"/summon entity:bladewind ^ ^ ^-1",
+						"/tp @n[type=entity:bladewind] ^ ^ ^-1 facing @s"
+					]
+				},
+				"skill_b_e": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s skillcharge -1",
+						"/scoreboard players set @s charge -3",
+						"/summon entity:bladewind ^ ^ ^-1",
+						"/tp @n[type=entity:bladewind] ^ ^ ^-1 facing @s",
+						"/effect @s resistance 1 255 true",
+						"/effect @s fire_resistance 1 255 true",
+						"/tag @e[family=monster,r=20] add sbt",
+						"/summon entity:sword_sa ~ ~ ~"
+					]
+				},
+				"skill_c_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s speed 30 1 true",
+						"/scoreboard players set @s skillcharge 65",
+						"/scoreboard players set @s skillcd -100",
+						"/function bglp2"
+					]
+				},
+				"skill_d_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s skillcd -300",
+						"/effect @a[r=5] speed 30 1 true",
+						"/effect @a[r=5] regeneration 30 1 true",
+						"/function bglp2"
+					]
+				},
+				"skill_d_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s skillcd -100",
+						"/effect @a[r=5] speed 30 1 true",
+						"/effect @a[r=5] wither 0 255 true",
+						"/effect @a[r=5] poison 0 255 true",
+						"/effect @a[r=5] slowness 0 255 true",
+						"/function bglp2"
+					]
+				},
+				"skill_e_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon entity:region_a",
+						"/scoreboard players set @s skillcd -300"
+					]
+				},
+				"skill_e_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon entity:region_b",
+						"/scoreboard players set @s skillcd -300"
+					]
+				}
+			}
+		}
+ 	}
+ }

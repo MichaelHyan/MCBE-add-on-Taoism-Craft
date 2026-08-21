@@ -1,0 +1,51 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.table",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "desk",
+					"pivot": [0, 0, 0],
+					"rotation": [0, 180, 0],
+					"cubes": [
+						{"origin": [-13, 6, 5], "size": [26, 2, 1], "uv": [0, 16]},
+						{"origin": [14, 2, -4], "size": [1, 2, 8], "uv": [18, 19]},
+						{"origin": [-15, 2, -4], "size": [1, 2, 8], "uv": [0, 19]},
+						{"origin": [13, 0, 4], "size": [2, 13, 2], "uv": [24, 29]},
+						{"origin": [-15, 0, 4], "size": [2, 13, 2], "uv": [16, 29]},
+						{"origin": [13, 0, -6], "size": [2, 13, 2], "uv": [8, 29]},
+						{"origin": [-15, 0, -6], "size": [2, 13, 2], "uv": [0, 29]},
+						{"origin": [-16, 13, -7], "size": [32, 2, 14], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "addition",
+					"pivot": [0, 0, 0],
+					"rotation": [0, 180, 0],
+					"cubes": [
+						{"origin": [-11, 15, 5], "size": [1, 9, 1], "uv": [32, 29]},
+						{"origin": [-6, 15, 5], "size": [1, 9, 1], "uv": [36, 19]},
+						{"origin": [-10, 23, 5], "size": [4, 1, 1], "uv": [36, 38]},
+						{"origin": [-10, 17, 5.5], "size": [4, 2, 1], "uv": [36, 35]},
+						{"origin": [-9.5, 16, 5], "size": [1, 7, 1], "uv": [32, 39]},
+						{"origin": [-7.5, 16, 5], "size": [1, 7, 1], "uv": [40, 19]},
+						{"origin": [12, 15, -5], "size": [1, 1, 2], "uv": [42, 40]},
+						{"origin": [10, 15, -4], "size": [1, 1, 2], "uv": [42, 43]},
+						{"origin": [11, 15, -3], "size": [2, 1, 1], "uv": [0, 44]},
+						{"origin": [10, 15, -5], "size": [2, 1, 1], "uv": [40, 27]},
+						{"origin": [10, 15, 2], "size": [2, 4, 2], "uv": [36, 29]},
+						{"origin": [10.5, 16, 1], "size": [1, 2, 2], "uv": [36, 40]}
+					]
+				}
+			]
+		}
+	]
+}

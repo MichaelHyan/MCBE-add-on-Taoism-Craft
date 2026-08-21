@@ -1,0 +1,36 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.detectre":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"detectre_a":"query.is_alive != 0"},
+						{"detectre_b":"query.is_alive == 0"}
+					]
+				},
+				"detectre_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard objectives add detect dummy",
+						"/scoreboard players set @a[r=50] detect 1"
+					]
+				},
+				"detectre_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @a detect 0"
+					]
+				}
+			}
+		}
+ 	}
+ }

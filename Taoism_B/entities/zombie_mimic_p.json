@@ -4,7 +4,15 @@
     "description": {
       "identifier": "entity:zombie_mimic_p",
       "is_spawnable": false,
-      "is_summonable": true
+      "is_summonable": true,
+      "scripts": {
+        "animate": [
+          "detectre"
+        ]
+      },
+      "animations": {
+        "detectre": "controller.animation.detectre"
+      }
     },
     "component_groups": {
       "despawn": {
@@ -93,10 +101,10 @@
       },
       "minecraft:type_family": {
         "family": [
-          "zombie",
           "undead",
           "monster",
-          "mob"
+          "mob",
+          "taoism_monster"
         ]
       },
       "minecraft:collision_box": {

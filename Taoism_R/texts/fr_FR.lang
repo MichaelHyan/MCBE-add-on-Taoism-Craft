@@ -204,3 +204,4 @@ item.items:sword_m=Épée de sapèques\n§o§7Limite de niveau : 30\n§r§bPass�
 item.items:scripture_b.name=Grande pilule de réversion\n§o§7Niveau requis : 10\n§r§bTrois qi se transforment en cinq éléments§r
 item.items:pill.name=Petite pilule de réversion\n§o§7Consommable\n§r§bPetite pilule de réversion des neuf trépieds§r
 entity.taoism.table=Table de dessin de talismans
+entity.entity:partner.name=Camarade taoïste

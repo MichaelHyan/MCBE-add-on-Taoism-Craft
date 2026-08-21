@@ -15,7 +15,8 @@
 							}
 					],
 					"on_entry": [
-						"/effect @s instant_health 1 1 true"
+						"/effect @s instant_health 1 1 true",
+						"/effect @n[type=player,r=30] wither 1 1 true"
 					]
 				}
 			}

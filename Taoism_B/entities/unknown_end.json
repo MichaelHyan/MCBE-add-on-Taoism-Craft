@@ -20,7 +20,11 @@
       "minecraft:nameable": {
       },
       "minecraft:type_family": {
-        "family": ["monster", "mob" ]
+        "family": [
+          "monster",
+          "mob",
+          "taoism_monster"
+        ]
       },
       "minecraft:collision_box": {
         "width": 0.6,

@@ -306,6 +306,11 @@
         }
       },
       "tame": {
+        "minecraft:inventory": {
+          "can_be_siphoned_from": false,
+          "inventory_size": 27,
+          "container_type": "chest_boat"
+        },
         "minecraft:interact": [
           {
             "on_interact": {
@@ -1020,11 +1025,6 @@
     },
     "components": {
       "minecraft:nameable": {},
-      "minecraft:inventory": {
-        "can_be_siphoned_from": false,
-        "inventory_size": 27,
-        "container_type": "chest_boat"
-      },
       "minecraft:tameable": {
         "probability": 1,
         "tameItems": "items:cinnabar_crystal",

@@ -5,7 +5,7 @@
       "identifier": "entity:zombie_mimic_f",
       "materials": { "default": "base", "invisible": "baseb" },
       "textures": {
-        "default": "textures/entity/zombie"
+        "default": "textures/entity/zombie_f"
       },
       "geometry": {
         "default": "geometry.default"

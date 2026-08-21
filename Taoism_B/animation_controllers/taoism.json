@@ -5,7 +5,7 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"summonp":"query.get_equipped_item_name=='partner' && query.is_using_item"},
+						{"summonp":"query.get_equipped_item_name=='partner' && query.is_using_item && query.scoreboard('maxchapter') < 9"},
 						{"disk_a":"query.get_equipped_item_name=='disk_taoism' && query.is_using_item"},
 						{"disk_b":"query.get_equipped_item_name=='disk_taoism' && variable.attack_time"},
 						{"cinnabar":"query.get_equipped_item_name=='cinnabar_crystal' && query.player_level > 0"},
@@ -47,6 +47,7 @@
 						{"sword_ts":"query.get_equipped_item_name=='sword_ts' && variable.attack_time && query.player_level > 9"},
 						{"firegourd_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:firegourd') && query.is_item_equipped == 0 && query.player_level > 24"},
 						{"firegourd_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:firegourd') && query.is_item_equipped != 0 && query.player_level > 24"}
+						
 					]
 				},
 				"summonp": {
@@ -217,7 +218,7 @@
 						"/summon entity:sword_sa ~-4 ~ ~-2",
 						"/summon entity:sword_sa ~-5 ~ ~",
 						"/summon entity:sword_sa ~-4 ~ ~2",
-						"/summon entity:sword_sa ~-2 ~ ~4"				
+						"/summon entity:sword_sa ~-2 ~ ~4"
 					]
 				},
 				"talisman_a": {

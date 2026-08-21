@@ -1,0 +1,105 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.spe_auto":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"skill_ca":"query.scoreboard('skilltype') == 3 && query.scoreboard('skillcharge') == 1 || query.scoreboard('skillcharge') == 11 || query.scoreboard('skillcharge') == 21 || query.scoreboard('skillcharge') == 31 || query.scoreboard('skillcharge') == 41 || query.scoreboard('skillcharge') == 51 || query.scoreboard('skillcharge') == 61 && query.player_level < 20"},
+						{"skill_cb":"query.scoreboard('skilltype') == 3 && query.scoreboard('skillcharge') == 1 || query.scoreboard('skillcharge') == 11 || query.scoreboard('skillcharge') == 21 || query.scoreboard('skillcharge') == 31 || query.scoreboard('skillcharge') == 41 || query.scoreboard('skillcharge') == 51 || query.scoreboard('skillcharge') == 61 && query.player_level >= 20 && query.player_level < 30"},
+						{"skill_cc":"query.scoreboard('skilltype') == 3 && query.scoreboard('skillcharge') == 1 || query.scoreboard('skillcharge') == 11 || query.scoreboard('skillcharge') == 21 || query.scoreboard('skillcharge') == 31 || query.scoreboard('skillcharge') == 41 || query.scoreboard('skillcharge') == 51 || query.scoreboard('skillcharge') == 61 && query.player_level >= 30"},
+						{"skill_cd":"query.scoreboard('skilltype') == 3 && query.scoreboard('skillcharge') > 0"},
+						{"skill_da":"query.scoreboard('skilltype') == 4 && query.scoreboard('skillcharge') < 10 && query.ground_speed < 0.5"},
+						{"skill_db":"query.scoreboard('skilltype') == 4 && query.scoreboard('skillcharge') >= 10 && query.ground_speed < 0.5 && math.mod(query.life_time,3) == 0"},
+						{"skill_dc":"query.scoreboard('skilltype') == 4 && query.ground_speed > 0.5"},
+						{"auto_charge":"query.scoreboard('skillcd') < 0"}
+					]
+				},
+				"skill_ca": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/summon entity:seeker_la ~ ~ ~",
+						"/scoreboard players add @s skillcharge -1"
+					]
+				},
+				"skill_cb": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/summon entity:seeker_lb ~ ~ ~",
+						"/scoreboard players add @s skillcharge -1"
+					]
+				},
+				"skill_cc": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/summon entity:seeker ~ ~ ~",
+						"/scoreboard players add @s skillcharge -1"
+					]
+				},
+				"skill_cd": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s skillcharge -1"
+					]
+				},
+				"skill_da": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s skillcharge 1"
+					]
+				},
+				"skill_db": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @a[r=5] regeneration 3 1 true"
+					]
+				},
+				"skill_dc": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s skillcharge 0"
+					]
+				},
+				"auto_charge": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s skillcd 1",
+						"/particle minecraft:end_chest ~ ~0.5 ~"
+					]
+				}
+			}
+		}
+ 	}
+ }

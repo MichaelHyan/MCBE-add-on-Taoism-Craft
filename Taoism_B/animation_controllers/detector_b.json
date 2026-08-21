@@ -1,0 +1,47 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.detector_b":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"detector_a":"query.life_time <= 5"},
+						{"detector_b":"query.life_time > 5 && query.life_time <= 8"},
+						{"detector_c":"query.life_time > 8"}
+					]
+				},
+				"detector_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:sculk_sensor_redstone_particle ~ ~1 ~",
+						"/tp @s ^ ^ ^0.2 facing @n[family=taoism_monster]"
+					]
+				},
+				"detector_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @s ^ ^ ^0.2 facing @n[family=taoism_monster]"
+					]
+				},
+				"detector_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

@@ -1,0 +1,37 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.seeker_lb":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"seeker_a":"query.life_time <= 3"},
+						{"seeker_b":"query.life_time > 3"}
+					]
+				},
+				"seeker_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:basic_flame_particle ~ ~1 ~",
+						"/damage @e[family=monster,r=3] 20",
+						"/tp @s ^ ^ ^0.5 facing @n[family=monster]"
+					]
+				},
+				"seeker_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

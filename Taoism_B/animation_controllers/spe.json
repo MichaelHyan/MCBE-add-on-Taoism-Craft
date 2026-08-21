@@ -12,17 +12,18 @@
 						{"spe_bc":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('spb') == 3 && query.scoreboard('charge') == 5"},
 						{"spe_bd":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('spb') == 4 && query.scoreboard('charge') == 5"},
 						{"spe_be":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('spb') == 5 && query.scoreboard('charge') == 5"},
-						{"spe_c":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('charge') == 0"},
-						{"spe_d":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('charge') == 1"},
-						{"spe_e":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('charge') == 2"},
-						{"spe_f":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('charge') == 3"},
-						{"spe_g":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('charge') == 4"},
+						{"spe_c":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('spb') != 6 && query.scoreboard('charge') == 0"},
+						{"spe_d":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('spb') != 6 && query.scoreboard('charge') == 1"},
+						{"spe_e":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('spb') != 6 && query.scoreboard('charge') == 2"},
+						{"spe_f":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('spb') != 6 && query.scoreboard('charge') == 3"},
+						{"spe_g":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('spb') != 6 && query.scoreboard('charge') == 4"},
 						{"spe_ra":"query.get_equipped_item_name=='pearl' && variable.attack_time && query.scoreboard('charge') >= 0 && query.scoreboard('spb') == 0 && query.scoreboard('spblock') == 1"},
 						{"spe_rb":"query.get_equipped_item_name=='pearl' && variable.attack_time && query.scoreboard('charge') >= 0 && query.scoreboard('spb') == 1 && query.scoreboard('spblock') == 1"},
 						{"spe_rc":"query.get_equipped_item_name=='pearl' && variable.attack_time && query.scoreboard('charge') >= 0 && query.scoreboard('spb') == 2 && query.scoreboard('spblock') == 1"},
 						{"spe_rd":"query.get_equipped_item_name=='pearl' && variable.attack_time && query.scoreboard('charge') >= 0 && query.scoreboard('spb') == 3 && query.scoreboard('spblock') == 1"},
 						{"spe_re":"query.get_equipped_item_name=='pearl' && variable.attack_time && query.scoreboard('charge') >= 0 && query.scoreboard('spb') == 4 && query.scoreboard('spblock') == 1"},
-						{"spe_rf":"query.get_equipped_item_name=='pearl' && variable.attack_time && query.scoreboard('charge') >= 0 && query.scoreboard('spb') == 5 && query.scoreboard('spblock') == 1"}
+						{"spe_rf":"query.get_equipped_item_name=='pearl' && variable.attack_time && query.scoreboard('charge') >= 0 && query.scoreboard('spb') == 5 && query.scoreboard('spblock') == 1"},
+						{"spe_rg":"query.get_equipped_item_name=='pearl' && variable.attack_time && query.scoreboard('charge') >= 0 && query.scoreboard('spb') == 6 && query.scoreboard('spblock') == 1"}
 					]
 				},
 				"spe_a": {
@@ -242,8 +243,23 @@
 							}
 					],
 					"on_entry": [
+						"/scoreboard objectives add skilltype dummy",
+						"/scoreboard objectives add skillcharge dummy",
+						"/scoreboard objectives add skillcd dummy",
+						"/scoreboard players set @s spb 6",
+						"/title @s actionbar §7[§f法§7]",
+						"/scoreboard players set @s charge -3"
+					]
+				},
+				"spe_rg": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
 						"/scoreboard players set @s spb 0",
-						"/title @s actionbar §7[§f无§7]",
+						"/title @s actionbar §7[§7无§7]",
 						"/scoreboard players set @s charge -3"
 					]
 				}

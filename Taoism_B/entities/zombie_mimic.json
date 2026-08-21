@@ -7,11 +7,13 @@
       "is_summonable": true,
       "scripts": {
         "animate": [
-          "mimic"
+          "mimic",
+          "detectre"
         ]
       },
       "animations": {
-        "mimic": "controller.animation.mimic"
+        "mimic": "controller.animation.mimic",
+        "detectre": "controller.animation.detectre"
       }
     },
     "component_groups": {
@@ -103,10 +105,10 @@
       },
       "minecraft:type_family": {
         "family": [
-          "zombie",
           "undead",
           "monster",
-          "mob"
+          "mob",
+          "taoism_monster"
         ]
       },
       "minecraft:collision_box": {

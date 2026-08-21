@@ -19,7 +19,6 @@
 						{"acbook_read_g":"query.get_equipped_item_name=='acbook' && variable.attack_time && query.scoreboard('chapter') <= query.scoreboard('maxchapter') && query.scoreboard('chapter') == 7"},
 						{"acbook_read_h":"query.get_equipped_item_name=='acbook' && variable.attack_time && query.scoreboard('chapter') <= query.scoreboard('maxchapter') && query.scoreboard('chapter') == 8"},
 						{"acbook_read_i":"query.get_equipped_item_name=='acbook' && variable.attack_time && query.scoreboard('chapter') <= query.scoreboard('maxchapter') && query.scoreboard('chapter') == 9"},
-						{"acbook_ban":"query.get_equipped_item_name=='items:partner' && query.scoreboard('maxchapter') == 9"},
 						{"acbook_unlock_a":"query.get_equipped_item_name=='crafting_table' && query.scoreboard('maxchapter') == 0 && query.scoreboard('chapter') != 0"},
 						{"acbook_unlock_b":"query.get_equipped_item_name=='cinnabar_powder' && query.scoreboard('maxchapter') == 1"},
 						{"acbook_unlock_c":"query.get_equipped_item_name=='talisman' && query.scoreboard('maxchapter') == 2"},
@@ -219,16 +218,6 @@
 						"/effect @s invisibility 59 255",
 						"/effect @s darkness 59 255",
 						"/inputpermission set @s movement disabled"
-					]
-				},
-				"acbook_ban": {
-					"transitions": [
-							{
-								"base_jeta": "(1.0)"
-							}
-					],
-					"on_entry": [
-						"replaceitem entity @s slot.weapon.mainhand 0 air"
 					]
 				},
 				"acbook_unlock_a": {

@@ -1,0 +1,38 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.region_a":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"region_a":"query.life_time > 15"},
+						{"region_b":"math.mod(query.life_time,1) == 0"}
+					]
+				},
+				"region_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @s"
+					]
+				},
+				"region_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/damage @e[family=monster,r=25] 1",
+						"/effect @e[family=monster,r=25] slowness 5 3 true",
+						"/effect @a[r=25] resistance 5 1 true",
+						"/function bglp1"
+					]
+				}
+			}
+		}
+ 	}
+ }
