@@ -25,7 +25,8 @@
 					],
 					"on_entry": [
 						"/scoreboard objectives add sleepchoice dummy",
-						"/scoreboard players set @s sleepchoice 0"
+						"/scoreboard players set @s sleepchoice 0",
+						"/scoreboard players set @s sleep 1"
 					]
 				},
 				"choiceb": {
@@ -36,7 +37,8 @@
 					],
 					"on_entry": [
 						"/scoreboard objectives add sleepchoice dummy",
-						"/scoreboard players set @s sleepchoice 1"
+						"/scoreboard players set @s sleepchoice 1",
+						"/scoreboard players set @s sleep 1"
 					]
 				},
 				"choicec": {
@@ -47,7 +49,8 @@
 					],
 					"on_entry": [
 						"/scoreboard objectives add sleepchoice dummy",
-						"/scoreboard players set @s sleepchoice 2"
+						"/scoreboard players set @s sleepchoice 2",
+						"/scoreboard players set @s sleep 1"
 					]
 				},
 				"choiced": {
@@ -58,7 +61,8 @@
 					],
 					"on_entry": [
 						"/scoreboard objectives add sleepchoice dummy",
-						"/scoreboard players set @s sleepchoice 3"
+						"/scoreboard players set @s sleepchoice 3",
+						"/scoreboard players set @s sleep 1"
 					]
 				},
 				"choicee": {
@@ -69,7 +73,8 @@
 					],
 					"on_entry": [
 						"/scoreboard objectives add sleepchoice dummy",
-						"/scoreboard players set @s sleepchoice 4"
+						"/scoreboard players set @s sleepchoice 4",
+						"/scoreboard players set @s sleep 1"
 					]
 				},
 				"choicef": {
@@ -80,7 +85,8 @@
 					],
 					"on_entry": [
 						"/scoreboard objectives add sleepchoice dummy",
-						"/scoreboard players set @s sleepchoice 5"
+						"/scoreboard players set @s sleepchoice 5",
+						"/scoreboard players set @s sleep 1"
 					]
 				},
 				"choiceg": {
@@ -91,7 +97,8 @@
 					],
 					"on_entry": [
 						"/scoreboard objectives add sleepchoice dummy",
-						"/scoreboard players set @s sleepchoice 6"
+						"/scoreboard players set @s sleepchoice 6",
+						"/scoreboard players set @s sleep 1"
 					]
 				},
 				"sleep": {

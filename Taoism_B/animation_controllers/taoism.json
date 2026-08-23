@@ -181,7 +181,8 @@
 							}
 					],
 					"on_entry": [
-						"/scoreboard players set @s sleepchoice 0"
+						"/scoreboard players set @s sleepchoice 0",
+						"/scoreboard players set @s sleep 1"
 					]
 				},
 				"talisman_t_a": {

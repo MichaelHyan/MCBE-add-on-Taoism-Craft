@@ -22,6 +22,10 @@
 						"/particle minecraft:balloon_gas_particle ^-0.1 ^1.2 ^0.2",
 						"/particle minecraft:balloon_gas_particle ^0.1 ^1.2 ^0.3",
 						"/particle minecraft:balloon_gas_particle ^-0.1 ^1.2 ^0.3",
+						"/particle minecraft:balloon_gas_particle ^0.2 ^1.2 ^0.3",
+						"/particle minecraft:balloon_gas_particle ^-0.2 ^1.2 ^0.3",
+						"/particle minecraft:balloon_gas_particle ^0.2 ^1.2 ^0.4",
+						"/particle minecraft:balloon_gas_particle ^-0.2 ^1.2 ^0.4",
 						"/effect @e[family=monster,r=3] slowness 15 3 true",
 						"/damage @e[family=monster,r=3] 1",
 						"/tp @s ^ ^ ^1.5"

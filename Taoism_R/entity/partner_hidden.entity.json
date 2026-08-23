@@ -5,7 +5,7 @@
       "identifier": "entity:hyan",
       "materials": { "default": "base", "invisible": "baseb" },
       "textures": {
-        "default": "textures/entity/steve"
+        "default": "textures/entity/hyan"
       },
       "geometry": {
         "default": "geometry.default"
