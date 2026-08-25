@@ -306,10 +306,6 @@
         }
       },
       "tame": {
-        "minecraft:sittable": {},
-        "minecraft:behavior.stay_while_sitting": {
-          "priority": 1
-        },
         "minecraft:inventory": {
           "can_be_siphoned_from": false,
           "inventory_size": 27,
