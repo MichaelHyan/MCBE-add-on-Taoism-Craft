@@ -2,15 +2,15 @@
   "format_version": "1.10.0",
   "minecraft:client_entity": {
     "description": {
-      "identifier": "entity:cabinet",
+      "identifier": "entity:burner",
       "materials": {
         "default": "entity_alphablend"
       },
       "textures": {
-        "default": "textures/entity/cabinet"
+        "default": "textures/entity/burner"
       },
       "geometry": {
-        "default": "geometry.cabinet"
+        "default": "geometry.burner"
       },
       "render_controllers": ["controller.render.default"]
     }

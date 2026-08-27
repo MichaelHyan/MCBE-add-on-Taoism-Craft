@@ -1,0 +1,70 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "entity:stoolb",
+      "is_spawnable": false,
+      "is_summonable": true
+    },
+    "component_groups": {
+      "despawn": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:health": {
+        "value": 1,
+        "max": 1
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/stoolb.json"
+      },
+      "minecraft:movement": {
+        "value": 0
+      },
+      "minecraft:is_collidable": {},
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      },
+      "minecraft:type_family": {
+        "family": [
+          "mob",
+          "taoism"
+        ]
+      },
+      "minecraft:collision_box": {
+        "height": 0.75,
+        "width": 0.75
+      },
+      "minecraft:rideable": {
+        "interact_text": "action.interact.ride.minecart",
+        "pull_in_entities": true,
+        "seat_count": 1,
+        "seats": {
+          "position": [
+            0.0,
+            0.75,
+            0.0
+          ]
+        }
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:physics": {},
+      "minecraft:knockback_resistance": {
+        "value": 0.80
+      }
+    },
+    "events": {
+      "despawn": {
+        "add": {
+          "component_groups": [
+            "despawn"
+          ]
+        }
+      }
+    }
+  }
+}

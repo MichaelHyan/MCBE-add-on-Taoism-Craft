@@ -29,7 +29,7 @@
 						"/damage @e[family=monster,r=25] 1",
 						"/effect @e[family=monster,r=25] slowness 5 3 true",
 						"/effect @e[family=monster,r=25] weakness 5 3 true",
-						"/effect @a[r=25] slowness 5 1 true",
+						"/effect @a[r=25] regeneration 5 1 true",
 						"/effect @a[r=25] resistance 5 1 true",
 						"/function bglp1"
 					]

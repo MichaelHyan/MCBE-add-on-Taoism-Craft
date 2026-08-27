@@ -2,15 +2,15 @@
   "format_version": "1.10.0",
   "minecraft:client_entity": {
     "description": {
-      "identifier": "entity:cabinet",
+      "identifier": "entity:stoola",
       "materials": {
         "default": "entity_alphablend"
       },
       "textures": {
-        "default": "textures/entity/cabinet"
+        "default": "textures/entity/stoola"
       },
       "geometry": {
-        "default": "geometry.cabinet"
+        "default": "geometry.stoola"
       },
       "render_controllers": ["controller.render.default"]
     }

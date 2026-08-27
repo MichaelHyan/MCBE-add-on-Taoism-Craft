@@ -2,15 +2,15 @@
   "format_version": "1.10.0",
   "minecraft:client_entity": {
     "description": {
-      "identifier": "entity:cabinet",
+      "identifier": "entity:bike",
       "materials": {
         "default": "entity_alphablend"
       },
       "textures": {
-        "default": "textures/entity/cabinet"
+        "default": "textures/entity/bike"
       },
       "geometry": {
-        "default": "geometry.cabinet"
+        "default": "geometry.bike"
       },
       "render_controllers": ["controller.render.default"]
     }

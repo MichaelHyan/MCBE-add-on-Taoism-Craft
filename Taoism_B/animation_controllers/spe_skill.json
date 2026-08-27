@@ -26,7 +26,12 @@
 						{"skill_d_a":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('skilltype') == 4 && query.scoreboard('skillcd') >= 0 && query.player_level < 20"},
 						{"skill_d_b":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('skilltype') == 4 && query.scoreboard('skillcd') >= 0 && query.player_level >= 20"},
 						{"skill_e_a":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('skilltype') == 5 && query.scoreboard('skillcd') >= 0 && query.player_level < 20"},
-						{"skill_e_b":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('skilltype') == 5 && query.scoreboard('skillcd') >= 0 && query.player_level >= 20"}
+						{"skill_e_b":"query.get_equipped_item_name=='pearl' && query.is_using_item && query.scoreboard('skilltype') == 5 && query.scoreboard('skillcd') >= 0 && query.player_level >= 20"},
+						{"skilla_unlock":"query.get_equipped_item_name=='sebooka' && query.is_using_item && query.scoreboard('charge') >= 0"},
+						{"skillb_unlock":"query.get_equipped_item_name=='sebookb' && query.is_using_item && query.scoreboard('charge') >= 0"},
+						{"skillc_unlock":"query.get_equipped_item_name=='sebookc' && query.is_using_item && query.scoreboard('charge') >= 0"},
+						{"skilld_unlock":"query.get_equipped_item_name=='sebookd' && query.is_using_item && query.scoreboard('charge') >= 0"},
+						{"skille_unlock":"query.get_equipped_item_name=='sebooke' && query.is_using_item && query.scoreboard('charge') >= 0"}
 					]
 				},
 				"skilla_a": {
@@ -282,6 +287,66 @@
 					"on_entry": [
 						"/summon entity:region_b",
 						"/scoreboard players set @s skillcd -300"
+					]
+				},
+				"skilla_unlock": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar 切换为-制炼七魄[改]",
+						"/scoreboard players set @s skilltype 1",
+						"/scoreboard players set @s charge -3"
+					]
+				},
+				"skillb_unlock": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar 切换为-天罡雷法",
+						"/scoreboard players set @s skilltype 2",
+						"/scoreboard players set @s charge -3"
+					]
+				},
+				"skillc_unlock": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar 切换为-制炼七魄",
+						"/scoreboard players set @s skilltype 3",
+						"/scoreboard players set @s charge -3"
+					]
+				},
+				"skilld_unlock": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar 切换为-存思内景",
+						"/scoreboard players set @s skilltype 4",
+						"/scoreboard players set @s charge -3"
+					]
+				},
+				"skille_unlock": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar 切换为-攻守领域",
+						"/scoreboard players set @s skilltype 5",
+						"/scoreboard players set @s charge -3"
 					]
 				}
 			}
