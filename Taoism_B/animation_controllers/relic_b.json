@@ -1,0 +1,85 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.relic_a":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"a":"query.life_time < 5"},
+						{"b":"query.life_time == 6"},
+						{"c":"query.life_time == 11"},
+						{"d":"query.life_time == 82"},
+						{"e":"query.life_time == 83"}
+					]
+				},
+				"a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:sculk_sensor_redstone_particle ~ ~ ~",
+						"/particle minecraft:sculk_sensor_redstone_particle ~ ~ ~",
+						"/particle minecraft:sculk_sensor_redstone_particle ~ ~ ~",
+						"/particle minecraft:sculk_sensor_redstone_particle ~ ~ ~",
+						"/particle minecraft:sculk_sensor_redstone_particle ~ ~ ~",
+						"/tp @s ^ ^ ^1 facing 0 100 0"
+					]
+				},
+				"b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon entity:bssa",
+						"/effect @a levitation 10 10 true",
+						"/camera @a fade time 5 10 5"
+					]
+				},
+				"c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @a 0 203 0",
+						"/tp @s 0 201 0",
+						"/summon entity:darkblock 0 195 0",
+						"/fill 30 200 30 -30 200 -30 barrier",
+						"/fill 30 210 30 -30 210 -30 barrier",
+						"/fill 30 200 30 30 210 -30 barrier",
+						"/fill 30 200 -30 -30 210 -30 barrier",
+						"/fill -30 200 -30 -30 210 30 barrier",
+						"/fill -30 200 30 30 210 30 barrier",
+						"/summon entity:rebl"
+					]
+				},
+				"d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @e[type=entity:darkblock] 0 10 0"
+					]
+				},
+				"e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @e[type=entity:darkblock]",
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

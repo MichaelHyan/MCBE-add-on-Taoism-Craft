@@ -1,0 +1,36 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.dragon":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"notdie":"query.is_alive != 0"},
+						{"die":"query.is_alive == 0"}
+					]
+				},
+				"notdie": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/kill @e[type=entity:relic]"
+					]
+				},
+				"die": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/kill @e[type=entity:relic]",
+						"/summon entity:relic"
+					]
+				}
+			}
+		}
+ 	}
+ }

@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "entity:relic",
+      "materials": {
+        "default": "entity_alphablend"
+      },
+      "textures": {
+        "default": "textures/entity/relic"
+      },
+      "geometry": {
+        "default": "geometry.relic"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}
