@@ -1,7 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"animation_controllers": {
-		"controller.animation.relic_a":{
+		"controller.animation.relic_b":{
 			"states":{
 				"base_jeta":{
 					"transitions":[
@@ -35,8 +35,9 @@
 					],
 					"on_entry": [
 						"/summon entity:bssa",
-						"/effect @a levitation 10 10 true",
-						"/camera @a fade time 5 10 5"
+						"/effect @a[r=300] levitation 10 10 true",
+						"/camera @a[r=300] fade time 5 10 5",
+						"/effect @a[r=300] darkness 70 1 true"
 					]
 				},
 				"c": {

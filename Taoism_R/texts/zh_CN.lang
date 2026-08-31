@@ -204,3 +204,4 @@ item.items:scripture_b.name=大还丹\n§o§7等级限制:10\n§r§b呢粒大还
 item.items:pill.name=小还丹\n§o§7消耗品\n§r§b九鼎小？还丹§r
 entity.taoism.table=画符桌
 entity.entity:partner.name=道友
+entity.taoism.peddler=游商

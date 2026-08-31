@@ -48,7 +48,7 @@
         "priority": 1
       },
       "minecraft:economy_trade_table": {
-        "display_name": "entity.villager.farmer",
+        "display_name": "entity.taoism.peddler",
         "new_screen": true,
         "persist_trades": true,
         "table": "trading/economy_trades/peddler_trades.json"
@@ -56,10 +56,7 @@
       "minecraft:nameable": {},
       "minecraft:health": {
         "value": 20,
-        "max": 30
-      },
-      "minecraft:loot": {
-        "table": "loot_tables/entities/zombie.json"
+        "max": 20
       },
       "minecraft:hurt_on_condition": {
         "damage_conditions": {
@@ -71,7 +68,7 @@
         }
       },
       "minecraft:movement": {
-        "value": 0.4
+        "value": 0.3
       },
       "minecraft:navigation.climb": {
         "is_amphibious": true,
@@ -86,9 +83,6 @@
       "minecraft:despawn": {
         "despawn_from_distance": {}
       },
-      "minecraft:behavior.float": {
-        "priority": 1
-      },
       "minecraft:behavior.random_stroll": {
         "priority": 4
       },
@@ -99,7 +93,7 @@
         "priority": 5
       },
       "minecraft:behavior.hurt_by_target": {
-        "priority": 3
+        "priority": 1
       },
       "minecraft:behavior.nearest_attackable_target": {
         "must_reach": true,
@@ -158,48 +152,32 @@
       },
       "minecraft:type_family": {
         "family": [
-          "zombie",
-          "undead",
           "mob",
           "taoism"
         ]
       },
       "minecraft:collision_box": {
-        "height": 0.6,
-        "width": 1.9
+        "height": 1.8,
+        "width": 0.6
       },
       "minecraft:physics": {},
       "minecraft:pushable": {},
       "minecraft:underwater_movement": {
         "value": 0.30
       },
-      "minecraft:attack": {
-        "damage": 15,
-        "effect_name": "weakness",
-        "effect_duration": 60
+      "minecraft:equipment": {
+        "table": "partner/bow.json"
       },
-      "minecraft:behavior.melee_attack": {
+      "minecraft:behavior.ranged_attack": {
         "priority": 2,
-        "speed_multiplier": 1,
-        "target_dist": 0,
-        "max_dist": 3,
-        "random_stop_interval": 100,
-        "track_target": true,
-        "reach_multiplier": 1.4
+        "attack_interval_min": 1.0,
+        "attack_interval_max": 1.0,
+        "attack_radius": 27,
+        "speed_multiplier": 0.0
       },
-      "minecraft:behavior.leap_at_target": {
-        "priority": 4,
-        "yd": 0.4,
-        "must_be_on_ground": false,
-        "target_dist": 0.4,
-        "speed_multiplier": 1
-      },
-      "minecraft:behavior.flee_sun": {
-        "priority": 2,
-        "speed_multiplier": 2
-      },
-      "minecraft:behavior.restrict_sun": {
-        "priority": 1
+      "minecraft:shooter": {
+        "type": "Arrow",
+        "def": "minecraft:arrow"
       },
       "minecraft:knockback_resistance": {
         "value": 0.80
@@ -210,10 +188,6 @@
           "stained_glass_pane"
         ]
       },
-      "minecraft:annotation.break_door": {
-        "break_time": 0,
-        "min_difficulty": "peaceful"
-      },
       "minecraft:breathable": {
         "breathesWater": true,
         "totalSupply": 20,
@@ -221,7 +195,6 @@
         "generatesBubbles": true,
         "breathesAir": true
       },
-      "minecraft:fire_immune": {},
       "minecraft:follow_range": {
         "value": 300
       }

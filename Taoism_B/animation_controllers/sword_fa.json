@@ -7,7 +7,8 @@
 					"transitions":[
 						{"sword_fa":"query.get_equipped_item_name=='sword_f' && query.is_using_item && query.scoreboard('sword') >= 0"},
 						{"sword_fb":"query.get_equipped_item_name=='sword_f' && query.is_sneaking && variable.attack_time"},
-						{"sword_fc":"query.get_equipped_item_name=='sword_f' && query.scoreboard('sword') < 0"}
+						{"sword_fc":"query.get_equipped_item_name=='sword_f' && !query.is_sneaking && variable.attack_time"},
+						{"sword_fd":"query.get_equipped_item_name=='sword_f' && query.scoreboard('sword') < 0"}
 					]
 				},
 				"sword_fa": {
@@ -33,6 +34,16 @@
 					]
 				},
 				"sword_fc": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @n[type=entity:sword] @s"
+					]
+				},
+				"sword_fd": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"

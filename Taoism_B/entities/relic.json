@@ -40,32 +40,56 @@
         }
       },
       "minecraft:interact": {
-        "interactions": [
-          {
-            "on_interact": {
-              "filters": {
-                "all_of": [
-                  {
-                    "test": "has_equipment",
-                    "subject": "other",
-                    "domain": "hand",
-                    "value": "minecraft:bow"
-                  },
-                  {
-                    "test": "is_family",
-                    "subject": "other",
-                    "value": "player"
-                  }
-                ]
-              },
-              "event": "a",
-              "target": "self"
+      "interactions": [
+        {
+          "on_interact": {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_equipment",
+                  "subject": "other",
+                  "domain": "hand",
+                  "value": "minecraft:bow"
+                },
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "player"
+                }
+              ]
             },
-            "use_item": true,
-            "interact_text": "addon.get.items"
-          }
-        ]
-      }
+            "event": "b",
+            "target": "self"
+          },
+          "use_item": false,
+          "interact_text": "addon.get.items"
+        },
+        {
+          "on_interact": {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_equipment",
+                  "subject": "other",
+                  "domain": "hand",
+                  "operator": "!=",
+                  "value": "minecraft:bow"
+                },
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "player"
+                }
+              ]
+            },
+            "event": "a",
+            "target": "self"
+          },
+          "use_item": false,
+          "interact_text": "addon.get.items"
+        }
+      ]
+    }
     },
     "component_groups": {
       "a":{

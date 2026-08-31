@@ -36,7 +36,8 @@
 					"on_entry": [
 						"/summon entity:bssa",
 						"/effect @a levitation 10 10 true",
-						"/camera @a fade time 5 10 5"
+						"/camera @a fade time 5 10 5",
+						"/effect @a[r=300] darkness 19 1 true"
 					]
 				},
 				"c": {

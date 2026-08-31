@@ -41,8 +41,8 @@
 							}
 					],
 					"on_entry": [
-						"/tp @a 0 203 0",
-						"/tp @s 5 201 0 facing 0 202 0",
+						"/tp @a 5 201 0 facing 0 202 0",
+						"/tp @s 0 201 0",
 						"/fill 30 200 30 -30 200 -30 barrier",
 						"/fill 30 210 30 -30 210 -30 barrier",
 						"/fill 30 200 30 30 210 -30 barrier",

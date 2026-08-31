@@ -15,6 +15,7 @@
 							}
 					],
 					"on_entry": [
+						"/effect @s resistance 1 255 true",
 						"/particle minecraft:balloon_gas_particle ^ ^0.1 ^-1",
 						"/particle minecraft:balloon_gas_particle ^0.2 ^0.1 ^-1",
 						"/particle minecraft:balloon_gas_particle ^-0.2 ^0.1 ^-1",
