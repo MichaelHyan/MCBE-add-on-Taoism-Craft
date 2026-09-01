@@ -204,10 +204,7 @@
 					],
 					"on_entry": [
 						"/tag @e[family=monster,r=20] add sbt",
-						"/tag @e[type=entity:zombie_mimic] add sbtx",
-						"/tag @e[type=entity:zombie_mimic_p] add sbtx",
-						"/tag @e[type=entity:zombie_mimic_f] add sbtx",
-						"/tag @e[type=entity:zombie_mimic_sp] add sbtx",
+						"/tag @e[family=taoism_monster,r=20] add sbtx",
 						"/summon entity:sword_sa ~ ~ ~5",
 						"/summon entity:sword_sa ~2 ~ ~4",
 						"/summon entity:sword_sa ~4 ~ ~2",

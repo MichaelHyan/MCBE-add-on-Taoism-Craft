@@ -25,6 +25,9 @@
         "value": 100,
         "max": 200
       },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/zombie_mimic.json"
+      },
       "minecraft:hurt_on_condition": {
         "damage_conditions": {
           "filters": {

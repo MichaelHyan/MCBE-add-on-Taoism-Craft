@@ -7,7 +7,7 @@
 					"transitions":[
 						{"despawn":"query.moon_phase != 0 && query.moon_phase != 4"},
 						{"enchant":"query.moon_phase == 0 || query.moon_phase == 4 && math.mod(query.life_time,5) == 0"},
-						{"restore":"query.moon_phase == 0 || query.moon_phase == 4 && math.mod(query.life_time,31) == 0"},
+						{"restore":"query.moon_phase == 0 || query.moon_phase == 4 && math.mod(query.life_time,61) == 0"},
 						{"damage":"query.is_in_water_or_rain && math.mod(query.life_time,1) == 0"}
 					]
 				},
