@@ -10,13 +10,31 @@
               "wants": [
                 {
                   "item": "items:cinnabar_crystal",
-                  "quantity": 30,
+                  "quantity": 10,
                   "price_multiplier": 0
                 }
               ],
               "gives": [
                 {
+                  "item": "items:ruler",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [
+                {
                   "item": "minecraft:emerald",
+                  "quantity": 25,
+                  "price_multiplier": 0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "items:sword_m",
                   "quantity": 1
                 }
               ],

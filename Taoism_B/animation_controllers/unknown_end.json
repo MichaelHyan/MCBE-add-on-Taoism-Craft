@@ -16,16 +16,9 @@
 					],
 					"on_entry": [
 						"/function bgmstop",
-						"/tp @a 0 100 0",
-						"/effect @a slow_falling 60 1 true",
-						"/kill @e[type=entity:bss]",
-						"/fill 30 200 30 -30 200 -30 air",
-						"/fill 30 210 30 -30 210 -30 air",
-						"/fill 30 200 30 30 210 -30 air",
-						"/fill 30 200 -30 -30 210 -30 air",
-						"/fill -30 200 -30 -30 210 30 air",
-						"/fill -30 200 30 30 210 30 air",
 						"/kill @e[family=reb]",
+						"/summon entity:boss_despawn",
+						"/camera @a fade time 0 10 2",
 						"/scoreboard players set @a maxchapter 9"
 					]
 				}

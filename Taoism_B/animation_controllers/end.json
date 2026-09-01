@@ -1,0 +1,43 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.end":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"boss_dead":"query.life_time == 3"},
+						{"boss_finish":"query.life_time >= 5"}
+					]
+				},
+				"boss_dead": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @a 0 100 0",
+						"/effect @a slow_falling 60 1 true",
+						"/kill @e[type=entity:bss]",
+						"/fill 30 200 30 -30 200 -30 air",
+						"/fill 30 210 30 -30 210 -30 air",
+						"/fill 30 200 30 30 210 -30 air",
+						"/fill 30 200 -30 -30 210 -30 air",
+						"/fill -30 200 -30 -30 210 30 air",
+						"/fill -30 200 30 30 210 30 air"
+					]
+				},
+				"boss_finish": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }
