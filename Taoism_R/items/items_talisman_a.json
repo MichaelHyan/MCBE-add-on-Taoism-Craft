@@ -2,13 +2,13 @@
   "format_version": "1.10",
   "minecraft:item": {
     "description": {
-      "identifier": "items:sebookc",
+      "identifier": "items:talisman_a",
       "category": "Nature"
     },
 
     "components": {
-      "minecraft:icon": "sebookc",
-      "minecraft:render_offsets": "sebookc"
+      "minecraft:icon": "talisman_a",
+      "minecraft:render_offsets": "talisman_a"
     }
   }
 }

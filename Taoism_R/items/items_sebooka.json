@@ -7,8 +7,8 @@
     },
 
     "components": {
-      "minecraft:icon": "acbook",
-      "minecraft:render_offsets": "acbook"
+      "minecraft:icon": "sebookc",
+      "minecraft:render_offsets": "sebookc"
     }
   }
 }

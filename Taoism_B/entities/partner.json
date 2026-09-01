@@ -331,7 +331,7 @@
               },
               "event": "bow"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -353,7 +353,7 @@
               },
               "event": "bow"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -375,7 +375,7 @@
               },
               "event": "trident"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -397,7 +397,7 @@
               },
               "event": "mace"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -419,7 +419,7 @@
               },
               "event": "cinnabar"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -441,7 +441,7 @@
               },
               "event": "sword_s"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -463,7 +463,7 @@
               },
               "event": "pearl"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -485,7 +485,7 @@
               },
               "event": "totem"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -507,7 +507,7 @@
               },
               "event": "wooden_sword"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -529,7 +529,7 @@
               },
               "event": "copper_sword"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -551,7 +551,7 @@
               },
               "event": "stone_sword"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -573,7 +573,7 @@
               },
               "event": "diamond_sword"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -595,7 +595,7 @@
               },
               "event": "golden_sword"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -617,7 +617,7 @@
               },
               "event": "iron_sword"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -639,7 +639,7 @@
               },
               "event": "netherite_sword"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -661,7 +661,7 @@
               },
               "event": "wooden_spear"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -683,7 +683,7 @@
               },
               "event": "stone_spear"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -705,7 +705,7 @@
               },
               "event": "copper_spear"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -727,7 +727,7 @@
               },
               "event": "iron_spear"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -749,7 +749,7 @@
               },
               "event": "golden_spear"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -771,7 +771,7 @@
               },
               "event": "diamond_spear"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -793,7 +793,7 @@
               },
               "event": "netherite_spear"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -815,7 +815,7 @@
               },
               "event": "longsword_wood"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -837,7 +837,7 @@
               },
               "event": "longsword_copper"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -859,7 +859,7 @@
               },
               "event": "longsword_stone"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -881,7 +881,7 @@
               },
               "event": "longsword_diamond"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -903,7 +903,7 @@
               },
               "event": "longsword_gold"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -925,7 +925,7 @@
               },
               "event": "longsword_iron"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           },
           {
@@ -947,7 +947,7 @@
               },
               "event": "longsword_netherite"
             },
-            "use_item": true,
+            "use_item": false,
             "interact_text": "addon.get.items"
           }
         ],

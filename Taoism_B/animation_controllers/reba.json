@@ -5,17 +5,17 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"reba_a":"query.life_time == 2"},
-						{"reba_b":"query.life_time == 4"},
-						{"reba_c":"query.life_time == 9"},
-						{"reba_d":"query.life_time == 14"},
-						{"reba_e":"query.life_time == 20"},
-						{"reba_f":"query.life_time == 25"},
-						{"reba_g":"query.life_time == 32"},
-						{"reba_h":"query.life_time == 37"},
-						{"reba_i":"query.life_time == 40"},
-						{"reba_j":"query.life_time == 42"},
-						{"reba_k":"query.life_time == 43"}
+						{"reba_a":"query.life_time == 1"},
+						{"reba_b":"query.life_time == 2"},
+						{"reba_c":"query.life_time == 4"},
+						{"reba_d":"query.life_time == 9"},
+						{"reba_e":"query.life_time == 14"},
+						{"reba_f":"query.life_time == 20"},
+						{"reba_g":"query.life_time == 25"},
+						{"reba_h":"query.life_time == 32"},
+						{"reba_i":"query.life_time == 37"},
+						{"reba_j":"query.life_time == 40"},
+						{"reba_k":"query.life_time == 42"}
 					]
 				},
 				"reba_a": {

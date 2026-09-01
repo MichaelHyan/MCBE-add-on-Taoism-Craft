@@ -49,7 +49,7 @@
                   "test": "has_equipment",
                   "subject": "other",
                   "domain": "hand",
-                  "value": "minecraft:bow"
+                  "value": "items:talisman_a"
                 },
                 {
                   "test": "is_family",
@@ -73,7 +73,7 @@
                   "subject": "other",
                   "domain": "hand",
                   "operator": "!=",
-                  "value": "minecraft:bow"
+                  "value": "items:talisman_a"
                 },
                 {
                   "test": "is_family",

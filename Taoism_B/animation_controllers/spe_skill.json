@@ -344,7 +344,7 @@
 							}
 					],
 					"on_entry": [
-						"/title @s actionbar 切换为-攻守领域",
+						"/title @s actionbar 切换为-炼体",
 						"/scoreboard players set @s skilltype 5",
 						"/scoreboard players set @s charge -3"
 					]

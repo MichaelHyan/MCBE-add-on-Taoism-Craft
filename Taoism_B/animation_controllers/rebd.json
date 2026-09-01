@@ -5,21 +5,21 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"rebd_a":"query.life_time == 2"},
-						{"rebd_b":"query.life_time == 4"},
-						{"rebd_c":"query.life_time == 5"},
-						{"rebd_d":"query.life_time == 7"},
-						{"rebd_e":"query.life_time == 8"},
-						{"rebd_f":"query.life_time == 14"},
-						{"rebd_g":"query.life_time == 15"},
-						{"rebd_h":"query.life_time == 20"},
-						{"rebd_i":"query.life_time == 24"},
-						{"rebd_j":"query.life_time == 28"},
-						{"rebd_k":"query.life_time == 32"},
-						{"rebd_l":"query.life_time == 38"},
-						{"rebd_m":"query.life_time == 39"},
-						{"rebd_n":"query.life_time == 41"},
-						{"rebd_o":"query.life_time == 42"}
+						{"rebd_a":"query.life_time == 1"},
+						{"rebd_b":"query.life_time == 2"},
+						{"rebd_c":"query.life_time == 4"},
+						{"rebd_d":"query.life_time == 5"},
+						{"rebd_e":"query.life_time == 7"},
+						{"rebd_f":"query.life_time == 8"},
+						{"rebd_g":"query.life_time == 14"},
+						{"rebd_h":"query.life_time == 15"},
+						{"rebd_i":"query.life_time == 20"},
+						{"rebd_j":"query.life_time == 24"},
+						{"rebd_k":"query.life_time == 28"},
+						{"rebd_l":"query.life_time == 32"},
+						{"rebd_m":"query.life_time == 38"},
+						{"rebd_n":"query.life_time == 39"},
+						{"rebd_o":"query.life_time == 41"}
 					]
 				},
 				"rebd_a": {
@@ -59,7 +59,7 @@
 							}
 					],
 					"on_entry": [
-						"/say §9道长可否听说过[模糊不清的声音]？"
+						"/say §9道长可否听说过[...]？"
 					]
 				},
 				"rebd_e": {

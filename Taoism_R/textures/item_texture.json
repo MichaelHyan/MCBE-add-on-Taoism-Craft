@@ -23,6 +23,9 @@
     "talisman_ql": {
       "textures": "textures/items/talisman_ql.png"
     },
+    "talisman_a": {
+      "textures": "textures/items/talisman_a.png"
+    },
     "sword_qi": {
       "textures": "textures/items/sword_qi.png"
     },
@@ -376,6 +379,18 @@
     },
     "acbook": {
       "textures":"textures/items/acbook.png"
+    },
+    "sebookb": {
+      "textures":"textures/items/sebookb.png"
+    },
+    "sebookc": {
+      "textures":"textures/items/sebookc.png"
+    },
+    "sebookd": {
+      "textures":"textures/items/sebookd.png"
+    },
+    "sebooke": {
+      "textures":"textures/items/sebooke.png"
     },
     "shield_q": {
       "textures":"textures/items/shield.png"

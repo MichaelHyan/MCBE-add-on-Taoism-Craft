@@ -5,23 +5,23 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"rebi_a":"query.life_time == 4"},
-						{"rebi_b":"query.life_time == 7"},
-						{"rebi_c":"query.life_time == 10"},
-						{"rebi_d":"query.life_time == 12"},
-						{"rebi_e":"query.life_time == 16"},
-						{"rebi_f":"query.life_time == 18"},
-						{"rebi_g":"query.life_time == 20"},
-						{"rebi_h":"query.life_time == 22"},
-						{"rebi_i":"query.life_time == 25"},
-						{"rebi_j":"query.life_time == 27"},
-						{"rebi_k":"query.life_time == 34"},
-						{"rebi_l":"query.life_time == 37"},
-						{"rebi_m":"query.life_time == 42"},
-						{"rebi_n":"query.life_time == 46"},
-						{"rebi_o":"query.life_time == 52"},
-						{"rebi_p":"query.life_time == 57"},
-						{"rebi_q":"query.life_time == 59"}
+						{"rebi_a":"query.life_time == 2"},
+						{"rebi_b":"query.life_time == 4"},
+						{"rebi_c":"query.life_time == 7"},
+						{"rebi_d":"query.life_time == 10"},
+						{"rebi_e":"query.life_time == 12"},
+						{"rebi_f":"query.life_time == 16"},
+						{"rebi_g":"query.life_time == 18"},
+						{"rebi_h":"query.life_time == 20"},
+						{"rebi_i":"query.life_time == 22"},
+						{"rebi_j":"query.life_time == 25"},
+						{"rebi_k":"query.life_time == 27"},
+						{"rebi_l":"query.life_time == 34"},
+						{"rebi_m":"query.life_time == 47"},
+						{"rebi_n":"query.life_time == 42"},
+						{"rebi_o":"query.life_time == 46"},
+						{"rebi_p":"query.life_time == 52"},
+						{"rebi_q":"query.life_time == 57"}
 					]
 				},
 				"rebi_a": {

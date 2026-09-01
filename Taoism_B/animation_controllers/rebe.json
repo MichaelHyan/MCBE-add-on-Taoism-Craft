@@ -5,26 +5,26 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"rebe_a":"query.life_time == 2"},
-						{"rebe_b":"query.life_time == 4"},
-						{"rebe_c":"query.life_time == 5"},
-						{"rebe_d":"query.life_time == 8"},
-						{"rebe_e":"query.life_time == 12"},
-						{"rebe_f":"query.life_time == 16"},
-						{"rebe_g":"query.life_time == 20"},
-						{"rebe_h":"query.life_time == 21"},
-						{"rebe_i":"query.life_time == 23"},
-						{"rebe_j":"query.life_time == 29"},
-						{"rebe_k":"query.life_time == 31"},
-						{"rebe_l":"query.life_time == 33"},
-						{"rebe_m":"query.life_time == 37"},
-						{"rebe_n":"query.life_time == 40"},
-						{"rebe_o":"query.life_time == 41"},
-						{"rebe_p":"query.life_time == 44"},
-						{"rebe_q":"query.life_time == 47"},
-						{"rebe_r":"query.life_time == 51"},
-						{"rebe_s":"query.life_time == 53"},
-						{"rebe_t":"query.life_time == 54"}
+						{"rebe_a":"query.life_time == 1"},
+						{"rebe_b":"query.life_time == 2"},
+						{"rebe_c":"query.life_time == 4"},
+						{"rebe_d":"query.life_time == 5"},
+						{"rebe_e":"query.life_time == 8"},
+						{"rebe_f":"query.life_time == 12"},
+						{"rebe_g":"query.life_time == 16"},
+						{"rebe_h":"query.life_time == 20"},
+						{"rebe_i":"query.life_time == 21"},
+						{"rebe_j":"query.life_time == 23"},
+						{"rebe_k":"query.life_time == 29"},
+						{"rebe_l":"query.life_time == 31"},
+						{"rebe_m":"query.life_time == 33"},
+						{"rebe_n":"query.life_time == 37"},
+						{"rebe_o":"query.life_time == 40"},
+						{"rebe_p":"query.life_time == 41"},
+						{"rebe_q":"query.life_time == 44"},
+						{"rebe_r":"query.life_time == 47"},
+						{"rebe_s":"query.life_time == 51"},
+						{"rebe_t":"query.life_time == 53"}
 					]
 				},
 				"rebe_a": {
@@ -144,7 +144,7 @@
 							}
 					],
 					"on_entry": [
-						"/say §c而它的前体，正是[模糊不清的声音]。"
+						"/say §c而它的前体，正是[...]。"
 					]
 				},
 				"rebe_m": {
