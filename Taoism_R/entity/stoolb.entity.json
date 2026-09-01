@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "entity:stoolb",
+      "materials": {
+        "default": "entity_alphablend"
+      },
+      "textures": {
+        "default": "textures/entity/stoolb"
+      },
+      "geometry": {
+        "default": "geometry.stoolb"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

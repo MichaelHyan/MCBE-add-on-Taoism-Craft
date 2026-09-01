@@ -22,7 +22,7 @@
               "gives": [
                 {
                   "item": "items:talisman",
-                  "quantity": 1
+                  "quantity": 4
                 }
               ],
               "trader_exp": 0,
@@ -42,7 +42,7 @@
                   "price_multiplier": 0
                 },
                 {
-                  "item": "items:cinnabar_powder",
+                  "item": "items:spe",
                   "quantity": 1,
                   "price_multiplier": 0
                 }
@@ -65,12 +65,12 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:paper",
+                  "item": "items:spe",
                   "quantity": 1,
                   "price_multiplier": 0
                 },
                 {
-                  "item": "items:cinnabar_powder",
+                  "item": "items:tc",
                   "quantity": 1,
                   "price_multiplier": 0
                 }
@@ -78,7 +78,7 @@
               "gives": [
                 {
                   "item": "items:talisman_t",
-                  "quantity": 1
+                  "quantity": 4
                 }
               ],
               "trader_exp": 0,
@@ -93,12 +93,12 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:paper",
+                  "item": "items:ta",
                   "quantity": 1,
                   "price_multiplier": 0
                 },
                 {
-                  "item": "items:cinnabar_powder",
+                  "item": "items:ua",
                   "quantity": 1,
                   "price_multiplier": 0
                 }
@@ -121,12 +121,12 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:paper",
+                  "item": "items:ta",
                   "quantity": 1,
                   "price_multiplier": 0
                 },
                 {
-                  "item": "items:cinnabar_powder",
+                  "item": "items:ub",
                   "quantity": 1,
                   "price_multiplier": 0
                 }
@@ -134,7 +134,7 @@
               "gives": [
                 {
                   "item": "items:tab",
-                  "quantity": 1
+                  "quantity": 4
                 }
               ],
               "trader_exp": 0,
@@ -149,12 +149,12 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:paper",
+                  "item": "items:ta",
                   "quantity": 1,
                   "price_multiplier": 0
                 },
                 {
-                  "item": "items:cinnabar_powder",
+                  "item": "items:uc",
                   "quantity": 1,
                   "price_multiplier": 0
                 }
@@ -162,7 +162,7 @@
               "gives": [
                 {
                   "item": "items:tac",
-                  "quantity": 1
+                  "quantity": 4
                 }
               ],
               "trader_exp": 0,
@@ -177,12 +177,12 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:paper",
+                  "item": "items:ta",
                   "quantity": 1,
                   "price_multiplier": 0
                 },
                 {
-                  "item": "items:cinnabar_powder",
+                  "item": "items:ud",
                   "quantity": 1,
                   "price_multiplier": 0
                 }
@@ -190,7 +190,7 @@
               "gives": [
                 {
                   "item": "items:tad",
-                  "quantity": 1
+                  "quantity": 4
                 }
               ],
               "trader_exp": 0,
@@ -205,12 +205,12 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:paper",
+                  "item": "items:ta",
                   "quantity": 1,
                   "price_multiplier": 0
                 },
                 {
-                  "item": "items:cinnabar_powder",
+                  "item": "items:ue",
                   "quantity": 1,
                   "price_multiplier": 0
                 }
@@ -218,6 +218,34 @@
               "gives": [
                 {
                   "item": "items:tae",
+                  "quantity": 4
+                }
+              ],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "items:ta",
+                  "quantity": 1,
+                  "price_multiplier": 0
+                },
+                {
+                  "item": "items:uf",
+                  "quantity": 1,
+                  "price_multiplier": 0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "items:talisman_e",
                   "quantity": 1
                 }
               ],
@@ -233,12 +261,12 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:paper",
+                  "item": "items:ta",
                   "quantity": 1,
                   "price_multiplier": 0
                 },
                 {
-                  "item": "items:cinnabar_powder",
+                  "item": "items:ug",
                   "quantity": 1,
                   "price_multiplier": 0
                 }
@@ -261,12 +289,12 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:paper",
+                  "item": "items:tb",
                   "quantity": 1,
                   "price_multiplier": 0
                 },
                 {
-                  "item": "items:cinnabar_powder",
+                  "item": "items:ua",
                   "quantity": 1,
                   "price_multiplier": 0
                 }
@@ -274,7 +302,7 @@
               "gives": [
                 {
                   "item": "items:tba",
-                  "quantity": 1
+                  "quantity": 4
                 }
               ],
               "trader_exp": 0,
@@ -290,12 +318,12 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:paper",
+                  "item": "items:tb",
                   "quantity": 1,
                   "price_multiplier": 0
                 },
                 {
-                  "item": "items:cinnabar_powder",
+                  "item": "items:ub",
                   "quantity": 1,
                   "price_multiplier": 0
                 }
@@ -303,7 +331,7 @@
               "gives": [
                 {
                   "item": "items:tbb",
-                  "quantity": 1
+                  "quantity": 4
                 }
               ],
               "trader_exp": 0,
@@ -318,12 +346,12 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:paper",
+                  "item": "items:tb",
                   "quantity": 1,
                   "price_multiplier": 0
                 },
                 {
-                  "item": "items:cinnabar_powder",
+                  "item": "items:uc",
                   "quantity": 1,
                   "price_multiplier": 0
                 }
@@ -331,7 +359,7 @@
               "gives": [
                 {
                   "item": "items:tbc",
-                  "quantity": 1
+                  "quantity": 4
                 }
               ],
               "trader_exp": 0,
@@ -347,12 +375,12 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:paper",
+                  "item": "items:tb",
                   "quantity": 1,
                   "price_multiplier": 0
                 },
                 {
-                  "item": "items:cinnabar_powder",
+                  "item": "items:ud",
                   "quantity": 1,
                   "price_multiplier": 0
                 }
@@ -360,7 +388,7 @@
               "gives": [
                 {
                   "item": "items:tbd",
-                  "quantity": 1
+                  "quantity": 4
                 }
               ],
               "trader_exp": 0,
@@ -376,12 +404,12 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:paper",
+                  "item": "items:tb",
                   "quantity": 1,
                   "price_multiplier": 0
                 },
                 {
-                  "item": "items:cinnabar_powder",
+                  "item": "items:ue",
                   "quantity": 1,
                   "price_multiplier": 0
                 }
@@ -405,12 +433,12 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:paper",
+                  "item": "items:tb",
                   "quantity": 1,
                   "price_multiplier": 0
                 },
                 {
-                  "item": "items:cinnabar_powder",
+                  "item": "items:uf",
                   "quantity": 1,
                   "price_multiplier": 0
                 }
@@ -434,12 +462,12 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:paper",
+                  "item": "items:tb",
                   "quantity": 1,
                   "price_multiplier": 0
                 },
                 {
-                  "item": "items:cinnabar_powder",
+                  "item": "items:ug",
                   "quantity": 1,
                   "price_multiplier": 0
                 }
@@ -463,12 +491,12 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:paper",
+                  "item": "items:tc",
                   "quantity": 1,
                   "price_multiplier": 0
                 },
                 {
-                  "item": "items:cinnabar_powder",
+                  "item": "items:ua",
                   "quantity": 1,
                   "price_multiplier": 0
                 }
@@ -476,7 +504,7 @@
               "gives": [
                 {
                   "item": "items:tca",
-                  "quantity": 1
+                  "quantity": 4
                 }
               ],
               "trader_exp": 0,
@@ -491,12 +519,12 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:paper",
+                  "item": "items:tc",
                   "quantity": 1,
                   "price_multiplier": 0
                 },
                 {
-                  "item": "items:cinnabar_powder",
+                  "item": "items:ub",
                   "quantity": 1,
                   "price_multiplier": 0
                 }
@@ -504,7 +532,7 @@
               "gives": [
                 {
                   "item": "items:tcb",
-                  "quantity": 1
+                  "quantity": 4
                 }
               ],
               "trader_exp": 0,
@@ -520,12 +548,12 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:paper",
+                  "item": "items:tc",
                   "quantity": 1,
                   "price_multiplier": 0
                 },
                 {
-                  "item": "items:cinnabar_powder",
+                  "item": "items:uc",
                   "quantity": 1,
                   "price_multiplier": 0
                 }
@@ -533,7 +561,7 @@
               "gives": [
                 {
                   "item": "items:tcc",
-                  "quantity": 1
+                  "quantity": 4
                 }
               ],
               "trader_exp": 0,
@@ -549,12 +577,12 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:paper",
+                  "item": "items:tc",
                   "quantity": 1,
                   "price_multiplier": 0
                 },
                 {
-                  "item": "items:cinnabar_powder",
+                  "item": "items:ud",
                   "quantity": 1,
                   "price_multiplier": 0
                 }
@@ -562,7 +590,7 @@
               "gives": [
                 {
                   "item": "items:tcd",
-                  "quantity": 1
+                  "quantity": 4
                 }
               ],
               "trader_exp": 0,
@@ -578,12 +606,12 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:paper",
+                  "item": "items:tc",
                   "quantity": 1,
                   "price_multiplier": 0
                 },
                 {
-                  "item": "items:cinnabar_powder",
+                  "item": "items:ue",
                   "quantity": 1,
                   "price_multiplier": 0
                 }
@@ -591,7 +619,7 @@
               "gives": [
                 {
                   "item": "items:tce",
-                  "quantity": 1
+                  "quantity": 4
                 }
               ],
               "trader_exp": 0,
@@ -607,12 +635,12 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:paper",
+                  "item": "items:tc",
                   "quantity": 1,
                   "price_multiplier": 0
                 },
                 {
-                  "item": "items:cinnabar_powder",
+                  "item": "items:uf",
                   "quantity": 1,
                   "price_multiplier": 0
                 }
@@ -620,7 +648,7 @@
               "gives": [
                 {
                   "item": "items:tcf",
-                  "quantity": 1
+                  "quantity": 4
                 }
               ],
               "trader_exp": 0,
@@ -636,12 +664,12 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:paper",
+                  "item": "items:tc",
                   "quantity": 1,
                   "price_multiplier": 0
                 },
                 {
-                  "item": "items:cinnabar_powder",
+                  "item": "items:ug",
                   "quantity": 1,
                   "price_multiplier": 0
                 }

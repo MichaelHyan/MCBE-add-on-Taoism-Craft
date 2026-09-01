@@ -368,6 +368,9 @@
     "glutinous_rice": {
       "textures":"textures/items/glutinous_rice.png"
     },
+    "ruler": {
+      "textures":"textures/items/ruler.png"
+    },
     "ball": {
       "textures":"textures/items/ball.png"
     },
@@ -376,6 +379,33 @@
     },
     "shield_q": {
       "textures":"textures/items/shield.png"
+    },
+    "bike": {
+      "textures":"textures/items/bike.png"
+    },
+    "table": {
+      "textures":"textures/items/table.png"
+    },
+    "desk": {
+      "textures":"textures/items/desk.png"
+    },
+    "stoola": {
+      "textures":"textures/items/stoola.png"
+    },
+    "stoolb": {
+      "textures":"textures/items/stoolb.png"
+    },
+    "stoolc": {
+      "textures":"textures/items/stoolc.png"
+    },
+    "cabinet": {
+      "textures":"textures/items/cabinet.png"
+    },
+    "burner": {
+      "textures":"textures/items/burner.png"
+    },
+    "burnera": {
+      "textures":"textures/items/burnera.png"
     },
     "dumpling_a": {
       "textures":"textures/ny/dumpling_a.png"

@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "entity:desk",
+      "materials": {
+        "default": "entity_alphablend"
+      },
+      "textures": {
+        "default": "textures/entity/desk"
+      },
+      "geometry": {
+        "default": "geometry.desk"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

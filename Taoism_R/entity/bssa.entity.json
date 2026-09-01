@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "entity:bssa",
+      "materials": {
+        "default": "entity_alphablend"
+      },
+      "textures": {
+        "default": "textures/entity/bssa"
+      },
+      "geometry": {
+        "default": "geometry.bssa"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

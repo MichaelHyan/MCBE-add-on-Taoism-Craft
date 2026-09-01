@@ -1,0 +1,24 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.darkblock",
+				"texture_width": 4096,
+				"texture_height": 4096,
+				"visible_bounds_width": 68,
+				"visible_bounds_height": 63,
+				"visible_bounds_offset": [0, 19.5, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-500, -200, -500], "size": [1000, 1000, 1000], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

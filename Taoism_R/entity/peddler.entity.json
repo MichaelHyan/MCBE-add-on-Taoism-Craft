@@ -5,7 +5,7 @@
       "identifier": "entity:peddler",
       "materials": { "default": "base", "invisible": "baseb" },
       "textures": {
-        "default": "textures/entity/unknown"
+        "default": "textures/entity/peddler"
       },
       "geometry": {
         "default": "geometry.unknown"

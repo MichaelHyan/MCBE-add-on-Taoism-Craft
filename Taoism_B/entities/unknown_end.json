@@ -20,7 +20,10 @@
       "minecraft:nameable": {
       },
       "minecraft:type_family": {
-        "family": ["monster", "mob" ]
+        "family": [
+          "monster",
+          "mob"
+        ]
       },
       "minecraft:collision_box": {
         "width": 0.6,

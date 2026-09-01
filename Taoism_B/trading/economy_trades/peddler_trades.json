@@ -9,149 +9,110 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:wheat",
-                  "quantity": 1,
-                  "price_multiplier": 0.05
-                },
-                {
-                  "item": "minecraft:diamond",
-                  "quantity": 1,
-                  "price_multiplier": 0.05
-                },
-                {
-                  "item": "items:brush_p",
-                  "quantity": 1,
-                  "price_multiplier": 0.05
+                  "item": "items:cinnabar_crystal",
+                  "quantity": 30,
+                  "price_multiplier": 0
                 }
               ],
               "gives": [
                 {
                   "item": "minecraft:emerald",
                   "quantity": 1
-                },
+                }
+              ],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [
                 {
-                  "item": "items:brush_n",
+                  "item": "items:cinnabar_crystal",
+                  "quantity": 10,
+                  "price_multiplier": 0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "items:sebookb",
                   "quantity": 1
                 }
               ],
-              "trader_exp": 2,
-              "max_uses": 16,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
             {
               "wants": [
                 {
-                  "item": "minecraft:emerald",
-                  "quantity": 1,
-                  "price_multiplier": 0.05
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:bread",
-                  "quantity": 6
-                }
-              ],
-              "trader_exp": 1,
-              "max_uses": 16,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:wheat",
-                  "quantity": 2,
+                  "item": "items:cinnabar_crystal",
+                  "quantity": 10,
                   "price_multiplier": 0
                 }
               ],
               "gives": [
                 {
-                  "item": "ny:flour",
-                  "quantity": 10
+                  "item": "items:sebookc",
+                  "quantity": 1
                 }
               ],
-              "trader_exp": 1,
-              "max_uses": 16,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
             {
               "wants": [
                 {
-                  "item": "minecraft:wheat",
-                  "quantity": 2,
+                  "item": "items:cinnabar_crystal",
+                  "quantity": 10,
                   "price_multiplier": 0
                 }
               ],
               "gives": [
                 {
-                  "item": "ny:rice",
-                  "quantity": 3
+                  "item": "items:sebookd",
+                  "quantity": 1
                 }
               ],
-              "trader_exp": 1,
-              "max_uses": 16,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
             {
               "wants": [
                 {
-                  "item": "minecraft:wheat",
-                  "quantity": 2,
+                  "item": "items:cinnabar_crystal",
+                  "quantity": 10,
                   "price_multiplier": 0
                 }
               ],
               "gives": [
                 {
-                  "item": "ny:steamed_bun",
-                  "quantity": 5
+                  "item": "items:sebooke",
+                  "quantity": 1
                 }
               ],
-              "trader_exp": 1,
-              "max_uses": 16,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
             {
               "wants": [
                 {
-                  "item": "minecraft:wheat",
+                  "item": "items:cinnabar_crystal",
                   "quantity": 5,
                   "price_multiplier": 0
                 }
               ],
               "gives": [
                 {
-                  "item": "ny:cabbage",
-                  "quantity": 5
+                  "item": "items:glutinous_rice",
+                  "quantity": 1
                 }
               ],
-              "trader_exp": 1,
-              "max_uses": 16,
-              "reward_exp": true
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
             }
           ]
         },
@@ -161,48 +122,20 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:wheat",
-                  "quantity": 2,
+                  "item": "items:cinnabar_crystal",
+                  "quantity": 15,
                   "price_multiplier": 0
                 }
               ],
               "gives": [
                 {
-                  "item": "ny:rice_cake",
-                  "quantity": 3
+                  "item": "items:bike",
+                  "quantity": 6
                 }
               ],
-              "trader_exp": 1,
-              "max_uses": 16,
-              "reward_exp": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "total_exp_required": 10,
-      "groups": [
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:pumpkin",
-                  "quantity": 6,
-                  "price_multiplier": 0.05
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 1
-                }
-              ],
-              "trader_exp": 10,
-              "max_uses": 12,
-              "reward_exp": true
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
             }
           ]
         },
@@ -212,66 +145,20 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:emerald",
-                  "quantity": 1,
-                  "price_multiplier": 0.05
+                  "item": "items:cinnabar_crystal",
+                  "quantity": 20,
+                  "price_multiplier": 0
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:pumpkin_pie",
-                  "quantity": 4
-                }
-              ],
-              "trader_exp": 5,
-              "max_uses": 12,
-              "reward_exp": true
-            },
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 1,
-                  "price_multiplier": 0.05
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:apple",
-                  "quantity": 4
-                }
-              ],
-              "trader_exp": 5,
-              "max_uses": 16,
-              "reward_exp": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "total_exp_required": 70,
-      "groups": [
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:melon_block",
-                  "quantity": 4,
-                  "price_multiplier": 0.05
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:emerald",
+                  "item": "items:table",
                   "quantity": 1
                 }
               ],
-              "trader_exp": 20,
-              "max_uses": 12,
-              "reward_exp": true
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
             }
           ]
         },
@@ -281,57 +168,20 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:emerald",
-                  "quantity": 3,
-                  "price_multiplier": 0.05
+                  "item": "items:cinnabar_crystal",
+                  "quantity": 20,
+                  "price_multiplier": 0
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:cookie",
-                  "quantity": 18
+                  "item": "items:desk",
+                  "quantity": 1
                 }
               ],
-              "trader_exp": 10,
-              "max_uses": 12,
-              "reward_exp": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "total_exp_required": 150,
-      "groups": [
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 1,
-                  "price_multiplier": 0.05
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:suspicious_stew:0",
-                  "quantity": 1,
-                  "functions": [
-                    {
-                      "function": "random_aux_value",
-                      "values": {
-                        "min": 0,
-                        "max": 5
-                      }
-                    }
-                  ]
-                }
-              ],
-              "trader_exp": 15,
-              "max_uses": 12,
-              "reward_exp": true
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
             }
           ]
         },
@@ -341,66 +191,135 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:emerald",
-                  "quantity": 1,
-                  "price_multiplier": 0.05
+                  "item": "items:cinnabar_crystal",
+                  "quantity": 10,
+                  "price_multiplier": 0
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:cake",
+                  "item": "items:stoola",
                   "quantity": 1
                 }
               ],
-              "trader_exp": 15,
-              "max_uses": 12,
-              "reward_exp": true
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
             }
           ]
-        }
-      ]
-    },
-    {
-      "total_exp_required": 250,
-      "groups": [
+        },
         {
           "num_to_select": 1,
           "trades": [
             {
               "wants": [
                 {
-                  "item": "minecraft:emerald",
-                  "quantity": 3,
-                  "price_multiplier": 0.05
+                  "item": "items:cinnabar_crystal",
+                  "quantity": 10,
+                  "price_multiplier": 0
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:golden_carrot",
-                  "quantity": 3
+                  "item": "items:stoolb",
+                  "quantity": 1
                 }
               ],
-              "trader_exp": 30,
-              "max_uses": 12,
-              "reward_exp": true
-            },
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
             {
               "wants": [
                 {
-                  "item": "minecraft:emerald",
-                  "quantity": 4,
-                  "price_multiplier": 0.05
+                  "item": "items:cinnabar_crystal",
+                  "quantity": 10,
+                  "price_multiplier": 0
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:speckled_melon",
-                  "quantity": 3
+                  "item": "items:stoolc",
+                  "quantity": 1
                 }
               ],
-              "trader_exp": 30,
-              "max_uses": 12,
-              "reward_exp": true
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "items:cinnabar_crystal",
+                  "quantity": 20,
+                  "price_multiplier": 0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "items:cabinet",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "items:cinnabar_crystal",
+                  "quantity": 5,
+                  "price_multiplier": 0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "items:burner",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "items:cinnabar_crystal",
+                  "quantity": 5,
+                  "price_multiplier": 0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "items:burnera",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
             }
           ]
         }

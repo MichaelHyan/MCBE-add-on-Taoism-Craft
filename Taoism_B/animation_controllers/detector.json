@@ -1,0 +1,68 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.detector":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"ruler_a_detect":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:ruler') && query.scoreboard('detectcharge') == 30 && query.scoreboard('detect') == 1 && query.player_level > 9"},
+						{"ruler_a_charge":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:ruler') && query.scoreboard('detectcharge') < 30 && query.player_level > 9"},
+						{"ruler_b_detect":"query.get_equipped_item_name=='ruler' && query.scoreboard('detectcharge') == 30 && query.scoreboard('detect') == 1 && query.player_level > 9"},
+						{"ruler_b_charge":"query.get_equipped_item_name=='ruler' && query.scoreboard('detectcharge') < 30 && query.player_level > 9"}
+						
+					]
+				},
+				"ruler_a_charge": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s detectcharge 1",
+						"/scoreboard objectives add detectcharge dummy"
+					]
+				},
+				"ruler_a_detect": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect 0",
+						"/scoreboard players set @s detectcharge 0",
+						"/camerashake add @s",
+						"/summon entity:detector",
+						"/summon entity:detector_a"
+					]
+				},
+				"ruler_b_charge": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s detectcharge 1",
+						"/scoreboard objectives add detectcharge dummy"
+					]
+				},
+				"ruler_b_detect": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect 0",
+						"/scoreboard players set @s detectcharge 0",
+						"/camerashake add @s",
+						"/summon entity:detector",
+						"/summon entity:detector_a"
+					]
+				}
+			}
+		}
+ 	}
+ }

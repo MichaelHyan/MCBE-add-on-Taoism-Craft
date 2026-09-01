@@ -1,0 +1,48 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.bssa":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"bssa":"query.life_time <= 5"},
+						{"bssb":"query.life_time > 5 && query.life_time <= 10"},
+						{"bssc":"query.life_time > 10"}
+					]
+				},
+				"bssa": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @s 0 100 0 facing ^0.1 ^ ^1",
+						"/effect @s resistance 1 255 true"
+					]
+				},
+				"bssb": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @s ~ ~5 ~ facing ^0.1 ^ ^1",
+						"/effect @s resistance 1 255 true"
+					]
+				},
+				"bssc": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

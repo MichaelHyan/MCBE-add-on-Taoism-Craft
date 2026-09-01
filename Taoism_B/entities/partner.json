@@ -306,6 +306,11 @@
         }
       },
       "tame": {
+        "minecraft:inventory": {
+          "can_be_siphoned_from": false,
+          "inventory_size": 27,
+          "container_type": "chest_boat"
+        },
         "minecraft:interact": [
           {
             "on_interact": {
@@ -952,7 +957,7 @@
           "min": 0
         },
         "minecraft:behavior.follow_owner": {
-          "priority": 0,
+          "priority": 5,
           "speed_multiplier": 1.2,
           "start_distance": 15,
           "stop_distance": 3
@@ -1020,11 +1025,6 @@
     },
     "components": {
       "minecraft:nameable": {},
-      "minecraft:inventory": {
-        "can_be_siphoned_from": false,
-        "inventory_size": 27,
-        "container_type": "chest_boat"
-      },
       "minecraft:tameable": {
         "probability": 1,
         "tameItems": "items:cinnabar_crystal",

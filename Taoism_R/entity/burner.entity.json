@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "entity:burner",
+      "materials": {
+        "default": "entity_alphablend"
+      },
+      "textures": {
+        "default": "textures/entity/burner"
+      },
+      "geometry": {
+        "default": "geometry.burner"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}
