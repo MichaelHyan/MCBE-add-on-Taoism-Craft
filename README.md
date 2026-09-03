@@ -1,6 +1,6 @@
 # [add-on]道教仙术扩展包
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/title.png)
+![](Taoism_R/title.png)
 
 ## 一个融合传统道教文化与奇幻玩法的add-on
 ## 道教之道，法于自然，和于阴阳，通于鬼神。
@@ -29,7 +29,7 @@
   2. 内部存放丰富资源（基础材料、引导道具等）
   3. 玩家可获取引导书，开启道教主题玩法剧情
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/temple1.png)
+![](crafting%20table/temple1.png)
 
 “道之所存，馆宇所栖，修行由此启，大道自此寻。”
 
@@ -99,7 +99,7 @@
 - 合成方式：7个朱砂粉 + 1个普通毛笔 + 1本书
 - 特殊经书：使用奖励箱中的经书不会失败
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/scripture_t.png)
+![](crafting%20table/scripture_t.png)
 
 “真经载道，开悟明心，得之则内丹生，体健身轻。”
 
@@ -108,7 +108,7 @@
 - 副作用：象征「误入歧途」修炼路径，无直接使用效果
 - 获取方式：击败掠夺者后掉落
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/scripture_s.png)
+![](Taoism_R/textures/items/scripture_s.png)
 
 “噬魂之术，逆道而行，虽得暂力，终堕幽冥。”
 
@@ -117,7 +117,7 @@
 - 副作用：一次性物品，使用后消耗
 - 合成方式：1个经书 + 1个羽毛
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/scripture_f.png)
+![](crafting%20table/scripture_f.png)
 
 “御风而行，不滞于形，此乃得道者动静之妙。”
 
@@ -125,7 +125,7 @@
 - 核心功能：很有年代的书，目前的文字看不懂，但日后文字会渐渐浮现
 - 获取方式：？
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/acbook.png)
+![](Taoism_R/textures/items/acbook.png)
 
 “所谓修仙，不过是复归大道本源，却是无数人穷尽一生所求。到头来，那还算得上是修仙吗？”
 
@@ -138,7 +138,7 @@
 - 副作用：一次性物品，使用后消耗
 - 合成方式：1个元气 + 1个钻石 + 1个绿宝石 + 4个金锭
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/txpa.png)
+![](crafting%20table/txpa.png)
 
 “宝轴藏玄理，开卷蕴真智，一念悟得经中义，海量经验助修行。”
 
@@ -150,7 +150,7 @@
   - 雷法能量随等级提高而增加，攻击时消耗能量，直到耗尽
 - 获取方式：游商处购买
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/sebookb.png)
+![](Taoism_R/textures/items/sebookb.png)
 
 &&&
 
@@ -162,7 +162,7 @@
   - 粒子伤害随等级提高而增加
 - 获取方式：游商处购买
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/sebookc.png)
+![](Taoism_R/textures/items/sebookc.png)
 
 &&&
 
@@ -175,7 +175,7 @@
   - 加成类型随等级提高而增加
 - 获取方式：游商处购买
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/sebookd.png)
+![](Taoism_R/textures/items/sebookd.png)
 
 &&&
 
@@ -187,7 +187,7 @@
   - 加成类型随等级提高而增加
 - 获取方式：游商处购买
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/sebooke.png)
+![](Taoism_R/textures/items/sebooke.png)
 
 &&&
 
@@ -197,7 +197,7 @@
 - 特殊说明：元气乃生命能量，提元会损耗寿元
 - 获取方式：使用「经书」后解锁
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/pearl.png)
+![](Taoism_R/textures/items/pearl.png)
 
 “内丹者，性命之根，天地灵气所凝，能化万象。”
 
@@ -209,7 +209,7 @@
 - 特殊说明：元气无形无相，动则生阳，耗则需补，乃修行之根基
 - 获取方式：使用「内丹」运气调出
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/spe.png)
+![](Taoism_R/textures/items/spe.png)
 
 “元气者，性命之本，先天真炁所聚，可通万法。”
 
@@ -234,11 +234,11 @@
   - 召唤龙卷风，将自己和其他生物吹上天，龙卷风会优先移动至存在的土气弹处
 - 获取方式：使用「内丹」运气调出
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/spba.png)
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/spbb.png)
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/spbc.png)
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/spbd.png)
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/spbe.png)
+![](Taoism_R/textures/items/spba.png)
+![](Taoism_R/textures/items/spbb.png)
+![](Taoism_R/textures/items/spbc.png)
+![](Taoism_R/textures/items/spbd.png)
+![](Taoism_R/textures/items/spbe.png)
 
 “内丹吐炁结星弹，五德分形性各安。逢生触发玄机变，一击摧邪煞力寒。”
 
@@ -248,7 +248,7 @@
   - 等级足够时可将其凝聚炼化为其他物品
 - 特殊说明：炁为天地之本，万物之根
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/qi.png)
+![](Taoism_R/textures/items/qi.png)
 
 “炁为天地之本，万物之根，聚则成形，散则归无，通于道而贯于形。”
 
@@ -256,7 +256,7 @@
 - 核心功能：合成材料（用于制作「画符毛笔」）
 - 合成方式：2个木棍 + 1个白色羊毛 可合成4个
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/brush_n.png)
+![](crafting%20table/brush_n.png)
 
 “笔为心之器，墨为道之痕，可书符咒，可绘阴阳。”
 
@@ -265,7 +265,7 @@
 - 特殊说明：道教道具制作的基础材料，「初见端倪」
 - 获取方式：击败亡灵生物后掉落
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/cinnabar_crystal.png)
+![](Taoism_R/textures/items/cinnabar_crystal.png)
 
 “朱砂禀离火之气，色赤通神，辟邪制煞，为道之灵材。”
 
@@ -273,7 +273,7 @@
 - 核心功能：合成材料（用于制作画符毛笔、桃木剑等）
 - 合成方式：1个元气 + 1个朱砂晶体（可合成3个朱砂粉）
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/cinnabar.png)
+![](crafting%20table/cinnabar.png)
 
 “丹砂为粉，符力自生，一点通灵，镇伏邪祟。”
 
@@ -281,7 +281,7 @@
 - 核心功能：合成材料，用于制作各类符箓，制作后会返还普通毛笔
 - 合成方式：1个毛笔 + 1个朱砂粉
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/brush_p.png)
+![](crafting%20table/brush_p.png)
 
 “画符之笔，蘸朱砂之灵，运天地之气，落笔则鬼神应。”
 
@@ -292,7 +292,7 @@
 - 副作用：主手持有时，玩家持续获得凋零效果
 - 获取方式：击败任意生物后掉落
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/spirit.png)
+![](Taoism_R/textures/items/spirit.png)
 
 “魂为阳之精，魄为阴之质，聚散有常，顺乎天道。”
 
@@ -300,7 +300,7 @@
 - 核心功能：合成材料（用于制作鱼胶）
 - 获取方式：1个生鱼肉可合成3个鱼鳔
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/fish_belly.png)
+![](Taoism_R/textures/items/fish_belly.png)
 
 “鱼鳔聚水之精，炼化为胶，可固符形，为制符之辅。”
 
@@ -308,7 +308,7 @@
 - 核心功能：合成材料（用于制作高阶符箓）
 - 合成方式：将鱼鳔放置于篝火上烧制生成
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/fish_gelatin.png)
+![](Taoism_R/textures/items/fish_gelatin.png)
 
 “鱼胶凝鳔之华，黏性强韧，聚符气而固其效。”
 
@@ -316,7 +316,7 @@
 - 核心功能：合成材料（用于合成尸丹）
 - 获取方式：击败跳僵有概率获得
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/pearlz_p.png)
+![](Taoism_R/textures/items/pearlz_p.png)
 
 “枯骸凝煞结残丹，碎屑犹含蚀骨寒。莫嫌微物无多用，邪器炼成赖此端。”
 
@@ -324,7 +324,7 @@
 - 核心功能：合成材料，用于合成部分武器，后期可能会设定为邪修常用道具（更新预告）
 - 获取方式：击败旱魃会获得一个尸丹
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/pearlz_o.png)
+![](crafting%20table/pearlz_o.png)
 
 “枯尸历劫结丹砂，旱气阴精萃一家。留与旁门铸邪刃，一挥赤地起尘沙。”
 
@@ -332,7 +332,7 @@
 - 核心功能：合成材料，用于合成净炼尸丹
 - 合成方式：8个元气 + 1个尸丹
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/pearlz_s.png)
+![](crafting%20table/pearlz_s.png)
 
 “元炁烹丹涤秽痕，阴尸残煞渐消泯。一番炼化除浊质，留取清基作净根。”
 
@@ -340,7 +340,7 @@
 - 核心功能：合成材料，用于合成部分武器，后期可能会设定为正派常用道具（更新预告）
 - 合成方式：1个普通符箓 + 2个朱砂粉 + 1个炼化尸丹 + 1个元气
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/pearlz.png)
+![](crafting%20table/pearlz.png)
 
 “以符涤浊净阴丹，朱砂凝阳化旧寒。洗尽尸中千缕煞，堪为正道铸锋翰。”
 
@@ -349,7 +349,7 @@
 - 核心功能：当在5级以上时使用大还丹后，可切换内丹来引出不同属性的元气（气弹），同时解锁内丹法术模式
 - 合成方式：4个钻石 + 1个黏土 + 1个火药 + 1个金粒 + 1个朱砂粉 + 1个元气
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/pilla.png)
+![](crafting%20table/pilla.png)
 
 “呢粒大还丹，你食咗之后会功力大增。”
 
@@ -358,7 +358,7 @@
 - 核心功能：在“闹鬼事件”发生时，可以通过食用小还丹来暂时获得充沛的阳气，以达到避免鬼魂干扰睡眠的效果
 - 合成方式：1个黏土 + 1个火药 + 1个金粒 + 1个朱砂粉 + 1个元气
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/pillb.png)
+![](crafting%20table/pillb.png)
 
 “呢粒大还丹，你食咗之……诶不对？”
 
@@ -366,7 +366,7 @@
 - 核心功能：合成材料（用于制作金光符、九木镇风符等三清系列符箓），自带法力
 - 合成方式：3个朱砂粉 + 3张纸
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/ta.png)
+![](Taoism_R/textures/items/ta.png)
 
 “残符【三清】承三清道力，虽为碎片，含天地本源，乃高阶符箓之基。”
 
@@ -374,7 +374,7 @@
 - 核心功能：合成材料（用于制作补金符、补木符等敕令系列符箓），自带法力
 - 合成方式：1个元气 + 1个桃木剑 + 1张纸
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/tb.png)
+![](Taoism_R/textures/items/tb.png)
 
 “残符【敕令】携天庭之威，符文藏势，可引天地元素为用。”
 
@@ -382,7 +382,7 @@
 - 核心功能用于制作雷击用于制作雷击符、金雷镇煞符等雷令系列），自带法力
 - 合成方式：1个元气 + 1个避雷针 + 1张纸
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/tc.png)
+![](Taoism_R/textures/items/tc.png)
 
 “残符【雷令】聚天雷之威，符文如雷纹，可召雷霆破邪。”
 
@@ -390,7 +390,7 @@
 - 核心功能：合成材料（用于制作金雷镇煞符、金光符），自带法力
 - 合成方式：1个画符毛笔 + 1个铁剑 + 1张纸
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/ua.png)
+![](Taoism_R/textures/items/ua.png)
 
 “符脚【金】禀金之刚，落笔带锋，增符箓破邪增益之力。”
 
@@ -398,7 +398,7 @@
 - 核心功能：合成材料（用于制作青木雷护符、九木镇风符、补木符），自带法力
 - 合成方式：1个画符毛笔 + 1个骨头 + 1张纸
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/ub.png)
+![](Taoism_R/textures/items/ub.png)
 
 “符脚【木】含木之生，落笔蕴灵，增符箓续航控场之力。”
 
@@ -406,7 +406,7 @@
 - 核心功能：合成材料（用于制作雷水解厄符、净水符、补水符），自带法力
 - 合成方式：1个画符毛笔 + 1个墨囊 + 1张纸
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/uc.png)
+![](Taoism_R/textures/items/uc.png)
 
 “符脚【水】携水之智，落笔随流，增符箓环境适应之力。”
 
@@ -414,7 +414,7 @@
 - 核心功能：合成材料（用于制作炎雷破邪符、离火符、补火符），自带法力
 - 合成方式：1个画符毛笔 + 1个火药 + 1张纸
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/ud.png)
+![](Taoism_R/textures/items/ud.png)
 
 “符脚【火】聚火之烈，落笔燃威，增符箓攻击灼烧之力。”
 
@@ -422,7 +422,7 @@
 - 核心功能：合成材料（用于制作厚土雷安符、龙神土符、补土符），自带法力
 - 合成方式：1个画符毛笔 + 1个泥土 + 1张纸
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/ue.png)
+![](Taoism_R/textures/items/ue.png)
 
 “符脚【土】承土之厚，落笔镇稳，增符箓防御创造之力。”
 
@@ -430,7 +430,7 @@
 - 核心功能：合成材料（用于制作雷风破煞符、缩地符、补风符），自带法力
 - 合成方式：1个画符毛笔 + 1个风弹 + 1张纸
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/uf.png)
+![](Taoism_R/textures/items/uf.png)
 
 “符脚【风】携风之速，落笔随变，增符箓迅捷瞬移之力。”
 
@@ -438,7 +438,7 @@
 - 核心功能：合成材料（用于制作雷令镇垣三台符、三清镇元三台符、敕令安垣三台符），自带法力
 - 合成方式：1个符脚【水】 + 1个符脚【火】 + 1个符脚【土】 + 2个鱼胶 + 1个画符毛笔
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/ug.png)
+![](Taoism_R/textures/items/ug.png)
 
 “三台星者，天之三阶，符脚承其力，合水火土之精，聚三才之气。”
 
@@ -449,7 +449,7 @@
 - 副作用：一次性物品，使用后消耗
 - 合成方式：1个画符毛笔 + 1张纸
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/talisman.png)
+![](Taoism_R/textures/items/talisman.png)
 
 “符箓者，天地之令，阴阳之契，可驱邪鬼，可安生灵。”
 
@@ -460,7 +460,7 @@
 - 副作用：一次性物品，使用后消耗
 - 合成方式：1个画符毛笔 + 1个残符【雷令】 + 1张纸 + 1个元气 + 1个鱼胶
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/talisman_t.png)
+![](Taoism_R/textures/items/talisman_t.png)
 
 “雷为天怒，符引其威，雷击所及，邪祟消亡。”
 
@@ -469,7 +469,7 @@
 - 合成方式：1个画符毛笔 + 1个残符【三清】 + 1个符脚【风】 + 1个鱼胶
 - 使用方式：包含笏的效果，左键/攻击键记录位置，并在原地生成一个微型土地庙，随后随时可使用shift/潜行键回到土地庙，的位置，可同时存在多个位置，所有玩家共享，按住space/跳跃的同时按下shift/潜行删除所有记录地点
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/talisman_e.png)
+![](Taoism_R/textures/items/talisman_e.png)
 
 “缩地成寸，道法自然，一念千里，此乃通玄之妙。”
 
@@ -478,7 +478,7 @@
 - 副作用：一次性物品，使用后消耗
 - 合成方式：1个画符毛笔 + 1个残符【三清】 + 1个符脚【金】 + 1个鱼胶
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/talisman_g.png)
+![](Taoism_R/textures/items/talisman_g.png)
 
 “金光护体，百邪不侵，得此符者，身有灵光，福寿康宁。”
 
@@ -487,7 +487,7 @@
 - 副作用：1. 一次性物品，使用后消耗；2. buff持续时间仅10秒
 - 合成方式：1个画符毛笔 + 1个残符【雷令】 + 1个符脚【金】 + 1个鱼胶
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/tca.png)
+![](Taoism_R/textures/items/tca.png)
 
 “金雷镇煞，锋芒毕露，借剑符之力，短时增攻，破邪无往不利。”
 
@@ -496,7 +496,7 @@
 - 副作用：1. 一次性物品，使用后消耗；2. 所有效果仅持续20秒
 - 合成方式：1个画符毛笔 + 1个残符【雷令】 + 1个符脚【木】 + 1个鱼胶
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/tcb.png)
+![](Taoism_R/textures/items/tcb.png)
 
 “青木蕴生机，雷力护其身，此符在手，血厚防高，续航无忧。”
 
@@ -508,7 +508,7 @@
 - 副作用：1. 一次性物品，使用后消耗；2. 回血与漂浮buff仅持续10秒，缓降buff持续30秒
 - 合成方式：1个画符毛笔 + 1个残符【雷令】 + 1个符脚【水】 + 1个鱼胶
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/tcc.png)
+![](Taoism_R/textures/items/tcc.png)
 
 “雷水解厄，逆天气而变，借天雷之力获漂浮续航，危难时可破局。”
 
@@ -520,7 +520,7 @@
 - 副作用：一次性物品，使用后消耗
 - 合成方式：1个画符毛笔 + 1个残符【雷令】 + 1个符脚【火】 + 1个鱼胶
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/tcd.png)
+![](Taoism_R/textures/items/tcd.png)
 
 “炎雷交织，水火共威，天雷焚火齐降，邪祟无所遁形。”
 
@@ -531,7 +531,7 @@
 - 副作用：1. 一次性物品，使用后消耗；2. 降雷效果仅持续10秒
 - 合成方式：1个画符毛笔 + 1个残符【雷令】 + 1个符脚【土】 + 1个鱼胶
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/tce.png)
+![](Taoism_R/textures/items/tce.png)
 
 “厚土筑屋安，雷决护周旁，此符可攻可守，危急时能安身。”
 
@@ -542,7 +542,7 @@
 - 副作用：1. 一次性物品，使用后消耗；2. 所有效果仅持续15秒
 - 合成方式：1个画符毛笔 + 1个残符【雷令】 + 1个符脚【风】 + 1个鱼胶
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/tcf.png)
+![](Taoism_R/textures/items/tcf.png)
 
 “雷风助速，破煞制敌，己快敌慢，战场之上可掌主动权。”
 
@@ -551,7 +551,7 @@
 - 副作用：一次性物品，使用后消耗
 - 合成方式：1个画符毛笔 + 1个残符【三清】 + 1个符脚【木】 + 1个鱼胶
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/tab.png)
+![](Taoism_R/textures/items/tab.png)
 
 “九木镇风，控场自如，借风水之力扰敌走位，为己创造先机。”
 
@@ -560,7 +560,7 @@
 - 副作用：1. 一次性物品，使用后消耗；2. 所有buff持续2分钟
 - 合成方式：1个画符毛笔 + 1个残符【三清】 + 1个符脚【水】 + 1个鱼胶
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/tac.png)
+![](Taoism_R/textures/items/tac.png)
 
 “净水符出，水下无阻，探索如履平地。”
 
@@ -569,7 +569,7 @@
 - 副作用：一次性物品，使用后消耗
 - 合成方式：1个画符毛笔 + 1个残符【三清】 + 1个符脚【火】 + 1个鱼胶
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/tad.png)
+![](Taoism_R/textures/items/tad.png)
 
 “离火照明，紫气驱邪，黑暗邪祟皆不敢近。”
 
@@ -580,7 +580,7 @@
 - 副作用：1. 一次性物品，使用后消耗；2. 效果仅持续15秒；3. 使用者自身因承受气场之力，会持续扣血
 - 合成方式：1个画符毛笔 + 1个残符【三清】 + 1个符脚【土】 + 1个鱼胶
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/tae.png)
+![](Taoism_R/textures/items/tae.png)
 
 “龙神护土，气场镇敌，虽自损精血，却能大范围制敌，险中求胜。”
 
@@ -589,7 +589,7 @@
 - 副作用：一次性物品，使用后消耗
 - 合成方式：1个画符毛笔 + 1个残符【敕令】 + 1个符脚【金】 + 1个鱼胶
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/tba.png)
+![](Taoism_R/textures/items/tba.png)
 
 “补金召傀儡，助战守身旁，可挡敌锋，护己安全。”
 
@@ -598,7 +598,7 @@
 - 副作用：一次性物品，使用后消耗
 - 合成方式：1个画符毛笔 + 1个残符【敕令】 + 1个符脚【木】 + 1个鱼胶
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/tbb.png)
+![](Taoism_R/textures/items/tbb.png)
 
 “补木生橡木，建材随手得，探索途中缺木料，此符一用解燃眉。”
 
@@ -609,7 +609,7 @@
 - 副作用：一次性物品，使用后消耗
 - 合成方式：1个画符毛笔 + 1个残符【敕令】 + 1个符脚【水】 + 1个鱼胶
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/tbc.png)
+![](Taoism_R/textures/items/tbc.png)
 
 “补水聚水源，收放皆随心，缺水环境中，此符可造水、可控水。”
 
@@ -618,7 +618,7 @@
 - 副作用：1. 一次性物品，使用后消耗；2. 所有效果仅持续30秒
 - 合成方式：1个画符毛笔 + 1个残符【敕令】 + 1个符脚【火】 + 1个鱼胶
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/tbd.png)
+![](Taoism_R/textures/items/tbd.png)
 
 “补火暖身心，回血加移速，团队作战时，此符可增续航与机动性。”
 
@@ -626,7 +626,7 @@
 - 核心功能(右键/交互键)：使用后，使用者跳跃时，脚下会自动生成土块作为垫脚（可用于攀爬、过河等），需手动关闭功能
 - 合成方式：1个画符毛笔 + 1个残符【敕令】 + 1个符脚【土】 + 1个鱼胶
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/tbe.png)
+![](Taoism_R/textures/items/tbe.png)
 
 “补土垫脚，攀爬无阻，跳跃生土块，险峻地形亦可轻松跨越。”
 
@@ -635,21 +635,21 @@
 - 副作用：非常危险的符箓，慎用
 - 合成方式：1个画符毛笔 + 1个残符【敕令】 + 1个符脚【风】 + 1个鱼胶
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/tbf.png)
+![](Taoism_R/textures/items/tbf.png)
 
 “运气成风，蓄力御风，攻防一体，孤身作战亦无惧。”
 
 #### 开光符【闭灵】
 - 新月时使用可获得开光符【启灵】
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/echa.png)
+![](crafting%20table/echa.png)
 
 "新月凝灵闭中藏，待得弦时启锋芒。"
 
 #### 开光符【启灵】
 - 下弦月/上弦月置于副手使用时可开光剑类武器
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/echb.png)
+![](Taoism_R/textures/items/echb.png)
 
 "弦月照剑锋，启灵开道芒，一符通灵性，凡铁化天罡。"
 
@@ -657,7 +657,7 @@
 - 核心功能(置于副手)：为武器类物品附魔火焰附加
 - 合成方式：1个画符毛笔 + 1个残符【雷令】 + 1个符脚【三台星】 + 1个鱼胶
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/tcg.png)
+![](Taoism_R/textures/items/tcg.png)
 
 “雷令召三台，镇垣筑雷墙，屏障护友军，反伤惩来敌。”
 
@@ -665,7 +665,7 @@
 - 核心功能(置于副手)：为工具类物品附魔时运
 - 合成方式：1个画符毛笔 + 1个残符【三清】 + 1个符脚【三台星】 + 1个鱼胶
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/tag.png)
+![](Taoism_R/textures/items/tag.png)
 
 “三清护三台，镇元固生机，灵光驱邪祟，群体增益护周全。”
 
@@ -673,7 +673,7 @@
 - 核心功能(置于副手)：为武器类物品附魔抢夺
 - 合成方式：1个画符毛笔 + 1个残符【敕令】 + 1个符脚【三台星】 + 1个鱼胶
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/tbg.png)
+![](Taoism_R/textures/items/tbg.png)
 
 “敕令统三台，安垣固方块，气场助队友，攻防皆宜稳阵脚。”
 
@@ -682,7 +682,7 @@
 - 副作用：一次性物品，使用后消耗
 - 合成方式：2个普通的符箓 + 1个元气 + 4个金锭
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/txpb.png)
+![](crafting%20table/txpb.png)
 
 “一卷符箓聚万灵，诸般吉益随身行，片刻护持无缺憾，唯弃漂浮顺道心。”
 
@@ -697,7 +697,7 @@
   3. 主手持有时：获得回血buff
 - 合成方式：1个木剑 + 1个朱砂粉+1个炁 + 6个元气
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/sword_t.png)
+![](crafting%20table/sword_t.png)
 
 “桃木禀阳，能制阴邪，剑出则鬼魅潜藏，正气浩然。”
 
@@ -708,7 +708,7 @@
   3. 主手持有时：抗性提升
 - 合成方式：1个金剑 + 1个朱砂粉+1个炁 + 6个元气
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/sword_b.png)
+![](crafting%20table/sword_b.png)
 
 “宝剑锋从磨砺出，道心炼自精气神，一剑在手，可斩妖氛。”
 
@@ -719,7 +719,7 @@
   3. 主手持有时：回血buff + 移速提升
 - 合成方式：1个桃木剑 + 4张普通符箓 + 3个炁 + 1个元气
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/sword_q.png)
+![](crafting%20table/sword_q.png)
 
 “七星映剑，道法相随，执此剑者，上应天象，所向披靡。”
 
@@ -730,7 +730,7 @@
   3. 主手持有时：抗性提升 + 移速提升
 - 合成方式：1个宝剑 + 4张普通符箓 + 3个炁 + 1个元气
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/sword_l.png)
+![](crafting%20table/sword_l.png)
 
 “令剑承天令，威仪镇四方，挥剑斩虚妄，道力护其身。”
 
@@ -741,7 +741,7 @@
   3. 主动技能（同时按住跳跃+攻击）：向前瞬移一段距离（可用于追击或规避）
 - 合成方式：3个木棍 + 2个金锭 + 4个普通的符箓
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/wond.png)
+![](crafting%20table/wond.png)
 
 “拷鬼之棒承道威，专诛阴邪破魑魅，持之自有抗性护，瞬移追逃任我行。”
 
@@ -752,7 +752,7 @@
 - 副作用：「合理的邪修」（无实际负面效果）
 - 合成方式：1个木剑 + 1个噬魂术（经书） + 7个元气
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/sword_e.png)
+![](crafting%20table/sword_e.png)
 
 “邪道之剑，虽有小利，心若偏邪，终难成大道。”
 
@@ -761,7 +761,7 @@
 - 副作用：玩家尝试攻击时，触发雷劈致残
 - 合成方式：1个噬魂术（经书） + 1个桃木剑 + 7个元气
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/sword_w.png)
+![](crafting%20table/sword_w.png)
 
 “异术逆天，剑虽诡速，逞凶必遭天谴，悔之晚矣。”
 
@@ -772,7 +772,7 @@
   3. 攻击会消耗自身精力，获得凋零效果
 - 合成方式： 4个魂魄 + 4个炁 + 1个奇怪的木剑【邪】
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/sword_sp.png)
+![](crafting%20table/sword_sp.png)
 
 “灵剑聚神魂，威力无穷，然耗己精元，修行当知取舍。”
 
@@ -786,7 +786,7 @@
   3. 需使用魂魄充能，如强制使用则扣除自身生命
 - 合成方式：1个黑色旗帜 + 1个灵剑 + 2个炁 + 3个魂魄 + 2个普通的符箓
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/soul_banner.png)
+![](crafting%20table/soul_banner.png)
 
 “万魂聚幡，威力骇人，有伤天和，非正道所取，慎用之。”
 
@@ -799,7 +799,7 @@
 - 副作用：无特殊负面效果
 - 合成方式：1个黄色旗帜 + 1个桃木剑 + 2个炁 + 3个朱砂粉 + 2个普通的符箓
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/hy_banner.png)
+![](crafting%20table/hy_banner.png)
 
 “人皇者，亲友庇护也，攻防一体，幡承其气，可化万象。”
 
@@ -810,7 +810,7 @@
   2. 对周围生物产生震慑或减速效果
 - 副作用：无特殊负面效果
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/fbusket.png)
+![](Taoism_R/textures/items/fbusket.png)
 
 “百花花篮集草木之灵，藏春和之韵，展之则芳华遍地，引生机而佑四方。”
 
@@ -821,7 +821,7 @@
   2. 使用时：对范围内的生物持续扣血，自身回复血量
 - 副作用：无特殊负面效果
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/lotus.png)
+![](Taoism_R/textures/items/lotus.png)
 
 “清净莲花出淤泥而不染，纳清宁之息，持之可涤心尘，离烦扰而证道心。”
 
@@ -832,7 +832,7 @@
 - 3. 使用后进入冷却，可借助「息」达到更高的伤害等级
 - 合成方式：8个铜锭 + 1个补火符
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/shield_q.png)
+![](crafting%20table/shield_q.png)
 
 "乾坤圈转，阴阳自守，蓄势待发，一击破苍穹。"
 
@@ -840,7 +840,7 @@
 - 核心功能：下蹲攻击释放铜钱剑上前，自动锁定多个目标后逐一攻击，结束后自动收回
 - 获取方式：可在流浪商人处花25绿宝石购买
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/sword_m.png)
+![](Taoism_R/textures/items/sword_m.png)
 
 "青蚨串作斩邪锋，出匣飞腾逐乱凶。击罢群妖还自返，一枚铜气凛霜风。"
 
@@ -850,7 +850,7 @@
   2. 主动技能：长按潜伏蓄力，蓄力完成后震慑包括其他玩家在内的实体，随后进入冷却
   3. 同时按shift + 鼠标右键收起佩剑
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/sword_qi.png)
+![](Taoism_R/textures/items/sword_qi.png)
 
 “纯阳飞剑凝正阳之炁，剑出如雷，斩妖除邪，千里之外可取魑魅之首。”
 
@@ -862,7 +862,7 @@
 - 副作用：拥有旱魃的力量也会受到旱魃尸丹的反噬，使用时会持续饥饿。
 - 合成方式：1个奇怪的木剑（邪） + 2个尸丹 + 2个朱砂晶体
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/sword_za.png)
+![](crafting%20table/sword_za.png)
 
 “旱既大甚，涤涤山川。旱魃为虐，如惔如焚。我心惮暑，忧心如熏。”
 
@@ -873,7 +873,7 @@
   3. 下蹲蓄力强制降雨，并且能给自己以及10×10×10范围内队友或者是友好生物回血。
 - 合成方式：1个七星剑 + 2个净炼尸丹 + 2个元气
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/sword_zb.png)
+![](crafting%20table/sword_zb.png)
 
 “雷车轣辘起层阴，雨脚垂垂一寸深。解得田畴千里旱，全归天地一言心。”
 
@@ -888,7 +888,7 @@
 - 副作用：攻击时由于需要驱动剑灵耗费精力，获得凋零效果
 - 合成方式：2个金刚琢 + 1个万魂幡 + 2个法钟 + 1个金雷镇煞符 + 2个炁 + 1个金块
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/sword_u.png)
+![](crafting%20table/sword_u.png)
 
 “天魔诛仙剑凝九天煞气，剑出则魔灭神惊，斩尽诸天魔障，道威浩荡无匹。”
 
@@ -900,7 +900,7 @@
 - 副作用：容易把自己帅死（无实际负面效果）
 - 合成方式：2个金刚琢 + 1个混元幡 + 1个令剑 + 1个七星剑 + 1个三清镇元三台符 + 2个炁 + 1个清阳之炁
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/sword_s.png)
+![](crafting%20table/sword_s.png)
 
 “三五之数，合于天地，雌雄双剑，斩尽邪祟，大道昌明。”
 
@@ -910,7 +910,7 @@
 - 核心功能：放置于物品栏第一格时，对10×10×10范围内生物造成减速
 - 合成方式：1个雷击符 + 4颗橡木树苗
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/lightning_wood.png)
+![](crafting%20table/lightning_wood.png)
 
 “雷击之木，禀天雷之气，镇于一方，百兽皆惧，邪祟不侵。”
 
@@ -921,7 +921,7 @@
   2. 增益持续30秒「门外汉的把戏罢了」
 - 合成方式：8个铜锭 + 1个朱砂粉
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/mirror_a.png)
+![](crafting%20table/mirror_a.png)
 
 “铜镜照形，亦能鉴心，一点朱砂，引气入体，暂得神力。”
 
@@ -932,7 +932,7 @@
   2. 增益持续1分钟「不建议使用」
 - 合成方式：8个铜锭 + 1个普通的符箓
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/mirror_b.png)
+![](crafting%20table/mirror_b.png)
 
 “法镜含道气，一照百邪消，增益虽佳，终是外物，修行在己。”
 
@@ -941,7 +941,7 @@
 - 副作用：「亮出来就是吓唬人的」，一次仅持续10秒
 - 合成方式：8个铜镜【法】 + 1个桃木剑
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/mirror_c.png)
+![](crafting%20table/mirror_c.png)
 
 “八卦定乾坤，凸镜镇凶煞，镜光所及，邪祟退散。”
 
@@ -951,7 +951,7 @@
    趣味设定「见过一次的把戏就不灵了」，buff持续1分钟
 - 合成方式：8个铜镜【法】 + 1个元气
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/mirror_d.png)
+![](crafting%20table/mirror_d.png)
 
 “凹镜纳灵气，八卦聚生机，护己及人，道之仁心。”
 
@@ -959,7 +959,7 @@
 - 核心功能：主手持有火丹时可将其发射出去
 - 合成方式：1个尸丹碎片 + 1个煤炭 + 1个黏土
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/fball.png)
+![](Taoism_R/textures/items/fball.png)
 
 "火凝丹丸掌中擎，脱手星飞烈焰生。一瞬燎原三百丈，妖邪遇尽化尘轻。"
 
@@ -968,7 +968,7 @@
   1. 提高使用者的移速，分为三档（副手手持/主手手持/主手手持攻击）。
 - 合成方式：3个木棍 + 2个铁锭 + 2个雷击木 + 2个元气
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/cane.png)
+![](crafting%20table/cane.png)
 
 "铁拐拄地行如风，疾步轻身御气通。"
 
@@ -979,7 +979,7 @@
 - 副作用：主手持有时，自身移速降低 + 饱食度降低「很可惜，你跑不快」
 - 合成方式：2个炁 + 5个铜锭 + 1个净炼尸丹
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/bell.png)
+![](crafting%20table/bell.png)
 
 “法钟鸣，大道兴，钟声荡邪，抗性加身，宁心定志。”
 
@@ -990,7 +990,7 @@
   3. 可主动吸引炁
 - 合成方式：5个铜锭 + 1个普通的符箓 + 1个元气
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/gourd.png)
+![](crafting%20table/gourd.png)
 
 “葫芦藏天地，能纳万物灵，收放之间，合于自然。”
 
@@ -999,7 +999,7 @@
 - 副作用：瞬移后扣除1点血（半颗心）「由于你主观离岗，上天会扣除代价」
 - 合成方式：3个雷击木（木板） + 1个普通的符箓
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/wul.png)
+![](crafting%20table/wul.png)
 
 “笏板承天语，一念至亲朋，瞬移虽便，亦有代价，道在平衡。”
 
@@ -1009,7 +1009,7 @@
   2. 可作为武器使用
 - 合成方式：1个木棍 + 1个白色羊毛
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/whisk.png)
+![](crafting%20table/whisk.png)
 
 “拂尘扫尘埃，亦能清心障，一拂之下，返璞归真。”
 
@@ -1017,7 +1017,7 @@
 - 核心功能：老君的另一件法宝，蓄力后释放金刚琢逐一攻击并缴械附近生物，使其失去攻击能力
 - 合成方式：4个铁锭 + 4个雷击木 + 1个普通的符箓
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/ring.png)
+![](crafting%20table/ring.png)
 
 “金刚琢，镇万物，缴械制敌，物极必反，此乃道之理。”
 
@@ -1034,14 +1034,14 @@
 
 “净瓶含甘露，滴之生生机，普济众生，道之慈悲。”
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/bottle.png)
+![](crafting%20table/bottle.png)
 
 #### 令牌【通天术】
 - 核心功能：抬头向上亮出令牌，请示神明，可隔墙向上传送
 - 使用方式：点击进入预览视角，下蹲使用传送，跳起取消传送
 - 合成方式：2个雷击木+1个末影珍珠+2个普通符箓
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/tup.png)
+![](crafting%20table/tup.png)
 
 “令牌承天命，举之可通天，隔墙传送，应乎神道。”
 
@@ -1050,7 +1050,7 @@
 - 使用方式：左键单击使用
 - 合成方式：3个木原木+2个木棍+1个铜锭+3个木台阶
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/hy.png)
+![](crafting%20table/hy.png)
 
 “浑仪窥月辨盈亏，修经必循月相规，逆道妄为遭天谴，天雷一击丧魂归。”
 
@@ -1059,7 +1059,7 @@
 - 使用方式：左键单击使用
 - 合成方式：9个普通符箓+1个铜块
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/klj.png)
+![](crafting%20table/klj.png)
 
 “昆仑宝镜映乾坤，一念互换定方位，咫尺之间移形影，道法玄机藏镜中。”
 
@@ -1068,7 +1068,7 @@
 - 使用方式：置于副手
 - 合成方式：1个紫金葫芦 + 4个尸丹碎片
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/firegourd.png)
+![](crafting%20table/firegourd.png)
 
 “枯魂锁入葫中藏，旱火凝丹发烈光。一点阴焰焚万物，赤地千里草不芳。”
 
@@ -1077,7 +1077,7 @@
 - 使用方式：置于副手
 - 合成方式：1个紫金葫芦 + 4个净炼尸丹
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/spegourd.png)
+![](crafting%20table/spegourd.png)
 
 “流辉敛炁纳元光，净炼残阴入此囊。袖底自充仙府力，不劳执手运丹方。”
 
@@ -1087,7 +1087,7 @@
 - 核心功能：置于地表上，每5秒对附近15×15范围内的所有敌对生物产生伤害与减速
 - 合成方式：8个深板岩 + 1个画符毛笔
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/sguard.png)
+![](crafting%20table/sguard.png)
 
 “泰山片石号敢当，坐镇方隅慑不祥。魑魅逢之皆敛迹，郊原十里尽安昌。”
 
@@ -1099,7 +1099,7 @@
 - 使用方式：左键单击使用
 - 合成方式：4个普通符箓+4个钻石+1个指南针
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/bglpa.png)
+![](crafting%20table/bglpa.png)
 
 “八卦罗盘定八方，五十丈内气场强，静立方能承道力，一动则失此中章。”
 
@@ -1108,7 +1108,7 @@
 - 使用方式：右键单击使用
 - 合成方式：通过吸收23个“炁”在内丹中自动炼化而成，可与浊阴之炁互相转化
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/qi_c.png)
+![](Taoism_R/textures/items/qi_c.png)
 
 “浊阴之炁沉于地，含纯阴之质，滋养万物，驭之可通幽冥而化万象。”
 
@@ -1117,7 +1117,7 @@
 - 使用方式：置于副手手持，手持状态不再显示，放回主手恢复
 - 合成方式：通过吸收23个“炁”在内丹中自动炼化而成，可与清阳之炁互相转化
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/qi_sword.png)
+![](Taoism_R/textures/items/qi_sword.png)
 
 “清阳之炁升于天，禀纯阳之精，涤荡阴秽，修行得之则神清气朗。”
 
@@ -1126,7 +1126,7 @@
 - 使用方式：置于主/副手后，感应四周，如有危险生物则震屏警告并发射跟踪粒子
 - 获取方式：游商处购买
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/ruler.png)
+![](Taoism_R/textures/items/ruler.png)
 
 &&&
 
@@ -1138,7 +1138,7 @@
   - 下蹲左键/攻击：收回飞剑
 - 获取方式：完成古书支线后从神秘道士处获得
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/sword_f.png)
+![](Taoism_R/textures/items/sword_f.png)
 
 &&&
 
@@ -1164,7 +1164,7 @@
   - 可能会告诉你一些信息（？）
 - 合成方式：3个朱砂晶体 + 1个绿宝石 + 1个不死图腾 + 4个炁
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/crafting%20table/partner.png)
+![](crafting%20table/partner.png)
 
 “有朋相伴好过孤军奋战。”
 
@@ -1175,20 +1175,20 @@
 - 在末地城中获得
 - 可播放主题曲《轮回》，点击右键(使用)播放，左键(攻击)停止
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/disk_taoism.png)
+![](Taoism_R/textures/items/disk_taoism.png)
 
 "一曲轮回绕梁间，道音袅袅入心田。"
 
 ## 26年春节更新内容
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/ny/dumpling_a.png)
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/ny/pigskin_jelly.png)
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/ny/scrambled_chicken.png)
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/ny/braised_pork.png)
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/ny/braised_fish.png)
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/ny/noodles.png)
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/ny/steamed_bun.png)
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/Taoism_R/textures/items/ny/rice_cake.png)
+![](Taoism_R/textures/items/ny/dumpling_a.png)
+![](Taoism_R/textures/items/ny/pigskin_jelly.png)
+![](Taoism_R/textures/items/ny/scrambled_chicken.png)
+![](Taoism_R/textures/items/ny/braised_pork.png)
+![](Taoism_R/textures/items/ny/braised_fish.png)
+![](Taoism_R/textures/items/ny/noodles.png)
+![](Taoism_R/textures/items/ny/steamed_bun.png)
+![](Taoism_R/textures/items/ny/rice_cake.png)
 
 可从村民处(屠夫，农民)购买食材，制作年夜饭
 
@@ -1234,4 +1234,4 @@
 ## ——开发者：韩言悦欣
 ## ——开发者：zz纸张神探st
 
-![](https://github.com/MichaelHyan/MCBE-add-on-Taoism-Craft/blob/main/model/dev_1k.png)
+![](model/dev_1k.png)
