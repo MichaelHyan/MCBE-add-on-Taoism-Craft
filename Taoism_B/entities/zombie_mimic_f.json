@@ -96,7 +96,7 @@
         ],
         "must_reach": true,
         "within_radius": 300,
-        "must_see": false
+        "must_see": true
       },
       "minecraft:type_family": {
         "family": [
