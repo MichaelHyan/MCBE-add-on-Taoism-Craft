@@ -1,0 +1,161 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "entity:zombie_mimic_c_dressed",
+      "is_spawnable": false,
+      "is_summonable": true
+    },
+    "component_groups": {
+      "despawn": {
+        "minecraft:instant_despawn": {}
+      },
+      "seal": {
+        "minecraft:transformation": {
+          "into": "entity:zombie_mimic_c"
+        }
+      },
+      "undead": {
+        "minecraft:transformation": {
+          "into": "entity:zombie_mimic_c_undead"
+        }
+      }
+    },
+    "components": {
+      "minecraft:nameable": {},
+      "minecraft:health": {
+        "value": 10,
+        "max": 10
+      },
+      "minecraft:timer": {
+        "looping": true,
+        "randomInterval": false,
+        "time": 300.0,
+        "time_down_event": {
+          "event": "undead",
+          "target": "self"
+        }
+      },
+      "minecraft:interact": [
+        {
+          "on_interact": {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_equipment",
+                  "subject": "other",
+                  "domain": "hand",
+                  "value": "items:talisman_s"
+                },
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "player"
+                }
+              ]
+            },
+            "event": "seal"
+          },
+          "use_item": true,
+          "interact_text": "addon.get.items"
+        }
+      ],
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": {
+          "filters": {
+            "test": "in_lava"
+          },
+          "cause": "lava",
+          "damage_per_tick": 4
+        }
+      },
+      "minecraft:movement": {
+        "value": 0.6
+      },
+      "minecraft:movement.jump": {
+        "jump_delay": [0.5, 1.5]
+      },
+      "minecraft:jump.static": {},
+      "minecraft:navigation.climb": {
+        "is_amphibious": true,
+        "can_swim": false,
+        "can_walk": true,
+        "can_sink": true,
+        "avoid_damage_blocks": true
+      },
+      "minecraft:can_climb": {},
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      },
+      "minecraft:type_family": {
+        "family": [
+          "mob",
+          "taoism"
+        ]
+      },
+      "minecraft:collision_box": {
+        "height": 1.9,
+        "width": 0.6
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:underwater_movement": {
+        "value": 0.30
+      },
+      "minecraft:attack": {
+        "damage": 100,
+        "effect_name": "wither",
+        "effect_duration": 300
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1
+      },
+      "minecraft:break_blocks": {
+        "breakable_blocks": [
+          "glass_pane",
+          "stained_glass_pane"
+        ]
+      },
+      "minecraft:annotation.break_door": {
+        "break_time": 0,
+        "min_difficulty": "peaceful"
+      },
+      "minecraft:breathable": {
+        "breathesWater": true,
+        "totalSupply": 20,
+        "suffocateTime": -1,
+        "generatesBubbles": true,
+        "breathesAir": true
+      },
+      "minecraft:follow_range": {
+        "value": 300
+      }
+    },
+    "events": {
+      "despawn": {
+        "add": {
+          "component_groups": [
+            "despawn"
+          ]
+        }
+      },
+      "seal": {
+        "add": {
+          "component_groups": [
+            "seal"
+          ]
+        }
+      },
+      "undead": {
+        "add": {
+          "component_groups": [
+            "undead"
+          ]
+        }
+      }
+    }
+  }
+}

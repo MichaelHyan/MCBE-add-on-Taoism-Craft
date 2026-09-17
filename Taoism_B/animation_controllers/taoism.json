@@ -46,7 +46,9 @@
 						{"shield_use_b":"query.get_equipped_item_name=='shield_q' && query.scoreboard('shieldcd') < 0"},
 						{"sword_ts":"query.get_equipped_item_name=='sword_ts' && variable.attack_time && query.player_level > 9"},
 						{"firegourd_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:firegourd') && query.is_item_equipped == 0 && query.player_level > 24"},
-						{"firegourd_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:firegourd') && query.is_item_equipped != 0 && query.player_level > 24"}
+						{"firegourd_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:firegourd') && query.is_item_equipped != 0 && query.player_level > 24"},
+						{"bella_a":"query.get_equipped_item_name=='bell_a' && variable.attack_time && query.scoreboard('charge') >= 0"},
+						{"seal":"query.get_equipped_item_name=='seal' && variable.attack_time && query.scoreboard('charge') >= 0"}
 						
 					]
 				},
@@ -577,6 +579,33 @@
 					],
 					"on_entry": [
 						"/effect @s fire_resistance 3 1 true"
+					]
+				},
+				"bella_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon entity:attackable",
+						"/playsound bell_a",
+						"/scoreboard players set @s charge -4"
+					]
+				},
+				"seal": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add godmode dummy",
+						"/scoreboard objectives add godmodecd dummy",
+						"/scoreboard players set @s godmode 300",
+						"/scoreboard players set @s cdr 9",
+						"/playsound bell",
+						"/scoreboard players set @s godmodecd -500"
 					]
 				}
 			}

@@ -11,6 +11,9 @@
     "qi_sword": {
       "textures": "textures/items/qi_sword.png"
     },
+    "qi_sword_off": {
+      "textures": "textures/items/qi_sword.png"
+    },
     "sword_f": {
       "textures": "textures/items/sword_f.png"
     },
@@ -184,6 +187,9 @@
     },
     "bell": {
       "textures": "textures/items/bell.png"
+    },
+    "bell_a": {
+      "textures": "textures/items/bell_a.png"
     },
     "gourd": {
       "textures": "textures/items/gourd.png"
@@ -421,6 +427,9 @@
     },
     "burnera": {
       "textures":"textures/items/burnera.png"
+    },
+    "seal": {
+      "textures":"textures/items/seal.png"
     },
     "dumpling_a": {
       "textures":"textures/ny/dumpling_a.png"

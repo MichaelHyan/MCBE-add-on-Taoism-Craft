@@ -1,0 +1,51 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.godmode_a":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"godmode_a":"query.scoreboard('godmode') > 0 && math.mod(query.scoreboard('godmode'),2) == 0"},
+						{"godmode_b":"query.scoreboard('godmode') > 0 && math.mod(query.scoreboard('godmode'),2) == 1"},
+						{"godmode_c":"query.scoreboard('godmodecd') < 0"}
+					]
+				},
+				"godmode_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar §6=== === ===",
+						"/scoreboard players add @s godmode -1",
+						"/effect @s resistance 1 5 true"
+					]
+				},
+				"godmode_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar §4=== === ===",
+						"/scoreboard players add @s godmode -1",
+						"/effect @s resistance 1 5 true"
+					]
+				},
+				"godmode_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s godmodecd 1",
+						"/particle minecraft:end_chest ~ ~0.5 ~"
+					]
+				}
+			}
+		}
+ 	}
+ }

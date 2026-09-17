@@ -66,7 +66,9 @@
           "fckb",
           "gv_a",
           "gv_b",
-          "gv_c"
+          "gv_c",
+          "godmode_a",
+          "godmode_b"
 				]
 			},
       "animations": {
@@ -129,7 +131,9 @@
         "fckb": "controller.animation.fckb",
         "gv_a": "controller.animation.gv_a",
         "gv_b": "controller.animation.gv_b",
-        "gv_c": "controller.animation.gv_c"
+        "gv_c": "controller.animation.gv_c",
+        "godmode_a": "controller.animation.godmode_a",
+        "godmode_b": "controller.animation.godmode_b"
 			}
     },
 

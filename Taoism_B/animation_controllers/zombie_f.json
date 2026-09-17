@@ -5,7 +5,7 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"zf":"query.life_time > 60"}
+						{"zf":"query.life_time > 30"}
 					]
 				},
 				"zf": {

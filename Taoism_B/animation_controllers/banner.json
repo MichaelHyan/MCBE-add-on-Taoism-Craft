@@ -89,7 +89,6 @@
 						"/effect @s resistance 1 3 true",
 						"/effect @s hunger 1 5 true",
 						"/effect @s speed 1 1 true",
-						"/effect @e[tag=ig,r=3] instant_health 1 1 true",
 						"/scoreboard objectives add charge dummy"
 					]
 				},
@@ -101,14 +100,10 @@
 					],
 					"on_entry": [
 						"/effect @e[r=15,type=!player] slowness 10 255 true",
-						"/summon iron_golem ~1 ~ ~",
-						"/summon iron_golem ~-1 ~ ~",
-						"/summon iron_golem ~ ~ ~1",
-						"/summon iron_golem ~ ~ ~-1",
-						"/tag @e[type=iron_golem,r=5] add ig",
-						"/effect @e[tag=ig] strength infinite 10 true",
-						"/effect @e[tag=ig] speed infinite 10 true",
-						"/effect @e[tag=ig] wither infinite 255 true",
+						"/summon entity:partner_a ~1 ~ ~",
+						"/summon entity:partner_a ~-1 ~ ~",
+						"/summon entity:partner_a ~ ~ ~1",
+						"/summon entity:partner_a ~ ~ ~-1",
 						"/particle minecraft:totem_particle ~ ~1 ~",
 						"/scoreboard players set @s charge -150"
 					]

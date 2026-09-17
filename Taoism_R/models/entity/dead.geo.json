@@ -1,0 +1,99 @@
+{
+	"format_version": "1.10.0",
+	"geometry.dead": {
+		"texturewidth": 64,
+		"textureheight": 64,
+		"visible_bounds_width": 4,
+		"visible_bounds_height": 3,
+		"visible_bounds_offset": [0, 1.5, 0],
+		"bones": [
+			{
+				"name": "body",
+				"pivot": [0, 3, 9],
+				"rotation": [-90, 0, 0],
+				"reset": true,
+				"cubes": [
+					{"origin": [-4, -9, 7], "size": [8, 12, 4], "uv": [16, 16]}
+				]
+			},
+			{
+				"name": "head",
+				"parent": "body",
+				"pivot": [0, 3, 9],
+				"reset": true,
+				"cubes": [
+					{"origin": [-4, 3, 5], "size": [8, 8, 8], "uv": [0, 0]}
+				]
+			},
+			{
+				"name": "eyebrow",
+				"parent": "head",
+				"pivot": [0, 3, 9],
+				"reset": true,
+				"cubes": [
+					{"origin": [-4, 7, 4.85], "size": [3, 1, 4], "uv": [0, 32]},
+					{"origin": [1, 7, 4.85], "size": [3, 1, 1], "uv": [0, 32]}
+				]
+			},
+			{
+				"name": "hat",
+				"parent": "head",
+				"pivot": [0, 3, 9],
+				"reset": true,
+				"cubes": [
+					{"origin": [-4, 3, 5], "size": [8, 8, 8], "uv": [32, 0], "inflate": 0.5}
+				]
+			},
+			{
+				"name": "rightArm",
+				"parent": "body",
+				"pivot": [-5, 1, 9],
+				"rotation": [0, 90, 115],
+				"reset": true,
+				"cubes": [
+					{"origin": [-7, -9, 7], "size": [4, 12, 4], "uv": [40, 16]}
+				]
+			},
+			{
+				"name": "rightItem",
+				"parent": "rightArm",
+				"pivot": [-6, -6, 10]
+			},
+			{
+				"name": "leftArm",
+				"parent": "body",
+				"pivot": [5, 1, 9],
+				"rotation": [0, -90, -115],
+				"reset": true,
+				"cubes": [
+					{"origin": [3, -9, 7], "size": [4, 12, 4], "uv": [31, 48]}
+				]
+			},
+			{
+				"name": "rightLeg",
+				"parent": "body",
+				"pivot": [-1.9, -9, 9],
+				"rotation": [0, 0, 30],
+				"reset": true,
+				"cubes": [
+					{"origin": [-3.9, -21, 7], "size": [4, 12, 4], "uv": [0, 16]}
+				]
+			},
+			{
+				"name": "leftLeg",
+				"parent": "body",
+				"pivot": [1.9, -9, 9],
+				"rotation": [0, 0, -30],
+				"reset": true,
+				"cubes": [
+					{"origin": [-0.1, -21, 7], "size": [4, 12, 4], "uv": [16, 48]}
+				]
+			},
+			{
+				"name": "waist",
+				"pivot": [0, 12, 0],
+				"reset": true
+			}
+		]
+	}
+}

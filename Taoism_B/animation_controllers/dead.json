@@ -20,9 +20,7 @@
 						"/scoreboard objectives add spawnc dummy",
 						"/scoreboard players set @s spawnc 1",
 						"/function bgmstop",
-						"/summon zombie ?",
-						"/effect @e[name=?,type=zombie] fire_resistance infinite 1 true",
-						"/effect @e[name=?,type=zombie] slowness infinite 3 true"
+						"/summon entity:zombie_mimic_c_dead"
 					]
 				},
 				"dead_b": {

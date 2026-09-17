@@ -44,6 +44,12 @@
       "stream": true
     }]
   },
+  "bell_a": {
+    "sounds": [{
+      "name": "sounds/bell_a",
+      "stream": true
+    }]
+  },
   "hs": {
     "sounds": [{
       "name": "sounds/hs",

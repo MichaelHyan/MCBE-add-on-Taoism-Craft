@@ -24,7 +24,8 @@
 						{"cdri_g":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:spegourd') && math.mod(query.life_time,3) == 0 && query.scoreboard('cdr') == 6"},
 						{"cdri_h":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:spegourd') && math.mod(query.life_time,3) == 0 && query.scoreboard('cdr') == 7"},
 						{"cdri_i":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:spegourd') && math.mod(query.life_time,3) == 0 && query.scoreboard('cdr') == 8"},
-						{"cdr_k":"query.scoreboard('cdr') >= 3 && query.scoreboard('charge') < -5 || query.scoreboard('bell') < -5 || query.scoreboard('sword') < -5 || query.scoreboard('shieldcd') < -5"}
+						{"cdr_k":"query.scoreboard('godmode') > 0 && query.scoreboard('charge') < -5 || query.scoreboard('bell') < -5 || query.scoreboard('sword') < -5 || query.scoreboard('shieldcd') < -5"},
+						{"cdr_l":"query.scoreboard('cdr') >= 3 && query.scoreboard('charge') < -5 || query.scoreboard('bell') < -5 || query.scoreboard('sword') < -5 || query.scoreboard('shieldcd') < -5"}
 					]
 				},
 				"cdr_a": {
@@ -238,6 +239,19 @@
 					]
 				},
 				"cdr_k": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s charge -5",
+						"/scoreboard players set @s bell -5",
+						"/scoreboard players set @s sword -5",
+						"/scoreboard players set @s shieldcd -5"
+					]
+				},
+				"cdr_l": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"

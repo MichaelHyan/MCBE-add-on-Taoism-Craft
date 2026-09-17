@@ -1,0 +1,227 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "entity:partner_a",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "scripts": {
+				"animate": [
+					"zombie_f"
+				]
+			},
+      "animations": {
+				"zombie_f": "controller.animation.zombie_f"
+			}
+    },
+    "component_groups": {
+      "refresh": {
+        "minecraft:transformation": {
+          "into": "entity:partner_a"
+        }
+      },
+      "mode_one": {
+        "minecraft:variant": {
+          "value": 1
+        },
+        "minecraft:angry": {
+          "duration": -1,
+          "broadcastAnger": false,
+          "calm_event": {
+            "event": "stop_anger",
+            "target": "self"
+          }
+        },
+        "minecraft:timer": {
+          "looping": true,
+          "randomInterval": false,
+          "time": 300.0,
+          "time_down_event": {
+            "event": "stop_anger",
+            "target": "self"
+          }
+        }
+      },
+      "mode_zero": {
+        "minecraft:variant": {
+          "value": 0
+        }
+      }
+    },
+    "components": {
+      "minecraft:nameable": {},
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": 0,
+        "breathesWater": true
+      },
+      "minecraft:on_target_acquired": {
+        "event": "anger",
+        "target": "self"
+      },
+      "minecraft:on_target_escape": {
+        "event": "stop_anger",
+        "target": "self"
+      },
+      "minecraft:leashable": {},
+      "minecraft:leashable_to": {},
+      "minecraft:follow_range": {
+        "value": 30,
+        "max": 30
+      },
+      "minecraft:health": {
+        "value": 20,
+        "max": 20,
+        "min": 0
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.6
+      },
+      "minecraft:behavior.sleep": {
+        "priority": 3,
+        "goal_radius": 5,
+        "speed_multiplier": 1.2,
+        "sleep_collider_height": 0.3,
+        "sleep_collider_width": 1.0,
+        "sleep_y_offset": 0.6
+      },
+      "minecraft:behavior.ranged_attack": {
+        "priority": 2,
+        "attack_interval_min": 1.0,
+        "attack_interval_max": 1.0,
+        "attack_radius": 27
+      },
+      "minecraft:shooter": {
+        "type": "Arrow",
+        "def": "entity:spba_sp"
+      },
+      "minecraft:attack": {
+        "damage": 2
+      },
+      "minecraft:interact": [
+        {
+          "on_interact": {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_equipment",
+                  "subject": "other",
+                  "domain": "hand",
+                  "value": "items:hy_banner"
+                },
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "player"
+                }
+              ]
+            },
+            "event": "refresh"
+          },
+          "use_item": false,
+          "interact_text": "addon.get.items"
+        }
+      ],
+      "minecraft:behavior.nearest_attackable_target": {
+        "must_reach": true,
+        "must_see": false,
+        "entity_types": [
+          {
+            "filters": {
+              "AND": [
+                {
+                  "test": "is_family",
+                  "subject": 1,
+                  "operator": 0,
+                  "value": "monster"
+                }
+              ]
+            }
+          },
+          {
+            "filters": {
+              "AND": [
+                {
+                  "test": "is_family",
+                  "subject": 1,
+                  "operator": 0,
+                  "value": "hoglin"
+                },
+                {
+                  "test": "is_difficulty",
+                  "subject": 0,
+                  "operator": 1,
+                  "value": 0
+                }
+              ]
+            }
+          },
+          {
+            "filters": {
+              "AND": [
+                {
+                  "test": "is_family",
+                  "subject": 1,
+                  "operator": 0,
+                  "value": "zoglin"
+                },
+                {
+                  "test": "is_difficulty",
+                  "subject": 0,
+                  "operator": 1,
+                  "value": 0
+                }
+              ]
+            }
+          }
+        ],
+        "priority": 3
+      },
+      "minecraft:behavior.melee_attack": {
+        "priority": 4,
+        "target_dist": 1.2,
+        "speed_multiplier": 1.25
+      },
+      "minecraft:movement": {
+        "value": 0.3
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true
+      },
+      "minecraft:type_family": {
+        "family": [
+          "mob",
+          "taoism"
+        ]
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
+      "minecraft:fire_immune": true,
+      "minecraft:behavior.random_stroll": {
+        "priority": 5,
+        "speed_multiplier": 1
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 6,
+        "look_distance": 8
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 6
+      },
+      "minecraft:physics": {}
+    },
+    "events": {
+      "minecraft:entity_spawned": {},
+      "refresh": {
+        "add": {
+          "component_groups": [
+            "refresh"
+          ]
+        }
+      }
+    }
+  }
+}
