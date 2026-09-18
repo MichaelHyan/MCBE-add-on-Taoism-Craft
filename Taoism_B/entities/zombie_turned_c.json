@@ -23,6 +23,11 @@
           "into": "entity:zombie_mimic_c"
         }
       },
+      "mutate": {
+        "minecraft:transformation": {
+          "into": "entity:zombie_turned_p"
+        }
+      },
       "no_monster": {
         "minecraft:transformation": {
           "into": "entity:zombie_mimic_c_undead"
