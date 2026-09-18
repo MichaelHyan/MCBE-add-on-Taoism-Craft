@@ -2,36 +2,38 @@
   "format_version": "1.8.0",
   "minecraft:entity": {
     "description": {
-      "identifier": "entity:zombie_mimic_p",
+      "identifier": "entity:zombie_turned_c",
       "is_spawnable": false,
       "is_summonable": true,
       "scripts": {
         "animate": [
-          "detectre"
+          "spark"
         ]
       },
       "animations": {
-        "detectre": "controller.animation.detectre"
+        "spark": "controller.animation.spark"
       }
     },
     "component_groups": {
       "despawn": {
         "minecraft:instant_despawn": {}
       },
+      "seal": {
+        "minecraft:transformation": {
+          "into": "entity:zombie_mimic_c"
+        }
+      },
       "no_monster": {
         "minecraft:transformation": {
-          "into": "entity:zombie_turned_p"
+          "into": "entity:zombie_mimic_c_undead"
         }
       }
     },
     "components": {
       "minecraft:nameable": {},
-      "minecraft:loot": {
-        "table": "loot_tables/entities/zombie_mimic_p.json"
-      },
       "minecraft:health": {
-        "value": 300,
-        "max": 300
+        "value": 10,
+        "max": 10
       },
       "minecraft:hurt_on_condition": {
         "damage_conditions": {
@@ -50,13 +52,14 @@
         "jump_delay": [0.5, 1.5]
       },
       "minecraft:jump.static": {},
-      "minecraft:navigation.walk": {
+      "minecraft:navigation.climb": {
         "is_amphibious": true,
         "can_swim": false,
         "can_walk": true,
         "can_sink": true,
         "avoid_damage_blocks": true
       },
+      "minecraft:can_climb": {},
       "minecraft:despawn": {
         "despawn_from_distance": {}
       },
@@ -78,37 +81,71 @@
       "minecraft:behavior.hurt_by_target": {
         "priority": 3
       },
-      "minecraft:behavior.nearest_attackable_target": {
-        "priority": 2,
-        "entity_types": [
-          {
+      "minecraft:interact": [
+        {
+          "on_interact": {
             "filters": {
-              "any_of": [
+              "all_of": [
+                {
+                  "test": "has_equipment",
+                  "subject": "other",
+                  "domain": "hand",
+                  "value": "items:talisman"
+                },
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "player"
+                }
+              ]
+            },
+            "event": "seal"
+          },
+          "use_item": true,
+          "interact_text": "addon.get.items"
+        },
+        {
+          "on_interact": {
+            "filters": {
+              "all_of": [
                 {
                   "test": "is_family",
                   "subject": "other",
                   "value": "player"
                 },
                 {
-                  "test": "is_family",
+                  "test": "has_equipment",
                   "subject": "other",
-                  "value": "villager"
+                  "domain": "hand",
+                  "value": "items:seal_e"
                 }
               ]
+            },
+            "event": "remove_monster",
+            "target": "self"
+          }
+        }
+      ],
+      "minecraft:behavior.nearest_attackable_target": {
+        "priority": 2,
+        "entity_types": [
+          {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "value": "monster"
             },
             "max_dist": 300
           }
         ],
-        "must_reach": true,
+        "must_reach": false,
         "within_radius": 300,
-        "must_see": true
+        "must_see": false
       },
       "minecraft:type_family": {
         "family": [
           "undead",
-          "monster",
-          "mob",
-          "taoism_monster"
+          "mob"
         ]
       },
       "minecraft:collision_box": {
@@ -116,7 +153,10 @@
         "width": 0.6
       },
       "minecraft:physics": {},
-      "minecraft:pushable": {},
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
       "minecraft:underwater_movement": {
         "value": 0.30
       },
@@ -150,6 +190,15 @@
           "stained_glass_pane"
         ]
       },
+      "minecraft:timer": {
+        "looping": true,
+        "randomInterval": false,
+        "time": 600.0,
+        "time_down_event": {
+          "event": "mutate",
+          "target": "self"
+        }
+      },
       "minecraft:annotation.break_door": {
         "break_time": 0,
         "min_difficulty": "peaceful"
@@ -163,29 +212,27 @@
       },
       "minecraft:follow_range": {
         "value": 300
-      },
-      "minecraft:interact": [
-        {
-          "on_interact": {
-            "filters": {
-              "all_of": [
-                { "test": "is_family", "subject": "other", "value": "player" },
-                { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "items:seal_e" }
-              ]
-            },
-            "event": "remove_monster",
-            "target": "self"
-          },
-          "use_item": false,
-          "interact_text": "addon.get.items"
-        }
-      ]
+      }
     },
     "events": {
       "despawn": {
         "add": {
           "component_groups": [
             "despawn"
+          ]
+        }
+      },
+      "seal": {
+        "add": {
+          "component_groups": [
+            "seal"
+          ]
+        }
+      },
+      "mutate": {
+        "add": {
+          "component_groups": [
+            "mutate"
           ]
         }
       },

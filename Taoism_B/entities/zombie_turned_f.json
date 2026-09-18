@@ -2,16 +2,16 @@
   "format_version": "1.8.0",
   "minecraft:entity": {
     "description": {
-      "identifier": "entity:zombie_mimic_p",
+      "identifier": "entity:zombie_turned_f",
       "is_spawnable": false,
       "is_summonable": true,
       "scripts": {
         "animate": [
-          "detectre"
+          "spark"
         ]
       },
       "animations": {
-        "detectre": "controller.animation.detectre"
+        "spark": "controller.animation.spark"
       }
     },
     "component_groups": {
@@ -20,53 +20,51 @@
       },
       "no_monster": {
         "minecraft:transformation": {
-          "into": "entity:zombie_turned_p"
+          "into": "entity:zombie_mimic_f"
         }
       }
     },
     "components": {
       "minecraft:nameable": {},
+      "minecraft:health": {
+        "value": 50,
+        "max": 50
+      },
       "minecraft:loot": {
         "table": "loot_tables/entities/zombie_mimic_p.json"
       },
-      "minecraft:health": {
-        "value": 300,
-        "max": 300
-      },
       "minecraft:hurt_on_condition": {
-        "damage_conditions": {
-          "filters": {
-            "test": "in_lava"
-          },
-          "cause": "lava",
-          "damage_per_tick": 4
-        }
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self"
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
       },
-      "minecraft:burns_in_daylight": {},
       "minecraft:movement": {
         "value": 0.6
       },
-      "minecraft:movement.jump": {
-        "jump_delay": [0.5, 1.5]
-      },
-      "minecraft:jump.static": {},
-      "minecraft:navigation.walk": {
+      "minecraft:navigation.climb": {
         "is_amphibious": true,
-        "can_swim": false,
+        "can_swim": true,
         "can_walk": true,
-        "can_sink": true,
+        "can_sink": false,
         "avoid_damage_blocks": true
       },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
       "minecraft:despawn": {
         "despawn_from_distance": {}
       },
-      "minecraft:behavior.slime_float": {
+      "minecraft:behavior.float": {
         "priority": 1
       },
-      "minecraft:behavior.slime_keep_on_jumping": {
-        "priority": 5
-      },
-      "minecraft:behavior.slime_random_direction": {
+      "minecraft:behavior.random_stroll": {
         "priority": 4
       },
       "minecraft:behavior.look_at_player": {
@@ -83,30 +81,20 @@
         "entity_types": [
           {
             "filters": {
-              "any_of": [
-                {
-                  "test": "is_family",
-                  "subject": "other",
-                  "value": "player"
-                },
-                {
-                  "test": "is_family",
-                  "subject": "other",
-                  "value": "villager"
-                }
-              ]
+              "test": "is_family",
+              "subject": "other",
+              "value": "monster"
             },
             "max_dist": 300
           }
         ],
-        "must_reach": true,
+        "must_reach": false,
         "within_radius": 300,
-        "must_see": true
+        "must_see": false
       },
       "minecraft:type_family": {
         "family": [
           "undead",
-          "monster",
           "mob",
           "taoism_monster"
         ]
@@ -120,19 +108,27 @@
       "minecraft:underwater_movement": {
         "value": 0.30
       },
+      "minecraft:burns_in_daylight": {},
       "minecraft:attack": {
-        "damage": 2,
+        "damage": 3,
         "effect_name": "wither",
-        "effect_duration": 300
+        "effect_duration": 15
       },
       "minecraft:behavior.melee_attack": {
-        "priority": 2,
+        "priority": 3,
         "speed_multiplier": 1,
         "target_dist": 0,
         "max_dist": 2,
-        "random_stop_interval": 0,
+        "random_stop_interval": 100,
         "track_target": true,
         "reach_multiplier": 1.4
+      },
+      "minecraft:behavior.leap_at_target": {
+        "priority": 4,
+        "yd": 0.4,
+        "must_be_on_ground": false,
+        "target_dist": 0.4,
+        "speed_multiplier": 1
       },
       "minecraft:behavior.flee_sun": {
         "priority": 2,
@@ -149,6 +145,18 @@
           "glass_pane",
           "stained_glass_pane"
         ]
+      },
+      "minecraft:behavior.sonic_boom": {
+        "duration": 3,
+        "speed_multiplier": 1.2,
+        "attack_damage": 10,
+        "attack_cooldown": 5,
+        "knockback_vertical_strength": 0.5,
+        "knockback_horizontal_strength": 2.5,
+        "knockback_height_cap": 0.5,
+        "attack_sound": "sonic_boom",
+        "charge_sound": "sonic_charge",
+        "priority": 2
       },
       "minecraft:annotation.break_door": {
         "break_time": 0,

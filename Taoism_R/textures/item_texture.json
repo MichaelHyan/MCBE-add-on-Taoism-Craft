@@ -431,6 +431,9 @@
     "seal": {
       "textures":"textures/items/seal.png"
     },
+    "seal_e": {
+      "textures":"textures/items/seal_e.png"
+    },
     "dumpling_a": {
       "textures":"textures/ny/dumpling_a.png"
     },

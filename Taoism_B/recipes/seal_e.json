@@ -1,0 +1,39 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:seal_e"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "cdc",
+      "bab",
+      "aaa"
+    ],
+    "key": {
+      "a": {
+        "item": "copper_block"
+      },
+      "b": {
+        "item": "items:qi"
+      },
+      "c": {
+        "item": "items:pearlz_p"
+      },
+      "d": {
+        "item": "items:scripture_s"
+      }
+    },
+    "unlock": [
+      {
+        "item": "items:scripture_s"
+      }
+    ],
+    "result": [{
+      "item": "items:seal_e",
+      "count": 1
+    }]
+  }
+}
