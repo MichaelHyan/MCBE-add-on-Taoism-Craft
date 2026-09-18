@@ -27,6 +27,30 @@
         "minecraft:transformation": {
           "into": "entity:zombie_mimic_p"
         }
+      },
+      "no_monster": {
+        "minecraft:type_family": {
+          "family": [
+            "undead",
+            "mob"
+          ]
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 2,
+          "entity_types": [
+            {
+              "filters": {
+                "test": "is_family",
+                "subject": "other",
+                "value": "monster"
+              },
+              "max_dist": 300
+            }
+          ],
+          "must_reach": true,
+          "within_radius": 300,
+          "must_see": true
+        }
       }
     },
     "components": {
@@ -103,6 +127,27 @@
           },
           "use_item": true,
           "interact_text": "addon.get.items"
+        },
+        {
+          "on_interact": {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "player"
+                },
+                {
+                  "test": "has_equipment",
+                  "subject": "other",
+                  "domain": "hand",
+                  "value": "items:seal_e"
+                }
+              ]
+            },
+            "event": "remove_monster",
+            "target": "self"
+          }
         }
       ],
       "minecraft:behavior.nearest_attackable_target": {
@@ -222,6 +267,13 @@
         "add": {
           "component_groups": [
             "mutate"
+          ]
+        }
+      },
+      "remove_monster": {
+        "add": {
+          "component_groups": [
+            "no_monster"
           ]
         }
       }

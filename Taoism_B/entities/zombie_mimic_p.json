@@ -17,6 +17,31 @@
     "component_groups": {
       "despawn": {
         "minecraft:instant_despawn": {}
+      },
+      "no_monster": {
+        "minecraft:type_family": {
+          "family": [
+            "undead",
+            "mob",
+            "taoism_monster"
+          ]
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 2,
+          "entity_types": [
+            {
+              "filters": {
+                "test": "is_family",
+                "subject": "other",
+                "value": "monster"
+              },
+              "max_dist": 300
+            }
+          ],
+          "must_reach": true,
+          "within_radius": 300,
+          "must_see": true
+        }
       }
     },
     "components": {
@@ -45,14 +70,13 @@
         "jump_delay": [0.5, 1.5]
       },
       "minecraft:jump.static": {},
-      "minecraft:navigation.climb": {
+      "minecraft:navigation.walk": {
         "is_amphibious": true,
         "can_swim": false,
         "can_walk": true,
         "can_sink": true,
         "avoid_damage_blocks": true
       },
-      "minecraft:can_climb": {},
       "minecraft:despawn": {
         "despawn_from_distance": {}
       },
@@ -159,6 +183,31 @@
       },
       "minecraft:follow_range": {
         "value": 300
+      },
+      "minecraft:interact": {
+        "interactions": [
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  },
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "items:seal_e"
+                  }
+                ]
+              },
+              "event": "remove_monster",
+              "target": "self"
+            }
+          }
+        ]
       }
     },
     "events": {
@@ -166,6 +215,13 @@
         "add": {
           "component_groups": [
             "despawn"
+          ]
+        }
+      },
+      "remove_monster": {
+        "add": {
+          "component_groups": [
+            "no_monster"
           ]
         }
       }

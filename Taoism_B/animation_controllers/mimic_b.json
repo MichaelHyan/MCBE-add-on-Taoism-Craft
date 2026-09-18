@@ -1,0 +1,24 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.mimic_b":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"restore":"math.mod(query.life_time,20) == 0"}
+					]
+				},
+				"restore": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/camera @a[r=20] fade time 1 1 1"
+					]
+				}
+			}
+		}
+ 	}
+ }
