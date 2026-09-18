@@ -5,7 +5,7 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"restore":"math.mod(query.life_time,20) == 0"}
+						{"restore":"math.mod(query.life_time,5) == 0 && math.random_integer(0,1) == 1"}
 					]
 				},
 				"restore": {
