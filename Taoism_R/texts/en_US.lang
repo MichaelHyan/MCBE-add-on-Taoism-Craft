@@ -226,3 +226,6 @@ item.items:bike=Bicycle
 item.items:burner=Incense Burner
 item.items:burnera=Incense Burner
 item.items:talisman_a.name=Old Talisman\n§o§7Unknown\n§r§bLong kept within a book§r
+item.items:bell_a.name=Soul-Snatching Bell\n§o§7level limit: None\n§r§bSoul Reading§r
+item.items:seal.name=Seal\n§o§7level limit: 45\n§r§bDivine Aid§r
+entity.entity:zombie_mimic_c_undead.name=zombie

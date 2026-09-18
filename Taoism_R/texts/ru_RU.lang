@@ -226,3 +226,6 @@ item.items:bike=Велосипед
 item.items:burner=Курильница
 item.items:burnera=Курильница
 item.items:talisman_a.name=Старый талисман\n§o§7Неизвестно\n§r§bДолго пролежал в книге§r
+item.items:bell_a.name=Колокол, похищающий души\n§o§7Требование по уровню: Нет\n§r§bЧтение души§r
+item.items:seal.name=Печать\n§o§7Требование по уровню: 45\n§r§bБожественная помощь§r
+entity.entity:zombie_mimic_c_undead.name=Зомби

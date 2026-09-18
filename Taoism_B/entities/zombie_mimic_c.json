@@ -127,7 +127,7 @@
             "max_dist": 300
           }
         ],
-        "must_reach": true,
+        "must_reach": false,
         "within_radius": 300,
         "must_see": false
       },

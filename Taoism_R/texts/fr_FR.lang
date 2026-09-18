@@ -227,3 +227,6 @@ item.items:bike=Vélo
 item.items:burner=Brûleur d'encens
 item.items:burnera=Brûleur d'encens
 item.items:talisman_a.name=Vieux talisman\n§o§7Inconnu\n§r§bLongtemps gardé dans un livre§r
+item.items:bell_a.name=Cloche capteuse d'âmes\n§o§7Niveau requis : Aucun\n§r§bLecture de l'âme§r
+item.items:seal.name=Sceau\n§o§7Niveau requis : 45\n§r§bAide divine§r
+entity.entity:zombie_mimic_c_undead.name=Zombie

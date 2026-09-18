@@ -6,28 +6,28 @@
 				"base_jeta":{
 					"transitions":[
 						{"sword_t_a":"query.get_equipped_item_name=='sword_t' && !variable.attack_time && query.player_level > 14"},
-						{"sword_t_b":"query.get_equipped_item_name=='sword_t' && variable.attack_time && query.player_level > 14"},
+						{"sword_t_b":"query.get_equipped_item_name=='sword_t' && variable.attack_time && query.player_level > 14 && query.scoreboard('swordatkcd') >= 0"},
 						{"sword_b_a":"query.get_equipped_item_name=='sword_b' && !variable.attack_time && query.player_level > 14"},
-						{"sword_b_b":"query.get_equipped_item_name=='sword_b' && variable.attack_time && query.player_level > 14"},
+						{"sword_b_b":"query.get_equipped_item_name=='sword_b' && variable.attack_time && query.player_level > 14 && query.scoreboard('swordatkcd') >= 0"},
 						{"sword_q_a":"query.get_equipped_item_name=='sword_q' && !variable.attack_time && query.player_level > 24"},
-						{"sword_q_b":"query.get_equipped_item_name=='sword_q' && variable.attack_time && query.player_level > 24"},
+						{"sword_q_b":"query.get_equipped_item_name=='sword_q' && variable.attack_time && query.player_level > 24 && query.scoreboard('swordatkcd') >= 0"},
 						{"sword_l_a":"query.get_equipped_item_name=='sword_l' && !variable.attack_time && query.player_level > 24"},
-						{"sword_l_b":"query.get_equipped_item_name=='sword_l' && variable.attack_time && query.player_level > 24"},
+						{"sword_l_b":"query.get_equipped_item_name=='sword_l' && variable.attack_time && query.player_level > 24 && query.scoreboard('swordatkcd') >= 0"},
 						{"sword_s_a":"query.get_equipped_item_name=='sword_s' && !variable.attack_time && !query.is_jumping && !query.is_sneaking && query.player_level > 49"},
-						{"sword_s_b":"query.get_equipped_item_name=='sword_s' && variable.attack_time && !query.is_jumping && !query.is_sneaking && query.player_level > 49"},
+						{"sword_s_b":"query.get_equipped_item_name=='sword_s' && variable.attack_time && !query.is_jumping && !query.is_sneaking && query.player_level > 49 && query.scoreboard('swordatkcd') >= 0"},
 						{"sword_s_c":"query.get_equipped_item_name=='sword_s' && !variable.attack_time && query.is_jumping && !query.is_sneaking && query.player_level > 49"},
 						{"sword_s_d":"query.get_equipped_item_name=='sword_s' && query.is_sneaking && query.player_level > 49 && query.scoreboard('charge') >= 0"},
 						{"sword_e_a":"query.get_equipped_item_name=='sword_e' && !variable.attack_time && query.player_level > 14"},
-						{"sword_e_b":"query.get_equipped_item_name=='sword_e' && variable.attack_time && query.player_level > 14"},
+						{"sword_e_b":"query.get_equipped_item_name=='sword_e' && variable.attack_time && query.player_level > 14 && query.scoreboard('swordatkcd') >= 0"},
 						{"sword_w_a":"query.get_equipped_item_name=='sword_w' && !variable.attack_time && query.player_level > 14"},
-						{"sword_w_b":"query.get_equipped_item_name=='sword_w' && variable.attack_time && query.player_level > 14"},
+						{"sword_w_b":"query.get_equipped_item_name=='sword_w' && variable.attack_time && query.player_level > 14 && query.scoreboard('swordatkcd') >= 0"},
 						{"sword_u_a":"query.get_equipped_item_name=='sword_u' && !variable.attack_time && !query.is_sneaking && !query.is_jumping && query.player_level > 49"},
-						{"sword_u_b":"query.get_equipped_item_name=='sword_u' && variable.attack_time && !query.is_jumping && !query.is_sneaking && query.player_level > 49"},
+						{"sword_u_b":"query.get_equipped_item_name=='sword_u' && variable.attack_time && !query.is_jumping && !query.is_sneaking && query.player_level > 49 && query.scoreboard('swordatkcd') >= 0"},
 						{"sword_u_c":"query.get_equipped_item_name=='sword_u' && variable.attack_time && query.is_sneaking && query.player_level > 49"},
 						{"sword_u_d":"query.get_equipped_item_name=='sword_u' && !variable.attack_time && query.is_jumping && query.player_level > 49"},
 						{"sword_u_e":"query.get_equipped_item_name=='sword_u' && variable.attack_time && query.is_jumping && query.player_level > 49"},
 						{"sword_sp_a":"query.get_equipped_item_name=='sword_sp' && !variable.attack_time && query.player_level > 24"},
-						{"sword_sp_b":"query.get_equipped_item_name=='sword_sp' && variable.attack_time && query.player_level > 24"},
+						{"sword_sp_b":"query.get_equipped_item_name=='sword_sp' && variable.attack_time && query.player_level > 24 && query.scoreboard('swordatkcd') >= 0"},
 						{"sword_za_a":"query.get_equipped_item_name=='sword_za' && math.mod(query.life_time,3) == 0 && query.player_level > 29"},
 						{"sword_za_b":"query.get_equipped_item_name=='sword_za' && query.is_sneaking && variable.attack_time && query.player_level > 29"},
 						{"sword_za_c":"query.get_equipped_item_name=='sword_za' && query.player_level > 29"},
@@ -61,7 +61,8 @@
 					],
 					"on_entry": [
 						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
-						"/playsound sw"
+						"/playsound sw",
+						"/scoreboard players set @s swordatkcd -3"
 					]
 				},
 				"sword_b_a": {
@@ -82,7 +83,8 @@
 					],
 					"on_entry": [
 						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
-						"/playsound sw"
+						"/playsound sw",
+						"/scoreboard players set @s swordatkcd -3"
 					]
 				},
 				"sword_q_a": {
@@ -104,7 +106,8 @@
 					],
 					"on_entry": [
 						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
-						"/playsound sw"
+						"/playsound sw",
+						"/scoreboard players set @s swordatkcd -3"
 					]
 				},
 				"sword_l_a": {
@@ -126,7 +129,8 @@
 					],
 					"on_entry": [
 						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
-						"/playsound sw"
+						"/playsound sw",
+						"/scoreboard players set @s swordatkcd -3"
 					]
 				},
 				"sword_s_a": {
@@ -151,7 +155,8 @@
 					],
 					"on_entry": [
 						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
-						"/playsound sw"
+						"/playsound sw",
+						"/scoreboard players set @s swordatkcd -3"
 					]
 				},
 				"sword_s_c": {
@@ -211,7 +216,8 @@
 					],
 					"on_entry": [
 						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
-						"/playsound sw"
+						"/playsound sw",
+						"/scoreboard players set @s swordatkcd -3"
 					]
 				},
 				"sword_w_a": {
@@ -234,7 +240,8 @@
 					"on_entry": [
 						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
 						"/summon lightning_bolt",
-						"/playsound sw"
+						"/playsound sw",
+						"/scoreboard players set @s swordatkcd -3"
 					]
 				},
 				"sword_u_a": {
@@ -257,7 +264,8 @@
 					"on_entry": [
 						"/tag @n[family=monster,r=20] add sbt",
 						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
-						"/playsound sw"
+						"/playsound sw",
+						"/scoreboard players set @s swordatkcd -3"
 					]
 				},
 				"sword_u_c": {
@@ -315,7 +323,8 @@
 					],
 					"on_entry": [
 						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
-						"/effect @s wither 2 255 true"
+						"/effect @s wither 2 255 true",
+						"/scoreboard players set @s swordatkcd -3"
 					]
 				},
 				"sword_za_a": {

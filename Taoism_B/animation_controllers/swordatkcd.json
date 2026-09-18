@@ -1,0 +1,24 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.swordatkcd":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"cd":"query.scoreboard('swordatkcd') < 0"}
+					]
+				},
+				"cd": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s swordatkcd 1"
+					]
+				}
+			}
+		}
+ 	}
+ }

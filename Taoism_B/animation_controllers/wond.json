@@ -17,7 +17,7 @@
 						{"wond_j":"query.get_equipped_item_name=='wond' && !variable.attack_time && query.scoreboard('charge') == 7"},
 						{"wond_k":"query.get_equipped_item_name=='wond' && !variable.attack_time && query.scoreboard('charge') == 8"},
 						{"wond_l":"query.get_equipped_item_name=='wond' && !variable.attack_time && query.scoreboard('charge') == 9"},
-						{"wond_m":"query.get_equipped_item_name=='wond' && variable.attack_time && !query.is_jumping && query.player_level > 14"}
+						{"wond_m":"query.get_equipped_item_name=='wond' && variable.attack_time && !query.is_jumping && query.player_level > 14 && query.scoreboard('swordatkcd') >= 0"}
 					]
 				},
 				"wond_a": {
@@ -162,7 +162,8 @@
 							}
 					],
 					"on_entry": [
-						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5"
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
+						"/scoreboard players set @s swordatkcd -3"
 					]
 				}
 			}
