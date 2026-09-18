@@ -15,6 +15,9 @@
           "into": "entity:zombie_mimic_c_dressed"
         }
       },
+      "burn": {
+        "minecraft:burns_in_daylight": {}
+      },
       "jumping": {
         "minecraft:behavior.slime_keep_on_jumping": {
           "priority": 5
@@ -36,7 +39,8 @@
                   "test": "has_equipment",
                   "subject": "other",
                   "domain": "hand",
-                  "value": "items:talisman_s"
+                  "value": "items:talisman",
+                  "operator": "not"
                 },
                 {
                   "test": "is_family",
@@ -46,6 +50,28 @@
               ]
             },
             "event": "unseal"
+          },
+          "use_item": false,
+          "interact_text": "addon.get.items"
+        },
+        {
+          "on_interact": {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_equipment",
+                  "subject": "other",
+                  "domain": "hand",
+                  "value": "items:talisman"
+                },
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "player"
+                }
+              ]
+            },
+            "event": "burn"
           },
           "use_item": false,
           "interact_text": "addon.get.items"
@@ -173,6 +199,13 @@
         "add": {
           "component_groups": [
             "unseal"
+          ]
+        }
+      },
+      "burn": {
+        "add": {
+          "component_groups": [
+            "burn"
           ]
         }
       },

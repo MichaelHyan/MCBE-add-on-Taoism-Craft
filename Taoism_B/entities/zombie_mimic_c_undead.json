@@ -90,7 +90,7 @@
                   "test": "has_equipment",
                   "subject": "other",
                   "domain": "hand",
-                  "value": "items:talisman_s"
+                  "value": "items:talisman"
                 },
                 {
                   "test": "is_family",
@@ -134,8 +134,7 @@
         "family": [
           "undead",
           "monster",
-          "mob",
-          "taoism_monster"
+          "mob"
         ]
       },
       "minecraft:collision_box": {

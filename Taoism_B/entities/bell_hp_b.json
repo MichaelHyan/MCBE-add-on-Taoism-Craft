@@ -1,11 +1,18 @@
 {
-  "format_version": "1.16.0",
+  "format_version": "1.8.0",
   "minecraft:entity": {
     "description": {
-      "identifier": "entity:attackable",
+      "identifier": "entity:bell_hp_b",
       "is_spawnable": false,
       "is_summonable": true,
-      "is_experimental": false
+      "scripts": {
+        "animate": [
+          "bell_hp_b"
+        ]
+      },
+      "animations": {
+        "bell_hp_b": "controller.animation.bell_hp_b"
+      }
     },
     "component_groups": {
       "despawn": {
@@ -13,40 +20,35 @@
       }
     },
     "components": {
-      "minecraft:collision_box": {
-        "width": 0,
-        "height": 0
+      "minecraft:health": {
+        "value": 10,
+        "max": 10
       },
       "minecraft:type_family": {
         "family": [
           "mob",
-          "taoism",
-          "attackable"
+          "taoism"
         ]
-      },
-      "minecraft:health": {
-        "value": 1,
-        "max": 1
       },
       "minecraft:timer": {
         "looping": true,
         "randomInterval": false,
-        "time": 1.0,
+        "time": 30.0,
         "time_down_event": {
           "event": "despawn",
           "target": "self"
         }
       },
-      "minecraft:pushable": {
-        "is_pushable": false,
-        "is_pushable_by_piston": false
+      "minecraft:collision_box": {
+        "height": 0,
+        "width": 0
       },
-      "minecraft:conditional_bandwidth_optimization": {
-        "default_values": {
-          "max_optimized_distance": 100.0,
-          "max_dropped_ticks": 7,
-          "use_motion_prediction_hints": true
-        }
+      "minecraft:knockback_resistance": {
+        "value": 1
+      },
+      "minecraft:fire_immune": {},
+      "minecraft:follow_range": {
+        "value": 300
       }
     },
     "events": {

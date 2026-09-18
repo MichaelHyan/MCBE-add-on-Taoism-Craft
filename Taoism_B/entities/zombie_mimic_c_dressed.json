@@ -45,7 +45,7 @@
                   "test": "has_equipment",
                   "subject": "other",
                   "domain": "hand",
-                  "value": "items:talisman_s"
+                  "value": "items:talisman"
                 },
                 {
                   "test": "is_family",

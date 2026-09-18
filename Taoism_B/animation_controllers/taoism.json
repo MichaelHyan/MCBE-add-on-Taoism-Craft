@@ -48,7 +48,7 @@
 						{"firegourd_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:firegourd') && query.is_item_equipped == 0 && query.player_level > 24"},
 						{"firegourd_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:firegourd') && query.is_item_equipped != 0 && query.player_level > 24"},
 						{"bella_a":"query.get_equipped_item_name=='bell_a' && variable.attack_time && query.scoreboard('charge') >= 0"},
-						{"seal":"query.get_equipped_item_name=='seal' && variable.attack_time && query.scoreboard('charge') >= 0"}
+						{"seal":"query.get_equipped_item_name=='seal' && variable.attack_time && query.scoreboard('godmodecd') >= 0 && query.player_level > 24"}
 						
 					]
 				},
@@ -605,7 +605,11 @@
 						"/scoreboard players set @s godmode 300",
 						"/scoreboard players set @s cdr 9",
 						"/playsound bell",
-						"/scoreboard players set @s godmodecd -500"
+						"/scoreboard players set @s godmodecd -500",
+						"/summon entity:bell_hp_a ~ ~ ~3",
+						"/summon entity:bell_hp_a ~ ~ ~-3",
+						"/summon entity:bell_hp_b ~3 ~ ~",
+						"/summon entity:bell_hp_b ~-3 ~ ~"
 					]
 				}
 			}

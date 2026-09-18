@@ -1,0 +1,29 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.bell_hp_a":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"bell_hp":"1 == 1"}
+
+					]
+				},
+				"bell_hp": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s resistace 1 255 true",
+						"/tp @s ^2 ^ ^0.5 facing @p",
+						"/damage @e[r=2,family=monster] 8",
+						"/tp @e[r=3,family=monster] @s",
+						"/particle minecraft:basic_flame_particle ~ ~1 ~"
+					]
+				}
+			}
+		}
+ 	}
+ }
