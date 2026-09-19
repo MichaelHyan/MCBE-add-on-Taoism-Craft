@@ -1,0 +1,26 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.sword_d_target":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"target":"query.health < 20"}
+					]
+				},
+				"target": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/damage @e[family=monster,r=5] 5",
+						"/particle minecraft:sonic_explosion ~ ~ ~",
+						"/effect @s instant_health 1 1 true"
+					]
+				}
+			}
+		}
+ 	}
+ }

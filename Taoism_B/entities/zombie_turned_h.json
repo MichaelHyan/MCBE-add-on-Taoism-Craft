@@ -27,11 +27,8 @@
     "components": {
       "minecraft:nameable": {},
       "minecraft:health": {
-        "value": 30,
-        "max": 30
-      },
-      "minecraft:loot": {
-        "table": "loot_tables/entities/zombie_mimic_h.json"
+        "value": 20,
+        "max": 20
       },
       "minecraft:hurt_on_condition": {
         "damage_conditions": [
