@@ -57,14 +57,13 @@
         "jump_delay": [0.5, 1.5]
       },
       "minecraft:jump.static": {},
-      "minecraft:navigation.climb": {
+      "minecraft:navigation.walk": {
         "is_amphibious": true,
         "can_swim": false,
         "can_walk": true,
         "can_sink": true,
         "avoid_damage_blocks": true
       },
-      "minecraft:can_climb": {},
       "minecraft:despawn": {
         "despawn_from_distance": {}
       },

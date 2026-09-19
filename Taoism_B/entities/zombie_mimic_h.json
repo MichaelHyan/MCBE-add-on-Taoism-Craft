@@ -2,21 +2,9 @@
   "format_version": "1.8.0",
   "minecraft:entity": {
     "description": {
-      "identifier": "entity:zombie_mimic",
+      "identifier": "entity:zombie_mimic_h",
       "is_spawnable": false,
-      "is_summonable": true,
-      "scripts": {
-        "animate": [
-          "mimic",
-          "mimic_b",
-          "detectre"
-        ]
-      },
-      "animations": {
-        "mimic": "controller.animation.mimic",
-        "mimic_b": "controller.animation.mimic_b",
-        "detectre": "controller.animation.detectre"
-      }
+      "is_summonable": true
     },
     "component_groups": {
       "despawn": {
@@ -24,18 +12,18 @@
       },
       "no_monster": {
         "minecraft:transformation": {
-          "into": "entity:zombie_turned"
+          "into": "entity:zombie_turned_h"
         }
       }
     },
     "components": {
       "minecraft:nameable": {},
       "minecraft:health": {
-        "value": 500,
-        "max": 500
+        "value": 30,
+        "max": 30
       },
       "minecraft:loot": {
-        "table": "loot_tables/entities/zombie_mimic.json"
+        "table": "loot_tables/entities/zombie_mimic_h.json"
       },
       "minecraft:hurt_on_condition": {
         "damage_conditions": [
@@ -46,18 +34,13 @@
             },
             "cause": "lava",
             "damage_per_tick": 4
-          },
-          {
-            "filters": { "test": "in_contact_with_water" },
-            "cause": "drowning",
-            "damage_per_tick": 4
           }
         ]
       },
       "minecraft:movement": {
-        "value": 0.4
+        "value": 0.2
       },
-      "minecraft:navigation.climb": {
+      "minecraft:navigation.walk": {
         "is_amphibious": true,
         "can_swim": true,
         "can_walk": true,
@@ -66,7 +49,6 @@
       },
       "minecraft:movement.basic": {},
       "minecraft:jump.static": {},
-      "minecraft:can_climb": {},
       "minecraft:despawn": {
         "despawn_from_distance": {}
       },
@@ -95,11 +77,6 @@
                   "test": "is_family",
                   "subject": "other",
                   "value": "player"
-                },
-                {
-                  "test": "is_family",
-                  "subject": "other",
-                  "value": "villager"
                 }
               ]
             },
@@ -109,6 +86,15 @@
         "must_reach": true,
         "within_radius": 300,
         "must_see": false
+      },
+      "minecraft:timer": {
+        "looping": true,
+        "randomInterval": false,
+        "time": 5.0,
+        "time_down_event": {
+          "event": "despawn",
+          "target": "self"
+        }
       },
       "minecraft:type_family": {
         "family": [
@@ -127,15 +113,11 @@
       "minecraft:underwater_movement": {
         "value": 0.30
       },
-      "minecraft:boss": {
-        "name": "entity.entity:zombie_mimic.name",
-        "should_darken_sky": true,
-        "hud_range": 55
-      },
+      "minecraft:burns_in_daylight": {},
       "minecraft:attack": {
-        "damage": 10,
+        "damage": 2,
         "effect_name": "wither",
-        "effect_duration": 60
+        "effect_duration": 2
       },
       "minecraft:behavior.melee_attack": {
         "priority": 2,
@@ -152,6 +134,13 @@
         "must_be_on_ground": false,
         "target_dist": 0.4,
         "speed_multiplier": 1
+      },
+      "minecraft:behavior.flee_sun": {
+        "priority": 2,
+        "speed_multiplier": 2
+      },
+      "minecraft:behavior.restrict_sun": {
+        "priority": 1
       },
       "minecraft:knockback_resistance": {
         "value": 0.80
@@ -173,7 +162,6 @@
         "generatesBubbles": true,
         "breathesAir": true
       },
-      "minecraft:fire_immune": {},
       "minecraft:follow_range": {
         "value": 300
       },

@@ -118,7 +118,6 @@
         "should_darken_sky": true,
         "hud_range": 55
       },
-      "minecraft:burns_in_daylight": {},
       "minecraft:attack": {
         "damage": 10,
         "effect_name": "wither",
@@ -139,13 +138,6 @@
         "must_be_on_ground": false,
         "target_dist": 0.4,
         "speed_multiplier": 1
-      },
-      "minecraft:behavior.flee_sun": {
-        "priority": 2,
-        "speed_multiplier": 2
-      },
-      "minecraft:behavior.restrict_sun": {
-        "priority": 1
       },
       "minecraft:knockback_resistance": {
         "value": 0.80
