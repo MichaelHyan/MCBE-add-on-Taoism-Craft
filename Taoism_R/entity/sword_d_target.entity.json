@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "entity:sword_d_target",
+      "materials": {
+        "default": "entity_alphablend"
+      },
+      "textures": {
+        "default": "textures/entity/sword_d_target"
+      },
+      "geometry": {
+        "default": "geometry.sword_d_target"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

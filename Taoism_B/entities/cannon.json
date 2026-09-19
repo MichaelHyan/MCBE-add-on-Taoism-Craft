@@ -38,15 +38,13 @@
             "shake_time": 0.0
           }
         },
-        "power": 1,
+        "power": 2,
         "gravity": 0,
         "uncertainty_base": 0,
         "uncertainty_multiplier": 0,
         "anchor": 1,
         "should_bounce": false,
-        "offset": [ 0, -0.1, 0 ]
-      },
-	    "minecraft:physics": {
+        "offset": [ 0, -1, 0 ]
       },
       "minecraft:pushable": {
         "is_pushable": false,

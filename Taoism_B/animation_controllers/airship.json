@@ -1,33 +1,33 @@
 {
 	"format_version": "1.8.0",
 	"animation_controllers": {
-		"controller.animation.cannon":{
+		"controller.animation.airship":{
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"cannon_a":"query.life_time > 1 && query.vertical_speed > -1"},
-						{"cannon_b":"query.life_time > 1 && query.vertical_speed < -1"}
+						{"airship_a":"math.mod(query.life_time,15) == 0"},
+						{"airship_b":"math.mod(query.life_time,1) == 0"}
 					]
 				},
-				"cannon_a": {
+				"airship_a": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
 							}
 					],
 					"on_entry": [
-						"/kill @s",
-						"/summon entity:cannon_explosion"
+						"/summon pillager"
 					]
 				},
-				"cannon_b": {
+				"airship_b": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
 							}
 					],
 					"on_entry": [
-						"/particle minecraft:campfire_smoke_particle ~ ~ ~"
+						"/particle minecraft:campfire_smoke_particle ^ ^ ^-3",
+						"/effect @e[type=pillager] slow_falling 1 1 true"
 					]
 				}
 			}

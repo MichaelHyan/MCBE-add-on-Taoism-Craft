@@ -23,7 +23,8 @@
       "minecraft:type_family": {
         "family": [
           "mob",
-          "taoism"
+          "taoism",
+          "relic"
         ]
       },
       "minecraft:pushable": {

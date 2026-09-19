@@ -4,7 +4,15 @@
     "description": {
       "identifier": "entity:airship",
       "is_summonable": true,
-      "is_spawnable": false
+      "is_spawnable": false,
+      "scripts": {
+				"animate": [
+					"airship"
+				]
+			},
+      "animations": {
+				"airship": "controller.animation.airship"
+			}
     },
     "components": {
       "minecraft:behavior.float": {
@@ -13,10 +21,10 @@
       "minecraft:behavior.float_wander": {
         "float_duration": [
           2,
-          7
+          3
         ],
         "float_wander_has_move_control": false,
-        "random_reselect": true,
+        "random_reselect": false,
         "must_reach": true,
         "priority": 2
       },
@@ -28,12 +36,15 @@
         "should_darken_sky": true,
         "hud_range": 100
       },
+      "minecraft:knockback_resistance": {
+        "value": 0.80
+      },
       "minecraft:behavior.nearest_attackable_target": {
         "must_see": true,
         "entity_types": [
           {
             "filters": {
-              "AND": [
+              "OR": [
                 {
                   "test": "is_family",
                   "subject": 1,
@@ -48,16 +59,17 @@
                 }
               ]
             },
-            "max_dist": 100
+            "max_dist": 300
           }
         ],
-        "priority": 2
+        "priority": 1
       },
       "minecraft:behavior.ranged_attack": {
         "attack_radius": 64,
         "charge_charged_trigger": 1,
         "priority": 1,
-        "charge_shoot_trigger": 2
+        "charge_shoot_trigger": 2,
+        "speed_multiplier": 1
       },
       "minecraft:breathable": {
         "suffocate_time": 0,
@@ -66,10 +78,9 @@
       "minecraft:can_fly": {},
       "minecraft:cannot_be_attacked": {},
       "minecraft:collision_box": {
-        "height": 4,
-        "width": 4
+        "height": 6,
+        "width": 6
       },
-      "minecraft:is_collidable": {},
       "minecraft:conditional_bandwidth_optimization": {},
       "minecraft:damage_sensor": {
         "triggers": {
@@ -101,7 +112,7 @@
         "table": "loot_tables/entities/airship.json"
       },
       "minecraft:movement": {
-        "value": 0.03
+        "value": 0.01
       },
       "minecraft:nameable": {},
       "minecraft:navigation.float": {
@@ -110,7 +121,7 @@
       },
       "minecraft:physics": {},
       "minecraft:pushable": {
-        "is_pushable": true,
+        "is_pushable": false,
         "is_pushable_by_piston": true
       },
       "minecraft:shooter": {

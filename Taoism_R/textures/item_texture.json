@@ -20,6 +20,12 @@
     "sword_m": {
       "textures": "textures/items/sword_m.png"
     },
+    "sword_c": {
+      "textures": "textures/items/sword_c.png"
+    },
+    "sword_d": {
+      "textures": "textures/items/sword_d.png"
+    },
     "sword_ql": {
       "textures": "textures/items/sword_ql.png"
     },

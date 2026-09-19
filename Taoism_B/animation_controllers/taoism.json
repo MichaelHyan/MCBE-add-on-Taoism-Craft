@@ -607,7 +607,7 @@
 						"/scoreboard objectives add godmodecd dummy",
 						"/scoreboard players set @s godmode 300",
 						"/scoreboard players set @s cdr 9",
-						"/playsound bell",
+						"/playsound seal",
 						"/scoreboard players set @s godmodecd -500",
 						"/summon entity:bell_hp_a ~ ~ ~3",
 						"/summon entity:bell_hp_a ~ ~ ~-3",

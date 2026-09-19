@@ -48,8 +48,6 @@
         "should_bounce": false,
         "offset": [ 0, -0.1, 0 ]
       },
-	    "minecraft:physics": {
-      },
       "minecraft:pushable": {
         "is_pushable": false,
         "is_pushable_by_piston": false

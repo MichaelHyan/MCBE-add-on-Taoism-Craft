@@ -8,12 +8,10 @@
       "is_experimental": false,
       "scripts": {
 				"animate": [
-          "relic",
 					"sword_d_target"
 				]
 			},
       "animations": {
-        "relic": "controller.animation.relic",
 				"sword_d_target": "controller.animation.sword_d_target"
 			}
     },
@@ -30,11 +28,15 @@
       "minecraft:timer": {
         "looping": true,
         "randomInterval": false,
-        "time": 10.0,
+        "time": 15.0,
         "time_down_event": {
           "event": "despawn",
           "target": "self"
         }
+      },
+      "minecraft:health": {
+        "value": 20,
+        "max": 20
       },
       "minecraft:type_family": {
         "family": [

@@ -23,7 +23,7 @@
       "minecraft:explode": {
         "causes_fire": true,
         "fuse_lit": true,
-        "power": 3,
+        "power": 1,
         "fuse_length": 0
       },
       "minecraft:physics": {},

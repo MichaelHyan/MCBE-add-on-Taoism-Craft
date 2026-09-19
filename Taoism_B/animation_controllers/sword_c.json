@@ -6,16 +6,16 @@
 				"base_jeta":{
 					"transitions":[
 						{"cpa":"query.get_equipped_item_name=='sword_c' && query.scoreboard('sword_c_level') <= 0"},
-						{"cpb":"query.get_equipped_item_name=='sword_c' && query.scoreboard('sword_c_level') > 0 && query.scoreboard('sword_c_level') <= 10"},
-						{"cpc":"query.get_equipped_item_name=='sword_c' && query.scoreboard('sword_c_level') > 10 && query.scoreboard('sword_c_level') <= 20"},
-						{"cpd":"query.get_equipped_item_name=='sword_c' && query.scoreboard('sword_c_level') > 20 && query.scoreboard('sword_c_level') <= 30"},
-						{"cpe":"query.get_equipped_item_name=='sword_c' && query.scoreboard('sword_c_level') > 30 && query.scoreboard('sword_c_level') <= 40"},
-						{"cpf":"query.get_equipped_item_name=='sword_c' && query.scoreboard('sword_c_level') > 40 && query.scoreboard('sword_c_level') <= 50"},
-						{"cpg":"query.get_equipped_item_name=='sword_c' && query.scoreboard('sword_c_level') > 50 && query.scoreboard('sword_c_level') <= 60"},
-						{"cph":"query.get_equipped_item_name=='sword_c' && query.scoreboard('sword_c_level') > 60 && query.scoreboard('sword_c_level') <= 70"},
-						{"cpi":"query.get_equipped_item_name=='sword_c' && query.scoreboard('sword_c_level') > 70 && query.scoreboard('sword_c_level') <= 80"},
-						{"cpj":"query.get_equipped_item_name=='sword_c' && query.scoreboard('sword_c_level') > 80 && query.scoreboard('sword_c_level') <= 90"},
-						{"cpk":"query.get_equipped_item_name=='sword_c' && query.scoreboard('sword_c_level') > 90"}
+						{"cpb":"query.get_equipped_item_name=='sword_c' && query.scoreboard('sword_c_level') > 0 && query.scoreboard('sword_c_level') <= 4"},
+						{"cpc":"query.get_equipped_item_name=='sword_c' && query.scoreboard('sword_c_level') > 4 && query.scoreboard('sword_c_level') <= 8"},
+						{"cpd":"query.get_equipped_item_name=='sword_c' && query.scoreboard('sword_c_level') > 8 && query.scoreboard('sword_c_level') <= 12"},
+						{"cpe":"query.get_equipped_item_name=='sword_c' && query.scoreboard('sword_c_level') > 12 && query.scoreboard('sword_c_level') <= 16"},
+						{"cpf":"query.get_equipped_item_name=='sword_c' && query.scoreboard('sword_c_level') > 16 && query.scoreboard('sword_c_level') <= 20"},
+						{"cpg":"query.get_equipped_item_name=='sword_c' && query.scoreboard('sword_c_level') > 20 && query.scoreboard('sword_c_level') <= 24"},
+						{"cph":"query.get_equipped_item_name=='sword_c' && query.scoreboard('sword_c_level') > 24 && query.scoreboard('sword_c_level') <= 28"},
+						{"cpi":"query.get_equipped_item_name=='sword_c' && query.scoreboard('sword_c_level') > 28 && query.scoreboard('sword_c_level') <= 32"},
+						{"cpj":"query.get_equipped_item_name=='sword_c' && query.scoreboard('sword_c_level') > 32 && query.scoreboard('sword_c_level') <= 36"},
+						{"cpk":"query.get_equipped_item_name=='sword_c' && query.scoreboard('sword_c_level') > 36"}
 					]
 				},
 				"cpa": {
