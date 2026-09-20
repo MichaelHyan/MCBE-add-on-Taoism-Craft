@@ -11,6 +11,8 @@
 
 [演示视频](https://www.bilibili.com/video/BV118iiBNEvh/)
 
+[3D图谱](index.html)
+
 ### 使用方式
 
 下载TaoismV5.mcaddon并使用我的世界基岩版打开

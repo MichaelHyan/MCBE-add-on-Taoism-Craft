@@ -17,5 +17,5 @@ with open('./other/graph_empty.html','r',encoding='utf-8') as f:
     g = f.read()
 g = g.replace('#CONFIG#',repr(dic))
 
-with open('./graph.html','w',encoding='utf-8') as f:
+with open('./index.html','w',encoding='utf-8') as f:
     f.write(g)
