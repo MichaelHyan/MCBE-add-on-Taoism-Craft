@@ -423,7 +423,7 @@ crafting%20table/pillb.png
 - 合成方式：3个朱砂粉 + 3张纸
 “残符【三清】承三清道力，虽为碎片，含天地本源，乃高阶符箓之基。”
 Taoism_R/textures/items/ta.png
-4
+5
 
 47
 残符【敕令】
@@ -431,7 +431,7 @@ Taoism_R/textures/items/ta.png
 - 合成方式：1个元气 + 1个桃木剑 + 1张纸
 “残符【敕令】携天庭之威，符文藏势，可引天地元素为用。”
 Taoism_R/textures/items/tb.png
-4
+5
 
 48
 残符【雷令】
@@ -439,7 +439,7 @@ Taoism_R/textures/items/tb.png
 - 合成方式：1个元气 + 1个避雷针 + 1张纸
 “残符【雷令】聚天雷之威，符文如雷纹，可召雷霆破邪。”
 Taoism_R/textures/items/tc.png
-4
+5
 
 49
 符脚【金】
@@ -447,7 +447,7 @@ Taoism_R/textures/items/tc.png
 - 合成方式：1个画符毛笔 + 1个铁剑 + 1张纸
 “符脚【金】禀金之刚，落笔带锋，增符箓破邪增益之力。”
 Taoism_R/textures/items/ua.png
-4
+5
 
 50
 符脚【木】
@@ -455,7 +455,7 @@ Taoism_R/textures/items/ua.png
 - 合成方式：1个画符毛笔 + 1个骨头 + 1张纸
 “符脚【木】含木之生，落笔蕴灵，增符箓续航控场之力。”
 Taoism_R/textures/items/ub.png
-4
+5
 
 51
 符脚【水】
@@ -463,7 +463,7 @@ Taoism_R/textures/items/ub.png
 - 合成方式：1个画符毛笔 + 1个墨囊 + 1张纸
 “符脚【水】携水之智，落笔随流，增符箓环境适应之力。”
 Taoism_R/textures/items/uc.png
-4
+5
 
 52
 符脚【火】
@@ -471,7 +471,7 @@ Taoism_R/textures/items/uc.png
 - 合成方式：1个画符毛笔 + 1个火药 + 1张纸
 “符脚【火】聚火之烈，落笔燃威，增符箓攻击灼烧之力。”
 Taoism_R/textures/items/ud.png
-4
+5
 
 53
 符脚【土】
@@ -479,7 +479,7 @@ Taoism_R/textures/items/ud.png
 - 合成方式：1个画符毛笔 + 1个泥土 + 1张纸
 “符脚【土】承土之厚，落笔镇稳，增符箓防御创造之力。”
 Taoism_R/textures/items/ue.png
-4
+5
 
 54
 符脚【风】
@@ -487,7 +487,7 @@ Taoism_R/textures/items/ue.png
 - 合成方式：1个画符毛笔 + 1个风弹 + 1张纸
 “符脚【风】携风之速，落笔随变，增符箓迅捷瞬移之力。”
 Taoism_R/textures/items/uf.png
-4
+5
 
 55
 符脚【三台星】
@@ -495,7 +495,7 @@ Taoism_R/textures/items/uf.png
 - 合成方式：1个符脚【水】 + 1个符脚【火】 + 1个符脚【土】 + 2个鱼胶 + 1个画符毛笔
 “三台星者，天之三阶，符脚承其力，合水火土之精，聚三才之气。”
 Taoism_R/textures/items/ug.png
-4
+5
 
 56
 普通的符箓
