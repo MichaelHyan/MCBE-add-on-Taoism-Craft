@@ -23,10 +23,14 @@
       "minecraft:type_family": {
         "family": [
           "mob",
-          "taoism"
+          "taoism",
+          "relic"
         ]
       },
 	    "minecraft:physics": {
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1
       },
       "minecraft:pushable": {
         "is_pushable": false,

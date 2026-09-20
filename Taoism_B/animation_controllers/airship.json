@@ -1,0 +1,36 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.airship":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"airship_a":"math.mod(query.life_time,15) == 0"},
+						{"airship_b":"math.mod(query.life_time,1) == 0"}
+					]
+				},
+				"airship_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon pillager"
+					]
+				},
+				"airship_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:campfire_smoke_particle ^ ^ ^-3",
+						"/effect @e[type=pillager] slow_falling 1 1 true"
+					]
+				}
+			}
+		}
+ 	}
+ }

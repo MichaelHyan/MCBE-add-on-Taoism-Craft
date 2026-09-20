@@ -29,27 +29,8 @@
         }
       },
       "no_monster": {
-        "minecraft:type_family": {
-          "family": [
-            "undead",
-            "mob"
-          ]
-        },
-        "minecraft:behavior.nearest_attackable_target": {
-          "priority": 2,
-          "entity_types": [
-            {
-              "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "monster"
-              },
-              "max_dist": 300
-            }
-          ],
-          "must_reach": true,
-          "within_radius": 300,
-          "must_see": true
+        "minecraft:transformation": {
+          "into": "entity:zombie_turned_c"
         }
       }
     },
@@ -76,14 +57,13 @@
         "jump_delay": [0.5, 1.5]
       },
       "minecraft:jump.static": {},
-      "minecraft:navigation.climb": {
+      "minecraft:navigation.walk": {
         "is_amphibious": true,
         "can_swim": false,
         "can_walk": true,
         "can_sink": true,
         "avoid_damage_blocks": true
       },
-      "minecraft:can_climb": {},
       "minecraft:despawn": {
         "despawn_from_distance": {}
       },
@@ -133,21 +113,22 @@
             "filters": {
               "all_of": [
                 {
-                  "test": "is_family",
-                  "subject": "other",
-                  "value": "player"
-                },
-                {
                   "test": "has_equipment",
                   "subject": "other",
                   "domain": "hand",
                   "value": "items:seal_e"
+                },
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "player"
                 }
               ]
             },
-            "event": "remove_monster",
-            "target": "self"
-          }
+            "event": "remove_monster"
+          },
+          "use_item": false,
+          "interact_text": "addon.get.items"
         }
       ],
       "minecraft:behavior.nearest_attackable_target": {

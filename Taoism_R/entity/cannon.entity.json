@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "entity:cannon",
+      "materials": {
+        "default": "entity_alphablend"
+      },
+      "textures": {
+        "default": "textures/entity/cannon"
+      },
+      "geometry": {
+        "default": "geometry.cannon"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

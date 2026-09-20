@@ -30,7 +30,8 @@
 						{"sword_sp_b":"query.get_equipped_item_name=='sword_sp' && variable.attack_time && query.player_level > 24 && query.scoreboard('swordatkcd') >= 0"},
 						{"sword_za_a":"query.get_equipped_item_name=='sword_za' && math.mod(query.life_time,3) == 0 && query.player_level > 29"},
 						{"sword_za_b":"query.get_equipped_item_name=='sword_za' && query.is_sneaking && variable.attack_time && query.player_level > 29"},
-						{"sword_za_c":"query.get_equipped_item_name=='sword_za' && query.player_level > 29"},
+						{"sword_za_c":"query.get_equipped_item_name=='sword_za' && query.is_jumping && variable.attack_time && query.scoreboard('charge') >= 0 && query.player_level > 29"},
+						{"sword_za_d":"query.get_equipped_item_name=='sword_za' && query.player_level > 29"},
 						{"sword_zb_a":"query.get_equipped_item_name=='sword_zb' && query.is_sneaking && query.scoreboard('charge') < 10 && query.scoreboard('charge') >= 0 && query.player_level > 29"},
 						{"sword_zb_b":"query.get_equipped_item_name=='sword_zb' && !query.is_sneaking && query.scoreboard('charge') == 10 && query.player_level > 29"},
 						{"sword_zb_c":"query.get_equipped_item_name=='sword_zb' && !query.is_sneaking && query.scoreboard('charge') < 10 && query.scoreboard('charge') > 0 && query.player_level > 29"},
@@ -40,7 +41,12 @@
 						{"sword_zb_g":"query.get_equipped_item_name=='sword_zb' && !variable.attack_time && query.scoreboard('chargez') >= 0 && query.player_level > 29"},
 						{"sword_m_a":"query.get_equipped_item_name=='sword_m' && variable.attack_time && query.is_sneaking && query.player_level > 29"},
 						{"sword_m_b":"query.get_equipped_item_name=='sword_m' && variable.attack_time && !query.is_sneaking && query.player_level > 29"},
-						{"whisk":"query.get_equipped_item_name=='whisk' && variable.attack_time && query.player_level > 19"}
+						{"whisk":"query.get_equipped_item_name=='whisk' && variable.attack_time && query.player_level > 19"},
+						{"sword_c_a":"query.get_equipped_item_name=='sword_c' && variable.attack_time && query.player_level > 24"},
+						{"sword_c_b":"query.get_equipped_item_name=='sword_c' && query.is_sneaking && query.scoreboard('sword_c_level') > 24 && query.player_level > 24"},
+						{"sword_c_c":"query.get_equipped_item_name=='sword_c' && !variable.attack_time && query.scoreboard('sword_c_level') > 0 && query.player_level > 24"},
+						{"sword_d_a":"query.get_equipped_item_name=='sword_d' && variable.attack_time && query.scoreboard('swordatkcd') >= 0 && query.player_level > 24"},
+						{"sword_d_b":"query.get_equipped_item_name=='sword_d' && query.is_sneaking && query.scoreboard('charge') >= 0 && query.player_level > 24"}
 					]
 				},
 				"sword_t_a": {
@@ -369,6 +375,18 @@
 						}
 					],
 					"on_entry": [
+						"/summon entity:bell_hp_a",
+						"/summon entity:bell_hp_b",
+						"/scoreboard players add @s charge -100"
+					]
+				},
+				"sword_za_d": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
 						"/fill ~-2 ~-2 ~-2 ~2 ~2 ~2 air replace water",
 						"/fill ~-1 ~-1 ~-1 ~1 ~1 ~1 dirt replace grass_block",
 						"/effect @s fire_resistance 20 1 true"
@@ -493,6 +511,68 @@
 					"on_entry": [
 						"/effect @s clear",
 						"/effect @s strength 1 2 true"
+					]
+				},
+				"sword_c_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add sword_c_level dummy",
+						"/enchant @s mending",
+						"/scoreboard players add @s sword_c_level 2"
+					]
+				},
+				"sword_c_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add sword_c_level dummy",
+						"/scoreboard players add @s sword_c_level -24",
+						"/damage @e[family=monster,r=5] 10",
+						"/damage @s 2",
+						"/particle minecraft:smash_ground_particle ~~~"
+					]
+				},
+				"sword_c_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s sword_c_level -1"
+					]
+				},
+				"sword_d_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
+						"/damage @e[tag=target] 7",
+						"/tag @e[tag=target] remove target",
+						"/scoreboard players set @s swordatkcd -3",
+						"/enchant @s sharpness 5"
+					]
+				},
+				"sword_d_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/summon entity:sword_d_target",
+						"/scoreboard players set @s charge -4"
 					]
 				}
 			}

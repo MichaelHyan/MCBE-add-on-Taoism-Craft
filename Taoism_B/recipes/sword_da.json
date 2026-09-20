@@ -1,0 +1,42 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:sword_da"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "cac",
+      "ebe",
+      "dad"
+    ],
+    "key": {
+      "a": {
+        "item": "items:soul_powder"
+      },
+      "b": {
+        "item": "items:sword_l"
+      },
+      "c": {
+        "item": "items:qi"
+      },
+      "d": {
+        "item": "items:cinnabar_powder"
+      },
+      "e": {
+        "item": "items:talisman"
+      }
+    },
+    "unlock": [
+      {
+        "item": "items:soul_powder"
+      }
+    ],
+    "result": {
+      "item": "items:sword_d",
+      "count": 1
+    }
+  }
+}

@@ -61,5 +61,17 @@
       "name": "sounds/empty",
       "stream": true
     }]
+  },
+  "scare": {
+    "sounds": [{
+      "name": "sounds/scare",
+      "stream": true
+    }]
+  },
+  "seal": {
+    "sounds": [{
+      "name": "sounds/seal",
+      "stream": true
+    }]
   }
 }

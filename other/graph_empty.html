@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>道术 TaoismCraft · 3D 图谱</title>
+<style>
+  :root { --bg: #0a0e17; --line: rgba(80,140,220,.35); }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; width: 100%; height: 100%; overflow: hidden;
+    background: var(--bg); color: #e8eef7;
+    font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", sans-serif;
+  }
+  canvas { display: block; }
+
+  #toolbar {
+    position: fixed; top: 0; left: 0; right: 0; height: 54px; z-index: 30;
+    display: flex; align-items: center; gap: 10px; padding: 0 16px;
+    background: rgba(10,15,26,.88);
+    -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  #toolbar .title {
+    font-size: 15px; font-weight: 700; color: #6fb0ff;
+    letter-spacing: 1px; margin-right: 6px; white-space: nowrap;
+  }
+  .btn {
+    padding: 8px 16px; border-radius: 8px; border: 1px solid transparent;
+    cursor: pointer; font-size: 13px; font-family: inherit; color: #fff;
+    background: linear-gradient(135deg, #1f6feb, #2ea043);
+    transition: .18s; white-space: nowrap;
+  }
+  .btn:hover { filter: brightness(1.18); }
+  .btn.ghost { background: rgba(255,255,255,.07); border-color: var(--line); color: #bcd2ee; }
+  .btn.ghost:hover { background: rgba(255,255,255,.14); }
+  #status { margin-left: auto; font-size: 12px; color: #7f95b4; }
+
+  /* 搜索框 */
+  #searchWrap { position: relative; }
+  #searchInput {
+    width: 190px; padding: 8px 12px; border-radius: 8px; font-size: 13px;
+    font-family: inherit; color: #e8eef7; background: rgba(255,255,255,.07);
+    border: 1px solid var(--line); outline: none; transition: .18s;
+  }
+  #searchInput::placeholder { color: #7f95b4; }
+  #searchInput:focus { border-color: #3f7fd4; background: rgba(255,255,255,.12); }
+  #searchResults {
+    position: absolute; top: 42px; left: 0; width: 280px; max-height: 340px;
+    overflow: auto; border-radius: 10px; z-index: 40;
+    background: rgba(14,21,35,.98); border: 1px solid var(--line);
+    box-shadow: 0 12px 36px rgba(0,0,0,.6);
+    display: none;
+  }
+  #searchResults.show { display: block; }
+  .sr-item {
+    padding: 9px 14px; font-size: 13px; color: #cbd9ed; cursor: pointer;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .sr-item:hover, .sr-item.active { background: rgba(63,127,212,.3); color: #fff; }
+  .sr-empty { padding: 10px 14px; font-size: 12.5px; color: #7f95b4; }
+
+  #panel {
+    position: fixed; top: 70px; right: 16px; width: 340px;
+    max-height: calc(100% - 100px); z-index: 25;
+    padding: 18px 18px 22px; border-radius: 14px; overflow: auto;
+    background: rgba(14,21,35,.96); border: 1px solid var(--line);
+    box-shadow: 0 16px 48px rgba(0,0,0,.65);
+    transform: translateX(400px); opacity: 0;
+    transition: transform .3s cubic-bezier(.2,.8,.2,1), opacity .3s;
+  }
+  #panel.show { transform: translateX(0); opacity: 1; }
+  #panel h2 { margin: 0 0 14px; font-size: 18px; color: #7cc0ff; line-height: 1.4; padding-right: 26px; }
+  #panelClose {
+    position: absolute; top: 10px; right: 12px; width: 26px; height: 26px;
+    line-height: 1; font-size: 20px; color: #8fa6c8; background: none;
+    border: none; cursor: pointer; border-radius: 6px;
+  }
+  #panelClose:hover { color: #fff; background: rgba(255,255,255,.1); }
+  #pImgWrap { display: none; margin: 0 0 14px; }
+  #pImg { display: block; width: 100%; border-radius: 10px; background: #fff; border: 1px solid var(--line); }
+  #pInfo { font-size: 13.5px; line-height: 1.75; color: #cbd9ed; white-space: pre-wrap; word-break: break-word; }
+  #hint {
+    position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%);
+    z-index: 20; font-size: 12px; color: #6d7f99; pointer-events: none; text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div id="toolbar">
+  <span class="title">知识图谱 · 3D</span>
+  <div id="searchWrap">
+    <input type="text" id="searchInput" placeholder="搜索节点…" autocomplete="off" spellcheck="false" />
+    <div id="searchResults"></div>
+  </div>
+  <button class="btn ghost" id="btnReload">重载内置配置</button>
+  <button class="btn ghost" id="btnLoad">加载外部配置</button>
+  <button class="btn ghost" id="btnCenter">重置视角</button>
+  <input type="file" id="fileInput" accept=".json,application/json" hidden />
+  <span id="status">初始化中…</span>
+</div>
+
+<div id="panel">
+  <button id="panelClose" title="关闭">×</button>
+  <h2 id="pName"></h2>
+  <div id="pImgWrap"><img id="pImg" alt="示意图" /></div>
+  <div id="pInfo"></div>
+</div>
+
+<div id="hint">左键旋转 · 滚轮缩放 · 右键平移 · 点击节点查看详情 · 顶部可搜索节点</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+const BUILTIN_CONFIG = #CONFIG#;
+/* ==================== 场景初始化 ==================== */
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x0a0e17);
+scene.fog = new THREE.FogExp2(0x0a0e17, 0.00025);
+
+const camera = new THREE.PerspectiveCamera(55, innerWidth / innerHeight, 1, 40000);
+camera.position.set(180, 160, 320);
+
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.setSize(innerWidth, innerHeight);
+document.body.appendChild(renderer.domElement);
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.08;
+controls.rotateSpeed = 0.8;
+
+scene.add(new THREE.AmbientLight(0xffffff, 1.4));
+const keyLight = new THREE.DirectionalLight(0xffffff, 2.2);
+keyLight.position.set(300, 400, 300);
+scene.add(keyLight);
+const rimLight = new THREE.DirectionalLight(0x5599ff, 1.2);
+rimLight.position.set(-300, -200, -300);
+scene.add(rimLight);
+
+/* 星空背景 */
+(function addStars() {
+  const count = 1400;
+  const pos = new Float32Array(count * 3);
+  for (let i = 0; i < count; i++) {
+    const r = 2500 + Math.random() * 6000;
+    const t = Math.random() * Math.PI * 2;
+    const p = Math.acos(2 * Math.random() - 1);
+    pos[i * 3]     = r * Math.sin(p) * Math.cos(t);
+    pos[i * 3 + 1] = r * Math.cos(p);
+    pos[i * 3 + 2] = r * Math.sin(p) * Math.sin(t);
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  const m = new THREE.PointsMaterial({
+    color: 0x4a6a99, size: 6, sizeAttenuation: true,
+    transparent: true, opacity: 0.75, depthWrite: false
+  });
+  scene.add(new THREE.Points(g, m));
+})();
+
+/* ==================== 全局状态 ==================== */
+const graphGroup = new THREE.Group();
+scene.add(graphGroup);
+
+let nodeGroup = new THREE.Group();
+let linkGroup = new THREE.Group();
+graphGroup.add(nodeGroup);
+graphGroup.add(linkGroup);
+
+let nodes = [];
+let links = [];
+let meshes = [];
+let nodeMap = new Map();
+let selectedNode = null;
+
+/* 摄像机动画状态 */
+let cameraTween = null;
+const clock = new THREE.Clock();
+
+const raycaster = new THREE.Raycaster();
+
+const elStatus    = document.getElementById('status');
+const elPanel     = document.getElementById('panel');
+const elPName     = document.getElementById('pName');
+const elPInfo     = document.getElementById('pInfo');
+const elPImg      = document.getElementById('pImg');
+const elPImgWrap  = document.getElementById('pImgWrap');
+
+const elSearchInput   = document.getElementById('searchInput');
+const elSearchResults = document.getElementById('searchResults');
+
+/* ==================== 工具函数 ==================== */
+function pick(obj, keys) {
+  for (const k of keys) {
+    const v = obj[k];
+    if (v !== undefined && v !== null && String(v).trim() !== '') return v;
+  }
+  return undefined;
+}
+
+function roundRect(ctx, x, y, w, h, r) {
+  if (w < 2 * r) r = w / 2;
+  if (h < 2 * r) r = h / 2;
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.arcTo(x + w, y, x + w, y + h, r);
+  ctx.arcTo(x + w, y + h, x, y + h, r);
+  ctx.arcTo(x, y + h, x, y, r);
+  ctx.arcTo(x, y, x + w, y, r);
+  ctx.closePath();
+}
+
+/* 文字标签精灵 */
+function makeLabelSprite(text) {
+  const fontSize = 64;
+  const font = `600 ${fontSize}px "Microsoft YaHei","PingFang SC",sans-serif`;
+  const canvas = document.createElement('canvas');
+  let ctx = canvas.getContext('2d');
+  ctx.font = font;
+  const textW = ctx.measureText(text).width;
+
+  const padX = 30, padY = 16;
+  canvas.width  = Math.ceil(textW + padX * 2);
+  canvas.height = Math.ceil(fontSize + padY * 2);
+
+  ctx = canvas.getContext('2d');
+  ctx.font = font;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+
+  ctx.fillStyle = 'rgba(8,14,26,0.78)';
+  roundRect(ctx, 2, 2, canvas.width - 4, canvas.height - 4, 22);
+  ctx.fill();
+  ctx.lineWidth = 3;
+  ctx.strokeStyle = 'rgba(110,170,255,0.6)';
+  ctx.stroke();
+
+  ctx.fillStyle = '#e2f0ff';
+  ctx.fillText(text, canvas.width / 2, canvas.height / 2 + 2);
+
+  const tex = new THREE.CanvasTexture(canvas);
+  tex.anisotropy = 4;
+  tex.minFilter = THREE.LinearFilter;
+
+  const mat = new THREE.SpriteMaterial({
+    map: tex, transparent: true, depthTest: false, depthWrite: false, fog: false
+  });
+  const sprite = new THREE.Sprite(mat);
+  const targetH = 10;
+  const scale = targetH / canvas.height;
+  sprite.scale.set(canvas.width * scale, canvas.height * scale, 1);
+  return sprite;
+}
+
+/* 光晕贴图（缓存） */
+let _glowTex = null;
+function makeGlowTexture() {
+  if (_glowTex) return _glowTex;
+  const size = 128;
+  const c = document.createElement('canvas');
+  c.width = c.height = size;
+  const ctx = c.getContext('2d');
+  const g = ctx.createRadialGradient(size / 2, size / 2, 0, size / 2, size / 2, size / 2);
+  g.addColorStop(0,    'rgba(255,255,255,1)');
+  g.addColorStop(0.25, 'rgba(255,255,255,0.55)');
+  g.addColorStop(0.60, 'rgba(255,255,255,0.12)');
+  g.addColorStop(1,    'rgba(255,255,255,0)');
+  ctx.fillStyle = g;
+  ctx.fillRect(0, 0, size, size);
+  _glowTex = new THREE.CanvasTexture(c);
+  return _glowTex;
+}
+
+function disposeGroup(group) {
+  group.traverse(o => {
+    if (o.geometry) o.geometry.dispose();
+    if (o.material) {
+      if (o.material.map) o.material.map.dispose();
+      o.material.dispose();
+    }
+  });
+  group.clear();
+}
+
+function clearGraph() {
+  if (nodeGroup) { graphGroup.remove(nodeGroup); disposeGroup(nodeGroup); }
+  if (linkGroup) { graphGroup.remove(linkGroup); disposeGroup(linkGroup); }
+  _glowTex = null;
+
+  nodeGroup = new THREE.Group();
+  linkGroup = new THREE.Group();
+  graphGroup.add(nodeGroup);
+  graphGroup.add(linkGroup);
+
+  nodes = [];
+  links = [];
+  meshes = [];
+  nodeMap = new Map();
+  selectedNode = null;
+  cameraTween = null;
+  elPanel.classList.remove('show');
+}
+
+/* ==================== 数据解析 ==================== */
+function normalizeList(json) {
+  if (Array.isArray(json)) return json;
+  if (json && Array.isArray(json.nodes)) return json.nodes;
+  if (json && Array.isArray(json.data))  return json.data;
+  if (json && Array.isArray(json.list))  return json.list;
+  throw new Error('配置格式应为数组：[{序号,名字,信息,示意图地址,父节点序号}, ...]');
+}
+
+function buildGraph(rawList) {
+  clearGraph();
+
+  /* --- 1. 解析节点（键名做多语言兼容，忽略空值） --- */
+  nodes = rawList.map((item, idx) => {
+    const rawId = pick(item, ['序号', 'id', 'ID', '编号', 'index', 'key']);
+    const id    = rawId !== undefined ? String(rawId).trim() : String(idx + 1);
+
+    const name = String(
+      pick(item, ['名字', '名称', 'name', 'title', '标题', 'label']) ?? ('节点 ' + id)
+    );
+    const info = String(
+      pick(item, ['信息', '描述', '详情', '说明', 'info', 'description', 'content']) ?? ''
+    );
+    const img = String(
+      pick(item, ['示意图地址', '图片地址', '示意图', '图片', 'image', 'img', 'icon', 'url']) ?? ''
+    );
+    const parentRaw = pick(
+      item, ['父节点序号', '父节点', '父节点ID', '父ID', '父id', 'parent', 'parentId', 'parent_id']
+    );
+    const parentId = parentRaw !== undefined ? String(parentRaw).trim() : '';
+
+    return { id, name, info, img, parentId, _i: idx };
+  });
+
+  nodeMap = new Map();
+  nodes.forEach(n => { if (!nodeMap.has(n.id)) nodeMap.set(n.id, n); });
+
+  /* --- 2. 依据父节点序号建立连接（父为空 / 找不到 / 自环 均跳过） --- */
+  links = [];
+  nodes.forEach(n => {
+    if (!n.parentId) return;
+    if (n.parentId === n.id) return;
+    const p = nodeMap.get(n.parentId);
+    if (p) links.push({ source: n, target: p });
+  });
+
+  /* --- 3. 计算层级（用于配色与尺寸） --- */
+  const depthCache = new Map();
+  function depthOf(node) {
+    if (depthCache.has(node.id)) return depthCache.get(node.id);
+    let d = 0, cur = node;
+    const seen = new Set([node.id]);
+    while (cur && cur.parentId && nodeMap.has(cur.parentId) && !seen.has(cur.parentId)) {
+      seen.add(cur.parentId);
+      cur = nodeMap.get(cur.parentId);
+      d++;
+      if (d > 100) break;
+    }
+    depthCache.set(node.id, d);
+    return d;
+  }
+  nodes.forEach(n => { n.depth = depthOf(n); });
+  let maxDepth = 1;
+  nodes.forEach(n => { if (n.depth > maxDepth) maxDepth = n.depth; });
+
+  /* --- 4. 度数 --- */
+  const degMap = new Map();
+  links.forEach(l => {
+    degMap.set(l.source.id, (degMap.get(l.source.id) || 0) + 1);
+    degMap.set(l.target.id, (degMap.get(l.target.id) || 0) + 1);
+  });
+
+  /* --- 5. 计算布局 --- */
+  runLayout();
+
+  /* --- 6. 生成节点 --- */
+  const sphereGeo = new THREE.SphereGeometry(1, 24, 18);
+  nodes.forEach(n => {
+    const deg = degMap.get(n.id) || 0;
+    const radius = Math.max(5, 9 - n.depth * 0.9) + Math.min(deg, 6) * 0.6;
+    const hue = 0.58 - (n.depth / maxDepth) * 0.58; // 蓝 -> 红
+    const color = new THREE.Color().setHSL(hue, 0.72, 0.56);
+
+    const mat = new THREE.MeshStandardMaterial({
+      color: color,
+      emissive: color.clone().multiplyScalar(0.45),
+      emissiveIntensity: 1,
+      roughness: 0.35,
+      metalness: 0.25
+    });
+    const mesh = new THREE.Mesh(sphereGeo, mat);
+    mesh.position.set(n.x, n.y, n.z);
+    mesh.scale.setScalar(radius);
+    mesh.userData.node = n;
+    n.mesh = mesh;
+    n.radius = radius;
+    n.baseColor = color;
+    nodeGroup.add(mesh);
+    meshes.push(mesh);
+
+    // 光晕
+    const halo = new THREE.Sprite(new THREE.SpriteMaterial({
+      map: makeGlowTexture(), color: color, transparent: true, opacity: 0.5,
+      depthWrite: false, blending: THREE.AdditiveBlending, fog: false
+    }));
+    halo.scale.setScalar(radius * 7);
+    halo.position.copy(mesh.position);
+    n.halo = halo;
+    nodeGroup.add(halo);
+
+    // 名字标签
+    const label = makeLabelSprite(n.name);
+    label.position.set(n.x, n.y + radius + 9, n.z);
+    n.label = label;
+    nodeGroup.add(label);
+  });
+
+  /* --- 7. 生成连线 --- */
+  links.forEach(l => {
+    const geo = new THREE.BufferGeometry().setFromPoints([
+      new THREE.Vector3(l.source.x, l.source.y, l.source.z),
+      new THREE.Vector3(l.target.x, l.target.y, l.target.z)
+    ]);
+    const mat = new THREE.LineBasicMaterial({ color: 0x3f6394, transparent: true, opacity: 0.42 });
+    const line = new THREE.Line(geo, mat);
+    l.line = line;
+    linkGroup.add(line);
+  });
+
+  fitView();
+  elStatus.textContent = `已加载 ${nodes.length} 个节点 · ${links.length} 条连接`;
+}
+
+/* ==================== 布局：层级初始化 + 力导向微调 ==================== */
+function runLayout() {
+  const n = nodes.length;
+  if (!n) return;
+
+  const GOLDEN = Math.PI * (3 - Math.sqrt(5));
+
+  /* --- 构建父子邻接（source 为子，target 为父） --- */
+  const childrenMap = new Map();
+  const parentMap = new Map();
+  nodes.forEach(nd => childrenMap.set(nd.id, []));
+  links.forEach(l => {
+    childrenMap.get(l.target.id).push(l.source);
+    parentMap.set(l.source.id, l.target);
+  });
+  const roots = nodes.filter(nd => !parentMap.has(nd.id));
+  if (!roots.length) roots.push(nodes[0]);
+
+  /* --- 层级初始化：子节点围绕父节点球面分布，保证关联节点聚拢 --- */
+  const LINK_DIST = 92;
+  const placed = new Set();
+  const queue = [];
+
+  roots.forEach((r, i) => {
+    const ang = roots.length > 1 ? (i / roots.length) * Math.PI * 2 : 0;
+    const rr = roots.length > 1 ? 140 : 0;
+    r.x = Math.cos(ang) * rr;
+    r.y = 0;
+    r.z = Math.sin(ang) * rr;
+    r.vx = r.vy = r.vz = 0;
+    placed.add(r.id);
+    queue.push(r);
+  });
+
+  while (queue.length) {
+    const cur = queue.shift();
+    const kids = (childrenMap.get(cur.id) || []).filter(k => !placed.has(k.id));
+    const k = kids.length;
+    kids.forEach((child, j) => {
+      placed.add(child.id);
+      const y = k === 1 ? 0.35 : 1 - (j / (k - 1)) * 2;      // -1 .. 1
+      const rxz = Math.sqrt(Math.max(0, 1 - y * y));
+      const theta = GOLDEN * j + (cur._i || 0) * 0.7;
+      child.x = cur.x + Math.cos(theta) * rxz * LINK_DIST;
+      child.y = cur.y + y * LINK_DIST;
+      child.z = cur.z + Math.sin(theta) * rxz * LINK_DIST;
+      child.vx = child.vy = child.vz = 0;
+      queue.push(child);
+    });
+  }
+
+  /* 未连入父子链的孤立节点：球面均匀分布 */
+  nodes.forEach((nd, i) => {
+    if (placed.has(nd.id)) return;
+    const t = (i + 0.5) / n;
+    const phi = Math.acos(1 - 2 * t);
+    const theta = GOLDEN * i;
+    const R = 260;
+    nd.x = R * Math.sin(phi) * Math.cos(theta);
+    nd.y = R * Math.cos(phi);
+    nd.z = R * Math.sin(phi) * Math.sin(theta);
+    nd.vx = nd.vy = nd.vz = 0;
+  });
+
+  /* --- 力导向微调：强化连接、抑制过度扩散 --- */
+  const REP       = 12000;   // 斥力强度（较原值下调，避免关联节点被推开）
+  const SPRING_K  = 0.05;    // 弹簧刚度（增强，拉近关联节点）
+  const REST      = LINK_DIST * 0.8; // 弹簧自然长度（缩短）
+  const CENTER_K  = 0.0016;  // 向心引力
+  const DAMPING   = 0.60;
+  const MAX_SPEED = 18;
+  const ITER      = 400;
+
+  const fx = new Float64Array(n);
+  const fy = new Float64Array(n);
+  const fz = new Float64Array(n);
+
+  for (let iter = 0; iter < ITER; iter++) {
+    fx.fill(0); fy.fill(0); fz.fill(0);
+
+    // 节点间斥力
+    for (let i = 0; i < n; i++) {
+      const a = nodes[i];
+      for (let j = i + 1; j < n; j++) {
+        const b = nodes[j];
+        let ux = a.x - b.x, uy = a.y - b.y, uz = a.z - b.z;
+        let d2 = ux * ux + uy * uy + uz * uz;
+        if (d2 < 1) {
+          ux = Math.random() - 0.5;
+          uy = Math.random() - 0.5;
+          uz = Math.random() - 0.5;
+          d2 = ux * ux + uy * uy + uz * uz + 0.5;
+        }
+        const d = Math.sqrt(d2);
+        const f = REP / d2;
+        const gx = ux / d * f, gy = uy / d * f, gz = uz / d * f;
+        fx[i] += gx; fy[i] += gy; fz[i] += gz;
+        fx[j] -= gx; fy[j] -= gy; fz[j] -= gz;
+      }
+    }
+
+    // 弹簧力（关联节点相互收拢）
+    for (const l of links) {
+      const a = l.source, b = l.target;
+      const ia = a._i, ib = b._i;
+      let ux = a.x - b.x, uy = a.y - b.y, uz = a.z - b.z;
+      let d = Math.sqrt(ux * ux + uy * uy + uz * uz);
+      if (d < 0.001) d = 0.001;
+      const f = (d - REST) * SPRING_K;
+      const gx = ux / d * f, gy = uy / d * f, gz = uz / d * f;
+      fx[ia] -= gx; fy[ia] -= gy; fz[ia] -= gz;
+      fx[ib] += gx; fy[ib] += gy; fz[ib] += gz;
+    }
+
+    // 向心引力 + 速度积分
+    for (let i = 0; i < n; i++) {
+      const nd = nodes[i];
+      fx[i] -= nd.x * CENTER_K;
+      fy[i] -= nd.y * CENTER_K;
+      fz[i] -= nd.z * CENTER_K;
+
+      nd.vx = (nd.vx + fx[i]) * DAMPING;
+      nd.vy = (nd.vy + fy[i]) * DAMPING;
+      nd.vz = (nd.vz + fz[i]) * DAMPING;
+
+      const sp = Math.hypot(nd.vx, nd.vy, nd.vz);
+      if (sp > MAX_SPEED) {
+        const kk = MAX_SPEED / sp;
+        nd.vx *= kk; nd.vy *= kk; nd.vz *= kk;
+      }
+
+      nd.x += nd.vx;
+      nd.y += nd.vy;
+      nd.z += nd.vz;
+    }
+  }
+}
+
+/* ==================== 视角自适应 ==================== */
+function fitView() {
+  if (!nodes.length) return;
+  cameraTween = null;
+
+  const box = new THREE.Box3();
+  const v = new THREE.Vector3();
+  nodes.forEach(n => box.expandByPoint(v.set(n.x, n.y, n.z)));
+
+  const center = box.getCenter(new THREE.Vector3());
+  const radius = Math.max(box.getSize(new THREE.Vector3()).length() / 2, 60);
+
+  const fovRad = THREE.MathUtils.degToRad(camera.fov);
+  const dist = (radius / Math.sin(fovRad / 2)) * 1.05;
+
+  const dir = new THREE.Vector3(0.6, 0.45, 1).normalize();
+  camera.position.copy(center.clone().add(dir.multiplyScalar(dist)));
+  controls.target.copy(center);
+  controls.minDistance = Math.max(radius * 0.15, 20);
+  controls.maxDistance = radius * 15;
+
+  camera.near = Math.max(0.5, radius / 200);
+  camera.far  = radius * 40 + 8000;
+  camera.updateProjectionMatrix();
+  controls.update();
+}
+
+/* ==================== 选中 / 面板 ==================== */
+function restoreAll() {
+  nodes.forEach(n => {
+    n.mesh.scale.setScalar(n.radius);
+    n.mesh.material.emissiveIntensity = 1;
+    if (n.halo) {
+      n.halo.material.opacity = 0.5;
+      n.halo.scale.setScalar(n.radius * 7);
+    }
+  });
+  links.forEach(l => {
+    l.line.material.color.setHex(0x3f6394);
+    l.line.material.opacity = 0.42;
+  });
+}
+
+function clearSelection(silent) {
+  restoreAll();
+  selectedNode = null;
+  if (!silent) elPanel.classList.remove('show');
+}
+
+function selectNode(node) {
+  clearSelection(true);
+  selectedNode = node;
+
+  node.mesh.scale.setScalar(node.radius * 1.6);
+  node.mesh.material.emissiveIntensity = 2.6;
+  if (node.halo) {
+    node.halo.material.opacity = 0.95;
+    node.halo.scale.setScalar(node.radius * 11);
+  }
+
+  links.forEach(l => {
+    const active = (l.source === node || l.target === node);
+    l.line.material.color.setHex(active ? 0x7fd4ff : 0x2b4058);
+    l.line.material.opacity = active ? 1.0 : 0.15;
+  });
+
+  showPanel(node);
+}
+
+function showPanel(node) {
+  elPName.textContent = node.name;
+
+  if (node.img) {
+    elPImgWrap.style.display = 'block';
+    elPImg.onerror = () => { elPImgWrap.style.display = 'none'; };
+    elPImg.onload  = () => { elPImgWrap.style.display = 'block'; };
+    elPImg.src = node.img;
+  } else {
+    elPImgWrap.style.display = 'none';
+    elPImg.removeAttribute('src');
+  }
+
+  elPInfo.textContent = node.info || '（暂无详细信息）';
+  elPanel.classList.add('show');
+  elPanel.scrollTop = 0;
+}
+
+/* ==================== 聚焦节点（自动移动摄像机） ==================== */
+function focusNode(node, opts) {
+  selectNode(node);
+
+  const options = opts || {};
+  const dist = options.dist || Math.max(node.radius * 16, 150);
+  const _toNode = camera.position.clone().sub(new THREE.Vector3(node.x, node.y, node.z)); const dir = options.dir || (_toNode.lengthSq() < 1e-6 ? new THREE.Vector3(0.55, 0.42, 0.9).normalize() : _toNode.normalize());
+
+  const targetPos = new THREE.Vector3(node.x, node.y, node.z);
+  const camPos    = targetPos.clone().add(dir.multiplyScalar(dist));
+
+  cameraTween = {
+    fromPos:    camera.position.clone(),
+    toPos:      camPos,
+    fromTarget: controls.target.clone(),
+    toTarget:   targetPos.clone(),
+    t: 0,
+    dur: 0.85
+  };
+}
+
+/* ==================== 交互：点击拾取 ==================== */
+let pointerDownPos = null;
+
+renderer.domElement.addEventListener('pointerdown', e => {
+  pointerDownPos = { x: e.clientX, y: e.clientY, button: e.button };
+  cameraTween = null; // 用户开始操作即打断摄像机动画
+});
+
+renderer.domElement.addEventListener('pointerup', e => {
+  const start = pointerDownPos;
+  pointerDownPos = null;
+  if (!start) return;
+  if (start.button !== 0) return;
+
+  const moved = Math.hypot(e.clientX - start.x, e.clientY - start.y);
+  if (moved > 6) return; // 拖拽旋转，不算点击
+
+  const rect = renderer.domElement.getBoundingClientRect();
+  const mouse = new THREE.Vector2(
+    ((e.clientX - rect.left) / rect.width) * 2 - 1,
+    -((e.clientY - rect.top) / rect.height) * 2 + 1
+  );
+  raycaster.setFromCamera(mouse, camera);
+  const hits = raycaster.intersectObjects(meshes, false);
+
+  if (hits.length > 0) focusNode(hits[0].object.userData.node);
+  else clearSelection();
+});
+
+/* 用户旋转/缩放也打断动画 */
+controls.addEventListener('start', () => { cameraTween = null; });
+
+/* ==================== 搜索功能 ==================== */
+let searchActiveIndex = -1;
+let searchMatches = [];
+
+function hideSearchResults() {
+  elSearchResults.classList.remove('show');
+  searchActiveIndex = -1;
+}
+
+function updateSearchActive() {
+  const items = elSearchResults.querySelectorAll('.sr-item');
+  items.forEach((el, i) => el.classList.toggle('active', i === searchActiveIndex));
+}
+
+function chooseSearchResult(node) {
+  if (!node) return;
+  elSearchInput.value = node.name;
+  hideSearchResults();
+  focusNode(node);
+}
+
+function renderSearchResults(keyword) {
+  const kw = keyword.trim().toLowerCase();
+  elSearchResults.innerHTML = '';
+  searchActiveIndex = -1;
+
+  if (!kw) { hideSearchResults(); return; }
+
+  searchMatches = nodes
+    .filter(n => n.name.toLowerCase().includes(kw))
+    .slice(0, 15);
+
+  if (!searchMatches.length) {
+    elSearchResults.innerHTML = '<div class="sr-empty">无匹配节点</div>';
+    elSearchResults.classList.add('show');
+    return;
+  }
+
+  searchMatches.forEach(n => {
+    const item = document.createElement('div');
+    item.className = 'sr-item';
+    item.textContent = n.name;
+    item.title = n.name;
+    item.addEventListener('mousedown', ev => {
+      ev.preventDefault(); // 防止输入框失焦
+      chooseSearchResult(n);
+    });
+    elSearchResults.appendChild(item);
+  });
+  elSearchResults.classList.add('show');
+}
+
+elSearchInput.addEventListener('input', () => {
+  renderSearchResults(elSearchInput.value);
+});
+
+elSearchInput.addEventListener('keydown', e => {
+  if (e.key === 'ArrowDown') {
+    e.preventDefault();
+    if (!searchMatches.length) return;
+    searchActiveIndex = Math.min(searchActiveIndex + 1, searchMatches.length - 1);
+    updateSearchActive();
+  } else if (e.key === 'ArrowUp') {
+    e.preventDefault();
+    if (!searchMatches.length) return;
+    searchActiveIndex = Math.max(searchActiveIndex - 1, 0);
+    updateSearchActive();
+  } else if (e.key === 'Enter') {
+    e.preventDefault();
+    const idx = searchActiveIndex >= 0 ? searchActiveIndex : 0;
+    if (searchMatches[idx]) chooseSearchResult(searchMatches[idx]);
+  } else if (e.key === 'Escape') {
+    hideSearchResults();
+    elSearchInput.blur();
+  }
+});
+
+elSearchInput.addEventListener('blur', () => {
+  // 延迟隐藏，允许点击结果项
+  setTimeout(hideSearchResults, 120);
+});
+elSearchInput.addEventListener('focus', () => {
+  if (elSearchInput.value.trim()) renderSearchResults(elSearchInput.value);
+});
+
+/* ==================== 数据加载 ==================== */
+const fileInput = document.getElementById('fileInput');
+
+document.getElementById('btnReload').addEventListener('click', () => {
+  loadData(BUILTIN_CONFIG);
+});
+document.getElementById('btnLoad').addEventListener('click', () => fileInput.click());
+document.getElementById('btnCenter').addEventListener('click', () => fitView());
+document.getElementById('panelClose').addEventListener('click', () => clearSelection());
+
+fileInput.addEventListener('change', () => {
+  const file = fileInput.files && fileInput.files[0];
+  if (!file) return;
+  readFile(file);
+  fileInput.value = '';
+});
+
+// 拖拽 JSON 文件到页面（临时覆盖内置配置）
+document.addEventListener('dragover', e => e.preventDefault());
+document.addEventListener('drop', e => {
+  e.preventDefault();
+  const file = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+  if (file) readFile(file);
+});
+
+function readFile(file) {
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const json = JSON.parse(reader.result);
+      loadData(json);
+    } catch (err) {
+      console.error(err);
+      elStatus.textContent = '解析失败：' + err.message;
+      alert('配置文件解析失败：\n' + err.message);
+    }
+  };
+  reader.readAsText(file, 'utf-8');
+}
+
+function loadData(json) {
+  let raw;
+  try {
+    raw = normalizeList(json);
+  } catch (err) {
+    elStatus.textContent = err.message;
+    return;
+  }
+  if (!raw.length) { elStatus.textContent = '配置为空'; return; }
+  buildGraph(raw);
+}
+
+/* ==================== 渲染循环 ==================== */
+function animate() {
+  requestAnimationFrame(animate);
+  const dt = clock.getDelta();
+
+  // 摄像机聚焦动画（easeInOutQuad）
+  if (cameraTween) {
+    cameraTween.t += dt / cameraTween.dur;
+    let k = Math.min(cameraTween.t, 1);
+    const e = k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
+    camera.position.lerpVectors(cameraTween.fromPos, cameraTween.toPos, e);
+    controls.target.lerpVectors(cameraTween.fromTarget, cameraTween.toTarget, e);
+    if (k >= 1) cameraTween = null;
+  }
+
+  controls.update();
+
+  const t = performance.now() * 0.001;
+  nodes.forEach((n, i) => {
+    if (n.halo) {
+      n.halo.material.opacity = (selectedNode === n)
+        ? 0.95
+        : 0.42 + Math.sin(t * 1.5 + i) * 0.08;
+    }
+  });
+
+  renderer.render(scene, camera);
+}
+
+addEventListener('resize', () => {
+  camera.aspect = innerWidth / innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth, innerHeight);
+});
+
+/* ==================== 启动：直接渲染内置配置 ==================== */
+animate();
+loadData(BUILTIN_CONFIG);
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.mimic_h":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"mimic_h_a":"query.life_time == 1"},
+						{"mimic_h_b":"query.life_time >= 2"}
+					]
+				},
+				"mimic_h_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @p",
+						"/tp @p ~ ~ ~ facing ~ ~ ~-1",
+						"/summon entity:zombie_mimic_h ~ ~ ~-1",
+						"/effect @e[r=2] weakness 1 255 true",
+						"/playsound scare @p",
+						"/tp @n[type=entity:zombie_mimic_h] ~ ~ ~-1 facing ~ ~ ~1",
+						"/effect @p darkness 5 1 true",
+						"/inputpermission set @p camera disabled",
+						"/inputpermission set @p movement disabled"
+					]
+				},
+				"mimic_h_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/inputpermission set @a camera enabled",
+						"/inputpermission set @a movement enabled"
+					]
+				}
+			}
+		}
+ 	}
+ }

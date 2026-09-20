@@ -20,8 +20,17 @@
     "sword_m": {
       "textures": "textures/items/sword_m.png"
     },
+    "sword_c": {
+      "textures": "textures/items/sword_c.png"
+    },
+    "sword_d": {
+      "textures": "textures/items/sword_d.png"
+    },
     "sword_ql": {
       "textures": "textures/items/sword_ql.png"
+    },
+    "soul_powder": {
+      "textures": "textures/items/soul_powder.png"
     },
     "talisman_ql": {
       "textures": "textures/items/talisman_ql.png"
@@ -430,6 +439,9 @@
     },
     "seal": {
       "textures":"textures/items/seal.png"
+    },
+    "seal_e": {
+      "textures":"textures/items/seal_e.png"
     },
     "dumpling_a": {
       "textures":"textures/ny/dumpling_a.png"

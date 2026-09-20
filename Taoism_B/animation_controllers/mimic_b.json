@@ -5,7 +5,7 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"restore":"math.mod(query.life_time,5) == 0 && math.random_integer(0,1) == 1"}
+						{"restore":"math.mod(query.life_time,5) == 0 && math.random_integer(0,3) == 1"}
 					]
 				},
 				"restore": {
@@ -15,7 +15,7 @@
 							}
 					],
 					"on_entry": [
-						"/camera @a[r=20] fade time 1 1 1"
+						"/camera @a[r=10] fade time 1 1 1"
 					]
 				}
 			}
