@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>知识图谱 · 3D 视图</title>
+<style>
+  :root { --bg: #0a0e17; --line: rgba(80,140,220,.35); }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; width: 100%; height: 100%; overflow: hidden;
+    background: var(--bg); color: #e8eef7;
+    font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", sans-serif;
+  }
+  canvas { display: block; }
+
+  #toolbar {
+    position: fixed; top: 0; left: 0; right: 0; height: 54px; z-index: 30;
+    display: flex; align-items: center; gap: 10px; padding: 0 16px;
+    background: rgba(10,15,26,.88);
+    -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  #toolbar .title {
+    font-size: 15px; font-weight: 700; color: #6fb0ff;
+    letter-spacing: 1px; margin-right: 6px; white-space: nowrap;
+  }
+  .btn {
+    padding: 8px 16px; border-radius: 8px; border: 1px solid transparent;
+    cursor: pointer; font-size: 13px; font-family: inherit; color: #fff;
+    background: linear-gradient(135deg, #1f6feb, #2ea043);
+    transition: .18s; white-space: nowrap;
+  }
+  .btn:hover { filter: brightness(1.18); }
+  .btn.ghost { background: rgba(255,255,255,.07); border-color: var(--line); color: #bcd2ee; }
+  .btn.ghost:hover { background: rgba(255,255,255,.14); }
+  #status { margin-left: auto; font-size: 12px; color: #7f95b4; }
+
+  #panel {
+    position: fixed; top: 70px; right: 16px; width: 340px;
+    max-height: calc(100% - 100px); z-index: 25;
+    padding: 18px 18px 22px; border-radius: 14px; overflow: auto;
+    background: rgba(14,21,35,.96); border: 1px solid var(--line);
+    box-shadow: 0 16px 48px rgba(0,0,0,.65);
+    transform: translateX(400px); opacity: 0;
+    transition: transform .3s cubic-bezier(.2,.8,.2,1), opacity .3s;
+  }
+  #panel.show { transform: translateX(0); opacity: 1; }
+  #panel h2 { margin: 0 0 14px; font-size: 18px; color: #7cc0ff; line-height: 1.4; padding-right: 26px; }
+  #panelClose {
+    position: absolute; top: 10px; right: 12px; width: 26px; height: 26px;
+    line-height: 1; font-size: 20px; color: #8fa6c8; background: none;
+    border: none; cursor: pointer; border-radius: 6px;
+  }
+  #panelClose:hover { color: #fff; background: rgba(255,255,255,.1); }
+  #pImgWrap { display: none; margin: 0 0 14px; }
+  #pImg { display: block; width: 100%; border-radius: 10px; background: #fff; border: 1px solid var(--line); }
+  #pInfo { font-size: 13.5px; line-height: 1.75; color: #cbd9ed; white-space: pre-wrap; word-break: break-word; }
+  #hint {
+    position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%);
+    z-index: 20; font-size: 12px; color: #6d7f99; pointer-events: none; text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div id="toolbar">
+  <span class="title">知识图谱 · 3D</span>
+  <button class="btn ghost" id="btnReload">重载内置配置</button>
+  <button class="btn ghost" id="btnLoad">加载外部配置</button>
+  <button class="btn ghost" id="btnCenter">重置视角</button>
+  <input type="file" id="fileInput" accept=".json,application/json" hidden />
+  <span id="status">初始化中…</span>
+</div>
+
+<div id="panel">
+  <button id="panelClose" title="关闭">×</button>
+  <h2 id="pName"></h2>
+  <div id="pImgWrap"><img id="pImg" alt="示意图" /></div>
+  <div id="pInfo"></div>
+</div>
+
+<div id="hint">左键旋转 · 滚轮缩放 · 右键平移 · 点击节点查看详情</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+const BUILTIN_CONFIG = [{'index': '0', 'name': '[add-on]道教仙术扩展包', 'description': '一个融合传统道教文化与奇幻玩法的add-on\n道教之道，法于自然，和于阴阳，通于鬼神。\n此扩展包秉承道家“天人合一”之理念，\n将千年道教文化精髓融入方块世界，\n让玩家在探索中体悟“道生一，一生二，二生三，三生万物”之妙，\n感受符箓、法器、修行之趣，于游戏中窥见道教文化的深邃与博大。\n温馨提示\n- 模组制作过程中，部分内容的参考文献源自明清时代的部分典籍或著作，\n- 由于时代较近，部分玩家会将其归为“志怪小说”或“神话故事”，\n- 所以请各位玩家理性看待模组内容，\n- 我们会尽可能的为大家呈现最原汁原味的道教仙术的体验。', 'url': 'Taoism_R/title.png', 'parent': ''}, {'index': '1', 'name': '自然生成建筑类', 'description': 'none', 'url': '', 'parent': '0'}, {'index': '2', 'name': '实体/NPC类', 'description': 'none', 'url': '', 'parent': '0'}, {'index': '3', 'name': '经书类', 'description': 'none', 'url': '', 'parent': '0'}, {'index': '4', 'name': '基础材料类', 'description': 'none', 'url': '', 'parent': '0'}, {'index': '5', 'name': '符箓类', 'description': 'none', 'url': '', 'parent': '0'}, {'index': '6', 'name': '武器类', 'description': 'none', 'url': '', 'parent': '0'}, {'index': '7', 'name': '法器类', 'description': 'none', 'url': '', 'parent': '0'}, {'index': '8', 'name': '其他', 'description': 'none', 'url': '', 'parent': '0'}, {'index': '9', 'name': '特别更新', 'description': 'none', 'url': '', 'parent': '0'}, {'index': '10', 'name': '道馆（正一派）', 'description': '- 生成机制：世界自然生成，为玩法起始核心场景\n- 核心功能：\n  1. 明示投币\n  2. 内部存放丰富资源（基础材料、引导道具等）\n  3. 玩家可获取引导书，开启道教主题玩法剧情\n“道之所存，馆宇所栖，修行由此启，大道自此寻。”', 'url': 'crafting%20table/temple1.png', 'parent': '1'}, {'index': '11', 'name': '竖穴石室墓', 'description': '- 生成机制：世界自然生成，为玩法扩展场景，属于中等官员的大型墓穴\n- 核心功能：仿照真实的墓穴场景搭建，充满刺激的探险与丰厚的奖励并存。\n“潜寐黄泉下，千载永不寤。”', 'url': '', 'parent': '1'}, {'index': '12', 'name': '甲字型墓', 'description': '- 生成机制：世界自然生成，为玩法扩展场景，属于普通官员的中型墓穴\n- 核心功能：仿照真实的墓穴场景搭建，充满刺激的探险与丰厚的奖励并存。\n“幽室一已闭，千年不复朝。”', 'url': '', 'parent': '1'}, {'index': '14', 'name': '游商', 'description': '白天出现在地表，使用弓自卫，可以使用朱砂交换秘籍和家具。\n- 村子周边经常看到一位赶路的老人，他衣冠不整，也不像是现代的人，自称游商。\n- 偶尔有人提及，有长寿者惊恐，问其状貌，疾呼这并非人。\n- 不是所有鬼魅成精是为了害人，偶然也有体验人间烟火的存在。', 'url': '', 'parent': '2'}, {'index': '15', 'name': '旱魃', 'description': '阴气最重的晚上（满月之夜）或新月之夜会随机生成。拥有极高的血量和伤害，可强化其他僵尸，但受雷系法术克制，有可能会掉落尸丹。\n旱魃生成之后会持续强制改天气为晴天，同时若遭强行降雨或被水浸泡则会持续扣血。\n- 山脚下佝偻的老道总叮嘱游人，满月与新月两夜，务必关好门窗，别往后山看。\n- 传言百年前此地大旱三月，有个替村人求雨的女子被诬为灾星，沉了后山枯井。\n- 自那以后每逢月相两极之夜，井里便走出个焦衣女子，她走过的地方草枯土裂，唯有惊雷落雨时，才敢缩回井底。', 'url': '', 'parent': '2'}, {'index': '16', 'name': '跳僵（尸）', 'description': '夜晚会随机生成，拥有极高的血量，但移动速度较慢，击败后有可能会掉落尸丹碎片。\n- 相传在后坡有座无人祭扫的竖穴石室墓，老一辈都叫它 “跳尸坟”。\n- 说是前清时迁坟漏了一具棺，尸身受了山阴之气，夜里会撑着棺盖蹦出来，一步一顿顺着山道走，走得极慢却从不迷路。\n- 村里人说撞见了别跑，贴着石敢当站着，它辨不清活人气，蹦到天亮自己就“回”坟里去了。', 'url': '', 'parent': '2'}, {'index': '17', 'name': '飞僵（尸）', 'description': '夜晚会随机生成，血量比跳僵略低，但移动速度飞快，且拥有远程攻击与自我恢复/吸血的能力，击败后有可能会掉落尸丹碎片。\n- 村西陡崖上有处荒弃的岩葬洞，老一辈都叫它 “飞尸洞”。\n- 传说是古时一个劫道的飞贼被射杀在崖下，尸身没人收，浸了百年山阴瘴气，夜里能展着硬邦邦的尸衣滑翔，掠着树梢来去如风。\n- 人还没瞧见影子，颈侧已经添了血口；撞见了别追，贴着土坡伏下身，它眼拙看不清低处活气，擦着头皮就飞远了。', 'url': '', 'parent': '2'}, {'index': '18', 'name': '鬼', 'description': '鬼会且仅会在”闹鬼事件“中出现，“闹鬼事件”在玩家睡觉时会有七分之一的概率发生。鬼会持续干扰玩家的睡眠，且在一定时间后会因阳气侵蚀自动消散。\n- 在村子的西厢房第三间，老人都知道 “梦扰” 的说法。\n- 相传早年有个可怜的村民在这里被折磨致死，执念着剩下的生命，每到有人夜宿时，便会趁着人睡沉了凑到床边，想借点阳气续魂。\n- 人半梦半醒间总觉得耳边有呼吸、被角被轻拽，可一旦彻底睁眼醒透，那东西受不住阳气，慢慢的就散得无影无踪。', 'url': '', 'parent': '2'}, {'index': '19', 'name': '神秘道士', 'description': '在末地击败末影龙后与神秘遗物互动后出现，如果你能查明他的过往，可以获得一件特殊法宝。', 'url': '', 'parent': '2'}, {'index': '20', 'name': '经书（合成）', 'description': '- 核心功能：\n  1. 使用后永久增益：最大血量提升100%\n  2. 使用后获得1个「内丹」（核心物品）\n  3. 可用于开启古书支线\n- 副作用：一次性物品，使用后消耗，若在亏凹月和盈凹月以外的日子修炼，会修炼失败，遭受雷劫\n- 合成方式：7个朱砂粉 + 1个普通毛笔 + 1本书\n- 特殊经书：使用奖励箱中的经书不会失败\n“真经载道，开悟明心，得之则内丹生，体健身轻。”', 'url': 'crafting%20table/scripture_t.png', 'parent': '3'}, {'index': '21', 'name': '噬魂术（经书）', 'description': '- 核心功能：合成材料（用于制作邪道相关物品）\n- 副作用：象征「误入歧途」修炼路径，无直接使用效果\n- 获取方式：击败掠夺者后掉落\n“噬魂之术，逆道而行，虽得暂力，终堕幽冥。”', 'url': 'Taoism_R/textures/items/scripture_s.png', 'parent': '3'}, {'index': '22', 'name': '轻功（经书）', 'description': '- 核心功能：从经书中分离而成，使用后获得速度提升和跳跃提升\n- 副作用：一次性物品，使用后消耗\n- 合成方式：1个经书 + 1个羽毛\n“御风而行，不滞于形，此乃得道者动静之妙。”', 'url': 'crafting%20table/scripture_f.png', 'parent': '20'}, {'index': '23', 'name': '古书', 'description': '- 核心功能：很有年代的书，目前的文字看不懂，但日后文字会渐渐浮现\n- 获取方式：？\n“所谓修仙，不过是复归大道本源，却是无数人穷尽一生所求。到头来，那还算得上是修仙吗？”\n- 天道崩毁前，也曾是一番盛世。那时候人们还相信，修仙可以解决任何问题。\n- 这村子原本有个大侠，像是信道，倒是没见他修炼过，似乎和那观中道长交往甚好。\n- 人被杀，聚集的怨气变了厉鬼，但近年盛行杀人放火，却不见恶鬼横行，倒是地主腰间的木头玩意似乎是怨气越来越重。', 'url': 'Taoism_R/textures/items/acbook.png', 'parent': '3'}, {'index': '24', 'name': '宝经卷轴', 'description': '- 核心功能：使用后获得大量经验值，助力修行境界提升\n- 副作用：一次性物品，使用后消耗\n- 合成方式：1个元气 + 1个钻石 + 1个绿宝石 + 4个金锭\n“宝轴藏玄理，开卷蕴真智，一念悟得经中义，海量经验助修行。”', 'url': 'crafting%20table/txpa.png', 'parent': '3'}, {'index': '25', 'name': '秘籍-天罡雷法', 'description': '- 核心功能：可学习/装备\n- 使用方式：\n  - 内丹【法】模式下，绑定该秘籍，使用内丹交互\n  - 交互后获得雷法，任意攻击可释放剑气，剑气造成少量伤害和减速效果\n  - 雷法能量随等级提高而增加，攻击时消耗能量，直到耗尽\n- 获取方式：游商处购买\n”天罡指处有雷霆，便向其中役六丁。若解个中些子诀，信知造化掌中生。“', 'url': 'Taoism_R/textures/items/sebookb.png', 'parent': '3'}, {'index': '26', 'name': '秘籍-制炼七魄', 'description': '- 核心功能：可学习/装备\n- 使用方式：\n  - 内丹【法】模式下，绑定该秘籍，使用内丹交互\n  - 交互后发射7个粒子，分别可造成一次伤害\n  - 粒子伤害随等级提高而增加\n- 获取方式：游商处购买\n“制炼幽魄化七锋，内丹运处迸星踪。功高每道增威势，散击群邪一瞬空。”', 'url': 'Taoism_R/textures/items/sebookc.png', 'parent': '3'}, {'index': '27', 'name': '秘籍-存思内景', 'description': '- 核心功能：可学习/装备\n- 使用方式：\n  - 内丹【法】模式下，绑定该秘籍，使用内丹交互\n  - 静止时获得额外生命恢复\n  - 交互后短暂获取移速加成\n  - 加成类型随等级提高而增加\n- 获取方式：游商处购买\n“存思内景百骸融，静养元气血自充。运法顿生追风步，功深捷势愈无穷。”', 'url': 'Taoism_R/textures/items/sebookd.png', 'parent': '3'}, {'index': '28', 'name': '秘籍-练体', 'description': '- 核心功能：可学习/装备\n- 使用方式：\n  - 内丹【法】模式下，绑定该秘籍，使用内丹交互\n  - 交互后展开法阵，法阵生效期间对法阵内部地对生物产生伤害，给友方单位加成效果\n  - 加成类型随等级提高而增加\n- 获取方式：游商处购买\n“炼体凝罡布法坛，阵中邪秽自摧残。还将元气资同道，功愈深时效愈宽。”', 'url': 'Taoism_R/textures/items/sebooke.png', 'parent': '3'}, {'index': '29', 'name': '内丹', 'description': '- 核心功能：运气，调出元气\n- 特殊说明：元气乃生命能量，提元会损耗寿元\n- 获取方式：使用「经书」后解锁\n“内丹者，性命之根，天地灵气所凝，能化万象。”', 'url': 'Taoism_R/textures/items/pearl.png', 'parent': '4'}, {'index': '30', 'name': '元气', 'description': '- 核心功能：\n  1. 合成材料（用于制作符箓、武器、特殊道具）\n  2. 可通过「聚气」将元气攒起来为「息」，3个元气为1「息」，最多攒3「息」\n  3. 拥有「息」时可立刻取消部分法器的冷却时间，每次使用1「息」\n- 特殊说明：元气无形无相，动则生阳，耗则需补，乃修行之根基\n- 获取方式：使用「内丹」运气调出\n“元气者，性命之本，先天真炁所聚，可通万法。”', 'url': 'Taoism_R/textures/items/spe.png', 'parent': '4'}, {'index': '31', 'name': '（元）气弹/炁弹', 'description': '- 核心功能：\n  1. 使用大还丹后解除内丹限制，由内丹调出\n  2. 共有金、木、水、火、土五种属性\n  3. 命中后造成少量伤害和元素标记，使用相生元素再次命中目标后会清除上一个标记并造成大量结算伤害\n  4. 每个气弹都有相应的主动技能，到达进阶等级后下蹲+攻击释放，冷却极短\n- 特殊说明：无基础等级，不同属性的气弹进阶等级限制也不同，需达到等级才可使用主动技能\n- 主动技能：\n  1. 金元素：25级进阶\n  - 被动效果：可使用特殊的自反应，直接制造特殊元素标记并自动结算特殊标记伤害，无需主动发动\n  - 主动效果：强制清除所有元素标记并直接造成结算伤害\n  2. 木元素：10级进阶\n  - 1分钟内加速植物生长。注意：可能造成卡顿\n  3. 水元素：15级进阶\n  - 短暂治疗效果\n  4. 火元素：10级进阶\n  - 召唤灯笼，灯笼可存在3分钟，可使用火气弹攻击敌怪，该攻击可以附加火元素标记\n  5. 土元素：15级进阶\n  - 召唤龙卷风，将自己和其他生物吹上天，龙卷风会优先移动至存在的土气弹处\n- 获取方式：使用「内丹」运气调出\nTaoism_R/textures/items/spba.png\nTaoism_R/textures/items/spbb.png\nTaoism_R/textures/items/spbc.png\nTaoism_R/textures/items/spbd.png\nTaoism_R/textures/items/spbe.png', 'url': '“内丹吐炁结星弹，五德分形性各安。逢生触发玄机变，一击摧邪煞力寒。”', 'parent': '4'}, {'index': '32', 'name': '炁', 'description': '- 核心功能：\n  - 在世界中随机生成，用内丹吸收后会掉落物品「炁」，「炁」为合成材料（用于制作部分法器或武器）\n  - 等级足够时可将其凝聚炼化为其他物品\n- 特殊说明：炁为天地之本，万物之根\n“炁为天地之本，万物之根，聚则成形，散则归无，通于道而贯于形。”', 'url': 'Taoism_R/textures/items/qi.png', 'parent': '4'}, {'index': '33', 'name': '普通毛笔', 'description': '- 核心功能：合成材料（用于制作「画符毛笔」）\n- 合成方式：2个木棍 + 1个白色羊毛 可合成4个\n“笔为心之器，墨为道之痕，可书符咒，可绘阴阳。”', 'url': 'crafting%20table/brush_n.png', 'parent': '4'}, {'index': '34', 'name': '朱砂晶体', 'description': '- 核心功能：合成材料（用于制作「朱砂粉」）\n- 特殊说明：道教道具制作的基础材料，「初见端倪」\n- 获取方式：击败亡灵生物后掉落\n“朱砂禀离火之气，色赤通神，辟邪制煞，为道之灵材。”', 'url': 'Taoism_R/textures/items/cinnabar_crystal.png', 'parent': '4'}, {'index': '35', 'name': '朱砂粉', 'description': '- 核心功能：合成材料（用于制作画符毛笔、桃木剑等）\n- 合成方式：1个元气 + 1个朱砂晶体（可合成3个朱砂粉）\n“丹砂为粉，符力自生，一点通灵，镇伏邪祟。”', 'url': 'crafting%20table/cinnabar.png', 'parent': '4'}, {'index': '36', 'name': '画符毛笔', 'description': '- 核心功能：合成材料，用于制作各类符箓，制作后会返还普通毛笔\n- 合成方式：1个毛笔 + 1个朱砂粉\n“画符之笔，蘸朱砂之灵，运天地之气，落笔则鬼神应。”', 'url': 'crafting%20table/brush_p.png', 'parent': '4'}, {'index': '37', 'name': '魂魄', 'description': '- 核心功能：\n  1. 合成材料（用于制作灵剑、万魂幡），给万魂幡充能\n  2. 可被净瓶净化为元气\n- 副作用：主手持有时，玩家持续获得凋零效果\n- 获取方式：击败任意生物后掉落\n“魂为阳之精，魄为阴之质，聚散有常，顺乎天道。”', 'url': 'Taoism_R/textures/items/spirit.png', 'parent': '4'}, {'index': '38', 'name': '鱼鳔', 'description': '- 核心功能：合成材料（用于制作鱼胶）\n- 获取方式：1个生鱼肉可合成3个鱼鳔\n“鱼鳔聚水之精，炼化为胶，可固符形，为制符之辅。”', 'url': 'Taoism_R/textures/items/fish_belly.png', 'parent': '4'}, {'index': '39', 'name': '鱼胶', 'description': '- 核心功能：合成材料（用于制作高阶符箓）\n- 合成方式：将鱼鳔放置于篝火上烧制生成\n“鱼胶凝鳔之华，黏性强韧，聚符气而固其效。”', 'url': 'Taoism_R/textures/items/fish_gelatin.png', 'parent': '4'}, {'index': '40', 'name': '尸丹碎片', 'description': '- 核心功能：合成材料（用于合成尸丹）\n- 获取方式：击败跳僵有概率获得\n“枯骸凝煞结残丹，碎屑犹含蚀骨寒。莫嫌微物无多用，邪器炼成赖此端。”', 'url': 'Taoism_R/textures/items/pearlz_p.png', 'parent': '4'}, {'index': '41', 'name': '尸丹', 'description': '- 核心功能：合成材料，用于合成部分武器，后期可能会设定为邪修常用道具（更新预告）\n- 获取方式：击败旱魃会获得一个尸丹\n“枯尸历劫结丹砂，旱气阴精萃一家。留与旁门铸邪刃，一挥赤地起尘沙。”', 'url': 'crafting%20table/pearlz_o.png', 'parent': '4'}, {'index': '42', 'name': '炼化尸丹', 'description': '- 核心功能：合成材料，用于合成净炼尸丹\n- 合成方式：8个元气 + 1个尸丹\n“元炁烹丹涤秽痕，阴尸残煞渐消泯。一番炼化除浊质，留取清基作净根。”', 'url': 'crafting%20table/pearlz_s.png', 'parent': '41'}, {'index': '43', 'name': '净炼尸丹', 'description': '- 核心功能：合成材料，用于合成部分武器，后期可能会设定为正派常用道具（更新预告）\n- 合成方式：1个普通符箓 + 2个朱砂粉 + 1个炼化尸丹 + 1个元气\n“以符涤浊净阴丹，朱砂凝阳化旧寒。洗尽尸中千缕煞，堪为正道铸锋翰。”', 'url': 'crafting%20table/pearlz.png', 'parent': '42'}, {'index': '44', 'name': '大还丹', 'description': '- 取自周星驰老师的电影《武状元苏乞儿》里的大还丹，原型是《太清石壁记》记载的九鼎大还丹\n- 核心功能：当在5级以上时使用大还丹后，可切换内丹来引出不同属性的元气（气弹），同时解锁内丹法术模式\n- 合成方式：4个钻石 + 1个黏土 + 1个火药 + 1个金粒 + 1个朱砂粉 + 1个元气\n“呢粒大还丹，你食咗之后会功力大增。”', 'url': 'crafting%20table/pilla.png', 'parent': '4'}, {'index': '45', 'name': '小还丹', 'description': '- 取自周星驰老师的电影《武状元苏乞儿》里的大还丹，原型是《太清石壁记》记载的九鼎大还丹\n- 核心功能：在“闹鬼事件”发生时，可以通过食用小还丹来暂时获得充沛的阳气，以达到避免鬼魂干扰睡眠的效果\n- 合成方式：1个黏土 + 1个火药 + 1个金粒 + 1个朱砂粉 + 1个元气\n“呢粒大还丹，你食咗之……诶不对？”', 'url': 'crafting%20table/pillb.png', 'parent': '4'}, {'index': '46', 'name': '残符【三清】', 'description': '- 核心功能：合成材料（用于制作金光符、九木镇风符等三清系列符箓），自带法力\n- 合成方式：3个朱砂粉 + 3张纸\n“残符【三清】承三清道力，虽为碎片，含天地本源，乃高阶符箓之基。”', 'url': 'Taoism_R/textures/items/ta.png', 'parent': '4'}, {'index': '47', 'name': '残符【敕令】', 'description': '- 核心功能：合成材料（用于制作补金符、补木符等敕令系列符箓），自带法力\n- 合成方式：1个元气 + 1个桃木剑 + 1张纸\n“残符【敕令】携天庭之威，符文藏势，可引天地元素为用。”', 'url': 'Taoism_R/textures/items/tb.png', 'parent': '4'}, {'index': '48', 'name': '残符【雷令】', 'description': '- 核心功能用于制作雷击用于制作雷击符、金雷镇煞符等雷令系列），自带法力\n- 合成方式：1个元气 + 1个避雷针 + 1张纸\n“残符【雷令】聚天雷之威，符文如雷纹，可召雷霆破邪。”', 'url': 'Taoism_R/textures/items/tc.png', 'parent': '4'}, {'index': '49', 'name': '符脚【金】', 'description': '- 核心功能：合成材料（用于制作金雷镇煞符、金光符），自带法力\n- 合成方式：1个画符毛笔 + 1个铁剑 + 1张纸\n“符脚【金】禀金之刚，落笔带锋，增符箓破邪增益之力。”', 'url': 'Taoism_R/textures/items/ua.png', 'parent': '4'}, {'index': '50', 'name': '符脚【木】', 'description': '- 核心功能：合成材料（用于制作青木雷护符、九木镇风符、补木符），自带法力\n- 合成方式：1个画符毛笔 + 1个骨头 + 1张纸\n“符脚【木】含木之生，落笔蕴灵，增符箓续航控场之力。”', 'url': 'Taoism_R/textures/items/ub.png', 'parent': '4'}, {'index': '51', 'name': '符脚【水】', 'description': '- 核心功能：合成材料（用于制作雷水解厄符、净水符、补水符），自带法力\n- 合成方式：1个画符毛笔 + 1个墨囊 + 1张纸\n“符脚【水】携水之智，落笔随流，增符箓环境适应之力。”', 'url': 'Taoism_R/textures/items/uc.png', 'parent': '4'}, {'index': '52', 'name': '符脚【火】', 'description': '- 核心功能：合成材料（用于制作炎雷破邪符、离火符、补火符），自带法力\n- 合成方式：1个画符毛笔 + 1个火药 + 1张纸\n“符脚【火】聚火之烈，落笔燃威，增符箓攻击灼烧之力。”', 'url': 'Taoism_R/textures/items/ud.png', 'parent': '4'}, {'index': '53', 'name': '符脚【土】', 'description': '- 核心功能：合成材料（用于制作厚土雷安符、龙神土符、补土符），自带法力\n- 合成方式：1个画符毛笔 + 1个泥土 + 1张纸\n“符脚【土】承土之厚，落笔镇稳，增符箓防御创造之力。”', 'url': 'Taoism_R/textures/items/ue.png', 'parent': '4'}, {'index': '54', 'name': '符脚【风】', 'description': '- 核心功能：合成材料（用于制作雷风破煞符、缩地符、补风符），自带法力\n- 合成方式：1个画符毛笔 + 1个风弹 + 1张纸\n“符脚【风】携风之速，落笔随变，增符箓迅捷瞬移之力。”', 'url': 'Taoism_R/textures/items/uf.png', 'parent': '4'}, {'index': '55', 'name': '符脚【三台星】', 'description': '- 核心功能：合成材料（用于制作雷令镇垣三台符、三清镇元三台符、敕令安垣三台符），自带法力\n- 合成方式：1个符脚【水】 + 1个符脚【火】 + 1个符脚【土】 + 2个鱼胶 + 1个画符毛笔\n“三台星者，天之三阶，符脚承其力，合水火土之精，聚三才之气。”', 'url': 'Taoism_R/textures/items/ug.png', 'parent': '4'}, {'index': '56', 'name': '普通的符箓', 'description': '- 核心功能：\n  1. 可投掷，使用时对生物有镇压（禁止其移动）的效果\n- 副作用：一次性物品，使用后消耗\n- 合成方式：1个画符毛笔 + 1张纸\n“符箓者，天地之令，阴阳之契，可驱邪鬼，可安生灵。”', 'url': 'Taoism_R/textures/items/talisman.png', 'parent': '5'}, {'index': '57', 'name': '雷击符', 'description': '- 核心功能：\n  1. 主手持有时：移速提升、抗性提升\n  2. 使用时(右键/交互键)：会借用太上老君的法力，在周身降下天雷，天雷会自动寻找目标劈下\n- 副作用：一次性物品，使用后消耗\n- 合成方式：1个画符毛笔 + 1个残符【雷令】 + 1张纸 + 1个元气 + 1个鱼胶\n“雷为天怒，符引其威，雷击所及，邪祟消亡。”', 'url': 'Taoism_R/textures/items/talisman_t.png', 'parent': '48'}, {'index': '58', 'name': '缩地符', 'description': '- 核心功能：记录当前位置风水，可主动触发瞬移（包含笏的瞬移至亲友功能）\n- 合成方式：1个画符毛笔 + 1个残符【三清】 + 1个符脚【风】 + 1个鱼胶\n- 使用方式：包含笏的效果，左键/攻击键记录位置，并在原地生成一个微型土地庙，随后随时可使用shift/潜行键回到土地庙，的位置，可同时存在多个位置，所有玩家共享，按住space/跳跃的同时按下shift/潜行删除所有记录地点\n“缩地成寸，道法自然，一念千里，此乃通玄之妙。”', 'url': 'Taoism_R/textures/items/talisman_e.png', 'parent': '46'}, {'index': '59', 'name': '金光符', 'description': '- 核心功能(右键/交互键)：使用效果等同于金苹果（恢复生命值+基础增益）\n- 副作用：一次性物品，使用后消耗\n- 合成方式：1个画符毛笔 + 1个残符【三清】 + 1个符脚【金】 + 1个鱼胶\n“金光护体，百邪不侵，得此符者，身有灵光，福寿康宁。”', 'url': 'Taoism_R/textures/items/talisman_g.png', 'parent': '46'}, {'index': '60', 'name': '金雷镇煞符', 'description': '- 核心功能(右键/交互键)：使用时使用者获得“三五雌雄斩邪剑”buff（将秒杀效果调整为大幅增加攻击力）\n- 副作用：1. 一次性物品，使用后消耗；2. buff持续时间仅10秒\n- 合成方式：1个画符毛笔 + 1个残符【雷令】 + 1个符脚【金】 + 1个鱼胶\n“金雷镇煞，锋芒毕露，借剑符之力，短时增攻，破邪无往不利。”', 'url': 'Taoism_R/textures/items/tca.png', 'parent': '48'}, {'index': '61', 'name': '青木雷护符', 'description': '- 核心功能(右键/交互键)：使用时使用者最大血量提升400%，同时获得抗性提升与持续回血效果\n- 副作用：1. 一次性物品，使用后消耗；2. 所有效果仅持续20秒\n- 合成方式：1个画符毛笔 + 1个残符【雷令】 + 1个符脚【木】 + 1个鱼胶\n“青木蕴生机，雷力护其身，此符在手，血厚防高，续航无忧。”', 'url': 'Taoism_R/textures/items/tcb.png', 'parent': '48'}, {'index': '62', 'name': '雷水解厄符', 'description': '- 核心功能(右键/交互键)：\n  1. 引一道天雷劈向自身（无伤害），将当前天气改变为雷暴天\n  2. 为使用者增加持续回血与漂浮buff\n  3. 效果结束后自动获得缓降buff\n- 副作用：1. 一次性物品，使用后消耗；2. 回血与漂浮buff仅持续10秒，缓降buff持续30秒\n- 合成方式：1个画符毛笔 + 1个残符【雷令】 + 1个符脚【水】 + 1个鱼胶\n“雷水解厄，逆天气而变，借天雷之力获漂浮续航，危难时可破局。”', 'url': 'Taoism_R/textures/items/tcc.png', 'parent': '48'}, {'index': '63', 'name': '炎雷破邪符', 'description': '- 核心功能(右键/交互键)：\n  1. 以使用者为中心，在10×10×10范围内降下天雷（对敌人造成伤害）\n  2. 在周身15×15×15范围内生成火焰（灼烧敌人）\n  3. 使用者自身获得火抗buff，可主动熄灭周身火焰\n- 副作用：一次性物品，使用后消耗\n- 合成方式：1个画符毛笔 + 1个残符【雷令】 + 1个符脚【火】 + 1个鱼胶\n“炎雷交织，水火共威，天雷焚火齐降，邪祟无所遁形。”', 'url': 'Taoism_R/textures/items/tcd.png', 'parent': '48'}, {'index': '64', 'name': '厚土雷安符', 'description': '- 核心功能(右键/交互键)：\n  1. 以使用者为中心，生成3×3×3的土房子（可永久存在，作为临时庇护所）\n  2. 在周身10×10×10范围内随机降下雷决（密度适中，对敌人造成伤害）\n- 副作用：1. 一次性物品，使用后消耗；2. 降雷效果仅持续10秒\n- 合成方式：1个画符毛笔 + 1个残符【雷令】 + 1个符脚【土】 + 1个鱼胶\n“厚土筑屋安，雷决护周旁，此符可攻可守，危急时能安身。”', 'url': 'Taoism_R/textures/items/tce.png', 'parent': '48'}, {'index': '65', 'name': '雷风破煞符', 'description': '- 核心功能(右键/交互键)：\n  1. 使用者获得最大等级的速度提升buff\n  2. 对周身5×5×5范围内的所有生物施加减速效果\n- 副作用：1. 一次性物品，使用后消耗；2. 所有效果仅持续15秒\n- 合成方式：1个画符毛笔 + 1个残符【雷令】 + 1个符脚【风】 + 1个鱼胶\n“雷风助速，破煞制敌，己快敌慢，战场之上可掌主动权。”', 'url': 'Taoism_R/textures/items/tcf.png', 'parent': '48'}, {'index': '66', 'name': '九木镇风符', 'description': '- 核心功能(右键/交互键)：以使用者为中心，调节20×20×20范围内的风水气场，使范围内所有生物向上漂浮20秒后自然下落（无伤害，仅控场）\n- 副作用：一次性物品，使用后消耗\n- 合成方式：1个画符毛笔 + 1个残符【三清】 + 1个符脚【木】 + 1个鱼胶\n“九木镇风，控场自如，借风水之力扰敌走位，为己创造先机。”', 'url': 'Taoism_R/textures/items/tab.png', 'parent': '46'}, {'index': '67', 'name': '净水符', 'description': '- 核心功能(右键/交互键)：使用后使用者获得夜视、水下呼吸、水下速掘等所有水下相关增益buff\n- 副作用：1. 一次性物品，使用后消耗；2. 所有buff持续2分钟\n- 合成方式：1个画符毛笔 + 1个残符【三清】 + 1个符脚【水】 + 1个鱼胶\n“净水符出，水下无阻，探索如履平地。”', 'url': 'Taoism_R/textures/items/tac.png', 'parent': '46'}, {'index': '68', 'name': '离火符', 'description': '- 核心功能(右键/交互键)：以使用者为中心，生成一个永久光源，形成“紫气东来”效果（照亮区域，驱避邪祟）\n- 副作用：一次性物品，使用后消耗\n- 合成方式：1个画符毛笔 + 1个残符【三清】 + 1个符脚【火】 + 1个鱼胶\n“离火照明，紫气驱邪，黑暗邪祟皆不敢近。”', 'url': 'Taoism_R/textures/items/tad.png', 'parent': '46'}, {'index': '69', 'name': '龙神土符', 'description': '- 核心功能(右键/交互键)：\n  1. 使用者获得庇佑效果，改变周身50×50×50范围内的气场\n  2. 对范围内所有生物施加持续震慑效果（使其行动迟缓、攻击力降低）\n- 副作用：1. 一次性物品，使用后消耗；2. 效果仅持续15秒；3. 使用者自身因承受气场之力，会持续扣血\n- 合成方式：1个画符毛笔 + 1个残符【三清】 + 1个符脚【土】 + 1个鱼胶\n“龙神护土，气场镇敌，虽自损精血，却能大范围制敌，险中求胜。”', 'url': 'Taoism_R/textures/items/tae.png', 'parent': '46'}, {'index': '70', 'name': '补金符', 'description': '- 核心功能(右键/交互键)：在使用者四面八方召唤普通铁傀儡（无额外buff，仅基础战斗能力）\n- 副作用：一次性物品，使用后消耗\n- 合成方式：1个画符毛笔 + 1个残符【敕令】 + 1个符脚【金】 + 1个鱼胶\n“补金召傀儡，助战守身旁，可挡敌锋，护己安全。”', 'url': 'Taoism_R/textures/items/tba.png', 'parent': '47'}, {'index': '71', 'name': '补木符', 'description': '- 核心功能(右键/交互键)：以使用者为中心，在10×10×10范围内自动生成橡木树苗\n- 副作用：一次性物品，使用后消耗\n- 合成方式：1个画符毛笔 + 1个残符【敕令】 + 1个符脚【木】 + 1个鱼胶\n“补木生橡木，建材随手得，探索途中缺木料，此符一用解燃眉。”', 'url': 'Taoism_R/textures/items/tbb.png', 'parent': '47'}, {'index': '72', 'name': '补水符', 'description': '- 核心功能(右键/交互键)：\n  1. 以使用者为中心，生成5×5×5范围的水（可用于灌溉、灭火或创造水下环境）\n  2. 下蹲时使用收回生成的水\n- 副作用：一次性物品，使用后消耗\n- 合成方式：1个画符毛笔 + 1个残符【敕令】 + 1个符脚【水】 + 1个鱼胶\n“补水聚水源，收放皆随心，缺水环境中，此符可造水、可控水。”', 'url': 'Taoism_R/textures/items/tbc.png', 'parent': '47'}, {'index': '73', 'name': '补火符', 'description': '- 核心功能(右键/交互键)：为使用者及周围队友同时提供持续回血效果，并增加一定移速\n- 副作用：1. 一次性物品，使用后消耗；2. 所有效果仅持续30秒\n- 合成方式：1个画符毛笔 + 1个残符【敕令】 + 1个符脚【火】 + 1个鱼胶\n“补火暖身心，回血加移速，团队作战时，此符可增续航与机动性。”', 'url': 'Taoism_R/textures/items/tbd.png', 'parent': '47'}, {'index': '74', 'name': '补土符', 'description': '- 核心功能(右键/交互键)：使用后，使用者跳跃时，脚下会自动生成土块作为垫脚（可用于攀爬、过河等），需手动关闭功能\n- 合成方式：1个画符毛笔 + 1个残符【敕令】 + 1个符脚【土】 + 1个鱼胶\n“补土垫脚，攀爬无阻，跳跃生土块，险峻地形亦可轻松跨越。”', 'url': 'Taoism_R/textures/items/tbe.png', 'parent': '47'}, {'index': '75', 'name': '补风符', 'description': '- 核心功能(右键/交互键)：使用者长按鼠标右键蓄力，即可在准星处不断聚集风弹。\n- 副作用：非常危险的符箓，慎用\n- 合成方式：1个画符毛笔 + 1个残符【敕令】 + 1个符脚【风】 + 1个鱼胶\n“运气成风，蓄力御风，攻防一体，孤身作战亦无惧。”', 'url': 'Taoism_R/textures/items/tbf.png', 'parent': '47'}, {'index': '76', 'name': '开光符【闭灵】', 'description': '- 新月时使用可获得开光符【启灵】\n"新月凝灵闭中藏，待得弦时启锋芒。"', 'url': 'crafting%20table/echa.png', 'parent': '5'}, {'index': '77', 'name': '开光符【启灵】', 'description': '- 下弦月/上弦月置于副手使用时可开光剑类武器\n"弦月照剑锋，启灵开道芒，一符通灵性，凡铁化天罡。"', 'url': 'Taoism_R/textures/items/echb.png', 'parent': '5'}, {'index': '78', 'name': '雷令镇垣三台符', 'description': '- 核心功能(置于副手)：为武器类物品附魔火焰附加\n- 合成方式：1个画符毛笔 + 1个残符【雷令】 + 1个符脚【三台星】 + 1个鱼胶\n“雷令召三台，镇垣筑雷墙，屏障护友军，反伤惩来敌。”', 'url': 'Taoism_R/textures/items/tcg.png', 'parent': '48'}, {'index': '79', 'name': '三清镇元三台符', 'description': '- 核心功能(置于副手)：为工具类物品附魔时运\n- 合成方式：1个画符毛笔 + 1个残符【三清】 + 1个符脚【三台星】 + 1个鱼胶\n“三清护三台，镇元固生机，灵光驱邪祟，群体增益护周全。”', 'url': 'Taoism_R/textures/items/tag.png', 'parent': '46'}, {'index': '80', 'name': '敕令安垣三台符', 'description': '- 核心功能(置于副手)：为武器类物品附魔抢夺\n- 合成方式：1个画符毛笔 + 1个残符【敕令】 + 1个符脚【三台星】 + 1个鱼胶\n“敕令统三台，安垣固方块，气场助队友，攻防皆宜稳阵脚。”', 'url': 'Taoism_R/textures/items/tbg.png', 'parent': '47'}, {'index': '81', 'name': '符箓卷轴', 'description': '- 核心功能：使用后获得游戏内所有正面buff（除漂浮外），buff持续1分钟\n- 副作用：一次性物品，使用后消耗\n- 合成方式：2个普通的符箓 + 1个元气 + 4个金锭\n“一卷符箓聚万灵，诸般吉益随身行，片刻护持无缺憾，唯弃漂浮顺道心。”', 'url': 'crafting%20table/txpb.png', 'parent': '55'}, {'index': '82', 'name': '桃木剑', 'description': '- 核心功能：\n  1. 可使用开光符【启灵】附魔亡灵杀手III\n  2. 普攻一般生物：伤害略高于普通木剑\n  3. 主手持有时：获得回血buff\n- 合成方式：1个木剑 + 1个朱砂粉+1个炁 + 6个元气\n“桃木禀阳，能制阴邪，剑出则鬼魅潜藏，正气浩然。”', 'url': 'crafting%20table/sword_t.png', 'parent': '6'}, {'index': '83', 'name': '宝剑', 'description': '- 核心功能：\n  1. 可使用开光符【启灵】附魔亡灵杀手III\n  2. 普攻一般生物：伤害略高于「桃木剑」\n  3. 主手持有时：抗性提升\n- 合成方式：1个金剑 + 1个朱砂粉+1个炁 + 6个元气\n“宝剑锋从磨砺出，道心炼自精气神，一剑在手，可斩妖氛。”', 'url': 'crafting%20table/sword_b.png', 'parent': '6'}, {'index': '84', 'name': '七星剑', 'description': '- 核心功能：\n  1. 可使用开光符【启灵】附魔亡灵杀手IV\n  2. 普攻一般生物：伤害略高于「宝剑」\n  3. 主手持有时：回血buff + 移速提升\n- 合成方式：1个桃木剑 + 4张普通符箓 + 3个炁 + 1个元气\n“七星映剑，道法相随，执此剑者，上应天象，所向披靡。”', 'url': 'crafting%20table/sword_q.png', 'parent': '6'}, {'index': '85', 'name': '令剑', 'description': '- 核心功能：\n  1. 可使用开光符【启灵】附魔亡灵杀手V\n  2. 普攻一般生物：伤害略高于「七星剑」\n  3. 主手持有时：抗性提升 + 移速提升\n- 合成方式：1个宝剑 + 4张普通符箓 + 3个炁 + 1个元气\n“令剑承天令，威仪镇四方，挥剑斩虚妄，道力护其身。”', 'url': 'crafting%20table/sword_l.png', 'parent': '6'}, {'index': '86', 'name': '拷鬼棒', 'description': '- 核心功能：\n  1. 可使用开光符【启灵】附魔亡灵杀手V和击退\n  2. 主手持有时：获得抗性提升buff + 持续回血buff\n  3. 主动技能（同时按住跳跃+攻击）：向前瞬移一段距离（可用于追击或规避）\n- 合成方式：3个木棍 + 2个金锭 + 4个普通的符箓\n“拷鬼之棒承道威，专诛阴邪破魑魅，持之自有抗性护，瞬移追逃任我行。”', 'url': 'crafting%20table/wond.png', 'parent': '6'}, {'index': '87', 'name': '奇怪的木剑【邪】', 'description': '- 核心功能：\n  1. 普攻伤害：略高于普通木剑\n  2. 主手持有时：移速提升 + 跳跃提升\n- 副作用：「合理的邪修」（无实际负面效果）\n- 合成方式：1个木剑 + 1个噬魂术（经书） + 7个元气\n“邪道之剑，虽有小利，心若偏邪，终难成大道。”', 'url': 'crafting%20table/sword_e.png', 'parent': '20'}, {'index': '88', 'name': '奇怪的木剑【异】', 'description': '- 核心功能：主手持有时，移速提升 + 跳跃提升\n- 副作用：玩家尝试攻击时，触发雷劈致残\n- 合成方式：1个噬魂术（经书） + 1个桃木剑 + 7个元气\n“异术逆天，剑虽诡速，逞凶必遭天谴，悔之晚矣。”', 'url': 'crafting%20table/sword_w.png', 'parent': '6'}, {'index': '89', 'name': '灵剑', 'description': '- 核心功能：\n  1. 综合能力：强于「令剑」\n  2. 主手持有时：抗性提升 + 移速提升 + 回血buff，伴有持续饥饿效果\n  3. 攻击会消耗自身精力，获得凋零效果\n- 合成方式： 4个魂魄 + 4个炁 + 1个奇怪的木剑【邪】\n“灵剑聚神魂，威力无穷，然耗己精元，修行当知取舍。”', 'url': 'crafting%20table/sword_sp.png', 'parent': '87'}, {'index': '90', 'name': '万魂幡', 'description': '- 核心功能：\n  1. 主手持有时：对30×30×30范围内生物持续震慑 + 群伤，伴有持续饥饿效果\n  2. 使用时：将幡中残缺的灵魂释放，凝聚成4只旱魃实体协同战斗，消耗四个魂魄的充能值\n- 副作用：\n  1. 主手持有时会获得饥饿效果\n  2. 主手持有时消耗自身精力，获得凋零效果\n  3. 需使用魂魄充能，如强制使用则扣除自身生命\n- 合成方式：1个黑色旗帜 + 1个灵剑 + 2个炁 + 3个魂魄 + 2个普通的符箓\n“万魂聚幡，威力骇人，有伤天和，非正道所取，慎用之。”\n“道友,你这人皇幡怎么库库冒黑烟?”', 'url': 'crafting%20table/soul_banner.png', 'parent': '89'}, {'index': '91', 'name': '人皇幡', 'description': '- 核心功能：\n   1. 将部分“战友”的灵魂释放，凝聚成实体铁傀儡在使用者四周，辅助使用者战斗，铁傀儡会持续扣血\n   2. 在半径三格的范围内，可自动对召唤物产生回复效果，自身获得抗性提升和移速提升\n- 副作用：无特殊负面效果\n- 合成方式：1个黄色旗帜 + 1个桃木剑 + 2个炁 + 3个朱砂粉 + 2个普通的符箓\n“人皇者，亲友庇护也，攻防一体，幡承其气，可化万象。”', 'url': 'crafting%20table/hy_banner.png', 'parent': '6'}, {'index': '92', 'name': '百花花蓝', 'description': '- 唯一获取方式：通过击败凋零有几率随机掉落百花花篮/清净莲花其中之一\n- 核心功能：\n  1. 使用时：会在使用者周围生成花丛\n  2. 对周围生物产生震慑或减速效果\n- 副作用：无特殊负面效果\n“百花花篮集草木之灵，藏春和之韵，展之则芳华遍地，引生机而佑四方。”', 'url': 'Taoism_R/textures/items/fbusket.png', 'parent': '6'}, {'index': '93', 'name': '清净莲花', 'description': '- 唯一获取方式：通过击败凋零有几率随机掉落百花花篮/清净莲花其中之一\n- 核心功能：\n  1. 使用时：会对以使用者为中心的半径25格内的生物产生震慑效果\n  2. 使用时：对范围内的生物持续扣血，自身回复血量\n- 副作用：无特殊负面效果\n“清净莲花出淤泥而不染，纳清宁之息，持之可涤心尘，离烦扰而证道心。”', 'url': 'Taoism_R/textures/items/lotus.png', 'parent': '6'}, {'index': '94', 'name': '乾坤圈', 'description': '- 核心功能：\n  1. 使用后可在一定时间内获得乾坤圈的加持，在此期间不会受到任何伤害，同时暂时失去攻击外物能力\n  2. 乾坤圈加持期间，玩家连续点按攻击会持续积攒能量，并在收起乾坤圈后统一释放\n- 3. 使用后进入冷却，可借助「息」达到更高的伤害等级\n- 合成方式：8个铜锭 + 1个补火符\n"乾坤圈转，阴阳自守，蓄势待发，一击破苍穹。"', 'url': 'crafting%20table/shield_q.png', 'parent': '6'}, {'index': '95', 'name': '铜钱剑', 'description': '- 核心功能：下蹲攻击释放铜钱剑上前，自动锁定多个目标后逐一攻击，结束后自动收回\n- 获取方式：可在流浪商人处花25绿宝石购买\n"青蚨串作斩邪锋，出匣飞腾逐乱凶。击罢群妖还自返，一枚铜气凛霜风。"', 'url': 'Taoism_R/textures/items/sword_m.png', 'parent': '6'}, {'index': '96', 'name': '纯阳飞剑', 'description': '- 唯一获取方式：通过在副手装备清阳之炁可凝聚纯阳之炁为剑\n  1. 主动技能：同时按空格键 + 鼠标左键，向前瞬移一段距离，并获得缓降效果\n  2. 主动技能：长按潜伏蓄力，蓄力完成后震慑包括其他玩家在内的实体，随后进入冷却\n  3. 同时按shift + 鼠标右键收起佩剑\n“纯阳飞剑凝正阳之炁，剑出如雷，斩妖除邪，千里之外可取魑魅之首。”', 'url': 'Taoism_R/textures/items/sword_qi.png', 'parent': '6'}, {'index': '97', 'name': '赤旱尸煌剑', 'description': '- 核心功能：\n  1. 主手持有时，强制改为天气为晴天，并且削除周身5×5×5的水方块。\n  2. 主手持有时，将周身3×3的草方块变成泥土，每隔3秒在玩家脚底生成3×3的火，玩家自身免疫火焰伤害和岩浆伤害。\n  3. 向前释放火焰，并且火焰可摧毁路径上的方块，并对路径上的生物造成伤害，高度两格，长度10格。\n- 副作用：拥有旱魃的力量也会受到旱魃尸丹的反噬，使用时会持续饥饿。\n- 合成方式：1个奇怪的木剑（邪） + 2个尸丹 + 2个朱砂晶体\n“旱既大甚，涤涤山川。旱魃为虐，如惔如焚。我心惮暑，忧心如熏。”', 'url': 'crafting%20table/sword_za.png', 'parent': '87'}, {'index': '98', 'name': '五雷镇旱七星剑', 'description': '- 核心功能：\n  1. 主手持有时，提高血量上限到30个心，并有回血效果，玩家免疫火焰伤害。\n  2. 主手持有时，会将脚下5×5的岩浆变成黑曜石。\n  3. 下蹲蓄力强制降雨，并且能给自己以及10×10×10范围内队友或者是友好生物回血。\n- 合成方式：1个七星剑 + 2个净炼尸丹 + 2个元气\n“雷车轣辘起层阴，雨脚垂垂一寸深。解得田畴千里旱，全归天地一言心。”', 'url': 'crafting%20table/sword_zb.png', 'parent': '84'}, {'index': '99', 'name': '天魔诛仙剑', 'description': '- 核心功能：\n  1. 魔教至凶飞剑，源自五台派的镇派邪剑，魔道第一杀剑，邪修毕业武器\n  2. 可御剑飞行\n  3. 蹲下时攻击召唤剑灵协同攻击\n- 剑灵：\n  1. 召唤时，自动标记范围20格内生物，剑灵将自动攻击被标记的生物，攻击可追加标记\n  2. 不存在目标时剑灵将为玩家提供生命恢复效果\n- 副作用：攻击时由于需要驱动剑灵耗费精力，获得凋零效果\n- 合成方式：2个金刚琢 + 1个万魂幡 + 2个法钟 + 1个金雷镇煞符 + 2个炁 + 1个金块\n“天魔诛仙剑凝九天煞气，剑出则魔灭神惊，斩尽诸天魔障，道威浩荡无匹。”', 'url': 'crafting%20table/sword_u.png', 'parent': '90'}, {'index': '100', 'name': '三五雌雄斩邪剑', 'description': '- 核心功能：\n  1. 道教第一法剑，源自太上老君的佩剑，为道教传承象征，正修毕业武器\n  2. 持剑者获得无敌效果，可御剑飞行，攻击时秒杀一切目标\n  3. 下蹲时释放八道闪电，可自动追踪附近的生物，有短暂冷却\n- 副作用：容易把自己帅死（无实际负面效果）\n- 合成方式：2个金刚琢 + 1个混元幡 + 1个令剑 + 1个七星剑 + 1个三清镇元三台符 + 2个炁 + 1个清阳之炁\n“三五之数，合于天地，雌雄双剑，斩尽邪祟，大道昌明。”', 'url': 'crafting%20table/sword_s.png', 'parent': '6'}, {'index': '101', 'name': '雷击木', 'description': '- 核心功能：放置于物品栏第一格时，对10×10×10范围内生物造成减速\n- 合成方式：1个雷击符 + 4颗橡木树苗\n“雷击之木，禀天雷之气，镇于一方，百兽皆惧，邪祟不侵。”', 'url': 'crafting%20table/lightning_wood.png', 'parent': '7'}, {'index': '102', 'name': '铜镜', 'description': '- 核心功能：使用后获得增益——移速提升1 + 跳跃提升1 + 最大血量提升100%\n- 副作用：\n  1. 一次性物品，使用后消耗\n  2. 增益持续30秒「门外汉的把戏罢了」\n- 合成方式：8个铜锭 + 1个朱砂粉\n“铜镜照形，亦能鉴心，一点朱砂，引气入体，暂得神力。”', 'url': 'crafting%20table/mirror_a.png', 'parent': '7'}, {'index': '103', 'name': '铜镜【法】', 'description': '- 核心功能：使用后获得增益——移速提升2 + 跳跃提升2 + 最大血量提升100%\n- 副作用：\n  1. 一次性物品，使用后消耗\n  2. 增益持续1分钟「不建议使用」\n- 合成方式：8个铜锭 + 1个普通的符箓\n“法镜含道气，一照百邪消，增益虽佳，终是外物，修行在己。”', 'url': 'crafting%20table/mirror_b.png', 'parent': '7'}, {'index': '104', 'name': '凸八卦镜', 'description': '- 核心功能：使用时，对15×15×15范围内生物持续震慑，亡灵生物持续扣血\n- 副作用：「亮出来就是吓唬人的」，一次仅持续10秒\n- 合成方式：8个铜镜【法】 + 1个桃木剑\n“八卦定乾坤，凸镜镇凶煞，镜光所及，邪祟退散。”', 'url': 'crafting%20table/mirror_c.png', 'parent': '103'}, {'index': '105', 'name': '凹八卦镜', 'description': '- 核心功能：使用时，使用者及附近队友获得——最大血量提升100% + 持续快速回血\n- 副作用：\n   趣味设定「见过一次的把戏就不灵了」，buff持续1分钟\n- 合成方式：8个铜镜【法】 + 1个元气\n“凹镜纳灵气，八卦聚生机，护己及人，道之仁心。”', 'url': 'crafting%20table/mirror_d.png', 'parent': '103'}, {'index': '106', 'name': '火丹', 'description': '- 核心功能：主手持有火丹时可将其发射出去\n- 合成方式：1个尸丹碎片 + 1个煤炭 + 1个黏土\n"火凝丹丸掌中擎，脱手星飞烈焰生。一瞬燎原三百丈，妖邪遇尽化尘轻。"', 'url': 'Taoism_R/textures/items/fball.png', 'parent': '7'}, {'index': '107', 'name': '铁拐', 'description': '- 核心功能：\n  1. 提高使用者的移速，分为三档（副手手持/主手手持/主手手持攻击）。\n- 合成方式：3个木棍 + 2个铁锭 + 2个雷击木 + 2个元气\n"铁拐拄地行如风，疾步轻身御气通。"', 'url': 'crafting%20table/cane.png', 'parent': '7'}, {'index': '108', 'name': '法钟', 'description': '- 核心功能：\n  1. 主手持有时：抗性提升拉满\n  2. 使用时：对半径25格的范围内生物持续震慑，同时敌对生物会受法音攻击\n- 副作用：主手持有时，自身移速降低 + 饱食度降低「很可惜，你跑不快」\n- 合成方式：2个炁 + 5个铜锭 + 1个净炼尸丹\n“法钟鸣，大道兴，钟声荡邪，抗性加身，宁心定志。”', 'url': 'crafting%20table/bell.png', 'parent': '7'}, {'index': '109', 'name': '紫金葫芦', 'description': '- 核心功能：\n  1. 使用时：主动吸引20×20×20范围内所有物品\n  2. 或破坏面前方块并吸收\n  3. 可主动吸引炁\n- 合成方式：5个铜锭 + 1个普通的符箓 + 1个元气\n“葫芦藏天地，能纳万物灵，收放之间，合于自然。”', 'url': 'crafting%20table/gourd.png', 'parent': '7'}, {'index': '110', 'name': '玉笏', 'description': '- 核心功能：向天庭请示后，可瞬移至亲友身旁\n- 副作用：瞬移后扣除1点血（半颗心）「由于你主观离岗，上天会扣除代价」\n- 合成方式：3个雷击木（木板） + 1个普通的符箓\n“笏板承天语，一念至亲朋，瞬移虽便，亦有代价，道在平衡。”', 'url': 'crafting%20table/wul.png', 'parent': '7'}, {'index': '111', 'name': '拂尘', 'description': '- 核心功能：\n  1. 清除自身所有buff「扫除心尘，去掉自己身上所有buff」\n  2. 可作为武器使用\n- 合成方式：1个木棍 + 1个白色羊毛\n“拂尘扫尘埃，亦能清心障，一拂之下，返璞归真。”', 'url': 'crafting%20table/whisk.png', 'parent': '7'}, {'index': '112', 'name': '金刚琢', 'description': '- 核心功能：老君的另一件法宝，蓄力后释放金刚琢逐一攻击并缴械附近生物，使其失去攻击能力\n- 合成方式：4个铁锭 + 4个雷击木 + 1个普通的符箓\n“金刚琢，镇万物，缴械制敌，物极必反，此乃道之理。”\n- 这件兵器，乃锟钢抟炼的，被我将还丹点成，养就一身灵气，善能变化，水火不侵，又能套诸物；一名‘金钢琢’，又名“金钢套”。\n- 当年过函关，化胡为佛，甚是亏他。早晚最可防身。等我丢下去打他一下。\n- 收过金箍棒的法宝，实则正史没记载过这样的法宝，也没有金箍棒。', 'url': 'crafting%20table/ring.png', 'parent': '7'}, {'index': '113', 'name': '净瓶', 'description': '- 核心功能：\n  1. 主手持有时，为附近生物提供持续回血效果\n  2. 副手持有时，「魂魄」不再提供充能效果，被净化成「元气」\n- 副作用：无负面副作用，可重复使用（非一次性道具）\n- 合成方式：3个黏土块 + 1个普通的符箓 + 1个下界之星\n“净瓶含甘露，滴之生生机，普济众生，道之慈悲。”', 'url': 'crafting%20table/bottle.png', 'parent': '7'}, {'index': '114', 'name': '令牌【通天术】', 'description': '- 核心功能：抬头向上亮出令牌，请示神明，可隔墙向上传送\n- 使用方式：点击进入预览视角，下蹲使用传送，跳起取消传送\n- 合成方式：2个雷击木+1个末影珍珠+2个普通符箓\n“令牌承天命，举之可通天，隔墙传送，应乎神道。”', 'url': 'crafting%20table/tup.png', 'parent': '7'}, {'index': '115', 'name': '浑仪', 'description': '- 核心功能：使用可观测星空，明确月相，以作修行参考\n- 使用方式：左键单击使用\n- 合成方式：3个木原木+2个木棍+1个铜锭+3个木台阶\n“浑仪窥月辨盈亏，修经必循月相规，逆道妄为遭天谴，天雷一击丧魂归。”', 'url': 'crafting%20table/hy.png', 'parent': '7'}, {'index': '116', 'name': '昆仑镜', 'description': '- 核心功能：使用后使用者与周围最近的实体互换位置\n- 使用方式：左键单击使用\n- 合成方式：9个普通符箓+1个铜块\n“昆仑宝镜映乾坤，一念互换定方位，咫尺之间移形影，道法玄机藏镜中。”', 'url': 'crafting%20table/klj.png', 'parent': '7'}, {'index': '117', 'name': '枯魂旱火葫芦', 'description': '- 核心功能：置于副手后，主手空手可凝练出火丹\n- 使用方式：置于副手\n- 合成方式：1个紫金葫芦 + 4个尸丹碎片\n“枯魂锁入葫中藏，旱火凝丹发烈光。一点阴焰焚万物，赤地千里草不芳。”', 'url': 'crafting%20table/firegourd.png', 'parent': '109'}, {'index': '118', 'name': '流辉葫芦', 'description': '- 核心功能：置于副手后，可自动为冷却取消条充能，每两秒充能一次\n- 使用方式：置于副手\n- 合成方式：1个紫金葫芦 + 4个净炼尸丹\n“流辉敛炁纳元光，净炼残阴入此囊。袖底自充仙府力，不劳执手运丹方。”\n- 原来有个特别善用法宝的道友，苦于元气难以聚集。后来他腰间多了个水蓝的葫芦，身边的法音也是不带停的。', 'url': 'crafting%20table/spegourd.png', 'parent': '109'}, {'index': '119', 'name': '（泰山）石敢当', 'description': '- 核心功能：置于地表上，每5秒对附近15×15范围内的所有敌对生物产生伤害与减速\n- 合成方式：8个深板岩 + 1个画符毛笔\n“泰山片石号敢当，坐镇方隅慑不祥。魑魅逢之皆敛迹，郊原十里尽安昌。”', 'url': 'crafting%20table/sguard.png', 'parent': '7'}, {'index': '120', 'name': '八卦罗盘', 'description': '- 核心功能：\n  1. 使用者使用后，在半径25格的球形范围内，所有生物获得减速效果\n  2. 给自身和队友施加回血效果，给其他所有生物施加持续扣血的debuff\n  3. 离使用者越近，效果越强，但使用者不能移动\n- 使用方式：左键单击使用\n- 合成方式：4个普通符箓+4个钻石+1个指南针\n“八卦罗盘定八方，五十丈内气场强，静立方能承道力，一动则失此中章。”', 'url': 'crafting%20table/bglpa.png', 'parent': '7'}, {'index': '121', 'name': '浊阴之炁', 'description': '- 核心功能：使用后原地进行“暴炁”，对四周产生爆炸伤害，本体增加抗性\n- 使用方式：右键单击使用\n- 合成方式：通过吸收23个“炁”在内丹中自动炼化而成，可与浊阴之炁互相转化\n“浊阴之炁沉于地，含纯阴之质，滋养万物，驭之可通幽冥而化万象。”', 'url': 'Taoism_R/textures/items/qi_c.png', 'parent': '7'}, {'index': '122', 'name': '清阳之炁', 'description': '- 核心功能：置于副手后，主手空手时可召唤「纯阳飞剑」\n- 使用方式：置于副手手持，手持状态不再显示，放回主手恢复\n- 合成方式：通过吸收23个“炁”在内丹中自动炼化而成，可与清阳之炁互相转化\n“清阳之炁升于天，禀纯阳之精，涤荡阴秽，修行得之则神清气朗。”', 'url': 'Taoism_R/textures/items/qi_sword.png', 'parent': '7'}, {'index': '123', 'name': '天蓬尺', 'description': '- 核心功能：置于主/副手后，自动感应附近的危险生物\n- 使用方式：置于主/副手后，感应四周，如有危险生物则震屏警告并发射跟踪粒子\n- 获取方式：游商处购买\n“天蓬法尺秉威灵，暗察妖氛动即鸣。飞珠逐影无虚发，不遣凶邪近身形。”', 'url': 'Taoism_R/textures/items/ruler.png', 'parent': '7'}, {'index': '124', 'name': '上清景震剑', 'description': '- 核心功能：召唤可飞行的剑\n- 使用方式：\n  - 右键/交互：召唤飞剑，可骑乘飞行\n  - 左键/攻击：将最近的飞剑移至自己\n  - 下蹲左键/攻击：收回飞剑\n- 获取方式：完成古书支线后从神秘道士处获得\n“上清敕赐景震锋，驾御飞虹碧落中。招即还身收即隐，纵横千里驭罡风。”', 'url': 'Taoism_R/textures/items/sword_f.png', 'parent': '7'}, {'index': '125', 'name': '家具', 'description': '游商处购买，可放置和使用。\n已有家具：\n- 画符桌：可用于符合成\n- 立柜：储存物品\n- 茶桌\n- 茶凳\n- 椅子\n- 自行车：可骑乘', 'url': '', 'parent': '8'}, {'index': '126', 'name': '复活图腾', 'description': '- 核心功能：\n  - 召唤一个队友，使用朱砂晶体驯服（？）\n  - 可以为他装备原版武器\n  - 可以提供额外储存空间\n  - 可能会告诉你一些信息（？）\n- 合成方式：3个朱砂晶体 + 1个绿宝石 + 1个不死图腾 + 4个炁\n“有朋相伴好过孤军奋战。”\n- 杀人成风之后的那个时候，有的权贵想让自己在乱世后重新复活，可不知怎的，最后出现的总是另一个素不相识的人。\n- 据说老道长死后，手里攥着的是个奇怪的木头玩意，村里人便将其挂在了观里。不知为何，多年过去了，那座观还是崭新如初。', 'url': 'crafting%20table/partner.png', 'parent': '8'}, {'index': '127', 'name': '主题唱片', 'description': '- 在末地城中获得\n- 可播放主题曲《轮回》，点击右键(使用)播放，左键(攻击)停止\n"一曲轮回绕梁间，道音袅袅入心田。"', 'url': 'Taoism_R/textures/items/disk_taoism.png', 'parent': '8'}, {'index': '128', 'name': '26年春节更新内容', 'description': '可从村民处(屠夫，农民)购买食材，制作年夜饭\n部分饭菜可提供特殊效果\n食物效果：\n- 饺子使用牛肉，羊肉，猪肉时分别提供力量，抗性提升，生命恢复，使用葱，白菜分别指定作用时间3分钟，5分钟\n- 猪皮冻，红烧肉提供生命恢复，红烧肉的效果优先\n- 炒鸡可解除虚弱，挖掘疲劳，凋零\n- 红烧鱼可解除缓慢，中毒，失明\n- 其余食材仅提供饱食度回复，调味品不可食用\n替换部分画替换为“福”字', 'url': '', 'parent': '9'}];
+
+/* ==================== 场景初始化 ==================== */
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x0a0e17);
+scene.fog = new THREE.FogExp2(0x0a0e17, 0.00025);
+
+const camera = new THREE.PerspectiveCamera(55, innerWidth / innerHeight, 1, 40000);
+camera.position.set(180, 160, 320);
+
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.setSize(innerWidth, innerHeight);
+document.body.appendChild(renderer.domElement);
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.08;
+controls.rotateSpeed = 0.8;
+
+scene.add(new THREE.AmbientLight(0xffffff, 1.4));
+const keyLight = new THREE.DirectionalLight(0xffffff, 2.2);
+keyLight.position.set(300, 400, 300);
+scene.add(keyLight);
+const rimLight = new THREE.DirectionalLight(0x5599ff, 1.2);
+rimLight.position.set(-300, -200, -300);
+scene.add(rimLight);
+
+/* 星空背景 */
+(function addStars() {
+  const count = 1400;
+  const pos = new Float32Array(count * 3);
+  for (let i = 0; i < count; i++) {
+    const r = 2500 + Math.random() * 6000;
+    const t = Math.random() * Math.PI * 2;
+    const p = Math.acos(2 * Math.random() - 1);
+    pos[i * 3]     = r * Math.sin(p) * Math.cos(t);
+    pos[i * 3 + 1] = r * Math.cos(p);
+    pos[i * 3 + 2] = r * Math.sin(p) * Math.sin(t);
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  const m = new THREE.PointsMaterial({
+    color: 0x4a6a99, size: 6, sizeAttenuation: true,
+    transparent: true, opacity: 0.75, depthWrite: false
+  });
+  scene.add(new THREE.Points(g, m));
+})();
+
+/* ==================== 全局状态 ==================== */
+const graphGroup = new THREE.Group();
+scene.add(graphGroup);
+
+let nodeGroup = new THREE.Group();
+let linkGroup = new THREE.Group();
+graphGroup.add(nodeGroup);
+graphGroup.add(linkGroup);
+
+let nodes = [];
+let links = [];
+let meshes = [];
+let nodeMap = new Map();
+let selectedNode = null;
+
+const raycaster = new THREE.Raycaster();
+
+const elStatus    = document.getElementById('status');
+const elPanel     = document.getElementById('panel');
+const elPName     = document.getElementById('pName');
+const elPInfo     = document.getElementById('pInfo');
+const elPImg      = document.getElementById('pImg');
+const elPImgWrap  = document.getElementById('pImgWrap');
+
+/* ==================== 工具函数 ==================== */
+function pick(obj, keys) {
+  for (const k of keys) {
+    const v = obj[k];
+    if (v !== undefined && v !== null && String(v).trim() !== '') return v;
+  }
+  return undefined;
+}
+
+function roundRect(ctx, x, y, w, h, r) {
+  if (w < 2 * r) r = w / 2;
+  if (h < 2 * r) r = h / 2;
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.arcTo(x + w, y, x + w, y + h, r);
+  ctx.arcTo(x + w, y + h, x, y + h, r);
+  ctx.arcTo(x, y + h, x, y, r);
+  ctx.arcTo(x, y, x + w, y, r);
+  ctx.closePath();
+}
+
+/* 文字标签精灵 */
+function makeLabelSprite(text) {
+  const fontSize = 64;
+  const font = `600 ${fontSize}px "Microsoft YaHei","PingFang SC",sans-serif`;
+  const canvas = document.createElement('canvas');
+  let ctx = canvas.getContext('2d');
+  ctx.font = font;
+  const textW = ctx.measureText(text).width;
+
+  const padX = 30, padY = 16;
+  canvas.width  = Math.ceil(textW + padX * 2);
+  canvas.height = Math.ceil(fontSize + padY * 2);
+
+  ctx = canvas.getContext('2d');
+  ctx.font = font;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+
+  ctx.fillStyle = 'rgba(8,14,26,0.78)';
+  roundRect(ctx, 2, 2, canvas.width - 4, canvas.height - 4, 22);
+  ctx.fill();
+  ctx.lineWidth = 3;
+  ctx.strokeStyle = 'rgba(110,170,255,0.6)';
+  ctx.stroke();
+
+  ctx.fillStyle = '#e2f0ff';
+  ctx.fillText(text, canvas.width / 2, canvas.height / 2 + 2);
+
+  const tex = new THREE.CanvasTexture(canvas);
+  tex.anisotropy = 4;
+  tex.minFilter = THREE.LinearFilter;
+
+  const mat = new THREE.SpriteMaterial({
+    map: tex, transparent: true, depthTest: false, depthWrite: false, fog: false
+  });
+  const sprite = new THREE.Sprite(mat);
+  const targetH = 10;
+  const scale = targetH / canvas.height;
+  sprite.scale.set(canvas.width * scale, canvas.height * scale, 1);
+  return sprite;
+}
+
+/* 光晕贴图（缓存） */
+let _glowTex = null;
+function makeGlowTexture() {
+  if (_glowTex) return _glowTex;
+  const size = 128;
+  const c = document.createElement('canvas');
+  c.width = c.height = size;
+  const ctx = c.getContext('2d');
+  const g = ctx.createRadialGradient(size / 2, size / 2, 0, size / 2, size / 2, size / 2);
+  g.addColorStop(0,    'rgba(255,255,255,1)');
+  g.addColorStop(0.25, 'rgba(255,255,255,0.55)');
+  g.addColorStop(0.60, 'rgba(255,255,255,0.12)');
+  g.addColorStop(1,    'rgba(255,255,255,0)');
+  ctx.fillStyle = g;
+  ctx.fillRect(0, 0, size, size);
+  _glowTex = new THREE.CanvasTexture(c);
+  return _glowTex;
+}
+
+function disposeGroup(group) {
+  group.traverse(o => {
+    if (o.geometry) o.geometry.dispose();
+    if (o.material) {
+      if (o.material.map) o.material.map.dispose();
+      o.material.dispose();
+    }
+  });
+  group.clear();
+}
+
+function clearGraph() {
+  if (nodeGroup) { graphGroup.remove(nodeGroup); disposeGroup(nodeGroup); }
+  if (linkGroup) { graphGroup.remove(linkGroup); disposeGroup(linkGroup); }
+  _glowTex = null;
+
+  nodeGroup = new THREE.Group();
+  linkGroup = new THREE.Group();
+  graphGroup.add(nodeGroup);
+  graphGroup.add(linkGroup);
+
+  nodes = [];
+  links = [];
+  meshes = [];
+  nodeMap = new Map();
+  selectedNode = null;
+  elPanel.classList.remove('show');
+}
+
+/* ==================== 数据解析 ==================== */
+function normalizeList(json) {
+  if (Array.isArray(json)) return json;
+  if (json && Array.isArray(json.nodes)) return json.nodes;
+  if (json && Array.isArray(json.data))  return json.data;
+  if (json && Array.isArray(json.list))  return json.list;
+  throw new Error('配置格式应为数组：[{序号,名字,信息,示意图地址,父节点序号}, ...]');
+}
+
+function buildGraph(rawList) {
+  clearGraph();
+
+  /* --- 1. 解析节点（键名做多语言兼容，忽略空值） --- */
+  nodes = rawList.map((item, idx) => {
+    const rawId = pick(item, ['序号', 'id', 'ID', '编号', 'index', 'key']);
+    const id    = rawId !== undefined ? String(rawId).trim() : String(idx + 1);
+
+    const name = String(
+      pick(item, ['名字', '名称', 'name', 'title', '标题', 'label']) ?? ('节点 ' + id)
+    );
+    const info = String(
+      pick(item, ['信息', '描述', '详情', '说明', 'info', 'description', 'content']) ?? ''
+    );
+    const img = String(
+      pick(item, ['示意图地址', '图片地址', '示意图', '图片', 'image', 'img', 'icon', 'url']) ?? ''
+    );
+    const parentRaw = pick(
+      item, ['父节点序号', '父节点', '父节点ID', '父ID', '父id', 'parent', 'parentId', 'parent_id']
+    );
+    const parentId = parentRaw !== undefined ? String(parentRaw).trim() : '';
+
+    return { id, name, info, img, parentId, _i: idx };
+  });
+
+  nodeMap = new Map();
+  nodes.forEach(n => { if (!nodeMap.has(n.id)) nodeMap.set(n.id, n); });
+
+  /* --- 2. 依据父节点序号建立连接（父为空 / 找不到 / 自环 均跳过） --- */
+  links = [];
+  nodes.forEach(n => {
+    if (!n.parentId) return;
+    if (n.parentId === n.id) return;
+    const p = nodeMap.get(n.parentId);
+    if (p) links.push({ source: n, target: p });
+  });
+
+  /* --- 3. 计算层级（用于配色与尺寸） --- */
+  const depthCache = new Map();
+  function depthOf(node) {
+    if (depthCache.has(node.id)) return depthCache.get(node.id);
+    let d = 0, cur = node;
+    const seen = new Set([node.id]);
+    while (cur && cur.parentId && nodeMap.has(cur.parentId) && !seen.has(cur.parentId)) {
+      seen.add(cur.parentId);
+      cur = nodeMap.get(cur.parentId);
+      d++;
+      if (d > 100) break;
+    }
+    depthCache.set(node.id, d);
+    return d;
+  }
+  nodes.forEach(n => { n.depth = depthOf(n); });
+  let maxDepth = 1;
+  nodes.forEach(n => { if (n.depth > maxDepth) maxDepth = n.depth; });
+
+  /* --- 4. 度数 --- */
+  const degMap = new Map();
+  links.forEach(l => {
+    degMap.set(l.source.id, (degMap.get(l.source.id) || 0) + 1);
+    degMap.set(l.target.id, (degMap.get(l.target.id) || 0) + 1);
+  });
+
+  /* --- 5. 计算布局 --- */
+  runLayout();
+
+  /* --- 6. 生成节点 --- */
+  const sphereGeo = new THREE.SphereGeometry(1, 24, 18);
+  nodes.forEach(n => {
+    const deg = degMap.get(n.id) || 0;
+    const radius = Math.max(5, 9 - n.depth * 0.9) + Math.min(deg, 6) * 0.6;
+    const hue = 0.58 - (n.depth / maxDepth) * 0.58; // 蓝 -> 红
+    const color = new THREE.Color().setHSL(hue, 0.72, 0.56);
+
+    const mat = new THREE.MeshStandardMaterial({
+      color: color,
+      emissive: color.clone().multiplyScalar(0.45),
+      emissiveIntensity: 1,
+      roughness: 0.35,
+      metalness: 0.25
+    });
+    const mesh = new THREE.Mesh(sphereGeo, mat);
+    mesh.position.set(n.x, n.y, n.z);
+    mesh.scale.setScalar(radius);
+    mesh.userData.node = n;
+    n.mesh = mesh;
+    n.radius = radius;
+    n.baseColor = color;
+    nodeGroup.add(mesh);
+    meshes.push(mesh);
+
+    // 光晕
+    const halo = new THREE.Sprite(new THREE.SpriteMaterial({
+      map: makeGlowTexture(), color: color, transparent: true, opacity: 0.5,
+      depthWrite: false, blending: THREE.AdditiveBlending, fog: false
+    }));
+    halo.scale.setScalar(radius * 7);
+    halo.position.copy(mesh.position);
+    n.halo = halo;
+    nodeGroup.add(halo);
+
+    // 名字标签
+    const label = makeLabelSprite(n.name);
+    label.position.set(n.x, n.y + radius + 9, n.z);
+    n.label = label;
+    nodeGroup.add(label);
+  });
+
+  /* --- 7. 生成连线 --- */
+  links.forEach(l => {
+    const geo = new THREE.BufferGeometry().setFromPoints([
+      new THREE.Vector3(l.source.x, l.source.y, l.source.z),
+      new THREE.Vector3(l.target.x, l.target.y, l.target.z)
+    ]);
+    const mat = new THREE.LineBasicMaterial({ color: 0x3f6394, transparent: true, opacity: 0.42 });
+    const line = new THREE.Line(geo, mat);
+    l.line = line;
+    linkGroup.add(line);
+  });
+
+  fitView();
+  elStatus.textContent = `已加载 ${nodes.length} 个节点 · ${links.length} 条连接`;
+}
+
+/* ==================== 3D 力导向布局 ==================== */
+function runLayout() {
+  const n = nodes.length;
+  if (!n) return;
+
+  // 初始位置：斐波那契球分布
+  nodes.forEach((nd, i) => {
+    const t = (i + 0.5) / n;
+    const phi = Math.acos(1 - 2 * t);
+    const theta = Math.PI * (1 + Math.sqrt(5)) * i;
+    const R = 220;
+    nd.x = R * Math.sin(phi) * Math.cos(theta);
+    nd.y = R * Math.cos(phi);
+    nd.z = R * Math.sin(phi) * Math.sin(theta);
+    nd.vx = nd.vy = nd.vz = 0;
+  });
+
+  const REP        = 42000;   // 斥力强度
+  const SPRING_K   = 0.02;    // 弹簧刚度
+  const REST       = 110;     // 弹簧自然长度
+  const CENTER_K   = 0.0025;  // 向心引力
+  const DAMPING    = 0.60;    // 阻尼
+  const MAX_SPEED  = 20;      // 最大速度
+  const ITER       = 600;     // 迭代次数
+
+  const fx = new Float64Array(n);
+  const fy = new Float64Array(n);
+  const fz = new Float64Array(n);
+
+  for (let iter = 0; iter < ITER; iter++) {
+    fx.fill(0); fy.fill(0); fz.fill(0);
+
+    // 节点间斥力
+    for (let i = 0; i < n; i++) {
+      const a = nodes[i];
+      for (let j = i + 1; j < n; j++) {
+        const b = nodes[j];
+        let ux = a.x - b.x, uy = a.y - b.y, uz = a.z - b.z;
+        let d2 = ux * ux + uy * uy + uz * uz;
+        if (d2 < 1) {
+          ux = Math.random() - 0.5;
+          uy = Math.random() - 0.5;
+          uz = Math.random() - 0.5;
+          d2 = ux * ux + uy * uy + uz * uz + 0.5;
+        }
+        const d = Math.sqrt(d2);
+        const f = REP / d2;
+        const gx = ux / d * f, gy = uy / d * f, gz = uz / d * f;
+        fx[i] += gx; fy[i] += gy; fz[i] += gz;
+        fx[j] -= gx; fy[j] -= gy; fz[j] -= gz;
+      }
+    }
+
+    // 弹簧力
+    for (const l of links) {
+      const a = l.source, b = l.target;
+      const ia = a._i, ib = b._i;
+      let ux = a.x - b.x, uy = a.y - b.y, uz = a.z - b.z;
+      let d = Math.sqrt(ux * ux + uy * uy + uz * uz);
+      if (d < 0.001) d = 0.001;
+      const f = (d - REST) * SPRING_K;
+      const gx = ux / d * f, gy = uy / d * f, gz = uz / d * f;
+      fx[ia] -= gx; fy[ia] -= gy; fz[ia] -= gz;
+      fx[ib] += gx; fy[ib] += gy; fz[ib] += gz;
+    }
+
+    // 向心引力 + 速度积分
+    for (let i = 0; i < n; i++) {
+      const nd = nodes[i];
+      fx[i] -= nd.x * CENTER_K;
+      fy[i] -= nd.y * CENTER_K;
+      fz[i] -= nd.z * CENTER_K;
+
+      nd.vx = (nd.vx + fx[i]) * DAMPING;
+      nd.vy = (nd.vy + fy[i]) * DAMPING;
+      nd.vz = (nd.vz + fz[i]) * DAMPING;
+
+      const sp = Math.hypot(nd.vx, nd.vy, nd.vz);
+      if (sp > MAX_SPEED) {
+        const k = MAX_SPEED / sp;
+        nd.vx *= k; nd.vy *= k; nd.vz *= k;
+      }
+
+      nd.x += nd.vx;
+      nd.y += nd.vy;
+      nd.z += nd.vz;
+    }
+  }
+}
+
+/* ==================== 视角自适应 ==================== */
+function fitView() {
+  if (!nodes.length) return;
+
+  const box = new THREE.Box3();
+  const v = new THREE.Vector3();
+  nodes.forEach(n => box.expandByPoint(v.set(n.x, n.y, n.z)));
+
+  const center = box.getCenter(new THREE.Vector3());
+  const radius = Math.max(box.getSize(new THREE.Vector3()).length() / 2, 60);
+
+  const fovRad = THREE.MathUtils.degToRad(camera.fov);
+  const dist = (radius / Math.sin(fovRad / 2)) * 1.05;
+
+  const dir = new THREE.Vector3(0.6, 0.45, 1).normalize();
+  camera.position.copy(center.clone().add(dir.multiplyScalar(dist)));
+  controls.target.copy(center);
+  controls.minDistance = Math.max(radius * 0.15, 20);
+  controls.maxDistance = radius * 15;
+
+  camera.near = Math.max(0.5, radius / 200);
+  camera.far  = radius * 40 + 8000;
+  camera.updateProjectionMatrix();
+  controls.update();
+}
+
+/* ==================== 选中 / 面板 ==================== */
+function restoreAll() {
+  nodes.forEach(n => {
+    n.mesh.scale.setScalar(n.radius);
+    n.mesh.material.emissiveIntensity = 1;
+    if (n.halo) {
+      n.halo.material.opacity = 0.5;
+      n.halo.scale.setScalar(n.radius * 7);
+    }
+  });
+  links.forEach(l => {
+    l.line.material.color.setHex(0x3f6394);
+    l.line.material.opacity = 0.42;
+  });
+}
+
+function clearSelection(silent) {
+  restoreAll();
+  selectedNode = null;
+  if (!silent) elPanel.classList.remove('show');
+}
+
+function selectNode(node) {
+  clearSelection(true);
+  selectedNode = node;
+
+  node.mesh.scale.setScalar(node.radius * 1.6);
+  node.mesh.material.emissiveIntensity = 2.6;
+  if (node.halo) {
+    node.halo.material.opacity = 0.95;
+    node.halo.scale.setScalar(node.radius * 11);
+  }
+
+  links.forEach(l => {
+    const active = (l.source === node || l.target === node);
+    l.line.material.color.setHex(active ? 0x7fd4ff : 0x2b4058);
+    l.line.material.opacity = active ? 1.0 : 0.15;
+  });
+
+  showPanel(node);
+}
+
+function showPanel(node) {
+  elPName.textContent = node.name;
+
+  if (node.img) {
+    elPImgWrap.style.display = 'block';
+    elPImg.onerror = () => { elPImgWrap.style.display = 'none'; };
+    elPImg.onload  = () => { elPImgWrap.style.display = 'block'; };
+    elPImg.src = node.img;
+  } else {
+    elPImgWrap.style.display = 'none';
+    elPImg.removeAttribute('src');
+  }
+
+  elPInfo.textContent = node.info || '（暂无详细信息）';
+  elPanel.classList.add('show');
+  elPanel.scrollTop = 0;
+}
+
+/* ==================== 交互：点击拾取 ==================== */
+let pointerDownPos = null;
+
+renderer.domElement.addEventListener('pointerdown', e => {
+  pointerDownPos = { x: e.clientX, y: e.clientY, button: e.button };
+});
+
+renderer.domElement.addEventListener('pointerup', e => {
+  const start = pointerDownPos;
+  pointerDownPos = null;
+  if (!start) return;
+  if (start.button !== 0) return;
+
+  const moved = Math.hypot(e.clientX - start.x, e.clientY - start.y);
+  if (moved > 6) return; // 拖拽旋转，不算点击
+
+  const rect = renderer.domElement.getBoundingClientRect();
+  const mouse = new THREE.Vector2(
+    ((e.clientX - rect.left) / rect.width) * 2 - 1,
+    -((e.clientY - rect.top) / rect.height) * 2 + 1
+  );
+  raycaster.setFromCamera(mouse, camera);
+  const hits = raycaster.intersectObjects(meshes, false);
+
+  if (hits.length > 0) selectNode(hits[0].object.userData.node);
+  else clearSelection();
+});
+
+/* ==================== 数据加载 ==================== */
+const fileInput = document.getElementById('fileInput');
+
+document.getElementById('btnReload').addEventListener('click', () => {
+  loadData(BUILTIN_CONFIG);
+});
+document.getElementById('btnLoad').addEventListener('click', () => fileInput.click());
+document.getElementById('btnCenter').addEventListener('click', () => fitView());
+document.getElementById('panelClose').addEventListener('click', () => clearSelection());
+
+fileInput.addEventListener('change', () => {
+  const file = fileInput.files && fileInput.files[0];
+  if (!file) return;
+  readFile(file);
+  fileInput.value = '';
+});
+
+// 拖拽 JSON 文件到页面（临时覆盖内置配置）
+document.addEventListener('dragover', e => e.preventDefault());
+document.addEventListener('drop', e => {
+  e.preventDefault();
+  const file = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+  if (file) readFile(file);
+});
+
+function readFile(file) {
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const json = JSON.parse(reader.result);
+      loadData(json);
+    } catch (err) {
+      console.error(err);
+      elStatus.textContent = '解析失败：' + err.message;
+      alert('配置文件解析失败：\n' + err.message);
+    }
+  };
+  reader.readAsText(file, 'utf-8');
+}
+
+function loadData(json) {
+  let raw;
+  try {
+    raw = normalizeList(json);
+  } catch (err) {
+    elStatus.textContent = err.message;
+    return;
+  }
+  if (!raw.length) { elStatus.textContent = '配置为空'; return; }
+  buildGraph(raw);
+}
+
+/* ==================== 渲染循环 ==================== */
+function animate() {
+  requestAnimationFrame(animate);
+  controls.update();
+
+  const t = performance.now() * 0.001;
+  nodes.forEach((n, i) => {
+    if (n.halo) {
+      n.halo.material.opacity = (selectedNode === n)
+        ? 0.95
+        : 0.42 + Math.sin(t * 1.5 + i) * 0.08;
+    }
+  });
+
+  renderer.render(scene, camera);
+}
+
+addEventListener('resize', () => {
+  camera.aspect = innerWidth / innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth, innerHeight);
+});
+
+/* ==================== 启动：直接渲染内置配置 ==================== */
+animate();
+loadData(BUILTIN_CONFIG);
+</script>
+</body>
+</html>
