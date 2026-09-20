@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>知识图谱 · 3D 视图</title>
+<title>道术 TaoismCraft · 3D 图谱</title>
 <style>
   :root { --bg: #0a0e17; --line: rgba(80,140,220,.35); }
   * { box-sizing: border-box; }
@@ -36,6 +36,30 @@
   .btn.ghost:hover { background: rgba(255,255,255,.14); }
   #status { margin-left: auto; font-size: 12px; color: #7f95b4; }
 
+  /* 搜索框 */
+  #searchWrap { position: relative; }
+  #searchInput {
+    width: 190px; padding: 8px 12px; border-radius: 8px; font-size: 13px;
+    font-family: inherit; color: #e8eef7; background: rgba(255,255,255,.07);
+    border: 1px solid var(--line); outline: none; transition: .18s;
+  }
+  #searchInput::placeholder { color: #7f95b4; }
+  #searchInput:focus { border-color: #3f7fd4; background: rgba(255,255,255,.12); }
+  #searchResults {
+    position: absolute; top: 42px; left: 0; width: 280px; max-height: 340px;
+    overflow: auto; border-radius: 10px; z-index: 40;
+    background: rgba(14,21,35,.98); border: 1px solid var(--line);
+    box-shadow: 0 12px 36px rgba(0,0,0,.6);
+    display: none;
+  }
+  #searchResults.show { display: block; }
+  .sr-item {
+    padding: 9px 14px; font-size: 13px; color: #cbd9ed; cursor: pointer;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .sr-item:hover, .sr-item.active { background: rgba(63,127,212,.3); color: #fff; }
+  .sr-empty { padding: 10px 14px; font-size: 12.5px; color: #7f95b4; }
+
   #panel {
     position: fixed; top: 70px; right: 16px; width: 340px;
     max-height: calc(100% - 100px); z-index: 25;
@@ -66,6 +90,10 @@
 
 <div id="toolbar">
   <span class="title">知识图谱 · 3D</span>
+  <div id="searchWrap">
+    <input type="text" id="searchInput" placeholder="搜索节点…" autocomplete="off" spellcheck="false" />
+    <div id="searchResults"></div>
+  </div>
   <button class="btn ghost" id="btnReload">重载内置配置</button>
   <button class="btn ghost" id="btnLoad">加载外部配置</button>
   <button class="btn ghost" id="btnCenter">重置视角</button>
@@ -80,7 +108,7 @@
   <div id="pInfo"></div>
 </div>
 
-<div id="hint">左键旋转 · 滚轮缩放 · 右键平移 · 点击节点查看详情</div>
+<div id="hint">左键旋转 · 滚轮缩放 · 右键平移 · 点击节点查看详情 · 顶部可搜索节点</div>
 
 <script type="importmap">
 {
@@ -95,7 +123,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 const BUILTIN_CONFIG = #CONFIG#;
-
 /* ==================== 场景初始化 ==================== */
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x0a0e17);
@@ -158,6 +185,10 @@ let meshes = [];
 let nodeMap = new Map();
 let selectedNode = null;
 
+/* 摄像机动画状态 */
+let cameraTween = null;
+const clock = new THREE.Clock();
+
 const raycaster = new THREE.Raycaster();
 
 const elStatus    = document.getElementById('status');
@@ -166,6 +197,9 @@ const elPName     = document.getElementById('pName');
 const elPInfo     = document.getElementById('pInfo');
 const elPImg      = document.getElementById('pImg');
 const elPImgWrap  = document.getElementById('pImgWrap');
+
+const elSearchInput   = document.getElementById('searchInput');
+const elSearchResults = document.getElementById('searchResults');
 
 /* ==================== 工具函数 ==================== */
 function pick(obj, keys) {
@@ -275,6 +309,7 @@ function clearGraph() {
   meshes = [];
   nodeMap = new Map();
   selectedNode = null;
+  cameraTween = null;
   elPanel.classList.remove('show');
 }
 
@@ -411,30 +446,78 @@ function buildGraph(rawList) {
   elStatus.textContent = `已加载 ${nodes.length} 个节点 · ${links.length} 条连接`;
 }
 
-/* ==================== 3D 力导向布局 ==================== */
+/* ==================== 布局：层级初始化 + 力导向微调 ==================== */
 function runLayout() {
   const n = nodes.length;
   if (!n) return;
 
-  // 初始位置：斐波那契球分布
+  const GOLDEN = Math.PI * (3 - Math.sqrt(5));
+
+  /* --- 构建父子邻接（source 为子，target 为父） --- */
+  const childrenMap = new Map();
+  const parentMap = new Map();
+  nodes.forEach(nd => childrenMap.set(nd.id, []));
+  links.forEach(l => {
+    childrenMap.get(l.target.id).push(l.source);
+    parentMap.set(l.source.id, l.target);
+  });
+  const roots = nodes.filter(nd => !parentMap.has(nd.id));
+  if (!roots.length) roots.push(nodes[0]);
+
+  /* --- 层级初始化：子节点围绕父节点球面分布，保证关联节点聚拢 --- */
+  const LINK_DIST = 92;
+  const placed = new Set();
+  const queue = [];
+
+  roots.forEach((r, i) => {
+    const ang = roots.length > 1 ? (i / roots.length) * Math.PI * 2 : 0;
+    const rr = roots.length > 1 ? 140 : 0;
+    r.x = Math.cos(ang) * rr;
+    r.y = 0;
+    r.z = Math.sin(ang) * rr;
+    r.vx = r.vy = r.vz = 0;
+    placed.add(r.id);
+    queue.push(r);
+  });
+
+  while (queue.length) {
+    const cur = queue.shift();
+    const kids = (childrenMap.get(cur.id) || []).filter(k => !placed.has(k.id));
+    const k = kids.length;
+    kids.forEach((child, j) => {
+      placed.add(child.id);
+      const y = k === 1 ? 0.35 : 1 - (j / (k - 1)) * 2;      // -1 .. 1
+      const rxz = Math.sqrt(Math.max(0, 1 - y * y));
+      const theta = GOLDEN * j + (cur._i || 0) * 0.7;
+      child.x = cur.x + Math.cos(theta) * rxz * LINK_DIST;
+      child.y = cur.y + y * LINK_DIST;
+      child.z = cur.z + Math.sin(theta) * rxz * LINK_DIST;
+      child.vx = child.vy = child.vz = 0;
+      queue.push(child);
+    });
+  }
+
+  /* 未连入父子链的孤立节点：球面均匀分布 */
   nodes.forEach((nd, i) => {
+    if (placed.has(nd.id)) return;
     const t = (i + 0.5) / n;
     const phi = Math.acos(1 - 2 * t);
-    const theta = Math.PI * (1 + Math.sqrt(5)) * i;
-    const R = 220;
+    const theta = GOLDEN * i;
+    const R = 260;
     nd.x = R * Math.sin(phi) * Math.cos(theta);
     nd.y = R * Math.cos(phi);
     nd.z = R * Math.sin(phi) * Math.sin(theta);
     nd.vx = nd.vy = nd.vz = 0;
   });
 
-  const REP        = 42000;   // 斥力强度
-  const SPRING_K   = 0.02;    // 弹簧刚度
-  const REST       = 110;     // 弹簧自然长度
-  const CENTER_K   = 0.0025;  // 向心引力
-  const DAMPING    = 0.60;    // 阻尼
-  const MAX_SPEED  = 20;      // 最大速度
-  const ITER       = 600;     // 迭代次数
+  /* --- 力导向微调：强化连接、抑制过度扩散 --- */
+  const REP       = 12000;   // 斥力强度（较原值下调，避免关联节点被推开）
+  const SPRING_K  = 0.05;    // 弹簧刚度（增强，拉近关联节点）
+  const REST      = LINK_DIST * 0.8; // 弹簧自然长度（缩短）
+  const CENTER_K  = 0.0016;  // 向心引力
+  const DAMPING   = 0.60;
+  const MAX_SPEED = 18;
+  const ITER      = 400;
 
   const fx = new Float64Array(n);
   const fy = new Float64Array(n);
@@ -464,7 +547,7 @@ function runLayout() {
       }
     }
 
-    // 弹簧力
+    // 弹簧力（关联节点相互收拢）
     for (const l of links) {
       const a = l.source, b = l.target;
       const ia = a._i, ib = b._i;
@@ -490,8 +573,8 @@ function runLayout() {
 
       const sp = Math.hypot(nd.vx, nd.vy, nd.vz);
       if (sp > MAX_SPEED) {
-        const k = MAX_SPEED / sp;
-        nd.vx *= k; nd.vy *= k; nd.vz *= k;
+        const kk = MAX_SPEED / sp;
+        nd.vx *= kk; nd.vy *= kk; nd.vz *= kk;
       }
 
       nd.x += nd.vx;
@@ -504,6 +587,7 @@ function runLayout() {
 /* ==================== 视角自适应 ==================== */
 function fitView() {
   if (!nodes.length) return;
+  cameraTween = null;
 
   const box = new THREE.Box3();
   const v = new THREE.Vector3();
@@ -587,11 +671,33 @@ function showPanel(node) {
   elPanel.scrollTop = 0;
 }
 
+/* ==================== 聚焦节点（自动移动摄像机） ==================== */
+function focusNode(node, opts) {
+  selectNode(node);
+
+  const options = opts || {};
+  const dist = options.dist || Math.max(node.radius * 16, 150);
+  const _toNode = camera.position.clone().sub(new THREE.Vector3(node.x, node.y, node.z)); const dir = options.dir || (_toNode.lengthSq() < 1e-6 ? new THREE.Vector3(0.55, 0.42, 0.9).normalize() : _toNode.normalize());
+
+  const targetPos = new THREE.Vector3(node.x, node.y, node.z);
+  const camPos    = targetPos.clone().add(dir.multiplyScalar(dist));
+
+  cameraTween = {
+    fromPos:    camera.position.clone(),
+    toPos:      camPos,
+    fromTarget: controls.target.clone(),
+    toTarget:   targetPos.clone(),
+    t: 0,
+    dur: 0.85
+  };
+}
+
 /* ==================== 交互：点击拾取 ==================== */
 let pointerDownPos = null;
 
 renderer.domElement.addEventListener('pointerdown', e => {
   pointerDownPos = { x: e.clientX, y: e.clientY, button: e.button };
+  cameraTween = null; // 用户开始操作即打断摄像机动画
 });
 
 renderer.domElement.addEventListener('pointerup', e => {
@@ -611,8 +717,96 @@ renderer.domElement.addEventListener('pointerup', e => {
   raycaster.setFromCamera(mouse, camera);
   const hits = raycaster.intersectObjects(meshes, false);
 
-  if (hits.length > 0) selectNode(hits[0].object.userData.node);
+  if (hits.length > 0) focusNode(hits[0].object.userData.node);
   else clearSelection();
+});
+
+/* 用户旋转/缩放也打断动画 */
+controls.addEventListener('start', () => { cameraTween = null; });
+
+/* ==================== 搜索功能 ==================== */
+let searchActiveIndex = -1;
+let searchMatches = [];
+
+function hideSearchResults() {
+  elSearchResults.classList.remove('show');
+  searchActiveIndex = -1;
+}
+
+function updateSearchActive() {
+  const items = elSearchResults.querySelectorAll('.sr-item');
+  items.forEach((el, i) => el.classList.toggle('active', i === searchActiveIndex));
+}
+
+function chooseSearchResult(node) {
+  if (!node) return;
+  elSearchInput.value = node.name;
+  hideSearchResults();
+  focusNode(node);
+}
+
+function renderSearchResults(keyword) {
+  const kw = keyword.trim().toLowerCase();
+  elSearchResults.innerHTML = '';
+  searchActiveIndex = -1;
+
+  if (!kw) { hideSearchResults(); return; }
+
+  searchMatches = nodes
+    .filter(n => n.name.toLowerCase().includes(kw))
+    .slice(0, 15);
+
+  if (!searchMatches.length) {
+    elSearchResults.innerHTML = '<div class="sr-empty">无匹配节点</div>';
+    elSearchResults.classList.add('show');
+    return;
+  }
+
+  searchMatches.forEach(n => {
+    const item = document.createElement('div');
+    item.className = 'sr-item';
+    item.textContent = n.name;
+    item.title = n.name;
+    item.addEventListener('mousedown', ev => {
+      ev.preventDefault(); // 防止输入框失焦
+      chooseSearchResult(n);
+    });
+    elSearchResults.appendChild(item);
+  });
+  elSearchResults.classList.add('show');
+}
+
+elSearchInput.addEventListener('input', () => {
+  renderSearchResults(elSearchInput.value);
+});
+
+elSearchInput.addEventListener('keydown', e => {
+  if (e.key === 'ArrowDown') {
+    e.preventDefault();
+    if (!searchMatches.length) return;
+    searchActiveIndex = Math.min(searchActiveIndex + 1, searchMatches.length - 1);
+    updateSearchActive();
+  } else if (e.key === 'ArrowUp') {
+    e.preventDefault();
+    if (!searchMatches.length) return;
+    searchActiveIndex = Math.max(searchActiveIndex - 1, 0);
+    updateSearchActive();
+  } else if (e.key === 'Enter') {
+    e.preventDefault();
+    const idx = searchActiveIndex >= 0 ? searchActiveIndex : 0;
+    if (searchMatches[idx]) chooseSearchResult(searchMatches[idx]);
+  } else if (e.key === 'Escape') {
+    hideSearchResults();
+    elSearchInput.blur();
+  }
+});
+
+elSearchInput.addEventListener('blur', () => {
+  // 延迟隐藏，允许点击结果项
+  setTimeout(hideSearchResults, 120);
+});
+elSearchInput.addEventListener('focus', () => {
+  if (elSearchInput.value.trim()) renderSearchResults(elSearchInput.value);
 });
 
 /* ==================== 数据加载 ==================== */
@@ -670,6 +864,18 @@ function loadData(json) {
 /* ==================== 渲染循环 ==================== */
 function animate() {
   requestAnimationFrame(animate);
+  const dt = clock.getDelta();
+
+  // 摄像机聚焦动画（easeInOutQuad）
+  if (cameraTween) {
+    cameraTween.t += dt / cameraTween.dur;
+    let k = Math.min(cameraTween.t, 1);
+    const e = k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
+    camera.position.lerpVectors(cameraTween.fromPos, cameraTween.toPos, e);
+    controls.target.lerpVectors(cameraTween.fromTarget, cameraTween.toTarget, e);
+    if (k >= 1) cameraTween = null;
+  }
+
   controls.update();
 
   const t = performance.now() * 0.001;

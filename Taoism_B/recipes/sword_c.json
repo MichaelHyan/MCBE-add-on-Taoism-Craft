@@ -1,0 +1,42 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:sword_c"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "cbc",
+      "eae",
+      "dbd"
+    ],
+    "key": {
+      "a": {
+        "item": "items:sword_sp"
+      },
+      "b": {
+        "item": "items:soul_powder"
+      },
+      "c": {
+        "item": "items:qi"
+      },
+      "d": {
+        "item": "items:spirit"
+      },
+      "e": {
+        "item": "items:talisman"
+      }
+    },
+    "unlock": [
+      {
+        "item": "items:soul_powder"
+      }
+    ],
+    "result": {
+      "item": "items:sword_c",
+      "count": 1
+    }
+  }
+}

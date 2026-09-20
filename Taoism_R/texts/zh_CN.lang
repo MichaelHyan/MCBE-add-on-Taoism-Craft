@@ -231,3 +231,7 @@ item.items:bell_a.name=摄魂铃\n§o§7等级限制:无\n§r§b摄魂取念§r
 item.items:seal.name=法印\n§o§7等级限制:45\n§r§b如有神助§r
 item.items:seal_e.name=摄妖印\n§o§7等级限制:无
 entity.entity:zombie_mimic_c_undead.name=僵尸
+entity.entity:zombie_mimic_h.name=伏尸
+item.items:sword_c=阴阳追魄剑\n§o§7等级限制:25\n§r§b阴阳相生§r
+item.items:sword_d=承影剑\n§o§7等级限制:25\n§r§b如影随形§r
+item.items:soul_powder.name=阴魄砂\n§o§7合成材料

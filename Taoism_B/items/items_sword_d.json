@@ -29,19 +29,6 @@
         }
       },
       "minecraft:damage":7,
-      "minecraft:durability":{
-        "max_durability":512
-      },
-      "minecraft:repairable":{
-        "repair_items":[
-          {
-            "items":[
-              "items:spirit"
-            ],
-            "repair_amount": "query.max_durability * 0.25"
-          }
-        ]
-      },
       "minecraft:digger":{
         "use_efficiency":true,
         "destroy_speeds":[

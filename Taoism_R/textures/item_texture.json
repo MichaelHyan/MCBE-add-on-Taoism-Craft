@@ -29,6 +29,9 @@
     "sword_ql": {
       "textures": "textures/items/sword_ql.png"
     },
+    "soul_powder": {
+      "textures": "textures/items/soul_powder.png"
+    },
     "talisman_ql": {
       "textures": "textures/items/talisman_ql.png"
     },
