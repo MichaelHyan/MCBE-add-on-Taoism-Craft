@@ -47,11 +47,6 @@
           "type": "item",
           "name": "minecraft:diamond",
           "weight": 10
-        },
-        {
-          "type": "item",
-          "name": "items:soul_powder",
-          "weight": 10
         }
       ]
     }
