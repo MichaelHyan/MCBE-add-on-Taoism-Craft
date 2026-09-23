@@ -1059,6 +1059,9 @@
         "width": 0.72,
         "height": 1.88
       },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/partner.json"
+      },
       "minecraft:behavior.sleep": {
         "priority": 3,
         "goal_radius": 5,
