@@ -1,0 +1,25 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.mooncake_dry_a":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"mooncake_dry_a":"1==1"}
+					]
+				},
+				"mooncake_dry_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:falling_dust_sand_particle ~ ~ ~",
+						"/fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air destroy"
+					]
+				}
+			}
+		}
+ 	}
+ }

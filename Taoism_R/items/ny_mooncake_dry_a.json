@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ny:mooncake_dry_a",
+      "category": "Nature"
+    },
+
+    "components": {
+      "minecraft:icon": "mooncake_a",
+      "minecraft:render_offsets": "mooncake_a"
+    }
+  }
+}

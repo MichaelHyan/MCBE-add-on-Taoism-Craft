@@ -1,0 +1,36 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.mooncake_dry_c":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"mooncake_dry_c_a":"query.life_time < 2"},
+						{"mooncake_dry_c_b":"query.life_time == 10"}
+					]
+				},
+				"mooncake_dry_c_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:falling_dust_sand_particle ~ ~ ~",
+						"/effect @e[family=!mooncake,tag=!dense,r=2] slowness 1 255 true"
+					]
+				},
+				"mooncake_dry_c_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tag @e remove dense"
+					]
+				}
+			}
+		}
+ 	}
+ }
