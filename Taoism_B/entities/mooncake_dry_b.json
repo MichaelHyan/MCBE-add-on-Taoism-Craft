@@ -12,7 +12,7 @@
 				]
 			},
       "animations": {
-				"mooncake_b": "controller.animation.mooncake_b"
+				"mooncake_b": "controller.animation.mooncake_dry_b"
 			}
     },
     "component_groups": {
@@ -59,7 +59,7 @@
       "minecraft:timer": {
         "looping": true,
         "randomInterval": false,
-        "time": 30.0,
+        "time": 6.0,
         "time_down_event": {
           "event": "despawn",
           "target": "self"

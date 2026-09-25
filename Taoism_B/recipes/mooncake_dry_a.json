@@ -1,0 +1,20 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "ny:mooncake_dry_a"
+    },
+    "groups": [
+      "items"
+    ],
+    "tags": [
+      "campfire"
+    ],
+    "input": {
+      "item": "ny:mooncake_a"
+    },
+    "output": {
+      "item": "ny:mooncake_dry_a"
+    }
+  }
+}

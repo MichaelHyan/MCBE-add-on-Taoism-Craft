@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "entity:mooncake_dry_a",
+      "materials": {
+        "default": "entity_alphablend"
+      },
+      "textures": {
+        "default": "textures/entity/mooncake"
+      },
+      "geometry": {
+        "default": "geometry.mooncake"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

@@ -525,13 +525,22 @@
       "textures":"textures/ny/mooncake_c.png"
     },
     "mooncake_dry_a": {
-      "textures":"textures/ny/mooncake_dry_a.png"
+      "textures":"textures/ny/mooncake_a.png"
     },
     "mooncake_dry_b": {
-      "textures":"textures/ny/mooncake_dry_b.png"
+      "textures":"textures/ny/mooncake_b.png"
     },
     "mooncake_dry_c": {
-      "textures":"textures/ny/mooncake_dry_c.png"
+      "textures":"textures/ny/mooncake_c.png"
+    },
+    "pigoil": {
+      "textures":"textures/ny/pigoil.png"
+    },
+    "beanfilling": {
+      "textures":"textures/ny/beanfilling.png"
+    },
+    "nutfilling": {
+      "textures":"textures/ny/nutfilling.png"
     }
   }
 }

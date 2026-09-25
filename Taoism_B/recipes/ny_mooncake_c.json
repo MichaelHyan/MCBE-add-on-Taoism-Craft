@@ -1,0 +1,31 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ny:mooncake_c"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "ny:flour"
+      },
+      {
+        "item": "ny:pigoil"
+      },
+      {
+        "item": "egg"
+      }
+    ],
+    "unlock": [
+      {
+        "item": "ny:flour"
+      }
+    ],
+    "result": [{
+      "item": "ny:mooncake_c",
+      "count": 1
+    }]
+  }
+}

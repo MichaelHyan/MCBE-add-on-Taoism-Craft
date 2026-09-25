@@ -12,7 +12,7 @@
 				]
 			},
       "animations": {
-				"mooncake_a": "controller.animation.mooncake_a"
+				"mooncake_a": "controller.animation.mooncake_dry_a"
 			}
     },
     "component_groups": {
@@ -44,8 +44,8 @@
             "shake_time": 0.0
           }
         },
-        "power": 1,
-        "gravity": 0.1,
+        "power": 0.5,
+        "gravity": 0,
         "uncertainty_base": 0,
         "uncertainty_multiplier": 0,
         "anchor": 1,
@@ -59,13 +59,12 @@
       "minecraft:timer": {
         "looping": true,
         "randomInterval": false,
-        "time": 30.0,
+        "time": 1.0,
         "time_down_event": {
           "event": "despawn",
           "target": "self"
         }
       },
-      "minecraft:physics": {},
       "minecraft:conditional_bandwidth_optimization": {
         "default_values": {
           "max_optimized_distance": 100.0,

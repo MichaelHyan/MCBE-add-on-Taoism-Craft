@@ -5,29 +5,22 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"mooncake_dry_c_a":"query.life_time < 2"},
-						{"mooncake_dry_c_b":"query.life_time == 10"}
+						{"mooncake_dry_c":"1==1"}
 					]
 				},
-				"mooncake_dry_c_a": {
+				"mooncake_dry_c": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
 							}
 					],
 					"on_entry": [
-						"/particle minecraft:falling_dust_sand_particle ~ ~ ~",
-						"/effect @e[family=!mooncake,tag=!dense,r=2] slowness 1 255 true"
-					]
-				},
-				"mooncake_dry_c_b": {
-					"transitions": [
-							{
-								"base_jeta": "(1.0)"
-							}
-					],
-					"on_entry": [
-						"/tag @e remove dense"
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/particle minecraft:end_chest ~ ~0.5 ~",
+						"/tp @e[type=!player,family=!mooncake,r=15] @s"
 					]
 				}
 			}

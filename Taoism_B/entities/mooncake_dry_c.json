@@ -12,12 +12,14 @@
 				]
 			},
       "animations": {
-				"mooncake_c": "controller.animation.mooncake_c"
+				"mooncake_c": "controller.animation.mooncake_dry_c"
 			}
     },
     "component_groups": {
       "despawn": {
-        "minecraft:instant_despawn": {}
+        "minecraft:transformation": {
+          "into": "wind_charge_projectile"
+        }
       }
     },
     "components": {
@@ -59,7 +61,7 @@
       "minecraft:timer": {
         "looping": true,
         "randomInterval": false,
-        "time": 30.0,
+        "time": 3,
         "time_down_event": {
           "event": "despawn",
           "target": "self"

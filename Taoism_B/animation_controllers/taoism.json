@@ -48,9 +48,7 @@
 						{"firegourd_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:firegourd') && query.is_item_equipped == 0 && query.player_level > 24"},
 						{"firegourd_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:firegourd') && query.is_item_equipped != 0 && query.player_level > 24"},
 						{"bella_a":"query.get_equipped_item_name=='bell_a' && variable.attack_time && query.scoreboard('charge') >= 0"},
-						{"seal":"query.get_equipped_item_name=='seal' && variable.attack_time && query.scoreboard('godmodecd') >= 0 && query.player_level > 44"},
-						{"mooncake_b":"query.get_equipped_item_name=='mooncake_b'"},
-						{"mooncake_c":"query.get_equipped_item_name=='mooncake_c' && variable.attack_time && query.scoreboard('swordatkcd') >= 0"}						
+						{"seal":"query.get_equipped_item_name=='seal' && variable.attack_time && query.scoreboard('godmodecd') >= 0 && query.player_level > 44"}
 					]
 				},
 				"summonp": {
@@ -614,29 +612,6 @@
 						"/summon entity:bell_hp_a ~ ~ ~-3",
 						"/summon entity:bell_hp_b ~3 ~ ~",
 						"/summon entity:bell_hp_b ~-3 ~ ~"
-					]
-				},
-				"mooncake_b": {
-					"transitions": [
-							{
-								"base_jeta": "(1.0)"
-							}
-					],
-					"on_entry": [
-						"/tag @s add dense"
-					]
-				},
-				"mooncake_c": {
-					"transitions": [
-							{
-								"base_jeta": "(1.0)"
-							}
-					],
-					"on_entry": [
-						"/effect @e[rm=1,r=3] slowness 1 255 true",
-						"/effect @e[rm=1,r=3] weakness 1 255 true",
-						"/scoreboard players set @s swordatkcd -3",
-						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5"
 					]
 				}
 			}

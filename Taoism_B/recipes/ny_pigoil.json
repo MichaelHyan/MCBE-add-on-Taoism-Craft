@@ -1,0 +1,20 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "ny:pigoil"
+    },
+    "groups": [
+      "items"
+    ],
+    "tags": [
+      "furnace"
+    ],
+    "input": {
+      "item": "ny:pigskin"
+    },
+    "output": {
+      "item": "ny:pigoil"
+    }
+  }
+}

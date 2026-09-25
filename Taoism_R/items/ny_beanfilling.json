@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ny:beanfilling",
+      "category": "Nature"
+    },
+
+    "components": {
+      "minecraft:icon": "beanfilling",
+      "minecraft:render_offsets": "beanfilling"
+    }
+  }
+}
