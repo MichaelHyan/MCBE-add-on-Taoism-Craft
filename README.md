@@ -1341,6 +1341,18 @@
 
 替换部分画替换为“福”字
 
+## 26年中秋节更新内容
+
+![](Taoism_R/textures/items/ny/mooncake_a.png)
+![](Taoism_R/textures/items/ny/mooncake_a.png)
+![](Taoism_R/textures/items/ny/mooncake_a.png)
+
+加入猪油，五仁、豆沙、蛋黄月饼
+
+月饼提供较高饱食度
+
+不要把月饼放干！
+
 ## 
 
 ### 「道生一，一生二，二生三，三生万物。」——《道德经》第四十二章
