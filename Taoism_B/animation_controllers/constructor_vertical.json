@@ -1,0 +1,27 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.constructor_vertical":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"constructor":"1==1"}
+					]
+				},
+				"constructor": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 blocks:framework",
+						"/tp @s ^ ^ ^0.5 facing @n[type=constructor_target]",
+						"/kill @e[type=constructor_target,r=1]",
+						"/effect @s resistance 1 255 true"
+					]
+				}
+			}
+		}
+ 	}
+ }

@@ -1,0 +1,64 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.construction":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"constructor_target":"query.get_equipped_item_name=='constructor_target' && query.is_using_item && query.scoreboard('swordatkcd') >= 0"},
+						{"constructor_flat":"query.get_equipped_item_name=='constructor_flat' && query.is_using_item && query.scoreboard('swordatkcd') >= 0"},
+						{"constructor_vertical":"query.get_equipped_item_name=='constructor_vertical' && query.is_using_item && query.scoreboard('swordatkcd') >= 0"},
+						{"constructor_remove":"query.get_equipped_item_name=='constructor_target' || query.get_equipped_item_name=='constructor_flat' || query.get_equipped_item_name=='constructor_vertical' && variable.attack_time && query.scoreboard('swordatkcd') >= 0"}
+					]
+				},
+				"constructor_target": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add swordatkcd dummy",
+						"/summon construction:constructor_target",
+						"/scoreboard players set @s swordatkcd -10"
+					]
+				},
+				"constructor_flat": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add swordatkcd dummy",
+						"/summon construction:constructor_flat",
+						"/scoreboard players set @s swordatkcd -10"
+					]
+				},
+				"constructor_vertical": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add swordatkcd dummy",
+						"/summon construction:constructor_vertical",
+						"/scoreboard players set @s swordatkcd -10"
+					]
+				},
+				"constructor_remove": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @e[family=construction]",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				}
+			}
+		}
+ 	}
+ }

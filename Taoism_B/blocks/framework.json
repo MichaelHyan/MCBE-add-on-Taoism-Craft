@@ -1,0 +1,21 @@
+{
+  "format_version": "1.17.3",
+  "minecraft:block": {
+    "description": {
+      "identifier": "blocks:framework",
+      "is_experimental": false,
+      "register_to_creative_menu ": true
+    },
+    "components": {
+      "minecraft:map_color": "#FF0000",
+      "minecraft:block_light_emission": 7,
+      "minecraft:destroy_time": 1,
+      "minecraft:explosion_resistance": 1200,
+      "minecraft:friction": 0.6,
+      "minecraft:flammable": {
+        "flame_odds": 0,
+        "burn_odds": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "construction:constructor_target",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "scripts": {
+				"animate": [
+					"constructor_target"
+				]
+			},
+      "animations": {
+				"constructor_target": "controller.animation.constructor_target"
+			}
+    },
+    "component_groups": {
+      "despawn": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:spell_effects": {
+        "add_effects": [
+          {
+            "effect": "resistance",
+            "amplifier": 200,
+            "visible": false,
+            "ambient": true,
+            "duration": 99999999
+          }
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 0,
+        "height": 0
+      },
+      "minecraft:type_family": {
+        "family": [
+          "mob",
+          "taoism",
+          "construction"
+        ]
+      },
+      "minecraft:health": {
+        "value": 100,
+        "max": 100
+      },
+      "minecraft:timer": {
+        "looping": true,
+        "randomInterval": false,
+        "time": 1.0,
+        "time_down_event": {
+          "event": "despawn",
+          "target": "self"
+        }
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+        "default_values": {
+          "max_optimized_distance": 100.0,
+          "max_dropped_ticks": 7,
+          "use_motion_prediction_hints": true
+        }
+      }
+    },
+    "events": {
+      "despawn": {
+        "add": {
+          "component_groups": [
+            "despawn"
+          ]
+        }
+      }
+    }
+  }
+}

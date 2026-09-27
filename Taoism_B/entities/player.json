@@ -70,7 +70,8 @@
           "gv_b",
           "gv_c",
           "godmode_a",
-          "godmode_b"
+          "godmode_b",
+          "construction"
 				]
 			},
       "animations": {
@@ -137,7 +138,8 @@
         "gv_b": "controller.animation.gv_b",
         "gv_c": "controller.animation.gv_c",
         "godmode_a": "controller.animation.godmode_a",
-        "godmode_b": "controller.animation.godmode_b"
+        "godmode_b": "controller.animation.godmode_b",
+        "construction": "controller.animation.construction"
 			}
     },
 

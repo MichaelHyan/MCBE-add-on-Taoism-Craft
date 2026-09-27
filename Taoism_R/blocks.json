@@ -21,5 +21,16 @@
       "east": "ball_east"
     },
     "sound": "dripstone_block"
+  },
+  "blocks:framework": {
+    "textures": {
+      "up": "framework",
+      "down": "framework",
+      "south": "framework",
+      "north": "framework",
+      "west": "framework",
+      "east": "framework"
+    },
+    "sound": "dripstone_block"
   }
 }
