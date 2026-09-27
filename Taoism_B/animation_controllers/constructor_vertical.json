@@ -15,9 +15,10 @@
 							}
 					],
 					"on_entry": [
-						"/fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 blocks:framework",
-						"/tp @s ^ ^ ^0.5 facing @n[type=constructor_target]",
-						"/kill @e[type=constructor_target,r=1]",
+						"/fill ~ ~ ~ ~ ~5 ~ blocks:framework destroy",
+						"/tp @s ^ ^ ^0.5 facing @n[type=construction:constructor_target]",
+						"/tp @e[type=item,r=5] @p",
+						"/kill @e[type=construction:constructor_target,r=1]",
 						"/effect @s resistance 1 255 true"
 					]
 				}

@@ -1,0 +1,22 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "construction:constructor_flat",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/constructor"
+			},
+			"geometry": {
+				"default": "geometry.constructor_flat"
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#f4f2ef",
+				"overlay_color": "#ffffff"
+			}
+		}
+	}
+}

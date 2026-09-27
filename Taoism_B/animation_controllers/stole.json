@@ -1,0 +1,310 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.stole": {
+			"states": {
+				"base_jeta": {
+					"transitions": [
+						{"stole_a": "query.life_time == 5 && math.random_integer(0,26) == 0"},
+						{"stole_b": "query.life_time == 5 && math.random_integer(0,26) == 1"},
+						{"stole_c": "query.life_time == 5 && math.random_integer(0,26) == 2"},
+						{"stole_d": "query.life_time == 5 && math.random_integer(0,26) == 3"},
+						{"stole_e": "query.life_time == 5 && math.random_integer(0,26) == 4"},
+						{"stole_f": "query.life_time == 5 && math.random_integer(0,26) == 5"},
+						{"stole_g": "query.life_time == 5 && math.random_integer(0,26) == 6"},
+						{"stole_h": "query.life_time == 5 && math.random_integer(0,26) == 7"},
+						{"stole_i": "query.life_time == 5 && math.random_integer(0,26) == 8"},
+						{"stole_j": "query.life_time == 5 && math.random_integer(0,26) == 9"},
+						{"stole_k": "query.life_time == 5 && math.random_integer(0,26) == 10"},
+						{"stole_l": "query.life_time == 5 && math.random_integer(0,26) == 11"},
+						{"stole_m": "query.life_time == 5 && math.random_integer(0,26) == 12"},
+						{"stole_n": "query.life_time == 5 && math.random_integer(0,26) == 13"},
+						{"stole_o": "query.life_time == 5 && math.random_integer(0,26) == 14"},
+						{"stole_p": "query.life_time == 5 && math.random_integer(0,26) == 15"},
+						{"stole_q": "query.life_time == 5 && math.random_integer(0,26) == 16"},
+						{"stole_r": "query.life_time == 5 && math.random_integer(0,26) == 17"},
+						{"stole_s": "query.life_time == 5 && math.random_integer(0,26) == 18"},
+						{"stole_t": "query.life_time == 5 && math.random_integer(0,26) == 19"},
+						{"stole_u": "query.life_time == 5 && math.random_integer(0,26) == 20"},
+						{"stole_v": "query.life_time == 5 && math.random_integer(0,26) == 21"},
+						{"stole_w": "query.life_time == 5 && math.random_integer(0,26) == 22"},
+						{"stole_x": "query.life_time == 5 && math.random_integer(0,26) == 23"},
+						{"stole_y": "query.life_time == 5 && math.random_integer(0,26) == 24"},
+						{"stole_z": "query.life_time == 5 && math.random_integer(0,26) == 25"},
+						{"stole_aa": "query.life_time == 5 && math.random_integer(0,26) == 26"}
+					]
+				},
+				"stole_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @p[r=5] slot.inventory 0 air"
+					]
+				},
+				"stole_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @p[r=5] slot.inventory 1 air"
+					]
+				},
+				"stole_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @p[r=5] slot.inventory 2 air"
+					]
+				},
+				"stole_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @p[r=5] slot.inventory 3 air"
+					]
+				},
+				"stole_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @p[r=5] slot.inventory 4 air"
+					]
+				},
+				"stole_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @p[r=5] slot.inventory 5 air"
+					]
+				},
+				"stole_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @p[r=5] slot.inventory 6 air"
+					]
+				},
+				"stole_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @p[r=5] slot.inventory 7 air"
+					]
+				},
+				"stole_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @p[r=5] slot.inventory 8 air"
+					]
+				},
+				"stole_j": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @p[r=5] slot.inventory 9 air"
+					]
+				},
+				"stole_k": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @p[r=5] slot.inventory 10 air"
+					]
+				},
+				"stole_l": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @p[r=5] slot.inventory 11 air"
+					]
+				},
+				"stole_m": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @p[r=5] slot.inventory 12 air"
+					]
+				},
+				"stole_n": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @p[r=5] slot.inventory 13 air"
+					]
+				},
+				"stole_o": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @p[r=5] slot.inventory 14 air"
+					]
+				},
+				"stole_p": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @p[r=5] slot.inventory 15 air"
+					]
+				},
+				"stole_q": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @p[r=5] slot.inventory 16 air"
+					]
+				},
+				"stole_r": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @p[r=5] slot.inventory 17 air"
+					]
+				},
+				"stole_s": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @p[r=5] slot.inventory 18 air"
+					]
+				},
+				"stole_t": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @p[r=5] slot.inventory 19 air"
+					]
+				},
+				"stole_u": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @p[r=5] slot.inventory 20 air"
+					]
+				},
+				"stole_v": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @p[r=5] slot.inventory 21 air"
+					]
+				},
+				"stole_w": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @p[r=5] slot.inventory 22 air"
+					]
+				},
+				"stole_x": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @p[r=5] slot.inventory 23 air"
+					]
+				},
+				"stole_y": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @p[r=5] slot.inventory 24 air"
+					]
+				},
+				"stole_z": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @p[r=5] slot.inventory 25 air"
+					]
+				},
+				"stole_aa": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @p[r=5] slot.inventory 26 air"
+					]
+				}
+			}
+		}
+ 	}
+ }

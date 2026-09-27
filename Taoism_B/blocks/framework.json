@@ -8,9 +8,10 @@
     },
     "components": {
       "minecraft:map_color": "#FF0000",
-      "minecraft:block_light_emission": 7,
+      "minecraft:loot": "loot_tables/blocks/framework.json",
+      "minecraft:block_light_emission": 0,
       "minecraft:destroy_time": 1,
-      "minecraft:explosion_resistance": 1200,
+      "minecraft:explosion_resistance": 10,
       "minecraft:friction": 0.6,
       "minecraft:flammable": {
         "flame_odds": 0,
