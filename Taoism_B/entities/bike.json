@@ -20,21 +20,30 @@
       "minecraft:rideable": {
         "interact_text": "action.interact.ride.minecart",
         "pull_in_entities": true,
-        "seat_count": 1,
-        "seats": {
-          "position": [
-            0.0,
-            0.7,
-            -0.2
-          ]
-        }
+        "seat_count": 2,
+        "seats": [
+          {
+            "position": [
+              0.0,
+              0.7,
+              -0.2
+            ]
+          },
+          {
+            "position": [
+              0.0,
+              0.7,
+              -0.6
+            ]
+          }
+        ]
       },
       "minecraft:input_ground_controlled": {
       },
       "minecraft:health": {
         "value": {
-          "range_min": 20,
-          "range_max": 20
+          "range_min": 40,
+          "range_max": 40
         }
       },
       "minecraft:movement": {

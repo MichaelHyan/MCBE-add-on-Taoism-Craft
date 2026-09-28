@@ -1,0 +1,25 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.rangerspawn":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"spawn":"math.mod(query.life_time,300) == 1"}
+					]
+				},
+				"spawn": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon entity:ranger",
+						"/summon entity:ranger"
+					]
+				}
+			}
+		}
+ 	}
+ }

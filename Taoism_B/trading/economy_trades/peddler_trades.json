@@ -141,7 +141,7 @@
               "wants": [
                 {
                   "item": "items:cinnabar_crystal",
-                  "quantity": 15,
+                  "quantity": 25,
                   "price_multiplier": 0
                 }
               ],
