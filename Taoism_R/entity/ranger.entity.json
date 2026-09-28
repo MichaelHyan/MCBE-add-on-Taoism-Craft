@@ -5,10 +5,10 @@
       "identifier": "entity:ranger",
       "materials": { "default": "base", "invisible": "baseb" },
       "textures": {
-        "default": "textures/entity/unknown"
+        "default": "textures/entity/ranger"
       },
       "geometry": {
-        "default": "geometry.unknown"
+        "default": "geometry.unknown_thin"
       },
       "scripts": {
         "pre_animation": [
