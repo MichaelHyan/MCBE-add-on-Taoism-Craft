@@ -541,6 +541,18 @@
     },
     "nutfilling": {
       "textures":"textures/ny/nutfilling.png"
+    },
+    "constructor_target": {
+      "textures":"textures/construction/target.png"
+    },
+    "constructor_flat": {
+      "textures":"textures/construction/flat.png"
+    },
+    "constructor_vertical": {
+      "textures":"textures/construction/vertical.png"
+    },
+    "constructor_filler": {
+      "textures":"textures/construction/filler.png"
     }
   }
 }

@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "construction:constructor_target",
+      "category": "Nature"
+    },
+
+    "components": {
+      "minecraft:icon": "constructor_target",
+      "minecraft:render_offsets": "constructor_target"
+    }
+  }
+}
