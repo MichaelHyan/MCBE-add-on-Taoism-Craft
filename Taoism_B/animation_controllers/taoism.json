@@ -99,7 +99,6 @@
 					],
 					"on_entry": [
 						"/effect @s strength infinite 1 true",
-						"/effect @s night_vision infinite 1 true",
 						"/effect @s health_boost infinite 4 true",
 						"/replaceitem entity @s slot.weapon.mainhand 0 items:pearl",
 						"/tag @s add tao",
@@ -116,7 +115,6 @@
 					"on_entry": [
 						"/gamerule sendcommandfeedback false",
 						"/effect @s strength infinite 1 true",
-						"/effect @s night_vision infinite 1 true",
 						"/effect @s health_boost infinite 4 true",
 						"/replaceitem entity @s slot.weapon.mainhand 0 items:pearl",
 						"/tag @s add tao",
@@ -133,7 +131,6 @@
 					"on_entry": [
 						"/gamerule sendcommandfeedback false",
 						"/effect @s strength infinite 1 true",
-						"/effect @s night_vision infinite 1 true",
 						"/effect @s health_boost infinite 4 true",
 						"/replaceitem entity @s slot.weapon.mainhand 0 items:pearl",
 						"/tag @s add tao",
