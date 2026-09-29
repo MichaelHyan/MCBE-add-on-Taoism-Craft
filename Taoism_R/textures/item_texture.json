@@ -553,6 +553,9 @@
     },
     "constructor_filler": {
       "textures":"textures/construction/filler.png"
+    },
+    "constructor_rotate": {
+      "textures":"textures/construction/rotate.png"
     }
   }
 }

@@ -8,7 +8,48 @@
 						{"constructor_target":"query.get_equipped_item_name=='constructor_target' && query.is_using_item && query.scoreboard('swordatkcd') >= 0"},
 						{"constructor_flat":"query.get_equipped_item_name=='constructor_flat' && query.is_using_item && query.scoreboard('swordatkcd') >= 0"},
 						{"constructor_vertical":"query.get_equipped_item_name=='constructor_vertical' && query.is_using_item && query.scoreboard('swordatkcd') >= 0"},
-						{"constructor_remove":"query.get_equipped_item_name=='constructor_target' || query.get_equipped_item_name=='constructor_flat' || query.get_equipped_item_name=='constructor_vertical' && variable.attack_time && query.scoreboard('swordatkcd') >= 0"}
+						{"constructor_remove":"query.get_equipped_item_name=='constructor_target' || query.get_equipped_item_name=='constructor_flat' || query.get_equipped_item_name=='constructor_vertical' && variable.attack_time && query.scoreboard('swordatkcd') >= 0"},
+						{"constructor_rotate":"query.get_equipped_item_name=='constructor_rotate' && variable.attack_time && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_a_north":"query.get_equipped_item_name=='construction_unit_a' && query.is_using_item && query.scoreboard('direction') == 1 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_a_south":"query.get_equipped_item_name=='construction_unit_a' && query.is_using_item && query.scoreboard('direction') == 2 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_a_east":"query.get_equipped_item_name=='construction_unit_a' && query.is_using_item && query.scoreboard('direction') == 3 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_a_west":"query.get_equipped_item_name=='construction_unit_a' && query.is_using_item && query.scoreboard('direction') == 4 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_b_north":"query.get_equipped_item_name=='construction_unit_b' && query.is_using_item && query.scoreboard('direction') == 1 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_b_south":"query.get_equipped_item_name=='construction_unit_b' && query.is_using_item && query.scoreboard('direction') == 2 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_b_east":"query.get_equipped_item_name=='construction_unit_b' && query.is_using_item && query.scoreboard('direction') == 3 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_b_west":"query.get_equipped_item_name=='construction_unit_b' && query.is_using_item && query.scoreboard('direction') == 4 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_c_north":"query.get_equipped_item_name=='construction_unit_c' && query.is_using_item && query.scoreboard('direction') == 1 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_c_south":"query.get_equipped_item_name=='construction_unit_c' && query.is_using_item && query.scoreboard('direction') == 2 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_c_east":"query.get_equipped_item_name=='construction_unit_c' && query.is_using_item && query.scoreboard('direction') == 3 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_c_west":"query.get_equipped_item_name=='construction_unit_c' && query.is_using_item && query.scoreboard('direction') == 4 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_d_north":"query.get_equipped_item_name=='construction_unit_d' && query.is_using_item && query.scoreboard('direction') == 1 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_d_south":"query.get_equipped_item_name=='construction_unit_d' && query.is_using_item && query.scoreboard('direction') == 2 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_d_east":"query.get_equipped_item_name=='construction_unit_d' && query.is_using_item && query.scoreboard('direction') == 3 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_d_west":"query.get_equipped_item_name=='construction_unit_d' && query.is_using_item && query.scoreboard('direction') == 4 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_e_north":"query.get_equipped_item_name=='construction_unit_e' && query.is_using_item && query.scoreboard('direction') == 1 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_e_south":"query.get_equipped_item_name=='construction_unit_e' && query.is_using_item && query.scoreboard('direction') == 2 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_e_east":"query.get_equipped_item_name=='construction_unit_e' && query.is_using_item && query.scoreboard('direction') == 3 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_e_west":"query.get_equipped_item_name=='construction_unit_e' && query.is_using_item && query.scoreboard('direction') == 4 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_f_north":"query.get_equipped_item_name=='construction_unit_f' && query.is_using_item && query.scoreboard('direction') == 1 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_f_south":"query.get_equipped_item_name=='construction_unit_f' && query.is_using_item && query.scoreboard('direction') == 2 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_f_east":"query.get_equipped_item_name=='construction_unit_f' && query.is_using_item && query.scoreboard('direction') == 3 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_f_west":"query.get_equipped_item_name=='construction_unit_f' && query.is_using_item && query.scoreboard('direction') == 4 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_g_north":"query.get_equipped_item_name=='construction_unit_g' && query.is_using_item && query.scoreboard('direction') == 1 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_g_south":"query.get_equipped_item_name=='construction_unit_g' && query.is_using_item && query.scoreboard('direction') == 2 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_g_east":"query.get_equipped_item_name=='construction_unit_g' && query.is_using_item && query.scoreboard('direction') == 3 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_g_west":"query.get_equipped_item_name=='construction_unit_g' && query.is_using_item && query.scoreboard('direction') == 4 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_h_north":"query.get_equipped_item_name=='construction_unit_h' && query.is_using_item && query.scoreboard('direction') == 1 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_h_south":"query.get_equipped_item_name=='construction_unit_h' && query.is_using_item && query.scoreboard('direction') == 2 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_h_east":"query.get_equipped_item_name=='construction_unit_h' && query.is_using_item && query.scoreboard('direction') == 3 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_h_west":"query.get_equipped_item_name=='construction_unit_h' && query.is_using_item && query.scoreboard('direction') == 4 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_i_north":"query.get_equipped_item_name=='construction_unit_i' && query.is_using_item && query.scoreboard('direction') == 1 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_i_south":"query.get_equipped_item_name=='construction_unit_i' && query.is_using_item && query.scoreboard('direction') == 2 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_i_east":"query.get_equipped_item_name=='construction_unit_i' && query.is_using_item && query.scoreboard('direction') == 3 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_i_west":"query.get_equipped_item_name=='construction_unit_i' && query.is_using_item && query.scoreboard('direction') == 4 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_j_north":"query.get_equipped_item_name=='construction_unit_j' && query.is_using_item && query.scoreboard('direction') == 1 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_j_south":"query.get_equipped_item_name=='construction_unit_j' && query.is_using_item && query.scoreboard('direction') == 2 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_j_east":"query.get_equipped_item_name=='construction_unit_j' && query.is_using_item && query.scoreboard('direction') == 3 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_j_west":"query.get_equipped_item_name=='construction_unit_j' && query.is_using_item && query.scoreboard('direction') == 4 && query.scoreboard('swordatkcd') >= 0"}
 					]
 				},
 				"constructor_target": {
@@ -55,6 +96,465 @@
 					],
 					"on_entry": [
 						"/kill @e[family=construction]",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"constructor_rotate": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add direction dummy",
+						"/scoreboard players set @s[ry=-135,rym=135] direction 1",
+						"/title @s[ry=-135,rym=135] actionbar 设定方向-北\nset direction: North",
+						"/scoreboard players set @s[ry=45,rym=-45] direction 2",
+						"/title @s[ry=45,rym=-45] actionbar 设定方向-南\nset direction: South",
+						"/scoreboard players set @s[ry=-45,rym=-135] direction 3",
+						"/title @s[ry=-45,rym=-135] actionbar 设定方向-东\nset direction: East",
+						"/scoreboard players set @s[ry=135,rym=45] direction 4",
+						"/title @s[ry=135,rym=45] actionbar 设定方向-西\nset direction: West",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_a_north": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_a ~-10 ~-1 ~-13 270_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_a_south": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_a ~-3 ~-1 ~1 90_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_a_east": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_a ~1 ~-1 ~-10 0_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_a_west": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_a ~-13 ~-1 ~-3 180_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_b_north": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_b ~-7 ~-3 ~-10 180_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_b_south": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_b ~-3 ~-3 ~1 0_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_b_east": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_b ~1 ~-3 ~-7 270_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_b_west": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_b ~-10 ~-3 ~-3 90_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_c_north": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_c ~-5 ~-1 ~-10 180_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_c_south": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_c ~-6 ~-1 ~1 0_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_c_east": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_c ~1 ~-1 ~-5 270_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_c_west": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_c ~-10 ~-1 ~-6 90_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_d_north": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_d ~-7 ~-1 ~-11 180_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_d_south": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_d ~-10 ~-1 ~0 0_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_d_east": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_d ~ ~-1 ~-7 270_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_d_west": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_d ~-11 ~-1 ~-10 90_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_e_north": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_e ~-8 ~-1 ~-12 180_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_e_south": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_e ~-8 ~-1 ~1 0_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_e_east": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_e ~1 ~-1 ~-8 270_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_e_west": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_e ~-12 ~-1 ~-8 90_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_f_north": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_f ~-5 ~-1 ~-9 180_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_f_south": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_f ~-3 ~-1 ~1 0_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_f_east": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_f ~1 ~-1 ~-5 270_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_f_west": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_f ~-9 ~-1 ~-3 90_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_g_north": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_g ~-4 ~-1 ~-8 180_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_g_south": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_g ~-4 ~-1 ~1 0_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_g_east": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_g ~1 ~-1 ~-4 270_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_g_west": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_g ~-8 ~-1 ~-4 90_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_h_north": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_h ~-10 ~-1 ~-21 180_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_h_south": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_h ~-10 ~-1 ~1 0_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_h_east": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_h ~1 ~-1 ~-10 270_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_h_west": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_h ~-21 ~-1 ~-10 90_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_i_north": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_i ~-6 ~-1 ~-7 270_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_i_south": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_i ~-5 ~-1 ~1 90_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_i_east": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_i ~1 ~-1 ~-6 0_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_i_west": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:construction_i ~-7 ~-1 ~-5 180_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_j_north": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:templet ~-12 ~-1 ~-17 90_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_j_south": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:templet ~-12 ~-1 ~1 270_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_j_east": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:templet ~1 ~-1 ~-12 180_degrees",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_j_west": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/structure load mystructure:templet ~-17 ~-1 ~-12 0_degrees",
 						"/scoreboard players set @s swordatkcd -3"
 					]
 				}
