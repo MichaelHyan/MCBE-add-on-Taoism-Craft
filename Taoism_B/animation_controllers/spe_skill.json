@@ -31,7 +31,18 @@
 						{"skillb_unlock":"query.get_equipped_item_name=='sebookb' && query.is_using_item && query.scoreboard('charge') >= 0"},
 						{"skillc_unlock":"query.get_equipped_item_name=='sebookc' && query.is_using_item && query.scoreboard('charge') >= 0"},
 						{"skilld_unlock":"query.get_equipped_item_name=='sebookd' && query.is_using_item && query.scoreboard('charge') >= 0"},
-						{"skille_unlock":"query.get_equipped_item_name=='sebooke' && query.is_using_item && query.scoreboard('charge') >= 0"}
+						{"skille_unlock":"query.get_equipped_item_name=='sebooke' && query.is_using_item && query.scoreboard('charge') >= 0"},
+						{"skill_disengage":"query.get_equipped_item_name=='sebooka' || query.get_equipped_item_name=='sebookb' || query.get_equipped_item_name=='sebookc' || query.get_equipped_item_name=='sebookd' || query.get_equipped_item_name=='sebooke' && variable.attack_time && query.scoreboard('charge') >= 0"},
+						{"skillx_a":"query.get_equipped_item_name=='pearl' && query.scoreboard('spb') == 6 && query.scoreboard('skilltype') == 0 && query.scoreboard('cdr') == 0 && query.is_using_item"},
+						{"skillx_b":"query.get_equipped_item_name=='pearl' && query.scoreboard('spb') == 6 && query.scoreboard('skilltype') == 0 && query.scoreboard('cdr') == 1 && query.is_using_item"},
+						{"skillx_c":"query.get_equipped_item_name=='pearl' && query.scoreboard('spb') == 6 && query.scoreboard('skilltype') == 0 && query.scoreboard('cdr') == 2 && query.is_using_item"},
+						{"skillx_d":"query.get_equipped_item_name=='pearl' && query.scoreboard('spb') == 6 && query.scoreboard('skilltype') == 0 && query.scoreboard('cdr') == 3 && query.is_using_item"},
+						{"skillx_e":"query.get_equipped_item_name=='pearl' && query.scoreboard('spb') == 6 && query.scoreboard('skilltype') == 0 && query.scoreboard('cdr') == 4 && query.is_using_item"},
+						{"skillx_f":"query.get_equipped_item_name=='pearl' && query.scoreboard('spb') == 6 && query.scoreboard('skilltype') == 0 && query.scoreboard('cdr') == 5 && query.is_using_item"},
+						{"skillx_g":"query.get_equipped_item_name=='pearl' && query.scoreboard('spb') == 6 && query.scoreboard('skilltype') == 0 && query.scoreboard('cdr') == 6 && query.is_using_item"},
+						{"skillx_h":"query.get_equipped_item_name=='pearl' && query.scoreboard('spb') == 6 && query.scoreboard('skilltype') == 0 && query.scoreboard('cdr') == 7 && query.is_using_item"},
+						{"skillx_i":"query.get_equipped_item_name=='pearl' && query.scoreboard('spb') == 6 && query.scoreboard('skilltype') == 0 && query.scoreboard('cdr') == 8 && query.is_using_item"},
+						{"skillx_j":"query.get_equipped_item_name=='pearl' && query.scoreboard('spb') == 6 && query.scoreboard('skilltype') == 0 && query.scoreboard('cdr') == 9 && query.is_using_item"}
 					]
 				},
 				"skilla_a": {
@@ -347,6 +358,128 @@
 						"/title @s actionbar 切换为-炼体",
 						"/scoreboard players set @s skilltype 5",
 						"/scoreboard players set @s charge -3"
+					]
+				},
+				"skill_disengage": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar 切换为-归元诀",
+						"/scoreboard players set @s skilltype 0",
+						"/scoreboard players set @s charge -3"
+					]
+				},
+				"skillx_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add cdr dummy",
+						"/scoreboard players add @s cdr 1",
+						"/title @s actionbar §7=§0== === ==="
+					]
+				},
+				"skillx_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s cdr 1",
+						"/title @s actionbar §7==§0= === ==="
+					]
+				},
+				"skillx_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s cdr 1",
+						"/title @s actionbar §7===§0 === ==="
+					]
+				},
+				"skillx_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s cdr 1",
+						"/title @s actionbar §7=== =§0== ==="
+					]
+				},
+				"skillx_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s cdr 1",
+						"/title @s actionbar §7==== ==§0= ==="
+					]
+				},
+				"skillx_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s cdr 1",
+						"/title @s actionbar §7=== === §0==="
+					]
+				},
+				"skillx_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s cdr 1",
+						"/title @s actionbar §7=== === =§0=="
+					]
+				},
+				"skillx_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s cdr 1",
+						"/title @s actionbar §7=== === ==§0="
+					]
+				},
+				"skillx_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s cdr 1",
+						"/title @s actionbar §7=== === ===§0"
+					]
+				},
+				"skillx_j": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/title @s actionbar §7=== === ===§0"
 					]
 				}
 			}

@@ -160,6 +160,9 @@
 					],
 					"on_entry": [
 						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/tag @s add tao_ultimate",
+						"/effect @s[tag=tao_ultimate] health_boost infinite 9 true",
+						"/effect @s[tag=tao_unitmate] regeneration 20 3 true",
 						"/scoreboard objectives add spblock dummy",
 						"/scoreboard objectives add spb dummy",
 						"/scoreboard players set @s spblock 1"

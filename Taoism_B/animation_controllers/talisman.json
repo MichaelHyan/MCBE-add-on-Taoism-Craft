@@ -301,6 +301,8 @@
 							}
 					],
 					"on_entry": [
+						"/tag @s add tao_enhance",
+						"/effect @s[tag=tao_enhance] night_vision infinite 1 true",
 						"/particle minecraft:totem_particle ~ ~1 ~",
 						"/xp 300 @s"
 					]

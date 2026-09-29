@@ -31,7 +31,8 @@
 					],
 					"on_entry": [
 						"/scoreboard players set @s spawnc 0",
-						"/effect @s[tag=tao] regeneration 10 3 true"
+						"/effect @s[tag=tao] regeneration 10 3 true",
+						"/effect @s[tag=tao_unitmate] regeneration 20 3 true"
 					]
 				},
 				"dead_c": {
@@ -42,8 +43,9 @@
 					],
 					"on_entry": [
 						"/effect @s[tag=tao] strength infinite 1 true",
-						"/effect @s[tag=tao] night_vision infinite 1 true",
+						"/effect @s[tag=tao_enhance] night_vision infinite 1 true",
 						"/effect @s[tag=tao] health_boost infinite 4 true",
+						"/effect @s[tag=tao_ultimate] health_boost infinite 9 true",
 						"/effect @s[tag=ft] speed infinite 1 true",
 						"/effect @s[tag=ft] jump_boost infinite 1 true"
 					]
