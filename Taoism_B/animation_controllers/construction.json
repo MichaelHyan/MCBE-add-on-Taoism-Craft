@@ -10,6 +10,37 @@
 						{"constructor_vertical":"query.get_equipped_item_name=='constructor_vertical' && query.is_using_item && query.scoreboard('swordatkcd') >= 0"},
 						{"constructor_remove":"query.get_equipped_item_name=='constructor_target' || query.get_equipped_item_name=='constructor_flat' || query.get_equipped_item_name=='constructor_vertical' && variable.attack_time && query.scoreboard('swordatkcd') >= 0"},
 						{"constructor_rotate":"query.get_equipped_item_name=='constructor_rotate' && variable.attack_time && query.scoreboard('swordatkcd') >= 0"},
+						{"constructor_filler_remove":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.is_item_equipped == 0 && variable.attack_time"},
+						{"constructor_filler_wall_cobblestone":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='cobblestone_wall' && variable.attack_time"},
+						{"constructor_filler_wall_mossy_cobblestone":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='mossy_cobblestone_wall' && variable.attack_time"},
+						{"constructor_filler_wall_granite":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='granite_wall' && variable.attack_time"},
+						{"constructor_filler_wall_diorite":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='diorite_wall' && variable.attack_time"},
+						{"constructor_filler_wall_andesite":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='andesite_wall' && variable.attack_time"},
+						{"constructor_filler_wall_sandstone":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='sandstone_wall' && variable.attack_time"},
+						{"constructor_filler_wall_red_sandstone":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='red_sandstone_wall' && variable.attack_time"},
+						{"constructor_filler_wall_stone_brick":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='stone_brick_wall' && variable.attack_time"},
+						{"constructor_filler_wall_mossy_stone_brick":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='mossy_stone_brick_wall' && variable.attack_time"},
+						{"constructor_filler_wall_cobbled_deepslate":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='cobbled_deepslate_wall' && variable.attack_time"},
+						{"constructor_filler_wall_polished_deepslate":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='polished_deepslate_wall' && variable.attack_time"},
+						{"constructor_filler_wall_deepslate_brick":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='deepslate_brick_wall' && variable.attack_time"},
+						{"constructor_filler_wall_brick":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='brick_wall' && variable.attack_time"},
+						{"constructor_filler_cobblestone":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='cobblestone' && variable.attack_time"},
+						{"constructor_filler_mossy_cobblestone":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='mossy_cobblestone' && variable.attack_time"},
+						{"constructor_filler_granite":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='granite' && variable.attack_time"},
+						{"constructor_filler_diorite":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='diorite' && variable.attack_time"},
+						{"constructor_filler_andesite":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='andesite' && variable.attack_time"},
+						{"constructor_filler_sandstone":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='sandstone' && variable.attack_time"},
+						{"constructor_filler_red_sandstone":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='red_sandstone' && variable.attack_time"},
+						{"constructor_filler_stone_brick":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='stone_bricks' && variable.attack_time"},
+						{"constructor_filler_mossy_stone_brick":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='mossy_stone_bricks' && variable.attack_time"},
+						{"constructor_filler_cobbled_deepslate":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='cobbled_deepslate' && variable.attack_time"},
+						{"constructor_filler_polished_deepslate":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='polished_deepslate' && variable.attack_time"},
+						{"constructor_filler_deepslate_brick":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='deepslate_bricks' && variable.attack_time"},
+						{"constructor_filler_brick_block":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='brick_block' && variable.attack_time"},
+						{"constructor_filler_stone":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='stone' && variable.attack_time"},
+						{"constructor_filler_sand":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='sand' && variable.attack_time"},
+						{"constructor_filler_gravel":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='gravel' && variable.attack_time"},
+						{"constructor_filler_scaffolding":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='scaffolding' && variable.attack_time"},
 						{"unit_a_north":"query.get_equipped_item_name=='construction_unit_a' && query.is_using_item && query.scoreboard('direction') == 1 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_a_south":"query.get_equipped_item_name=='construction_unit_a' && query.is_using_item && query.scoreboard('direction') == 2 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_a_east":"query.get_equipped_item_name=='construction_unit_a' && query.is_using_item && query.scoreboard('direction') == 3 && query.scoreboard('swordatkcd') >= 0"},
@@ -116,6 +147,316 @@
 						"/scoreboard players set @s[ry=135,rym=45] direction 4",
 						"/title @s[ry=135,rym=45] actionbar 设定方向-西\nset direction: West",
 						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"constructor_filler_remove": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 air replace blocks:framework"
+					]
+				},
+				"constructor_filler_wall_cobblestone": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 cobblestone_wall replace blocks:framework"
+					]
+				},
+				"constructor_filler_wall_mossy_cobblestone": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 mossy_cobblestone_wall replace blocks:framework"
+					]
+				},
+				"constructor_filler_wall_granite": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 granite_wall replace blocks:framework"
+					]
+				},
+				"constructor_filler_wall_diorite": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 diorite_wall replace blocks:framework"
+					]
+				},
+				"constructor_filler_wall_andesite": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 andesite_wall replace blocks:framework"
+					]
+				},
+				"constructor_filler_wall_sandstone": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 sandstone_wall replace blocks:framework"
+					]
+				},
+				"constructor_filler_wall_red_sandstone": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 red_sandstone_wall replace blocks:framework"
+					]
+				},
+				"constructor_filler_wall_stone_brick": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 stone_brick_wall replace blocks:framework"
+					]
+				},
+				"constructor_filler_wall_mossy_stone_brick": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 mossy_stone_brick_wall replace blocks:framework"
+					]
+				},
+				"constructor_filler_wall_cobbled_deepslate": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 cobbled_deepslate_wall replace blocks:framework"
+					]
+				},
+				"constructor_filler_wall_polished_deepslate": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 polished_deepslate_wall replace blocks:framework"
+					]
+				},
+				"constructor_filler_wall_deepslate_brick": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 deepslate_brick_wall replace blocks:framework"
+					]
+				},
+				"constructor_filler_wall_brick": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 brick_wall replace blocks:framework"
+					]
+				},
+				"constructor_filler_cobblestone": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 cobblestone replace blocks:framework"
+					]
+				},
+				"constructor_filler_mossy_cobblestone": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 mossy_cobblestone replace blocks:framework"
+					]
+				},
+				"constructor_filler_granite": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 granite replace blocks:framework"
+					]
+				},
+				"constructor_filler_diorite": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 diorite replace blocks:framework"
+					]
+				},
+				"constructor_filler_andesite": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 andesite replace blocks:framework"
+					]
+				},
+				"constructor_filler_sandstone": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 sandstone replace blocks:framework"
+					]
+				},
+				"constructor_filler_red_sandstone": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 red_sandstone replace blocks:framework"
+					]
+				},
+				"constructor_filler_stone_brick": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 stone_bricks replace blocks:framework"
+					]
+				},
+				"constructor_filler_mossy_stone_brick": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 mossy_stone_bricks replace blocks:framework"
+					]
+				},
+				"constructor_filler_cobbled_deepslate": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 cobbled_deepslate replace blocks:framework"
+					]
+				},
+				"constructor_filler_polished_deepslate": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 polished_deepslate replace blocks:framework"
+					]
+				},
+				"constructor_filler_deepslate_brick": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 deepslate_bricks replace blocks:framework"
+					]
+				},
+				"constructor_filler_brick_block": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 brick_block replace blocks:framework"
+					]
+				},
+				"constructor_filler_stone": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 stone replace blocks:framework"
+					]
+				},
+				"constructor_filler_sand": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 sand replace blocks:framework"
+					]
+				},
+				"constructor_filler_gravel": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 gravel replace blocks:framework"
+					]
+				},
+				"constructor_filler_scaffolding": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ~-3 ~-3 ~-3 ~3 ~3 ~3 scaffolding replace blocks:framework"
 					]
 				},
 				"unit_a_north": {
