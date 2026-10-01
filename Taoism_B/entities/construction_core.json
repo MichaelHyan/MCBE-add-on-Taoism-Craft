@@ -1,0 +1,165 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "construction:core",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "scripts": {
+        "animate": [
+          "core"
+        ]
+      },
+      "animations": {
+        "core": "controller.animation.core"
+      }
+    },
+    "component_groups": {
+      "despawn": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:behavior.trade_with_player": {
+        "filters": {
+          "all_of": [
+            {
+              "all_of": [
+                {
+                  "test": "in_water",
+                  "value": false
+                }
+              ]
+            },
+            {
+              "any_of": [
+                {
+                  "test": "on_ground",
+                  "value": true
+                },
+                {
+                  "test": "is_sleeping",
+                  "value": true
+                }
+              ]
+            }
+          ]
+        },
+        "priority": 1
+      },
+      "minecraft:economy_trade_table": {
+        "display_name": "entity.taoism.core",
+        "new_screen": true,
+        "persist_trades": true,
+        "table": "trading/economy_trades/core_trades.json"
+      },
+      "minecraft:nameable": {},
+      "minecraft:health": {
+        "value": 20,
+        "max": 20
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": {
+          "filters": {
+            "test": "in_lava"
+          },
+          "cause": "lava",
+          "damage_per_tick": 4
+        }
+      },
+      "minecraft:movement": {
+        "value": 0
+      },
+      "minecraft:navigation.climb": {
+        "is_amphibious": true,
+        "can_swim": true,
+        "can_walk": true,
+        "can_sink": false,
+        "avoid_damage_blocks": true
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
+      "minecraft:behavior.hurt_by_target": {
+        "priority": 1
+      },
+      "minecraft:behavior.nearest_attackable_target": {
+        "must_reach": true,
+        "must_see": false,
+        "entity_types": [
+          {
+            "filters": {
+              "AND": [
+                {
+                  "test": "is_family",
+                  "subject": 1,
+                  "operator": 0,
+                  "value": "monster"
+                }
+              ]
+            },
+            "max_dist": 10
+          }
+        ],
+        "priority": 3
+      },
+      "minecraft:type_family": {
+        "family": [
+          "mob",
+          "taoism"
+        ]
+      },
+      "minecraft:collision_box": {
+        "height": 1.8,
+        "width": 0.6
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:underwater_movement": {
+        "value": 0
+      },
+      "minecraft:behavior.ranged_attack": {
+        "priority": 2,
+        "attack_interval_min": 1.0,
+        "attack_interval_max": 1.0,
+        "attack_radius": 27,
+        "speed_multiplier": 0.0
+      },
+      "minecraft:shooter": {
+        "type": "Arrow",
+        "def": "entity:seeker"
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1
+      },
+      "minecraft:break_blocks": {
+        "breakable_blocks": [
+          "glass_pane",
+          "stained_glass_pane"
+        ]
+      },
+      "minecraft:breathable": {
+        "breathesWater": true,
+        "totalSupply": 20,
+        "suffocateTime": -1,
+        "generatesBubbles": true,
+        "breathesAir": true
+      },
+      "minecraft:follow_range": {
+        "value": 300
+      }
+    },
+    "events": {
+      "despawn": {
+        "add": {
+          "component_groups": [
+            "despawn"
+          ]
+        }
+      }
+    }
+  }
+}

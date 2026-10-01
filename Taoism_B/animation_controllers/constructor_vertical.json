@@ -15,7 +15,7 @@
 							}
 					],
 					"on_entry": [
-						"/fill ~ ~ ~ ~ ~5 ~ blocks:framework destroy",
+						"/fill ~ ~-2 ~ ~ ~5 ~ blocks:framework destroy",
 						"/tp @s ^ ^ ^0.5 facing @n[type=construction:constructor_target]",
 						"/tp @e[type=item,r=5] @p",
 						"/kill @e[type=construction:constructor_target,r=1]",

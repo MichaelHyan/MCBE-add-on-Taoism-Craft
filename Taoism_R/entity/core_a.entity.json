@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "construction:core_a",
+      "materials": {
+        "default": "entity_alphablend"
+      },
+      "textures": {
+        "default": "textures/entity/core"
+      },
+      "geometry": {
+        "default": "geometry.core_b"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

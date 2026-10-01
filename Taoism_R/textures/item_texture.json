@@ -556,6 +556,45 @@
     },
     "constructor_rotate": {
       "textures":"textures/construction/rotate.png"
+    },
+    "core": {
+      "textures":"textures/construction/core.png"
+    },
+    "decoy": {
+      "textures":"textures/construction/decoy.png"
+    },
+    "bowgun": {
+      "textures":"textures/construction/bowgun.png"
+    },
+    "construction_unit_a": {
+      "textures":"textures/construction/unit_a.png"
+    },
+    "construction_unit_b": {
+      "textures":"textures/construction/unit_b.png"
+    },
+    "construction_unit_c": {
+      "textures":"textures/construction/unit_c.png"
+    },
+    "construction_unit_d": {
+      "textures":"textures/construction/unit_d.png"
+    },
+    "construction_unit_e": {
+      "textures":"textures/construction/unit_e.png"
+    },
+    "construction_unit_f": {
+      "textures":"textures/construction/unit_f.png"
+    },
+    "construction_unit_g": {
+      "textures":"textures/construction/unit_g.png"
+    },
+    "construction_unit_h": {
+      "textures":"textures/construction/unit_h.png"
+    },
+    "construction_unit_i": {
+      "textures":"textures/construction/unit_i.png"
+    },
+    "construction_unit_j": {
+      "textures":"textures/construction/unit_j.png"
     }
   }
 }

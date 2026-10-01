@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "construction:construction_unit_d",
+      "category": "Nature"
+    },
+
+    "components": {
+      "minecraft:icon": "construction_unit_d",
+      "minecraft:render_offsets": "construction_unit_d"
+    }
+  }
+}

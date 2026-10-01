@@ -1,0 +1,47 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.core":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"core_a":"query.life_time == 1"},
+						{"core_b":"query.is_alive == 0"},
+						{"core_c":"math.mod(query.life_time,5) == 0"}
+					]
+				},
+				"core_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @n[type=construction:core_a]",
+						"/summon construction:core_a"
+					]
+				},
+				"core_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @n[type=construction:core_a]"
+					]
+				},
+				"core_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @n[type=construction:core_a] @s"
+					]
+				}
+			}
+		}
+ 	}
+ }
