@@ -17,7 +17,7 @@
 							}
 					],
 					"on_entry": [
-						"/kill @n[type=construction:core_a]",
+						"/kill @n[type=construction:core_a,r=2]",
 						"/summon construction:core_a"
 					]
 				},
