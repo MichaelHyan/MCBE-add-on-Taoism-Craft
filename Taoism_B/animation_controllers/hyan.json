@@ -322,7 +322,6 @@
 					],
 					"on_entry": [
 						"/say 首先，在没有附魔的情况下，后面忘了，总之老君剑就要退出舞台了",
-						"/give @p items:sword_s",
 						"/replaceitem entity @s slot.weapon.mainhand 0 air"
 					]
 				},
@@ -334,7 +333,6 @@
 					],
 					"on_entry": [
 						"/say 这是从你身体里拿出来的？好厉害！",
-						"/give @p items:pearl",
 						"/replaceitem entity @s slot.weapon.mainhand 0 air"
 					]
 				},
@@ -346,7 +344,6 @@
 					],
 					"on_entry": [
 						"/say 谢谢，我不需要这个。",
-						"/give @p totem",
 						"/replaceitem entity @s slot.weapon.offhand 0 air"
 					]
 				},
@@ -369,8 +366,7 @@
 					],
 					"on_entry": [
 						"/say 早在1.0版本就存在朱砂矿的设定，但是一直没做成功，现在还保留着原始代码。。。现在来看居然只是键名写错了？！",
-						"/replaceitem entity @s slot.weapon.mainhand 0 air",
-						"/give @p items:cinnabar_crystal"
+						"/replaceitem entity @s slot.weapon.mainhand 0 air"
 					]
 				},
 				"h_chat_sf": {
@@ -391,7 +387,6 @@
 							}
 					],
 					"on_entry": [
-						"/give @p items:longsword_iron",
 						"/replaceitem entity @s slot.weapon.mainhand 0 air",
 						"/say 这不那谁的剑吗？"
 					]

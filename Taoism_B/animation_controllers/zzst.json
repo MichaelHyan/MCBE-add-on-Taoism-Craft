@@ -199,7 +199,6 @@
 					],
 					"on_entry": [
 						"/say 我还是想说，其实现在邪修还是比走正道要强，游戏机制并不平衡，你懂我的意思。",
-						"/give @p items:sword_s",
 						"/replaceitem entity @s slot.weapon.mainhand 0 air"
 					]
 				},
@@ -211,7 +210,6 @@
 					],
 					"on_entry": [
 						"/say 天若有情天亦老，人间正道是沧桑！",
-						"/give @p items:pearl",
 						"/replaceitem entity @s slot.weapon.mainhand 0 air"
 					]
 				},
@@ -245,8 +243,7 @@
 					],
 					"on_entry": [
 						"/say 只有道教才是中华民族的本土传统宗教，佛教什么的都是从异国传来的。",
-						"/replaceitem entity @s slot.weapon.mainhand 0 air",
-						"/give @p items:cinnabar_crystal"
+						"/replaceitem entity @s slot.weapon.mainhand 0 air"
 					]
 				}
 			}

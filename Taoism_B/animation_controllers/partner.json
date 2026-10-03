@@ -56,7 +56,6 @@
 					"on_entry": [
 						"/kill @e[type=entity:chata]",
 						"/summon entity:chata",
-						"/give @p items:cinnabar_powder",
 						"/effect @s slowness 34 255 true",
 						"/replaceitem entity @s slot.weapon.mainhand 0 air"
 					]
@@ -229,7 +228,6 @@
 					],
 					"on_entry": [
 						"/say 哇！金色传说！",
-						"/give @p items:sword_s",
 						"/replaceitem entity @s slot.weapon.mainhand 0 air"
 					]
 				},
@@ -241,7 +239,6 @@
 					],
 					"on_entry": [
 						"/say 内丹、长生、飞升…… 终究不过是镜花水月，一场空幻。",
-						"/give @p items:pearl",
 						"/replaceitem entity @s slot.weapon.mainhand 0 air"
 					]
 				},
