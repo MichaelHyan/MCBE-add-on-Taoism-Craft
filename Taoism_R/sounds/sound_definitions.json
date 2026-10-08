@@ -73,5 +73,11 @@
       "name": "sounds/seal",
       "stream": true
     }]
+  },
+  "kc": {
+    "sounds": [{
+      "name": "sounds/kc",
+      "stream": true
+    }]
   }
 }

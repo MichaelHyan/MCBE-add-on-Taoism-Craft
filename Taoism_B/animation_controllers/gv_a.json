@@ -8,7 +8,9 @@
 						{"gv_a_a":"query.scoreboard('gv') == 1 || query.scoreboard('gv') == 2 && query.scoreboard('voltage') < 100 && query.is_in_water == 0 && !query.is_sneaking"},
 						{"gv_a_c":"query.scoreboard('gv') == 1 && query.scoreboard('voltage') > 0 && query.is_in_water == 0 && query.is_sneaking"},
 						{"gv_a_d":"query.scoreboard('gv') == 1 && query.scoreboard('voltage') > -5 && query.scoreboard('voltage') <= 0 && query.is_in_water == 0 && query.is_sneaking || query.is_jumping"},
-						{"gv_a_e":"query.scoreboard('gv') == 1 && query.scoreboard('voltage') >= 0 && query.is_in_water == 1 && query.is_sneaking"}
+						{"gv_a_e":"query.scoreboard('gv') == 1 && query.scoreboard('voltage') >= 0 && query.is_in_water == 1 && query.is_sneaking"},
+						{"stand_ready":"query.scoreboard('gv') == 3 && query.scoreboard('charge') >= 0 && variable.attack_time && query.is_sneaking"},
+						{"stand_keep":"query.scoreboard('gv') == 3 && query.scoreboard('charge') < 0"}
 					]
 				},
 				"gv_a_a": {
@@ -57,6 +59,31 @@
 					],
 					"on_entry": [
 						"/scoreboard players set @s voltage -50"
+					]
+				},
+				"stand_ready": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s charge -100",
+						"/summon entity:nothing",
+						"/playsound kc @a",
+						"/effect @s resistance 10 255 true",
+						"/effect @s weakness 10 255 true",
+						"/effect @e darkness 10 1 true"
+					]
+				},
+				"stand_keep": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @e[type=entity:nothing] ^-0.5 ^0.2 ^-1 facing ^-0.5 ^ ^"
 					]
 				}
 			}
