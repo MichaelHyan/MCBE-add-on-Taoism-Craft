@@ -63,7 +63,7 @@
               "gives": [
                 {
                   "item": "construction:constructor_filler",
-                  "quantity": 6
+                  "quantity": 1
                 }
               ],
               "trader_exp": 0,
@@ -86,7 +86,7 @@
               "gives": [
                 {
                   "item": "construction:constructor_rotate",
-                  "quantity": 6
+                  "quantity": 1
                 }
               ],
               "trader_exp": 0,
@@ -109,7 +109,7 @@
               "gives": [
                 {
                   "item": "construction:constructor_target",
-                  "quantity": 6
+                  "quantity": 1
                 }
               ],
               "trader_exp": 0,
@@ -132,7 +132,7 @@
               "gives": [
                 {
                   "item": "construction:constructor_flat",
-                  "quantity": 6
+                  "quantity": 1
                 }
               ],
               "trader_exp": 0,
@@ -155,7 +155,7 @@
               "gives": [
                 {
                   "item": "construction:constructor_vertical",
-                  "quantity": 6
+                  "quantity": 1
                 }
               ],
               "trader_exp": 0,
@@ -178,7 +178,7 @@
               "gives": [
                 {
                   "item": "construction:construction_unit_a",
-                  "quantity": 6
+                  "quantity": 1
                 }
               ],
               "trader_exp": 0,
@@ -201,7 +201,7 @@
               "gives": [
                 {
                   "item": "construction:construction_unit_b",
-                  "quantity": 6
+                  "quantity": 1
                 }
               ],
               "trader_exp": 0,
@@ -224,7 +224,7 @@
               "gives": [
                 {
                   "item": "construction:construction_unit_c",
-                  "quantity": 6
+                  "quantity": 1
                 }
               ],
               "trader_exp": 0,
@@ -247,7 +247,7 @@
               "gives": [
                 {
                   "item": "construction:construction_unit_d",
-                  "quantity": 6
+                  "quantity": 1
                 }
               ],
               "trader_exp": 0,
@@ -270,7 +270,7 @@
               "gives": [
                 {
                   "item": "construction:construction_unit_e",
-                  "quantity": 6
+                  "quantity": 1
                 }
               ],
               "trader_exp": 0,
@@ -293,7 +293,7 @@
               "gives": [
                 {
                   "item": "construction:construction_unit_f",
-                  "quantity": 6
+                  "quantity": 1
                 }
               ],
               "trader_exp": 0,
@@ -316,7 +316,7 @@
               "gives": [
                 {
                   "item": "construction:construction_unit_g",
-                  "quantity": 6
+                  "quantity": 1
                 }
               ],
               "trader_exp": 0,
@@ -339,7 +339,7 @@
               "gives": [
                 {
                   "item": "construction:construction_unit_h",
-                  "quantity": 6
+                  "quantity": 1
                 }
               ],
               "trader_exp": 0,
@@ -362,7 +362,7 @@
               "gives": [
                 {
                   "item": "construction:construction_unit_i",
-                  "quantity": 6
+                  "quantity": 1
                 }
               ],
               "trader_exp": 0,
@@ -385,7 +385,7 @@
               "gives": [
                 {
                   "item": "construction:construction_unit_j",
-                  "quantity": 6
+                  "quantity": 1
                 }
               ],
               "trader_exp": 0,
