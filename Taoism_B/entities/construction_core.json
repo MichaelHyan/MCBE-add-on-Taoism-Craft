@@ -110,7 +110,7 @@
         ]
       },
       "minecraft:collision_box": {
-        "height": 1.8,
+        "height": 3,
         "width": 0.6
       },
       "minecraft:physics": {},
@@ -130,7 +130,7 @@
       },
       "minecraft:shooter": {
         "type": "Arrow",
-        "def": "entity:seeker"
+        "def": "entity:seeker_core"
       },
       "minecraft:knockback_resistance": {
         "value": 1

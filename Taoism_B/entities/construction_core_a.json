@@ -25,6 +25,10 @@
         "value": 20,
         "max": 20
       },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
       "minecraft:hurt_on_condition": {
         "damage_conditions": {
           "filters": {
