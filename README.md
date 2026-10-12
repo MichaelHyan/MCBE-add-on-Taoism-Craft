@@ -209,7 +209,7 @@
 - 人被杀，聚集的怨气变了厉鬼，但近年盛行杀人放火，却不见恶鬼横行，倒是地主腰间的木头玩意似乎是怨气越来越重。
 
 #### 宝经卷轴
-- 核心功能：使用后获得大量经验值，助力修行境界提升
+- 核心功能：使用后获得大量经验值，助力修行境界提升，同时获得永久夜视能力
 - 副作用：一次性物品，使用后消耗
 - 合成方式：1个元气 + 1个钻石 + 1个绿宝石 + 4个金锭
 
@@ -421,7 +421,7 @@
 
 #### 大还丹
 - 取自周星驰老师的电影《武状元苏乞儿》里的大还丹，原型是《太清石壁记》记载的九鼎大还丹
-- 核心功能：当在5级以上时使用大还丹后，可切换内丹来引出不同属性的元气（气弹），同时解锁内丹法术模式
+- 核心功能：当在5级以上时使用大还丹后，可切换内丹来引出不同属性的元气（气弹），同时修炼境界再次提高，解锁内丹法术模式
 - 合成方式：4个钻石 + 1个黏土 + 1个火药 + 1个金粒 + 1个朱砂粉 + 1个元气
 
 ![](crafting%20table/pilla.png)
@@ -1317,7 +1317,69 @@
 
 "一曲轮回绕梁间，道音袅袅入心田。"
 
-## 26年春节更新内容
+## 特别更新
+
+### 村庄更新
+
+#### 建筑构筑工具
+
+加入安放器，指引器，填充器
+
+![](Taoism_R/textures/construction\flat.png)
+![](Taoism_R/textures/construction\vertical.png)
+![](Taoism_R/textures/construction\target.png)
+![](Taoism_R/textures/construction\filler.png)
+
+- 安放器: 右键使用放置安放器，分为地面/墙两类。安放器可以生成地面/墙结构的框架方块。使用任意此类工具攻击清除安放器。
+- 指引器: 右键使用放置指引器。安放器会向指引器移动。使用任意此类工具攻击清除指引器。
+- 填充器: 副手持有时，攻击可将周围框架方块替换为主手方块。支持方块如下：
+  - 清除：空气
+  - 墙类：圆石墙、苔石墙、花岗岩墙、闪长岩墙、安山岩墙、砂岩墙、红砂岩墙、石砖墙、苔石砖墙、深板岩圆石墙、磨制深板岩墙、深板岩砖墙、红砖墙
+  - 方块类：圆石、苔石、花岗岩、闪长岩、安山岩、砂岩、红砂岩、石砖、苔石砖、深板岩圆石、磨制深板岩、深板岩砖、红砖块、石头、沙子、沙砾、脚手架
+
+#### 建筑单元生成工具
+
+加入一系列建筑单元和指向器。
+
+![](Taoism_R/textures/construction/unit_a.png)
+![](Taoism_R/textures/construction/unit_b.png)
+![](Taoism_R/textures/construction/unit_c.png)
+![](Taoism_R/textures/construction/unit_d.png)
+![](Taoism_R/textures/construction/unit_e.png)
+![](Taoism_R/textures/construction/unit_f.png)
+![](Taoism_R/textures/construction/unit_g.png)
+![](Taoism_R/textures/construction/unit_h.png)
+![](Taoism_R/textures/construction/unit_i.png)
+![](Taoism_R/textures/construction/unit_j.png)
+![](Taoism_R/textures/construction/rotate.png)
+
+先使用指向器指定方向，随后使用建筑单元构建建筑。建筑单元为一次性，使用后消耗，同时重置方向。
+
+可生成的建筑：农庄，渔场，装备店，工坊，工会，酿造厂，居民区，仓库，雕像，道观
+
+#### 替身
+
+不要和替身(stand)搞混。
+
+替身可干扰敌对生物索敌，使其主动攻击替身。
+
+![](Taoism_R/textures/construction/decoy.png)
+
+#### 弩炮
+
+炮塔单位，可向敌对生物射击箭矢。
+
+![](Taoism_R/textures/construction/bowgun.png)
+
+### 建筑核心
+
+类炮塔单位，用于兑换上述物品。从2级以及以上的牧师或图书管理员处购买获得。
+
+自身拥有极高攻击力，但是会被敌对生物攻击。
+
+![](Taoism_R/textures/construction/core.png)
+
+### 26年春节更新内容
 
 ![](Taoism_R/textures/items/ny/dumpling_a.png)
 ![](Taoism_R/textures/items/ny/pigskin_jelly.png)
@@ -1341,7 +1403,7 @@
 
 替换部分画替换为“福”字
 
-## 26年中秋节更新内容
+### 26年中秋节更新内容
 
 ![](Taoism_R/textures/items/ny/mooncake_a.png)
 ![](Taoism_R/textures/items/ny/mooncake_a.png)
