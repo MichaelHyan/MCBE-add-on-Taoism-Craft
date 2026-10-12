@@ -103,6 +103,41 @@
     },
     {
       "groups": [
+        
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "choice": [
+                    {
+                      "quantity": {
+                        "min": 25,
+                        "max": 30
+                      },
+                      "item": "minecraft:emerald",
+                      "functions": [],
+                      "price_multiplier": 0.05
+                    }
+                  ]
+                }
+              ],
+              "gives": [
+                {
+                  "choice": [
+                    {
+                      "item": "construction:core",
+                      "functions": []
+                    }
+                  ]
+                }
+              ],
+              "trader_exp": 0,
+              "max_uses": 1
+            }
+          ]
+        },
         {
           "num_to_select": 1,
           "trades": [
@@ -412,40 +447,6 @@
               ],
               "trader_exp": 0,
               "max_uses": 5
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "choice": [
-                    {
-                      "quantity": {
-                        "min": 12,
-                        "max": 15
-                      },
-                      "item": "minecraft:emerald",
-                      "functions": [],
-                      "price_multiplier": 0.05
-                    }
-                  ]
-                }
-              ],
-              "gives": [
-                {
-                  "choice": [
-                    {
-                      "item": "construction:core",
-                      "functions": []
-                    }
-                  ]
-                }
-              ],
-              "trader_exp": 0,
-              "max_uses": 1
             }
           ]
         }

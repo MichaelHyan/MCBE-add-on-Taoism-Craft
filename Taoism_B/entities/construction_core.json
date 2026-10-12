@@ -80,9 +80,6 @@
       "minecraft:movement.basic": {},
       "minecraft:jump.static": {},
       "minecraft:can_climb": {},
-      "minecraft:behavior.hurt_by_target": {
-        "priority": 1
-      },
       "minecraft:behavior.nearest_attackable_target": {
         "must_reach": true,
         "must_see": false,
@@ -106,7 +103,9 @@
       "minecraft:type_family": {
         "family": [
           "mob",
-          "taoism"
+          "taoism",
+          "player",
+          "villager"
         ]
       },
       "minecraft:collision_box": {
