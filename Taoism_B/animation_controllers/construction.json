@@ -41,42 +41,52 @@
 						{"constructor_filler_sand":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='sand' && variable.attack_time"},
 						{"constructor_filler_gravel":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='gravel' && variable.attack_time"},
 						{"constructor_filler_scaffolding":"query.is_item_name_any('slot.weapon.offhand', 0, 'construction:constructor_filler') && query.get_equipped_item_name=='scaffolding' && variable.attack_time"},
+						{"unit_a_preview":"query.get_equipped_item_name=='construction_unit_a' && !query.is_using_item"},
 						{"unit_a_north":"query.get_equipped_item_name=='construction_unit_a' && query.is_using_item && query.scoreboard('direction') == 1 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_a_south":"query.get_equipped_item_name=='construction_unit_a' && query.is_using_item && query.scoreboard('direction') == 2 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_a_east":"query.get_equipped_item_name=='construction_unit_a' && query.is_using_item && query.scoreboard('direction') == 3 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_a_west":"query.get_equipped_item_name=='construction_unit_a' && query.is_using_item && query.scoreboard('direction') == 4 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_b_preview":"query.get_equipped_item_name=='construction_unit_b' && !query.is_using_item"},
 						{"unit_b_north":"query.get_equipped_item_name=='construction_unit_b' && query.is_using_item && query.scoreboard('direction') == 1 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_b_south":"query.get_equipped_item_name=='construction_unit_b' && query.is_using_item && query.scoreboard('direction') == 2 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_b_east":"query.get_equipped_item_name=='construction_unit_b' && query.is_using_item && query.scoreboard('direction') == 3 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_b_west":"query.get_equipped_item_name=='construction_unit_b' && query.is_using_item && query.scoreboard('direction') == 4 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_c_preview":"query.get_equipped_item_name=='construction_unit_c' && !query.is_using_item"},
 						{"unit_c_north":"query.get_equipped_item_name=='construction_unit_c' && query.is_using_item && query.scoreboard('direction') == 1 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_c_south":"query.get_equipped_item_name=='construction_unit_c' && query.is_using_item && query.scoreboard('direction') == 2 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_c_east":"query.get_equipped_item_name=='construction_unit_c' && query.is_using_item && query.scoreboard('direction') == 3 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_c_west":"query.get_equipped_item_name=='construction_unit_c' && query.is_using_item && query.scoreboard('direction') == 4 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_d_preview":"query.get_equipped_item_name=='construction_unit_d' && !query.is_using_item"},
 						{"unit_d_north":"query.get_equipped_item_name=='construction_unit_d' && query.is_using_item && query.scoreboard('direction') == 1 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_d_south":"query.get_equipped_item_name=='construction_unit_d' && query.is_using_item && query.scoreboard('direction') == 2 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_d_east":"query.get_equipped_item_name=='construction_unit_d' && query.is_using_item && query.scoreboard('direction') == 3 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_d_west":"query.get_equipped_item_name=='construction_unit_d' && query.is_using_item && query.scoreboard('direction') == 4 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_e_preview":"query.get_equipped_item_name=='construction_unit_e' && !query.is_using_item"},
 						{"unit_e_north":"query.get_equipped_item_name=='construction_unit_e' && query.is_using_item && query.scoreboard('direction') == 1 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_e_south":"query.get_equipped_item_name=='construction_unit_e' && query.is_using_item && query.scoreboard('direction') == 2 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_e_east":"query.get_equipped_item_name=='construction_unit_e' && query.is_using_item && query.scoreboard('direction') == 3 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_e_west":"query.get_equipped_item_name=='construction_unit_e' && query.is_using_item && query.scoreboard('direction') == 4 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_f_preview":"query.get_equipped_item_name=='construction_unit_f' && !query.is_using_item"},
 						{"unit_f_north":"query.get_equipped_item_name=='construction_unit_f' && query.is_using_item && query.scoreboard('direction') == 1 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_f_south":"query.get_equipped_item_name=='construction_unit_f' && query.is_using_item && query.scoreboard('direction') == 2 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_f_east":"query.get_equipped_item_name=='construction_unit_f' && query.is_using_item && query.scoreboard('direction') == 3 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_f_west":"query.get_equipped_item_name=='construction_unit_f' && query.is_using_item && query.scoreboard('direction') == 4 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_g_preview":"query.get_equipped_item_name=='construction_unit_g' && !query.is_using_item"},
 						{"unit_g_north":"query.get_equipped_item_name=='construction_unit_g' && query.is_using_item && query.scoreboard('direction') == 1 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_g_south":"query.get_equipped_item_name=='construction_unit_g' && query.is_using_item && query.scoreboard('direction') == 2 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_g_east":"query.get_equipped_item_name=='construction_unit_g' && query.is_using_item && query.scoreboard('direction') == 3 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_g_west":"query.get_equipped_item_name=='construction_unit_g' && query.is_using_item && query.scoreboard('direction') == 4 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_h_preview":"query.get_equipped_item_name=='construction_unit_h' && !query.is_using_item"},
 						{"unit_h_north":"query.get_equipped_item_name=='construction_unit_h' && query.is_using_item && query.scoreboard('direction') == 1 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_h_south":"query.get_equipped_item_name=='construction_unit_h' && query.is_using_item && query.scoreboard('direction') == 2 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_h_east":"query.get_equipped_item_name=='construction_unit_h' && query.is_using_item && query.scoreboard('direction') == 3 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_h_west":"query.get_equipped_item_name=='construction_unit_h' && query.is_using_item && query.scoreboard('direction') == 4 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_i_preview":"query.get_equipped_item_name=='construction_unit_i' && !query.is_using_item"},
 						{"unit_i_north":"query.get_equipped_item_name=='construction_unit_i' && query.is_using_item && query.scoreboard('direction') == 1 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_i_south":"query.get_equipped_item_name=='construction_unit_i' && query.is_using_item && query.scoreboard('direction') == 2 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_i_east":"query.get_equipped_item_name=='construction_unit_i' && query.is_using_item && query.scoreboard('direction') == 3 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_i_west":"query.get_equipped_item_name=='construction_unit_i' && query.is_using_item && query.scoreboard('direction') == 4 && query.scoreboard('swordatkcd') >= 0"},
+						{"unit_j_preview":"query.get_equipped_item_name=='construction_unit_j' && !query.is_using_item"},
 						{"unit_j_north":"query.get_equipped_item_name=='construction_unit_j' && query.is_using_item && query.scoreboard('direction') == 1 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_j_south":"query.get_equipped_item_name=='construction_unit_j' && query.is_using_item && query.scoreboard('direction') == 2 && query.scoreboard('swordatkcd') >= 0"},
 						{"unit_j_east":"query.get_equipped_item_name=='construction_unit_j' && query.is_using_item && query.scoreboard('direction') == 3 && query.scoreboard('swordatkcd') >= 0"},
@@ -471,6 +481,16 @@
 						"/fill ~-3 ~-3 ~-3 ~3 ~5 ~3 scaffolding replace blocks:framework"
 					]
 				},
+				"unit_a_preview": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/function unit_a"
+					]
+				},
 				"unit_a_north": {
 					"transitions": [
 							{
@@ -521,6 +541,16 @@
 						"/scoreboard players set @s direction 0",
 						"/replaceitem entity @s slot.weapon.mainhand 0 air",
 						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_b_preview": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/function unit_b"
 					]
 				},
 				"unit_b_north": {
@@ -575,6 +605,16 @@
 						"/scoreboard players set @s swordatkcd -3"
 					]
 				},
+				"unit_c_preview": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/function unit_c"
+					]
+				},
 				"unit_c_north": {
 					"transitions": [
 							{
@@ -625,6 +665,16 @@
 						"/scoreboard players set @s direction 0",
 						"/replaceitem entity @s slot.weapon.mainhand 0 air",
 						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_d_preview": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/function unit_d"
 					]
 				},
 				"unit_d_north": {
@@ -679,6 +729,16 @@
 						"/scoreboard players set @s swordatkcd -3"
 					]
 				},
+				"unit_e_preview": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/function unit_e"
+					]
+				},
 				"unit_e_north": {
 					"transitions": [
 							{
@@ -729,6 +789,16 @@
 						"/scoreboard players set @s direction 0",
 						"/replaceitem entity @s slot.weapon.mainhand 0 air",
 						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_f_preview": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/function unit_f"
 					]
 				},
 				"unit_f_north": {
@@ -783,6 +853,16 @@
 						"/scoreboard players set @s swordatkcd -3"
 					]
 				},
+				"unit_g_preview": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/function unit_g"
+					]
+				},
 				"unit_g_north": {
 					"transitions": [
 							{
@@ -833,6 +913,16 @@
 						"/scoreboard players set @s direction 0",
 						"/replaceitem entity @s slot.weapon.mainhand 0 air",
 						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_h_preview": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/function unit_h"
 					]
 				},
 				"unit_h_north": {
@@ -887,6 +977,16 @@
 						"/scoreboard players set @s swordatkcd -3"
 					]
 				},
+				"unit_i_preview": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/function unit_i"
+					]
+				},
 				"unit_i_north": {
 					"transitions": [
 							{
@@ -937,6 +1037,16 @@
 						"/scoreboard players set @s direction 0",
 						"/replaceitem entity @s slot.weapon.mainhand 0 air",
 						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"unit_j_preview": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/function unit_j"
 					]
 				},
 				"unit_j_north": {
