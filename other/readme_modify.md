@@ -64,8 +64,8 @@ none
 
 9
 特别更新
-节日特别更新
-none
+节日特别更新或特辑
+Taoism_R/textures/items/ny/braised_pork.png
 0
 
 10
@@ -76,7 +76,7 @@ none
   2. 内部存放丰富资源（基础材料、引导道具等）
   3. 玩家可获取引导书，开启道教主题玩法剧情
 “道之所存，馆宇所栖，修行由此启，大道自此寻。”
-crafting%20table/temple1.png
+crafting-table/temple1.png
 1
 
 11
@@ -195,7 +195,7 @@ none
 - 合成方式：7个朱砂粉 + 1个普通毛笔 + 1本书
 - 特殊经书：使用奖励箱中的经书不会失败
 “真经载道，开悟明心，得之则内丹生，体健身轻。”
-crafting%20table/scripture_t.png
+crafting-table/scripture_t.png
 3
 
 21
@@ -213,7 +213,7 @@ Taoism_R/textures/items/scripture_s.png
 - 副作用：一次性物品，使用后消耗
 - 合成方式：1个经书 + 1个羽毛
 “御风而行，不滞于形，此乃得道者动静之妙。”
-crafting%20table/scripture_f.png
+crafting-table/scripture_f.png
 20
 
 23
@@ -233,7 +233,7 @@ Taoism_R/textures/items/acbook.png
 - 副作用：一次性物品，使用后消耗
 - 合成方式：1个元气 + 1个钻石 + 1个绿宝石 + 4个金锭
 “宝轴藏玄理，开卷蕴真智，一念悟得经中义，海量经验助修行。”
-crafting%20table/txpa.png
+crafting-table/txpa.png
 3
 
 25
@@ -346,7 +346,7 @@ Taoism_R/textures/items/qi.png
 - 核心功能：合成材料（用于制作「画符毛笔」）
 - 合成方式：2个木棍 + 1个白色羊毛 可合成4个
 “笔为心之器，墨为道之痕，可书符咒，可绘阴阳。”
-crafting%20table/brush_n.png
+crafting-table/brush_n.png
 4
 
 34
@@ -363,7 +363,7 @@ Taoism_R/textures/items/cinnabar_crystal.png
 - 核心功能：合成材料（用于制作画符毛笔、桃木剑等）
 - 合成方式：1个元气 + 1个朱砂晶体（可合成3个朱砂粉）
 “丹砂为粉，符力自生，一点通灵，镇伏邪祟。”
-crafting%20table/cinnabar.png
+crafting-table/cinnabar.png
 4
 
 36
@@ -371,7 +371,7 @@ crafting%20table/cinnabar.png
 - 核心功能：合成材料，用于制作各类符箓，制作后会返还普通毛笔
 - 合成方式：1个毛笔 + 1个朱砂粉
 “画符之笔，蘸朱砂之灵，运天地之气，落笔则鬼神应。”
-crafting%20table/brush_p.png
+crafting-table/brush_p.png
 4
 
 37
@@ -414,7 +414,7 @@ Taoism_R/textures/items/pearlz_p.png
 - 核心功能：合成材料，用于合成部分武器
 - 获取方式：击败旱魃会获得一个尸丹
 “枯尸历劫结丹砂，旱气阴精萃一家。留与旁门铸邪刃，一挥赤地起尘沙。”
-crafting%20table/pearlz_o.png
+crafting-table/pearlz_o.png
 4
 
 42
@@ -422,7 +422,7 @@ crafting%20table/pearlz_o.png
 - 核心功能：合成材料，用于合成净炼尸丹
 - 合成方式：8个元气 + 1个尸丹
 “元炁烹丹涤秽痕，阴尸残煞渐消泯。一番炼化除浊质，留取清基作净根。”
-crafting%20table/pearlz_s.png
+crafting-table/pearlz_s.png
 41
 
 43
@@ -430,7 +430,7 @@ crafting%20table/pearlz_s.png
 - 核心功能：合成材料，用于合成部分武器，后期可能会设定为正派常用道具（更新预告）
 - 合成方式：1个普通符箓 + 2个朱砂粉 + 1个炼化尸丹 + 1个元气
 “以符涤浊净阴丹，朱砂凝阳化旧寒。洗尽尸中千缕煞，堪为正道铸锋翰。”
-crafting%20table/pearlz.png
+crafting-table/pearlz.png
 42
 
 44
@@ -439,7 +439,7 @@ crafting%20table/pearlz.png
 - 核心功能：当在5级以上时使用大还丹后，可切换内丹来引出不同属性的元气（气弹），同时修炼境界再次提高，解锁内丹法术模式
 - 合成方式：4个钻石 + 1个黏土 + 1个火药 + 1个金粒 + 1个朱砂粉 + 1个元气
 “呢粒大还丹，你食咗之后会功力大增。”
-crafting%20table/pilla.png
+crafting-table/pilla.png
 4
 
 45
@@ -448,7 +448,7 @@ crafting%20table/pilla.png
 - 核心功能：在“闹鬼事件”发生时，可以通过食用小还丹来暂时获得充沛的阳气，以达到避免鬼魂干扰睡眠的效果
 - 合成方式：1个黏土 + 1个火药 + 1个金粒 + 1个朱砂粉 + 1个元气
 “呢粒大还丹，你食咗之……诶不对？”
-crafting%20table/pillb.png
+crafting-table/pillb.png
 4
 
 46
@@ -731,7 +731,7 @@ Taoism_R/textures/items/tbf.png
 开光符【闭灵】
 - 新月时使用可获得开光符【启灵】
 "新月凝灵闭中藏，待得弦时启锋芒。"
-crafting%20table/echa.png
+crafting-table/echa.png
 5
 
 77
@@ -771,7 +771,7 @@ Taoism_R/textures/items/tbg.png
 - 副作用：一次性物品，使用后消耗
 - 合成方式：2个普通的符箓 + 1个元气 + 4个金锭
 “一卷符箓聚万灵，诸般吉益随身行，片刻护持无缺憾，唯弃漂浮顺道心。”
-crafting%20table/txpb.png
+crafting-table/txpb.png
 3
 
 82
@@ -782,7 +782,7 @@ crafting%20table/txpb.png
   3. 主手持有时：获得回血buff
 - 合成方式：1个木剑 + 1个朱砂粉+1个炁 + 6个元气
 “桃木禀阳，能制阴邪，剑出则鬼魅潜藏，正气浩然。”
-crafting%20table/sword_t.png
+crafting-table/sword_t.png
 6
 
 83
@@ -793,7 +793,7 @@ crafting%20table/sword_t.png
   3. 主手持有时：抗性提升
 - 合成方式：1个金剑 + 1个朱砂粉+1个炁 + 6个元气
 “宝剑锋从磨砺出，道心炼自精气神，一剑在手，可斩妖氛。”
-crafting%20table/sword_b.png
+crafting-table/sword_b.png
 6
 
 84
@@ -804,7 +804,7 @@ crafting%20table/sword_b.png
   3. 主手持有时：回血buff + 移速提升
 - 合成方式：1个桃木剑 + 4张普通符箓 + 3个炁 + 1个元气
 “七星映剑，道法相随，执此剑者，上应天象，所向披靡。”
-crafting%20table/sword_q.png
+crafting-table/sword_q.png
 82
 
 85
@@ -815,7 +815,7 @@ crafting%20table/sword_q.png
   3. 主手持有时：抗性提升 + 移速提升
 - 合成方式：1个宝剑 + 4张普通符箓 + 3个炁 + 1个元气
 “令剑承天令，威仪镇四方，挥剑斩虚妄，道力护其身。”
-crafting%20table/sword_l.png
+crafting-table/sword_l.png
 83
 
 86
@@ -826,7 +826,7 @@ crafting%20table/sword_l.png
   3. 主动技能（同时按住跳跃+攻击）：向前瞬移一段距离（可用于追击或规避）
 - 合成方式：3个木棍 + 2个金锭 + 4个普通的符箓
 “拷鬼之棒承道威，专诛阴邪破魑魅，持之自有抗性护，瞬移追逃任我行。”
-crafting%20table/wond.png
+crafting-table/wond.png
 6
 
 87
@@ -837,7 +837,7 @@ crafting%20table/wond.png
 - 副作用：「合理的邪修」（无实际负面效果）
 - 合成方式：1个木剑 + 1个噬魂术（经书） + 7个元气
 “邪道之剑，虽有小利，心若偏邪，终难成大道。”
-crafting%20table/sword_e.png
+crafting-table/sword_e.png
 6
 
 88
@@ -846,7 +846,7 @@ crafting%20table/sword_e.png
 - 副作用：玩家尝试攻击时，触发雷劈致残
 - 合成方式：1个噬魂术（经书） + 1个桃木剑 + 7个元气
 “异术逆天，剑虽诡速，逞凶必遭天谴，悔之晚矣。”
-crafting%20table/sword_w.png
+crafting-table/sword_w.png
 6
 
 89
@@ -857,7 +857,7 @@ crafting%20table/sword_w.png
   3. 攻击会消耗自身精力，获得凋零效果
 - 合成方式： 4个魂魄 + 4个炁 + 1个奇怪的木剑【邪】
 “灵剑聚神魂，威力无穷，然耗己精元，修行当知取舍。”
-crafting%20table/sword_sp.png
+crafting-table/sword_sp.png
 87
 
 90
@@ -872,7 +872,7 @@ crafting%20table/sword_sp.png
 - 合成方式：1个黑色旗帜 + 1个灵剑 + 2个炁 + 3个魂魄 + 2个普通的符箓
 “万魂聚幡，威力骇人，有伤天和，非正道所取，慎用之。”
 “道友,你这人皇幡怎么库库冒黑烟?”
-crafting%20table/soul_banner.png
+crafting-table/soul_banner.png
 89
 
 91
@@ -883,7 +883,7 @@ crafting%20table/soul_banner.png
 - 副作用：无特殊负面效果
 - 合成方式：1个黄色旗帜 + 1个桃木剑 + 2个炁 + 3个朱砂粉 + 2个普通的符箓
 “人皇者，亲友庇护也，攻防一体，幡承其气，可化万象。”
-crafting%20table/hy_banner.png
+crafting-table/hy_banner.png
 82
 
 92
@@ -916,7 +916,7 @@ Taoism_R/textures/items/lotus.png
 - 3. 使用后进入冷却，可借助「息」达到更高的伤害等级
 - 合成方式：8个铜锭 + 1个补火符
 "乾坤圈转，阴阳自守，蓄势待发，一击破苍穹。"
-crafting%20table/shield_q.png
+crafting-table/shield_q.png
 7
 
 95
@@ -947,7 +947,7 @@ Taoism_R/textures/items/sword_qi.png
 - 副作用：拥有旱魃的力量也会受到旱魃尸丹的反噬，使用时会持续饥饿。
 - 合成方式：1个奇怪的木剑（邪） + 2个尸丹 + 2个朱砂晶体
 “旱既大甚，涤涤山川。旱魃为虐，如惔如焚。我心惮暑，忧心如熏。”
-crafting%20table/sword_za.png
+crafting-table/sword_za.png
 87
 
 98
@@ -958,7 +958,7 @@ crafting%20table/sword_za.png
   3. 下蹲蓄力强制降雨，并且能给自己以及10×10×10范围内队友或者是友好生物回血。
 - 合成方式：1个七星剑 + 2个净炼尸丹 + 2个元气
 “雷车轣辘起层阴，雨脚垂垂一寸深。解得田畴千里旱，全归天地一言心。”
-crafting%20table/sword_zb.png
+crafting-table/sword_zb.png
 84
 
 99
@@ -973,7 +973,7 @@ crafting%20table/sword_zb.png
 - 副作用：攻击时由于需要驱动剑灵耗费精力，获得凋零效果
 - 合成方式：2个金刚琢 + 1个万魂幡 + 2个法钟 + 1个金雷镇煞符 + 2个炁 + 1个金块
 “天魔诛仙剑凝九天煞气，剑出则魔灭神惊，斩尽诸天魔障，道威浩荡无匹。”
-crafting%20table/sword_u.png
+crafting-table/sword_u.png
 90
 
 100
@@ -985,7 +985,7 @@ crafting%20table/sword_u.png
 - 副作用：容易把自己帅死（无实际负面效果）
 - 合成方式：2个金刚琢 + 1个混元幡 + 1个令剑 + 1个七星剑 + 1个三清镇元三台符 + 2个炁 + 1个清阳之炁
 “三五之数，合于天地，雌雄双剑，斩尽邪祟，大道昌明。”
-crafting%20table/sword_s.png
+crafting-table/sword_s.png
 91
 
 101
@@ -993,7 +993,7 @@ crafting%20table/sword_s.png
 - 核心功能：放置于物品栏第一格时，对10×10×10范围内生物造成减速
 - 合成方式：1个雷击符 + 4颗橡木树苗
 “雷击之木，禀天雷之气，镇于一方，百兽皆惧，邪祟不侵。”
-crafting%20table/lightning_wood.png
+crafting-table/lightning_wood.png
 7
 
 102
@@ -1004,7 +1004,7 @@ crafting%20table/lightning_wood.png
   2. 增益持续30秒「门外汉的把戏罢了」
 - 合成方式：8个铜锭 + 1个朱砂粉
 “铜镜照形，亦能鉴心，一点朱砂，引气入体，暂得神力。”
-crafting%20table/mirror_a.png
+crafting-table/mirror_a.png
 7
 
 103
@@ -1015,7 +1015,7 @@ crafting%20table/mirror_a.png
   2. 增益持续1分钟「不建议使用」
 - 合成方式：8个铜锭 + 1个普通的符箓
 “法镜含道气，一照百邪消，增益虽佳，终是外物，修行在己。”
-crafting%20table/mirror_b.png
+crafting-table/mirror_b.png
 7
 
 104
@@ -1024,7 +1024,7 @@ crafting%20table/mirror_b.png
 - 副作用：「亮出来就是吓唬人的」，一次仅持续10秒
 - 合成方式：8个铜镜【法】 + 1个桃木剑
 “八卦定乾坤，凸镜镇凶煞，镜光所及，邪祟退散。”
-crafting%20table/mirror_c.png
+crafting-table/mirror_c.png
 103
 
 105
@@ -1034,7 +1034,7 @@ crafting%20table/mirror_c.png
    趣味设定「见过一次的把戏就不灵了」，buff持续1分钟
 - 合成方式：8个铜镜【法】 + 1个元气
 “凹镜纳灵气，八卦聚生机，护己及人，道之仁心。”
-crafting%20table/mirror_d.png
+crafting-table/mirror_d.png
 103
 
 106
@@ -1051,7 +1051,7 @@ Taoism_R/textures/items/fball.png
   1. 提高使用者的移速，分为三档（副手手持/主手手持/主手手持攻击）。
 - 合成方式：3个木棍 + 2个铁锭 + 2个雷击木 + 2个元气
 "铁拐拄地行如风，疾步轻身御气通。"
-crafting%20table/cane.png
+crafting-table/cane.png
 7
 
 108
@@ -1062,7 +1062,7 @@ crafting%20table/cane.png
 - 副作用：主手持有时，自身移速降低 + 饱食度降低「很可惜，你跑不快」
 - 合成方式：2个炁 + 5个铜锭 + 1个净炼尸丹
 “法钟鸣，大道兴，钟声荡邪，抗性加身，宁心定志。”
-crafting%20table/bell.png
+crafting-table/bell.png
 7
 
 109
@@ -1073,7 +1073,7 @@ crafting%20table/bell.png
   3. 可主动吸引炁
 - 合成方式：5个铜锭 + 1个普通的符箓 + 1个元气
 “葫芦藏天地，能纳万物灵，收放之间，合于自然。”
-crafting%20table/gourd.png
+crafting-table/gourd.png
 7
 
 110
@@ -1082,7 +1082,7 @@ crafting%20table/gourd.png
 - 副作用：瞬移后扣除1点血（半颗心）「由于你主观离岗，上天会扣除代价」
 - 合成方式：3个雷击木（木板） + 1个普通的符箓
 “笏板承天语，一念至亲朋，瞬移虽便，亦有代价，道在平衡。”
-crafting%20table/wul.png
+crafting-table/wul.png
 7
 
 111
@@ -1092,7 +1092,7 @@ crafting%20table/wul.png
   2. 可作为武器使用
 - 合成方式：1个木棍 + 1个白色羊毛
 “拂尘扫尘埃，亦能清心障，一拂之下，返璞归真。”
-crafting%20table/whisk.png
+crafting-table/whisk.png
 7
 
 112
@@ -1103,7 +1103,7 @@ crafting%20table/whisk.png
 - 这件兵器，乃锟钢抟炼的，被我将还丹点成，养就一身灵气，善能变化，水火不侵，又能套诸物；一名‘金钢琢’，又名“金钢套”。
 - 当年过函关，化胡为佛，甚是亏他。早晚最可防身。等我丢下去打他一下。
 - 收过金箍棒的法宝，实则正史没记载过这样的法宝，也没有金箍棒。
-crafting%20table/ring.png
+crafting-table/ring.png
 7
 
 113
@@ -1114,7 +1114,7 @@ crafting%20table/ring.png
 - 副作用：无负面副作用，可重复使用（非一次性道具）
 - 合成方式：3个黏土块 + 1个普通的符箓 + 1个下界之星
 “净瓶含甘露，滴之生生机，普济众生，道之慈悲。”
-crafting%20table/bottle.png
+crafting-table/bottle.png
 7
 
 114
@@ -1123,7 +1123,7 @@ crafting%20table/bottle.png
 - 使用方式：点击进入预览视角，下蹲使用传送，跳起取消传送
 - 合成方式：2个雷击木+1个末影珍珠+2个普通符箓
 “令牌承天命，举之可通天，隔墙传送，应乎神道。”
-crafting%20table/tup.png
+crafting-table/tup.png
 7
 
 115
@@ -1132,7 +1132,7 @@ crafting%20table/tup.png
 - 使用方式：左键单击使用
 - 合成方式：3个木原木+2个木棍+1个铜锭+3个木台阶
 “浑仪窥月辨盈亏，修经必循月相规，逆道妄为遭天谴，天雷一击丧魂归。”
-crafting%20table/hy.png
+crafting-table/hy.png
 7
 
 116
@@ -1141,7 +1141,7 @@ crafting%20table/hy.png
 - 使用方式：左键单击使用
 - 合成方式：9个普通符箓+1个铜块
 “昆仑宝镜映乾坤，一念互换定方位，咫尺之间移形影，道法玄机藏镜中。”
-crafting%20table/klj.png
+crafting-table/klj.png
 7
 
 117
@@ -1150,7 +1150,7 @@ crafting%20table/klj.png
 - 使用方式：置于副手
 - 合成方式：1个紫金葫芦 + 4个尸丹碎片
 “枯魂锁入葫中藏，旱火凝丹发烈光。一点阴焰焚万物，赤地千里草不芳。”
-crafting%20table/firegourd.png
+crafting-table/firegourd.png
 109
 
 118
@@ -1160,7 +1160,7 @@ crafting%20table/firegourd.png
 - 合成方式：1个紫金葫芦 + 4个净炼尸丹
 “流辉敛炁纳元光，净炼残阴入此囊。袖底自充仙府力，不劳执手运丹方。”
 - 原来有个特别善用法宝的道友，苦于元气难以聚集。后来他腰间多了个水蓝的葫芦，身边的法音也是不带停的。
-crafting%20table/spegourd.png
+crafting-table/spegourd.png
 109
 
 119
@@ -1168,7 +1168,7 @@ crafting%20table/spegourd.png
 - 核心功能：置于地表上，每5秒对附近15×15范围内的所有敌对生物产生伤害与减速
 - 合成方式：8个深板岩 + 1个画符毛笔
 “泰山片石号敢当，坐镇方隅慑不祥。魑魅逢之皆敛迹，郊原十里尽安昌。”
-crafting%20table/sguard.png
+crafting-table/sguard.png
 7
 
 120
@@ -1180,7 +1180,7 @@ crafting%20table/sguard.png
 - 使用方式：左键单击使用
 - 合成方式：4个普通符箓+4个钻石+1个指南针
 “八卦罗盘定八方，五十丈内气场强，静立方能承道力，一动则失此中章。”
-crafting%20table/bglpa.png
+crafting-table/bglpa.png
 7
 
 121
@@ -1246,7 +1246,7 @@ none
 “有朋相伴好过孤军奋战。”
 - 杀人成风之后的那个时候，有的权贵想让自己在乱世后重新复活，可不知怎的，最后出现的总是另一个素不相识的人。
 - 据说老道长死后，手里攥着的是个奇怪的木头玩意，村里人便将其挂在了观里。不知为何，多年过去了，那座观还是崭新如初。
-crafting%20table/partner.png
+crafting-table/partner.png
 8
 
 127
@@ -1297,7 +1297,7 @@ none
   - 封印态下使用摄魂铃可吸引封印的尸体
 - 合成方式：2个铜锭 + 1个元气 + 1个木棍
 "摄魂铃振驭阴行，符定形骸始听令。行止皆随铃畔引，解印俄顷复归冥。"
-crafting%20table/bell_a.png
+crafting-table/bell_a.png
 7
 
 132
@@ -1308,7 +1308,7 @@ crafting%20table/bell_a.png
   - 粒子会持续吸引敌怪并持续造高额伤害
 - 合成方式：4个铜块 + 2个炁 + 2个精炼尸丹 + 1个绿宝石
 "法印催灵布御罡，四炁分形助战铓。诸般法滞都消尽，一印机行不可返。"
-crafting%20table/seal.png
+crafting-table/seal.png
 7
 
 133
@@ -1318,7 +1318,7 @@ crafting%20table/seal.png
   - 右键模组僵尸使其改为攻击敌对生物
 - 合成方式：4个铜块 + 2个炁 + 2个尸丹碎片 + 1个噬魂术（经书）
 "摄妖宝印敕阴锋，转易尸心向邪踪。不向修途凌行客，专随法令剿群凶。"
-crafting%20table/seal_e.png
+crafting-table/seal_e.png
 7
 
 134
@@ -1337,7 +1337,7 @@ Taoism_R/textures/items/soul_powder.png
   3. 剑分身没有上限。
 - 合成方式：1个令剑/七星剑 + 2个普通符箓 + 2个朱砂粉 + 2个炁 + 2个阴魄砂
 "承影分形逐寇踪，环涵罡影护寒锋。挥刃群邪齐应刃，千身万影任横纵。"
-crafting%20table/sword_d.png
+crafting-table/sword_d.png
 85
 
 136
@@ -1348,7 +1348,7 @@ crafting%20table/sword_d.png
   3. 怨气大于3进入超载状态，超载状态下持续扣血，伤害加成提升至等级4
 - 合成方式：1个灵剑 + 2个普通符箓 + 2个魂魄 + 2个炁 + 2个阴魄砂
 "阴阳追魄淬寒铓，怨积三阶势渐张。蹲震阴芒摧烈浪，溢怨焚躯刃逾刚。"
-crafting%20table/sword_c.png
+crafting-table/sword_c.png
 89
 
 137
@@ -1356,7 +1356,7 @@ crafting%20table/sword_c.png
 加入猪油，五仁、豆沙、蛋黄月饼
 月饼提供较高饱食度
 不要把月饼放干！
-none
+Taoism_R/textures/ny/mooncake_a.png
 9
 
 138
@@ -1365,7 +1365,7 @@ none
 彩蛋的根源是某些物品的技术验证，所以内容并不完整，实际使用会缺少依赖等。
 由于这些内容没有被系统性整理，所以可能不全。
 古书支线原稿
-- 在Taoism_B\lines中。
+- 在Taoism_B/lines中。
 - 开发：其实这些东西老早就毫无保留的放文件里了，最终还是没人看见呢。
 篮球
 - 由鸡极小概率掉落篮球物品，篮球可合成篮球块。
@@ -1411,7 +1411,7 @@ none
 - hyan的皮肤为Herbvrine，以避免侵权。而zzst使用穿着史努比图案衬衫的女孩。
 - 召唤：/summon entity:hyan 和 /summon entity:zzst
 - hyan使用绿宝石驯服，zzst使用tnt驯服。值得一提的是，hyan需要绿宝石是因为他真的穷。
-- 可能会随机说一些话。可以在Taoism_B\animation_controllers\hyan.json和Taoism_B\animation_controllers\hyan.json看到这些对话
+- 可能会随机说一些话。可以在Taoism_B/animation_controllers/hyan.json和Taoism_B/animation_controllers/hyan.json看到这些对话
 - 有时会看见hyan客串阿库西斯教大祭司，阿库西斯教是假的，但他是大祭司是真的，因善于取悦机魂而闻名。
 战斗优化
 - 其实很容易看出来各个改动的来源。
@@ -1459,3 +1459,94 @@ GV模式
 - 另一侧空腔形成了苦力怕图案。
 Taoism_R/textures/items/talisman_ql.png
 8
+
+139
+游侠
+白天随机出没于山林驿道之间，会主动攻击范围内的尸怪鬼魅，出手凌厉伤害颇高；只是行事随性不羁，玩家若靠得太近，背包中便可能会随机少掉一样物件。
+- 村东过山的旧驿道旁，往来行旅都唤那片游侠出没的地界作 “侠影坡”。
+- 传说是早年避乱的武人，入山访道未成便流落此间，见了邪祟尸怪必定出手相助，只是素来随性，遇人凑近便顺手捎走件物什当作谢礼。
+- 山里人说遇上了不必惊慌，他只取一物不伤性命；若是不愿失了物件，远远拱手道声谢便好，切莫凑到近身寻他搭话。
+none
+2
+
+140
+村庄更新
+加入一系列建筑构建工具和新的防卫设施。
+Taoism_R/textures/construction/unit_i.png
+9
+
+141
+建筑构建工具
+可用于快速构建建筑结构
+none
+140
+
+142
+水平安放器
+右键使用放置安放器。安放器可以生成地面结构的框架方块。使用任意此类工具攻击清除安放器。
+Taoism_R/textures/construction/flat.png
+141
+
+143
+垂直安放器
+右键使用放置安放器。安放器可以生成墙壁结构的框架方块。使用任意此类工具攻击清除安放器。
+Taoism_R/textures/construction/vertical.png
+141
+
+144
+指引器
+右键使用放置指引器。安放器会向指引器移动。使用任意此类工具攻击清除指引器。
+Taoism_R/textures/construction/target.png
+141
+
+145
+填充器
+副手持有时，攻击可将周围框架方块替换为主手方块。
+支持方块如下：
+- 清除：空气
+- 墙类：圆石墙、苔石墙、花岗岩墙、闪长岩墙、安山岩墙、砂岩墙、红砂岩墙、石砖墙、苔石砖墙、深板岩圆石墙、磨制深板岩墙、深板岩砖墙、红砖墙
+- 方块类：圆石、苔石、花岗岩、闪长岩、安山岩、砂岩、红砂岩、石砖、苔石砖、深板岩圆石、磨制深板岩、深板岩砖、红砖块、石头、沙子、沙砾、脚手架
+Taoism_R/textures/construction/filler.png
+141
+
+146
+指向器
+使用建筑单元时指定建筑方向。
+建筑单元在未指定方向时无法使用，生成建筑后重置方向。
+Taoism_R/textures/construction/rotate.png
+141
+
+147
+建筑单元
+使用建筑单元在玩家面前生成建筑，一次性。仅在使用指向器指定方向后可生成建筑。
+可生成的建筑：农庄，渔场，装备店，工坊，工会，酿造厂，居民区，仓库，雕像，道观。
+Taoism_R/textures/construction/unit_h.png
+141
+
+148
+防卫设施
+可用于村庄防卫
+none
+140
+
+149
+建筑核心
+类炮塔单位，用于兑换建筑构建工具和其他防御设施。从2级以及以上的牧师或图书管理员处购买获得。
+自身拥有极高攻击力，但是会被敌对生物攻击。
+Taoism_R/textures/construction/core.png
+148
+
+150
+弩炮
+炮塔单位，可向敌对生物射击箭矢。
+可在建筑核心，工具匠，武器商人处购买。
+Taoism_R/textures/construction/bowgun.png
+148
+
+151
+替身
+不要和替身(stand)搞混。
+替身可干扰敌对生物索敌，使其主动攻击替身。
+可从建筑核心，盔甲匠，牧羊人处购买
+Taoism_R/textures/construction/decoy.png
+148
