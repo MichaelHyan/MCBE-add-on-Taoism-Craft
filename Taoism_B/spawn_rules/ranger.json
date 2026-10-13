@@ -2,12 +2,13 @@
   "format_version": "1.8.0",
   "minecraft:spawn_rules": {
     "description": {
-      "identifier": "entity:ranger",
+      "identifier": "entity:ranger_spawn",
       "population_control": "monster"
     },
     "conditions": [
       {
-        "minecraft:spawns_on_surface": {},
+        "minecraft:spawns_on_surface": {
+        },
         "minecraft:brightness_filter": {
           "min": 10,
           "max": 15,
@@ -19,10 +20,6 @@
         "minecraft:density_limit": {
           "surface": 2,
           "underground": 0
-        },
-        "minecraft:player_in_village_filter": {
-          "distance": 48,
-          "village_border_tolerance": 32
         },
         "minecraft:biome_filter": {
           "test": "has_biome_tag",
