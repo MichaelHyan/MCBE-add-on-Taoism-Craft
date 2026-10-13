@@ -8,11 +8,13 @@
       "is_experimental": false,
       "scripts": {
 				"animate": [
-					"stole"
+					"stole",
+          "rangerspawn"
 				]
 			},
       "animations": {
-				"stole": "controller.animation.stole"
+				"stole": "controller.animation.stole",
+        "rangerspawn": "controller.animation.rangerspawn"
 			}
     },
     "component_groups": {
