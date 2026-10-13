@@ -1408,10 +1408,10 @@ Taoism_R/textures/ny/mooncake_a.png
 - 不要和五行罗盘弄混，那是不存在的东西。
 两位开发者
 - 与盟友系统拥有相同的代码。
-- hyan的皮肤为Herbvrine，以避免侵权。而zzst使用穿着史努比图案衬衫的女孩。
+- hyan的皮肤为Herobrine，以避免侵权。而zzst使用穿着史努比图案衬衫的女孩。
 - 召唤：/summon entity:hyan 和 /summon entity:zzst
 - hyan使用绿宝石驯服，zzst使用tnt驯服。值得一提的是，hyan需要绿宝石是因为他真的穷。
-- 可能会随机说一些话。可以在Taoism_B/animation_controllers/hyan.json和Taoism_B/animation_controllers/hyan.json看到这些对话
+- 可能会随机说一些话。可以在Taoism_B/animation_controllers/hyan.json和Taoism_B/animation_controllers/zzst.json看到这些对话
 - 有时会看见hyan客串阿库西斯教大祭司，阿库西斯教是假的，但他是大祭司是真的，因善于取悦机魂而闻名。
 战斗优化
 - 其实很容易看出来各个改动的来源。
@@ -1443,7 +1443,7 @@ GV模式
 - hyan驳回该外观并将替身设为盔甲架(stand)。
 - 而棍   母皮肤则被更改为替身(stand)，出于不可观测的特性，使用了替身模组中绯红之王的效果。
 - 所以，一个本该用于替身(decoy)的模组被用于了替身(stand)。
-- 使用/function king_crimson启用，/function diaengage禁用。
+- 使用/function king_crimson启用，/function ability_disengage禁用。
 - 棍   母不可观测，但是可以凭借这种方式间接观测。
 - 棍   母
 - 棍  母

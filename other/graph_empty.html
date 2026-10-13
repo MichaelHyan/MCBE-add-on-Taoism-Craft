@@ -78,7 +78,13 @@
   }
   #panelClose:hover { color: #fff; background: rgba(255,255,255,.1); }
   #pImgWrap { display: none; margin: 0 0 14px; }
-  #pImg { display: block; width: 100%; border-radius: 10px; background: #fff; border: 1px solid var(--line); }
+  #pImg {
+    display: block; width: 100%; height: auto; margin: 0 auto;
+    border-radius: 10px; background: #fff; border: 1px solid var(--line);
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: pixelated;   /* 最近邻采样，保持像素硬边 */
+  }
   #pInfo { font-size: 13.5px; line-height: 1.75; color: #cbd9ed; white-space: pre-wrap; word-break: break-word; }
   #hint {
     position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%);
@@ -653,14 +659,40 @@ function selectNode(node) {
   showPanel(node);
 }
 
+/* 小像素图放大：整数倍 + 最近邻，避免拉伸模糊 */
+function applyPixelZoom() {
+  // 先清掉上一次可能残留的内联尺寸/渲染模式
+  elPImg.style.width = '';
+  elPImg.style.height = '';
+  elPImg.style.imageRendering = 'auto';
+
+  const nw = elPImg.naturalWidth, nh = elPImg.naturalHeight;
+  if (!nw || !nh) return;
+
+  const availW = elPImgWrap.clientWidth || 300;
+  const availH = Math.max(120, (elPanel.clientHeight || innerHeight) * 0.75);
+
+  // 自然尺寸已超出可用区域的大图：交给 CSS 平滑缩放，避免锯齿
+  if (nw >= availW || nh >= availH) return;
+
+  const k = Math.max(1, Math.min(Math.floor(availW / nw), Math.floor(availH / nh)));
+  if (k <= 1) return;
+
+  elPImg.style.width  = (nw * k) + 'px';
+  elPImg.style.height = (nh * k) + 'px';
+  elPImg.style.imageRendering = 'pixelated';
+}
+
 function showPanel(node) {
   elPName.textContent = node.name;
 
   if (node.img) {
     elPImgWrap.style.display = 'block';
     elPImg.onerror = () => { elPImgWrap.style.display = 'none'; };
-    elPImg.onload  = () => { elPImgWrap.style.display = 'block'; };
+    elPImg.onload  = () => { elPImgWrap.style.display = 'block'; applyPixelZoom(); };
     elPImg.src = node.img;
+    // 同一张图再次选中时 onload 可能不触发（缓存命中），兜底重算一次
+    if (elPImg.complete && elPImg.naturalWidth) applyPixelZoom();
   } else {
     elPImgWrap.style.display = 'none';
     elPImg.removeAttribute('src');
