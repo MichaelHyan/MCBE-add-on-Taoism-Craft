@@ -1389,14 +1389,14 @@
 
 ### 26年春节更新内容
 
-![](Taoism_R/textures/items/ny/dumpling_a.png)
-![](Taoism_R/textures/items/ny/pigskin_jelly.png)
-![](Taoism_R/textures/items/ny/scrambled_chicken.png)
-![](Taoism_R/textures/items/ny/braised_pork.png)
-![](Taoism_R/textures/items/ny/braised_fish.png)
-![](Taoism_R/textures/items/ny/noodles.png)
-![](Taoism_R/textures/items/ny/steamed_bun.png)
-![](Taoism_R/textures/items/ny/rice_cake.png)
+![](Taoism_R/textures/ny/dumpling_a.png)
+![](Taoism_R/textures/ny/pigskin_jelly.png)
+![](Taoism_R/textures/ny/scrambled_chicken.png)
+![](Taoism_R/textures/ny/braised_pork.png)
+![](Taoism_R/textures/ny/braised_fish.png)
+![](Taoism_R/textures/ny/noodles.png)
+![](Taoism_R/textures/ny/steamed_bun.png)
+![](Taoism_R/textures/ny/rice_cake.png)
 
 可从村民处(屠夫，农民)购买食材，制作年夜饭
 
@@ -1413,9 +1413,9 @@
 
 ### 26年中秋节更新内容
 
-![](Taoism_R/textures/items/ny/mooncake_a.png)
-![](Taoism_R/textures/items/ny/mooncake_a.png)
-![](Taoism_R/textures/items/ny/mooncake_a.png)
+![](Taoism_R/textures/ny/mooncake_a.png)
+![](Taoism_R/textures/ny/mooncake_a.png)
+![](Taoism_R/textures/ny/mooncake_a.png)
 
 加入猪油，五仁、豆沙、蛋黄月饼
 
