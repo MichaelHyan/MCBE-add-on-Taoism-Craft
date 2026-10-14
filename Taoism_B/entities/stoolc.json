@@ -23,9 +23,6 @@
         "value": 0
       },
       "minecraft:is_collidable": {},
-      "minecraft:despawn": {
-        "despawn_from_distance": {}
-      },
       "minecraft:type_family": {
         "family": [
           "mob",

@@ -84,9 +84,6 @@
           }
         ]
       },
-      "minecraft:despawn": {
-        "despawn_from_distance": {}
-      },
       "minecraft:behavior.float": {
         "priority": 0,
         "chance_per_tick_to_float": 0.0,

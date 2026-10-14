@@ -30,9 +30,6 @@
       "minecraft:movement": {
         "value": 0
       },
-      "minecraft:despawn": {
-        "despawn_from_distance": {}
-      },
       "minecraft:type_family": {
         "family": [
           "mob",
