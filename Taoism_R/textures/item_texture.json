@@ -595,6 +595,18 @@
     },
     "construction_unit_j": {
       "textures":"textures/construction/unit_j.png"
+    },
+    "machete": {
+      "textures":"textures/fanart/machete"
+    },
+    "machete_knife": {
+      "textures":"textures/fanart/machete_knife"
+    },
+    "machete_nail": {
+      "textures":"textures/fanart/machete_nail"
+    },
+    "machete_handle": {
+      "textures":"textures/fanart/machete_handle"
     }
   }
 }

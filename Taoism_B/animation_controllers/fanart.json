@@ -1,0 +1,101 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.fanart":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"machete_nail":"query.get_equipped_item_name=='machete_nail' && variable.attack_time && query.scoreboard('charge') >= 0"},
+						{"machete_knife_a":"query.get_equipped_item_name=='machete_knife' && variable.attack_time && query.scoreboard('swordatkcd') >= 0 && math.random_integer(0,3) == 0"},
+						{"machete_knife_b":"query.get_equipped_item_name=='machete_knife' && variable.attack_time && query.scoreboard('swordatkcd') >= 0 && math.random_integer(0,3) != 0"},
+						{"machete_shock":"query.get_equipped_item_name=='machete' && query.is_sneaking && query.scoreboard('charge') >= 0"},
+						{"machete_atk":"query.get_equipped_item_name=='machete' && !variable.attack_time"},
+						{"machete_atk_a":"query.get_equipped_item_name=='machete' && variable.attack_time && query.scoreboard('swordatkcd') >= 0 && math.random_integer(0,1) == 0"},
+						{"machete_atk_b":"query.get_equipped_item_name=='machete' && variable.attack_time && query.scoreboard('swordatkcd') >= 0 && math.random_integer(0,1) == 1"}
+					]
+				},
+				"machete_nail": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @e[family=undead] slowness 10 255 true",
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/scoreboard players set @s charge -300"
+					]
+				},
+				"machete_knife_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/damage @e[type=!player,type=!armor_stand,type=!item,r=3] 6",
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
+						"/damage @s 6",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"machete_knife_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"machete_shock": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @e[family=undead] slowness 10 255 true",
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/scoreboard players set @s charge -200"
+					]
+				},
+				"machete_atk": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s weakness 1 255 true"
+					]
+				},
+				"machete_atk_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/damage @e[type=!player,type=!armor_stand,type=!item,r=3] 6",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"machete_atk_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/damage @e[type=!player,type=!armor_stand,type=!item,r=3] 12",
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
+						"/damage @s 3",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				}
+			}
+		}
+ 	}
+ }

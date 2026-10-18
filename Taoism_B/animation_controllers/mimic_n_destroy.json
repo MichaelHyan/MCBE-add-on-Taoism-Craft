@@ -1,0 +1,24 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.mimic_n_destroy":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"destroy":"math.mod(query.life_time,15) == 3 && math.random_integer(0,2) == 0"}
+					]
+				},
+				"destroy": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/fill ^ ^ ^ ^ ^2 ^1 air destroy"
+					]
+				}
+			}
+		}
+ 	}
+ }

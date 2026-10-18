@@ -1,0 +1,24 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.mimic_n_hike":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"hike":"math.mod(query.life_time,5) == 0 && query.ground_speed < 0.5"}
+					]
+				},
+				"hike": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 2 true"
+					]
+				}
+			}
+		}
+ 	}
+ }

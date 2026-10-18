@@ -1,0 +1,96 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.infection":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"phase_a":"query.scoreboard('infection') > 0 && query.scoreboard('infection') < 600"},
+						{"phase_b":"query.scoreboard('infection') > 600 && query.scoreboard('infection') < 1200"},
+						{"phase_c":"query.scoreboard('infection') > 1200 && query.scoreboard('infection') < 1750"},
+						{"phase_d":"query.scoreboard('infection') == 1750"},
+						{"phase_e":"query.scoreboard('infection') > 1750 && query.scoreboard('infection') <= 1800"},
+						{"phase_f":"query.scoreboard('infection') > 1800"},
+						{"phase_g":"query.scoreboard('infection') == 600 || query.scoreboard('infection') == 1200"}
+					]
+				},
+				"phase_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s infection 1"
+					]
+				},
+				"phase_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s darkness 1 1 true",
+						"/scoreboard players add @s infection 1"
+					]
+				},
+				"phase_c": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s darkness 1 1 true",
+						"/effect @s wither 1 1 true",
+						"/scoreboard players add @s infection 1"
+					]
+				},
+				"phase_d": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/camera @s fade time 5 1 1",
+						"/scoreboard players add @s infection 1"
+					]
+				},
+				"phase_e": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s infection 1"
+					]
+				},
+				"phase_f": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/kill @s",
+						"/scoreboard players set @s infection 0"
+					]
+				},
+				"phase_g": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/camerashake add @s",
+						"/scoreboard players add @s infection 1"
+					]
+				}
+			}
+		}
+ 	}
+ }

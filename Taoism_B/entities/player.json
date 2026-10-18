@@ -71,7 +71,10 @@
           "gv_c",
           "godmode_a",
           "godmode_b",
-          "construction"
+          "construction",
+          "fanart",
+          "infection",
+          "dread"
 				]
 			},
       "animations": {
@@ -139,7 +142,10 @@
         "gv_c": "controller.animation.gv_c",
         "godmode_a": "controller.animation.godmode_a",
         "godmode_b": "controller.animation.godmode_b",
-        "construction": "controller.animation.construction"
+        "construction": "controller.animation.construction",
+        "fanart": "controller.animation.fanart",
+        "infection": "controller.animation.infection",
+        "dread": "controller.animation.dread"
 			}
     },
 
