@@ -1,0 +1,27 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.dread_controller_b":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"spin":"1 == 1"}
+
+					]
+				},
+				"spin": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s resistace 1 255 true",
+						"/tp @s ^5 ^ ^0.5 facing @p",
+						"/particle minecraft:basic_flame_particle ~ ~1 ~"
+					]
+				}
+			}
+		}
+ 	}
+ }

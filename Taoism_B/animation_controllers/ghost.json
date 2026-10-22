@@ -5,16 +5,58 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"choicea":"query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,6) == 0"},
-						{"choiceb":"query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,6) == 1"},
-						{"choicec":"query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,6) == 2"},
-						{"choiced":"query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,6) == 3"},
-						{"choicee":"query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,6) == 4"},
-						{"choicef":"query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,6) == 5"},
-						{"choiceg":"query.time_of_day == 0.5 || query.time_of_day == 0.75 && math.random_integer(0,6) == 6"},
+						{"dreadhint":"query.player_level > 25 && query.time_of_day >= 0.5 && query.time_of_day <= 0.51 && query.moon_phase == 0"},
+						{"dreadstart":"query.scoreboard('sleepchoice') == 7 && query.time_of_day >= 0.75 && query.time_of_day <= 0.76"},
+						{"dreadend":"query.scoreboard('sleepchoice') == 7 && query.time_of_day > 0.25 && query.time_of_day < 0.26"},
+						{"choicea":"query.scoreboard('sleepchoice') != 7 && math.random_integer(0,6) == 0 && query.time_of_day >= 0.5 && query.time_of_day <= 0.51"},
+						{"choiceb":"query.scoreboard('sleepchoice') != 7 && math.random_integer(0,6) == 1 && query.time_of_day >= 0.5 && query.time_of_day <= 0.51"},
+						{"choicec":"query.scoreboard('sleepchoice') != 7 && math.random_integer(0,6) == 2 && query.time_of_day >= 0.5 && query.time_of_day <= 0.51"},
+						{"choiced":"query.scoreboard('sleepchoice') != 7 && math.random_integer(0,6) == 2 && query.time_of_day >= 0.5 && query.time_of_day <= 0.51"},
+						{"choicee":"query.scoreboard('sleepchoice') != 7 && math.random_integer(0,6) == 2 && query.time_of_day >= 0.5 && query.time_of_day <= 0.51"},
+						{"choicef":"query.scoreboard('sleepchoice') != 7 && math.random_integer(0,6) == 2 && query.time_of_day >= 0.5 && query.time_of_day <= 0.51"},
+						{"choiceg":"query.scoreboard('sleepchoice') != 7 && math.random_integer(0,6) == 2 && query.time_of_day >= 0.5 && query.time_of_day <= 0.51"},
 						{"sleep":"query.is_sleeping && query.scoreboard('sleep') == 0 && query.scoreboard('sleepchoice') == 6"},
+						{"dread":"query.is_sleeping && query.scoreboard('sleepchoice') == 7"},						
 						{"unsleep":"query.is_sleeping && query.scoreboard('sleep') == 2"},
 						{"awake":"!query.is_sleeping && query.scoreboard('sleep') == 1"}
+					]
+				},
+				"dreadhint": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard objectives add sleepchoice dummy",
+						"/title @s title 今晚的气息格外沉重",
+						"/scoreboard players set @s sleepchoice 7",
+						"/scoreboard players set @s sleep 1"
+					]
+				},
+				"dreadstart": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/title @s title 周围的空气越来越冷",
+						"/effect @s darkness 600 1 true",
+						"/scoreboard players set @s sleep 2"
+					]
+				},
+				"dreadend": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/title @s title 不安的感觉消失了",
+						"/kill @e[type=entity:dread_controller]",
+						"/scoreboard players set @s sleep 1",
+						"/scoreboard players set @s sleepchoice 0"
 					]
 				},
 				"choicea": {
@@ -112,6 +154,18 @@
 						"/scoreboard players set @s sleep 2",
 						"/summon entity:ghost ~ ~3 ~",
 						"/scoreboard players set @s sleepchoice 0"
+					]
+				},
+				"dread": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard objectives add sleep dummy",
+						"/scoreboard players set @s sleep 2",
+						"/summon entity:dread_controller"
 					]
 				},
 				"unsleep": {

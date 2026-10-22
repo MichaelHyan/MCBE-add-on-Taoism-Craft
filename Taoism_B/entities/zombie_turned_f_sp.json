@@ -30,6 +30,15 @@
         "value": 50,
         "max": 50
       },
+      "minecraft:timer": {
+        "looping": true,
+        "random_interval": false,
+        "time": 300.0,
+        "time_down_event": {
+          "event": "despawn",
+          "target": "self"
+        }
+      },
       "minecraft:loot": {
         "table": "loot_tables/entities/zombie_mimic_p.json"
       },
