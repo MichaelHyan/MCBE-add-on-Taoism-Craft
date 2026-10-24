@@ -4,7 +4,15 @@
     "description": {
       "identifier": "entity:zombie_mimic_f_sp",
       "is_spawnable": false,
-      "is_summonable": true
+      "is_summonable": true,
+      "scripts": {
+        "animate": [
+          "infection_atk"
+        ]
+      },
+      "animations": {
+        "infection_atk": "controller.animation.infection_atk"
+      }
     },
     "component_groups": {
       "despawn": {

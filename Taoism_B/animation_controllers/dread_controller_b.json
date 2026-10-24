@@ -5,20 +5,29 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"spin":"1 == 1"}
+						{"spawn_a":"math.mod(query.life_time,9) != 0"},
+						{"spawn_b":"math.mod(query.life_time,9) == 0"}
 
 					]
 				},
-				"spin": {
+				"spawn_a": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"
 							}
 					],
 					"on_entry": [
-						"/effect @s resistace 1 255 true",
-						"/tp @s ^5 ^ ^0.5 facing @p",
-						"/particle minecraft:basic_flame_particle ~ ~1 ~"
+						"/summon entity:dread_spawner_a ~ ~100 ~"
+					]
+				},
+				"spawn_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon entity:dread_spawner_a ~ ~100 ~"
 					]
 				}
 			}

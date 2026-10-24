@@ -1430,27 +1430,15 @@
         }
       },
       "pearl": {
-        "add": {
-          "component_groups": [
-            "pearl"
-          ]
-        },
-        "remove": {
-          "component_groups": [
-            "bow"
-          ]
+        "queue_command": {
+          "command": "say 内丹、长生、飞升…… 终究不过是镜花水月，一场空幻。",
+          "target": "self"
         }
       },
       "sword_s": {
-        "add": {
-          "component_groups": [
-            "sword_s"
-          ]
-        },
-        "remove": {
-          "component_groups": [
-            "bow"
-          ]
+        "queue_command": {
+          "command": "say 哇！金色传说！",
+          "target": "self"
         }
       },
       "totem": {

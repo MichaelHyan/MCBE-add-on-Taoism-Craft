@@ -8,11 +8,13 @@
       "spawn_category": "monster",
       "scripts": {
         "animate": [
+          "infection_atk",
           "mimic_n_hike",
           "mimic_n_destroy"
         ]
       },
       "animations": {
+        "infection_atk": "controller.animation.infection_atk",
         "mimic_n_hike": "controller.animation.mimic_n_hike",
         "mimic_n_destroy": "controller.animation.mimic_n_destroy"
       }

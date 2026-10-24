@@ -1,0 +1,25 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.infection_atk":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"atk":"variable.attack_time && math.random_integer(0,2) == 0"}
+					]
+				},
+				"atk": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add infection dummy",
+						"/scoreboard players add @p[r=2] infection 1"
+					]
+				}
+			}
+		}
+ 	}
+ }
