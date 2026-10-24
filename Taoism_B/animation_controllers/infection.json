@@ -5,13 +5,13 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"phase_a":"query.scoreboard('infection') > 0 && query.scoreboard('infection') < 600"},
-						{"phase_b":"query.scoreboard('infection') > 600 && query.scoreboard('infection') < 1200"},
-						{"phase_c":"query.scoreboard('infection') > 1200 && query.scoreboard('infection') < 1750"},
-						{"phase_d":"query.scoreboard('infection') == 1750"},
-						{"phase_e":"query.scoreboard('infection') > 1750 && query.scoreboard('infection') <= 1800"},
-						{"phase_f":"query.scoreboard('infection') > 1800"},
-						{"phase_g":"query.scoreboard('infection') == 600 || query.scoreboard('infection') == 1200"}
+						{"phase_a":"query.scoreboard('infection') > 0 && query.scoreboard('infection') < 1800"},
+						{"phase_b":"query.scoreboard('infection') > 1800 && query.scoreboard('infection') < 3600"},
+						{"phase_c":"query.scoreboard('infection') > 3600 && query.scoreboard('infection') < 5350"},
+						{"phase_d":"query.scoreboard('infection') == 5350"},
+						{"phase_e":"query.scoreboard('infection') > 5350 && query.scoreboard('infection') <= 5400"},
+						{"phase_f":"query.scoreboard('infection') > 5400"},
+						{"phase_g":"query.scoreboard('infection') == 1800 || query.scoreboard('infection') == 3600"}
 					]
 				},
 				"phase_a": {
@@ -87,7 +87,8 @@
 					],
 					"on_entry": [
 						"/camerashake add @s",
-						"/scoreboard players add @s infection 1"
+						"/scoreboard players add @s infection 1",
+						"/say \n你已被感染，请注意健康情况。\n可服用。。。解除感染。"
 					]
 				}
 			}
