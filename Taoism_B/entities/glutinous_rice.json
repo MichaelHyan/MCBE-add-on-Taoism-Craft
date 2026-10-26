@@ -41,7 +41,6 @@
             "apply_effect_to_blocking_targets": false
           }
         },
-        "hit_sound": "bow.hit",
         "power": 1.6,
         "gravity": 0.05,
         "uncertainty_base": 16,

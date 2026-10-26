@@ -1,0 +1,16 @@
+{
+  "entity_sounds": {
+    "entities": {
+      "entity:zombie_mimic_n": {
+        "volume": 1.0,
+        "pitch": [0.8, 1.2],
+        "events": {
+          "ambient": "mob.zombie.say",
+          "hurt": "mob.zombie.hurt",
+          "death": "mob.zombie.death",
+          "step": { "sound": "mob.zombie.step", "volume": 0.45, "pitch": 1.0 }
+        }
+      }
+    }
+  }
+}

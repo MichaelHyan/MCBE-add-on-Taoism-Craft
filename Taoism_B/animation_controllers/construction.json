@@ -1056,7 +1056,7 @@
 							}
 					],
 					"on_entry": [
-						"/structure load mystructure:templet ~-12 ~-1 ~-17 90_degrees",
+						"/structure load mystructure:templet ~-12 ~-2 ~-17 90_degrees",
 						"/scoreboard players set @s direction 0",
 						"/replaceitem entity @s slot.weapon.mainhand 0 air",
 						"/scoreboard players set @s swordatkcd -3"
@@ -1069,7 +1069,7 @@
 							}
 					],
 					"on_entry": [
-						"/structure load mystructure:templet ~-12 ~-1 ~1 270_degrees",
+						"/structure load mystructure:templet ~-12 ~-2 ~1 270_degrees",
 						"/scoreboard players set @s direction 0",
 						"/replaceitem entity @s slot.weapon.mainhand 0 air",
 						"/scoreboard players set @s swordatkcd -3"
@@ -1082,7 +1082,7 @@
 							}
 					],
 					"on_entry": [
-						"/structure load mystructure:templet ~1 ~-1 ~-12 180_degrees",
+						"/structure load mystructure:templet ~1 ~-2 ~-12 180_degrees",
 						"/scoreboard players set @s direction 0",
 						"/replaceitem entity @s slot.weapon.mainhand 0 air",
 						"/scoreboard players set @s swordatkcd -3"
@@ -1095,7 +1095,7 @@
 							}
 					],
 					"on_entry": [
-						"/structure load mystructure:templet ~-17 ~-1 ~-12 0_degrees",
+						"/structure load mystructure:templet ~-17 ~-2 ~-12 0_degrees",
 						"/scoreboard players set @s direction 0",
 						"/replaceitem entity @s slot.weapon.mainhand 0 air",
 						"/scoreboard players set @s swordatkcd -3"

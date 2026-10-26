@@ -7,7 +7,7 @@
 					"transitions":[
 						{"dreadhint":"query.player_level > 25 && query.time_of_day >= 0.5 && query.time_of_day <= 0.51 && query.moon_phase == 0"},
 						{"dreadstart":"query.scoreboard('sleepchoice') == 7 && query.time_of_day >= 0.75 && query.time_of_day <= 0.76"},
-						{"dreadend":"query.scoreboard('sleepchoice') == 7 && query.time_of_day > 0.15 && query.time_of_day < 0.16"},
+						{"dreadend":"query.scoreboard('sleepchoice') == 7 && query.time_of_day > 0.2 && query.time_of_day < 0.5"},
 						{"choicea":"query.scoreboard('sleepchoice') != 7 && math.random_integer(0,6) == 0 && query.time_of_day >= 0.5 && query.time_of_day <= 0.51"},
 						{"choiceb":"query.scoreboard('sleepchoice') != 7 && math.random_integer(0,6) == 1 && query.time_of_day >= 0.5 && query.time_of_day <= 0.51"},
 						{"choicec":"query.scoreboard('sleepchoice') != 7 && math.random_integer(0,6) == 2 && query.time_of_day >= 0.5 && query.time_of_day <= 0.51"},
@@ -56,7 +56,8 @@
 						"/title @s title 不安的感觉消失了",
 						"/kill @e[type=entity:dread_controller]",
 						"/scoreboard players set @s sleep 1",
-						"/scoreboard players set @s sleepchoice 0"
+						"/scoreboard players set @s sleepchoice 0",
+						"/effect @s darkness 0 255 true"
 					]
 				},
 				"choicea": {
@@ -165,6 +166,7 @@
 					"on_entry": [
 						"/scoreboard objectives add sleep dummy",
 						"/scoreboard players set @s sleep 2",
+						"/playsound scare @a",
 						"/damage @s 1",
 						"/kill @e[type=entity:dread_controller]",
 						"/summon entity:dread_controller"

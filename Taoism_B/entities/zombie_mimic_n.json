@@ -20,6 +20,11 @@
       }
     },
     "components": {
+      "minecraft:ambient_sound_interval": {
+        "event_name": "ambient",
+        "value": 40,
+        "range": 80
+      },
       "minecraft:interact": {
         "interactions": [
           {
@@ -161,7 +166,7 @@
       "minecraft:timer": {
         "looping": true,
         "random_interval": false,
-        "time": 300.0,
+        "time": 150.0,
         "time_down_event": {
           "event": "despawn",
           "target": "self"
