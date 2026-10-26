@@ -607,6 +607,9 @@
     },
     "machete_handle": {
       "textures":"textures/fanart/machete_handle"
+    },
+    "herb": {
+      "textures":"textures/items/herb.png"
     }
   }
 }

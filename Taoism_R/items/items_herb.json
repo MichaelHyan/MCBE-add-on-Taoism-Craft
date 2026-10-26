@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "items:herb",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "herb",
+      "minecraft:render_offsets": "herb"
+    }
+  }
+}

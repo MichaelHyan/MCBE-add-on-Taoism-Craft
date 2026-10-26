@@ -5,10 +5,10 @@
       "identifier": "entity:guide",
       "materials": { "default": "base", "invisible": "baseb" },
       "textures": {
-        "default": "textures/entity/partner"
+        "default": "textures/entity/guide"
       },
       "geometry": {
-        "default": "geometry.unknown"
+        "default": "geometry.unknown_thin"
       },
 
       "scripts": {

@@ -37,7 +37,7 @@
 						"/summon entity:bssa",
 						"/effect @a[r=300] levitation 10 10 true",
 						"/camera @a[r=300] fade time 5 10 5",
-						"/effect @a[r=300] darkness 70 1 true"
+						"/effect @a[r=300] blindness 70 1 true"
 					]
 				},
 				"c": {

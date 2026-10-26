@@ -96,7 +96,7 @@
 						"/summon entity:reba",
 						"/effect @s resistance 42 255",
 						"/effect @s invisibility 42 255",
-						"/effect @s darkness 42 255",
+						"/effect @s blindness 42 255",
 						"/inputpermission set @s movement disabled"
 					]
 				},
@@ -111,7 +111,7 @@
 						"/summon entity:rebb",
 						"/effect @s resistance 60 255",
 						"/effect @s invisibility 60 255",
-						"/effect @s darkness 60 255",
+						"/effect @s blindness 60 255",
 						"/inputpermission set @s movement disabled"
 					]
 				},
@@ -126,7 +126,7 @@
 						"/summon entity:rebc",
 						"/effect @s resistance 61 255",
 						"/effect @s invisibility 61 255",
-						"/effect @s darkness 61 255",
+						"/effect @s blindness 61 255",
 						"/inputpermission set @s movement disabled"
 					]
 				},
@@ -141,7 +141,7 @@
 						"/summon entity:rebd",
 						"/effect @s resistance 41 255",
 						"/effect @s invisibility 41 255",
-						"/effect @s darkness 41 255",
+						"/effect @s blindness 41 255",
 						"/inputpermission set @s movement disabled"
 					]
 				},
@@ -156,7 +156,7 @@
 						"/summon entity:rebe",
 						"/effect @s resistance 53 255",
 						"/effect @s invisibility 53 255",
-						"/effect @s darkness 53 255",
+						"/effect @s blindness 53 255",
 						"/inputpermission set @s movement disabled"
 					]
 				},
@@ -171,7 +171,7 @@
 						"/summon entity:rebf",
 						"/effect @s resistance 41 255",
 						"/effect @s invisibility 41 255",
-						"/effect @s darkness 41 255",
+						"/effect @s blindness 41 255",
 						"/inputpermission set @s movement disabled"
 					]
 				},
@@ -186,7 +186,7 @@
 						"/summon entity:rebg",
 						"/effect @s resistance 50 255",
 						"/effect @s invisibility 50 255",
-						"/effect @s darkness 50 255",
+						"/effect @s blindness 50 255",
 						"/inputpermission set @s movement disabled"
 					]
 				},
@@ -201,7 +201,7 @@
 						"/summon entity:rebh",
 						"/effect @s resistance 36 255",
 						"/effect @s invisibility 36 255",
-						"/effect @s darkness 36 255",
+						"/effect @s blindness 36 255",
 						"/inputpermission set @s movement disabled"
 					]
 				},
@@ -216,7 +216,7 @@
 						"/summon entity:rebi",
 						"/effect @s resistance 59 255",
 						"/effect @s invisibility 59 255",
-						"/effect @s darkness 59 255",
+						"/effect @s blindness 59 255",
 						"/inputpermission set @s movement disabled"
 					]
 				},
