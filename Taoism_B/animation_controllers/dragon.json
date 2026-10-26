@@ -6,7 +6,7 @@
 				"base_jeta":{
 					"transitions":[
 						{"notdie":"query.is_alive != 0"},
-						{"die":"query.is_alive == 0"}
+						{"die":"query.is_alive == 0 && query.scoreboard('relic') == 1"}
 					]
 				},
 				"notdie": {
@@ -16,7 +16,9 @@
 						}
 					],
 					"on_entry": [
-						"/kill @e[family=relic]"
+						"/kill @e[family=relic]",
+						"/scoreboard objectives add relic dummy",
+						"/scoreboard players set @s relic 1"
 					]
 				},
 				"die": {
@@ -27,7 +29,8 @@
 					],
 					"on_entry": [
 						"/kill @e[family=relic]",
-						"/summon entity:relic"
+						"/summon entity:relic",
+						"/scoreboard players set @s relic 0"
 					]
 				}
 			}

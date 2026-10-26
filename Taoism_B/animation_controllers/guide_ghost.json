@@ -1,0 +1,29 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.guide_ghost":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"ghost":"query.is_alive == 1"}
+					]
+				},
+				"ghost": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/tp ^ ^ ^0.1 facing @p[tag=guide,rm=1,r=3]",
+						"/tp ^ ^ ^0.5 facing @p[tag=guide,rm=3,r=5]",
+						"/tp ^ ^ ^1 facing @p[tag=guide,rm=5,r=10]",
+						"/particle minecraft:balloon_gas_particle ~ ~1 ~",
+						"/effect @s resistance 1 255 true",
+						"/tp @p[tag=guide,rm=15]"
+					]
+				}
+			}
+		}
+ 	}
+ }

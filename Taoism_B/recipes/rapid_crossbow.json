@@ -1,0 +1,39 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:rapid_crossbow"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " b ",
+      "dad",
+      " c "
+    ],
+    "key": {
+      "a": {
+        "item": "crossbow"
+      },
+      "b": {
+        "item": "iron_ingot"
+      },
+      "c": {
+        "item": "repeater"
+      },
+      "d": {
+        "item": "string"
+      }
+    },
+    "unlock": [
+      {
+        "item": "crossbow"
+      }
+    ],
+    "result": {
+      "item": "items:rapid_crossbow",
+      "count": 1
+    }
+  }
+}

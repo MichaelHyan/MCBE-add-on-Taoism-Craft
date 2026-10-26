@@ -1,0 +1,84 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "entity:guide_ghost",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "scripts": {
+				"animate": [
+					"guide_ghost"
+				]
+			},
+      "animations": {
+				"guide_ghost": "controller.animation.guide_ghost"
+			}
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "width": 1,
+        "height": 1
+      },
+      "minecraft:type_family": {
+        "family": [
+          "mob",
+          "taoism"
+        ]
+      },
+      "minecraft:health": {
+        "value": 200,
+        "max": 200,
+        "min": 0
+      },
+      "minecraft:interact": {
+        "interactions": [
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  { "test": "is_family", "subject": "other", "value": "player" },
+                  { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "items:spe" }
+                ]
+              },
+              "event": "resurrection",
+              "target": "self"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          }
+        ]
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/guide_ghost.json"
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+        "default_values": {
+          "max_optimized_distance": 100.0,
+          "max_dropped_ticks": 7,
+          "use_motion_prediction_hints": true
+        }
+      }
+    },
+    "component_groups": {
+      "resurrection": {
+        "minecraft:transformation": {
+          "into": "entity:guide"
+        }
+      }
+    },
+    "events": {
+      "resurrection": {
+        "add": {
+          "component_groups": [
+            "resurrection"
+          ]
+        }
+      }
+    }
+  }
+}

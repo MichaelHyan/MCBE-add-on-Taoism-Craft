@@ -1,0 +1,350 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.partner_random": {
+			"initial_state": "base_jeta",
+			"states": {
+				"base_jeta": {
+					"on_entry": [
+						"v.guide_next = query.life_time + 600.0;"
+					],
+					"transitions": [
+						{ "roll": "query.life_time >= v.guide_next" }
+					]
+				},
+				"roll": {
+					"on_entry": [
+						"v.guide_pick = math.random_integer(0, 35);"
+					],
+					"transitions": [
+						{ "tips_a": "v.guide_pick == 0" },
+						{ "tips_b": "v.guide_pick == 1" },
+						{ "tips_c": "v.guide_pick == 2" },
+						{ "tips_d": "v.guide_pick == 3" },
+						{ "tips_e": "v.guide_pick == 4" },
+						{ "tips_f": "v.guide_pick == 5" },
+						{ "tips_g": "v.guide_pick == 6" },
+						{ "tips_h": "v.guide_pick == 7" },
+						{ "tips_i": "v.guide_pick == 8" },
+						{ "tips_j": "v.guide_pick == 9" },
+						{ "tips_k": "v.guide_pick == 10" },
+						{ "tips_l": "v.guide_pick == 11" },
+						{ "tips_m": "v.guide_pick == 12" },
+						{ "tips_n": "v.guide_pick == 13" },
+						{ "tips_o": "v.guide_pick == 14" },
+						{ "tips_p": "v.guide_pick == 15" },
+						{ "msg_a": "v.guide_pick == 16" },
+						{ "msg_b": "v.guide_pick == 17" },
+						{ "msg_c": "v.guide_pick == 18" },
+						{ "msg_d": "v.guide_pick == 19" },
+						{ "msg_e": "v.guide_pick == 20" },
+						{ "msg_f": "v.guide_pick == 21" },
+						{ "msg_g": "v.guide_pick == 22" },
+						{ "msg_h": "v.guide_pick == 23" },
+						{ "msg_i": "v.guide_pick == 24" },
+						{ "msg_j": "v.guide_pick == 25" },
+						{ "msg_k": "v.guide_pick == 26" },
+						{ "msg_l": "v.guide_pick == 27" },
+						{ "msg_m": "v.guide_pick == 28" },
+						{ "msg_n": "v.guide_pick == 29" },
+						{ "msg_o": "v.guide_pick == 30" },
+						{ "msg_p": "v.guide_pick == 31" },
+						{ "msg_q": "v.guide_pick == 32" },
+						{ "msg_r": "v.guide_pick == 33" },
+						{ "msg_s": "v.guide_pick == 34" },
+						{ "msg_t": "v.guide_pick == 35" },
+						{ "base_jeta": "v.guide_pick > 35 || v.guide_pick < 0" }
+					]
+				},
+				"tips_a": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 像我这样的存在，世间并非仅有，在之后或许你会见到他们。"
+					]
+				},
+				"tips_b": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 天下道观虽多，却皆是破碎的仙梦，但或许还能为你提供一些便利。"
+					]
+				},
+				"tips_c": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 亏凹月和盈凹月时无禁忌，可用浑仪推演月相变化。"
+					]
+				},
+				"tips_d": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 邪修虽悖正道，然其术亦有可取之处。如今相关典籍，多落于掠夺者之手。"
+					]
+				},
+				"tips_e": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 法器自有灵性，非人人可御。待你修为精进，方能尽展其威。"
+					]
+				},
+				"tips_f": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 此间遍地亡灵，皆是历代求道不得之人。临终执念不散，便化为行尸走肉。"
+					]
+				},
+				"tips_g": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 贫道已失道根，无法催动法器，寻常兵刃倒还能勉强使用。"
+					]
+				},
+				"tips_h": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 此方天地朱砂未绝，只是矿脉隐于山川，一时难以寻觅。"
+					]
+				},
+				"tips_i": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 不死图腾的制法，你还是不要知晓为好。"
+					]
+				},
+				"tips_j": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 符箓之术，分符头、符腹、符脚。你手中的符脚，已兼具符腹之效。"
+					]
+				},
+				"tips_k": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 贫道究竟是何人？待时机成熟，自会告知于你。"
+					]
+				},
+				"tips_l": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 死后重生之人，可还是当初的那个你？"
+					]
+				},
+				"tips_m": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 昔日我辈，皆以得道飞升为唯一执念，却忘了生而为人的本心。修炼本为修心炼性，而非贪求成仙。"
+					]
+				},
+				"tips_n": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 你可知世人皆求飞升的下场？非但未能成仙，反倒颠倒乾坤，自食苦果。"
+					]
+				},
+				"tips_o": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 贫道知晓，真正的你也在尘世中修行。愿屏幕那端的你，此生平安喜乐，顺遂无忧。"
+					]
+				},
+				"tips_p": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 哈哈哈哈哈哈。"
+					]
+				},
+				"msg_a": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 道教是中国本土宗教，以老子《道德经》为根本。"
+					]
+				},
+				"msg_b": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 道家≠道教：道家是哲学，道教是宗教。"
+					]
+				},
+				"msg_c": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 道教最高神是三清：元始、灵宝、道德天尊。"
+					]
+				},
+				"msg_d": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 玉皇大帝是四御之一，在三清之下。"
+					]
+				},
+				"msg_e": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 道教两大派：全真、正一。"
+					]
+				},
+				"msg_f": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 全真道士不婚、吃素、住观。"
+					]
+				},
+				"msg_g": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 正一道士可婚、可吃肉，重符箓斋醮。"
+					]
+				},
+				"msg_h": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 道教核心追求：长生、得道、成仙。"
+					]
+				},
+				"msg_i": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 修炼主要分内丹和外丹。"
+					]
+				},
+				"msg_j": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 道教讲阴阳、五行、八卦，是世界观基础。"
+					]
+				},
+				"msg_k": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 道士自称贫道，不称“贫僧”。"
+					]
+				},
+				"msg_l": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 见面行礼用拱手（左手抱右手），不合十。"
+					]
+				},
+				"msg_m": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 道教有三官：天官赐福、地官赦罪、水官解厄。"
+					]
+				},
+				"msg_n": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 民间中元节源自道教地官信仰。"
+					]
+				},
+				"msg_o": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 著名神仙组合：八仙。"
+					]
+				},
+				"msg_p": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 道教圣地叫洞天福地。"
+					]
+				},
+				"msg_q": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 道教有符箓、咒语、斋醮，用于祈福驱邪。"
+					]
+				},
+				"msg_r": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 道教养生影响着中医、气功、武术。"
+					]
+				},
+				"msg_s": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 道教讲道法自然，顺应天地规律。"
+					]
+				},
+				"msg_t": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 道教观念：我命在我不在天，强调自我修炼。"
+					]
+				}
+			}
+		}
+	}
+}

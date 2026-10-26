@@ -108,7 +108,7 @@
       "minecraft:attack": {
         "damage": 2,
         "effect_name": "wither",
-        "effect_duration": 60
+        "effect_duration": 10
       },
       "minecraft:behavior.melee_attack": {
         "priority": 2,

@@ -1,0 +1,341 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.guide_random": {
+			"initial_state": "base_jeta",
+			"states": {
+				"base_jeta": {
+					"on_entry": [
+						"v.guide_next = query.life_time + 300.0;"
+					],
+					"transitions": [
+						{ "roll": "query.life_time >= v.guide_next" }
+					]
+				},
+				"roll": {
+					"on_entry": [
+						"v.guide_pick = math.random_integer(0, 34);"
+					],
+					"transitions": [
+						{ "tips_a": "v.guide_pick == 0" },
+						{ "tips_b": "v.guide_pick == 1" },
+						{ "tips_c": "v.guide_pick == 2" },
+						{ "tips_d": "v.guide_pick == 3" },
+						{ "tips_e": "v.guide_pick == 4" },
+						{ "tips_f": "v.guide_pick == 5" },
+						{ "tips_g": "v.guide_pick == 6" },
+						{ "tips_h": "v.guide_pick == 7" },
+						{ "tips_i": "v.guide_pick == 8" },
+						{ "tips_j": "v.guide_pick == 9" },
+						{ "tips_k": "v.guide_pick == 10" },
+						{ "tips_l": "v.guide_pick == 11" },
+						{ "tips_m": "v.guide_pick == 12" },
+						{ "tips_n": "v.guide_pick == 13" },
+						{ "tips_o": "v.guide_pick == 14" },
+						{ "tips_p": "v.guide_pick == 15" },
+						{ "tips_q": "v.guide_pick == 16" },
+						{ "tips_r": "v.guide_pick == 17" },
+						{ "tips_s": "v.guide_pick == 18" },
+						{ "tips_t": "v.guide_pick == 19" },
+						{ "tips_u": "v.guide_pick == 20" },
+						{ "tips_v": "v.guide_pick == 21" },
+						{ "tips_w": "v.guide_pick == 22" },
+						{ "tips_x": "v.guide_pick == 23" },
+						{ "tips_y": "v.guide_pick == 24" },
+						{ "tips_z": "v.guide_pick == 25" },
+						{ "tips_aa": "v.guide_pick == 26" },
+						{ "tips_ab": "v.guide_pick == 27" },
+						{ "tips_ac": "v.guide_pick == 28" },
+						{ "tips_ad": "v.guide_pick == 29" },
+						{ "tips_ae": "v.guide_pick == 30" },
+						{ "tips_af": "v.guide_pick == 31" },
+						{ "tips_ag": "v.guide_pick == 32" },
+						{ "tips_ah": "v.guide_pick == 33" },
+						{ "tips_ai": "v.guide_pick == 34" },
+						{ "base_jeta": "v.guide_pick > 34 || v.guide_pick < 0" }
+					]
+				},
+				"tips_a": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 朱砂具有安神的效果。"
+					]
+				},
+				"tips_b": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 月亮不对就别急着读书，雷劈下来可没人替你挡。"
+					]
+				},
+				"tips_c": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 我在这儿守着一屋子档案，工资是没有的，饭倒是管够。"
+					]
+				},
+				"tips_d": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 有个同事叫大祭司，模组里那些事儿一半是他折腾出来的。"
+					]
+				},
+				"tips_e": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 另一个同事管画图，脾气比我好，就是嘴上没个把门的。"
+					]
+				},
+				"tips_f": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 炁散在野地里，你路过就顺手收了，别等它飘走才后悔。"
+					]
+				},
+				"tips_g": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 手里的剑越凶，吃你的也越多，自己掂量。"
+					]
+				},
+				"tips_h": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 这地方大得很，别指望我一次全给你翻出来。"
+					]
+				},
+				"tips_i": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 若哪天你死了，先别急着哭，尸首还得赶回来。"
+					]
+				},
+				"tips_j": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 聊这些没用的也行，反正我闲着。"
+					]
+				},
+				"tips_k": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 你要是找不着东西，去读读 README，别一上来就问我。"
+					]
+				},
+				"tips_l": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 今天吃什么我还没想好，反正做熟了都好吃。"
+					]
+				},
+				"tips_m": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 档案馆的米又快见底了，谁贴补一下？"
+					]
+				},
+				"tips_n": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 我这条道袍洗了三回还是这个色，懒得管了。"
+					]
+				},
+				"tips_o": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 忙起来的时候连口水都喝不上，闲起来能坐一下午。"
+					]
+				},
+				"tips_p": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 别问我多大了，这种话不兴问。"
+					]
+				},
+				"tips_q": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 有人问我是哪门哪派，正一，散修，就这样。"
+					]
+				},
+				"tips_r": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 外头下雨的时候最适合翻旧档，可惜这屋里没有窗。"
+					]
+				},
+				"tips_s": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 我不记仇，真的，转头就忘了。"
+					]
+				},
+				"tips_t": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 你要是夸我一句，我能记好几天。"
+					]
+				},
+				"tips_u": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 别老盯着我看，档案在架子上。"
+					]
+				},
+				"tips_v": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 我这人小胳膊小腿的，搬箱子都是同事帮忙。"
+					]
+				},
+				"tips_w": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 炊事归我，吃饭的点自己记着。"
+					]
+				},
+				"tips_x": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 谁要是不吃饭就跑去打怪，回头别说我没提醒。"
+					]
+				},
+				"tips_y": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 有闲工夫就多出去走走，闷在屋里翻不出花样来。"
+					]
+				},
+				"tips_z": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 遇见不懂的，先记下来，回头一起问。"
+					]
+				},
+				"tips_aa": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 我这记性不牢靠，你问第二遍我可能还是那个答案。"
+					]
+				},
+				"tips_ab": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 夜深了就早点睡，梦里有鬼可不是玩笑话。"
+					]
+				},
+				"tips_ac": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 嘴上说不管，真出了事我还是会去瞧一眼。"
+					]
+				},
+				"tips_ad": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 别学那些走邪路的，看着痛快，后头难收场。"
+					]
+				},
+				"tips_ae": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 雷雨天别站在高处，这话我从小听到大。"
+					]
+				},
+				"tips_af": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 手头宽裕就多备点朱砂，用的时候不慌。"
+					]
+				},
+				"tips_ag": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 我不太会哄人，但你说说话我就高兴。"
+					]
+				},
+				"tips_ah": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 忙完了记得回来喝口热的。"
+					]
+				},
+				"tips_ai": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/say 我其实不懂得战斗，就算是你给我武器我也不知道该怎么用的。"
+					]
+				}
+			}
+		}
+	}
+}

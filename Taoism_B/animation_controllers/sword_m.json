@@ -6,8 +6,7 @@
 				"base_jeta":{
 					"transitions":[
 						{"sword_m_a":"query.life_time <= 2"},
-						{"sword_m_b":"query.life_time == 3"},
-						{"sword_m_c":"query.life_time == 4"}
+						{"sword_m_b":"query.life_time == 3"}
 					]
 				},
 				"sword_m_a": {
@@ -34,16 +33,6 @@
 						"/tp @p",
 						"/give @p items:sword_m",
 						"/effect @s invisibility 1 1 true"
-					]
-				},
-				"sword_m_c": {
-					"transitions": [
-							{
-								"base_jeta": "(1.0)"
-							}
-					],
-					"on_entry": [
-						"/kill @s"
 					]
 				}
 			}

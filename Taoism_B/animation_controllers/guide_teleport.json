@@ -1,0 +1,39 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.guide_teleport":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"teleport":"query.is_alive == 1"},
+						{"die":"query.is_alive == 0 && query.scoreboard('guide') == 1"}
+					]
+				},
+				"teleport": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/tp @p[tag=guide,rm=15]",
+						"/scoreboard objectives add guide dummy",
+						"/scoreboard players set @s guide 1"
+					]
+				},
+				"die": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s guide 0",
+						"/kill @e[type=guide_ghost]",
+						"/summon entity:guide_ghost ~ ~ ~"
+					]
+				}
+			}
+		}
+ 	}
+ }

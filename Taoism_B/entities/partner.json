@@ -9,11 +9,13 @@
       "scripts": {
 				"animate": [
 					"partner",
+          "partner_random",
           "partnerheal"
 				]
 			},
       "animations": {
 				"partner": "controller.animation.partner",
+        "partner_random": "controller.animation.partner_random",
         "partnerheal": "controller.animation.partnerheal"
 			}
     },

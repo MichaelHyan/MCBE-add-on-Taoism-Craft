@@ -1,0 +1,23 @@
+{
+  "format_version": "1.8.0",
+  "animation_controllers": {
+    "controller.animation.machete_give": {
+      "initial_state": "wait",
+      "states": {
+        "wait": {
+          "transitions": [
+            {
+              "give": "query.life_time > 1.0"
+            }
+          ]
+        },
+        "give": {
+          "on_entry": [
+            "/give @p fanart:machete"
+          ],
+          "transitions": []
+        }
+      }
+    }
+  }
+}

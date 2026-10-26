@@ -7,13 +7,13 @@
       "is_summonable": true,
       "is_experimental": false,
       "scripts": {
-				"animate": [
-					"sword_m"
-				]
-			},
+        "animate": [
+          "sword_m"
+        ]
+      },
       "animations": {
-				"sword_m": "controller.animation.sword_m"
-			}
+        "sword_m": "controller.animation.sword_m"
+      }
     },
     "components": {
       "minecraft:collision_box": {
@@ -36,6 +36,28 @@
           "max_dropped_ticks": 7,
           "use_motion_prediction_hints": true
         }
+      },
+      "minecraft:timer": {
+        "time": 4,
+        "looping": false,
+        "time_down_event": {
+          "event": "despawn_timer",
+          "target": "self"
+        }
+      }
+    },
+    "events": {
+      "despawn_timer": {
+        "add": {
+          "component_groups": [
+            "despawn_group"
+          ]
+        }
+      }
+    },
+    "component_groups": {
+      "despawn_group": {
+        "minecraft:instant_despawn": {}
       }
     }
   }
