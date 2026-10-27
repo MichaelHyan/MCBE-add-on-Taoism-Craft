@@ -21,8 +21,8 @@
     },
     "components": {
       "minecraft:collision_box": {
-        "height": 0.35,
-        "width": 0.25
+        "height": 0.5,
+        "width": 0.5
       },
       "minecraft:conditional_bandwidth_optimization": {
         "default_values": {
@@ -36,10 +36,10 @@
       "minecraft:projectile": {
         "hit_ground_sound": "item.trident.hit_ground",
         "anchor": 1,
-        "gravity": 0.1,
+        "gravity": 0,
         "hit_sound": "item.trident.hit",
         "multiple_targets": false,
-        "liquid_inertia": 0.99,
+        "liquid_inertia": 0.5,
         "on_hit": {
           "impact_damage": {
             "apply_knockback_to_blocking_targets": true,
@@ -57,7 +57,7 @@
           -0.1,
           0
         ],
-        "power": 4,
+        "power": 5,
         "should_bounce": true,
         "stop_on_hurt": true,
         "uncertainty_base": 1,
@@ -70,7 +70,7 @@
       "minecraft:timer": {
         "looping": false,
         "randomInterval": false,
-        "time": 3.0,
+        "time": 2.0,
         "time_down_event": {
           "event": "machete:despawn",
           "target": "self"
