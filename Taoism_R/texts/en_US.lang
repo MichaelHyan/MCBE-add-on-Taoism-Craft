@@ -273,3 +273,6 @@ item.fanart:machete=Machete\n§o§7fan-made content\n§r§ba throwable long blad
 item.fanart:machete_knife=Machete\n§o§7fan-made content\n§r§ba bit worn, but still powerful§r
 item.fanart:machete_handle=Long Stick\n§o§7fan-made content\n§r§ba sturdy peach wood stick§r
 item.fanart:machete_nail=Coffin Nail\n§o§7fan-made content\n§r§blooks creepy§r
+entity.entity:zombie_mimic_n.name=zombie
+entity.entity:zombie_mimic_f_sp.name=flying Zombie
+entity.entity:zombie_mimic_e.name=Crouching Corpse

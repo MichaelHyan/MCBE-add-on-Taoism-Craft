@@ -274,3 +274,6 @@ item.fanart:machete=Мачете\n§o§7фанатская работа\n§r§b�
 item.fanart:machete_knife=Мачете\n§o§7фанатская работа\n§r§bнемного поношен, но сила его не угасла§r
 item.fanart:machete_handle=Длинная палка\n§o§7фанатская работа\n§r§bпрочная палка из персикового дерева§r
 item.fanart:machete_nail=Гробовой гвоздь\n§o§7фанатская работа\n§r§bвыглядит жутко§r
+entity.entity:zombie_mimic_n.name=Зомби
+entity.entity:zombie_mimic_f_sp.name=Летающий зомби
+entity.entity:zombie_mimic_e.name=Ползучий труп

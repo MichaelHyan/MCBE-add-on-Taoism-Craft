@@ -274,3 +274,6 @@ item.fanart:machete=柴刀\n§o§7粉丝投稿作品\n§r§b可投掷的长刀§
 item.fanart:machete_knife=柴刀\n§o§7粉丝投稿作品\n§r§b有些旧了，但威力尚在§r
 item.fanart:machete_handle=长棍\n§o§7粉丝投稿作品\n§r§b结实的桃木棍§r
 item.fanart:machete_nail=棺材钉\n§o§7粉丝投稿作品\n§r§b看起来令人毛骨悚然§r
+entity.entity:zombie_mimic_n.name=僵尸
+entity.entity:zombie_mimic_f_sp.name=飞僵
+entity.entity:zombie_mimic_e.name=伏尸

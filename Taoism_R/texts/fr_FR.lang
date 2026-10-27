@@ -274,3 +274,6 @@ item.fanart:machete=Machette\n§o§7création de fan\n§r§bune longue lame lan�
 item.fanart:machete_knife=Machette\n§o§7création de fan\n§r§bun peu usée, mais toujours efficace§r
 item.fanart:machete_handle=Bâton long\n§o§7création de fan\n§r§bun solide bâton en bois de pêcher§r
 item.fanart:machete_nail=Clou de cercueil\n§o§7création de fan\n§r§bdonne des frissons§r
+entity.entity:zombie_mimic_n.name=Zombie
+entity.entity:zombie_mimic_f_sp.name=Zombie volant
+entity.entity:zombie_mimic_e.name=Cadavre rampant
