@@ -43,6 +43,8 @@
         },
         "power": 1.6,
         "gravity": 0,
+        "inertia": 1,
+        "liquid_inertia": 1,
         "uncertainty_base": 0,
         "uncertainty_multiplier": 0,
         "anchor": 1,
@@ -50,6 +52,15 @@
         "offset": [ 0, -0.1, 0 ]
       },
 	    "minecraft:physics": {
+      },
+      "minecraft:timer": {
+        "looping": false,
+        "randomInterval": false,
+        "time": 15.0,
+        "time_down_event": {
+          "event": "despawn",
+          "target": "self"
+        }
       },
       "minecraft:pushable": {
         "is_pushable": false,
@@ -59,7 +70,21 @@
         "default_values": {
           "max_optimized_distance": 100.0,
           "max_dropped_ticks": 7,
-          "use_motion_prediction_hints": true
+          "use_motion_prediction_hints": false
+        }
+      }
+    },
+    "component_groups": {
+      "despawn": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "events": {
+      "despawn": {
+        "add": {
+          "component_groups": [
+            "despawn"
+          ]
         }
       }
     }

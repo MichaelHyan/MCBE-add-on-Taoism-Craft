@@ -5,6 +5,7 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
+						{"ql_end":"query.life_time >= 15.0"},
 						{"ql_a":"query.life_time < 1"},
 						{"ql_b":"query.life_time >= 1"}
 					]
@@ -30,6 +31,12 @@
 					"on_entry": [
 						"/tp @n[tag=qlock,r=3]",
 						"/effect @e[tag=qlock,r=3] weakness 1 255 true"
+					]
+				},
+				"ql_end": {
+					"transitions": [],
+					"on_entry": [
+						"/kill @s"
 					]
 				}
 			}

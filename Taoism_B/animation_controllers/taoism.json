@@ -164,7 +164,8 @@
 						"/effect @s[tag=tao_unitmate] regeneration 20 3 true",
 						"/scoreboard objectives add spblock dummy",
 						"/scoreboard objectives add spb dummy",
-						"/scoreboard players set @s spblock 1"
+						"/scoreboard players set @s spblock 1",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air"
 					]
 				},
 				"scripture_ft": {
