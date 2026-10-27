@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "entity:machete",
+      "materials": {
+        "default": "entity_alphablend"
+      },
+      "textures": {
+        "default": "textures/entity/machete"
+      },
+      "geometry": {
+        "default": "geometry.machete"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

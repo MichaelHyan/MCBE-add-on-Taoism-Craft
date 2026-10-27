@@ -884,116 +884,6 @@
                     "test": "has_equipment",
                     "subject": "other",
                     "domain": "hand",
-                    "value": "items:spba"
-                  },
-                  {
-                    "test": "is_family",
-                    "subject": "other",
-                    "value": "player"
-                  }
-                ]
-              },
-              "event": "guide_say_items_spba"
-            },
-            "use_item": false,
-            "interact_text": "addon.get.items"
-          },
-          {
-            "on_interact": {
-              "filters": {
-                "all_of": [
-                  {
-                    "test": "has_equipment",
-                    "subject": "other",
-                    "domain": "hand",
-                    "value": "items:spbb"
-                  },
-                  {
-                    "test": "is_family",
-                    "subject": "other",
-                    "value": "player"
-                  }
-                ]
-              },
-              "event": "guide_say_items_spbb"
-            },
-            "use_item": false,
-            "interact_text": "addon.get.items"
-          },
-          {
-            "on_interact": {
-              "filters": {
-                "all_of": [
-                  {
-                    "test": "has_equipment",
-                    "subject": "other",
-                    "domain": "hand",
-                    "value": "items:spbc"
-                  },
-                  {
-                    "test": "is_family",
-                    "subject": "other",
-                    "value": "player"
-                  }
-                ]
-              },
-              "event": "guide_say_items_spbc"
-            },
-            "use_item": false,
-            "interact_text": "addon.get.items"
-          },
-          {
-            "on_interact": {
-              "filters": {
-                "all_of": [
-                  {
-                    "test": "has_equipment",
-                    "subject": "other",
-                    "domain": "hand",
-                    "value": "items:spbd"
-                  },
-                  {
-                    "test": "is_family",
-                    "subject": "other",
-                    "value": "player"
-                  }
-                ]
-              },
-              "event": "guide_say_items_spbd"
-            },
-            "use_item": false,
-            "interact_text": "addon.get.items"
-          },
-          {
-            "on_interact": {
-              "filters": {
-                "all_of": [
-                  {
-                    "test": "has_equipment",
-                    "subject": "other",
-                    "domain": "hand",
-                    "value": "items:spbe"
-                  },
-                  {
-                    "test": "is_family",
-                    "subject": "other",
-                    "value": "player"
-                  }
-                ]
-              },
-              "event": "guide_say_items_spbe"
-            },
-            "use_item": false,
-            "interact_text": "addon.get.items"
-          },
-          {
-            "on_interact": {
-              "filters": {
-                "all_of": [
-                  {
-                    "test": "has_equipment",
-                    "subject": "other",
-                    "domain": "hand",
                     "value": "items:fish_belly"
                   },
                   {
@@ -2028,6 +1918,28 @@
                     "test": "has_equipment",
                     "subject": "other",
                     "domain": "hand",
+                    "value": "items:scripture_ft"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_items_scripture_ft"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
                     "value": "items:acbook"
                   },
                   {
@@ -2962,6 +2874,28 @@
                 ]
               },
               "event": "guide_say_items_table"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "items:table_sp"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_items_table_sp"
             },
             "use_item": false,
             "interact_text": "addon.get.items"
@@ -3977,6 +3911,776 @@
             },
             "use_item": false,
             "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "items:ball"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_items_ball"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:end_rod"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_end_rod"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:bone_meal"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_bone_meal"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:amethyst_cluster"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_amethyst_cluster"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:amethyst_shard"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_amethyst_shard"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:anvil"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_anvil"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:chipped_anvil"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_chipped_anvil"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:damaged_anvil"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_damaged_anvil"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:elytra"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_elytra"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:snowball"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_snowball"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:spyglass"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_spyglass"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:slime_ball"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_slime_ball"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:honey_block"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_honey_block"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:honey_bottle"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_honey_bottle"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:slime"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_slime"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:turtle_helmet"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_turtle_helmet"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:straw_bed"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_straw_bed"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:nautilus_shell"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_nautilus_shell"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:flint_and_steel"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_flint_and_steel"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:brush"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_brush"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:brick"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_brick"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:brick_block"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_brick_block"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:axolotl_bucket"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_axolotl_bucket"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:bread"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_bread"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:milk_bucket"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_milk_bucket"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:tadpole_bucket"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_tadpole_bucket"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:tnt"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_tnt"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:tnt_minecart"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_tnt_minecart"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:bed"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_bed"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:respawn_anchor"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_respawn_anchor"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:dried_ghast"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_dried_ghast"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:rotten_flesh"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_rotten_flesh"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:bell"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_bell"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:rail"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_rail"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:creeper_head"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_creeper_head"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
           }
         ]
       },
@@ -4383,7 +5087,7 @@
       },
       "guide_say_items_pearl": {
         "queue_command": {
-          "command": "say 运气调元气全靠它，读完了书它才认你。",
+          "command": "say 按理说你不能把内丹从体内拿出来。。。你可以用它汲取元气，随着修炼还可以获得新的能力。",
           "target": "self"
         }
       },
@@ -4395,37 +5099,7 @@
       },
       "guide_say_items_qi_c": {
         "queue_command": {
-          "command": "say 右键就炸一片，别在人堆里试。",
-          "target": "self"
-        }
-      },
-      "guide_say_items_spba": {
-        "queue_command": {
-          "command": "say 标记叠上了再补一发，或者直接引爆。",
-          "target": "self"
-        }
-      },
-      "guide_say_items_spbb": {
-        "queue_command": {
-          "command": "say 蹲下打一发催草木，去野地里使。",
-          "target": "self"
-        }
-      },
-      "guide_say_items_spbc": {
-        "queue_command": {
-          "command": "say 受了伤蹲下打一发，能回点血。",
-          "target": "self"
-        }
-      },
-      "guide_say_items_spbd": {
-        "queue_command": {
-          "command": "say 蹲下放盏灯笼替你打，它比你有耐心。",
-          "target": "self"
-        }
-      },
-      "guide_say_items_spbe": {
-        "queue_command": {
-          "command": "say 蹲下招风，自己也跟着飞，站稳。",
+          "command": "say 会爆炸的法术吗，你还真是有品。。。我是说，真的很危险！",
           "target": "self"
         }
       },
@@ -4473,7 +5147,7 @@
       },
       "guide_say_items_soul_powder": {
         "queue_command": {
-          "command": "say 合剑用的阴料，来处不干净，用起来倒顺手。",
+          "command": "say 合剑用的阴料，来处不干净。",
           "target": "self"
         }
       },
@@ -4569,7 +5243,7 @@
       },
       "guide_say_items_tca": {
         "queue_command": {
-          "command": "say 十秒的攻，掐着点用。",
+          "command": "say 十秒的攻击力提升，掐着点用。",
           "target": "self"
         }
       },
@@ -4677,7 +5351,7 @@
       },
       "guide_say_items_tbf": {
         "queue_command": {
-          "command": "say 按住右键聚风，这符出过事，慎用。",
+          "command": "say 这东西曾经把大祭司吹上了天，他差不多一周之后才掉下来。",
           "target": "self"
         }
       },
@@ -4689,13 +5363,13 @@
       },
       "guide_say_items_txpa": {
         "queue_command": {
-          "command": "say 经验一大把，夜视还是永久的。",
+          "command": "say 读万卷书自有成效。",
           "target": "self"
         }
       },
       "guide_say_items_scripture_t": {
         "queue_command": {
-          "command": "say 挑亏凸月或盈凸月读，别的日子会挨雷。",
+          "command": "say 这本经书好像不需要挑良辰吉日。",
           "target": "self"
         }
       },
@@ -4707,7 +5381,13 @@
       },
       "guide_say_items_scripture_f": {
         "queue_command": {
-          "command": "say 用了跑得快跳得高，一次性的。",
+          "command": "say 挑亏凸月或盈凸月读，别的日子会挨雷。",
+          "target": "self"
+        }
+      },
+      "guide_say_items_scripture_ft": {
+        "queue_command": {
+          "command": "say 对旅行者很有用的书，但是如果你想种田的话我建议还是不要学了。",
           "target": "self"
         }
       },
@@ -4755,7 +5435,7 @@
       },
       "guide_say_items_phase": {
         "queue_command": {
-          "command": "say 抬头看看月亮，哪天修经它说了算。",
+          "command": "say 抬头看看月亮，哪天修经它说了算，留意亏凸月或盈凸月。",
           "target": "self"
         }
       },
@@ -4857,7 +5537,7 @@
       },
       "guide_say_items_cane": {
         "queue_command": {
-          "command": "say 副手一档、主手一档、挥起来还有一档。",
+          "command": "say 可以试试放在不同的位置，会给你不一样的速度加成。",
           "target": "self"
         }
       },
@@ -4959,19 +5639,25 @@
       },
       "guide_say_items_disk_taoism": {
         "queue_command": {
-          "command": "say 右键放，左键停，一听就知道是谁写的。",
+          "command": "say 这是我们美工做的唱片！",
           "target": "self"
         }
       },
       "guide_say_items_table": {
         "queue_command": {
-          "command": "say 铺开来合符用，别在腿上凑合。",
+          "command": "say 这是我们观里很常见的画符桌。我记得师傅那张还不太一样。。。",
+          "target": "self"
+        }
+      },
+      "guide_say_items_table_sp": {
+        "queue_command": {
+          "command": "say 师傅曾经用过这种画符桌，不过它和普通画符桌有什么区别呢。。。",
           "target": "self"
         }
       },
       "guide_say_items_cabinet": {
         "queue_command": {
-          "command": "say 装东西的，别乱塞。",
+          "command": "say 你说有股杀气？别开玩笑了。",
           "target": "self"
         }
       },
@@ -5001,7 +5687,7 @@
       },
       "guide_say_items_bike": {
         "queue_command": {
-          "command": "say 骑上去比我走得快。",
+          "command": "say 可以带我兜风吗？",
           "target": "self"
         }
       },
@@ -5242,6 +5928,216 @@
       "guide_say_items_hurb": {
         "queue_command": {
           "command": "say 虽然是常见的药草，但是可以治病，也可以解尸毒。",
+          "target": "self"
+        }
+      },
+      "guide_say_items_ball": {
+        "queue_command": {
+          "command": "say 不知道为什么刚才肩膀抽了一下。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_end_rod": {
+        "queue_command": {
+          "command": "say 你要做什么？讨厌！",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_bone_meal": {
+        "queue_command": {
+          "command": "say 我老家那里好像有两个人为了这个吵起来了，附近的卡车司机还帮忙劝架。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_amethyst_cluster": {
+        "queue_command": {
+          "command": "say 亮晶晶的好看。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_amethyst_shard": {
+        "queue_command": {
+          "command": "say 亮晶晶的好看。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_anvil": {
+        "queue_command": {
+          "command": "say 就算你把这个放我头上我也不会被砸扁的。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_chipped_anvil": {
+        "queue_command": {
+          "command": "say 你看看，是不是偷偷砸别人去了？",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_damaged_anvil": {
+        "queue_command": {
+          "command": "say 收手吧，快要坏了。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_elytra": {
+        "queue_command": {
+          "command": "say 不要，我恐高。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_snowball": {
+        "queue_command": {
+          "command": "say 凉凉的。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_spyglass": {
+        "queue_command": {
+          "command": "say 你没有拿这个偷偷看我房间吧？",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_slime_ball": {
+        "queue_command": {
+          "command": "say 黏黏的。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_honey_block": {
+        "queue_command": {
+          "command": "say 黏黏的。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_honey_bottle": {
+        "queue_command": {
+          "command": "say はちみ~をなめると~不好意思串了。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_slime": {
+        "queue_command": {
+          "command": "say 给我一种不好的感觉。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_turtle_helmet": {
+        "queue_command": {
+          "command": "say 看起来怪怪的。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_straw_bed": {
+        "queue_command": {
+          "command": "say 你真的忍心让我在野外睡这个吗？",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_nautilus_shell": {
+        "queue_command": {
+          "command": "say 吹一下可以传送到海边吗？",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_flint_and_steel": {
+        "queue_command": {
+          "command": "say 小孩子玩火晚上会尿炕哦~",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_brush": {
+        "queue_command": {
+          "command": "say 这个居然不是写字用的吗？",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_brick": {
+        "queue_command": {
+          "command": "say 我们老家经常有人用砖打架。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_brick_block": {
+        "queue_command": {
+          "command": "say 你这有点过头了吧？下手轻点。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_axolotl_bucket": {
+        "queue_command": {
+          "command": "say 好可爱。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_bread": {
+        "queue_command": {
+          "command": "say 这个在我老家要卖50万厄里斯。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_milk_bucket": {
+        "queue_command": {
+          "command": "say 我的名字是韩言穆清。住在斜月三星洞一带，未婚。我在附近道观上班，每天最晚8点下班回家。我不抽烟，也不喝酒。晚上11点睡觉，保证睡足8小时。睡前喝一杯温牛奶，然后做20分钟的舒缓运动暖身再睡觉，基本能熟睡到天亮。像婴儿一样，绝不把疲劳和压力留到第二天。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_tadpole_bucket": {
+        "queue_command": {
+          "command": "say 夏天不要把这个在家里放太久，你不会想知道会发生什么的。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_tnt": {
+        "queue_command": {
+          "command": "say 黒より黒く闇より暗き漆黒に。。。喂，还给我！",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_tnt_minecart": {
+        "queue_command": {
+          "command": "say 哦？还可以这样玩吗？快让我试试！求你了，让我试试嘛！",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_bed": {
+        "queue_command": {
+          "command": "say 这个好像在某些地方也会爆炸。。。你这个眼神是什么意思？",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_respawn_anchor": {
+        "queue_command": {
+          "command": "say 你说在家里用会怎么样？",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_dried_ghast": {
+        "queue_command": {
+          "command": "say 好可怜。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_rotten_flesh": {
+        "queue_command": {
+          "command": "say 辣条？不对，好臭！",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_bell": {
+        "queue_command": {
+          "command": "say duang~~~",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_rail": {
+        "queue_command": {
+          "command": "say 据说人类第一把铁镐就是从这拆下来的。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_creeper_head": {
+        "queue_command": {
+          "command": "say Awwww man!",
           "target": "self"
         }
       }
