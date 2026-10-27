@@ -20,6 +20,11 @@
       }
     },
     "component_groups": {
+      "sit": {
+        "minecraft:transformation": {
+          "into": "entity:guide_sit"
+        }
+      },
       "bow": {
         "minecraft:equipment": {
           "table": "partner/bow.json"
@@ -142,16 +147,31 @@
       }
     },
     "components": {
-      "minecraft:leashable": {},
-      "minecraft:leashable_to": {},
       "minecraft:nameable": {},
-      "minecraft:inventory": {
-        "can_be_siphoned_from": false,
-        "inventory_size": 27,
-        "container_type": "chest_boat"
-      },
       "minecraft:interact": {
         "interactions": [
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "lead"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "sit"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
           {
             "on_interact": {
               "filters": {
@@ -3965,7 +3985,7 @@
         "max": 16
       },
       "minecraft:behavior.move_indoors": {
-        "priority": 6,
+        "priority": 5,
         "speed_multiplier": 1,
         "timeout_cooldown": 8
       },
@@ -4006,7 +4026,7 @@
         "sleep_y_offset": 0.6
       },
       "minecraft:movement": {
-        "value": 0.3
+        "value": 0.25
       },
       "minecraft:navigation.walk": {
         "can_path_over_water": true
@@ -4014,7 +4034,8 @@
       "minecraft:type_family": {
         "family": [
           "mob",
-          "taoism"
+          "taoism",
+          "guide"
         ]
       },
       "minecraft:movement.basic": {},
@@ -4036,20 +4057,20 @@
         "speed_multiplier": 1
       },
       "minecraft:behavior.look_at_player": {
-        "priority": 6,
+        "priority": 4,
         "look_distance": 8
       },
       "minecraft:behavior.random_look_around": {
-        "priority": 6
+        "priority": 5
       },
       "minecraft:physics": {}
     },
     "events": {
       "minecraft:entity_spawned": {},
-      "tamed": {
+      "sit": {
         "add": {
           "component_groups": [
-            "tame"
+            "sit"
           ]
         }
       },
@@ -4356,7 +4377,7 @@
       },
       "guide_say_items_spe": {
         "queue_command": {
-          "command": "say 三个攒一息，冷却卡手的时候顶一下，别一副急脾气。",
+          "command": "say 元气是重要的材料，也可以帮助你补充法力。而且，如果我倒下了，你可以用元气拉我一把。",
           "target": "self"
         }
       },

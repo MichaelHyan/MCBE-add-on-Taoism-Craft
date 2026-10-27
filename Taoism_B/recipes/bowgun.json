@@ -1,0 +1,36 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "construction:bowgun"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " a ",
+      " c ",
+      "bbb"
+    ],
+    "key": {
+      "a": {
+        "item": "redstone"
+      },
+      "b": {
+        "item": "stick"
+      },
+      "c": {
+        "item": "crossbow"
+      }
+    },
+    "unlock": [
+      {
+        "item": "construction:bowgun"
+      }
+    ],
+    "result": [{
+      "item": "construction:bowgun",
+      "count": 1
+    }]
+  }
+}

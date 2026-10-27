@@ -1,0 +1,36 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "fanart:machete"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "a",
+      "b",
+      "c"
+    ],
+    "key": {
+      "a": {
+        "item": "fanart:machete_knife"
+      },
+      "b": {
+        "item": "fanart:machete_handle"
+      },
+      "c": {
+        "item": "fanart:machete_nail"
+      }
+    },
+    "unlock": [
+      {
+        "item": "fanart:machete_knife"
+      }
+    ],
+    "result": [{
+      "item": "fanart:machete",
+      "count": 1
+    }]
+  }
+}

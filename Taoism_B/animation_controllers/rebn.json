@@ -1,0 +1,113 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.rebn":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"rebn_a":"query.life_time == 1"},
+						{"rebn_b":"query.life_time == 2"},
+						{"rebn_c":"query.life_time == 5"},
+						{"rebn_d":"query.life_time == 8"},
+						{"rebn_e":"query.life_time == 11"},
+						{"rebn_f":"query.life_time == 15"},
+						{"rebn_g":"query.life_time == 19"},
+						{"rebn_h":"query.life_time == 21"},
+						{"rebn_i":"query.life_time >= 30"}
+
+					]
+				},
+				"rebn_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 你就是新来的吧？"
+					]
+				},
+				"rebn_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 我是韩言穆清，这儿的档案管理员兼职向导，你叫我小师姐就好。"
+					]
+				},
+				"rebn_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 初来乍到，先别急着往深山里跑，在附近找一座村庄或道馆落脚。"
+					]
+				},
+				"rebn_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 村庄能歇脚、补些吃的，听说那里还有些义侠，不过手脚不太干净……"
+					]
+				},
+				"rebn_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 若是找到了道馆，记得带上里面的物资和引导书，尤其是门口那本书，往后的修行还得从它讲起。"
+					]
+				},
+				"rebn_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 尽量白天赶路，天黑前找好藏身的地方；真迷了路，就站到高处看看，别闷头乱撞。"
+					]
+				},
+				"rebn_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 去吧，先把自己安顿下来……"
+					]
+				},
+				"rebn_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/say 可别刚出门就出事了，我可不想给你补一份那么难看的档案。"
+					]
+				},
+				"rebn_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

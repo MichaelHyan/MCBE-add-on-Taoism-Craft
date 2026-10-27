@@ -1,6 +1,13 @@
 {
   "entity_sounds": {
     "entities": {
+      "entity:guide_ghost": {
+        "volume": 1.0,
+        "pitch": [0.8, 1.2],
+        "events": {
+          "hurt": { "sound": "empty", "volume": 0.0, "pitch": 1.0 }
+        }
+      },
       "entity:zombie_mimic_n": {
         "volume": 1.0,
         "pitch": [0.8, 1.2],

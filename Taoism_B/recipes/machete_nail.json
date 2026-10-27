@@ -1,0 +1,33 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "fanart:machete_nail"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " b ",
+      "aaa",
+      " a "
+    ],
+    "key": {
+      "a": {
+        "item": "iron_block"
+      },
+      "b": {
+        "item": "items:talisman_t"
+      }
+    },
+    "unlock": [
+      {
+        "item": "fanart:machete_knife"
+      }
+    ],
+    "result": [{
+      "item": "fanart:machete_nail",
+      "count": 1
+    }]
+  }
+}

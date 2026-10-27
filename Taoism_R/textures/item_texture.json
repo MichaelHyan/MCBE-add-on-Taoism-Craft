@@ -610,6 +610,9 @@
     },
     "herb": {
       "textures":"textures/items/herb.png"
+    },
+    "guide": {
+      "textures":"textures/items/guide.png"
     }
   }
 }

@@ -1,0 +1,112 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "entity:dread_spawner_c",
+      "is_spawnable": false,
+      "is_summonable": true
+    },
+    "component_groups": {
+      "despawn": {
+        "minecraft:instant_despawn": {}
+      },
+      "spawn": {
+        "minecraft:transformation": {
+          "into": "entity:zombie_mimic_e"
+        }
+      }
+    },
+    "components": {
+      "minecraft:nameable": {},
+      "minecraft:health": {
+        "value": 500,
+        "max": 500
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self"
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:behavior.hurt_by_target": {
+        "priority": 3
+      },
+      "minecraft:timer": {
+        "looping": true,
+        "randomInterval": false,
+        "time": 5.0,
+        "time_down_event": {
+          "event": "spawn",
+          "target": "self"
+        }
+      },
+      "minecraft:type_family": {
+        "family": [
+          "mob"
+        ]
+      },
+      "minecraft:collision_box": {
+        "height": 0,
+        "width": 0
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {},
+      "minecraft:burns_in_daylight": {},
+      "minecraft:behavior.melee_attack": {
+        "priority": 2,
+        "speed_multiplier": 1,
+        "target_dist": 0,
+        "max_dist": 2,
+        "random_stop_interval": 100,
+        "track_target": true,
+        "reach_multiplier": 1.4
+      },
+      "minecraft:knockback_resistance": {
+        "value": 0.80
+      },
+      "minecraft:break_blocks": {
+        "breakable_blocks": [
+          "glass_pane",
+          "stained_glass_pane"
+        ]
+      },
+      "minecraft:annotation.break_door": {
+        "break_time": 0,
+        "min_difficulty": "peaceful"
+      },
+      "minecraft:breathable": {
+        "breathesWater": true,
+        "totalSupply": 20,
+        "suffocateTime": -1,
+        "generatesBubbles": true,
+        "breathesAir": true
+      },
+      "minecraft:fire_immune": {},
+      "minecraft:follow_range": {
+        "value": 300
+      }
+    },
+    "events": {
+      "despawn": {
+        "add": {
+          "component_groups": [
+            "despawn"
+          ]
+        }
+      },
+      "spawn": {
+        "add": {
+          "component_groups": [
+            "spawn"
+          ]
+        }
+      }
+    }
+  }
+}

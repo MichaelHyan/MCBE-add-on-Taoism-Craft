@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "items:guide",
+      "category": "Nature"
+    },
+
+    "components": {
+      "minecraft:icon": "guide",
+      "minecraft:render_offsets": "guide"
+    }
+  }
+}

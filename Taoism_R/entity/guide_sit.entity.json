@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "entity:guide_sit",
+      "materials": {
+        "default": "entity_alphablend"
+      },
+      "textures": {
+        "default": "textures/entity/guide"
+      },
+      "geometry": {
+        "default": "geometry.guide_sit"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

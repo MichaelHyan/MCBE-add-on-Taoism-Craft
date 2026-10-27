@@ -49,7 +49,8 @@
 						{"firegourd_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:firegourd') && query.is_item_equipped != 0 && query.player_level > 24"},
 						{"bella_a":"query.get_equipped_item_name=='bell_a' && variable.attack_time && query.scoreboard('charge') >= 0"},
 						{"seal":"query.get_equipped_item_name=='seal' && variable.attack_time && query.scoreboard('godmodecd') >= 0 && query.player_level > 44"},
-						{"herb":"query.get_equipped_item_name=='herb' && query.is_using_item"}
+						{"herb":"query.get_equipped_item_name=='herb' && query.is_using_item"},
+						{"guide":"query.get_equipped_item_name=='guide' && query.is_using_item"}
 					]
 				},
 				"summonp": {
@@ -625,7 +626,23 @@
 						"/effect @s poison 0 255 true",
 						"/effect @s wither 0 255 true",
 						"/scoreboard players set @s infection 0",
-						"/particle minecraft:totem_particle ~ ~1 ~"
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air"
+					]
+				},
+				"guide": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon entity:guide",
+						"/summon entity:rebn",
+						"/tag @s add guide",
+						"/tp @n[type=entity:guide] ^ ^ ^2 facing @s",
+						"/give @s items:spe 3",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air"
 					]
 				}
 			}

@@ -33,6 +33,12 @@
       "minecraft:loot": {
         "table": "loot_tables/entities/zombie_mimic_p.json"
       },
+      "minecraft:experience_reward": {
+        "on_death": {
+          "expression": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(2,4)) : 0",
+          "version": 13
+        }
+      },
       "minecraft:hurt_on_condition": {
         "damage_conditions": [
           {

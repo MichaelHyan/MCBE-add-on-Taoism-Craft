@@ -1,0 +1,76 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "entity:guide_sit",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "scripts": {
+        "animate": [
+          "guide_sit",
+          "sguard"
+        ]
+      },
+      "animations": {
+        "guide_sit": "controller.animation.guide_sit",
+        "sguard": "controller.animation.sguard"
+      }
+    },
+    "component_groups": {
+      "stand": {
+        "minecraft:transformation": {
+          "into": "entity:guide"
+        }
+      }
+    },
+    "components": {
+      "minecraft:interact": {
+        "interactions": [
+          {
+            "on_interact": {
+              "filters": {
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
+              },
+              "event": "stand",
+              "target": "self"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          }
+        ]
+      },
+      "minecraft:nameable": {},
+      "minecraft:health": {
+        "value": 100,
+        "max": 100
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1
+      },
+      "minecraft:type_family": {
+        "family": [
+          "mob",
+          "taoism",
+          "guide"
+        ]
+      },
+      "minecraft:collision_box": {
+        "height": 0.6,
+        "width": 0.6
+      },
+      "minecraft:physics": {},
+      "minecraft:fire_immune": {}
+    },
+    "events": {
+      "stand": {
+        "add": {
+          "component_groups": [
+            "stand"
+          ]
+        }
+      }
+    }
+  }
+}

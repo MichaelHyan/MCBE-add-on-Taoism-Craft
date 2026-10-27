@@ -1,7 +1,7 @@
 items:cinnabar_crystal-朱砂，磨成粉才用得动，辟邪的东西都从它起头。
 items:brush_n-先拿它练手，往后做画符笔全指望它。
 items:brush_p-蘸上朱砂就能画符，符箓这条路从这儿开始。
-items:spe-三个攒一息，冷却卡手的时候顶一下，别一副急脾气。
+items:spe-元气是重要的材料，也可以帮助你补充法力。而且，如果我倒下了，你可以用元气拉我一把。
 items:pearl-运气调元气全靠它，读完了书它才认你。
 items:qi_sword-搁副手，手空着就能召飞剑。
 items:qi_c-右键就炸一片，别在人堆里试。

@@ -1,0 +1,36 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "construction:decoy"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " a ",
+      " b ",
+      " c "
+    ],
+    "key": {
+      "a": {
+        "item": "hay_block"
+      },
+      "b": {
+        "item": "stick"
+      },
+      "c": {
+        "item": "cobblestone"
+      }
+    },
+    "unlock": [
+      {
+        "item": "construction:decoy"
+      }
+    ],
+    "result": [{
+      "item": "construction:decoy",
+      "count": 1
+    }]
+  }
+}

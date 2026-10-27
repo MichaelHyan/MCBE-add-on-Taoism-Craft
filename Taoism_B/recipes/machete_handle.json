@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "fanart:machete_handle"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "a",
+      "a",
+      "a"
+    ],
+    "key": {
+      "a": {
+        "item": "cherry_planks"
+      }
+    },
+    "unlock": [
+      {
+        "item": "fanart:machete_knife"
+      }
+    ],
+    "result": [{
+      "item": "fanart:machete_handle",
+      "count": 1
+    }]
+  }
+}

@@ -5,9 +5,20 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
+						{"spawn_c":"math.mod(query.life_time,30) == 0"},
 						{"spawn_a":"math.mod(query.life_time,9) != 0"},
 						{"spawn_b":"math.mod(query.life_time,9) == 0"}
 
+					]
+				},
+				"spawn_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon entity:dread_spawner_c ~ ~100 ~"
 					]
 				},
 				"spawn_a": {
@@ -27,7 +38,7 @@
 							}
 					],
 					"on_entry": [
-						"/summon entity:dread_spawner_a ~ ~100 ~"
+						"/summon entity:dread_spawner_b ~ ~100 ~"
 					]
 				}
 			}
