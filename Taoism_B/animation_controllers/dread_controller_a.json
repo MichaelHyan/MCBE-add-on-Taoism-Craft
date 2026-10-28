@@ -17,7 +17,7 @@
 					],
 					"on_entry": [
 						"/effect @s regeneration 1 255 true",
-						"/tp @s ^5 ^ ^0.5 facing @p",
+						"/tp @s ^4 ^ ^0.5 facing @p",
 						"/particle minecraft:sculk_sensor_redstone_particle ~ ~ ~"
 					]
 				}
