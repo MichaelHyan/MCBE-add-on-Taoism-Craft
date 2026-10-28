@@ -6,7 +6,7 @@
 			"states": {
 				"base_jeta": {
 					"on_entry": [
-						"v.guide_next = query.life_time + 300.0;"
+						"v.guide_next = query.life_time + 180;"
 					],
 					"transitions": [
 						{ "roll": "query.life_time >= v.guide_next" }
