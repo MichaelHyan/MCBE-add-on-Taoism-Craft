@@ -34,7 +34,8 @@
       "minecraft:type_family": {
         "family": [
           "mob",
-          "taoism"
+          "taoism",
+          "player"
         ]
       },
       "trident": {

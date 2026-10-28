@@ -904,7 +904,8 @@
       "minecraft:type_family": {
         "family": [
           "mob",
-          "taoism"
+          "taoism",
+          "player"
         ]
       },
       "minecraft:on_target_acquired": {
