@@ -87,7 +87,7 @@
 				},
 				"tips_1": {
 					"on_entry": [
-						"/title @s actionbar 飞龙在天 上大吉",
+						"/title @s actionbar 飞龙在天 上大吉签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -97,7 +97,7 @@
 				},
 				"tips_2": {
 					"on_entry": [
-						"/title @s actionbar 虎出大村 中下",
+						"/title @s actionbar 虎出大村 中下签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -107,7 +107,7 @@
 				},
 				"tips_3": {
 					"on_entry": [
-						"/title @s actionbar 否极泰来 吉",
+						"/title @s actionbar 否极泰来 吉签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -117,7 +117,7 @@
 				},
 				"tips_4": {
 					"on_entry": [
-						"/title @s actionbar 劳心费力 中下",
+						"/title @s actionbar 劳心费力 中下签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -127,7 +127,7 @@
 				},
 				"tips_5": {
 					"on_entry": [
-						"/title @s actionbar 行船顺风 大吉",
+						"/title @s actionbar 行船顺风 大吉签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -137,7 +137,7 @@
 				},
 				"tips_6": {
 					"on_entry": [
-						"/title @s actionbar 鸳鸯分飞 下",
+						"/title @s actionbar 鸳鸯分飞 下签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -147,7 +147,7 @@
 				},
 				"tips_7": {
 					"on_entry": [
-						"/title @s actionbar 枯木逢春 中上",
+						"/title @s actionbar 枯木逢春 中上签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -157,7 +157,7 @@
 				},
 				"tips_8": {
 					"on_entry": [
-						"/title @s actionbar 鱼舟上滩 下下",
+						"/title @s actionbar 鱼舟上滩 下下签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -167,7 +167,7 @@
 				},
 				"tips_9": {
 					"on_entry": [
-						"/title @s actionbar 春兰秋菊 中",
+						"/title @s actionbar 春兰秋菊 中签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -177,7 +177,7 @@
 				},
 				"tips_10": {
 					"on_entry": [
-						"/title @s actionbar 游蜂作蜜 下",
+						"/title @s actionbar 游蜂作蜜 下签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -187,7 +187,7 @@
 				},
 				"tips_11": {
 					"on_entry": [
-						"/title @s actionbar 囚人出狱 大吉",
+						"/title @s actionbar 囚人出狱 大吉签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -197,7 +197,7 @@
 				},
 				"tips_12": {
 					"on_entry": [
-						"/title @s actionbar 风卷杨花 下",
+						"/title @s actionbar 风卷杨花 下签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -207,7 +207,7 @@
 				},
 				"tips_13": {
 					"on_entry": [
-						"/title @s actionbar 开花结子 大吉",
+						"/title @s actionbar 开花结子 大吉签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -217,7 +217,7 @@
 				},
 				"tips_14": {
 					"on_entry": [
-						"/title @s actionbar 龙蛇混杂 中",
+						"/title @s actionbar 龙蛇混杂 中签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -227,7 +227,7 @@
 				},
 				"tips_15": {
 					"on_entry": [
-						"/title @s actionbar 一轮明月 大吉",
+						"/title @s actionbar 一轮明月 大吉签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -237,7 +237,7 @@
 				},
 				"tips_16": {
 					"on_entry": [
-						"/title @s actionbar 浊油点灯 下下",
+						"/title @s actionbar 浊油点灯 下下签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -247,7 +247,7 @@
 				},
 				"tips_17": {
 					"on_entry": [
-						"/title @s actionbar 当忧不忧 中",
+						"/title @s actionbar 当忧不忧 中签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -257,7 +257,7 @@
 				},
 				"tips_18": {
 					"on_entry": [
-						"/title @s actionbar 笼开鹤去 下下",
+						"/title @s actionbar 笼开鹤去 下下签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -267,7 +267,7 @@
 				},
 				"tips_19": {
 					"on_entry": [
-						"/title @s actionbar 云行雨施 上吉",
+						"/title @s actionbar 云行雨施 上吉签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -277,7 +277,7 @@
 				},
 				"tips_20": {
 					"on_entry": [
-						"/title @s actionbar 有舟无楫 下下",
+						"/title @s actionbar 有舟无楫 下下签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -287,7 +287,7 @@
 				},
 				"tips_21": {
 					"on_entry": [
-						"/title @s actionbar 鲲化为鹏 大吉",
+						"/title @s actionbar 鲲化为鹏 大吉签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -297,7 +297,7 @@
 				},
 				"tips_22": {
 					"on_entry": [
-						"/title @s actionbar 凤凰出林 大吉",
+						"/title @s actionbar 凤凰出林 大吉签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -307,7 +307,7 @@
 				},
 				"tips_23": {
 					"on_entry": [
-						"/title @s actionbar 花开遭雨 下下",
+						"/title @s actionbar 花开遭雨 下下签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -317,7 +317,7 @@
 				},
 				"tips_24": {
 					"on_entry": [
-						"/title @s actionbar 明月当空 吉",
+						"/title @s actionbar 明月当空 吉签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -327,7 +327,7 @@
 				},
 				"tips_25": {
 					"on_entry": [
-						"/title @s actionbar 求谋未遂 中",
+						"/title @s actionbar 求谋未遂 中签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -337,7 +337,7 @@
 				},
 				"tips_26": {
 					"on_entry": [
-						"/title @s actionbar 安居旺相 吉",
+						"/title @s actionbar 安居旺相 吉签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -347,7 +347,7 @@
 				},
 				"tips_27": {
 					"on_entry": [
-						"/title @s actionbar 家舍惶惶 下",
+						"/title @s actionbar 家舍惶惶 下签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -357,7 +357,7 @@
 				},
 				"tips_28": {
 					"on_entry": [
-						"/title @s actionbar 贵人引接 大吉",
+						"/title @s actionbar 贵人引接 大吉签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -367,7 +367,7 @@
 				},
 				"tips_29": {
 					"on_entry": [
-						"/title @s actionbar 阴阳道合 吉",
+						"/title @s actionbar 阴阳道合 吉签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -377,7 +377,7 @@
 				},
 				"tips_30": {
 					"on_entry": [
-						"/title @s actionbar 月被云迷 中下",
+						"/title @s actionbar 月被云迷 中下签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -387,7 +387,7 @@
 				},
 				"tips_31": {
 					"on_entry": [
-						"/title @s actionbar 心事冲冲 下",
+						"/title @s actionbar 心事冲冲 下签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -397,7 +397,7 @@
 				},
 				"tips_32": {
 					"on_entry": [
-						"/title @s actionbar 众星侵月 下",
+						"/title @s actionbar 众星侵月 下签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -407,7 +407,7 @@
 				},
 				"tips_33": {
 					"on_entry": [
-						"/title @s actionbar 龙剑出匣 大吉",
+						"/title @s actionbar 龙剑出匣 大吉签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -417,7 +417,7 @@
 				},
 				"tips_34": {
 					"on_entry": [
-						"/title @s actionbar 病龙行雨 下",
+						"/title @s actionbar 病龙行雨 下签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -427,7 +427,7 @@
 				},
 				"tips_35": {
 					"on_entry": [
-						"/title @s actionbar 鹤鸣九霄 大吉",
+						"/title @s actionbar 鹤鸣九霄 大吉签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -437,7 +437,7 @@
 				},
 				"tips_36": {
 					"on_entry": [
-						"/title @s actionbar 鱼翻桃浪 上吉",
+						"/title @s actionbar 鱼翻桃浪 上吉签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -447,7 +447,7 @@
 				},
 				"tips_37": {
 					"on_entry": [
-						"/title @s actionbar 渡水无船 下",
+						"/title @s actionbar 渡水无船 下签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -457,7 +457,7 @@
 				},
 				"tips_38": {
 					"on_entry": [
-						"/title @s actionbar 红日当天 大吉",
+						"/title @s actionbar 红日当天 大吉签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -467,7 +467,7 @@
 				},
 				"tips_39": {
 					"on_entry": [
-						"/title @s actionbar 入山迷路 下下",
+						"/title @s actionbar 入山迷路 下下签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -477,7 +477,7 @@
 				},
 				"tips_40": {
 					"on_entry": [
-						"/title @s actionbar 鸿鹄摩天 吉",
+						"/title @s actionbar 鸿鹄摩天 吉签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -487,7 +487,7 @@
 				},
 				"tips_41": {
 					"on_entry": [
-						"/title @s actionbar 落花流水 下",
+						"/title @s actionbar 落花流水 下签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -497,7 +497,7 @@
 				},
 				"tips_42": {
 					"on_entry": [
-						"/title @s actionbar 游鱼戏波 大吉",
+						"/title @s actionbar 游鱼戏波 大吉签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -507,7 +507,7 @@
 				},
 				"tips_43": {
 					"on_entry": [
-						"/title @s actionbar 日出扶桑 上吉",
+						"/title @s actionbar 日出扶桑 上吉签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -517,7 +517,7 @@
 				},
 				"tips_44": {
 					"on_entry": [
-						"/title @s actionbar 乌云遮月 中下",
+						"/title @s actionbar 乌云遮月 中下签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -527,7 +527,7 @@
 				},
 				"tips_45": {
 					"on_entry": [
-						"/title @s actionbar 风雷鼓舞 大吉",
+						"/title @s actionbar 风雷鼓舞 大吉签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -537,7 +537,7 @@
 				},
 				"tips_46": {
 					"on_entry": [
-						"/title @s actionbar 腾蛇入梦 下下",
+						"/title @s actionbar 腾蛇入梦 下下签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -547,7 +547,7 @@
 				},
 				"tips_47": {
 					"on_entry": [
-						"/title @s actionbar 密云不雨 中平",
+						"/title @s actionbar 密云不雨 中平签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -557,7 +557,7 @@
 				},
 				"tips_48": {
 					"on_entry": [
-						"/title @s actionbar 宝镜新磨 吉",
+						"/title @s actionbar 宝镜新磨 吉签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],
@@ -567,7 +567,7 @@
 				},
 				"tips_49": {
 					"on_entry": [
-						"/title @s actionbar 群鸦集噪 下",
+						"/title @s actionbar 群鸦集噪 下签",
 						"/scoreboard players set @s lottery -100",
 						"/summon entity:lottery ~ ~1 ~"
 					],

@@ -640,14 +640,14 @@
 							}
 					],
 					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
 						"/summon entity:guide",
 						"/summon entity:rebn",
 						"/tag @s add guide",
 						"/tp @n[type=entity:guide] ^ ^ ^2 facing @s",
 						"/give @s items:spe 3",
 						"/give @s items:lottery",
-						"/scoreboard objectives add lottery dummy",
-						"/replaceitem entity @s slot.weapon.mainhand 0 air"
+						"/scoreboard objectives add lottery dummy"
 					]
 				}
 			}
