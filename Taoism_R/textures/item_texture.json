@@ -613,6 +613,9 @@
     },
     "guide": {
       "textures":"textures/items/guide.png"
+    },
+    "lottery": {
+      "textures":"textures/items/lottery.png"
     }
   }
 }

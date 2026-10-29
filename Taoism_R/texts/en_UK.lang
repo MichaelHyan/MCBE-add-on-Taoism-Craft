@@ -276,3 +276,4 @@ item.fanart:machete_nail=Coffin Nail\n§o§7fan-made content\n§r§blooks creepy
 entity.entity:zombie_mimic_n.name=zombie
 entity.entity:zombie_mimic_f_sp.name=flying Zombie
 entity.entity:zombie_mimic_e.name=Crouching Corpse
+item.items:lottery.name=Lottery Tube

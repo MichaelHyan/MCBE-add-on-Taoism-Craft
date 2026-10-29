@@ -4681,6 +4681,28 @@
             },
             "use_item": false,
             "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "items:lottery"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_items_lottery"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
           }
         ]
       },
@@ -6138,6 +6160,12 @@
       "guide_say_minecraft_creeper_head": {
         "queue_command": {
           "command": "say Awwww man!",
+          "target": "self"
+        }
+      },
+      "guide_say_items_lottery": {
+        "queue_command": {
+          "command": "say 抽到不喜欢的签了？可以再抽一次。",
           "target": "self"
         }
       }

@@ -277,3 +277,4 @@ item.fanart:machete_nail=棺材钉\n§o§7粉丝投稿作品\n§r§b看起来令
 entity.entity:zombie_mimic_n.name=僵尸
 entity.entity:zombie_mimic_f_sp.name=飞僵
 entity.entity:zombie_mimic_e.name=伏尸
+item.items:lottery.name=抽签筒

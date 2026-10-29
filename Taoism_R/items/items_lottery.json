@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "items:lottery",
+      "category": "Nature"
+    },
+
+    "components": {
+      "minecraft:icon": "lottery",
+      "minecraft:render_offsets": "lottery"
+    }
+  }
+}

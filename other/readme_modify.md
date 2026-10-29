@@ -1644,3 +1644,11 @@ none
 “野径灵苗不记名，散秽清尸解毒冥。采向荒坡阴畔长，灾时一服保安宁。”
 Taoism_R/textures/items/herb.png
 4
+
+159
+抽签筒
+- 核心功能：抽签算卦
+- 获取方式：召唤小师姐时同步获取
+“筒贮灵签藏休咎，手拈分定判吉凶。”
+Taoism_R/textures/items/lottery.png
+8

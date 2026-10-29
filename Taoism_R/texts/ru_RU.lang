@@ -277,3 +277,4 @@ item.fanart:machete_nail=Гробовой гвоздь\n§o§7фанатская
 entity.entity:zombie_mimic_n.name=Зомби
 entity.entity:zombie_mimic_f_sp.name=Летающий зомби
 entity.entity:zombie_mimic_e.name=Ползучий труп
+item.items:lottery.name=Лотерейная трубка

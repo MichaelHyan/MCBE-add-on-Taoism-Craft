@@ -178,3 +178,4 @@ minecraft:rotten_flesh-辣条？不对，好臭！
 minecraft:bell-duang~~~
 minecraft:rail-据说人类第一把铁镐就是从这拆下来的。
 minecraft:creeper_head-Awwww man!
+items:lottery-抽到不喜欢的签了？可以再抽一次。
