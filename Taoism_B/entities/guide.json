@@ -4703,6 +4703,72 @@
             },
             "use_item": false,
             "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "items:steelball"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_items_steelball"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "items:rec"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_items_rec"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "fanart:machete"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_fanart_machete"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
           }
         ]
       },
@@ -6166,6 +6232,24 @@
       "guide_say_items_lottery": {
         "queue_command": {
           "command": "say 抽到不喜欢的签了？可以再抽一次。",
+          "target": "self"
+        }
+      },
+      "guide_say_items_steelball": {
+        "queue_command": {
+          "command": "say 为什么它在转？",
+          "target": "self"
+        }
+      },
+      "guide_say_items_rec": {
+        "queue_command": {
+          "command": "say 好像在哪里见过这种东西。",
+          "target": "self"
+        }
+      },
+      "guide_say_fanart_machete": {
+        "queue_command": {
+          "command": "say 大祭司说，这个按理说就是朴刀。",
           "target": "self"
         }
       }

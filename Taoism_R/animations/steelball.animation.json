@@ -1,0 +1,43 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.steelball.spin": {
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"bone": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.5": [0, 360, 0]
+					}
+				}
+			}
+		},
+		"animation.steelball.hold_first_person": {
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"bone": {
+					"position": [0, 25, -2],
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.5": [0, 360, 0]
+					}
+				}
+			}
+		},
+		"animation.steelball.hold_third_person": {
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"bone": {
+					"position": [0, 20, -2],
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.5": [0, 360, 0]
+					}
+				}
+			}
+		}
+	}
+}

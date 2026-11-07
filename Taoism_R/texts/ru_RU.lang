@@ -278,3 +278,7 @@ entity.entity:zombie_mimic_n.name=Зомби
 entity.entity:zombie_mimic_f_sp.name=Летающий зомби
 entity.entity:zombie_mimic_e.name=Ползучий труп
 item.items:lottery.name=Лотерейная трубка
+item.items:steelball=Железный шар\n§r§bОн крутится!§r
+entity.entity:steelball.name=Железный шар
+entity.taoism.rec=Устройство переработки
+item.items:rec.name=Устройство переработки

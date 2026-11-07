@@ -1,0 +1,24 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.rec.spin": {
+      "loop": true,
+      "animation_length": 12.0,
+      "bones": {
+        "topa": {
+          "rotation": [
+            "math.sin(q.anim_time * 60) * -60",
+            "q.anim_time * -60",
+            "math.cos(q.anim_time * 60) * -60"
+          ]
+        },
+        "topb": {
+          "rotation": {
+            "0.0": [0, 0, 0],
+            "12.0": [0, -360, 0]
+          }
+        }
+      }
+    }
+  }
+}

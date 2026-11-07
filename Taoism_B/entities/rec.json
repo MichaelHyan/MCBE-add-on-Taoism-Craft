@@ -1,0 +1,3587 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "entity:rec",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "despawn": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "events": {
+      "despawn": {
+        "add": {
+          "component_groups": [
+            "despawn"
+          ]
+        }
+      },
+      "rec_add_items_cinnabar_crystal": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 1",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_items_spirit": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 1",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_rotten_meat": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 2",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_cobblestone": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 2",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_flint": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 5",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_coal": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 20",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_iron_ingot": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 100",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_gold_ingot": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 200",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_lapis_lazuli": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 50",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_emerald": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 300",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_diamond": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 1000",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_netherite_ingot": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 5000",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_obsidian": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 500",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_wheat": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 5",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_carrot": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 5",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_sugar_cane": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 5",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_potato": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 5",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_beetroot": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 10",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_pumpkin": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 20",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_melon_slice": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 30",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_bamboo": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 10",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_deepslate": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 2",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_grass_block": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 1",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_dirt": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 1",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_gravel": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 1",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_sand": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 1",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_copper_ingot": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 50",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_raw_copper": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 30",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_raw_iron": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 70",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_raw_gold": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 150",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_feather": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 3",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_leather": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 5",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_egg": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 3",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_wind_charge": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 50",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_wool": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 20",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_string": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 5",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_kelp": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 1",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_cactus": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 10",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_gunpowder": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 5",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_spider_eye": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 10",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_pufferfish": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 10",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_tropical_fish": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 10",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_salmon": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 5",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_cod": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 5",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_bone": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 3",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_chicken": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 3",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_beef": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 5",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_porkchop": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 5",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_mutton": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 5",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_rabbit": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 3",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_rabbit_foot": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 10",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_blue_egg": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 3",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_brown_egg": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 3",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_amethyst_shard": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 100",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_waterlily": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 3",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_ink_sac": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 2",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_glow_ink_sac": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 2",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_leaf_litter": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 1",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_netherite_scrap": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 1200",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_sea_pickle": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 5",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_lead": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 10",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_blaze_rod": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 10",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_slime_ball": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 5",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_nautilus_shell": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 50",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_paper": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 2",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_quartz": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 5",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_glowstone_dust": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 5",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_cocoa_beans": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 2",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_redstone": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 2",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_ender_pearl": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 50",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_iron_nugget": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 10",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_gold_nugget": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 20",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_copper_nugget": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 5",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_magma_cream": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 5",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_clay_ball": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 1",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_turtle_scute": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 20",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_armadillo_scute": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 20",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_sugar": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 2",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_wheat_seeds": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 1",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_beetroot_seeds": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 5",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_pumpkin_seeds": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 10",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_melon_seeds": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 10",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_observer": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 20",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_piston": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 20",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_sticky_piston": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 20",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_repeater": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 10",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_comparator": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 10",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_hopper": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 10",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_dispenser": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 10",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_daylight_detector": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 10",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_stone": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 2",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_granite": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 2",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_diorite": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 2",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_andesite": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 2",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_blackstone": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 2",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_tuff": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 2",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_cobbled_deepslate": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 2",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_arrow": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 2",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_bow": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 10",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_crossbow": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 20",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_yellow_flower": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 1",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_red_flower": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 1",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_double_plant": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 1",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_wither_rose": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 1",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_torchflower": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 1",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_pitcher_plant": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 1",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_closed_eyeblossom": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 1",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_open_eyeblossom": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 1",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_pink_petals": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 1",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_spore_blossom": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 1",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_chorus_flower": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 1",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      },
+      "rec_add_minecraft_wildflowers": {
+        "queue_command": {
+          "command": [
+            "scoreboard players add @p rec_point 1",
+            "particle minecraft:totem_particle ~ ~1 ~"
+          ],
+          "target": "self"
+        }
+      }
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "height": 0.5,
+        "width": 0.8
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:is_collidable": {},
+      "minecraft:physics": {},
+      "minecraft:movement": {
+        "value": 0
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:navigation.climb": {
+        "is_amphibious": true,
+        "can_swim": true,
+        "can_walk": true,
+        "can_sink": false,
+        "avoid_damage_blocks": true
+      },
+      "minecraft:type_family": {
+        "family": [
+          "mob",
+          "taoism"
+        ]
+      },
+      "minecraft:health": {
+        "value": 1,
+        "max": 1
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+        "default_values": {
+          "max_optimized_distance": 100.0,
+          "max_dropped_ticks": 7,
+          "use_motion_prediction_hints": true
+        }
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1
+      },
+      "minecraft:behavior.trade_with_player": {
+        "filters": {
+          "all_of": [
+            {
+              "all_of": [
+                {
+                  "test": "in_water",
+                  "value": false
+                }
+              ]
+            },
+            {
+              "any_of": [
+                {
+                  "test": "on_ground",
+                  "value": true
+                },
+                {
+                  "test": "is_sleeping",
+                  "value": true
+                }
+              ]
+            }
+          ]
+        },
+        "priority": 1
+      },
+      "minecraft:economy_trade_table": {
+        "display_name": "entity.taoism.rec",
+        "new_screen": true,
+        "persist_trades": true,
+        "table": "trading/economy_trades/rec_trades.json"
+      },
+      "minecraft:timer": {
+        "looping": false,
+        "randomInterval": false,
+        "time": 180.0,
+        "time_down_event": {
+          "event": "despawn",
+          "target": "self"
+        }
+      },
+      "minecraft:interact": {
+        "interactions": [
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "items:cinnabar_crystal"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_items_cinnabar_crystal"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "items:spirit"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_items_spirit"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:rotten_meat"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_rotten_meat"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:cobblestone"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_cobblestone"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:flint"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_flint"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:coal"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_coal"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:iron_ingot"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_iron_ingot"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:gold_ingot"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_gold_ingot"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:lapis_lazuli"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_lapis_lazuli"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:emerald"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_emerald"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:diamond"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_diamond"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:netherite_ingot"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_netherite_ingot"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:obsidian"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_obsidian"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:wheat"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_wheat"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:carrot"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_carrot"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:sugar_cane"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_sugar_cane"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:potato"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_potato"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:beetroot"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_beetroot"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:pumpkin"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_pumpkin"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:melon_slice"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_melon_slice"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:bamboo"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_bamboo"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:deepslate"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_deepslate"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:grass_block"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_grass_block"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:dirt"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_dirt"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:gravel"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_gravel"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:sand"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_sand"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:copper_ingot"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_copper_ingot"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:raw_copper"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_raw_copper"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:raw_iron"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_raw_iron"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:raw_gold"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_raw_gold"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:feather"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_feather"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:leather"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_leather"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:egg"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_egg"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:wind_charge"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_wind_charge"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:wool"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_wool"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:string"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_string"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:kelp"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_kelp"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:cactus"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_cactus"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:gunpowder"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_gunpowder"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:spider_eye"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_spider_eye"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:pufferfish"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_pufferfish"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:tropical_fish"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_tropical_fish"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:salmon"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_salmon"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:cod"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_cod"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:bone"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_bone"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:chicken"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_chicken"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:beef"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_beef"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:porkchop"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_porkchop"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:mutton"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_mutton"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:rabbit"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_rabbit"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:rabbit_foot"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_rabbit_foot"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:blue_egg"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_blue_egg"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:brown_egg"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_brown_egg"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:amethyst_shard"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_amethyst_shard"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:waterlily"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_waterlily"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:ink_sac"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_ink_sac"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:glow_ink_sac"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_glow_ink_sac"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:leaf_litter"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_leaf_litter"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:netherite_scrap"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_netherite_scrap"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:sea_pickle"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_sea_pickle"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:lead"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_lead"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:blaze_rod"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_blaze_rod"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:slime_ball"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_slime_ball"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:nautilus_shell"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_nautilus_shell"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:paper"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_paper"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:quartz"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_quartz"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:glowstone_dust"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_glowstone_dust"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:cocoa_beans"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_cocoa_beans"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:redstone"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_redstone"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:ender_pearl"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_ender_pearl"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:iron_nugget"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_iron_nugget"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:gold_nugget"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_gold_nugget"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:copper_nugget"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_copper_nugget"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:magma_cream"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_magma_cream"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:clay_ball"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_clay_ball"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:turtle_scute"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_turtle_scute"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:armadillo_scute"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_armadillo_scute"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:sugar"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_sugar"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:wheat_seeds"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_wheat_seeds"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:beetroot_seeds"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_beetroot_seeds"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:pumpkin_seeds"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_pumpkin_seeds"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:melon_seeds"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_melon_seeds"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:observer"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_observer"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:piston"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_piston"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:sticky_piston"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_sticky_piston"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:repeater"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_repeater"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:comparator"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_comparator"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:hopper"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_hopper"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:dispenser"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_dispenser"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:daylight_detector"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_daylight_detector"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:stone"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_stone"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:granite"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_granite"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:diorite"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_diorite"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:andesite"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_andesite"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:blackstone"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_blackstone"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:tuff"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_tuff"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:cobbled_deepslate"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_cobbled_deepslate"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:arrow"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_arrow"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:bow"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_bow"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:crossbow"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_crossbow"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:yellow_flower"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_yellow_flower"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:red_flower"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_red_flower"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:double_plant"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_double_plant"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:wither_rose"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_wither_rose"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:torchflower"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_torchflower"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:pitcher_plant"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_pitcher_plant"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:closed_eyeblossom"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_closed_eyeblossom"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:open_eyeblossom"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_open_eyeblossom"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:pink_petals"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_pink_petals"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:spore_blossom"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_spore_blossom"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:chorus_flower"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_chorus_flower"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:wildflowers"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "rec_add_minecraft_wildflowers"
+            },
+            "use_item": true,
+            "interact_text": "addon.get.items"
+          }
+        ]
+      }
+    }
+  }
+}

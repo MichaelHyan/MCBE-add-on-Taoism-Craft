@@ -1,0 +1,26 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "entity:steelball",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/steelball"
+			},
+			"geometry": {
+				"default": "geometry.steelball"
+			},
+			"animations": {
+				"spin": "animation.steelball.spin"
+			},
+			"scripts": {
+				"animate": [
+					"spin"
+				]
+			},
+			"render_controllers": [ "controller.render.default" ]
+		}
+	}
+}

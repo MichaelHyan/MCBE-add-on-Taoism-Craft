@@ -278,3 +278,7 @@ entity.entity:zombie_mimic_n.name=僵尸
 entity.entity:zombie_mimic_f_sp.name=飞僵
 entity.entity:zombie_mimic_e.name=伏尸
 item.items:lottery.name=签筒
+item.items:steelball=铁球\n§r§b转起来了!§r
+entity.entity:steelball.name=铁球
+entity.taoism.rec=回收装置
+item.items:rec.name=回收装置

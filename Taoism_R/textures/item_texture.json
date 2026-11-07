@@ -616,6 +616,12 @@
     },
     "lottery": {
       "textures":"textures/items/lottery.png"
+    },
+    "steelball": {
+      "textures":"textures/items/steelball.png"
+    },
+    "rec": {
+      "textures":"textures/items/rec.png"
     }
   }
 }

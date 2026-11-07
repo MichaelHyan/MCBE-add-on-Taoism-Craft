@@ -1,0 +1,260 @@
+{
+  "tiers": [
+    {
+      "total_exp_required": 0,
+      "groups": [
+        {
+          "num_to_select": 8,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 1, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:experience_bottle", "quantity": 6 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 1, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:oak_log", "quantity": 30 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 1, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:coal", "quantity": 15 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 1, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:iron_ingot", "quantity": 3 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 2, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:gold_ingot", "quantity": 3 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 1, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:lapis_lazuli", "quantity": 6 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 10, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:diamond", "quantity": 3 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 50, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:netherite_ingot", "quantity": 3 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            }
+          ]
+        },
+        {
+          "num_to_select": 8,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 1, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:pig_spawn_egg", "quantity": 6 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 1, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:sheep_spawn_egg", "quantity": 5 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 2, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:chicken_spawn_egg", "quantity": 15 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 4, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:cow_spawn_egg", "quantity": 15 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 4, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:horse_spawn_egg", "quantity": 3 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 1, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:rabbit_spawn_egg", "quantity": 10 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 1, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:lead", "quantity": 30 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 1, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:saddle", "quantity": 1 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            }
+          ]
+        },
+        {
+          "num_to_select": 9,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 1, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:redstone", "quantity": 60 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 1, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:observer", "quantity": 15 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 1, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:piston", "quantity": 15 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 1, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:sticky_piston", "quantity": 15 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 1, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:repeater", "quantity": 30 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 1, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:comparator", "quantity": 30 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 1, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:hopper", "quantity": 30 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 1, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:dispenser", "quantity": 30 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 1, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:daylight_detector", "quantity": 30 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            }
+          ]
+        },
+        {
+          "num_to_select": 8,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:iron_ingot", "quantity": 1, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:wheat_seeds", "quantity": 50 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:iron_ingot", "quantity": 1, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:carrot", "quantity": 20 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:iron_ingot", "quantity": 1, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:sugar_cane", "quantity": 20 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:iron_ingot", "quantity": 1, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:potato", "quantity": 20 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:iron_ingot", "quantity": 1, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:beetroot_seeds", "quantity": 20 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:iron_ingot", "quantity": 1, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:pumpkin_seeds", "quantity": 10 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:iron_ingot", "quantity": 1, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:melon_seeds", "quantity": 10 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            },
+            {
+              "wants": [{ "item": "minecraft:iron_ingot", "quantity": 1, "price_multiplier": 0 }],
+              "gives": [{ "item": "minecraft:bamboo", "quantity": 10 }],
+              "trader_exp": 0,
+              "max_uses": 2147483647,
+              "reward_exp": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

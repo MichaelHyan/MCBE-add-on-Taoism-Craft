@@ -1,0 +1,90 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "entity:steelball",
+      "is_summonable": true,
+      "is_spawnable": false,
+      "scripts": {
+        "animate": [
+          "steelball"
+        ]
+      },
+      "animations": {
+        "steelball": "controller.animation.steelball"
+      }
+    },
+    "component_groups": {
+      "machete:despawn": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "height": 0.5,
+        "width": 0.5
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+        "default_values": {
+          "max_dropped_ticks": 7,
+          "max_optimized_distance": 80.0,
+          "use_motion_prediction_hints": true
+        }
+      },
+      "minecraft:dimension_bound": {},
+      "minecraft:physics": {},
+      "minecraft:projectile": {
+        "hit_ground_sound": "item.trident.hit_ground",
+        "anchor": 1,
+        "gravity": 0,
+        "hit_sound": "item.trident.hit",
+        "multiple_targets": false,
+        "liquid_inertia": 0.5,
+        "on_hit": {
+          "impact_damage": {
+            "apply_knockback_to_blocking_targets": true,
+            "damage": 8,
+            "knockback": true,
+            "destroy_on_hit": false,
+            "semi_random_diff_damage": false
+          },
+          "stick_in_ground": {
+            "shake_time": 0
+          }
+        },
+        "offset": [
+          0,
+          -0.1,
+          0
+        ],
+        "power": 5,
+        "should_bounce": true,
+        "stop_on_hurt": true,
+        "uncertainty_base": 1,
+        "uncertainty_multiplier": 0
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:timer": {
+        "looping": false,
+        "randomInterval": false,
+        "time": 2.0,
+        "time_down_event": {
+          "event": "machete:despawn",
+          "target": "self"
+        }
+      }
+    },
+    "events": {
+      "machete:despawn": {
+        "add": {
+          "component_groups": [
+            "machete:despawn"
+          ]
+        }
+      }
+    }
+  }
+}

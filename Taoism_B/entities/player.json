@@ -75,7 +75,8 @@
           "fanart",
           "infection",
           "dread",
-          "lottery"
+          "lottery",
+          "rec"
 				]
 			},
       "animations": {
@@ -147,7 +148,8 @@
         "fanart": "controller.animation.fanart",
         "infection": "controller.animation.infection",
         "dread": "controller.animation.dread",
-        "lottery": "controller.animation.lottery"
+        "lottery": "controller.animation.lottery",
+        "rec": "controller.animation.rec"
 			}
     },
 

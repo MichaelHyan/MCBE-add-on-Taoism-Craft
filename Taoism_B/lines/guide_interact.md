@@ -179,3 +179,6 @@ minecraft:bell-duang~~~
 minecraft:rail-据说人类第一把铁镐就是从这拆下来的。
 minecraft:creeper_head-Awwww man!
 items:lottery-抽到不喜欢的签了？可以再抽一次。
+items:steelball-为什么它在转？
+items:rec-好像在哪里见过这种东西。
+fanart:machete-大祭司说，这个按理说就是朴刀。

@@ -10,9 +10,15 @@
         "default": "textures/entity/core"
       },
       "geometry": {
-        "default": "geometry.core_a"
+        "default": "geometry.core"
       },
-      "render_controllers": ["controller.render.default"]
+      "render_controllers": ["controller.render.default"],
+      "animations": {
+        "spin": "animation.core_a.spin"
+      },
+      "scripts": {
+        "animate": ["spin"]
+      }
     }
   }
 }

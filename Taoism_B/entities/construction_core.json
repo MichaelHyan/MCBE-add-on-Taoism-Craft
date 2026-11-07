@@ -4,15 +4,7 @@
     "description": {
       "identifier": "construction:core",
       "is_spawnable": false,
-      "is_summonable": true,
-      "scripts": {
-        "animate": [
-          "core"
-        ]
-      },
-      "animations": {
-        "core": "controller.animation.core"
-      }
+      "is_summonable": true
     },
     "component_groups": {
       "despawn": {

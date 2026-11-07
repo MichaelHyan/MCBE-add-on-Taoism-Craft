@@ -11,7 +11,8 @@
 						{"machete_shock":"query.get_equipped_item_name=='machete' && query.is_sneaking && query.scoreboard('charge') >= 0"},
 						{"machete_atk":"query.get_equipped_item_name=='machete' && !variable.attack_time"},
 						{"machete_atk_a":"query.get_equipped_item_name=='machete' && variable.attack_time && query.scoreboard('swordatkcd') >= 0 && math.random_integer(0,1) == 0"},
-						{"machete_atk_b":"query.get_equipped_item_name=='machete' && variable.attack_time && query.scoreboard('swordatkcd') >= 0 && math.random_integer(0,1) == 1"}
+						{"machete_atk_b":"query.get_equipped_item_name=='machete' && variable.attack_time && query.scoreboard('swordatkcd') >= 0 && math.random_integer(0,1) == 1"},
+						{"steelball":"query.get_equipped_item_name=='steelball'"}
 					]
 				},
 				"machete_nail": {
@@ -93,6 +94,19 @@
 						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
 						"/damage @s 3",
 						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"steelball": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @a poision 0 255 true",
+						"/effect @s weakness 0 255 true",
+						"/effect @s wither 0 255 true",
+						"/effect @s strength 1 2 true"
 					]
 				}
 			}

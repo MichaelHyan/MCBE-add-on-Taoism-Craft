@@ -278,3 +278,7 @@ entity.entity:zombie_mimic_n.name=Zombie
 entity.entity:zombie_mimic_f_sp.name=Zombie volant
 entity.entity:zombie_mimic_e.name=Cadavre rampant
 item.items:lottery.name=Tube de tirage au sort
+item.items:steelball=Boule de fer\n§r§bÇa tourne !§r
+entity.entity:steelball.name=Boule de fer
+entity.taoism.rec=Dispositif de recyclage
+item.items:rec.name=Dispositif de recyclage
