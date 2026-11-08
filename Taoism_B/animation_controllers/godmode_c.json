@@ -1,0 +1,48 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.godmode_c":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"godmode_a":"query.scoreboard('godmode') > 0 && query.is_jumping"},
+						{"godmode_b":"query.scoreboard('godmode') > 0 && query.is_sneaking"},
+						{"godmode_c":"query.get_equipped_item_name=='pearl' && query.scoreboard('spb') == 6 && query.scoreboard('gv') == 4 && query.is_using_item"}
+					]
+				},
+				"godmode_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 5 true"
+					]
+				},
+				"godmode_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s slow_falling 5 5 true"
+					]
+				},
+				"godmode_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add godmode dummy",
+						"/scoreboard players set @s godmode 300",
+						"/playsound seal"
+					]
+				}
+			}
+		}
+ 	}
+ }
