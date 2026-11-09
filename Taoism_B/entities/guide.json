@@ -25,6 +25,11 @@
           "into": "entity:guide_sit"
         }
       },
+      "djv": {
+        "minecraft:transformation": {
+          "into": "entity:guide_djv"
+        }
+      },
       "bow": {
         "minecraft:equipment": {
           "table": "partner/bow.json"
@@ -4171,7 +4176,7 @@
                   }
                 ]
               },
-              "event": "guide_say_minecraft_slime_ball"
+              "event": "djv"
             },
             "use_item": false,
             "interact_text": "addon.get.items"
@@ -6085,10 +6090,11 @@
           "target": "self"
         }
       },
-      "guide_say_minecraft_slime_ball": {
-        "queue_command": {
-          "command": "say 黏黏的。",
-          "target": "self"
+      "djv": {
+        "add": {
+          "component_groups": [
+            "djv"
+          ]
         }
       },
       "guide_say_minecraft_honey_block": {

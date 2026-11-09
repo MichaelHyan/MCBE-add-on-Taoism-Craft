@@ -154,7 +154,6 @@ minecraft:damaged_anvil-收手吧，快要坏了。
 minecraft:elytra-不要，我恐高。
 minecraft:snowball-凉凉的。
 minecraft:spyglass-你没有拿这个偷偷看我房间吧？
-minecraft:slime_ball-黏黏的。
 minecraft:honey_block-黏黏的。
 minecraft:honey_bottle-はちみ~をなめると~不好意思串了。
 minecraft:slime-给我一种不好的感觉。

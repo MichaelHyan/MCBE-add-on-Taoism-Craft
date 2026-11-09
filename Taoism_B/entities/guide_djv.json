@@ -1,0 +1,153 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "entity:guide_djv",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "scripts": {
+        "animate": [
+          "guide",
+          "guide_teleport",
+          "guide_random"
+        ]
+      },
+      "animations": {
+        "guide": "controller.animation.guide",
+        "guide_teleport": "controller.animation.guide_teleport",
+        "guide_random": "controller.animation.guide_random"
+      }
+    },
+    "component_groups": {
+      "sit": {
+        "minecraft:transformation": {
+          "into": "entity:guide"
+        }
+      }
+    },
+    "components": {
+      "minecraft:nameable": {},
+      "minecraft:interact": {
+        "interactions": [
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "slime_ball"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "sit"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          }
+        ]
+      },
+      "minecraft:follow_range": {
+        "value": 16,
+        "max": 16
+      },
+      "minecraft:behavior.move_indoors": {
+        "priority": 5,
+        "speed_multiplier": 1,
+        "timeout_cooldown": 8
+      },
+      "minecraft:behavior.avoid_mob_type": {
+        "entity_types": [
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "monster"
+                }
+              ]
+            },
+            "max_dist": 8,
+            "walk_speed_multiplier": 1.5,
+            "sprint_speed_multiplier": 1.5
+          }
+        ],
+        "priority": 1
+      },
+      "minecraft:health": {
+        "value": 20,
+        "max": 20,
+        "min": 0
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.6
+      },
+      "minecraft:behavior.sleep": {
+        "priority": 3,
+        "goal_radius": 5,
+        "speed_multiplier": 1.2,
+        "sleep_collider_height": 0.3,
+        "sleep_collider_width": 1.0,
+        "sleep_y_offset": 0.6
+      },
+      "minecraft:movement": {
+        "value": 0.25
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true
+      },
+      "minecraft:type_family": {
+        "family": [
+          "mob",
+          "taoism",
+          "guide"
+        ]
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
+      "minecraft:spell_effects": {
+        "add_effects": [
+          {
+            "effect": "regeneration",
+            "amplifier": 1,
+            "visible": false,
+            "ambient": true,
+            "duration": 99999999
+          }
+        ]
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 5,
+        "speed_multiplier": 1
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 4,
+        "look_distance": 8
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 5
+      },
+      "minecraft:physics": {}
+    },
+    "events": {
+      "minecraft:entity_spawned": {},
+      "sit": {
+        "add": {
+          "component_groups": [
+            "sit"
+          ]
+        }
+      }
+    }
+  }
+}
