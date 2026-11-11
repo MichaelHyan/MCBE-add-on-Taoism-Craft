@@ -21,7 +21,7 @@
       },
       "minecraft:wearable": {
         "slot": "slot.armor.feet",
-        "protection": 3
+        "protection": 2
       },
       "minecraft:tags": {
         "tags": [

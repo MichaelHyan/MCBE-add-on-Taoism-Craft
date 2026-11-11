@@ -21,7 +21,7 @@
       },
       "minecraft:wearable": {
         "slot": "slot.armor.chest",
-        "protection": 5
+        "protection": 4
       },
       "minecraft:tags": {
         "tags": [
