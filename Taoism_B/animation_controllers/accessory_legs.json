@@ -1,0 +1,58 @@
+{
+  "format_version": "1.8.0",
+  "animation_controllers": {
+    "controller.animation.accessory_legs": {
+      "states": {
+        "base": {
+          "transitions": [
+            {
+              "leggings_a": "query.is_item_name_any('slot.armor.legs', 0, 'items:leggings_a') && math.mod(query.life_time, 3) == 0"
+            },
+            {
+              "leggings_b": "query.is_item_name_any('slot.armor.legs', 0, 'items:leggings_b') && math.mod(query.life_time, 3) == 0"
+            },
+            {
+              "leggings_c": "query.is_item_name_any('slot.armor.legs', 0, 'items:leggings_c') && math.mod(query.life_time, 3) == 0"
+            }
+          ]
+        },
+        "leggings_a": {
+          "transitions": [
+            {
+              "base": "(1.0)"
+            }
+          ],
+          "on_entry": [
+            "/effect @s slowness 0 255 true"
+          ]
+        },
+        "leggings_b": {
+          "transitions": [
+            {
+              "base": "(1.0)"
+            }
+          ],
+          "on_entry": [
+            "/effect @s slowness 0 255 true",
+            "/effect @s wither 0 0 true",
+            "/effect @s poison 0 0 true"
+          ]
+        },
+        "leggings_c": {
+          "transitions": [
+            {
+              "base": "(1.0)"
+            }
+          ],
+          "on_entry": [
+            "/effect @s slowness 0 255 true",
+            "/effect @s wither 0 0 true",
+            "/effect @s poison 0 0 true",
+            "/effect @s weakness 0 0 true",
+            "/effect @s mining_fatigue 0 0 true"
+          ]
+        }
+      }
+    }
+  }
+}

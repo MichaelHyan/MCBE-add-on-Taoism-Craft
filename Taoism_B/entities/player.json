@@ -77,7 +77,11 @@
           "infection",
           "dread",
           "lottery",
-          "rec"
+          "rec",
+					"accessory_head",
+					"accessory_chest",
+					"accessory_legs",
+					"accessory_feet"
 				]
 			},
       "animations": {
@@ -151,7 +155,11 @@
         "infection": "controller.animation.infection",
         "dread": "controller.animation.dread",
         "lottery": "controller.animation.lottery",
-        "rec": "controller.animation.rec"
+        "rec": "controller.animation.rec",
+				"accessory_head": "controller.animation.accessory_head",
+				"accessory_chest": "controller.animation.accessory_chest",
+				"accessory_legs": "controller.animation.accessory_legs",
+				"accessory_feet": "controller.animation.accessory_feet"
 			}
     },
 

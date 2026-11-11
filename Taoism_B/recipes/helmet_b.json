@@ -1,0 +1,48 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:helmet_b"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "aba",
+      "cd ",
+      "fge"
+    ],
+    "key": {
+      "a": {
+        "item": "items:cinnabar_powder"
+      },
+      "b": {
+        "item": "items:helmet_d"
+      },
+      "c": {
+        "item": "minecraft:stick"
+      },
+      "d": {
+        "item": "minecraft:copper_ingot"
+      },
+      "e": {
+        "item": "items:spe"
+      },
+      "f": {
+        "item": "items:spe"
+      },
+      "g": {
+        "item": "items:spe"
+      }
+    },
+    "unlock": [
+      {
+        "item": "items:helmet_d"
+      }
+    ],
+    "result": {
+      "item": "items:helmet_b",
+      "count": 1
+    }
+  }
+}

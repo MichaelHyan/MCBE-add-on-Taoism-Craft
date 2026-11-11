@@ -1,0 +1,52 @@
+{
+  "format_version": "1.8.0",
+  "animation_controllers": {
+    "controller.animation.accessory_chest": {
+      "states": {
+        "base": {
+          "transitions": [
+            {
+              "chestplate_a": "query.is_item_name_any('slot.armor.chest', 0, 'items:chestplate_a') && math.mod(query.life_time, 3) == 0 && query.ground_speed < 0.01"
+            },
+            {
+              "chestplate_b": "query.is_item_name_any('slot.armor.chest', 0, 'items:chestplate_b') && math.mod(query.life_time, 3) == 0"
+            },
+            {
+              "chestplate_c": "query.is_item_name_any('slot.armor.chest', 0, 'items:chestplate_c') && math.mod(query.life_time, 3) == 0"
+            }
+          ]
+        },
+        "chestplate_a": {
+          "transitions": [
+            {
+              "base": "(1.0)"
+            }
+          ],
+          "on_entry": [
+            "/effect @s regeneration 3 0 true"
+          ]
+        },
+        "chestplate_b": {
+          "transitions": [
+            {
+              "base": "(1.0)"
+            }
+          ],
+          "on_entry": [
+            "/effect @s regeneration 3 1 true"
+          ]
+        },
+        "chestplate_c": {
+          "transitions": [
+            {
+              "base": "(1.0)"
+            }
+          ],
+          "on_entry": [
+            "/effect @s regeneration 3 2 true"
+          ]
+        }
+      }
+    }
+  }
+}

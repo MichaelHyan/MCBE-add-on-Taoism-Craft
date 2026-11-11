@@ -622,6 +622,45 @@
     },
     "rec": {
       "textures":"textures/items/rec.png"
+    },
+    "helmet_d": {
+      "textures": "textures/items/helmet_d.png"
+    },
+    "helmet_a": {
+      "textures": "textures/items/helmet_a.png"
+    },
+    "helmet_b": {
+      "textures": "textures/items/helmet_b.png"
+    },
+    "helmet_c": {
+      "textures": "textures/items/helmet_c.png"
+    },
+    "chestplate_a": {
+      "textures": "textures/items/chestplate_a.png"
+    },
+    "chestplate_b": {
+      "textures": "textures/items/chestplate_b.png"
+    },
+    "chestplate_c": {
+      "textures": "textures/items/chestplate_c.png"
+    },
+    "leggings_a": {
+      "textures": "textures/items/leggings_a.png"
+    },
+    "leggings_b": {
+      "textures": "textures/items/leggings_b.png"
+    },
+    "leggings_c": {
+      "textures": "textures/items/leggings_c.png"
+    },
+    "boots_a": {
+      "textures": "textures/items/boots_a.png"
+    },
+    "boots_b": {
+      "textures": "textures/items/boots_b.png"
+    },
+    "boots_c": {
+      "textures": "textures/items/boots_c.png"
     }
   }
 }

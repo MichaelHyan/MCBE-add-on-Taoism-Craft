@@ -1,0 +1,36 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:leggings_b"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "aaa",
+      "abc",
+      "ccc"
+    ],
+    "key": {
+      "a": {
+        "item": "minecraft:copper_ingot"
+      },
+      "b": {
+        "item": "items:lightning_wood"
+      },
+      "c": {
+        "item": "items:spe"
+      }
+    },
+    "unlock": [
+      {
+        "item": "items:helmet_d"
+      }
+    ],
+    "result": {
+      "item": "items:leggings_b",
+      "count": 1
+    }
+  }
+}

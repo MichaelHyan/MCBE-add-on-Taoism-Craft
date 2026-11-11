@@ -1,0 +1,52 @@
+{
+  "format_version": "1.8.0",
+  "animation_controllers": {
+    "controller.animation.accessory_feet": {
+      "states": {
+        "base": {
+          "transitions": [
+            {
+              "boots_a": "query.is_item_name_any('slot.armor.feet', 0, 'items:boots_a') && math.mod(query.life_time, 3) == 0"
+            },
+            {
+              "boots_b": "query.is_item_name_any('slot.armor.feet', 0, 'items:boots_b') && math.mod(query.life_time, 3) == 0"
+            },
+            {
+              "boots_c": "query.is_item_name_any('slot.armor.feet', 0, 'items:boots_c') && math.mod(query.life_time, 3) == 0"
+            }
+          ]
+        },
+        "boots_a": {
+          "transitions": [
+            {
+              "base": "(1.0)"
+            }
+          ],
+          "on_entry": [
+            "/damage @e[family=monster,r=5] 1 entity_attack entity @s"
+          ]
+        },
+        "boots_b": {
+          "transitions": [
+            {
+              "base": "(1.0)"
+            }
+          ],
+          "on_entry": [
+            "/damage @e[family=monster,r=5] 2 entity_attack entity @s"
+          ]
+        },
+        "boots_c": {
+          "transitions": [
+            {
+              "base": "(1.0)"
+            }
+          ],
+          "on_entry": [
+            "/damage @e[family=monster,r=5] 3 entity_attack entity @s"
+          ]
+        }
+      }
+    }
+  }
+}

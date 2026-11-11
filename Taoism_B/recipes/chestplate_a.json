@@ -1,0 +1,45 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:chestplate_a"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "aba",
+      "aca",
+      "edf"
+    ],
+    "key": {
+      "a": {
+        "item": "items:cinnabar_powder"
+      },
+      "b": {
+        "item": "minecraft:gold_ingot"
+      },
+      "c": {
+        "item": "items:ta"
+      },
+      "d": {
+        "item": "items:fish_gelatin"
+      },
+      "e": {
+        "item": "items:spe"
+      },
+      "f": {
+        "item": "items:spe"
+      }
+    },
+    "unlock": [
+      {
+        "item": "items:helmet_d"
+      }
+    ],
+    "result": {
+      "item": "items:chestplate_a",
+      "count": 1
+    }
+  }
+}

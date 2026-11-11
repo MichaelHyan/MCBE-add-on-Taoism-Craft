@@ -1,0 +1,45 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:chestplate_b"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "aba",
+      "c d",
+      "efe"
+    ],
+    "key": {
+      "a": {
+        "item": "items:lightning_wood"
+      },
+      "b": {
+        "item": "items:tc"
+      },
+      "c": {
+        "item": "items:cinnabar_powder"
+      },
+      "d": {
+        "item": "items:cinnabar_powder"
+      },
+      "e": {
+        "item": "items:spe"
+      },
+      "f": {
+        "item": "items:spe"
+      }
+    },
+    "unlock": [
+      {
+        "item": "items:helmet_d"
+      }
+    ],
+    "result": {
+      "item": "items:chestplate_b",
+      "count": 1
+    }
+  }
+}

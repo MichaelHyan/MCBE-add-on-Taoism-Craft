@@ -1,0 +1,45 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:helmet_c"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "aba",
+      " d ",
+      "fce"
+    ],
+    "key": {
+      "a": {
+        "item": "items:cinnabar_powder"
+      },
+      "b": {
+        "item": "minecraft:emerald"
+      },
+      "c": {
+        "item": "minecraft:gold_nugget"
+      },
+      "d": {
+        "item": "items:ta"
+      },
+      "e": {
+        "item": "items:spe"
+      },
+      "f": {
+        "item": "items:spe"
+      }
+    },
+    "unlock": [
+      {
+        "item": "items:helmet_d"
+      }
+    ],
+    "result": {
+      "item": "items:helmet_c",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:boots_a"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "a a",
+      " b ",
+      " c "
+    ],
+    "key": {
+      "a": {
+        "item": "minecraft:stick"
+      },
+      "b": {
+        "item": "items:talisman"
+      },
+      "c": {
+        "item": "items:cinnabar_powder"
+      }
+    },
+    "unlock": [
+      {
+        "item": "items:helmet_d"
+      }
+    ],
+    "result": {
+      "item": "items:boots_a",
+      "count": 1
+    }
+  }
+}

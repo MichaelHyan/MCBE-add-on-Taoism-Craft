@@ -1,0 +1,55 @@
+{
+  "format_version": "1.8.0",
+  "animation_controllers": {
+    "controller.animation.accessory_head": {
+      "states": {
+        "base": {
+          "transitions": [
+            {
+              "helmet_a": "query.is_item_name_any('slot.armor.head', 0, 'items:helmet_a') && math.mod(query.life_time, 3) == 0 && query.scoreboard('cdr') < 3"
+            },
+            {
+              "helmet_b": "query.is_item_name_any('slot.armor.head', 0, 'items:helmet_b') && math.mod(query.life_time, 3) == 0 && query.scoreboard('cdr') < 6"
+            },
+            {
+              "helmet_c": "query.is_item_name_any('slot.armor.head', 0, 'items:helmet_c') && math.mod(query.life_time, 3) == 0 && query.scoreboard('cdr') < 9"
+            }
+          ]
+        },
+        "helmet_a": {
+          "transitions": [
+            {
+              "base": "(1.0)"
+            }
+          ],
+          "on_entry": [
+            "/scoreboard objectives add cdr dummy",
+            "/scoreboard players add @s cdr 1"
+          ]
+        },
+        "helmet_b": {
+          "transitions": [
+            {
+              "base": "(1.0)"
+            }
+          ],
+          "on_entry": [
+            "/scoreboard objectives add cdr dummy",
+            "/scoreboard players add @s cdr 1"
+          ]
+        },
+        "helmet_c": {
+          "transitions": [
+            {
+              "base": "(1.0)"
+            }
+          ],
+          "on_entry": [
+            "/scoreboard objectives add cdr dummy",
+            "/scoreboard players add @s cdr 1"
+          ]
+        }
+      }
+    }
+  }
+}

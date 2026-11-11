@@ -1,0 +1,42 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:helmet_a"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " b ",
+      "cad",
+      " e "
+    ],
+    "key": {
+      "a": {
+        "item": "items:helmet_d"
+      },
+      "b": {
+        "item": "items:talisman"
+      },
+      "c": {
+        "item": "items:fish_gelatin"
+      },
+      "d": {
+        "item": "items:spe"
+      },
+      "e": {
+        "item": "minecraft:bundle"
+      }
+    },
+    "unlock": [
+      {
+        "item": "items:helmet_d"
+      }
+    ],
+    "result": {
+      "item": "items:helmet_a",
+      "count": 1
+    }
+  }
+}
