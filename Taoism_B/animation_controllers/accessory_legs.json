@@ -23,6 +23,7 @@
             }
           ],
           "on_entry": [
+            "/effect @s hunger 0 255 true",
             "/effect @s slowness 0 255 true"
           ]
         },
@@ -33,6 +34,7 @@
             }
           ],
           "on_entry": [
+            "/effect @s hunger 0 255 true",
             "/effect @s slowness 0 255 true",
             "/effect @s wither 0 0 true",
             "/effect @s poison 0 0 true"
@@ -45,6 +47,7 @@
             }
           ],
           "on_entry": [
+            "/effect @s hunger 0 255 true",
             "/effect @s slowness 0 255 true",
             "/effect @s wither 0 0 true",
             "/effect @s poison 0 0 true",
