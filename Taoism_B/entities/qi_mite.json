@@ -40,7 +40,7 @@
         "damage": 1
       },
       "minecraft:movement": {
-        "value": 0.25
+        "value": 0.2
       },
       "minecraft:movement.basic": {},
       "minecraft:navigation.walk": {

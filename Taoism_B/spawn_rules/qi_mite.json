@@ -17,7 +17,7 @@
           "default": 4
         },
         "minecraft:density_limit": {
-          "surface": 3,
+          "surface": 1,
           "underground": 0
         },
         "minecraft:biome_filter": {

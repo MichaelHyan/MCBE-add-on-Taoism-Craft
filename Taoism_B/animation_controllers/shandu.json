@@ -16,7 +16,8 @@
 							}
 					],
 					"on_entry": [
-						"/effect @s invisibility infinite 1 true"
+						"/effect @s invisibility infinite 1 true",
+						"/effect @s regeneration infinite 1 true"
 					]
 				},
 				"shandu": {
