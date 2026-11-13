@@ -15,7 +15,30 @@
 				"seeker_core": "controller.animation.seeker_core"
 			}
     },
+    "events": {
+      "despawn": {
+        "add": {
+          "component_groups": [
+            "despawn"
+          ]
+        }
+      }
+    },
+    "component_groups": {
+      "despawn": {
+        "minecraft:instant_despawn": {}
+      }
+    },
     "components": {
+      "minecraft:timer": {
+        "looping": false,
+        "randomInterval": false,
+        "time": 6.0,
+        "time_down_event": {
+          "event": "despawn",
+          "target": "self"
+        }
+      },
       "minecraft:collision_box": {
         "width": 1,
         "height": 1

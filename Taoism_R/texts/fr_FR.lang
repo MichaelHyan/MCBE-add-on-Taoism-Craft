@@ -210,6 +210,7 @@ item.items:pill.name=Petite pilule de retour\n§o§7consommable\n§r§bPetite pi
 entity.taoism.table=Table à talismans
 entity.entity:partner.name=Compagnon de la voie
 entity.taoism.peddler=Marchand ambulant
+entity.entity:peddler.name=Marchand ambulant
 item.items:ruler=Règle de Tianpeng\n§o§7niveau requis:10\nPerçoit les êtres maléfiques
 item.items:sebooka.name=Manuel secret - Raffinement des sept Po [Modifié]
 item.items:sebookb.name=Manuel secret - Méthode de la foudre Tiangang

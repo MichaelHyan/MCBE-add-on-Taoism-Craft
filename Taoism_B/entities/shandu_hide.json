@@ -1,0 +1,63 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "entity:shandu_hide",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "transform_shandu": {
+        "minecraft:transformation": {
+          "into": "entity:shandu"
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "mob"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 1,
+        "height": 1
+      },
+      "minecraft:is_collidable": {},
+      "minecraft:health": {
+        "value": 20,
+        "max": 20
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": 0
+      },
+      "minecraft:behavior.hurt_by_target": {
+        "priority": 1
+      },
+      "minecraft:on_target_acquired": {
+        "event": "transform_shandu",
+        "target": "self"
+      },
+      "minecraft:conditional_bandwidth_optimization": {}
+    },
+    "events": {
+      "transform_shandu": {
+        "add": {
+          "component_groups": [
+            "transform_shandu"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -350,7 +350,8 @@
 						"/effect @s jump_boost 30 1 true",
 						"/effect @s health_boost 30 9 true",
 						"/effect @s speed 30 1 true",
-						"/replaceitem entity @s slot.weapon.mainhand 0 air"
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/summon entity:shandu_visible"
 					]
 				},
 				"mirror_b": {

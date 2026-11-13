@@ -1,0 +1,39 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.shandu":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"hide":"query.life_time <= 1"},
+						{"shandu":"math.mod(query.life_time,10) == 0"}
+					]
+				},
+				"hide": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s invisibility infinite 1 true"
+					]
+				},
+				"shandu": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon entity:muke",
+						"/effect @n[type=entity:muke] invisibility infinite 1 true",
+						"/tag @a remove shandu",
+						"/tag @a[r=12] add shandu",
+						"/function shandu"
+					]
+				}
+			}
+		}
+ 	}
+ }

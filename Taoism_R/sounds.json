@@ -15,6 +15,13 @@
           "hurt": { "sound": "empty", "volume": 0.0, "pitch": 1.0 }
         }
       },
+      "entity:seeker_sd": {
+        "volume": 1.0,
+        "pitch": [0.8, 1.2],
+        "events": {
+          "hurt": { "sound": "empty", "volume": 0.0, "pitch": 1.0 }
+        }
+      },
       "entity:machete": {
         "volume": 1.0,
         "pitch": [0.8, 1.2],

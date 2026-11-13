@@ -1,0 +1,22 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "entity:qi_mite",
+      "materials": { "default": "base", "invisible": "baseb" },
+      "textures": {
+        "default": "textures/entity/qi_mite"
+      },
+      "geometry": {
+        "default": "geometry.endermite"
+      },
+      "animations": {
+        "move": "animation.endermite.move"
+      },
+      "scripts": {
+        "animate": [ "move" ]
+      },
+      "render_controllers": [ "controller.render.zombie" ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.shandu_visible":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"shandu_visible":"query.life_time < 60"},
+						{"shandu_invisible":"query.life_time > 60"}
+					]
+				},
+				"shandu_visible": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @e[family=mandrill] invisibility 0 255 true"
+					]
+				},
+				"shandu_invisible": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @e[family=mandrill] invisibility infinite 1 true"
+					]
+				}
+			}
+		}
+ 	}
+ }

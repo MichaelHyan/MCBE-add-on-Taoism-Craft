@@ -210,6 +210,7 @@ item.items:pill.name=Малая пилюля возврата\n§o§7расхо�
 entity.taoism.table=Стол для талисманов
 entity.entity:partner.name=Собрат по Дао
 entity.taoism.peddler=Странствующий торговец
+entity.entity:peddler.name=Странствующий торговец
 item.items:ruler=Линейка Тяньпэн\n§o§7ограничение уровня:10\nОщущает зло
 item.items:sebooka.name=Тайное руководство - Обработка семи По [Изменённое]
 item.items:sebookb.name=Тайное руководство - Метод грома Тяньган
