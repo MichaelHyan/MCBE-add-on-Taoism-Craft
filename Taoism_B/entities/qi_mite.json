@@ -5,7 +5,15 @@
       "identifier": "entity:qi_mite",
       "is_spawnable": false,
       "is_summonable": true,
-      "is_experimental": false
+      "is_experimental": false,
+      "scripts": {
+        "animate": [
+          "qi_mite"
+        ]
+      },
+      "animations": {
+        "qi_mite": "controller.animation.qi_mite"
+      }
     },
     "component_groups": {
       "despawn": {
@@ -25,11 +33,11 @@
         "height": 0.3
       },
       "minecraft:health": {
-        "value": 5,
-        "max": 5
+        "value": 2,
+        "max": 2
       },
       "minecraft:attack": {
-        "damage": 2
+        "damage": 1
       },
       "minecraft:movement": {
         "value": 0.25

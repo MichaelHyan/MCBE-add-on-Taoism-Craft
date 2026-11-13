@@ -26,8 +26,6 @@
 							}
 					],
 					"on_entry": [
-						"/summon entity:muke",
-						"/effect @n[type=entity:muke] invisibility infinite 1 true",
 						"/tag @a remove shandu",
 						"/tag @a[r=12] add shandu",
 						"/function shandu"

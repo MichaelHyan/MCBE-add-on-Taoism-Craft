@@ -33,7 +33,7 @@
       "minecraft:timer": {
         "looping": false,
         "randomInterval": false,
-        "time": 61.0,
+        "time": 31.0,
         "time_down_event": {
           "event": "despawn",
           "target": "self"

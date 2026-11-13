@@ -7,15 +7,25 @@
       "is_summonable": true,
       "is_experimental": false,
       "scripts": {
-				"animate": [
-					"shandu",
-          "shandu_summon"
-				]
-			},
+        "animate": [
+          "shandu",
+          "shandu_summon",
+          "shandu_muke"
+        ]
+      },
       "animations": {
-				"shandu": "controller.animation.shandu",
-        "shandu_summon": "controller.animation.shandu_summon"
-			}
+        "shandu": "controller.animation.shandu",
+        "shandu_summon": "controller.animation.shandu_summon",
+        "shandu_muke": "controller.animation.shandu_muke"
+      }
+    },
+    "component_groups": {
+      "hide": {
+        "minecraft:transformation": {
+          "into": "entity:shandu_hide",
+          "delay": 10
+        }
+      }
     },
     "components": {
       "minecraft:despawn": {
@@ -33,8 +43,8 @@
         "height": 2.5
       },
       "minecraft:health": {
-        "value": 500,
-        "max": 500
+        "value": 1000,
+        "max": 1000
       },
       "minecraft:boss": {
         "name": "entity.entity:shandu.name",
@@ -63,14 +73,42 @@
         "suffocateTime": 0
       },
       "minecraft:follow_range": {
-        "value": 300,
-        "max": 300
+        "value": 60,
+        "max": 60
       },
       "minecraft:attack": {
-        "damage": 8
+        "damage": 10
+      },
+      "minecraft:on_target_acquired": {
+        "event": "acquired_target",
+        "target": "self"
+      },
+      "minecraft:on_target_escape": {
+        "event": "lost_target",
+        "target": "self"
       },
       "minecraft:behavior.hurt_by_target": {
         "priority": 1
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self"
+            },
+            "cause": "lava",
+            "damage_per_tick": 10
+          },
+          {
+            "filters": {
+              "test": "on_fire",
+              "subject": "self"
+            },
+            "cause": "fire_tick",
+            "damage_per_tick": 10
+          }
+        ]
       },
       "minecraft:behavior.nearest_attackable_target": {
         "priority": 2,
@@ -81,12 +119,12 @@
               "subject": "other",
               "value": "player"
             },
-            "max_dist": 300
+            "max_dist": 60
           }
         ],
         "must_reach": false,
         "must_see": false,
-        "within_radius": 300,
+        "within_radius": 60,
         "reselect_targets": true
       },
       "minecraft:behavior.melee_attack": {
@@ -109,6 +147,22 @@
         "priority": 7
       },
       "minecraft:conditional_bandwidth_optimization": {}
+    },
+    "events": {
+      "acquired_target": {
+        "remove": {
+          "component_groups": [
+            "hide"
+          ]
+        }
+      },
+      "lost_target": {
+        "add": {
+          "component_groups": [
+            "hide"
+          ]
+        }
+      }
     }
   }
 }

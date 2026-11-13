@@ -5,8 +5,8 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"shandu_visible":"query.life_time < 60"},
-						{"shandu_invisible":"query.life_time > 60"}
+						{"shandu_visible":"query.life_time < 30"},
+						{"shandu_invisible":"query.life_time > 30"}
 					]
 				},
 				"shandu_visible": {
