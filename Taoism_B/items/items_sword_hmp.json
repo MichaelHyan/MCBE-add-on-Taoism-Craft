@@ -29,7 +29,7 @@
         "movement_modifier": 1.0
       },
       "minecraft:use_animation": "bow",
-      "minecraft:icon": { "texture": "sword_hmp" }
+      "minecraft:icon": "sword_hmp"
     }
   }
 }
