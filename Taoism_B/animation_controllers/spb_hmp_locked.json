@@ -1,0 +1,24 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.spb_hmp_locked":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"spb_hmp":"query.life_time >= 0.5 && query.life_time <= 0.6"}
+					]
+				},
+				"spb_hmp": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @s ~~~ facing @p"
+					]
+				}
+			}
+		}
+ 	}
+ }

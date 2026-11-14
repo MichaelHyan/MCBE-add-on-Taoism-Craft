@@ -365,7 +365,8 @@
 						"/effect @s jump_boost 60 2 true",
 						"/effect @s health_boost 60 9 true",
 						"/effect @s speed 60 2 true",
-						"/replaceitem entity @s slot.weapon.mainhand 0 air"
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/summon entity:shandu_visible"
 					]
 				},
 				"mirror_c": {
@@ -378,7 +379,8 @@
 						"/scoreboard players set @s charge -300",
 						"/particle minecraft:totem_particle ~ ~1 ~",
 						"/effect @e[r=7,family=monster] slowness 10 255 true",
-						"/effect @e[r=7,family=monster] wither 10 5 true"
+						"/effect @e[r=7,family=monster] wither 10 5 true",
+						"/summon entity:shandu_visible"
 					]
 				},
 				"mirror_d": {
@@ -391,7 +393,8 @@
 						"/scoreboard players set @s charge -300",
 						"/particle minecraft:totem_particle ~ ~1 ~",
 						"/effect @e[type=player,r=10] regeneration 60 5 true",
-						"/effect @e[type=player,r=10] health_boost 60 9 true"
+						"/effect @e[type=player,r=10] health_boost 60 9 true",
+						"/summon entity:shandu_visible"
 					]
 				},
 				"bell_a": {

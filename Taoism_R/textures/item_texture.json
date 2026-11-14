@@ -661,6 +661,12 @@
     },
     "boots_c": {
       "textures": "textures/items/boots_c.png"
+    },
+    "sword_hmp": {
+      "textures": "textures/items/sword_hmp.png"
+    },
+    "sword_hfg": {
+      "textures": "textures/items/sword_hfg.png"
     }
   }
 }

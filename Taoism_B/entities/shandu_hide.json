@@ -5,7 +5,15 @@
       "identifier": "entity:shandu_hide",
       "is_spawnable": false,
       "is_summonable": true,
-      "is_experimental": false
+      "is_experimental": false,
+      "scripts": {
+        "animate": [
+          "detectre"
+        ]
+      },
+      "animations": {
+        "detectre": "controller.animation.detectre"
+      }
     },
     "component_groups": {
       "transform_shandu": {
@@ -20,7 +28,8 @@
       },
       "minecraft:type_family": {
         "family": [
-          "mob"
+          "mob",
+          "taoism_monster"
         ]
       },
       "minecraft:collision_box": {

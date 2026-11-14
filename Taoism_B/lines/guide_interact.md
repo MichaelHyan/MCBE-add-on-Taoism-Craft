@@ -72,7 +72,7 @@ items:shield_q-套上没人伤得了你，你也伤不了谁，攒的劲儿收�
 items:wond-跳加攻击往前窜一段，追人逃跑都行。
 items:fbusket-一开满地花，周围的都慢下来。
 items:lotus-站着放，二十五格内敌人掉血你回血。
-items:mirror_a-照一下跑得快跳得高，半分钟就没了。
+items:mirror_a-照一下跑得快跳得高，也能照到脏东西。
 items:mirror_b-比那面强些，一样一分钟就没。
 items:mirror_c-亮出来镇住一片，亡灵还掉血。
 items:mirror_d-照自己人，血厚加回血。
@@ -181,3 +181,18 @@ items:lottery-抽到不喜欢的签了？可以再抽一次。
 items:steelball-为什么它在转？
 items:rec-好像在哪里见过这种东西。
 fanart:machete-大祭司说，这个按理说就是朴刀。
+items:sword_hmp-可以消耗元气发射木属性元气，并借此攻击或生成移动用的藤曼。
+items:sword_hfg-将木属性元气弹转化为藤曼，并发射粒子攻击敌人。
+items:helmet_d-很普通的发髻，可以在上面加点装饰。
+items:helmet_a-可以自动为你回复一部分的元气。
+items:helmet_b-可以自动恢复大部分的元气。
+items:helmet_c-可以自动回满元气。
+items:chestplate_a-恢复一部分体力。
+items:chestplate_b-恢复一部分体力。
+items:chestplate_c-恢复一部分体力。
+items:leggings_a-阻挡一部分邪祟的侵害。
+items:leggings_b-可以阻挡尸毒的影响。
+items:leggings_c-阻挡邪祟的侵害。
+items:boots_a-可以驱散附近的邪祟。
+items:boots_b-可以驱散附近的邪祟。
+items:boots_c-可以驱散附近的邪祟。

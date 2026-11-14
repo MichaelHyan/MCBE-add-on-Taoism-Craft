@@ -10,13 +10,15 @@
         "animate": [
           "shandu",
           "shandu_summon",
-          "shandu_muke"
+          "shandu_muke",
+          "detectre"
         ]
       },
       "animations": {
         "shandu": "controller.animation.shandu",
         "shandu_summon": "controller.animation.shandu_summon",
-        "shandu_muke": "controller.animation.shandu_muke"
+        "shandu_muke": "controller.animation.shandu_muke",
+        "detectre": "controller.animation.detectre"
       }
     },
     "component_groups": {
@@ -28,6 +30,9 @@
       }
     },
     "components": {
+      "minecraft:loot": {
+        "table": "loot_tables/entities/shandu.json"
+      },
       "minecraft:despawn": {
         "despawn_from_distance": {}
       },
@@ -35,7 +40,8 @@
         "family": [
           "mob",
           "monster",
-          "mandrill"
+          "mandrill",
+          "taoism_monster"
         ]
       },
       "minecraft:collision_box": {

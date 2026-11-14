@@ -8,6 +8,20 @@
           "hurt": { "sound": "empty", "volume": 0.0, "pitch": 1.0 }
         }
       },
+      "entity:detector": {
+        "volume": 1.0,
+        "pitch": [0.8, 1.2],
+        "events": {
+          "hurt": { "sound": "empty", "volume": 0.0, "pitch": 1.0 }
+        }
+      },
+      "entity:detector_a": {
+        "volume": 1.0,
+        "pitch": [0.8, 1.2],
+        "events": {
+          "hurt": { "sound": "empty", "volume": 0.0, "pitch": 1.0 }
+        }
+      },
       "entity:spirit": {
         "volume": 1.0,
         "pitch": [0.8, 1.2],
@@ -16,6 +30,13 @@
         }
       },
       "entity:seeker_sd": {
+        "volume": 1.0,
+        "pitch": [0.8, 1.2],
+        "events": {
+          "hurt": { "sound": "empty", "volume": 0.0, "pitch": 1.0 }
+        }
+      },
+      "entity:seeker_hfg": {
         "volume": 1.0,
         "pitch": [0.8, 1.2],
         "events": {

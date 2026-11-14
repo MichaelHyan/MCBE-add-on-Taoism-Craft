@@ -1,0 +1,2 @@
+execute as @e[type=entity:spb_hmp] at @s run event entity @s hmp_lock
+execute as @e[type=entity:spb_hmp] at @s if entity @e[type=entity:spb_hmp,rm=0.5] run tp @s ~ ~ ~ facing @e[type=entity:spb_hmp,rm=0.5,c=1,sort=nearest]

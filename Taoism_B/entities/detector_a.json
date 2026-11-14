@@ -7,13 +7,13 @@
       "is_summonable": true,
       "is_experimental": false,
       "scripts": {
-				"animate": [
-					"detector_b"
-				]
-			},
+        "animate": [
+          "detector_b"
+        ]
+      },
       "animations": {
-				"detector_b": "controller.animation.detector_b"
-			}
+        "detector_b": "controller.animation.detector_b"
+      }
     },
     "components": {
       "minecraft:collision_box": {
@@ -39,6 +39,27 @@
           "max_optimized_distance": 100.0,
           "max_dropped_ticks": 7,
           "use_motion_prediction_hints": true
+        }
+      },
+      "minecraft:timer": {
+        "looping": false,
+        "time": 8,
+        "time_down_event": {
+          "event": "despawn_event"
+        }
+      }
+    },
+    "component_groups": {
+      "despawn": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "events": {
+      "despawn_event": {
+        "add": {
+          "component_groups": [
+            "despawn"
+          ]
         }
       }
     }

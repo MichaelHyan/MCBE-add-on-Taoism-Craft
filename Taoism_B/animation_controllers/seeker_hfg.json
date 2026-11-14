@@ -1,0 +1,26 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.seeker_hfg":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"seeker_a":"1==1"}
+					]
+				},
+				"seeker_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:villager_happy ~ ~1 ~",
+						"/damage @e[family=monster,r=3] 20",
+						"/tp @s ^ ^ ^1 facing @n[family=monster,r=25]"
+					]
+				}
+			}
+		}
+ 	}
+ }

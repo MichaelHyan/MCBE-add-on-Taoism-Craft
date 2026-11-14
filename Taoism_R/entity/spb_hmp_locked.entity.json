@@ -1,0 +1,19 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "entity:spb_hmp_locked",
+      "materials": { "default": "base", "invisible": "baseb" },
+      "textures": { "default": "textures/entity/spbb" },
+      "geometry": { "default": "geometry.spb" },
+      "scripts": {
+        "animate": [ "lock_anim" ]
+      },
+      "animations": {
+        "lock_anim": "animation.spb_hmp.lock"
+      },
+      "render_controllers": [ "controller.render.zombie" ],
+      "enable_attachables": true
+    }
+  }
+}

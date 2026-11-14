@@ -58,11 +58,15 @@
         "breathesWater": true
       },
       "minecraft:follow_range": {
-        "value": 300,
-        "max": 300
+        "value": 60,
+        "max": 60
       },
       "minecraft:behavior.hurt_by_target": {
         "priority": 1
+      },
+      "minecraft:on_target_acquired": {
+        "event": "visible",
+        "target": "self"
       },
       "minecraft:behavior.nearest_attackable_target": {
         "priority": 2,
@@ -73,12 +77,12 @@
               "subject": "other",
               "value": "player"
             },
-            "max_dist": 300
+            "max_dist": 60
           }
         ],
         "must_reach": true,
         "must_see": false,
-        "within_radius": 300
+        "within_radius": 60
       },
       "minecraft:behavior.melee_attack": {
         "priority": 2,
@@ -118,6 +122,12 @@
           "component_groups": [
             "despawn"
           ]
+        }
+      },
+      "visible": {
+        "queue_command": {
+          "command": "effect @s invisibility 0 255 true",
+          "target": "self"
         }
       }
     }

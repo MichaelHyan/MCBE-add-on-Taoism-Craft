@@ -1,32 +1,35 @@
 {
-  "format_version": "1.20.10",
+  "format_version": "1.20.60",
   "minecraft:item": {
     "description": {
-      "identifier": "items:shooter"
+      "identifier": "items:sword_hfg"
     },
     "components": {
       "minecraft:stacked_by_data": true,
       "minecraft:foil": false,
       "minecraft:max_stack_size": 1,
-      "minecraft:cooldown": { "category": "machete_shooter", "duration": 0.3 },
-      "minecraft:projectile": { "minimum_critical_power": 1, "projectile_entity": "entity:machete" },
+      "minecraft:cooldown": { "category": "snowball", "duration": 0.3 },
       "minecraft:shooter": {
         "ammunition": [
           {
-            "item": "minecraft:arrow",
+            "item": "items:spe",
             "use_offhand": true,
             "search_inventory": true,
             "use_in_creative": true
           }
         ],
         "charge_on_draw": false,
-        "max_draw_duration": 0,
+        "max_draw_duration": 0.5,
         "scale_power_by_draw_duration": false,
+        "launch_power_scale": 1.0,
         "max_launch_power": 5
       },
-      "minecraft:use_duration": 0,
+      "minecraft:use_modifiers": {
+        "use_duration": 0.5,
+        "movement_modifier": 1.0
+      },
       "minecraft:use_animation": "bow",
-      "minecraft:icon": { "texture": "machete" }
+      "minecraft:icon": { "texture": "sword_hfg" }
     }
   }
 }

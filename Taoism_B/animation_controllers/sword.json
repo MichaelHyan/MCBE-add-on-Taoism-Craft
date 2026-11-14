@@ -46,7 +46,13 @@
 						{"sword_c_b":"query.get_equipped_item_name=='sword_c' && query.is_sneaking && query.scoreboard('sword_c_level') > 24 && query.player_level > 24"},
 						{"sword_c_c":"query.get_equipped_item_name=='sword_c' && !variable.attack_time && query.scoreboard('sword_c_level') > 0 && query.player_level > 24"},
 						{"sword_d_a":"query.get_equipped_item_name=='sword_d' && variable.attack_time && query.scoreboard('swordatkcd') >= 0 && query.player_level > 24"},
-						{"sword_d_b":"query.get_equipped_item_name=='sword_d' && query.is_sneaking && query.scoreboard('charge') >= 0 && query.player_level > 24"}
+						{"sword_d_b":"query.get_equipped_item_name=='sword_d' && query.is_sneaking && query.scoreboard('charge') >= 0 && query.player_level > 24"},
+						{"sword_hmp_a":"query.get_equipped_item_name=='sword_hmp' && query.is_jumping"},
+						{"sword_hmp_b":"query.get_equipped_item_name=='sword_hmp' && variable.attack_time && !query.is_sneaking && query.scoreboard('swordatkcd') >= 0"},
+						{"sword_hmp_c":"query.get_equipped_item_name=='sword_hmp' && variable.attack_time && query.is_sneaking"},
+						{"sword_hmp_d":"query.get_equipped_item_name=='sword_hmp'"},
+						{"sword_hfg_a":"query.get_equipped_item_name=='sword_hfg' && variable.attack_time && !query.is_sneaking"},
+						{"sword_hfg_b":"query.get_equipped_item_name=='sword_hfg' && variable.attack_time && query.is_sneaking && query.scoreboard('swordatkcd') >= 0"}
 					]
 				},
 				"sword_t_a": {
@@ -581,6 +587,73 @@
 						"/particle minecraft:totem_particle ~ ~1 ~",
 						"/summon entity:sword_d_target",
 						"/scoreboard players set @s charge -4"
+					]
+				},
+				"sword_hmp_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/event entity @n[type=entity:spb_hmp] hmp_on",
+						"/tp @s ^ ^ ^1 facing @n[type=entity:spb_hmp]",
+						"/kill @e[type=entity:spb_hmp,r=2]"
+					]
+				},
+				"sword_hmp_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add hmp dummy",
+						"/scoreboard players set @e[type=entity:spb_hmp] hmp 1",
+						"/scoreboard players set @s swordatkcd -3"
+					]
+				},
+				"sword_hmp_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @e[type=entity:spb_hmp]"
+					]
+				},
+				"sword_hmp_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/event entity @n[type=entity:spb_hmp] hmp_off",
+						"/effect @s strength 3 2 true"
+					]
+				},
+				"sword_hfg_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/event entity @n[type=entity:spb_hmp] hmp_lock"
+					]
+				},
+				"sword_hfg_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add hmp dummy",
+						"/scoreboard players set @e[type=entity:spb_hmp_locked] hmp 1",
+						"/scoreboard players set @s swordatkcd -3"
 					]
 				}
 			}

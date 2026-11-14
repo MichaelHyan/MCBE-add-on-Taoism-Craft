@@ -1,0 +1,33 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.spb_hmp.aim": {
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"bb_main": {
+					"rotation": {
+						"0.0": [ "90 + query.rotation_to_camera(0) + 12", "query.rotation_to_camera(1)", 0.0 ]
+					},
+					"scale": {
+						"0.0": [ 1.0, "math.max(0.5, query.distance_from_camera * 8)", 1.0 ]
+					}
+				}
+			}
+		},
+		"animation.spb_hmp.lock": {
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"bb_main": {
+					"rotation": {
+						"0.0": [ 85.0, 0.0, 0.0 ]
+					},
+					"scale": {
+						"0.0": [ 1.0, 160.0, 1.0 ]
+					}
+				}
+			}
+		}
+	}
+}

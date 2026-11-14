@@ -6,8 +6,7 @@
 				"base_jeta":{
 					"transitions":[
 						{"detector_a":"query.life_time <= 5"},
-						{"detector_b":"query.life_time > 5 && query.life_time <= 8"},
-						{"detector_c":"query.life_time > 8"}
+						{"detector_b":"query.life_time > 5"}
 					]
 				},
 				"detector_a": {
@@ -29,16 +28,6 @@
 					],
 					"on_entry": [
 						"/tp @s ^ ^ ^0.5 facing @n[family=taoism_monster]"
-					]
-				},
-				"detector_c": {
-					"transitions": [
-							{
-								"base_jeta": "(1.0)"
-							}
-					],
-					"on_entry": [
-						"/kill @s"
 					]
 				}
 			}
