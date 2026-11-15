@@ -39,6 +39,7 @@
 					"on_entry": [
 						"/scoreboard objectives add godmode dummy",
 						"/scoreboard players set @s godmode 300",
+						"/summon entity:shandu_visible",
 						"/playsound seal"
 					]
 				}

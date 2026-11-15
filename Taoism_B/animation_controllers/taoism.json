@@ -379,8 +379,7 @@
 						"/scoreboard players set @s charge -300",
 						"/particle minecraft:totem_particle ~ ~1 ~",
 						"/effect @e[r=7,family=monster] slowness 10 255 true",
-						"/effect @e[r=7,family=monster] wither 10 5 true",
-						"/summon entity:shandu_visible"
+						"/effect @e[r=7,family=monster] wither 10 5 true"
 					]
 				},
 				"mirror_d": {
@@ -393,8 +392,7 @@
 						"/scoreboard players set @s charge -300",
 						"/particle minecraft:totem_particle ~ ~1 ~",
 						"/effect @e[type=player,r=10] regeneration 60 5 true",
-						"/effect @e[type=player,r=10] health_boost 60 9 true",
-						"/summon entity:shandu_visible"
+						"/effect @e[type=player,r=10] health_boost 60 9 true"
 					]
 				},
 				"bell_a": {

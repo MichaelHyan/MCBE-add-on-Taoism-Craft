@@ -9,18 +9,20 @@
       "scripts": {
         "animate": [
           "point_ctrl",
-          "spb_hmp_lock_atk"
+          "spb_hmp_lock_atk",
+          "spb_hmp_lift"
         ]
       },
       "animations": {
         "point_ctrl": "controller.animation.spb_hmp_locked",
-        "spb_hmp_lock_atk": "controller.animation.spb_hmp_lock_atk"
+        "spb_hmp_lock_atk": "controller.animation.spb_hmp_lock_atk",
+        "spb_hmp_lift": "controller.animation.spb_hmp_lift"
       }
     },
     "components": {
       "minecraft:collision_box": {
-        "width": 1,
-        "height": 1
+        "width": 0,
+        "height": 0
       },
       "minecraft:type_family": {
         "family": [

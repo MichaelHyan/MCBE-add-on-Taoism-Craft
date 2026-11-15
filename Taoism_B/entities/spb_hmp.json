@@ -5,12 +5,20 @@
       "identifier": "entity:spb_hmp",
       "is_spawnable": false,
       "is_summonable": true,
-      "is_experimental": false
+      "is_experimental": false,
+      "scripts": {
+        "animate": [
+          "spb_hmp"
+        ]
+      },
+      "animations": {
+        "spb_hmp": "controller.animation.spb_hmp"
+      }
     },
     "components": {
       "minecraft:collision_box": {
-        "width": 1,
-        "height": 1
+        "width": 0,
+        "height": 0
       },
       "minecraft:type_family": {
         "family": [

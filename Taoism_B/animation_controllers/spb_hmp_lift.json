@@ -1,0 +1,27 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.spb_hmp_lift":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"spb_hmp":"query.scoreboard('hmp') == 2"}
+					]
+				},
+				"spb_hmp": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon entity:spb_hmp_lift ~~~",
+						"/effect @a[r=25] levitation 3 5 true",
+						"/effect @a[r=15] slow_falling 7 1 true",
+						"/scoreboard players set @s hmp 0"
+					]
+				}
+			}
+		}
+ 	}
+ }
