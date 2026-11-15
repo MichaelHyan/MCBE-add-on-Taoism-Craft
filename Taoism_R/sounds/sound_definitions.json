@@ -79,5 +79,11 @@
       "name": "sounds/kc",
       "stream": true
     }]
+  },
+  "lottery": {
+    "sounds": [{
+      "name": "sounds/lottery",
+      "stream": true
+    }]
   }
 }
