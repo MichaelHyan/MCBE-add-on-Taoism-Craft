@@ -28,7 +28,7 @@
 					],
 					"on_entry": [
 						"/tag @a remove shandu",
-						"/tag @a[r=12] add shandu",
+						"/tag @e[r=12,family=!monster,type=!item] add shandu",
 						"/function shandu"
 					]
 				}
