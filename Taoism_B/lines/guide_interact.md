@@ -196,3 +196,7 @@ items:leggings_c-阻挡邪祟的侵害。
 items:boots_a-可以驱散附近的邪祟。
 items:boots_b-可以驱散附近的邪祟。
 items:boots_c-可以驱散附近的邪祟。
+minecraft:potato-这好像是那谁的服务器。
+minecraft:wheat-你知道吗？我老家曾经有个专门研究水稻的人，据说研究出来的水稻能长盐碱地里！
+minecraft:ink_sac-用这个写字会褪色哦。
+items:rapid_crossbow-桑百发够吗？

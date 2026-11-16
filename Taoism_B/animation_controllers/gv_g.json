@@ -1,0 +1,24 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.gv_g":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"stand_keep":"1==1"}
+					]
+				},
+				"stand_keep": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @e[type=entity:crazydiamond] ^-0.5 ^0.2 ^-1 facing @p"
+					]
+				}
+			}
+		}
+ 	}
+ }

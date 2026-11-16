@@ -85,5 +85,11 @@
       "name": "sounds/lottery",
       "stream": true
     }]
+  },
+  "crazydiamond": {
+    "sounds": [{
+      "name": "sounds/crazydiamond",
+      "stream": true
+    }]
   }
 }

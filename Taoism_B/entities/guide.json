@@ -10,13 +10,15 @@
         "animate": [
           "guide",
           "guide_teleport",
-          "guide_random"
+          "guide_random",
+          "gv_g"
         ]
       },
       "animations": {
         "guide": "controller.animation.guide",
         "guide_teleport": "controller.animation.guide_teleport",
-        "guide_random": "controller.animation.guide_random"
+        "guide_random": "controller.animation.guide_random",
+        "gv_g": "controller.animation.gv_g"
       }
     },
     "component_groups": {
@@ -175,6 +177,28 @@
               "event": "sit"
             },
             "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "diamond"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "crazydiamond"
+            },
+            "use_item": true,
             "interact_text": "addon.get.items"
           },
           {
@@ -5104,6 +5128,94 @@
             },
             "use_item": false,
             "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:potato"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_potato"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:wheat"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_wheat"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:ink_sac"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_ink_sac"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "items:rapid_crossbow"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_items_rapid_crossbow"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
           }
         ]
       },
@@ -5489,6 +5601,16 @@
           "component_groups": [
             "djv"
           ]
+        }
+      },
+      "crazydiamond": {
+        "queue_command": {
+          "command": [
+            "summon entity:crazydiamond",
+            "effect @a[r=5] regeneration 9 4 true",
+            "playsound crazydiamond @a[r=5]"
+          ],
+          "target": "self"
         }
       },
       "guide_say_items_cinnabar_crystal": {
@@ -6676,6 +6798,30 @@
       "guide_say_items_boots_c": {
         "queue_command": {
           "command": "say 可以驱散附近的邪祟。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_potato": {
+        "queue_command": {
+          "command": "say 这好像是那谁的服务器。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_wheat": {
+        "queue_command": {
+          "command": "say 你知道吗？我老家曾经有个专门研究水稻的人，据说研究出来的水稻能长盐碱地里！",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_ink_sac": {
+        "queue_command": {
+          "command": "say 用这个写字会褪色哦。",
+          "target": "self"
+        }
+      },
+      "guide_say_items_rapid_crossbow": {
+        "queue_command": {
+          "command": "say 桑百发够吗？",
           "target": "self"
         }
       }
