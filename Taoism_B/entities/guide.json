@@ -5216,6 +5216,578 @@
             },
             "use_item": false,
             "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:dandelion"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_dandelion"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:poppy"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_poppy"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:blue_orchid"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_blue_orchid"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:allium"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_allium"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:azure_bluet"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_azure_bluet"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:red_tulip"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_red_tulip"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:orange_tulip"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_orange_tulip"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:white_tulip"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_white_tulip"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:pink_tulip"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_pink_tulip"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:oxeye_daisy"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_oxeye_daisy"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:cornflower"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_cornflower"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:lily_of_the_valley"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_lily_of_the_valley"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:wither_rose"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_wither_rose"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:torchflower"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_torchflower"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:open_eyeblossom"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_open_eyeblossom"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:closed_eyeblossom"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_closed_eyeblossom"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:cactus_flower"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_cactus_flower"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:sunflower"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_sunflower"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:lilac"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_lilac"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:rose_bush"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_rose_bush"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:peony"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_peony"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:pitcher_plant"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_pitcher_plant"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:chorus_flower"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_chorus_flower"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:spore_blossom"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_spore_blossom"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:flowering_azalea"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_flowering_azalea"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:pink_petals"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_pink_petals"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
           }
         ]
       },
@@ -6822,6 +7394,162 @@
       "guide_say_items_rapid_crossbow": {
         "queue_command": {
           "command": "say 桑百发够吗？",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_dandelion": {
+        "queue_command": {
+          "command": "say 蒲公英的花语是无法停留的爱、自由、希望、坚韧。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_poppy": {
+        "queue_command": {
+          "command": "say 虞美人的花语是安慰、遗忘、生离死别、悲歌。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_blue_orchid": {
+        "queue_command": {
+          "command": "say 兰花的花语是高洁、典雅、坚贞不渝、神秘梦幻。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_allium": {
+        "queue_command": {
+          "command": "say 绒球葱的花语是团结、圆满、勇敢、好运。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_azure_bluet": {
+        "queue_command": {
+          "command": "say 蓝花美耳草的花语是纯真、幸福、小小的爱。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_red_tulip": {
+        "queue_command": {
+          "command": "say 红色郁金香的花语是热爱、爱的告白。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_orange_tulip": {
+        "queue_command": {
+          "command": "say 橙色郁金香的花语是热情、温暖、美好祝愿。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_white_tulip": {
+        "queue_command": {
+          "command": "say 白色郁金香的花语是纯洁、无瑕、失恋。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_pink_tulip": {
+        "queue_command": {
+          "command": "say 粉色郁金香的花语是爱惜、幸福、友谊。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_oxeye_daisy": {
+        "queue_command": {
+          "command": "say 滨菊的花语是纯真、和平、希望、深藏的爱。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_cornflower": {
+        "queue_command": {
+          "command": "say 矢车菊的花语是遇见、幸福、优雅、细致。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_lily_of_the_valley": {
+        "queue_command": {
+          "command": "say 铃兰的花语是幸福归来、纯洁、谦逊。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_wither_rose": {
+        "queue_command": {
+          "command": "say 凋零玫瑰的花语是死亡、绝望、憎恨、不可预知的未来。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_torchflower": {
+        "queue_command": {
+          "command": "say 火把花的花语是热情、光明、希望、向上。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_open_eyeblossom": {
+        "queue_command": {
+          "command": "say 眼眸花的花语是沉思、安静、内敛的思念。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_closed_eyeblossom": {
+        "queue_command": {
+          "command": "say 眼眸花的花语是沉思、安静、内敛的思念。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_cactus_flower": {
+        "queue_command": {
+          "command": "say 仙人掌花的花语是坚强、等待、外刚内柔。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_sunflower": {
+        "queue_command": {
+          "command": "say 向日葵的花语是沉默的爱、忠诚、信念、光辉。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_lilac": {
+        "queue_command": {
+          "command": "say 丁香的花语是初恋、纯洁、忧愁、光辉。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_rose_bush": {
+        "queue_command": {
+          "command": "say 玫瑰丛的花语是热情、爱、美丽、勇敢。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_peony": {
+        "queue_command": {
+          "command": "say 牡丹的花语是富贵、圆满、雍容华贵。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_pitcher_plant": {
+        "queue_command": {
+          "command": "say 瓶子草的花语是诱惑、危险的美、猎手。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_chorus_flower": {
+        "queue_command": {
+          "command": "say 紫颂花的花语是神秘、永恒的美、异界幻想。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_spore_blossom": {
+        "queue_command": {
+          "command": "say 孢子花的花语是隐秘、生机、顽强的生命力。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_flowering_azalea": {
+        "queue_command": {
+          "command": "say 盛开的杜鹃花丛的花语是永远属于你、爱的喜悦、繁荣。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_pink_petals": {
+        "queue_command": {
+          "command": "say 粉红色花瓣的花语是生命、幸福、纯洁、短暂而美丽。",
           "target": "self"
         }
       }
