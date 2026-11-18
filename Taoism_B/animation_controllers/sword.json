@@ -351,6 +351,7 @@
 						"/fill ~-1 ~-1 ~-1 ~1 ~1 ~1 fire replace air",
 						"/effect @s fire_resistance 20 1 true",
 						"/weather clear",
+						"/damage @e[family=mandrill,r=2] 25",
 						"/effect @s resistance 20 2 true",
 						"/effect @s hunger 20 1 true",
 						"/enchant @s fire_aspect 2",
