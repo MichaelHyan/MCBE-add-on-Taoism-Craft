@@ -5,7 +5,8 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"hide":"query.life_time <= 1"}
+						{"hide":"query.life_time <= 1"},
+						{"appear":"variable.attack_time"}
 					]
 				},
 				"hide": {
@@ -16,6 +17,16 @@
 					],
 					"on_entry": [
 						"/effect @s invisibility infinite 1 true"
+					]
+				},
+				"appear": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s clear"
 					]
 				}
 			}
