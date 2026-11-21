@@ -309,3 +309,5 @@ items:itemGroup.name.food=食品类
 items:itemGroup.name.village=村庄更新类
 items:itemGroup.name.scripture=经书类
 items:itemGroup.name.misc=其他
+entity.entity:tickloader_marker.name=!
+entity.entity:tickloader_dead.name=!

@@ -20,7 +20,9 @@
 						"/scoreboard objectives add spawnc dummy",
 						"/scoreboard players set @s spawnc 1",
 						"/function bgmstop",
-						"/summon entity:zombie_mimic_c_dead"
+						"/summon entity:zombie_mimic_c_dead",
+						"/kill @e[type=entity:tickloader_dead]",
+						"/summon entity:tickloader_dead"
 					]
 				},
 				"dead_b": {

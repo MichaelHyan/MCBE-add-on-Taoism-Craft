@@ -309,3 +309,5 @@ items:itemGroup.name.food=Food
 items:itemGroup.name.village=Village Update
 items:itemGroup.name.scripture=Scriptures
 items:itemGroup.name.misc=Miscellaneous
+entity.entity:tickloader_marker.name=!
+entity.entity:tickloader_dead.name=!

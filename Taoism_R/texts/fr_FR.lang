@@ -309,3 +309,5 @@ items:itemGroup.name.food=Nourriture
 items:itemGroup.name.village=Mise à jour du village
 items:itemGroup.name.scripture=Écritures
 items:itemGroup.name.misc=Divers
+entity.entity:tickloader_marker.name=!
+entity.entity:tickloader_dead.name=!

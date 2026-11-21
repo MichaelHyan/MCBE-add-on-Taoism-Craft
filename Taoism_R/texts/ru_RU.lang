@@ -309,3 +309,5 @@ items:itemGroup.name.food=Еда
 items:itemGroup.name.village=Обновление деревни
 items:itemGroup.name.scripture=Писания
 items:itemGroup.name.misc=Разное
+entity.entity:tickloader_marker.name=!
+entity.entity:tickloader_dead.name=!

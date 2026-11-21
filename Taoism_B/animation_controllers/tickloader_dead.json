@@ -1,0 +1,36 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.tickloader_dead":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"tickloader_dead_a":"query.life_time == 1"},
+						{"tickloader_dead_b":"query.life_time == 2"}
+					]
+				},
+				"tickloader_dead_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tickingarea remove dead_location"
+					]
+				},
+				"tickloader_dead_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tickingarea add circle ~ ~ ~ 2 dead_location",
+						"/say 临时区块已保存"
+					]
+				}
+			}
+		}
+ 	}
+ }

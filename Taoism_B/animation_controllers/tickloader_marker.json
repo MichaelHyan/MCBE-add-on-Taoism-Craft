@@ -1,0 +1,36 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.tickloader_marker":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"tickloader_marker_a":"query.life_time == 1"},
+						{"tickloader_marker_b":"query.life_time == 2"}
+					]
+				},
+				"tickloader_marker_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tickingarea remove marker_location"
+					]
+				},
+				"tickloader_marker_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tickingarea add circle ~ ~ ~ 2 marker_location",
+						"/say 临时区块已保存"
+					]
+				}
+			}
+		}
+ 	}
+ }
