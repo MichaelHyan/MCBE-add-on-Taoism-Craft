@@ -2,11 +2,7 @@
   "format_version": "1.21.50",
   "minecraft:item": {
     "description": {
-      "identifier": "items:chestplate_c",
-      "menu_category": {
-        "category": "equipment",
-        "group": "minecraft:itemGroup.name.chestplate"
-      }
+      "identifier": "items:chestplate_c"
     },
     "components": {
       "minecraft:max_stack_size": 1,

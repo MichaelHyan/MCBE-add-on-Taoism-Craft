@@ -1,0 +1,285 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:crafting_items_catalog": {
+    "categories": [
+      {
+        "category_name": "items",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "items:talisman",
+              "name": "items:itemGroup.name.talisman"
+            },
+            "items": [
+              "items:talisman",
+              "items:talisman_t",
+              "items:talisman_e",
+              "items:talisman_g",
+              "items:talisman_a",
+              "items:tca",
+              "items:tcb",
+              "items:tcc",
+              "items:tcd",
+              "items:tce",
+              "items:tcf",
+              "items:tab",
+              "items:tac",
+              "items:tad",
+              "items:tae",
+              "items:tba",
+              "items:tbb",
+              "items:tbc",
+              "items:tbd",
+              "items:tbe",
+              "items:tbf",
+              "items:echa",
+              "items:echb",
+              "items:tcg",
+              "items:tag",
+              "items:tbg",
+              "items:ta",
+              "items:tb",
+              "items:tc",
+              "items:ua",
+              "items:ub",
+              "items:uc",
+              "items:ud",
+              "items:ue",
+              "items:uf",
+              "items:ug"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "items:gourd",
+              "name": "items:itemGroup.name.ritual"
+            },
+            "items": [
+              "items:lightning_wood",
+              "items:mirror_a",
+              "items:mirror_b",
+              "items:mirror_c",
+              "items:mirror_d",
+              "items:cane",
+              "items:bell_s",
+              "items:bell_a",
+              "items:gourd",
+              "items:firegourd",
+              "items:spegourd",
+              "items:wul",
+              "items:whisk",
+              "items:ring",
+              "items:bottle",
+              "items:tup",
+              "items:phase",
+              "items:klj",
+              "items:sguard",
+              "items:bglpa",
+              "items:bglpb",
+              "items:qi_c",
+              "items:qi_sword",
+              "items:qi_sword_off",
+              "items:ruler",
+              "items:sword_f",
+              "items:seal",
+              "items:seal_e",
+              "items:shield_q",
+              "items:fbusket",
+              "items:lotus"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "items:scripture_t",
+              "name": "items:itemGroup.name.scripture"
+            },
+            "items": [
+              "items:scripture_t",
+              "items:scripture_f",
+              "items:scripture_s",
+              "items:acbook",
+              "items:guide",
+              "items:txpa",
+              "items:txpb",
+              "items:txpc",
+              "items:scripture_ft",
+              "items:sebookb",
+              "items:sebookc",
+              "items:sebookd",
+              "items:sebooke"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "items:helmet_a",
+              "name": "items:itemGroup.name.accessory"
+            },
+            "items": [
+              "items:helmet_d",
+              "items:helmet_a",
+              "items:helmet_b",
+              "items:helmet_c",
+              "items:chestplate_a",
+              "items:chestplate_b",
+              "items:chestplate_c",
+              "items:leggings_a",
+              "items:leggings_b",
+              "items:leggings_c",
+              "items:boots_a",
+              "items:boots_b",
+              "items:boots_c"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "items:cinnabar_crystal",
+              "name": "items:itemGroup.name.material"
+            },
+            "items": [
+              "items:pearl",
+              "items:spe",
+              "items:qi",
+              "items:brush_n",
+              "items:brush_p",
+              "items:cinnabar_crystal",
+              "items:cinnabar_powder",
+              "items:spirit",
+              "items:fish_belly",
+              "items:fish_gelatin",
+              "items:herb",
+              "items:glutinous_rice",
+              "items:pearlz_p",
+              "items:pearlz_o",
+              "items:pearlz_s",
+              "items:pearlz",
+              "items:scripture_b",
+              "items:pill",
+              "items:soul_powder",
+              "items:fball",
+              "items:partner",
+              "items:totem_f",
+              "items:lottery"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "items:table",
+              "name": "items:itemGroup.name.furniture"
+            },
+            "items": [
+              "items:table",
+              "items:table_sp",
+              "items:cabinet",
+              "items:desk",
+              "items:stoola",
+              "items:stoolb",
+              "items:stoolc",
+              "items:bike",
+              "items:burner",
+              "items:burnera"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "items:spba",
+              "name": "items:itemGroup.name.qi_orb"
+            },
+            "items": [
+              "items:spba",
+              "items:spbb",
+              "items:spbc",
+              "items:spbd",
+              "items:spbe"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ny:dumpling_a",
+              "name": "items:itemGroup.name.food"
+            },
+            "items": [
+              "ny:dumpling_a",
+              "ny:dumpling_b",
+              "ny:dumpling_c",
+              "ny:dumpling_d",
+              "ny:dumpling_e",
+              "ny:dumpling_f",
+              "ny:pigskin_jelly",
+              "ny:scrambled_chicken",
+              "ny:braised_pork",
+              "ny:braised_fish",
+              "ny:noodles",
+              "ny:steamed_bun",
+              "ny:rice",
+              "ny:rice_cake",
+              "ny:mooncake_a",
+              "ny:mooncake_b",
+              "ny:mooncake_c",
+              "ny:mooncake_dry_a",
+              "ny:mooncake_dry_b",
+              "ny:mooncake_dry_c",
+              "ny:flour",
+              "ny:cabbage",
+              "ny:onion",
+              "ny:ginger",
+              "ny:garlic",
+              "ny:salt",
+              "ny:seasoning",
+              "ny:dumpling_wrapper",
+              "ny:pigskin",
+              "ny:pigoil",
+              "ny:nutfilling",
+              "ny:beanfilling"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "construction:core",
+              "name": "items:itemGroup.name.village"
+            },
+            "items": [
+              "construction:constructor_flat",
+              "construction:constructor_vertical",
+              "construction:constructor_target",
+              "construction:constructor_filler",
+              "construction:constructor_rotate",
+              "construction:construction_unit_a",
+              "construction:construction_unit_b",
+              "construction:construction_unit_c",
+              "construction:construction_unit_d",
+              "construction:construction_unit_e",
+              "construction:construction_unit_f",
+              "construction:construction_unit_g",
+              "construction:construction_unit_h",
+              "construction:construction_unit_i",
+              "construction:construction_unit_j",
+              "construction:decoy",
+              "construction:bowgun",
+              "construction:core"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "items:disk_taoism",
+              "name": "items:itemGroup.name.misc"
+            },
+            "items": [
+              "items:ball",
+              "items:disk_taoism",
+              "items:lottery",
+              "items:rec",
+              "items:steelball",
+              "items:sword_ql",
+              "items:sword_qi_t1",
+              "items:sword_qi_t2",
+              "items:sword_qi_t3",
+              "items:talisman_ql",
+              "fanart:machete",
+              "items:rapid_crossbow"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

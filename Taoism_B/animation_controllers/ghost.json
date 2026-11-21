@@ -6,7 +6,7 @@
 				"base_jeta":{
 					"transitions":[
 						{"dreadhint":"query.player_level > 25 && query.time_of_day >= 0.5 && query.time_of_day <= 0.51 && query.moon_phase == 0"},
-						{"dreadstart":"query.scoreboard('sleepchoice') == 7 && query.time_of_day >= 0.75 && query.time_of_day <= 0.76"},
+						{"dreadstart":"query.scoreboard('sleepchoice') == 7 && query.time_of_day >= 0.75 && query.time_of_day <= 0.76 && query.moon_phase == 0"},
 						{"dreadend":"query.scoreboard('sleepchoice') == 7 && query.time_of_day > 0.2 && query.time_of_day < 0.5"},
 						{"choicea":"query.scoreboard('sleepchoice') != 7 && math.random_integer(0,6) == 0 && query.time_of_day >= 0.5 && query.time_of_day <= 0.51"},
 						{"choiceb":"query.scoreboard('sleepchoice') != 7 && math.random_integer(0,6) == 1 && query.time_of_day >= 0.5 && query.time_of_day <= 0.51"},
