@@ -2,17 +2,17 @@
   "format_version": "1.16.0",
   "minecraft:entity": {
     "description": {
-      "identifier": "entity:shandu_visible",
+      "identifier": "entity:visible",
       "is_spawnable": false,
       "is_summonable": true,
       "is_experimental": false,
       "scripts": {
 				"animate": [
-					"shandu_visible"
+					"visible"
 				]
 			},
       "animations": {
-				"shandu_visible": "controller.animation.shandu_visible"
+				"visible": "controller.animation.visible"
 			}
     },
     "events": {

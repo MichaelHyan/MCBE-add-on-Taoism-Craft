@@ -87,7 +87,9 @@
 					"swordaddon_chargestatus",
 					"swordaddon_chargehint",
 					"swordaddon_defence",
-					"swordaddon_critical"
+					"swordaddon_critical",
+          "pearladdon_control",
+          "pearladdon_fly"
 				]
 			},
       "animations": {
@@ -171,7 +173,9 @@
 				"swordaddon_chargestatus": "controller.animation.swordaddon_chargestatus",
 				"swordaddon_chargehint": "controller.animation.swordaddon_chargehint",
 				"swordaddon_defence": "controller.animation.swordaddon_defence",
-				"swordaddon_critical": "controller.animation.swordaddon_critical"
+				"swordaddon_critical": "controller.animation.swordaddon_critical",
+        "pearladdon_control": "controller.animation.pearladdon_control",
+        "pearladdon_fly": "controller.animation.pearladdon_fly"
 			}
     },
 

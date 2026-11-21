@@ -1,0 +1,425 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.pearladdon_control":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"pearl_trigger_a":"query.get_equipped_item_name=='pearl' && query.scoreboard('spb') == 6 && query.scoreboard('pearladdon_level') == 1 && query.is_using_item && query.scoreboard('swordatkcd') >= 0"},
+						{"pearl_trigger_b":"query.get_equipped_item_name=='pearl' && query.scoreboard('spb') == 6 && query.scoreboard('pearladdon_level') >= 2 && query.is_using_item && query.scoreboard('swordatkcd') >= 0"},
+						{"pearl_countdown_a":"query.scoreboard('pearladdon_cd') > 0 && math.mod(query.scoreboard('pearladdon_cd'),6) == 0"},
+						{"pearl_countdown_b":"query.scoreboard('pearladdon_cd') > 0 && math.mod(query.scoreboard('pearladdon_cd'),6) == 1"},
+						{"pearl_countdown_c":"query.scoreboard('pearladdon_cd') > 0 && math.mod(query.scoreboard('pearladdon_cd'),6) == 2"},
+						{"pearl_countdown_d":"query.scoreboard('pearladdon_cd') > 0 && math.mod(query.scoreboard('pearladdon_cd'),6) == 3"},
+						{"pearl_countdown_e":"query.scoreboard('pearladdon_cd') > 0 && math.mod(query.scoreboard('pearladdon_cd'),6) == 4"},
+						{"pearl_countdown_f":"query.scoreboard('pearladdon_cd') > 0 && math.mod(query.scoreboard('pearladdon_cd'),6) == 5"}
+					]
+				},
+				"pearl_trigger_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s pearladdon_cd 300",
+						"/scoreboard players set @s swordatkcd -5",
+						"/summon entity:visible"
+					]
+				},
+				"pearl_trigger_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s pearladdon_cd 300",
+						"/effect @s absorption 30 2 true",
+						"/scoreboard players set @s swordatkcd -5",
+						"/summon entity:visible"
+					]
+				},
+				"pearl_countdown_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s pearladdon_cd -1",
+						"/scoreboard players set @s cdr 9",
+						"/title @s actionbar §7=== §0=== §7==="
+					]
+				},
+				"pearl_countdown_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s pearladdon_cd -1",
+						"/scoreboard players set @s cdr 9",
+						"/title @s actionbar §0=§7== =§0== =§7=="
+					]
+				},
+				"pearl_countdown_c": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s pearladdon_cd -1",
+						"/scoreboard players set @s cdr 9",
+						"/title @s actionbar §0==§7= ==§0= ==§7="
+					]
+				},
+				"pearl_countdown_d": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s pearladdon_cd -1",
+						"/scoreboard players set @s cdr 9",
+						"/title @s actionbar §0=== §7=== §0==="
+					]
+				},
+				"pearl_countdown_e": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s pearladdon_cd -1",
+						"/scoreboard players set @s cdr 9",
+						"/title @s actionbar §7=§0== =§7== =§0=="
+					]
+				},
+				"pearl_countdown_f": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s pearladdon_cd -1",
+						"/scoreboard players set @s cdr 9",
+						"/title @s actionbar §7==§0= ==§7= ==§0="
+					]
+				}
+			}
+		},
+		"controller.animation.pearladdon_fly":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"fly_a":"query.scoreboard('pearladdon_cd') > 0 && query.scoreboard('pearladdon_level') == 3 && query.is_jumping && math.random_integer(0,23) == 0"},
+						{"fly_b":"query.scoreboard('pearladdon_cd') > 0 && query.scoreboard('pearladdon_level') == 3 && query.is_jumping && math.random_integer(0,23) == 1"},
+						{"fly_c":"query.scoreboard('pearladdon_cd') > 0 && query.scoreboard('pearladdon_level') == 3 && query.is_jumping && math.random_integer(0,23) == 2"},
+						{"fly_d":"query.scoreboard('pearladdon_cd') > 0 && query.scoreboard('pearladdon_level') == 3 && query.is_jumping && math.random_integer(0,23) == 3"},
+						{"fly_e":"query.scoreboard('pearladdon_cd') > 0 && query.scoreboard('pearladdon_level') == 3 && query.is_jumping && math.random_integer(0,23) == 4"},
+						{"fly_f":"query.scoreboard('pearladdon_cd') > 0 && query.scoreboard('pearladdon_level') == 3 && query.is_jumping && math.random_integer(0,23) == 5"},
+						{"fly_g":"query.scoreboard('pearladdon_cd') > 0 && query.scoreboard('pearladdon_level') == 3 && query.is_jumping && math.random_integer(0,23) == 6"},
+						{"fly_h":"query.scoreboard('pearladdon_cd') > 0 && query.scoreboard('pearladdon_level') == 3 && query.is_jumping && math.random_integer(0,23) == 7"},
+						{"fly_i":"query.scoreboard('pearladdon_cd') > 0 && query.scoreboard('pearladdon_level') == 3 && query.is_jumping && math.random_integer(0,23) == 8"},
+						{"fly_j":"query.scoreboard('pearladdon_cd') > 0 && query.scoreboard('pearladdon_level') == 3 && query.is_jumping && math.random_integer(0,23) == 9"},
+						{"fly_k":"query.scoreboard('pearladdon_cd') > 0 && query.scoreboard('pearladdon_level') == 3 && query.is_jumping && math.random_integer(0,23) == 10"},
+						{"fly_l":"query.scoreboard('pearladdon_cd') > 0 && query.scoreboard('pearladdon_level') == 3 && query.is_jumping && math.random_integer(0,23) == 11"},
+						{"fly_m":"query.scoreboard('pearladdon_cd') > 0 && query.scoreboard('pearladdon_level') == 3 && query.is_jumping && math.random_integer(0,23) == 12"},
+						{"fly_n":"query.scoreboard('pearladdon_cd') > 0 && query.scoreboard('pearladdon_level') == 3 && query.is_jumping && math.random_integer(0,23) == 13"},
+						{"fly_o":"query.scoreboard('pearladdon_cd') > 0 && query.scoreboard('pearladdon_level') == 3 && query.is_jumping && math.random_integer(0,23) == 14"},
+						{"fly_p":"query.scoreboard('pearladdon_cd') > 0 && query.scoreboard('pearladdon_level') == 3 && query.is_jumping && math.random_integer(0,23) == 15"},
+						{"fly_q":"query.scoreboard('pearladdon_cd') > 0 && query.scoreboard('pearladdon_level') == 3 && query.is_jumping && math.random_integer(0,23) == 16"},
+						{"fly_r":"query.scoreboard('pearladdon_cd') > 0 && query.scoreboard('pearladdon_level') == 3 && query.is_jumping && math.random_integer(0,23) == 17"},
+						{"fly_s":"query.scoreboard('pearladdon_cd') > 0 && query.scoreboard('pearladdon_level') == 3 && query.is_jumping && math.random_integer(0,23) == 18"},
+						{"fly_t":"query.scoreboard('pearladdon_cd') > 0 && query.scoreboard('pearladdon_level') == 3 && query.is_jumping && math.random_integer(0,23) == 19"},
+						{"fly_u":"query.scoreboard('pearladdon_cd') > 0 && query.scoreboard('pearladdon_level') == 3 && query.is_jumping && math.random_integer(0,23) == 20"},
+						{"fly_v":"query.scoreboard('pearladdon_cd') > 0 && query.scoreboard('pearladdon_level') == 3 && query.is_jumping && math.random_integer(0,23) == 21"},
+						{"fly_w":"query.scoreboard('pearladdon_cd') > 0 && query.scoreboard('pearladdon_level') == 3 && query.is_jumping && math.random_integer(0,23) == 22"},
+						{"fly_x":"query.scoreboard('pearladdon_cd') > 0 && query.scoreboard('pearladdon_level') == 3 && query.is_jumping && math.random_integer(0,23) == 23"},
+						{"fly_y":"query.scoreboard('pearladdon_cd') > 0 && query.scoreboard('pearladdon_level') == 3 && !query.is_jumping"}
+					]
+				},
+				"fly_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 3 true",
+						"/particle minecraft:balloon_gas_particle ~1 ~0.2 ~0"
+					]
+				},
+				"fly_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 3 true",
+						"/particle minecraft:balloon_gas_particle ~-1 ~0.2 ~0"
+					]
+				},
+				"fly_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 3 true",
+						"/particle minecraft:balloon_gas_particle ~0 ~0.2 ~1"
+					]
+				},
+				"fly_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 3 true",
+						"/particle minecraft:balloon_gas_particle ~0 ~0.2 ~-1"
+					]
+				},
+				"fly_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 3 true",
+						"/particle minecraft:balloon_gas_particle ~0.7 ~0.2 ~0.7"
+					]
+				},
+				"fly_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 3 true",
+						"/particle minecraft:balloon_gas_particle ~-0.7 ~0.2 ~0.7"
+					]
+				},
+				"fly_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 3 true",
+						"/particle minecraft:balloon_gas_particle ~0.7 ~0.2 ~-0.7"
+					]
+				},
+				"fly_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 3 true",
+						"/particle minecraft:balloon_gas_particle ~-0.7 ~0.2 ~-0.7"
+					]
+				},
+				"fly_i": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 3 true",
+						"/particle minecraft:balloon_gas_particle ~1 ~1.0 ~0"
+					]
+				},
+				"fly_j": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 3 true",
+						"/particle minecraft:balloon_gas_particle ~-1 ~1.0 ~0"
+					]
+				},
+				"fly_k": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 3 true",
+						"/particle minecraft:balloon_gas_particle ~0 ~1.0 ~1"
+					]
+				},
+				"fly_l": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 3 true",
+						"/particle minecraft:balloon_gas_particle ~0 ~1.0 ~-1"
+					]
+				},
+				"fly_m": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 3 true",
+						"/particle minecraft:balloon_gas_particle ~0.7 ~1.0 ~0.7"
+					]
+				},
+				"fly_n": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 3 true",
+						"/particle minecraft:balloon_gas_particle ~-0.7 ~1.0 ~0.7"
+					]
+				},
+				"fly_o": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 3 true",
+						"/particle minecraft:balloon_gas_particle ~0.7 ~1.0 ~-0.7"
+					]
+				},
+				"fly_p": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 3 true",
+						"/particle minecraft:balloon_gas_particle ~-0.7 ~1.0 ~-0.7"
+					]
+				},
+				"fly_q": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 3 true",
+						"/particle minecraft:balloon_gas_particle ~1 ~1.8 ~0"
+					]
+				},
+				"fly_r": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 3 true",
+						"/particle minecraft:balloon_gas_particle ~-1 ~1.8 ~0"
+					]
+				},
+				"fly_s": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 3 true",
+						"/particle minecraft:balloon_gas_particle ~0 ~1.8 ~1"
+					]
+				},
+				"fly_t": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 3 true",
+						"/particle minecraft:balloon_gas_particle ~0 ~1.8 ~-1"
+					]
+				},
+				"fly_u": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 3 true",
+						"/particle minecraft:balloon_gas_particle ~0.7 ~1.8 ~0.7"
+					]
+				},
+				"fly_v": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 3 true",
+						"/particle minecraft:balloon_gas_particle ~-0.7 ~1.8 ~0.7"
+					]
+				},
+				"fly_w": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 3 true",
+						"/particle minecraft:balloon_gas_particle ~0.7 ~1.8 ~-0.7"
+					]
+				},
+				"fly_x": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s levitation 1 3 true",
+						"/particle minecraft:balloon_gas_particle ~-0.7 ~1.8 ~-0.7"
+					]
+				},
+				"fly_y": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s slow_falling 3 1 true"
+					]
+				}
+			}
+		}
+ 	}
+ }

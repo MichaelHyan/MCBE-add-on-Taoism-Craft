@@ -41,7 +41,8 @@
           "mob",
           "monster",
           "mandrill",
-          "taoism_monster"
+          "taoism_monster",
+          "invisibility"
         ]
       },
       "minecraft:collision_box": {

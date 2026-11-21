@@ -17,7 +17,8 @@
         "family": [
           "mob",
           "monster",
-          "mandrill"
+          "mandrill",
+          "invisibility"
         ]
       },
       "minecraft:collision_box": {
