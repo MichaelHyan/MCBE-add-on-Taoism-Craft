@@ -4,30 +4,30 @@
 		"description": {
 			"identifier": "items:sword_hfg",
 			"materials": {
-				"default": "entity",
+				"default": "entity_alphatest",
 				"enchanted": "entity_alphatest_glint"
 			},
 			"textures": {
-        "default": "textures/items/sword_hfg",
-        "enchanted": "textures/misc/enchanted_item_glint"
-      },
-      "geometry": {
-        "default": "geometry.qi_sword_off"
-      },
+				"default": "textures/items/sword_hfg",
+				"enchanted": "textures/misc/enchanted_item_glint"
+			},
+			"geometry": {
+				"default": "geometry.sword_hfg_attachable"
+			},
 			"animations": {
-        "hold_first_person": "animation.attachable_item.hold_first_person",
-        "hold_third_person": "animation.attachable_item.hold_third_person"
-      },
-      "scripts": {
-        "animate": [
-          {
-            "hold_first_person": "context.is_first_person == 1.0"
-          },
-          {
-            "hold_third_person": "context.is_first_person == 0.0"
-          }
-        ]
-      },
+				"hold_first_person": "animation.attachable_item.hold_first_person",
+				"hold_third_person": "animation.attachable_item.hold_third_person"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"hold_first_person": "context.is_first_person == 1.0"
+					},
+					{
+						"hold_third_person": "context.is_first_person == 0.0"
+					}
+				]
+			},
 			"render_controllers": [
 				"controller.render.item_default"
 			]

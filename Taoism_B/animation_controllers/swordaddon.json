@@ -1,0 +1,267 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.swordaddon_cd":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"cd":"query.scoreboard('swordaddon_cd') < 0"}
+					]
+				},
+				"cd": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s swordaddon_cd 1"
+					]
+				}
+			}
+		},
+		"controller.animation.swordaddon_charge":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"charge_a":"query.scoreboard('swordaddon_chargelevel') == 1 && query.scoreboard('swordaddon_charge') < 30 && !variable.attack_time"},
+						{"charge_b":"query.scoreboard('swordaddon_chargelevel') == 2 && query.scoreboard('swordaddon_charge') < 60 && !variable.attack_time"},
+						{"charge_c":"query.scoreboard('swordaddon_chargelevel') == 3 && query.scoreboard('swordaddon_charge') < 90 && !variable.attack_time"}
+					]
+				},
+				"charge_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s swordaddon_charge 1",
+						"/particle minecraft:end_chest ~ ~0.3 ~"
+					]
+				},
+				"charge_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s swordaddon_charge 1",
+						"/particle minecraft:end_chest ~ ~0.3 ~"
+					]
+				},
+				"charge_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s swordaddon_charge 1",
+						"/particle minecraft:end_chest ~ ~0.3 ~"
+					]
+				}
+			}
+		},
+		"controller.animation.swordaddon_chargestatus":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"charge_a":"query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_sword') && query.scoreboard('swordaddon_charge') > 0 && query.scoreboard('swordaddon_charge') <= 30"},
+						{"charge_b":"query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_sword') && query.scoreboard('swordaddon_charge') > 30 && query.scoreboard('swordaddon_charge') <= 60"},
+						{"charge_c":"query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_sword') && query.scoreboard('swordaddon_charge') > 60 && query.scoreboard('swordaddon_charge') <= 90"}
+					]
+				},
+				"charge_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s strength 1 1 true"
+					]
+				},
+				"charge_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s strength 1 3 true"
+					]
+				},
+				"charge_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s strength 1 5 true"
+					]
+				}
+			}
+		},
+		"controller.animation.swordaddon_chargehint":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"hint_a":"query.scoreboard('swordaddon_charge') == 29"},
+						{"hint_b":"query.scoreboard('swordaddon_charge') == 59"},
+						{"hint_c":"query.scoreboard('swordaddon_charge') == 89"}
+					]
+				},
+				"hint_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:totem_particle ~ ~1 ~"
+					]
+				},
+				"hint_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:totem_particle ~ ~1 ~"
+					]
+				},
+				"hint_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:totem_particle ~ ~1 ~"
+					]
+				}
+			}
+		},
+		"controller.animation.swordaddon_defence":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"defence_a":"query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_sword') && query.scoreboard('swordaddon_defence') == 1 && query.scoreboard('swordaddon_defencestatus') == 0 && query.is_sneaking && query.scoreboard('swordaddon_charge') >= 30"},
+						{"defence_b":"query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_sword') && query.scoreboard('swordaddon_defence') == 2 && query.scoreboard('swordaddon_defencestatus') == 0 && query.is_sneaking && query.scoreboard('swordaddon_charge') >= 30"},
+						{"defence_c":"query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_sword') && query.scoreboard('swordaddon_defence') == 3 && query.scoreboard('swordaddon_defencestatus') == 0 && query.is_sneaking && query.scoreboard('swordaddon_charge') >= 30"},
+						{"reset":"query.scoreboard('swordaddon_defencestatus') == 1 && !query.is_sneaking"}
+					]
+				},
+				"defence_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:sonic_explosion ^ ^1.2 ^1",
+						"/effect @s resistance 1 4 true",
+						"/scoreboard players add @s swordaddon_charge -30",
+						"/scoreboard players set @s swordaddon_defencestatus 1"
+					]
+				},
+				"defence_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:sonic_explosion ^ ^1.2 ^1",
+						"/effect @s resistance 1 255 true",
+						"/scoreboard players add @s swordaddon_charge -30",
+						"/scoreboard players set @s swordaddon_defencestatus 1"
+					]
+				},
+				"defence_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:sonic_explosion ^ ^1.2 ^1",
+						"/effect @s resistance 1 255 true",
+						"/scoreboard players add @s swordaddon_charge -30",
+						"/scoreboard players set @s swordaddon_defencestatus 1",
+						"/replaceitem entity @e[family=monster,r=2] slot.weapon.mainhand 0 air"
+					]
+				},
+				"reset": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s swordaddon_defencestatus 0"
+					]
+				}
+			}
+		},
+		"controller.animation.swordaddon_critical":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"slash_a":"query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_sword') && query.scoreboard('swordaddon_critical') == 1 && query.scoreboard('swordaddon_cd') >= 0 && variable.attack_time && query.vertical_speed < 0 && query.scoreboard('swordaddon_charge') >= 30"},
+						{"slash_b":"query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_sword') && query.scoreboard('swordaddon_critical') == 2 && query.scoreboard('swordaddon_cd') >= 0 && variable.attack_time && query.vertical_speed < 0 && query.scoreboard('swordaddon_charge') >= 30"},
+						{"slash_c":"query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_sword') && query.scoreboard('swordaddon_critical') == 3 && query.scoreboard('swordaddon_cd') >= 0 && variable.attack_time && query.vertical_speed < 0 && query.scoreboard('swordaddon_charge') >= 30"}
+					]
+				},
+				"slash_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:smash_ground_particle ~~~",
+						"/scoreboard players set @s swordaddon_cd -10",
+						"/scoreboard players add @s swordaddon_charge -30"
+					]
+				},
+				"slash_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:smash_ground_particle ~~~",
+						"/scoreboard players set @s swordaddon_cd -10",
+						"/scoreboard players add @s swordaddon_charge -30",
+						"/effect @e[type=!player,r=5] slowness 3 255 true",
+						"/effect @e[type=!player,r=5] weakness 3 255 true"
+					]
+				},
+				"slash_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:smash_ground_particle ~~~",
+						"/scoreboard players set @s swordaddon_cd -10",
+						"/scoreboard players add @s swordaddon_charge -30",
+						"/effect @e[type=!player,r=5] slowness 3 255 true",
+						"/effect @e[type=!player,r=5] weakness 3 255 true",
+						"/replaceitem entity @e[family=monster,r=3] slot.armor.head 0 air",
+						"/replaceitem entity @e[family=monster,r=3] slot.armor.chest 0 air",
+						"/replaceitem entity @e[family=monster,r=3] slot.armor.legs 0 air",
+						"/replaceitem entity @e[family=monster,r=3] slot.armor.feet 0 air"
+					]
+				}
+			}
+		}
+ 	}
+ }

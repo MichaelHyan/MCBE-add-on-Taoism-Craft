@@ -8,7 +8,7 @@
       "is_summonable": false,
       "scripts": {
 				"animate": [
-					"taoism",
+          "taoism",
           "swordatkcd",
 					"sword",
           "sword_c",
@@ -81,7 +81,13 @@
 					"accessory_head",
 					"accessory_chest",
 					"accessory_legs",
-					"accessory_feet"
+					"accessory_feet",
+					"swordaddon_cd",
+					"swordaddon_charge",
+					"swordaddon_chargestatus",
+					"swordaddon_chargehint",
+					"swordaddon_defence",
+					"swordaddon_critical"
 				]
 			},
       "animations": {
@@ -159,7 +165,13 @@
 				"accessory_head": "controller.animation.accessory_head",
 				"accessory_chest": "controller.animation.accessory_chest",
 				"accessory_legs": "controller.animation.accessory_legs",
-				"accessory_feet": "controller.animation.accessory_feet"
+				"accessory_feet": "controller.animation.accessory_feet",
+				"swordaddon_cd": "controller.animation.swordaddon_cd",
+				"swordaddon_charge": "controller.animation.swordaddon_charge",
+				"swordaddon_chargestatus": "controller.animation.swordaddon_chargestatus",
+				"swordaddon_chargehint": "controller.animation.swordaddon_chargehint",
+				"swordaddon_defence": "controller.animation.swordaddon_defence",
+				"swordaddon_critical": "controller.animation.swordaddon_critical"
 			}
     },
 
