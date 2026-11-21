@@ -34,7 +34,7 @@
 					"transitions": [{ "base_jeta": "(1.0)" }],
 					"on_entry": [
 						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
-						"/damage @e[type=!player,type=!item,r=3] 2",
+						"/damage @e[type=!player,type=!item,r=3] 2 entity_attack entity @s",
 						"/scoreboard players set @s charge 0"
 					]
 				},

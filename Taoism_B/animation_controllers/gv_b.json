@@ -98,7 +98,7 @@
 						"/summon lightning_bolt",
 						"/particle minecraft:sonic_explosion ~ ~0.5 ~",
 						"/scoreboard players add @s voltage -20",
-						"/damage @e[r=3,type=!item,type=!player,family=!taoism] 10"
+						"/damage @e[r=3,type=!item,type=!player,family=!taoism] 10 entity_attack entity @s"
 					]
 				},
 				"gv_b_f": {

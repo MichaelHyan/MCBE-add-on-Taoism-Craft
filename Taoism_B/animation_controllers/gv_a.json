@@ -35,8 +35,8 @@
 					"on_entry": [
 						"/scoreboard players add @s voltage -2",
 						"/effect @s regeneration 1 5 true",
-						"/damage @e[r=3,type=!player,type=!item,family=!taoism] 1",
-						"/damage @e[tag=qlock] 5",
+						"/damage @e[r=3,type=!player,type=!item,family=!taoism] 1 entity_attack entity @s",
+						"/damage @e[tag=qlock] 5 entity_attack entity @s",
 						"/effect @s slow_falling 1 1 true",
 						"/particle minecraft:sonic_explosion ~ ~0.5 ~"
 					]

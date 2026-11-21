@@ -351,11 +351,11 @@
 						"/fill ~-1 ~-1 ~-1 ~1 ~1 ~1 fire replace air",
 						"/effect @s fire_resistance 20 1 true",
 						"/weather clear",
-						"/damage @e[family=mandrill,r=2] 25",
+						"/damage @e[family=mandrill,r=2] 25 entity_attack entity @s",
 						"/effect @s resistance 20 2 true",
 						"/effect @s hunger 20 1 true",
 						"/enchant @s fire_aspect 2",
-						"/damage @e[family=monster,r=2] 5"
+						"/damage @e[family=monster,r=2] 5 entity_attack entity @s"
 					]
 				},
 				"sword_za_b": {
@@ -551,7 +551,7 @@
 					"on_entry": [
 						"/scoreboard objectives add sword_c_level dummy",
 						"/scoreboard players add @s sword_c_level -24",
-						"/damage @e[family=monster,r=5] 10",
+						"/damage @e[family=monster,r=5] 10 entity_attack entity @s",
 						"/damage @s 2",
 						"/particle minecraft:smash_ground_particle ~~~"
 					]
@@ -574,7 +574,7 @@
 					],
 					"on_entry": [
 						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
-						"/damage @e[tag=target] 7",
+						"/damage @e[tag=target] 7 entity_attack entity @s",
 						"/tag @e[tag=target] remove target",
 						"/scoreboard players set @s swordatkcd -3",
 						"/enchant @s sharpness 5"

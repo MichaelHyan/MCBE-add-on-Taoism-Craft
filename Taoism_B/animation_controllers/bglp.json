@@ -41,8 +41,8 @@
 						"/effect @e[family=monster,rm=10,r=25] slowness 1 1 true",
 						"/effect @e[family=monster,rm=5,r=10] slowness 1 3 true",
 						"/effect @e[family=monster,rm=1,r=5] slowness 1 255 true",
-						"/damage @e[family=monster,rm=5,r=25] 1",
-						"/damage @e[family=monster,r=5] 3",
+						"/damage @e[family=monster,rm=5,r=25] 1 entity_attack entity @s",
+						"/damage @e[family=monster,r=5] 3 entity_attack entity @s",
 						"/effect @e[type=player,rm=5,r=25] regeneration 1 3 true",
 						"/effect @e[type=player,r=5] regeneration 1 5 true",
 						"/function bglp1"

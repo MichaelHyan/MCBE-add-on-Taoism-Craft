@@ -17,7 +17,7 @@
 					],
 					"on_entry": [
 						"/scoreboard objectives add charge dummy",
-						"/damage @e[family=undead,r=25] 1",
+						"/damage @e[family=undead,r=25] 1 entity_attack entity @s",
 						"/effect @e[family=undead,r=25] slowness 1 255 true",
 						"/effect @e[type=player,r=25] slowness 0 255 true",
 						"/effect @e[type=player,r=25] instant_health 1 1 true",
@@ -39,7 +39,7 @@
 						}
 					],
 					"on_entry": [
-						"/damage @e[family=undead,r=25] 1",
+						"/damage @e[family=undead,r=25] 1 entity_attack entity @s",
 						"/effect @e[type=player,r=25] instant_health 1 1 true",
 						"/scoreboard players add @s charge -1"
 					]

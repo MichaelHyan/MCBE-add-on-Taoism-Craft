@@ -18,7 +18,7 @@
 					"on_entry": [
 						"/particle minecraft:basic_flame_particle ~ ~1 ~",
 						"/tp ^ ^ ^2 facing @n[tag=qlock]",
-						"/damage @e[tag=qlock,r=3] 25",
+						"/damage @e[tag=qlock,r=3] 25 entity_attack entity @s",
 						"/effect @e[tag=qlock,r=3] weakness 10 255 true",
 						"/tag @e[r=3] remove qlock"
 					]
