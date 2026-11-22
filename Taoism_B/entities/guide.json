@@ -6715,7 +6715,7 @@
       },
       "guide_say_items_firegourd": {
         "queue_command": {
-          "command": "say 副手搁着，空着手就能凝火丹。",
+          "command": "say 将魂魄凝结成火球发射出去。",
           "target": "self"
         }
       },

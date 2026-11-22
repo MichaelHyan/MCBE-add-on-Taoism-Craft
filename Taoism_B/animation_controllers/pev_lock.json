@@ -1,0 +1,48 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.pev_lock":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"init": "query.life_time == 1"},
+						{"unlock": "query.is_alive == 0"},
+						{"lockon": "query.health < 50 && query.scoreboard('charge') == 0"}
+					]
+				},
+				"init": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:sword_e"
+					]
+				},
+				"unlock": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @e[type=entity:sword_ua_sp_b]"
+					]
+				},
+				"lockon": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add charge dummy",
+						"/scoreboard players set @s charge 1",
+						"/summon entity:sword_ua_sp_b"
+					]
+				}
+			}
+		}
+	}
+}

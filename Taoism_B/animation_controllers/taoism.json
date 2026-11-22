@@ -45,8 +45,7 @@
 						{"shield_use_a":"query.get_equipped_item_name=='shield_q' && query.is_using_item && query.scoreboard('shieldcd') >= 0 && query.player_level > 19"},
 						{"shield_use_b":"query.get_equipped_item_name=='shield_q' && query.scoreboard('shieldcd') < 0"},
 						{"sword_ts":"query.get_equipped_item_name=='sword_ts' && variable.attack_time && query.player_level > 9"},
-						{"firegourd_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:firegourd') && query.is_item_equipped == 0 && query.player_level > 24"},
-						{"firegourd_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:firegourd') && query.is_item_equipped != 0 && query.player_level > 24"},
+						{"firegourd":"query.get_equipped_item_name=='firegourd' && query.player_level > 24"},
 						{"bella_a":"query.get_equipped_item_name=='bell_a' && variable.attack_time && query.scoreboard('charge') >= 0"},
 						{"seal":"query.get_equipped_item_name=='seal' && variable.attack_time && query.scoreboard('godmodecd') >= 0 && query.player_level > 44"},
 						{"herb":"query.get_equipped_item_name=='herb' && query.is_using_item"},
@@ -573,17 +572,7 @@
 						"/enchant @s smite 5"
 					]
 				},
-				"firegourd_a": {
-					"transitions": [
-							{
-								"base_jeta": "(1.0)"
-							}
-					],
-					"on_entry": [
-						"/replaceitem entity @s slot.weapon.mainhand 0 items:fball"
-					]
-				},
-				"firegourd_b": {
+				"firegourd": {
 					"transitions": [
 							{
 								"base_jeta": "(1.0)"

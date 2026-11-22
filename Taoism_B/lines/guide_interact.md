@@ -86,7 +86,7 @@ items:ring-蓄力甩出去，附近的家伙都缴械。
 items:bottle-主手回血，副手搁着魂魄就化成元气。
 items:tup-抬头亮一亮，下蹲就隔墙往上去了。
 items:klj-左键一点，跟最近的换个位置。
-items:firegourd-副手搁着，空着手就能凝火丹。
+items:firegourd-将魂魄凝结成火球发射出去。
 items:spegourd-搁副手，两秒替你充一次冷却。
 items:sguard-往地上一杵，十五格内敌人挨打还慢。
 items:bglpa-站住别动才有用，一动就散。

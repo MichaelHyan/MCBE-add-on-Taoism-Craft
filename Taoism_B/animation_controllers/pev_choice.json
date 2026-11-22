@@ -1,0 +1,126 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.pev_choice": {
+			"initial_state": "base_jeta",
+			"states": {
+				"base_jeta": {
+					"on_entry": [
+						"v.pev_next = query.life_time + 10;"
+					],
+					"transitions": [
+						{ "roll": "query.life_time >= v.pev_next" }
+					]
+				},
+				"roll": {
+					"on_entry": [
+						"v.pev_choice = math.random_integer(0, 3);"
+					],
+					"transitions": [
+						{ "choice_a_a": "v.pev_choice == 0 && query.health >= 150" },
+						{ "choice_b_a": "v.pev_choice == 1 && query.health >= 150" },
+						{ "choice_c_a": "v.pev_choice == 2 && query.health >= 150" },
+						{ "choice_d_a": "v.pev_choice == 3 && query.health >= 150" },
+						{ "choice_a_b": "v.pev_choice == 0 && query.health >= 50" },
+						{ "choice_b_b": "v.pev_choice == 1 && query.health >= 50" },
+						{ "choice_c_b": "v.pev_choice == 2 && query.health >= 50" },
+						{ "choice_d_b": "v.pev_choice == 3 && query.health >= 50" },
+						{ "base_jeta": "v.pev_choice > 3 || v.pev_choice < 0" }
+					]
+				},
+				"choice_a_a": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/effect @s clear",
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:sword_za",
+						"/fill ~-5 ~-5 ~-5 ~5 ~5 ~5 fire replace air",
+						"/summon entity:bell_hp_c ~ ~ ~",
+						"/summon entity:bell_hp_d ~ ~ ~"
+					]
+				},
+				"choice_b_a": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/effect @s clear",
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:sword_sp",
+						"/effect @s speed 5 2"
+					]
+				},
+				"choice_c_a": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/effect @s clear",
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:soul_banner",
+						"/summon entity:zombie_mimic_sp ~4 ~2 ~4",
+						"/summon entity:zombie_mimic_sp ~4 ~2 ~-4",
+						"/summon entity:zombie_mimic_sp ~-4 ~2 ~4",
+						"/summon entity:zombie_mimic_sp ~-4 ~2 ~-4"
+					]
+				},
+				"choice_d_a": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/effect @s clear",
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:sword_za",
+						"/tp @n[type=player,r=30]",
+						"/damage @n[type=player,r=30] 15",
+						"/summon lightning_bolt",
+						"/playsound mob.shulker.teleport @a[r=10]"
+					]
+				},
+				"choice_a_b": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/effect @s clear",
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:sword_za",
+						"/fill ~-5 ~-5 ~-5 ~5 ~5 ~5 fire replace air",
+						"/summon entity:bell_hp_c ~ ~ ~",
+						"/summon entity:bell_hp_d ~ ~ ~"
+					]
+				},
+				"choice_b_b": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/effect @s clear",
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:sword_sp",
+						"/effect @s speed 5 2"
+					]
+				},
+				"choice_c_b": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/effect @s clear",
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:soul_banner",
+						"/summon entity:zombie_mimic_sp ~4 ~2 ~4",
+						"/summon entity:zombie_mimic_sp ~4 ~2 ~-4",
+						"/summon entity:zombie_mimic_sp ~-4 ~2 ~4",
+						"/summon entity:zombie_mimic_sp ~-4 ~2 ~-4"
+					]
+				},
+				"choice_d_b": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:tbd",
+						"/effect @s regeneration infinite 1 true"
+					]
+				}
+			}
+		}
+	}
+}
