@@ -17,8 +17,15 @@
         "pev_lock": "controller.animation.pev_lock"
 			}
     },
-    "component_groups": {},
+    "component_groups": {
+      "despawn": {
+        "minecraft:instant_despawn": {}
+      }
+    },
     "components": {
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      },
       "minecraft:nameable": {
       },
       "minecraft:type_family": {

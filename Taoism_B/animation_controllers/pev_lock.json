@@ -27,7 +27,9 @@
 							}
 					],
 					"on_entry": [
-						"/kill @e[type=entity:sword_ua_sp_b]"
+						"/kill @e[type=entity:sword_ua_sp_b]",
+						"/scoreboard players set @a evil 0",
+						"/title @a actionbar 阴冷的感觉消失了"
 					]
 				},
 				"lockon": {

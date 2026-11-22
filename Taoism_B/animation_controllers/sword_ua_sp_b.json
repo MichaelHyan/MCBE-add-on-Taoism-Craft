@@ -35,6 +35,8 @@
 							}
 					],
 					"on_entry": [
+						"/effect @e[type=entity:pev] instant_health 1 255 true",
+						"/scoreboard players set @e[type=entity:pev] charge 0",
 						"/summon lightning_bolt",
 						"/kill @p[r=2]",
 						"/kill @s"
