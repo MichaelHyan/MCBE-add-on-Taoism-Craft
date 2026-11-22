@@ -1,5 +1,5 @@
 {
-  "format_version": "1.8.0",
+  "format_version": "1.21.0",
   "minecraft:entity": {
     "description": {
       "identifier": "entity:pev",
@@ -22,7 +22,34 @@
         "minecraft:instant_despawn": {}
       }
     },
+    "events": {
+      "despawn": {
+        "add": {
+          "component_groups": [
+            "despawn"
+          ]
+        }
+      }
+    },
     "components": {
+      "minecraft:interact": {
+        "interactions": [
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  { "test": "is_family", "subject": "other", "value": "player" },
+                  { "test": "has_equipment", "subject": "other", "domain": "hand", "value": "items:scripture_s" }
+                ]
+              },
+              "event": "despawn",
+              "target": "self"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          }
+        ]
+      },
       "minecraft:despawn": {
         "despawn_from_distance": {}
       },
