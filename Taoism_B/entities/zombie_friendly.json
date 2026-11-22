@@ -65,9 +65,6 @@
       "minecraft:behavior.random_look_around": {
         "priority": 5
       },
-      "minecraft:behavior.hurt_by_target": {
-        "priority": 3
-      },
       "minecraft:behavior.nearest_attackable_target": {
         "must_reach": true,
         "must_see": false,

@@ -9,9 +9,9 @@
 						{"disk_a":"query.get_equipped_item_name=='disk_taoism' && query.is_using_item"},
 						{"disk_b":"query.get_equipped_item_name=='disk_taoism' && variable.attack_time"},
 						{"cinnabar":"query.get_equipped_item_name=='cinnabar_crystal' && query.player_level > 0"},
-						{"scripture_t":"query.get_equipped_item_name=='scripture_t' && variable.attack_time && query.player_level > 9"},
-						{"scripture_fa":"query.get_equipped_item_name=='scripture_f' && variable.attack_time && query.moon_phase == 1 && query.player_level > 9"},
-						{"scripture_fb":"query.get_equipped_item_name=='scripture_f' && variable.attack_time && query.moon_phase == 7 && query.player_level > 9"},
+						{"scripture_t":"query.get_equipped_item_name=='scripture_t' && variable.attack_time && query.player_level > 9 && query.scoreboard('evil') == 0"},
+						{"scripture_fa":"query.get_equipped_item_name=='scripture_f' && variable.attack_time && query.moon_phase == 1 && query.player_level > 9 && query.scoreboard('evil') == 0"},
+						{"scripture_fb":"query.get_equipped_item_name=='scripture_f' && variable.attack_time && query.moon_phase == 7 && query.player_level > 9 && query.scoreboard('evil') == 0"},
 						{"scripture_fc":"query.get_equipped_item_name=='scripture_f' && variable.attack_time && query.moon_phase != 1 && query.moon_phase != 7 && query.player_level > 9"},
 						{"scripture_b":"query.get_equipped_item_name=='scripture_b' && query.is_using_item && query.player_level > 9"},
 						{"scripture_ft":"query.get_equipped_item_name=='scripture_ft' && variable.attack_time && query.player_level > 9"},
@@ -45,7 +45,7 @@
 						{"shield_use_a":"query.get_equipped_item_name=='shield_q' && query.is_using_item && query.scoreboard('shieldcd') >= 0 && query.player_level > 19"},
 						{"shield_use_b":"query.get_equipped_item_name=='shield_q' && query.scoreboard('shieldcd') < 0"},
 						{"sword_ts":"query.get_equipped_item_name=='sword_ts' && variable.attack_time && query.player_level > 9"},
-						{"firegourd":"query.get_equipped_item_name=='firegourd' && query.player_level > 24"},
+						{"firegourd":"query.get_equipped_item_name=='firegourd' && query.player_level > 24 && query.scoreboard('evil') == 1"},
 						{"bella_a":"query.get_equipped_item_name=='bell_a' && variable.attack_time && query.scoreboard('charge') >= 0"},
 						{"seal":"query.get_equipped_item_name=='seal' && variable.attack_time && query.scoreboard('godmodecd') >= 0 && query.player_level > 44"},
 						{"herb":"query.get_equipped_item_name=='herb' && query.is_using_item"},
@@ -99,12 +99,11 @@
 							}
 					],
 					"on_entry": [
-						"/effect @s strength infinite 1 true",
-						"/effect @s health_boost infinite 4 true",
 						"/replaceitem entity @s slot.weapon.mainhand 0 items:pearl",
 						"/tag @s add tao",
 						"/scoreboard objectives add swordatkcd dummy",
-						"/gamerule sendcommandfeedback false"
+						"/gamerule sendcommandfeedback false",
+						"/scoreboard objectives add evil dummy"
 					]
 				},
 				"scripture_fa": {
@@ -115,12 +114,11 @@
 					],
 					"on_entry": [
 						"/gamerule sendcommandfeedback false",
-						"/effect @s strength infinite 1 true",
-						"/effect @s health_boost infinite 4 true",
 						"/replaceitem entity @s slot.weapon.mainhand 0 items:pearl",
 						"/tag @s add tao",
 						"/scoreboard objectives add swordatkcd dummy",
-						"/give @s items:acbook"
+						"/give @s items:acbook",
+						"/scoreboard objectives add evil dummy"
 					]
 				},
 				"scripture_fb": {
@@ -131,12 +129,11 @@
 					],
 					"on_entry": [
 						"/gamerule sendcommandfeedback false",
-						"/effect @s strength infinite 1 true",
-						"/effect @s health_boost infinite 4 true",
 						"/replaceitem entity @s slot.weapon.mainhand 0 items:pearl",
 						"/tag @s add tao",
 						"/scoreboard objectives add swordatkcd dummy",
-						"/give @s items:acbook"
+						"/give @s items:acbook",
+						"/scoreboard objectives add evil dummy"
 					]
 				},
 				"scripture_fc": {

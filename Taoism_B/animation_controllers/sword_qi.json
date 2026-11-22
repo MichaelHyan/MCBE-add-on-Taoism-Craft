@@ -19,7 +19,7 @@
 						{"sword_qi_l":"query.scoreboard('charge') > -5 && query.scoreboard('charge') < 0"},
 						{"qi_trans_a":"query.get_equipped_item_name=='qi_sword_off'"},
 						{"qi_trans_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword')"},
-						{"qi_summon_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.is_item_equipped == 0 && variable.attack_time && !query.is_sneaking"},
+						{"qi_summon_a":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.is_item_equipped == 0 && variable.attack_time && !query.is_sneaking && query.scoreboard('evil') == 0"},
 						{"qi_summon_b":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.get_equipped_item_name== 'sword_qi_t3' && !query.is_sneaking"},
 						{"qi_summon_c":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.get_equipped_item_name== 'sword_qi_t2' && !query.is_sneaking"},
 						{"qi_summon_d":"query.is_item_name_any('slot.weapon.offhand', 0, 'items:qi_sword_off') && query.get_equipped_item_name== 'sword_qi_t1' && !query.is_sneaking"},

@@ -7,7 +7,7 @@
 					"transitions":[
 						{"dead_a":"query.is_alive == 0 && query.scoreboard('spawnc') == 0"},
 						{"dead_b":"query.is_alive != 0 && query.scoreboard('spawnc') == 1"},
-						{"dead_c":"query.is_alive != 0 && query.scoreboard('spawnc') == 0"}
+						{"dead_c":"query.is_alive != 0 && query.scoreboard('spawnc') == 0 && query.scoreboard('evil') == 0"}
 					]
 				},
 				"dead_a": {
