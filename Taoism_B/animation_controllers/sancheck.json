@@ -1,0 +1,135 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.evil_sancount":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"san_add":"query.get_equipped_item_name!='spirit' && query.scoreboard('evil') == 1 && query.scoreboard('san') < 48000"},
+						{"san_resume_a":"query.get_equipped_item_name=='spirit' && query.is_using_item && query.scoreboard('evil') == 1 && query.scoreboard('san') > 0 && query.scoreboard('san') <= 12000"},
+						{"san_resume_b":"query.get_equipped_item_name=='spirit' && query.is_using_item && query.scoreboard('evil') == 1 && query.scoreboard('san') > 12000 && query.scoreboard('san') <= 24000"},
+						{"san_resume_c":"query.get_equipped_item_name=='spirit' && query.is_using_item && query.scoreboard('evil') == 1 && query.scoreboard('san') > 24000 && query.scoreboard('san') <= 36000"},
+						{"san_resume_d":"query.get_equipped_item_name=='spirit' && query.is_using_item && query.scoreboard('evil') == 1 && query.scoreboard('san') > 36000 && query.scoreboard('san') <= 48000"}
+					]
+				},
+				"san_add": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s san 1"
+					]
+				},
+				"san_resume_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s san -4000"
+					]
+				},
+				"san_resume_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s san -1340"
+					]
+				},
+				"san_resume_c": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s san -670"
+					]
+				},
+				"san_resume_d": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s san -450"
+					]
+				}
+			}
+		},
+		"controller.animation.evil_effect":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"san_illusion":"query.scoreboard('evil') == 1 && query.scoreboard('san') == 48000 && math.mod(query.life_time,60) == 0"},
+						{"san_effect_a":"query.scoreboard('san') == 12000 || query.scoreboard('san') == 24000 || query.scoreboard('san') == 36000"},
+						{"san_effect_b":"query.scoreboard('evil') == 1 && query.scoreboard('san') > 12000 && query.scoreboard('san') < 24000"},
+						{"san_effect_c":"query.scoreboard('evil') == 1 && query.scoreboard('san') > 24000 && query.scoreboard('san') < 36000"},
+						{"san_effect_d":"query.scoreboard('evil') == 1 && query.scoreboard('san') > 36000 && query.scoreboard('san') <= 48000"}
+					]
+				},
+				"san_illusion": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/damage @s 10",
+						"/summon entity:illusion"
+					]
+				},
+				"san_effect_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/camerashake add @s"
+					]
+				},
+				"san_effect_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s hunger 1 0 true"
+					]
+				},
+				"san_effect_c": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s hunger 1 0 true",
+						"/effect @s darkness 1 0 true"
+					]
+				},
+				"san_effect_d": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s hunger 1 0 true",
+						"/effect @s darkness 1 0 true",
+						"/effect @s slowness 1 0 true"
+					]
+				}
+			}
+		}
+ 	}
+ }

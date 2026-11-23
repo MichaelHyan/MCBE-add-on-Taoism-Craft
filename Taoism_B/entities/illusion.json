@@ -1,0 +1,82 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "entity:illusion",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "despawn": {
+        "minecraft:instant_despawn": {
+          "remove_child_entities": true
+        }
+      }
+    },
+    "components": {
+      "minecraft:nameable": {},
+      "minecraft:health": {
+        "value": 20,
+        "max": 20,
+        "min": 0
+      },
+      "minecraft:collision_box": {
+        "width": 0,
+        "height": 0
+      },
+      "minecraft:behavior.sleep": {
+        "priority": 3,
+        "goal_radius": 5,
+        "speed_multiplier": 1.2,
+        "sleep_collider_height": 0.3,
+        "sleep_collider_width": 1.0,
+        "sleep_y_offset": 0.6
+      },
+      "minecraft:movement": {
+        "value": 0.2
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true
+      },
+      "minecraft:timer": {
+        "looping": true,
+        "time": 5,
+        "time_down_event": {
+          "event": "despawn",
+          "target": "self"
+        }
+      },
+      "minecraft:type_family": {
+        "family": [
+          "mob",
+          "taoism"
+        ]
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
+      "minecraft:behavior.random_stroll": {
+        "priority": 5,
+        "speed_multiplier": 1
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 4,
+        "look_distance": 8
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 5
+      },
+      "minecraft:physics": {}
+    },
+    "events": {
+      "despawn": {
+        "add": {
+          "component_groups": [
+            "despawn"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -18,7 +18,7 @@
 					"on_entry": [
 						"/effect @s resistace 1 255 true",
 						"/tp @s ^2 ^ ^0.5 facing @n[type=entity:pev]",
-						"/damage @a[r=2] 8",
+						"/damage @a[r=2] 4",
 						"/particle minecraft:basic_flame_particle ~ ~1 ~"
 					]
 				}

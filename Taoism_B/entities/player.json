@@ -89,7 +89,9 @@
 					"swordaddon_defence",
 					"swordaddon_critical",
           "pearladdon_control",
-          "pearladdon_fly"
+          "pearladdon_fly",
+          "evil_sancount",
+          "evil_effect"
 				]
 			},
       "animations": {
@@ -175,7 +177,9 @@
 				"swordaddon_defence": "controller.animation.swordaddon_defence",
 				"swordaddon_critical": "controller.animation.swordaddon_critical",
         "pearladdon_control": "controller.animation.pearladdon_control",
-        "pearladdon_fly": "controller.animation.pearladdon_fly"
+        "pearladdon_fly": "controller.animation.pearladdon_fly",
+        "evil_sancount": "controller.animation.evil_sancount",
+        "evil_effect": "controller.animation.evil_effect"
 			}
     },
 
