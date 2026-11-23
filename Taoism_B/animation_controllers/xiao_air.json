@@ -1,0 +1,55 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.xiao_air":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"init":"query.life_time == 1"},
+						{"visible":"query.scoreboard('invisibility') == 1"}
+					]
+				},
+				"init": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add invisibility dummy",
+						"/function bird"
+					]
+				},
+				"visible": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/function bird"
+					]
+				}
+			}
+		},
+		"controller.animation.xiao_atk":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"atk":"math.mod(query.life_time,1) == 0"}
+					]
+				},
+				"atk": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon entity:spb_air"
+					]
+				}
+			}
+		}
+ 	}
+ }

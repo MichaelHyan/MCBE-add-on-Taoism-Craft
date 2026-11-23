@@ -1,0 +1,60 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:spawn_rules": {
+    "description": {
+      "identifier": "entity:xiao_air",
+      "population_control": "monster"
+    },
+    "conditions": [
+      {
+        "minecraft:spawns_on_surface": {},
+        "minecraft:brightness_filter": {
+          "min": 0,
+          "max": 15,
+          "adjust_for_weather": false
+        },
+        "minecraft:weight": {
+          "default": 8
+        },
+        "minecraft:density_limit": {
+          "surface": 1,
+          "underground": 0
+        },
+        "minecraft:biome_filter": {
+          "any_of": [
+            {
+              "test": "has_biome_tag",
+              "operator": "==",
+              "value": "mountain"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "==",
+              "value": "extreme_hills"
+            }
+          ]
+        }
+      },
+      {
+        "minecraft:spawns_on_surface": {},
+        "minecraft:brightness_filter": {
+          "min": 0,
+          "max": 15,
+          "adjust_for_weather": false
+        },
+        "minecraft:weight": {
+          "default": 4
+        },
+        "minecraft:density_limit": {
+          "surface": 1,
+          "underground": 0
+        },
+        "minecraft:biome_filter": {
+          "test": "has_biome_tag",
+          "operator": "==",
+          "value": "plains"
+        }
+      }
+    ]
+  }
+}

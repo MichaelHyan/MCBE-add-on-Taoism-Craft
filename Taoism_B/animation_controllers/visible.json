@@ -16,7 +16,8 @@
 							}
 					],
 					"on_entry": [
-						"/effect @e[family=invisibility] invisibility 0 255 true"
+						"/effect @e[family=invisibility] invisibility 0 255 true",
+						"/scoreboard players set @e[family=invisibility] invisibility 1"
 					]
 				},
 				"invisible": {
@@ -26,7 +27,8 @@
 							}
 					],
 					"on_entry": [
-						"/effect @e[family=invisibility] invisibility infinite 1 true"
+						"/effect @e[family=invisibility] invisibility infinite 1 true",
+						"/scoreboard players set @e[family=invisibility] invisibility 0"
 					]
 				}
 			}

@@ -34,7 +34,8 @@
 						"/scoreboard players set @s detectcharge 0",
 						"/camerashake add @s",
 						"/summon entity:detector",
-						"/summon entity:detector_a"
+						"/summon entity:detector_a",
+						"/event entity @e[type=entity:xiao_air] xiao_air:stop_fly"
 					]
 				},
 				"ruler_b_charge": {
@@ -59,7 +60,8 @@
 						"/scoreboard players set @s detectcharge 0",
 						"/camerashake add @s",
 						"/summon entity:detector",
-						"/summon entity:detector_a"
+						"/summon entity:detector_a",
+						"/event entity @e[type=entity:xiao_air] xiao_air:stop_fly"
 					]
 				}
 			}

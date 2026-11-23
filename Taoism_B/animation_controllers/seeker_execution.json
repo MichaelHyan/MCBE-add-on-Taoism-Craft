@@ -19,6 +19,7 @@
 					],
 					"on_entry": [
 						"/damage @e[family=monster,r=2] 50",
+						"/effect @e[family=monster,r=2] clear",
 						"/summon lightning_bolt",
 						"/effect @e[family=monster,r=2] weakness 5 255 true",
 						"/effect @e[family=monster,r=2] slowness 5 3 true",
@@ -33,6 +34,7 @@
 					],
 					"on_entry": [
 						"/damage @e[family=monster,r=2] 100",
+						"/effect @e[family=monster,r=2] clear",
 						"/summon lightning_bolt",
 						"/effect @e[family=monster,r=2] weakness 5 255 true",
 						"/effect @e[family=monster,r=2] slowness 5 3 true",
@@ -47,6 +49,7 @@
 					],
 					"on_entry": [
 						"/damage @e[family=monster,r=2] 150",
+						"/effect @e[family=monster,r=2] clear",
 						"/replaceitem entity @e[family=monster,r=2] slot.weapon.mainhand 0 air",
 						"/replaceitem entity @e[family=monster,r=3] slot.armor.head 0 air",
 						"/replaceitem entity @e[family=monster,r=3] slot.armor.chest 0 air",

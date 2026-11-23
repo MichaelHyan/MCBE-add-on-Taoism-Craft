@@ -1,0 +1,196 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "entity:xiao_air",
+      "is_summonable": true,
+      "is_spawnable": false,
+      "spawn_category": "monster",
+      "scripts": {
+        "animate": [
+          "xiao_air",
+          "xiao_atk",
+          "detectre"
+        ]
+      },
+      "animations": {
+        "xiao_air": "controller.animation.xiao_air",
+        "xiao_atk": "controller.animation.xiao_atk",
+        "detectre": "controller.animation.detectre"
+      }
+    },
+    "component_groups": {
+      "xiao_air:airborne": {
+        "minecraft:physics": {
+          "has_gravity": false
+        },
+        "minecraft:movement.glide": {
+          "speed_when_turning": 0.2,
+          "start_speed": 0.1
+        },
+        "minecraft:behavior.circle_around_anchor": {
+          "goal_radius": 1,
+          "height_offset_range": {
+            "min": -2,
+            "max": 2
+          },
+          "height_above_target_range": {
+            "min": 15,
+            "max": 25
+          },
+          "priority": 4
+        },
+        "minecraft:behavior.swoop_attack": {
+          "priority": 2
+        }
+      },
+      "xiao_air:grounded": {
+        "minecraft:physics": {
+          "has_gravity": true
+        },
+        "minecraft:movement": {
+          "value": 0.15
+        },
+        "minecraft:timer": {
+          "time": 7,
+          "looping": false,
+          "time_down_event": {
+            "event": "xiao_air:resume_fly"
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:attack": {
+        "damage": 12
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1
+      },
+      "minecraft:boss": {
+        "name": "entity.entity:xiao_air.name",
+        "should_darken_sky": true,
+        "hud_range": 55
+      },
+      "minecraft:behavior.nearest_attackable_target": {
+        "reselect_targets": true,
+        "scan_interval": 20,
+        "target_search_height": 80,
+        "within_radius": 64,
+        "must_see_forget_duration": 0.5,
+        "entity_types": [
+          {
+            "filters": {
+              "AND": [
+                {
+                  "test": "is_family",
+                  "subject": 1,
+                  "operator": 0,
+                  "value": "player"
+                }
+              ]
+            },
+            "max_dist": 64
+          }
+        ],
+        "priority": 1
+      },
+      "minecraft:breathable": {
+        "breathes_air": true,
+        "breathes_water": false,
+        "suffocate_time": 0,
+        "total_supply": 15
+      },
+      "minecraft:collision_box": {
+        "height": 1,
+        "width": 1
+      },
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      },
+      "minecraft:experience_reward": {
+        "on_death": {
+          "expression": "query.last_hit_by_player ? 5 : 0",
+          "version": 12
+        }
+      },
+      "minecraft:follow_range": {
+        "max": 64,
+        "value": 64
+      },
+      "minecraft:game_event_movement_tracking": {
+        "emit_flap": true
+      },
+      "minecraft:health": {
+        "max": 500,
+        "value": 500
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "cause": "lava",
+            "damage_per_tick": 4,
+            "filters": {
+              "operator": "==",
+              "test": "in_lava",
+              "subject": "self",
+              "value": true
+            }
+          }
+        ]
+      },
+      "minecraft:is_hidden_when_invisible": {},
+      "minecraft:movement": {
+        "value": 1.8
+      },
+      "minecraft:nameable": {},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:renders_when_invisible": {},
+      "minecraft:type_family": {
+        "family": [
+          "monster",
+          "mob",
+          "taoism_monster",
+          "invisibility"
+        ]
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "xiao_air:airborne"
+          ]
+        }
+      },
+      "xiao_air:stop_fly": {
+        "remove": {
+          "component_groups": [
+            "xiao_air:airborne"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "xiao_air:grounded"
+          ]
+        }
+      },
+      "xiao_air:resume_fly": {
+        "remove": {
+          "component_groups": [
+            "xiao_air:grounded"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "xiao_air:airborne"
+          ]
+        }
+      }
+    }
+  }
+}

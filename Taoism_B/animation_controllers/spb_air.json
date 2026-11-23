@@ -1,0 +1,25 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.spb_air":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"spb_burst":"math.mod(query.life_time,1) == 0"}
+					]
+				},
+				"spb_burst": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:sonic_explosion ~ ~ ~",
+						"/damage @e[type=!item,family=!monster,r=2] 5"
+					]
+				}
+			}
+		}
+ 	}
+ }

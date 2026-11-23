@@ -1,0 +1,45 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.xiao_water":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"transform":"!query.is_in_water"}
+					]
+				},
+				"transform": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:dragon_death_explosion_emitter ~~~",
+						"/event entity @s transform"
+					]
+				}
+			}
+		},
+		"controller.animation.xiao_water_hu":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"transform":"query.is_in_water"}
+					]
+				},
+				"transform": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:dragon_death_explosion_emitter ~~~",
+						"/event entity @s transform"
+					]
+				}
+			}
+		}
+ 	}
+ }
