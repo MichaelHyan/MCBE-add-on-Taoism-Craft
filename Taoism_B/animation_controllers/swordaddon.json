@@ -262,6 +262,102 @@
 					]
 				}
 			}
+		},
+		"controller.animation.swordaddon_execution":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"execution_start":"query.is_jumping && query.is_sneaking && query.scoreboard('swordaddon_execution') > 0 && query.scoreboard('swordaddon_execution_charge') == 0 && query.scoreboard('cdr') == 9 && query.scoreboard('charge') >= 0"},
+						{"execution_charge":"query.scoreboard('swordaddon_execution_charge') > 0 && query.scoreboard('swordaddon_execution_charge') < 10"},
+						{"execution_a":"query.scoreboard('swordaddon_execution') == 1 && query.scoreboard('swordaddon_execution_charge') == 10"},
+						{"execution_b":"query.scoreboard('swordaddon_execution') == 2 && query.scoreboard('swordaddon_execution_charge') == 10"},
+						{"execution_c":"query.scoreboard('swordaddon_execution') == 3 && query.scoreboard('swordaddon_execution_charge') == 10"},
+						{"execution_last":"query.scoreboard('swordaddon_execution_charge') > 10 && query.scoreboard('swordaddon_execution_charge') < 15"},
+						{"execution_stop":"query.scoreboard('swordaddon_execution_charge') == 15"}
+					]
+				},
+				"execution_start": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon entity:seeker_execution",
+						"/effect @s darkness 2 5 true",
+						"/scoreboard players set @s cdr 0",
+						"/scoreboard players set @s charge -30",
+						"/scoreboard players add @s swordaddon_execution_charge 1"
+					]
+				},
+				"execution_charge": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s swordaddon_execution_charge 1",
+						"/camera @s set minecraft:free ease 0.25 in_out_quad pos ^-1.5 ^2 ^-2 facing @n[type=entity:seeker_execution]"
+					]
+				},
+				"execution_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @e[type=entity:seeker_execution] charge 1",
+						"/scoreboard players set @s swordaddon_execution_charge 11"
+					]
+				},
+				"execution_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @e[type=entity:seeker_execution] charge 2",
+						"/scoreboard players set @s swordaddon_execution_charge 11"
+					]
+				},
+				"execution_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @e[type=entity:seeker_execution] charge 3",
+						"/scoreboard players set @s swordaddon_execution_charge 11"
+					]
+				},
+				"execution_last": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s swordaddon_execution_charge 1",
+						"/camera @s set minecraft:free ease 0.25 in_out_quad pos ^-1.5 ^2 ^-2 facing @n[type=entity:seeker_execution]"
+					]
+				},
+				"execution_stop": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s swordaddon_execution_charge 0",
+						"/camera @s clear"
+					]
+				}
+			}
 		}
+		
  	}
  }

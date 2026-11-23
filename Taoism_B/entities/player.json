@@ -88,8 +88,11 @@
 					"swordaddon_chargehint",
 					"swordaddon_defence",
 					"swordaddon_critical",
+          "swordaddon_execution",
           "pearladdon_control",
           "pearladdon_fly",
+          "adaptionaddon",
+          "seekeraddon",
           "evil_sancount",
           "evil_effect"
 				]
@@ -176,8 +179,11 @@
 				"swordaddon_chargehint": "controller.animation.swordaddon_chargehint",
 				"swordaddon_defence": "controller.animation.swordaddon_defence",
 				"swordaddon_critical": "controller.animation.swordaddon_critical",
+        "swordaddon_execution": "controller.animation.swordaddon_execution",
         "pearladdon_control": "controller.animation.pearladdon_control",
         "pearladdon_fly": "controller.animation.pearladdon_fly",
+        "adaptionaddon": "controller.animation.adaptionaddon",
+        "seekeraddon": "controller.animation.seekeraddon",
         "evil_sancount": "controller.animation.evil_sancount",
         "evil_effect": "controller.animation.evil_effect"
 			}

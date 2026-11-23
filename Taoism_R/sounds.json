@@ -8,6 +8,27 @@
           "hurt": { "sound": "sw", "volume": 0.0, "pitch": 1.0 }
         }
       },
+      "entity:seeker": {
+        "volume": 1.0,
+        "pitch": [0.8, 1.2],
+        "events": {
+          "hurt": { "sound": "sw", "volume": 0.0, "pitch": 1.0 }
+        }
+      },
+      "entity:seeker_la": {
+        "volume": 1.0,
+        "pitch": [0.8, 1.2],
+        "events": {
+          "hurt": { "sound": "sw", "volume": 0.0, "pitch": 1.0 }
+        }
+      },
+      "entity:seeker_lb": {
+        "volume": 1.0,
+        "pitch": [0.8, 1.2],
+        "events": {
+          "hurt": { "sound": "sw", "volume": 0.0, "pitch": 1.0 }
+        }
+      },
       "entity:detector": {
         "volume": 1.0,
         "pitch": [0.8, 1.2],

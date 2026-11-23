@@ -1,3 +1,4 @@
+scoreboard objectives add charge dummy
 scoreboard objectives add pearladdon_level dummy
 scoreboard objectives add pearladdon_cd dummy
 scoreboard players set @p pearladdon_level 3

@@ -1,0 +1,26 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.seeker_item":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"seeker":"1 == 1"}
+					]
+				},
+				"seeker": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:balloon_gas_particle ~ ~1 ~",
+						"/tp @e[type=item,r=2] @p",
+						"/tp @s ^ ^ ^1 facing @n[type=item]"
+					]
+				}
+			}
+		}
+ 	}
+ }

@@ -1,0 +1,4 @@
+function swordaddon
+function pearladdon
+function adaptionaddon
+function seekeraddon

@@ -1,0 +1,74 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.seeker_execution":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"seeker_a":"query.scoreboard('charge') == 1"},
+						{"seeker_b":"query.scoreboard('charge') == 2"},
+						{"seeker_c":"query.scoreboard('charge') == 3"},
+						{"seeker_d":"1==1"}
+					]
+				},
+				"seeker_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/damage @e[family=monster,r=2] 50",
+						"/summon lightning_bolt",
+						"/effect @e[family=monster,r=2] weakness 5 255 true",
+						"/effect @e[family=monster,r=2] slowness 5 3 true",
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"seeker_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/damage @e[family=monster,r=2] 100",
+						"/summon lightning_bolt",
+						"/effect @e[family=monster,r=2] weakness 5 255 true",
+						"/effect @e[family=monster,r=2] slowness 5 3 true",
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"seeker_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/damage @e[family=monster,r=2] 150",
+						"/replaceitem entity @e[family=monster,r=2] slot.weapon.mainhand 0 air",
+						"/replaceitem entity @e[family=monster,r=3] slot.armor.head 0 air",
+						"/replaceitem entity @e[family=monster,r=3] slot.armor.chest 0 air",
+						"/replaceitem entity @e[family=monster,r=3] slot.armor.legs 0 air",
+						"/replaceitem entity @e[family=monster,r=3] slot.armor.feet 0 air",
+						"/summon lightning_bolt",
+						"/effect @e[family=monster,r=2] weakness 5 255 true",
+						"/effect @e[family=monster,r=2] slowness 5 3 true",
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"seeker_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @n[family=monster,r=15]"
+					]
+				}
+			}
+		}
+ 	}
+ }

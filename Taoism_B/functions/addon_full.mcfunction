@@ -1,0 +1,4 @@
+function swordaddon_full
+function pearladdon_full
+function adaptionaddon_full
+function seekeraddon_full
