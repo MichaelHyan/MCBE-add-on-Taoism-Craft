@@ -7,7 +7,6 @@
     },
     "conditions": [
       {
-        "minecraft:spawns_on_surface": {},
         "minecraft:brightness_filter": {
           "min": 0,
           "max": 7,
@@ -23,7 +22,7 @@
         "minecraft:biome_filter": {
           "test": "has_biome_tag",
           "operator": "==",
-          "value": "monster"
+          "value": "overworld"
         }
       }
     ]

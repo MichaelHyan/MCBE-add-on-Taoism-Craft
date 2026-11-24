@@ -25,11 +25,6 @@
               "test": "has_biome_tag",
               "operator": "==",
               "value": "river"
-            },
-            {
-              "test": "has_biome_tag",
-              "operator": "!=",
-              "value": "frozen"
             }
           ]
         }

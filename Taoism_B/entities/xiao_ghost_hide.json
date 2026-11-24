@@ -13,12 +13,12 @@
         ]
       },
       "animations": {
-        "xiao_ghost_hide": "xiao_ghost_hide",
+        "xiao_ghost_hide": "controller.animation.xiao_ghost_hide",
         "detectre": "controller.animation.detectre"
       }
     },
     "component_groups": {
-      "transform_xiao_ghost": {
+      "transform": {
         "minecraft:transformation": {
           "into": "entity:xiao_ghost"
         }

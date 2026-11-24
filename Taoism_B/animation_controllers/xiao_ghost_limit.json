@@ -1,0 +1,24 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.xiao_ghost_limit":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"spawn":"1==1"}
+					]
+				},
+				"spawn": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/kill @e[type=entity:xiao_ghost_hide_spawn,r=64]"
+					]
+				}
+			}
+		}
+ 	}
+ }

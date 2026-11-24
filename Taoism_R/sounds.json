@@ -8,6 +8,13 @@
           "hurt": { "sound": "sw", "volume": 0.0, "pitch": 1.0 }
         }
       },
+      "entity:xiao_ghost": {
+        "volume": 1.0,
+        "pitch": [0.8, 1.2],
+        "events": {
+          "hurt": { "sound": "sw", "volume": 0.0, "pitch": 1.0 }
+        }
+      },
       "entity:seeker": {
         "volume": 1.0,
         "pitch": [0.8, 1.2],
