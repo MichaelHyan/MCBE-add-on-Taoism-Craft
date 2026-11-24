@@ -1,0 +1,14 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.boulder.roll": {
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"bb_main": {
+					"rotation": [ "variable.roll", 0, 0 ]
+				}
+			}
+		}
+	}
+}

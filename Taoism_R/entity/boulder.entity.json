@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "entity:boulder",
+      "materials": {
+        "default": "entity_alphablend"
+      },
+      "textures": {
+        "default": "textures/entity/xiao_mount_hide"
+      },
+      "geometry": {
+        "default": "geometry.shandu_hide"
+      },
+      "animations": {
+        "roll": "animation.boulder.roll"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.roll = math.mod(query.modified_distance_moved * 35.0, 360.0);"
+        ],
+        "animate": [
+          "roll"
+        ]
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

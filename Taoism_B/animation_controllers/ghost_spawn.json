@@ -1,0 +1,139 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.ghost_spawn": {
+			"initial_state": "base_jeta",
+			"states": {
+				"base_jeta": {
+					"transitions": [
+						{
+							"roll": "query.scoreboard('sleepchoice') != 7 && query.time_of_day >= 0.51 && query.time_of_day <= 0.52"
+						}
+					]
+				},
+				"roll": {
+					"on_entry": [
+						"v.ghost_pick = math.random_integer(0, 6);"
+					],
+					"transitions": [
+						{
+							"choicea": "v.ghost_pick == 0"
+						},
+						{
+							"choiceb": "v.ghost_pick == 1"
+						},
+						{
+							"choicec": "v.ghost_pick == 2"
+						},
+						{
+							"choiced": "v.ghost_pick == 3"
+						},
+						{
+							"choicee": "v.ghost_pick == 4"
+						},
+						{
+							"choicef": "v.ghost_pick == 5"
+						},
+						{
+							"choiceg": "v.ghost_pick == 6"
+						},
+						{
+							"base_jeta": "v.ghost_pick < 0 || v.ghost_pick > 6"
+						}
+					]
+				},
+				"choicea": {
+					"transitions": [
+						{
+							"cooldown": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard objectives add sleepchoice dummy",
+						"/scoreboard players set @s sleepchoice 0",
+						"/scoreboard players set @s sleep 1"
+					]
+				},
+				"choiceb": {
+					"transitions": [
+						{
+							"cooldown": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard objectives add sleepchoice dummy",
+						"/scoreboard players set @s sleepchoice 1",
+						"/scoreboard players set @s sleep 1"
+					]
+				},
+				"choicec": {
+					"transitions": [
+						{
+							"cooldown": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard objectives add sleepchoice dummy",
+						"/scoreboard players set @s sleepchoice 2",
+						"/scoreboard players set @s sleep 1"
+					]
+				},
+				"choiced": {
+					"transitions": [
+						{
+							"cooldown": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard objectives add sleepchoice dummy",
+						"/scoreboard players set @s sleepchoice 3",
+						"/scoreboard players set @s sleep 1"
+					]
+				},
+				"choicee": {
+					"transitions": [
+						{
+							"cooldown": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard objectives add sleepchoice dummy",
+						"/scoreboard players set @s sleepchoice 4",
+						"/scoreboard players set @s sleep 1"
+					]
+				},
+				"choicef": {
+					"transitions": [
+						{
+							"cooldown": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard objectives add sleepchoice dummy",
+						"/scoreboard players set @s sleepchoice 5",
+						"/scoreboard players set @s sleep 1"
+					]
+				},
+				"choiceg": {
+					"transitions": [
+						{
+							"cooldown": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard objectives add sleepchoice dummy",
+						"/scoreboard players set @s sleepchoice 6",
+						"/scoreboard players set @s sleep 1"
+					]
+				},
+				"cooldown": {
+					"transitions": [
+						{
+							"base_jeta": "query.time_of_day > 0.51 || query.time_of_day < 0.5"
+						}
+					]
+				}
+			}
+		}
+	}
+}

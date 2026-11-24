@@ -80,6 +80,16 @@
           "death": "mob.zombie.death",
           "step": { "sound": "mob.zombie.step", "volume": 0.45, "pitch": 1.0 }
         }
+      },
+      "entity:boulder": {
+        "volume": 1.0,
+        "pitch": [0.8, 1.2],
+        "events": {
+          "hurt": { "sound": "dig.stone", "volume": 1.0, "pitch": 1.0 },
+          "death": { "sound": "dig.stone", "volume": 1.0, "pitch": 1.0 },
+          "attack": { "sound": "dig.stone", "volume": 1.0, "pitch": 1.0 },
+          "step": { "sound": "dig.stone", "volume": 0.25, "pitch": 1.0 }
+        }
       }
     }
   }

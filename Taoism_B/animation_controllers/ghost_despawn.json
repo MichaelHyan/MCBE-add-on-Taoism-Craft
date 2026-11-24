@@ -5,7 +5,7 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"die":"query.is_alive == 0"}
+						{"die":"query.is_alive == 0 || query.life_time == 15"}
 					]
 				},
 				"die": {
@@ -15,7 +15,8 @@
 						}
 					],
 					"on_entry": [
-						"/scoreboard players set @a sleep 1"
+						"/scoreboard players set @a sleep 1",
+						"/event entity @s despawn"
 					]
 				}
 			}

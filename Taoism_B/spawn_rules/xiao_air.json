@@ -50,9 +50,18 @@
           "underground": 0
         },
         "minecraft:biome_filter": {
-          "test": "has_biome_tag",
-          "operator": "==",
-          "value": "plains"
+          "all_of": [
+            {
+              "test": "has_biome_tag",
+              "operator": "==",
+              "value": "frozen"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "==",
+              "value": "mountain"
+            }
+          ]
         }
       }
     ]

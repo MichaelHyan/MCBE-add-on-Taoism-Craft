@@ -1,11 +1,12 @@
 {
-    "format_version":1,
+    "format_version":2,
     "header":{
         "description":"作者：韩言悦欣 zz纸张神探st 韩言穆清",
         "name":"道术 Taoism Craft",
         "platform_locked":false,
         "uuid":"43a0af9b-c74c-47ed-8972-6e79c77111d7",
-        "version":[6,0,0]
+        "version":[6,0,0],
+        "min_engine_version":[1,21,0]
     },
     "modules":[
         {

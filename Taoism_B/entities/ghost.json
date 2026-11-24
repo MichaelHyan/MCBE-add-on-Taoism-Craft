@@ -16,6 +16,20 @@
 				"ghost_despawn": "controller.animation.ghost_despawn"
 			}
     },
+    "component_groups": {
+      "despawn": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "events": {
+      "despawn": {
+        "add": {
+          "component_groups": [
+            "despawn"
+          ]
+        }
+      }
+    },
     "components": {
       "minecraft:attack": {
         "damage": 1
@@ -93,9 +107,6 @@
         "width": 0
       },
       "minecraft:conditional_bandwidth_optimization": {},
-      "minecraft:despawn": {
-        "despawn_from_distance": {}
-      },
       "minecraft:fire_immune": {},
       "minecraft:game_event_movement_tracking": {
         "emit_move": false,
