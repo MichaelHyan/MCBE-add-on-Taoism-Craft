@@ -9,6 +9,7 @@
 						{"dreadstart":"query.scoreboard('sleepchoice') == 7 && query.time_of_day >= 0.75 && query.time_of_day <= 0.76 && query.moon_phase == 0"},
 						{"dreadend":"query.scoreboard('sleepchoice') == 7 && query.time_of_day > 0.2 && query.time_of_day < 0.5"},
 						{"sleep":"query.is_sleeping && query.scoreboard('sleep') == 0 && query.scoreboard('sleepchoice') == 6"},
+						{"sleep_summon":"query.is_sleeping && query.scoreboard('sleep') == 0 && query.scoreboard('sleepchoice') == 4 && query.player_level >= 15"},
 						{"dread":"query.is_sleeping && query.scoreboard('sleepchoice') == 7"},						
 						{"unsleep":"query.is_sleeping && query.scoreboard('sleep') == 2"},
 						{"awake":"!query.is_sleeping && query.scoreboard('sleep') == 1"}
@@ -64,6 +65,21 @@
 						"/scoreboard objectives add sleep dummy",
 						"/scoreboard players set @s sleep 2",
 						"/summon entity:ghost ~ ~3 ~",
+						"/scoreboard players set @s sleepchoice 0"
+					]
+				},
+				"sleep_summon": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard objectives add sleep dummy",
+						"/scoreboard players set @s sleep 2",
+						"/summon entity:ghost ~ ~3 ~",
+						"/kill @e[type=entity:xiao_ghost_hide]",
+						"/summon entity:xiao_ghost_hide ~ ~2 ~",
 						"/scoreboard players set @s sleepchoice 0"
 					]
 				},

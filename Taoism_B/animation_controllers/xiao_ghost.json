@@ -1,0 +1,70 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.xiao_ghost_hide":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"transform":"query.scoreboard('invisibility') == 1"},
+						{"mare":"query.time_of_day >= 0.76 || query.time_of_day <= 0.20"}
+					]
+				},
+				"transform": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/event entity @s transform",
+						"/playsound scare @a[r=15]"
+					]
+				},
+				"mare": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @a[r=15] darkness 1 1 true"
+					]
+				}
+			}
+		},
+		"controller.animation.xiao_ghost_chase":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"transform":"query.scoreboard('invisibility') == 1"},
+						{"chase":"1==1"}
+					]
+				},
+				"transform": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/particle minecraft:dragon_death_explosion_emitter ~~~",
+						"/scoreboard players set @s invisibility 0",
+						"/damage @s 100"
+					]
+				},
+				"chase": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s wither 1 1 false",
+						"/tp @s ^ ^ ^0.2 facing @p",
+						"/damage @p 4 entity_attck entity @s"
+					]
+				}
+			}
+		}
+ 	}
+ }

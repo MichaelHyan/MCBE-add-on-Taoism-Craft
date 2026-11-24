@@ -1,0 +1,32 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "entity:xiao_ghost_hide_a",
+      "materials": { "default": "villager" },
+      "textures": {
+        "default": "textures/entity/villager/villager"
+      },
+      "geometry": {
+        "default": "geometry.villager"
+      },
+
+      "scripts": {
+        "scale": "0.9375"
+      },
+      "animations": {
+        "general": "animation.villager.general",
+        "look_at_target": "animation.common.look_at_target",
+        "move": "animation.villager.move",
+        "baby_transform": "animation.villager.baby_transform"
+      },
+      "animation_controllers": [
+        { "general": "controller.animation.villager.general" },
+        { "move": "controller.animation.villager.move" },
+        { "baby": "controller.animation.villager_baby" }
+      ],
+      "render_controllers": [ "controller.render.villager" ],
+      "enable_attachables": true
+    }
+  }
+}

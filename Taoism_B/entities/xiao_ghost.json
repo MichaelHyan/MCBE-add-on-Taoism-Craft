@@ -1,0 +1,151 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "entity:xiao_ghost",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "scripts": {
+        "animate": [
+          "xiao_ghost_chase",
+          "detectre"
+        ]
+      },
+      "animations": {
+        "xiao_ghost_chase": "controller.animation.xiao_ghost_chase",
+        "detectre": "controller.animation.detectre"
+      }
+    },
+    "component_groups": {
+      "despawn": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "events": {
+      "despawn": {
+        "add": {
+          "component_groups": [
+            "despawn"
+          ]
+        }
+      }
+    },
+    "components": {
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      },
+      "minecraft:type_family": {
+        "family": [
+          "mob",
+          "taoism_monster"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 2.5
+      },
+      "minecraft:timer": {
+        "looping": false,
+        "randomInterval": false,
+        "time": 66.0,
+        "time_down_event": {
+          "event": "despawn",
+          "target": "self"
+        }
+      },
+      "minecraft:health": {
+        "value": 500,
+        "max": 500
+      },
+      "minecraft:nameable": {},
+      "minecraft:movement": {
+        "value": 0.0
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true
+      },
+      "minecraft:jump.static": {},
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": 0
+      },
+      "minecraft:follow_range": {
+        "value": 60,
+        "max": 60
+      },
+      "minecraft:attack": {
+        "damage": 20
+      },
+      "minecraft:behavior.hurt_by_target": {
+        "priority": 1
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self"
+            },
+            "cause": "lava",
+            "damage_per_tick": 10
+          },
+          {
+            "filters": {
+              "test": "on_fire",
+              "subject": "self"
+            },
+            "cause": "fire_tick",
+            "damage_per_tick": 10
+          }
+        ]
+      },
+      "minecraft:behavior.nearest_attackable_target": {
+        "priority": 2,
+        "entity_types": [
+          {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "value": "player"
+            },
+            "max_dist": 60
+          }
+        ],
+        "must_reach": false,
+        "must_see": false,
+        "within_radius": 60,
+        "reselect_targets": true
+      },
+      "minecraft:behavior.melee_attack": {
+        "priority": 2,
+        "speed_multiplier": 1.0,
+        "target_dist": 0,
+        "max_dist": 3,
+        "track_target": true,
+        "reach_multiplier": 1.4
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 6,
+        "speed_multiplier": 1
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 7,
+        "look_distance": 8
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 7
+      },
+      "minecraft:conditional_bandwidth_optimization": {}
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.xiao_mount_hide":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"regenerate":"query.life_time <= 1"},
+						{"visible":"math.mod(query.life_time,10) == 0"}
+					]
+				},
+				"regenerate": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/effect @s regeneration infinite 0 true"
+					]
+				},
+				"visible": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/execute as @s at @s unless block ~ ~2 ~ air run effect @s invisibility 10 1 true",
+						"/execute as @s at @s unless block ~ ~3 ~ air run effect @s invisibility 10 1 true",
+						"/execute as @s at @s unless block ~ ~4 ~ air run effect @s invisibility 10 1 true",
+						"/execute as @s at @s unless block ~ ~-1 ~ stone run effect @s invisibility 10 1 true"
+					]
+				}
+			}
+		},
+		"controller.animation.xiao_mount_atk":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"atk_a":"math.mod(query.life_time,2) == 0"},
+						{"atk_b":"math.mod(query.life_time,2) == 1"}
+					]
+				},
+				"atk_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon entity:bolder ^1 ^2 ^-1"
+					]
+				},
+				"atk_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon entity:bolder ^-1 ^2 ^-1"
+					]
+				}
+			}
+		}
+ 	}
+ }

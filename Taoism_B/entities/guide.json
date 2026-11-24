@@ -5809,6 +5809,11 @@
                   "test": "is_family",
                   "subject": "other",
                   "value": "monster"
+                },
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "taoism_monster"
                 }
               ]
             },
@@ -5817,6 +5822,7 @@
             "sprint_speed_multiplier": 1.5
           }
         ],
+        
         "priority": 1
       },
       "minecraft:health": {

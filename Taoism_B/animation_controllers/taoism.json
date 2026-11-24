@@ -751,6 +751,8 @@
 					],
 					"on_entry": [
 						"/summon entity:attackable",
+						"/scoreboard objectives add invisibility dummy",
+						"/scoreboard players set @e[type=entity:xiao_ghost,r=15] invisibility 1",
 						"/playsound bell_a",
 						"/scoreboard players set @s charge -4"
 					]

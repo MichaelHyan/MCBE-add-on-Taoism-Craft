@@ -8,10 +8,14 @@
       "is_experimental": false,
       "scripts": {
         "animate": [
+          "xiao_mount_hide",
+          "xiao_mount_atk",
           "detectre"
         ]
       },
       "animations": {
+        "xiao_mount_hide": "controller.animation.xiao_mount_hide",
+        "xiao_mount_atk": "controller.animation.xiao_mount_atk",
         "detectre": "controller.animation.detectre"
       }
     },
