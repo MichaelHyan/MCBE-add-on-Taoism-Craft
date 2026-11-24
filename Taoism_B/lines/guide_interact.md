@@ -226,3 +226,4 @@ minecraft:chorus_flower-紫颂花的花语是神秘、永恒的美、异界幻�
 minecraft:spore_blossom-孢子花的花语是隐秘、生机、顽强的生命力。
 minecraft:flowering_azalea-盛开的杜鹃花丛的花语是永远属于你、爱的喜悦、繁荣。
 minecraft:pink_petals-粉红色花瓣的花语是生命、幸福、纯洁、短暂而美丽。
+minecraft:water_bucket-你说本小姐是不是可以钻进去。。。开玩笑的。

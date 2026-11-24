@@ -8,13 +8,11 @@
       "is_experimental": false,
       "scripts": {
         "animate": [
-          "guide",
           "guide_teleport",
           "guide_random"
         ]
       },
       "animations": {
-        "guide": "controller.animation.guide",
         "guide_teleport": "controller.animation.guide_teleport",
         "guide_random": "controller.animation.guide_random"
       }

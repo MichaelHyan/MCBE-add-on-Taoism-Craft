@@ -8,20 +8,25 @@
       "is_experimental": false,
       "scripts": {
         "animate": [
-          "guide",
           "guide_teleport",
           "guide_random",
+          "guide_transform_hu",
           "gv_g"
         ]
       },
       "animations": {
-        "guide": "controller.animation.guide",
         "guide_teleport": "controller.animation.guide_teleport",
         "guide_random": "controller.animation.guide_random",
+        "guide_transform_hu": "controller.animation.guide_transform_hu",
         "gv_g": "controller.animation.gv_g"
       }
     },
     "component_groups": {
+      "transform": {
+        "minecraft:transformation": {
+          "into": "entity:guide_fish"
+        }
+      },
       "sit": {
         "minecraft:transformation": {
           "into": "entity:guide_sit"
@@ -5788,6 +5793,28 @@
             },
             "use_item": false,
             "interact_text": "addon.get.items"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "minecraft:water_bucket"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "guide_say_minecraft_water_bucket"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
           }
         ]
       },
@@ -5822,7 +5849,6 @@
             "sprint_speed_multiplier": 1.5
           }
         ],
-        
         "priority": 1
       },
       "minecraft:health": {
@@ -5883,6 +5909,13 @@
       "minecraft:physics": {}
     },
     "events": {
+      "transform": {
+        "add": {
+          "component_groups": [
+            "transform"
+          ]
+        }
+      },
       "minecraft:entity_spawned": {},
       "sit": {
         "add": {
@@ -7556,6 +7589,12 @@
       "guide_say_minecraft_pink_petals": {
         "queue_command": {
           "command": "say 粉红色花瓣的花语是生命、幸福、纯洁、短暂而美丽。",
+          "target": "self"
+        }
+      },
+      "guide_say_minecraft_water_bucket": {
+        "queue_command": {
+          "command": "say 你说本小姐是不是可以钻进去。。。开玩笑的。",
           "target": "self"
         }
       }

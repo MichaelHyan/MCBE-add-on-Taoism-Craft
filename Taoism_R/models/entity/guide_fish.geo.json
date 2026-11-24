@@ -1,0 +1,45 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.guide_fish",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "body",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-1, 0, -3], "size": [2, 3, 4], "uv": [0, 0]},
+						{"origin": [-1, 0.5, 1], "size": [2, 2, 1], "uv": [8, 10]},
+						{"origin": [0.5, -1, -2], "size": [1, 2, 1], "pivot": [0, 0, -1], "rotation": [35, 0, -25], "uv": [12, 3]},
+						{"origin": [-1.5, -1, -2], "size": [1, 2, 1], "pivot": [0, 0, -1], "rotation": [35, 0, 25], "uv": [12, 0]},
+						{"origin": [-0.5, 2, -3], "size": [1, 2, 1], "pivot": [0, 0, -1], "rotation": [-35, 0, 0], "uv": [0, 12]},
+						{"origin": [-0.5, 3, -3], "size": [1, 2, 3], "pivot": [0, 1.5, 0], "rotation": [55, 0, 0], "uv": [0, 7]}
+					]
+				},
+				{
+					"name": "taila",
+					"parent": "body",
+					"pivot": [0, 1.5, 2],
+					"cubes": [
+						{"origin": [-0.5, 1, 2], "size": [1, 1, 1], "uv": [4, 12]}
+					]
+				},
+				{
+					"name": "tailb",
+					"parent": "taila",
+					"pivot": [0, 1.5, 3],
+					"cubes": [
+						{"origin": [-1, 1, 3], "size": [2, 1, 2], "uv": [8, 7]}
+					]
+				}
+			]
+		}
+	]
+}

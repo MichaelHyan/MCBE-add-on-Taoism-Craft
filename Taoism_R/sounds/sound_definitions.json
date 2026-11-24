@@ -91,5 +91,35 @@
       "name": "sounds/crazydiamond",
       "stream": true
     }]
+  },
+  "guard": {
+    "sounds": [{
+      "name": "sounds/guard",
+      "stream": true
+    }]
+  },
+  "slash": {
+    "sounds": [{
+      "name": "sounds/slash",
+      "stream": true
+    }]
+  },
+  "chargea": {
+    "sounds": [{
+      "name": "sounds/chargea",
+      "stream": true
+    }]
+  },
+  "chargeb": {
+    "sounds": [{
+      "name": "sounds/chargeb",
+      "stream": true
+    }]
+  },
+  "chargec": {
+    "sounds": [{
+      "name": "sounds/chargec",
+      "stream": true
+    }]
   }
 }

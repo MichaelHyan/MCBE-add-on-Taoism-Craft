@@ -121,7 +121,8 @@
 							}
 					],
 					"on_entry": [
-						"/particle minecraft:totem_particle ~ ~1 ~"
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/playsound chargea"
 					]
 				},
 				"hint_b": {
@@ -131,7 +132,8 @@
 							}
 					],
 					"on_entry": [
-						"/particle minecraft:totem_particle ~ ~1 ~"
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/playsound chargeb"
 					]
 				},
 				"hint_c": {
@@ -141,7 +143,8 @@
 							}
 					],
 					"on_entry": [
-						"/particle minecraft:totem_particle ~ ~1 ~"
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/playsound chargec"
 					]
 				}
 			}
@@ -166,7 +169,8 @@
 						"/particle minecraft:sonic_explosion ^ ^1.2 ^1",
 						"/effect @s resistance 1 4 true",
 						"/scoreboard players add @s swordaddon_charge -30",
-						"/scoreboard players set @s swordaddon_defencestatus 1"
+						"/scoreboard players set @s swordaddon_defencestatus 1",
+						"/playsound guard"
 					]
 				},
 				"defence_b": {
@@ -179,7 +183,8 @@
 						"/particle minecraft:sonic_explosion ^ ^1.2 ^1",
 						"/effect @s resistance 1 255 true",
 						"/scoreboard players add @s swordaddon_charge -30",
-						"/scoreboard players set @s swordaddon_defencestatus 1"
+						"/scoreboard players set @s swordaddon_defencestatus 1",
+						"/playsound guard"
 					]
 				},
 				"defence_c": {
@@ -193,7 +198,8 @@
 						"/effect @s resistance 1 255 true",
 						"/scoreboard players add @s swordaddon_charge -30",
 						"/scoreboard players set @s swordaddon_defencestatus 1",
-						"/replaceitem entity @e[family=monster,r=2] slot.weapon.mainhand 0 air"
+						"/replaceitem entity @e[family=monster,r=2] slot.weapon.mainhand 0 air",
+						"/playsound guard"
 					]
 				},
 				"reset": {
@@ -226,7 +232,8 @@
 					"on_entry": [
 						"/particle minecraft:smash_ground_particle ~~~",
 						"/scoreboard players set @s swordaddon_cd -10",
-						"/scoreboard players add @s swordaddon_charge -30"
+						"/scoreboard players add @s swordaddon_charge -30",
+						"/playsound slash"
 					]
 				},
 				"slash_b": {
@@ -240,7 +247,8 @@
 						"/scoreboard players set @s swordaddon_cd -10",
 						"/scoreboard players add @s swordaddon_charge -30",
 						"/effect @e[type=!player,r=5] slowness 3 255 true",
-						"/effect @e[type=!player,r=5] weakness 3 255 true"
+						"/effect @e[type=!player,r=5] weakness 3 255 true",
+						"/playsound slash"
 					]
 				},
 				"slash_c": {
@@ -258,7 +266,8 @@
 						"/replaceitem entity @e[family=monster,r=3] slot.armor.head 0 air",
 						"/replaceitem entity @e[family=monster,r=3] slot.armor.chest 0 air",
 						"/replaceitem entity @e[family=monster,r=3] slot.armor.legs 0 air",
-						"/replaceitem entity @e[family=monster,r=3] slot.armor.feet 0 air"
+						"/replaceitem entity @e[family=monster,r=3] slot.armor.feet 0 air",
+						"/playsound slash"
 					]
 				}
 			}

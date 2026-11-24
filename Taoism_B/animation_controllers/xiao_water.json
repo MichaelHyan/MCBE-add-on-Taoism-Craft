@@ -5,7 +5,30 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"transform":"!query.is_in_water"}
+						{"pull":"query.is_in_water && math.mod(query.life_time,60) == 0 && query.scoreboard('charge') == 0"},
+						{"transform_count":"!query.is_in_water && query.scoreboard('charge') < 10"},
+						{"transform":"!query.is_in_water && query.scoreboard('charge') == 10"},
+						{"transform_reset":"query.is_in_water"}
+					]
+				},
+				"pull": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @p[r=10] @s"
+					]
+				},
+				"transform_count": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1"
 					]
 				},
 				"transform": {
@@ -17,6 +40,17 @@
 					"on_entry": [
 						"/particle minecraft:dragon_death_explosion_emitter ~~~",
 						"/event entity @s transform"
+					]
+				},
+				"transform_reset": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add charge dummy",
+						"/scoreboard players set @s charge 0"
 					]
 				}
 			}
@@ -25,7 +59,19 @@
 			"states":{
 				"base_jeta":{
 					"transitions":[
-						{"transform":"query.is_in_water"}
+						{"transform_count":"query.is_in_water && query.scoreboard('charge') < 10"},
+						{"transform":"query.is_in_water && query.scoreboard('charge') == 10"},
+						{"transform_reset":"!query.is_in_water"}
+					]
+				},
+				"transform_count": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1"
 					]
 				},
 				"transform": {
@@ -37,6 +83,17 @@
 					"on_entry": [
 						"/particle minecraft:dragon_death_explosion_emitter ~~~",
 						"/event entity @s transform"
+					]
+				},
+				"transform_reset": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add charge dummy",
+						"/scoreboard players set @s charge 0"
 					]
 				}
 			}

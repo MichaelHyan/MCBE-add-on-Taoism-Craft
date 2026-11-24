@@ -17,10 +17,7 @@
 					"on_entry": [
 						"/tp @n[tag=sbt]",
 						"/damage @e[tag=sbt,r=2] 20",
-						"/damage @e[type=entity:zombie_mimic,r=2] 100",
-						"/damage @e[type=entity:zombie_mimic_sp,r=2] 100",
-						"/damage @e[type=entity:zombie_mimic_p,r=2] 100",
-						"/damage @e[type=entity:zombie_mimic_f,r=2] 100",
+						"/damage @e[family=taoism_monster,r=2] 100",
 						"/kill @e[tag=sbtx,r=2]",
 						"/summon lightning_bolt",
 						"/kill @s"

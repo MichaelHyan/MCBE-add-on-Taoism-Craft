@@ -34,6 +34,90 @@
 					]
 				}
 			}
+		},
+		"controller.animation.guide_transform":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"transform_count":"!query.is_in_water && query.scoreboard('charge') < 10"},
+						{"transform":"!query.is_in_water && query.scoreboard('charge') == 10"},
+						{"transform_reset":"query.is_in_water"}
+					]
+				},
+				"transform_count": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1"
+					]
+				},
+				"transform": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:dragon_death_explosion_emitter ~~~",
+						"/event entity @s transform"
+					]
+				},
+				"transform_reset": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s charge 0"
+					]
+				}
+			}
+		},
+		"controller.animation.guide_transform_hu":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"transform_count":"query.is_in_water && query.scoreboard('charge') < 10"},
+						{"transform":"query.is_in_water && query.scoreboard('charge') == 10"},
+						{"transform_reset":"!query.is_in_water"}
+					]
+				},
+				"transform_count": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1"
+					]
+				},
+				"transform": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:dragon_death_explosion_emitter ~~~",
+						"/event entity @s transform"
+					]
+				},
+				"transform_reset": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s charge 0"
+					]
+				}
+			}
 		}
  	}
  }

@@ -20,13 +20,29 @@
         "minecraft:transformation": {
           "into": "entity:xiao_water_hu"
         }
+      },
+      "hunter_mode": {
+        "minecraft:navigation.generic": {
+          "is_amphibious": true,
+          "can_path_over_water": false,
+          "can_swim": true,
+          "can_walk": true
+        }
+      },
+      "wander_mode": {
+        "minecraft:navigation.generic": {
+          "is_amphibious": true,
+          "can_path_over_water": false,
+          "can_swim": false,
+          "can_walk": true
+        }
       }
     },
     "components": {
       "minecraft:leashable_to": {},
       "minecraft:leashable": {},
       "minecraft:attack": {
-        "damage": 6
+        "damage": 1
       },
       "minecraft:behavior.hurt_by_target": {
         "priority": 1
@@ -48,29 +64,27 @@
             "max_dist": 32
           }
         ],
-        "priority": 1
+        "priority": 2
       },
-      "minecraft:behavior.melee_attack": {
-        "priority": 2,
-        "speed_multiplier": 1,
+      "minecraft:behavior.melee_box_attack": {
+        "priority": 3,
+        "speed_multiplier": 1.4,
         "track_target": true,
-        "reach_multiplier": 1.2
+        "require_complete_path": true
       },
-      "minecraft:behavior.random_swim": {
-        "priority": 4,
-        "interval": 120,
-        "xz_dist": 10,
-        "y_dist": 7
+      "minecraft:behavior.random_stroll": {
+        "priority": 7,
+        "speed_multiplier": 1
       },
       "minecraft:behavior.look_at_player": {
-        "priority": 6,
+        "priority": 8,
         "look_distance": 8
       },
       "minecraft:behavior.random_look_around": {
-        "priority": 7
+        "priority": 9
       },
       "minecraft:breathable": {
-        "breathes_air": false,
+        "breathes_air": true,
         "breathes_water": true,
         "suffocate_time": 0,
         "total_supply": 15
@@ -94,8 +108,8 @@
         "value": 32
       },
       "minecraft:health": {
-        "max": 100,
-        "value": 100
+        "max": 20,
+        "value": 20
       },
       "minecraft:hurt_on_condition": {
         "damage_conditions": [
@@ -112,15 +126,28 @@
         ]
       },
       "minecraft:is_hidden_when_invisible": {},
+      "minecraft:jump.static": {},
       "minecraft:movement": {
-        "value": 0.2
+        "value": 0.1
       },
-      "minecraft:movement.basic": {},
+      "minecraft:movement.generic": {},
       "minecraft:nameable": {},
-      "minecraft:navigation.swim": {
-        "can_path_over_water": true,
-        "avoid_damage_blocks": true,
-        "can_swim": true
+      "minecraft:navigation.generic": {
+        "is_amphibious": true,
+        "can_path_over_water": false,
+        "can_swim": false,
+        "can_walk": true
+      },
+      "minecraft:on_target_acquired": {
+        "event": "minecraft:has_target",
+        "target": "self"
+      },
+      "minecraft:on_target_escape": {
+        "event": "minecraft:lost_target",
+        "target": "self"
+      },
+      "minecraft:underwater_movement": {
+        "value": 0.1
       },
       "minecraft:physics": {},
       "minecraft:pushable_by_block": {},
@@ -128,17 +155,46 @@
       "minecraft:renders_when_invisible": {},
       "minecraft:type_family": {
         "family": [
-          "monster",
           "mob"
         ]
       }
     },
     "events": {
-      "minecraft:entity_spawned": {},
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "wander_mode"
+          ]
+        }
+      },
       "transform": {
         "add": {
           "component_groups": [
             "transform"
+          ]
+        }
+      },
+      "minecraft:has_target": {
+        "add": {
+          "component_groups": [
+            "hunter_mode"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "wander_mode"
+          ]
+        }
+      },
+      "minecraft:lost_target": {
+        "add": {
+          "component_groups": [
+            "wander_mode"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "hunter_mode"
           ]
         }
       }
