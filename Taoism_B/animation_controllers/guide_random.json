@@ -615,6 +615,210 @@
 					]
 				}
 			}
+		},
+		"controller.animation.guide_heart": {
+			"initial_state": "base_jeta",
+			"states": {
+				"base_jeta": {
+					"on_entry": [
+						"v.guide_heart = query.life_time + 30;"
+					],
+					"transitions": [
+						{ "roll": "query.life_time >= v.guide_heart" }
+					]
+				},
+				"roll": {
+					"on_entry": [
+						"v.guide_heart_pick = math.random_integer(0, 8);"
+					],
+					"transitions": [
+						{ "tips_a": "v.guide_heart_pick == 0" },
+						{ "tips_b": "v.guide_heart_pick == 1" },
+						{ "tips_c": "v.guide_heart_pick == 2" },
+						{ "tips_d": "v.guide_heart_pick == 3" },
+						{ "tips_e": "v.guide_heart_pick == 4" },
+						{ "tips_f": "v.guide_heart_pick == 5" },
+						{ "tips_g": "v.guide_heart_pick == 6" },
+						{ "tips_h": "v.guide_heart_pick == 7" },
+						{ "tips_i": "v.guide_heart_pick == 8" },
+						{ "base_jeta": "v.guide_heart_pick > 8 || v.guide_heart_pick < 0" }
+					]
+				},
+				"tips_a": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/particle minecraft:heart_particle ~~1.5~"
+					]
+				},
+				"tips_b": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/particle minecraft:heart_particle ~0.5~1.5~"
+					]
+				},
+				"tips_c": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/particle minecraft:heart_particle ~-0.5~1.5~"
+					]
+				},
+				"tips_d": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/particle minecraft:heart_particle ~~1.5~0.5"
+					]
+				},
+				"tips_e": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/particle minecraft:heart_particle ~~1.5~-0.5"
+					]
+				},
+				"tips_f": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/particle minecraft:heart_particle ~0.5~1.5~0.5"
+					]
+				},
+				"tips_g": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/particle minecraft:heart_particle ~-0.5~1.5~0.5"
+					]
+				},
+				"tips_h": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/particle minecraft:heart_particle ~0.5~1.5~-0.5"
+					]
+				},
+				"tips_i": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/particle minecraft:heart_particle ~-0.5~1.5~-0.5"
+					]
+				}
+			}
+		},
+		"controller.animation.guide_heart_fish": {
+			"initial_state": "base_jeta",
+			"states": {
+				"base_jeta": {
+					"on_entry": [
+						"v.guide_fish = query.life_time + 30;"
+					],
+					"transitions": [
+						{ "roll": "query.life_time >= v.guide_fish" }
+					]
+				},
+				"roll": {
+					"on_entry": [
+						"v.guide_fish_pick = math.random_integer(0, 8);"
+					],
+					"transitions": [
+						{ "tips_a": "v.guide_fish_pick == 0" },
+						{ "tips_b": "v.guide_fish_pick == 1" },
+						{ "tips_c": "v.guide_fish_pick == 2" },
+						{ "tips_d": "v.guide_fish_pick == 3" },
+						{ "tips_e": "v.guide_fish_pick == 4" },
+						{ "tips_f": "v.guide_fish_pick == 5" },
+						{ "tips_g": "v.guide_fish_pick == 6" },
+						{ "tips_h": "v.guide_fish_pick == 7" },
+						{ "tips_i": "v.guide_fish_pick == 8" },
+						{ "base_jeta": "v.guide_fish_pick > 8 || v.guide_fish_pick < 0" }
+					]
+				},
+				"tips_a": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/particle minecraft:heart_particle ~~~"
+					]
+				},
+				"tips_b": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/particle minecraft:heart_particle ~0.5~~"
+					]
+				},
+				"tips_c": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/particle minecraft:heart_particle ~-0.5~~"
+					]
+				},
+				"tips_d": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/particle minecraft:heart_particle ~~~0.5"
+					]
+				},
+				"tips_e": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/particle minecraft:heart_particle ~~~-0.5"
+					]
+				},
+				"tips_f": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/particle minecraft:heart_particle ~0.5~~0.5"
+					]
+				},
+				"tips_g": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/particle minecraft:heart_particle ~-0.5~~0.5"
+					]
+				},
+				"tips_h": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/particle minecraft:heart_particle ~0.5~~-0.5"
+					]
+				},
+				"tips_i": {
+					"transitions": [
+						{ "base_jeta": "(1.0)" }
+					],
+					"on_entry": [
+						"/particle minecraft:heart_particle ~-0.5~~-0.5"
+					]
+				}
+			}
 		}
 	}
 }

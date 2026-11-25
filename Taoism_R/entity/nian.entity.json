@@ -1,0 +1,28 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "entity:nian",
+			"materials": {
+				"default": "entity_alphablend"
+			},
+			"textures": {
+				"default": "textures/entity/nian"
+			},
+			"geometry": {
+				"default": "geometry.nian"
+			},
+			"animations": {
+				"walk": "animation.nian.walk",
+				"attack": "animation.nian.attack",
+				"hurt": "animation.nian.hurt",
+				"tail_sway": "animation.nian.tail_sway",
+				"action_ctrl": "controller.animation.nian.action"
+			},
+			"scripts": {
+				"animate": [ "action_ctrl" ]
+			},
+			"render_controllers": [ "controller.render.default" ]
+		}
+	}
+}

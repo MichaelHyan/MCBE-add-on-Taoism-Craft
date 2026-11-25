@@ -5,77 +5,77 @@
         "volume": 1.0,
         "pitch": [0.8, 1.2],
         "events": {
-          "hurt": { "sound": "sw", "volume": 0.0, "pitch": 1.0 }
+          "hurt": { "sound": "empty", "volume": 0.0, "pitch": 1.0 }
         }
       },
       "entity:xiao_ghost": {
         "volume": 1.0,
         "pitch": [0.8, 1.2],
         "events": {
-          "hurt": { "sound": "sw", "volume": 0.0, "pitch": 1.0 }
+          "hurt": { "sound": "empty", "volume": 0.0, "pitch": 1.0 }
         }
       },
       "entity:seeker": {
         "volume": 1.0,
         "pitch": [0.8, 1.2],
         "events": {
-          "hurt": { "sound": "sw", "volume": 0.0, "pitch": 1.0 }
+          "hurt": { "sound": "empty", "volume": 0.0, "pitch": 1.0 }
         }
       },
       "entity:seeker_la": {
         "volume": 1.0,
         "pitch": [0.8, 1.2],
         "events": {
-          "hurt": { "sound": "sw", "volume": 0.0, "pitch": 1.0 }
+          "hurt": { "sound": "empty", "volume": 0.0, "pitch": 1.0 }
         }
       },
       "entity:seeker_lb": {
         "volume": 1.0,
         "pitch": [0.8, 1.2],
         "events": {
-          "hurt": { "sound": "sw", "volume": 0.0, "pitch": 1.0 }
+          "hurt": { "sound": "empty", "volume": 0.0, "pitch": 1.0 }
         }
       },
       "entity:detector": {
         "volume": 1.0,
         "pitch": [0.8, 1.2],
         "events": {
-          "hurt": { "sound": "sw", "volume": 0.0, "pitch": 1.0 }
+          "hurt": { "sound": "empty", "volume": 0.0, "pitch": 1.0 }
         }
       },
       "entity:detector_a": {
         "volume": 1.0,
         "pitch": [0.8, 1.2],
         "events": {
-          "hurt": { "sound": "sw", "volume": 0.0, "pitch": 1.0 }
+          "hurt": { "sound": "empty", "volume": 0.0, "pitch": 1.0 }
         }
       },
       "entity:spirit": {
         "volume": 1.0,
         "pitch": [0.8, 1.2],
         "events": {
-          "hurt": { "sound": "sw", "volume": 0.0, "pitch": 1.0 }
+          "hurt": { "sound": "empty", "volume": 0.0, "pitch": 1.0 }
         }
       },
       "entity:seeker_sd": {
         "volume": 1.0,
         "pitch": [0.8, 1.2],
         "events": {
-          "hurt": { "sound": "sw", "volume": 0.0, "pitch": 1.0 }
+          "hurt": { "sound": "empty", "volume": 0.0, "pitch": 1.0 }
         }
       },
       "entity:seeker_hfg": {
         "volume": 1.0,
         "pitch": [0.8, 1.2],
         "events": {
-          "hurt": { "sound": "sw", "volume": 0.0, "pitch": 1.0 }
+          "hurt": { "sound": "empty", "volume": 0.0, "pitch": 1.0 }
         }
       },
       "entity:machete": {
         "volume": 1.0,
         "pitch": [0.8, 1.2],
         "events": {
-          "hurt": { "sound": "sw", "volume": 0.0, "pitch": 1.0 }
+          "hurt": { "sound": "empty", "volume": 0.0, "pitch": 1.0 }
         }
       },
       "entity:zombie_mimic_n": {

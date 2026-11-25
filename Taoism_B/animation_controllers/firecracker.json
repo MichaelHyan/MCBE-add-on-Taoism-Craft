@@ -1,0 +1,36 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.firecracker":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"firecracker_a":"query.scoreboard('charge') == 1"},
+						{"firecracker_b":"query.scoreboard('charge') == 2"}
+					]
+				},
+				"firecracker_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:basic_flame_particle ~ ~0.2 ~"
+					]
+				},
+				"firecracker_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/particle minecraft:knockback_roar_particle ~ ~0.2 ~",
+						"/damage @e[type=!item,rm=1,r=3] 1 entity_attack entity @p"
+					]
+				}
+			}
+		}
+ 	}
+ }

@@ -1,0 +1,47 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.guide_ghost.core_spin": {
+			"loop": true,
+			"animation_length": 2.0,
+			"bones": {
+				"core": {
+					"rotation": [
+						"35 * math.sin(q.anim_time * 6.28318)",
+						"q.anim_time * 180",
+						"25 * math.cos(q.anim_time * 3.14159)"
+					]
+				}
+			}
+		},
+		"animation.guide_ghost.particle_orbit": {
+			"loop": true,
+			"animation_length": 12.0,
+			"bones": {
+				"particle1": {
+					"rotation": [
+						"q.anim_time * 240",
+						"20 * math.sin(q.anim_time * 1.0472)",
+						"15 * math.cos(q.anim_time * 0.5236)"
+					]
+				},
+				"particle2": {
+					"rotation": [
+						"18 * math.sin(q.anim_time * 0.5236)",
+						"22 * math.cos(q.anim_time * 1.0472)",
+						"q.anim_time * 180"
+					]
+				}
+			}
+		},
+		"animation.guide_ghost.float": {
+			"loop": true,
+			"animation_length": 4.0,
+			"bones": {
+				"base": {
+					"position": [ 0, 15, 0 ]
+				}
+			}
+		}
+	}
+}

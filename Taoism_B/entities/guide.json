@@ -10,6 +10,7 @@
         "animate": [
           "guide_teleport",
           "guide_random",
+          "guide_heart",
           "guide_transform_hu",
           "gv_g"
         ]
@@ -17,6 +18,7 @@
       "animations": {
         "guide_teleport": "controller.animation.guide_teleport",
         "guide_random": "controller.animation.guide_random",
+        "guide_heart": "controller.animation.guide_heart",
         "guide_transform_hu": "controller.animation.guide_transform_hu",
         "gv_g": "controller.animation.gv_g"
       }

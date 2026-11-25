@@ -667,6 +667,9 @@
     },
     "sword_hfg": {
       "textures": "textures/items/sword_hfg.png"
+    },
+    "firecracker": {
+      "textures": "textures/items/firecracker.png"
     }
   }
 }

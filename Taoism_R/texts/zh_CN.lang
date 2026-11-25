@@ -320,3 +320,5 @@ entity.entity:spb_air.name=气弹
 entity.entity:xiao_mount.name=山魈
 entity.entity:boulder.name=巨石
 entity.entity:xiao_ghost.name=游魂魈
+entity.entity:nian.name=年兽
+item.items:firecracker=爆竹\n§o§7消耗品\n§r§b“大年初一被吵起来的感觉”§r

@@ -1,0 +1,26 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "entity:guide_ghost",
+      "materials": {
+        "default": "entity_alphablend"
+      },
+      "textures": {
+        "default": "textures/entity/guide_ghost"
+      },
+      "geometry": {
+        "default": "geometry.guide_ghost"
+      },
+      "render_controllers": ["controller.render.default"],
+      "animations": {
+        "core_spin": "animation.guide_ghost.core_spin",
+        "particle_orbit": "animation.guide_ghost.particle_orbit",
+        "float": "animation.guide_ghost.float"
+      },
+      "scripts": {
+        "animate": ["core_spin", "particle_orbit", "float"]
+      }
+    }
+  }
+}

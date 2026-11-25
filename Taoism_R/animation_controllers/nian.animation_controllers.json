@@ -1,0 +1,32 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.nian.action": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"tail_sway",
+						{ "walk": "math.clamp(query.modified_move_speed * 3.0, 0.0, 1.0)" }
+					],
+					"transitions": [
+						{ "hurt": "query.hurt_time > 0.0" },
+						{ "attack": "variable.attack_time > 0.0" }
+					]
+				},
+				"hurt": {
+					"animations": [ "hurt", "tail_sway" ],
+					"transitions": [
+						{ "default": "query.hurt_time <= 0.0" }
+					]
+				},
+				"attack": {
+					"animations": [ "attack" ],
+					"transitions": [
+						{ "default": "query.all_animations_finished" }
+					]
+				}
+			}
+		}
+	}
+}

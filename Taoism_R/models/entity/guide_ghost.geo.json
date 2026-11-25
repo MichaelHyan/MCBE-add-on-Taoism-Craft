@@ -1,0 +1,45 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.guide_ghost",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "base",
+					"pivot": [0, 1, 0]
+				},
+				{
+					"name": "core",
+					"parent": "base",
+					"pivot": [0, 1, 0],
+					"cubes": [
+						{"origin": [-1, 0, -1], "size": [2, 2, 2], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "particle1",
+					"parent": "base",
+					"pivot": [0, 1, 0],
+					"cubes": [
+						{"origin": [-0.5, 0.5, -3.5], "size": [1, 1, 1], "uv": [4, 4]}
+					]
+				},
+				{
+					"name": "particle2",
+					"parent": "base",
+					"pivot": [0, 1, 0],
+					"cubes": [
+						{"origin": [-3.5, 0.5, -0.5], "size": [1, 1, 1], "uv": [0, 4]}
+					]
+				}
+			]
+		}
+	]
+}

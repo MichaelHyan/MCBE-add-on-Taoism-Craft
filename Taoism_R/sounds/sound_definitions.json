@@ -121,5 +121,11 @@
       "name": "sounds/chargec",
       "stream": true
     }]
+  },
+  "firecracker": {
+    "sounds": [{
+      "name": "sounds/firecracker",
+      "stream": true
+    }]
   }
 }

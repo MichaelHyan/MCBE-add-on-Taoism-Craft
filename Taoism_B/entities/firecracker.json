@@ -1,0 +1,133 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "entity:firecracker",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "scripts": {
+				"animate": [
+					"firecracker"
+				]
+			},
+      "animations": {
+				"firecracker": "controller.animation.firecracker"
+			}
+    },
+    "component_groups": {
+      "despawn": {
+        "minecraft:instant_despawn": {}
+      },
+      "fire": {
+        "minecraft:timer": {
+          "looping": false,
+          "randomInterval": false,
+          "time": 3.0,
+          "time_down_event": {
+            "event": "explode",
+            "target": "self"
+          }
+        }
+      },
+      "explode": {
+        "minecraft:type_family": {
+          "family": [
+            "mob",
+            "taoism",
+            "firecracker"
+          ]
+        },
+        "minecraft:timer": {
+          "looping": false,
+          "randomInterval": false,
+          "time": 11.0,
+          "time_down_event": {
+            "event": "despawn",
+            "target": "self"
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:nameable": {},
+      "minecraft:interact": {
+        "interactions": [
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment",
+                    "subject": "other",
+                    "domain": "hand",
+                    "value": "flint_and_steel"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "event": "fire"
+            },
+            "use_item": false,
+            "interact_text": "addon.get.items"
+          }
+        ]
+      },
+      "minecraft:health": {
+        "value": 20,
+        "max": 20,
+        "min": 0
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.6
+      },
+      "minecraft:type_family": {
+        "family": [
+          "mob",
+          "taoism"
+        ]
+      },
+      "minecraft:physics": {}
+    },
+    "events": {
+      "minecraft:entity_spawned": {},
+      "fire": {
+        "queue_command": {
+          "command": "scoreboard players set @s charge 1",
+          "target": "self"
+        },
+        "add": {
+          "component_groups": [
+            "fire"
+          ]
+        }
+      },
+      "explode": {
+        "queue_command": {
+          "command": [
+            "scoreboard players set @s charge 2",
+            "playsound firecracker @a[r=50] ~~~"
+        ],
+          "target": "self"
+        },
+        "add": {
+          "component_groups": [
+            "explode"
+          ]
+        }
+      },
+      "despawn": {
+        "add": {
+          "component_groups": [
+            "despawn"
+          ]
+        }
+      }
+    }
+  }
+}

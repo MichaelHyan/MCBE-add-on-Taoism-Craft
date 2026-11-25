@@ -9,12 +9,14 @@
         "animate": [
           "guide_teleport",
           "guide_random",
+          "guide_heart_fish",
           "guide_transform"
         ]
       },
       "animations": {
         "guide_teleport": "controller.animation.guide_teleport",
         "guide_random": "controller.animation.guide_random",
+        "guide_heart_fish": "controller.animation.guide_heart_fish",
         "guide_transform": "controller.animation.guide_transform"
       }
     },
