@@ -1,0 +1,48 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:sword_qx"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "aba",
+      "cde",
+      "fgf"
+    ],
+    "key": {
+      "a": {
+        "item": "items:cinnabar_powder"
+      },
+      "b": {
+        "item": "items:spe"
+      },
+      "c": {
+        "item": "items:pearlz"
+      },
+      "d": {
+        "item": "items:sword_q"
+      },
+      "e": {
+        "item": "items:pearlz_o"
+      },
+      "f": {
+        "item": "glass_bottle"
+      },
+      "g": {
+        "item": "items:lightning_wood"
+      }
+    },
+    "unlock": [
+      {
+        "item": "items:sword_q"
+      }
+    ],
+    "result": {
+      "item": "items:sword_qx",
+      "count": 1
+    }
+  }
+}

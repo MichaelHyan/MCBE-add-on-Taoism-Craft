@@ -45,6 +45,37 @@
 					]
 				}
 			}
+		},
+		"controller.animation.pev_bgm":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"boss_dead":"query.is_alive == 0"},
+						{"boss_bgm":"math.mod(query.life_time,190) == 0"}
+					]
+				},
+				"boss_bgm": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/function bgmstop",
+						"/function bgmbsp4"
+					]
+				},
+				"boss_dead": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/function bgmstop"
+					]
+				}
+			}
 		}
 	}
 }

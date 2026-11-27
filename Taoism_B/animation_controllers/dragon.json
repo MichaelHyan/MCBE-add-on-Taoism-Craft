@@ -30,6 +30,7 @@
 					"on_entry": [
 						"/kill @e[family=relic]",
 						"/summon entity:relic",
+						"/function addon",
 						"/scoreboard players set @s relic 0"
 					]
 				}

@@ -38,6 +38,14 @@
       "stream": true
     }]
   },
+  "bsp4": {
+    "category": "neutral",
+    "max_distance": 999999.0,
+    "sounds": [{
+      "name": "sounds/bsp4",
+      "stream": true
+    }]
+  },
   "bell": {
     "sounds": [{
       "name": "sounds/bell",

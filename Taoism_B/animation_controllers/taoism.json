@@ -61,7 +61,35 @@
 						{"bella_a":"query.get_equipped_item_name=='bell_a' && variable.attack_time && query.scoreboard('charge') >= 0"},
 						{"seal":"query.get_equipped_item_name=='seal' && variable.attack_time && query.scoreboard('godmodecd') >= 0 && query.player_level > 44"},
 						{"herb":"query.get_equipped_item_name=='herb' && query.is_using_item"},
-						{"guide":"query.get_equipped_item_name=='guide' && query.is_using_item"}
+						{"guide":"query.get_equipped_item_name=='guide' && query.is_using_item"},
+						{"seupgrade_fa":"query.get_equipped_item_name=='sebookf' && query.is_using_item && query.scoreboard('pearladdon_level') == 0"},
+						{"seupgrade_fb":"query.get_equipped_item_name=='sebookf' && query.is_using_item && query.scoreboard('pearladdon_level') == 1"},
+						{"seupgrade_fc":"query.get_equipped_item_name=='sebookf' && query.is_using_item && query.scoreboard('pearladdon_level') == 2"},
+						{"seupgrade_fd":"query.get_equipped_item_name=='sebookf' && query.is_using_item && query.scoreboard('pearladdon_level') == 3"},
+						{"seupgrade_ga":"query.get_equipped_item_name=='sebookg' && query.is_using_item && query.scoreboard('swordaddon_defence') == 0"},
+						{"seupgrade_gb":"query.get_equipped_item_name=='sebookg' && query.is_using_item && query.scoreboard('swordaddon_defence') == 1"},
+						{"seupgrade_gc":"query.get_equipped_item_name=='sebookg' && query.is_using_item && query.scoreboard('swordaddon_defence') == 2"},
+						{"seupgrade_gd":"query.get_equipped_item_name=='sebookg' && query.is_using_item && query.scoreboard('swordaddon_defence') == 3"},
+						{"seupgrade_ha":"query.get_equipped_item_name=='sebookh' && query.is_using_item && query.scoreboard('swordaddon_chargelevel') == 0"},
+						{"seupgrade_hb":"query.get_equipped_item_name=='sebookh' && query.is_using_item && query.scoreboard('swordaddon_chargelevel') == 1"},
+						{"seupgrade_hc":"query.get_equipped_item_name=='sebookh' && query.is_using_item && query.scoreboard('swordaddon_chargelevel') == 2"},
+						{"seupgrade_hd":"query.get_equipped_item_name=='sebookh' && query.is_using_item && query.scoreboard('swordaddon_chargelevel') == 3"},
+						{"seupgrade_ia":"query.get_equipped_item_name=='sebooki' && query.is_using_item && query.scoreboard('swordaddon_critical') == 0"},
+						{"seupgrade_ib":"query.get_equipped_item_name=='sebooki' && query.is_using_item && query.scoreboard('swordaddon_critical') == 1"},
+						{"seupgrade_ic":"query.get_equipped_item_name=='sebooki' && query.is_using_item && query.scoreboard('swordaddon_critical') == 2"},
+						{"seupgrade_id":"query.get_equipped_item_name=='sebooki' && query.is_using_item && query.scoreboard('swordaddon_critical') == 3"},
+						{"seupgrade_ja":"query.get_equipped_item_name=='sebookj' && query.is_using_item && query.scoreboard('seekeraddon') == 0"},
+						{"seupgrade_jb":"query.get_equipped_item_name=='sebookj' && query.is_using_item && query.scoreboard('seekeraddon') == 1"},
+						{"seupgrade_jc":"query.get_equipped_item_name=='sebookj' && query.is_using_item && query.scoreboard('seekeraddon') == 2"},
+						{"seupgrade_jd":"query.get_equipped_item_name=='sebookj' && query.is_using_item && query.scoreboard('seekeraddon') == 3"},
+						{"seupgrade_ka":"query.get_equipped_item_name=='sebookk' && query.is_using_item && query.scoreboard('adaptionaddon') == 0"},
+						{"seupgrade_kb":"query.get_equipped_item_name=='sebookk' && query.is_using_item && query.scoreboard('adaptionaddon') == 1"},
+						{"seupgrade_kc":"query.get_equipped_item_name=='sebookk' && query.is_using_item && query.scoreboard('adaptionaddon') == 2"},
+						{"seupgrade_kd":"query.get_equipped_item_name=='sebookk' && query.is_using_item && query.scoreboard('adaptionaddon') == 3"},
+						{"seupgrade_la":"query.get_equipped_item_name=='sebookl' && query.is_using_item && query.scoreboard('swordaddon_execution') == 0"},
+						{"seupgrade_lb":"query.get_equipped_item_name=='sebookl' && query.is_using_item && query.scoreboard('swordaddon_execution') == 1"},
+						{"seupgrade_lc":"query.get_equipped_item_name=='sebookl' && query.is_using_item && query.scoreboard('swordaddon_execution') == 2"},
+						{"seupgrade_ld":"query.get_equipped_item_name=='sebookl' && query.is_using_item && query.scoreboard('swordaddon_execution') == 3"}
 					]
 				},
 				"summonp": {
@@ -810,6 +838,328 @@
 						"/give @s items:spe 3",
 						"/give @s items:lottery",
 						"/scoreboard objectives add lottery dummy"
+					]
+				},
+				"seupgrade_fa": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s pearladdon_level 1",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"内丹·存神 技能提升\n§4混元诀效果强化，天眼能力解锁\n§7技能进度 =§0==\"}]}"
+					]
+				},
+				"seupgrade_fb": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s pearladdon_level 2",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"内丹·存神 技能提升\n§4混元诀增加伤害吸收\n§7技能进度 ==§0=\"}]}"
+					]
+				},
+				"seupgrade_fc": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s pearladdon_level 3",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"内丹·存神 技能提升\n§4混元诀生效期间获得飞行能力\n§7技能进度 ===§0\"}]}"
+					]
+				},
+				"seupgrade_fd": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"内丹·存神 技能提升\n§4已满级\n§7技能进度 ===§0\"}]}"
+					]
+				},
+				"seupgrade_ga": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s swordaddon_defence 1",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"天罡护体 技能提升\n§4存在炁势时，潜行可消耗炁势格挡部分伤害并推开部分敌人\n§7技能进度 =§0==\"}]}"
+					]
+				},
+				"seupgrade_gb": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s swordaddon_defence 2",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"天罡护体 技能提升\n§4格挡抵消伤害量增加\n§7技能进度 ==§0=\"}]}"
+					]
+				},
+				"seupgrade_gc": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s swordaddon_defence 3",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"天罡护体 技能提升\n§4格挡可缴械\n§7技能进度 ===§0\"}]}"
+					]
+				},
+				"seupgrade_gd": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"天罡护体 技能提升\n§4已满级\n§7技能进度 ===§0\"}]}"
+					]
+				},
+				"seupgrade_ha": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s swordaddon_chargelevel 1",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"蓄炁 技能提升\n§4可积攒炁势，拥有炁势时获得攻击力加成\n§7技能进度 =§0==\"}]}"
+					]
+				},
+				"seupgrade_hb": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s swordaddon_chargelevel 2",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"蓄炁 技能提升\n§4炁势上限增加\n§7技能进度 ==§0=\"}]}"
+					]
+				},
+				"seupgrade_hc": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s swordaddon_chargelevel 3",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"蓄炁 技能提升\n§4炁势上限增加\n§7技能进度 ===§0\"}]}"
+					]
+				},
+				"seupgrade_hd": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"蓄炁 技能提升\n§4已满级\n§7技能进度 ===§0\"}]}"
+					]
+				},
+				"seupgrade_ia": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s swordaddon_critical 1",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"重击 技能提升\n§4存在炁势时，跳跃攻击可消耗炁势释放重击\n§7技能进度 =§0==\"}]}"
+					]
+				},
+				"seupgrade_ib": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s swordaddon_critical 2",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"重击 技能提升\n§4重击可击晕\n§7技能进度 ==§0=\"}]}"
+					]
+				},
+				"seupgrade_ic": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s swordaddon_critical 3",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"重击 技能提升\n§4重击可破甲\n§7技能进度 ===§0\"}]}"
+					]
+				},
+				"seupgrade_id": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"重击 技能提升\n§4已满级\n§7技能进度 ===§0\"}]}"
+					]
+				},
+				"seupgrade_ja": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s seekeraddon 1",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"内丹·分炁 技能提升\n§4元模式下催动内丹释放可拾取物品的炁\n§7技能进度 =§0==\"}]}"
+					]
+				},
+				"seupgrade_jb": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s seekeraddon 2",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"内丹·分炁 技能提升\n§4额外释放可追送危险生物的特殊炁\n§7技能进度 ==§0=\"}]}"
+					]
+				},
+				"seupgrade_jc": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s seekeraddon 3",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"内丹·分炁 技能提升\n§4潜行可瞬移至特殊炁\n§7技能进度 ===§0\"}]}"
+					]
+				},
+				"seupgrade_jd": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"内丹·分炁 技能提升\n§4已满级\n§7技能进度 ===§0\"}]}"
+					]
+				},
+				"seupgrade_ka": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s adaptionaddon 1",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"练体 技能提升\n§4获得水下适性\n§7技能进度 =§0==\"}]}"
+					]
+				},
+				"seupgrade_kb": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s adaptionaddon 2",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"练体 技能提升\n§4获得火焰适性\n§7技能进度 ==§0=\"}]}"
+					]
+				},
+				"seupgrade_kc": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s adaptionaddon 3",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"练体 技能提升\n§4适性进一步提升\n§7技能进度 ===§0\"}]}"
+					]
+				},
+				"seupgrade_kd": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"练体 技能提升\n§4已满级\n§7技能进度 ===§0\"}]}"
+					]
+				},
+				"seupgrade_la": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s swordaddon_execution 1",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"识破处决 技能提升\n§4潜行跳跃锁定最近敌对实体并释放雷击\n§7技能进度 =§0==\"}]}"
+					]
+				},
+				"seupgrade_lb": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s swordaddon_execution 2",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"识破处决 技能提升\n§4雷击伤害提升\n§7技能进度 ==§0=\"}]}"
+					]
+				},
+				"seupgrade_lc": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players set @s swordaddon_execution 3",
+						"/replaceitem entity @s slot.weapon.mainhand 0 air",
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"识破处决 技能提升\n§4雷击伤害提升\n§7技能进度 ===§0\"}]}"
+					]
+				},
+				"seupgrade_ld": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/titleraw @s actionbar {\"rawtext\":[{\"text\":\"识破处决 技能提升\n§4已满级\n§7技能进度 ===§0\"}]}"
 					]
 				}
 			}

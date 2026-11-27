@@ -9,12 +9,14 @@
       "scripts": {
 				"animate": [
 					"pev_choice",
-          "pev_lock"
+          "pev_lock",
+          "pev_bgm"
 				]
 			},
       "animations": {
 				"pev_choice": "controller.animation.pev_choice",
-        "pev_lock": "controller.animation.pev_lock"
+        "pev_lock": "controller.animation.pev_lock",
+        "pev_bgm": "controller.animation.pev_bgm"
 			}
     },
     "component_groups": {

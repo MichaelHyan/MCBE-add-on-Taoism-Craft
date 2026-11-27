@@ -670,6 +670,30 @@
     },
     "firecracker": {
       "textures": "textures/items/firecracker.png"
+    },
+    "sword_qx": {
+      "textures": "textures/items/sword_qx.png"
+    },
+    "sebookf": {
+      "textures": "textures/items/sebookf.png"
+    },
+    "sebookg": {
+      "textures": "textures/items/sebookg.png"
+    },
+    "sebookh": {
+      "textures": "textures/items/sebookh.png"
+    },
+    "sebooki": {
+      "textures": "textures/items/sebooki.png"
+    },
+    "sebookj": {
+      "textures": "textures/items/sebookj.png"
+    },
+    "sebookk": {
+      "textures": "textures/items/sebookk.png"
+    },
+    "sebookl": {
+      "textures": "textures/items/sebookl.png"
     }
   }
 }

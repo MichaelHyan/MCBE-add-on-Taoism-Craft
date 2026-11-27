@@ -1,0 +1,210 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.sword_qx":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"sword_qx_x":"query.get_equipped_item_name=='sword_qx' && query.scoreboard('sword_qx') == 0 && query.scoreboard('evil') == 0 && query.player_level >= 30"},
+						{"sword_qx_a":"query.get_equipped_item_name=='sword_qx' && query.scoreboard('sword_qx') > 0 && query.scoreboard('sword_qx') < 20 && query.scoreboard('evil') == 0 && query.player_level >= 30"},
+						{"sword_qx_b":"query.get_equipped_item_name=='sword_qx' && query.scoreboard('sword_qx') >= 20 && query.scoreboard('sword_qx') < 40 && query.scoreboard('evil') == 0 && query.player_level >= 30"},
+						{"sword_qx_c":"query.get_equipped_item_name=='sword_qx' && query.scoreboard('sword_qx') >= 40 && query.scoreboard('sword_qx') < 60 && query.scoreboard('evil') == 0 && query.player_level >= 30"},
+						{"sword_qx_d":"query.get_equipped_item_name=='sword_qx' && query.scoreboard('sword_qx') >= 60 && query.scoreboard('sword_qx') < 80 && query.scoreboard('evil') == 0 && query.player_level >= 30"},
+						{"sword_qx_e":"query.get_equipped_item_name=='sword_qx' && query.scoreboard('sword_qx') >= 80 && query.scoreboard('sword_qx') < 100 && query.scoreboard('evil') == 0 && query.player_level >= 30"},
+						{"sword_qx_f":"query.get_equipped_item_name=='sword_qx' && query.scoreboard('sword_qx') >= 100 && query.scoreboard('sword_qx') < 120 && query.scoreboard('evil') == 0 && query.player_level >= 30"},
+						{"sword_qx_g":"query.get_equipped_item_name=='sword_qx' && query.scoreboard('sword_qx') >= 120 && query.scoreboard('sword_qx') < 140 && query.scoreboard('evil') == 0 && query.player_level >= 30"},
+						{"sword_qx_h":"query.get_equipped_item_name=='sword_qx' && !variable.attack_time && query.scoreboard('sword_qx') == 140 && query.scoreboard('evil') == 0 && query.player_level >= 30"},
+						{"sword_qx_atk":"query.get_equipped_item_name=='sword_qx' && query.is_sneaking && variable.attack_time && query.scoreboard('sword_qx') == 140 && query.scoreboard('evil') == 0 && query.player_level >= 30"},
+						{"sword_qx_reset":"query.get_equipped_item_name!='sword_qx' && query.scoreboard('sword_qx') > 0"},
+						{"sword_qx_summon":"query.get_equipped_item_name=='sword_qx' && variable.attack_time && query.scoreboard('sword_qx') >= 0 && query.scoreboard('evil') == 1"},
+						{"sword_qx_cd":"query.scoreboard('sword_qx') < 0"}
+					]
+				},
+				"sword_qx_x": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard objectives add sword_qx dummy",
+						"/scoreboard players add @s sword_qx 1",
+						"/summon entity:bd_star"
+					]
+				},
+				"sword_qx_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/event entity @n[type=entity:bd_star,r=1] bd:count_0`",
+						"/scoreboard players add @s sword_qx 1",
+						"/tp @n[type=entity:bd_star] @s"
+					]
+				},
+				"sword_qx_b": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/event entity @n[type=entity:bd_star,r=1] bd:count_1",
+						"/scoreboard players add @s sword_qx 1",
+						"/tp @n[type=entity:bd_star] @s"
+					]
+				},
+				"sword_qx_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/event entity @n[type=entity:bd_star,r=1] bd:count_2",
+						"/scoreboard players add @s sword_qx 1",
+						"/effect @s resistance 1 0 true",
+						"/tp @n[type=entity:bd_star] @s"
+					]
+				},
+				"sword_qx_d": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/event entity @n[type=entity:bd_star,r=1] bd:count_3",
+						"/scoreboard players add @s sword_qx 1",
+						"/effect @s resistance 1 1 true",
+						"/tp @n[type=entity:bd_star] @s"
+						
+					]
+				},
+				"sword_qx_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/event entity @n[type=entity:bd_star,r=1] bd:count_4",
+						"/scoreboard players add @s sword_qx 1",
+						"/effect @s resistance 1 2 true",
+						"/effect @s strength 1 0 true",
+						"/tp @n[type=entity:bd_star] @s"
+					]
+				},
+				"sword_qx_f": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/event entity @n[type=entity:bd_star,r=1] bd:count_5",
+						"/scoreboard players add @s sword_qx 1",
+						"/effect @s resistance 1 3 true",
+						"/effect @s strength 1 1 true",
+						"/tp @n[type=entity:bd_star] @s"
+					]
+				},
+				"sword_qx_g": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/event entity @n[type=entity:bd_star,r=1] bd:count_6",
+						"/scoreboard players add @s sword_qx 1",
+						"/effect @s resistance 1 4 true",
+						"/effect @s strength 1 2 true",
+						"/tp @n[type=entity:bd_star] @s"
+					]
+				},
+				"sword_qx_h": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/event entity @n[type=entity:bd_star,r=1] bd:count_7",
+						"/tp @n[type=entity:bd_star] @s",
+						"/effect @s resistance 1 5 true",
+						"/effect @s strength 1 3 true"
+					]
+				},
+				"sword_qx_atk": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/function bd",
+						"/particle minecraft:knockback_roar_particle ~ ~0.2 ~",
+						"/damage @e[r=5,family=monster] 10 entity_attack entity @s",
+						"/tag @n[family=monster,r=15] add lock",
+						"/event entity @e[type=entity:bd_star] bd:count_9",
+						"/scoreboard players set @s sword_qx -30"
+					]
+				},
+				"sword_qx_reset": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/event entity @e[type=entity:bd_star] bd:count_9",
+						"/scoreboard players set @s sword_qx 0"
+					]
+				},
+				"sword_qx_summon": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/function pev",
+						"/scoreboard players set @s sword_qx -1800"
+					]
+				},
+				"sword_qx_cd": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s sword_qx 1"
+					]
+				}
+			}
+		},
+		"controller.animation.sword_qx_lock":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"lock":"1==1"}
+					]
+				},
+				"lock": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/tp @n[tag=lock]"
+					]
+				}
+			}
+		}
+ 	}
+ }

@@ -1,0 +1,46 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "entity:bd_star",
+      "materials": {
+        "default": "entity_alphablend"
+      },
+      "textures": {
+        "default": "textures/entity/bd_star"
+      },
+      "geometry": {
+        "default": "geometry.bd_star"
+      },
+      "scripts": {
+        "animate": [
+          "spin",
+          { "arrange_0": "query.variant == 0" },
+          { "arrange_1": "query.variant == 1" },
+          { "arrange_2": "query.variant == 2" },
+          { "arrange_3": "query.variant == 3" },
+          { "arrange_4": "query.variant == 4" },
+          { "arrange_5": "query.variant == 5" },
+          { "arrange_6": "query.variant == 6" },
+          { "arrange_7": "query.variant == 7" },
+          { "arrange_8": "query.variant == 8" },
+          { "burst": "query.variant == 9" }
+        ]
+      },
+      "animations": {
+        "spin": "animation.bd_star.spin",
+        "arrange_0": "animation.bd_star.arrange_0",
+        "arrange_1": "animation.bd_star.arrange_1",
+        "arrange_2": "animation.bd_star.arrange_2",
+        "arrange_3": "animation.bd_star.arrange_3",
+        "arrange_4": "animation.bd_star.arrange_4",
+        "arrange_5": "animation.bd_star.arrange_5",
+        "arrange_6": "animation.bd_star.arrange_6",
+        "arrange_7": "animation.bd_star.arrange_7",
+        "arrange_8": "animation.bd_star.arrange_8",
+        "burst": "animation.bd_star.burst"
+      },
+      "render_controllers": [ "controller.render.default" ]
+    }
+  }
+}

@@ -26,7 +26,7 @@ def get_alpha_coordinates(image_path):
     return coordinates
 
 if __name__ == "__main__":
-    path_to_image = f'D:/bird.png'
+    path_to_image = f'D:/bd.png'
     
     coords = get_alpha_coordinates(path_to_image)
     p = ''
@@ -35,9 +35,9 @@ if __name__ == "__main__":
     for i in coords:
         j += 1
         if j < 8500:
-            p += f'particle minecraft:balloon_gas_particle ^{i[0]/4:.2f} ^ ^-{i[1]/4:.2f}\n'
+            p += f'particle minecraft:balloon_gas_particle ^{-1*i[0]/4:.2f} ^{1+-1*i[1]/4:.2f} ^0.5\n'
         else:
-            q += f'particle minecraft:balloon_gas_particle ^{i[0]/4:.2f} ^ ^-{i[1]/4:.2f}\n'
-    with open('./Taoism_B/functions/bird.mcfunction', 'w', encoding='utf-8') as f:
+            q += f'particle minecraft:balloon_gas_particle ^{-1*i[0]/4:.2f} ^-{1+-1*i[1]/4:.2f} ^0.5\n'
+    with open('./Taoism_B/functions/bd.mcfunction', 'w', encoding='utf-8') as f:
         f.write(p)
 

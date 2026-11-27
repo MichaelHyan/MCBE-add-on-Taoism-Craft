@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.bd_star.arrange": {
+      "initial_state": "base",
+      "states": {
+        "base": {
+          "animations": [ "arrange" ],
+          "transitions": [
+            { "burst": "query.variant == 9" }
+          ]
+        },
+        "burst": {
+          "animations": [ "burst" ],
+          "transitions": [
+            { "hold": "query.anim_time > 2.0" }
+          ]
+        },
+        "hold": {
+          "animations": [ "arrange" ],
+          "transitions": [
+            { "base": "query.variant != 9" }
+          ]
+        }
+      }
+    }
+  }
+}

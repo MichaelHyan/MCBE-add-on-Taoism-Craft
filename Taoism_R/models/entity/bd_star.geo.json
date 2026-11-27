@@ -1,0 +1,77 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.bd_star",
+        "texture_width": 64,
+        "texture_height": 64,
+        "visible_bounds_width": 5,
+        "visible_bounds_height": 4,
+        "visible_bounds_offset": [0, 1, 0]
+      },
+      "bones": [
+        {
+          "name": "star",
+          "pivot": [0, 16, 0]
+        },
+        {
+          "name": "b0",
+          "parent": "star",
+          "pivot": [0, 16, 0],
+          "cubes": [
+            { "origin": [-1, 15, -1], "size": [2, 2, 2], "uv": [0, 0] }
+          ]
+        },
+        {
+          "name": "b1",
+          "parent": "star",
+          "pivot": [0, 16, 0],
+          "cubes": [
+            { "origin": [-1, 15, -1], "size": [2, 2, 2], "uv": [0, 0] }
+          ]
+        },
+        {
+          "name": "b2",
+          "parent": "star",
+          "pivot": [0, 16, 0],
+          "cubes": [
+            { "origin": [-1, 15, -1], "size": [2, 2, 2], "uv": [0, 0] }
+          ]
+        },
+        {
+          "name": "b3",
+          "parent": "star",
+          "pivot": [0, 16, 0],
+          "cubes": [
+            { "origin": [-1, 15, -1], "size": [2, 2, 2], "uv": [0, 0] }
+          ]
+        },
+        {
+          "name": "b4",
+          "parent": "star",
+          "pivot": [0, 16, 0],
+          "cubes": [
+            { "origin": [-1, 15, -1], "size": [2, 2, 2], "uv": [0, 0] }
+          ]
+        },
+        {
+          "name": "b5",
+          "parent": "star",
+          "pivot": [0, 16, 0],
+          "cubes": [
+            { "origin": [-1, 15, -1], "size": [2, 2, 2], "uv": [0, 0] }
+          ]
+        },
+        {
+          "name": "b6",
+          "parent": "star",
+          "pivot": [0, 16, 0],
+          "cubes": [
+            { "origin": [-1, 15, -1], "size": [2, 2, 2], "uv": [0, 0] }
+          ]
+        }
+      ]
+    }
+  ]
+}
